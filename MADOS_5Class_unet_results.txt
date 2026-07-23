@@ -1,0 +1,11 @@
+Results for MADOS_5Class
+Precision: 0.2260795692011489
+Recall: 0.2098890562339818
+F1 Score: 0.19163302932847665
+IoU (Jaccard): 0.12952692409183372
+
+Detailed Confusion Matrix:
+[[143983      0      0 156969]
+ [  1041      0      0    121]
+ [  1794      0      0      0]
+ [ 34635      0      0  19578]]

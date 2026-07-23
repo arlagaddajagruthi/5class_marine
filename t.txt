@@ -1,0 +1,45 @@
+# Model Training and Evaluation Pipeline
+
+You have requested to train and evaluate four distinct models (Random Forest, U-Net, SegNeXt, and MariNeXt) on both the `MARIDA_5Class` and `MADOS_5Class` datasets. This requires a significant expansion of the existing codebase to handle feature extraction and generalized model training.
+
+## User Review Required
+> [!IMPORTANT]
+> Running all of these models across tens of thousands of satellite image patches will take **several days of continuous GPU computation**. My role will be to write the feature extraction code, define the model architectures, create the training scripts, and set up the pipeline. Once the code is ready, you can execute the training scripts. Please review the plan below.
+
+## Proposed Changes
+
+### Phase 1: Random Forest Feature Extraction & Training
+The current codebase only extracts raw spectral signatures for tabular analysis. 
+- **[NEW] `utils/rf_pipeline.py`**: I will write a completely new script that:
+  1. Computes **Spectral Indices** (NDVI, FAI, NDWI, etc.) pixel-by-pixel.
+  2. Computes **GLCM Textural Features** (Contrast, Dissimilarity, Homogeneity, Energy, Correlation) using scikit-image on a sliding window.
+  3. Flattens the valid pixels (discarding background) and trains a `RandomForestClassifier`.
+  4. Evaluates the model and prints metrics (Precision, Recall, F1, IoU).
+
+### Phase 2: Generalizing the Deep Learning Pipeline
+Currently, the `marinext/train.py` script hardcodes the `MariNext` wrapper and its specific config file.
+- **[MODIFY] `marinext/train.py` & `marinext/marinext_wrapper.py`**: Refactor these to accept a model `--config` argument so we can switch between MariNeXt, U-Net, and SegNeXt dynamically without changing the training loop.
+- **[NEW] Configuration Files**:
+  - `marinext/configs/unet_5class.py`: Define a standard U-Net architecture using the `mmsegmentation` UNet backbone and an FCN decode head.
+  - `marinext/configs/segnext_5class.py`: Define the baseline SegNeXt architecture.
+  - `marinext/configs/marinext_5class.py`: Modify the existing MariNeXt config to use `num_classes=5`.
+
+### Phase 3: Orchestration Scripts
+- **[NEW] `run_all_experiments.ps1`**: A PowerShell script that automates the training and evaluation of all models across both datasets, saving logs and checkpoints to organized directories (e.g., `logs/MARIDA_5Class_UNet/`).
+
+---
+
+## Open Questions
+
+> [!WARNING]
+> Please clarify the following so I can configure the models correctly:
+
+1. **SegNeXt vs. MariNeXt:** The MariNeXt model in this repository is already an adaptation of SegNeXt (using the MSCAN backbone and LightHamHead). To run "SegNeXt" as a distinct baseline, do you want me to use the standard SegNeXt architecture (e.g., SegNeXt-Tiny from the original paper without marine-specific tweaks), or simply evaluate without some of the domain-specific augmentations?
+2. **GLCM Computation Time:** Computing GLCM features for thousands of multi-spectral image patches is extremely CPU-intensive and slow. Do you want the GLCM features computed on a specific band (e.g., NIR or Red) or across all bands (which multiplies the time)?
+3. **Hardware Constraints:** Do you have a dedicated GPU available for these runs? If so, what is its memory capacity so I can set the `batch_size` appropriately in the configs?
+
+## Verification Plan
+
+### Automated Tests
+- I will run the feature extraction script on a single image patch to verify that GLCM, indices, and signatures are correctly concatenated.
+- I will run `train.py` for 1 epoch for each architecture (U-Net, SegNeXt, MariNeXt) on a tiny subset of data to ensure the models compile, the loss converges, and memory doesn't leak.
