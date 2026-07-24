@@ -89,7 +89,11 @@ def process_mados(src_dir, dst_dir):
             copy_file(f, dst_path)
 
 if __name__ == "__main__":
-    base_dir = r"c:\Users\CB.SC.U4CSE23709\Desktop\Marine Datasets"
+    # Resolve paths relative to the script's location (assuming it's in scripts/)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(script_dir)
+    base_dir = os.path.join(project_root, "data")
+    
     process_marida(os.path.join(base_dir, "MARIDA"), os.path.join(base_dir, "MARIDA_5Class"))
     process_mados(os.path.join(base_dir, "MADOS"), os.path.join(base_dir, "MADOS_5Class"))
     print("Conversion finished successfully!")

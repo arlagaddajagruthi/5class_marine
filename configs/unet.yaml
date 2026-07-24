@@ -1,0 +1,7 @@
+epochs: 100
+learning_rate: 0.001
+weight_decay: 0.0001
+loss_alpha: 0.5
+ignore_index: -1
+in_channels: 11
+out_channels: 5
