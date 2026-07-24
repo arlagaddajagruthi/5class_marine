@@ -19,7 +19,6 @@ env/
 .vscode/
 .idea/
 
-*.log
 
 *.pth
 *.pt

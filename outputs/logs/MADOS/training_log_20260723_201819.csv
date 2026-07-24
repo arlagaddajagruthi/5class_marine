@@ -1,0 +1,6 @@
+epoch,train_loss,val_loss,best_val_loss,best_epoch,best_model_path
+1,1.232113,1.594866,1.594866,1,checkpoints\unet\MADOS\best_model_20260723_201819.pth
+2,1.043508,2.022140,1.594866,1,checkpoints\unet\MADOS\best_model_20260723_201819.pth
+3,0.913717,1.597237,1.594866,1,checkpoints\unet\MADOS\best_model_20260723_201819.pth
+4,0.838414,1.949902,1.594866,1,checkpoints\unet\MADOS\best_model_20260723_201819.pth
+5,0.793994,1.770353,1.594866,1,checkpoints\unet\MADOS\best_model_20260723_201819.pth

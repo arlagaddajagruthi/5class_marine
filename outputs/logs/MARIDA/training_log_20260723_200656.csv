@@ -1,0 +1,6 @@
+epoch,train_loss,val_loss,best_val_loss,best_epoch,best_model_path
+1,1.132724,0.981519,0.981519,1,checkpoints\unet\MARIDA\best_model_20260723_200656.pth
+2,0.905969,0.950650,0.950650,2,checkpoints\unet\MARIDA\best_model_20260723_200656.pth
+3,0.893879,0.836054,0.836054,3,checkpoints\unet\MARIDA\best_model_20260723_200656.pth
+4,0.792405,0.757320,0.757320,4,checkpoints\unet\MARIDA\best_model_20260723_200656.pth
+5,0.772460,0.754612,0.754612,5,checkpoints\unet\MARIDA\best_model_20260723_200656.pth
