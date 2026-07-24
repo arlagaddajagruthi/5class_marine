@@ -1,11 +1,11 @@
 marida:
   root_dir: "data/MARIDA_5Class"
   batch_size: 4
-  num_workers: 0
+  num_workers: 2
   in_channels: 11
 
 mados:
   root_dir: "data/MADOS_5Class"
   batch_size: 4
-  num_workers: 0
+  num_workers: 2
   in_channels: 8
