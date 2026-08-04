@@ -1,0 +1,68 @@
+================================================================================
+MODEL INFORMATION
+================================================================================
+
+Model Type            : Random Forest Classifier
+Dataset               : MARIDA
+Timestamp             : 2026-08-04 20:21:35.682108
+Scikit-learn Backend  : sklearn.ensemble.RandomForestClassifier
+
+================================================================================
+HYPERPARAMETERS
+================================================================================
+n_estimators             : 200
+max_depth                : 30
+min_samples_split        : 5
+min_samples_leaf         : 2
+max_features             : sqrt
+class_weight             : balanced
+random_state             : 42
+max_train_pixels         : 2000000
+num_classes              : 5
+
+================================================================================
+MODEL STATISTICS
+================================================================================
+Number of Trees       : 200
+Configured Max Depth  : 30
+Actual Max Depth      : 30
+Actual Avg Depth      : 30.0
+Total Nodes           : 9,577,804
+Input Features        : 25
+Output Classes        : 5
+Model Size            : 950.03 MB
+
+================================================================================
+TRAINING STATISTICS
+================================================================================
+Training Samples      : 758,442
+Training Time         : 153.64 sec
+
+================================================================================
+FEATURE IMPORTANCES (Gini)
+================================================================================
+  Band 0  : 0.045080
+  Band 1  : 0.025353
+  Band 2  : 0.034388
+  Band 3  : 0.032731
+  Band 4  : 0.029199
+  Band 5  : 0.017820
+  Band 6  : 0.020793
+  Band 7  : 0.016417
+  Band 8  : 0.019178
+  Band 9  : 0.035276
+  Band 10 : 0.033646
+  Band 11 : 0.112523
+  Band 12 : 0.076451
+  Band 13 : 0.098191
+  Band 14 : 0.065481
+  Band 15 : 0.032765
+  Band 16 : 0.055206
+  Band 17 : 0.058408
+  Band 18 : 0.035532
+  Band 19 : 0.026756
+  Band 20 : 0.017167
+  Band 21 : 0.017438
+  Band 22 : 0.023928
+  Band 23 : 0.041449
+  Band 24 : 0.028824

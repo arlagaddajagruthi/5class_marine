@@ -1,0 +1,2 @@
+model,train_samples,train_time_sec,train_accuracy,val_miou,val_f1,val_recall,val_precision,test_miou,test_f1,test_recall,test_precision,test_accuracy,checkpoint_path
+RandomForest,970663,64.6977,0.997874,0.561495,0.672240,0.735744,0.667072,0.621569,0.735383,0.807517,0.727778,0.997954,checkpoints\rf\MADOS\rf_model_20260804_165806.joblib

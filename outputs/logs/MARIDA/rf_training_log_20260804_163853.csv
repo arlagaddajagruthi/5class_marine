@@ -1,0 +1,2 @@
+model,train_samples,train_time_sec,train_accuracy,val_miou,val_f1,val_recall,val_precision,test_miou,test_f1,test_recall,test_precision,test_accuracy,checkpoint_path
+RandomForest,758442,100.9002,0.987072,0.253158,0.307143,0.734325,0.262329,0.246518,0.295245,0.795400,0.254819,0.966618,checkpoints\rf\MARIDA\rf_model_20260804_163853.joblib

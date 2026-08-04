@@ -1,0 +1,63 @@
+================================================================================
+MODEL INFORMATION
+================================================================================
+
+Model Type            : Random Forest Classifier
+Dataset               : MARIDA
+Timestamp             : 2026-08-04 16:40:59.987958
+Scikit-learn Backend  : sklearn.ensemble.RandomForestClassifier
+
+================================================================================
+HYPERPARAMETERS
+================================================================================
+n_estimators             : 200
+max_depth                : 30
+min_samples_split        : 5
+min_samples_leaf         : 2
+max_features             : sqrt
+class_weight             : balanced
+random_state             : 42
+max_train_pixels         : 2000000
+num_classes              : 5
+
+================================================================================
+MODEL STATISTICS
+================================================================================
+Number of Trees       : 200
+Configured Max Depth  : 30
+Actual Max Depth      : 30
+Actual Avg Depth      : 30.0
+Total Nodes           : 10,473,612
+Input Features        : 11
+Output Classes        : 5
+Model Size            : 1038.88 MB
+
+================================================================================
+TRAINING STATISTICS
+================================================================================
+Training Samples      : 758,442
+Training Time         : 100.90 sec
+
+================================================================================
+FEATURE IMPORTANCES (Gini)
+================================================================================
+  Band 0  : 0.080640
+  Band 1  : 0.112632
+  Band 2  : 0.097456
+  Band 3  : 0.105375
+  Band 4  : 0.055927
+  Band 5  : 0.048996
+  Band 6  : 0.062306
+  Band 7  : 0.136327
+  Band 8  : 0.068194
+  Band 9  : 0.124898
+  Band 10 : 0.107248
+
+
+================================================================================
+INFERENCE PERFORMANCE
+================================================================================
+Total Test Images     : 359
+Total Time            : 130.4072 sec
+Time / Image          : 0.363251 sec
+Images / Second       : 2.75

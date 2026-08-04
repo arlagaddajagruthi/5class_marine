@@ -1,0 +1,61 @@
+================================================================================
+MODEL INFORMATION
+================================================================================
+
+Model Type            : Random Forest Classifier
+Dataset               : MADOS
+Timestamp             : 2026-08-04 20:40:01.111491
+Scikit-learn Backend  : sklearn.ensemble.RandomForestClassifier
+
+================================================================================
+HYPERPARAMETERS
+================================================================================
+n_estimators             : 200
+max_depth                : 30
+min_samples_split        : 5
+min_samples_leaf         : 2
+max_features             : sqrt
+class_weight             : balanced
+random_state             : 42
+max_train_pixels         : 2000000
+num_classes              : 5
+
+================================================================================
+MODEL STATISTICS
+================================================================================
+Number of Trees       : 200
+Configured Max Depth  : 30
+Actual Max Depth      : 30
+Actual Avg Depth      : 30.0
+Total Nodes           : 3,274,116
+Input Features        : 18
+Output Classes        : 5
+Model Size            : 324.82 MB
+
+================================================================================
+TRAINING STATISTICS
+================================================================================
+Training Samples      : 970,663
+Training Time         : 96.63 sec
+
+================================================================================
+FEATURE IMPORTANCES (Gini)
+================================================================================
+  Band 0  : 0.169864
+  Band 1  : 0.142613
+  Band 2  : 0.053278
+  Band 3  : 0.036534
+  Band 4  : 0.034956
+  Band 5  : 0.032488
+  Band 6  : 0.052970
+  Band 7  : 0.056303
+  Band 8  : 0.154515
+  Band 9  : 0.109472
+  Band 10 : 0.036497
+  Band 11 : 0.031324
+  Band 12 : 0.015299
+  Band 13 : 0.019486
+  Band 14 : 0.015289
+  Band 15 : 0.013552
+  Band 16 : 0.008726
+  Band 17 : 0.016833

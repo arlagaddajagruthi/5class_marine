@@ -1,3 +1,4 @@
+# RF Advanced Config (RFSS + SI + GLCM)
 n_estimators: 200
 max_depth: 30
 min_samples_split: 5
@@ -9,3 +10,10 @@ random_state: 42
 num_classes: 5
 ignore_index: -1
 max_train_pixels: 2000000
+
+# Advanced features
+features:
+  use_si: true
+  use_glcm: true
+  glcm_win_size: 13
+  glcm_bins: 16

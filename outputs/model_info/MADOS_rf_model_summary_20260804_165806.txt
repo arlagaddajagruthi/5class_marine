@@ -1,0 +1,60 @@
+================================================================================
+MODEL INFORMATION
+================================================================================
+
+Model Type            : Random Forest Classifier
+Dataset               : MADOS
+Timestamp             : 2026-08-04 17:02:30.081267
+Scikit-learn Backend  : sklearn.ensemble.RandomForestClassifier
+
+================================================================================
+HYPERPARAMETERS
+================================================================================
+n_estimators             : 200
+max_depth                : 30
+min_samples_split        : 5
+min_samples_leaf         : 2
+max_features             : sqrt
+class_weight             : balanced
+random_state             : 42
+max_train_pixels         : 2000000
+num_classes              : 5
+
+================================================================================
+MODEL STATISTICS
+================================================================================
+Number of Trees       : 200
+Configured Max Depth  : 30
+Actual Max Depth      : 30
+Actual Avg Depth      : 30.0
+Total Nodes           : 4,164,358
+Input Features        : 8
+Output Classes        : 5
+Model Size            : 413.11 MB
+
+================================================================================
+TRAINING STATISTICS
+================================================================================
+Training Samples      : 970,663
+Training Time         : 64.70 sec
+
+================================================================================
+FEATURE IMPORTANCES (Gini)
+================================================================================
+  Band 0  : 0.168100
+  Band 1  : 0.165496
+  Band 2  : 0.143221
+  Band 3  : 0.093080
+  Band 4  : 0.089625
+  Band 5  : 0.160668
+  Band 6  : 0.082410
+  Band 7  : 0.097399
+
+
+================================================================================
+INFERENCE PERFORMANCE
+================================================================================
+Total Test Images     : 728
+Total Time            : 287.0670 sec
+Time / Image          : 0.394323 sec
+Images / Second       : 2.54
