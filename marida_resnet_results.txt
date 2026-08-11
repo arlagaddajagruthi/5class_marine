@@ -1,0 +1,20 @@
+Loading MARIDA_5Class Train dataset (694 patches)...
+Loading MARIDA_5Class Test dataset (359 patches)...
+Training ResNet-18 on multi-spectral patches (11 channels)...
+Evaluating...
+
+Metrics:
+Precision: 0.1986537327673442
+Recall: 0.2000000000000000
+F1 Score: 0.1993245931885246
+IoU (Jaccard): 0.1986537327673442
+Accuracy: 0.9932686638367210
+
+Confusion Matrix:
+[[23369053        0        0        0        0]
+ [  154739        0        0        0        0]
+ [     381        0        0        0        0]
+ [    1641        0        0        0        0]
+ [    1610        0        0        0        0]]
+
+Saving model to marid_resnet_model.pth...

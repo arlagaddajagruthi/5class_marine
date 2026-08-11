@@ -1,0 +1,20 @@
+Loading MADOS_5Class Train dataset (1433 patches)...
+Loading MADOS_5Class Test dataset (728 patches)...
+Training ResNet-18 on multi-spectral patches (8 channels)...
+Evaluating...
+
+Metrics:
+Precision: 0.1982774963751526
+Recall: 0.2000000000000000
+F1 Score: 0.1991350233741427
+IoU (Jaccard): 0.1982774963751526
+Accuracy: 0.9913874818757631
+
+Confusion Matrix:
+[[41571653        0        0        0        0]
+ [  294020        0        0        0        0]
+ [     973        0        0        0        0]
+ [    3089        0        0        0        0]
+ [   63065        0        0        0        0]]
+
+Saving model to mados_resnet_model.pth...
