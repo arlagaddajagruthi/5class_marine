@@ -1,21 +1,7 @@
-Viewed model_comparative_analysis.md:1-13
-Used tool: manage_task
 
-Here is a clean, simple, and impressive explanation you can present directly to your project guide or advisor.
-
----
-
-### 🎙️ **The 30-Second Summary for Your Guide**
-
-> *"Sir/Ma'am, the difference in model performance comes down to two things: **the satellite camera bands available in each dataset**, and **how each algorithm handles complex vs. clean data**.*
->
 > 1. ***MARIDA** includes 11 satellite bands, adding specialized Shortwave Infrared (SWIR) channels that detect plastic chemicals. Because 11 bands create a noisy and complex feature space, **Random Forest wins (86.7% F1 score)** because its 'voting committee' approach filters out satellite noise.*
 > 2. ***MADOS** includes 8 bands (without SWIR), creating a cleaner, focused feature space. Here, **XGBoost wins (80.5% F1 score)** because its step-by-step mathematical regularization fine-tunes exact boundaries and reduces false positives.*
 > 3. *In short: **Random Forest is better for noisy, high-dimensional datasets**, while **XGBoost is better for cleaner, targeted feature spaces**."*
-
----
-
-### 💡 **Detailed Layman Analogy Breakdown**
 
 #### **1. The Camera Difference (11 Bands vs. 8 Bands)**
 * **MARIDA (11 Bands)**: Imagine taking a photo using normal light + thermal + UV + infrared cameras all at once. You get **extra clues about plastics (SWIR bands)**, but you also get **more background glare and noise**.
@@ -37,9 +23,6 @@ Here is a clean, simple, and impressive explanation you can present directly to 
   * **XGBoost** shines here because its mathematical penalty formula ($L_1 / L_2$ regularization) fine-tunes the exact decision boundary between algae and background pixels. It boosted precision up to **82.9%** with almost zero false alarms.
   * **Random Forest** was overly cautious here, causing higher false positives (**75.2% F1 Score**).
 
----
-
-### 📌 **Quick Talking-Points Checklist for Your Presentation**
 
 | Point | MARIDA Dataset (11 Bands) | MADOS Dataset (8 Bands) |
 | :--- | :--- | :--- |
