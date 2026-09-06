@@ -1,0 +1,2 @@
+model,train_samples,train_time_sec,train_accuracy,val_miou,val_f1,val_recall,val_precision,test_miou,test_f1,test_recall,test_precision,test_accuracy,checkpoint_path
+SVM,108385,10.1780,0.754339,0.641433,0.766909,0.863981,0.711817,0.623468,0.740464,0.883197,0.689967,0.839171,C:\PROJECT\5class_marine_pollution\checkpoints\svm\marida\svm_model_20260906_190348.joblib

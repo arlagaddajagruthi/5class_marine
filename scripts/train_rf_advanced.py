@@ -14,27 +14,19 @@ from src.datasets.marida import MARIDADataset
 from src.datasets.mados import MADOSDataset
 from src.models.rf_classifier import RFClassifier
 from src.metrics.metrics import calculate_metrics, plot_confusion_matrix, save_metrics_table
-from src.preprocessing.features import extract_all_features
+from src.models.svm_classifier import extract_pixel_features_21
 
 np.random.seed(42)
 
-def _flatten_dataset_advanced(dataset, dataset_name, ignore_index, desc, rf_cfg):
+def _flatten_dataset(dataset, ignore_index, desc):
     all_X = []
     all_y = []
     
-    use_si = rf_cfg.get("features", {}).get("use_si", True)
-    use_glcm = rf_cfg.get("features", {}).get("use_glcm", True)
-    
     for idx in tqdm(range(len(dataset)), desc=desc):
         img_tensor, mask_tensor = dataset[idx]
-        img = img_tensor.numpy()
         mask = mask_tensor.numpy()
         
-        # Apply Advanced Feature Extraction!
-        img_feats = extract_all_features(img, dataset_name, use_si=use_si, use_glcm=use_glcm)
-
-        C, H, W = img_feats.shape
-        X = img_feats.reshape(C, H * W).T
+        X = extract_pixel_features_21(img_tensor)  # (H*W, 21)
         y = mask.reshape(-1)
 
         valid = y != ignore_index
@@ -68,7 +60,7 @@ def _stratified_subsample(X, y, max_pixels, num_classes, rng):
 
 def train_and_eval(dataset_name, dataset_class, dataset_cfg, rf_cfg):
     print(f"\n{'='*60}")
-    print(f"  Advanced RF Pipeline (RFSS+SI+GLCM) — {dataset_name}")
+    print(f"  RF Pipeline (21-Feature Set) -- {dataset_name}")
     print(f"{'='*60}\n")
 
     run_timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -78,14 +70,14 @@ def train_and_eval(dataset_name, dataset_class, dataset_cfg, rf_cfg):
     max_train_px = rf_cfg.get("max_train_pixels", 2000000)
 
     root_dir = dataset_cfg["root_dir"]
-    print("[INFO] Initialising datasets …")
+    print("[INFO] Initialising datasets ...")
     train_ds = dataset_class(root_dir, split="train")
     val_ds   = dataset_class(root_dir, split="val")
     test_ds  = dataset_class(root_dir, split="test")
-    print(f"[INFO] Dataset sizes → Train: {len(train_ds)}, Val: {len(val_ds)}, Test: {len(test_ds)}")
+    print(f"[INFO] Dataset sizes -> Train: {len(train_ds)}, Val: {len(val_ds)}, Test: {len(test_ds)}")
 
-    print("\n[INFO] Flattening & Augmenting training pixels (This WILL take time) …")
-    X_train, y_train = _flatten_dataset_advanced(train_ds, dataset_name, ignore_index, desc="Train patches", rf_cfg=rf_cfg)
+    print("\n[INFO] Flattening training pixels ...")
+    X_train, y_train = _flatten_dataset(train_ds, ignore_index, desc="Train patches")
     
     if len(y_train) == 0:
         print("[ERROR] No valid training pixels found.")
@@ -104,7 +96,7 @@ def train_and_eval(dataset_name, dataset_class, dataset_cfg, rf_cfg):
         name = class_names[int(cls_id)] if int(cls_id) < len(class_names) else f"Class {cls_id}"
         print(f"       {name}: {cnt:,} ({100 * cnt / len(y_train):.2f}%)")
 
-    print("\n[INFO] Training Random Forest …")
+    print("\n[INFO] Training Random Forest ...")
     clf = RFClassifier(rf_cfg)
     train_start = time.time()
     clf.fit(X_train, y_train)
@@ -122,22 +114,16 @@ def train_and_eval(dataset_name, dataset_class, dataset_cfg, rf_cfg):
     summary_path = os.path.join(model_info_dir, f"{dataset_name}_rf_adv_summary_{run_timestamp}.txt")
     clf.write_model_summary(summary_path, dataset_name, len(y_train), train_time)
 
-    print("\n[INFO] Evaluating on test set (This WILL take time due to GLCM) …")
+    print("\n[INFO] Evaluating on test set ...")
     all_preds = []
     all_targets = []
-
-    use_si = rf_cfg.get("features", {}).get("use_si", True)
-    use_glcm = rf_cfg.get("features", {}).get("use_glcm", True)
 
     inference_start = time.time()
     for idx in tqdm(range(len(test_ds)), desc="Test patches"):
         img_tensor, mask_tensor = test_ds[idx]
-        img = img_tensor.numpy()
         mask = mask_tensor.numpy()
 
-        img_feats = extract_all_features(img, dataset_name, use_si=use_si, use_glcm=use_glcm)
-        C, H, W = img_feats.shape
-        X = img_feats.reshape(C, H * W).T
+        X = extract_pixel_features_21(img_tensor)
         y = mask.reshape(-1)
 
         valid = y != ignore_index
@@ -157,21 +143,18 @@ def train_and_eval(dataset_name, dataset_class, dataset_cfg, rf_cfg):
     all_preds = np.concatenate(all_preds)
     all_targets = np.concatenate(all_targets)
 
-    print(f"[INFO] Calculating metrics on {len(all_preds):,} test pixels …")
+    print(f"[INFO] Calculating metrics on {len(all_preds):,} test pixels ...")
     results = calculate_metrics(all_targets, all_preds, num_classes=num_classes)
 
-    print("\n[INFO] Evaluating on validation set (This WILL take time due to GLCM) …")
+    print("\n[INFO] Evaluating on validation set ...")
     val_preds_list = []
     val_targets_list = []
     
     for idx in tqdm(range(len(val_ds)), desc="Val patches"):
         img_tensor, mask_tensor = val_ds[idx]
-        img = img_tensor.numpy()
         mask = mask_tensor.numpy()
 
-        img_feats = extract_all_features(img, dataset_name, use_si=use_si, use_glcm=use_glcm)
-        C, H, W = img_feats.shape
-        X = img_feats.reshape(C, H * W).T
+        X = extract_pixel_features_21(img_tensor)
         y = mask.reshape(-1)
 
         valid = y != ignore_index

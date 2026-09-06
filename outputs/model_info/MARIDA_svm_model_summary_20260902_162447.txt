@@ -1,0 +1,20 @@
+================================================================================
+SUPPORT VECTOR MACHINE (SVM) MODEL SUMMARY — MARIDA_5Class
+================================================================================
+Timestamp             : 20260902_162447
+Kernel                : linear
+Regularization (C)    : 1.0
+Max Iterations        : 3000
+Class Weight          : balanced
+Number of Features    : 21
+Training Pixels       : 108,385
+Training Time         : 2.5917 sec
+Model File Size       : 0.0025 MB
+Test Pixels Evaluated : 103,632
+Total Inference Time  : 0.0144 sec
+Latency / Patch       : 0.0402 ms
+Throughput            : 7,173,622.13 pixels/sec
+Overall Accuracy      : 83.92%
+Macro F1 Score        : 74.04%
+Macro IoU (mIoU)      : 62.34%
+================================================================================

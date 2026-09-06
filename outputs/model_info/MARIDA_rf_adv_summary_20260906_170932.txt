@@ -1,0 +1,43 @@
+Random Forest (Advanced) — Model Summary
+==================================================
+Dataset           : MARIDA
+Training pixels   : 758,442
+Training time (s) : 807.06
+
+Hyperparameters:
+  n_estimators    : 200
+  max_depth       : 30
+  min_samples_split: 5
+  min_samples_leaf : 2
+  max_features    : sqrt
+  class_weight    : balanced
+  n_jobs          : -1
+  random_state    : 42
+
+Feature config:
+  use_si          : True
+  use_glcm        : True
+  glcm_win_size   : 13
+  glcm_bins       : 16
+
+Feature importances (top 20):
+    1. Feature   16  importance=0.076126
+    2. Feature   14  importance=0.075813
+    3. Feature    3  importance=0.068928
+    4. Feature   13  importance=0.066002
+    5. Feature   12  importance=0.065755
+    6. Feature    8  importance=0.063460
+    7. Feature    1  importance=0.056657
+    8. Feature    0  importance=0.053692
+    9. Feature   18  importance=0.050495
+   10. Feature    2  importance=0.050292
+   11. Feature   15  importance=0.044406
+   12. Feature   19  importance=0.042429
+   13. Feature    9  importance=0.041988
+   14. Feature    7  importance=0.041618
+   15. Feature   17  importance=0.035628
+   16. Feature   10  importance=0.031014
+   17. Feature    4  importance=0.030395
+   18. Feature   11  importance=0.029893
+   19. Feature   20  importance=0.029251
+   20. Feature    6  importance=0.023102

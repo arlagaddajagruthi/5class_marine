@@ -1,0 +1,64 @@
+{
+    "dataset": "MARIDA_5Class",
+    "model": "SupportVectorMachine",
+    "run_timestamp": "20260906_190348",
+    "hyperparameters": {
+        "kernel": "linear",
+        "C": 1.0,
+        "max_iter": 3000,
+        "class_weight": "balanced",
+        "max_train_pixels": 250000
+    },
+    "training_samples": 108385,
+    "training_time_sec": 10.177982568740845,
+    "train_accuracy": 0.7543387000046132,
+    "val_metrics": {
+        "precision": 0.7118171821103585,
+        "recall": 0.8639808859805236,
+        "f1": 0.7669092695818089,
+        "iou": 0.6414331755367384,
+        "accuracy": 0.8545600796721186
+    },
+    "checkpoint_path": "C:\\PROJECT\\5class_marine_pollution\\checkpoints\\svm\\marida\\svm_model_20260906_190348.joblib",
+    "inference_time_total_sec": 0.019558191299438477,
+    "latency_per_patch_ms": 0.05447964150261414,
+    "latency_per_1m_pixels_sec": 0.1887273361455774,
+    "throughput_pixels_sec": 5298649.471895456,
+    "overall_metrics": {
+        "precision": 0.6899674184624542,
+        "recall": 0.8831967833746956,
+        "f1": 0.740464383376341,
+        "iou": 0.6234681689405064,
+        "accuracy": 0.8391712984406361
+    },
+    "per_class_metrics": {
+        "precision": [
+            0.8330544095897875,
+            0.8739740082079344,
+            0.24398395721925134,
+            0.9144625773776027,
+            0.5843621399176955
+        ],
+        "recall": [
+            0.85618,
+            0.81776,
+            0.958005249343832,
+            0.9902498476538696,
+            0.7937888198757764
+        ],
+        "f1": [
+            0.8444589103246932,
+            0.8449330467845925,
+            0.3889184869472563,
+            0.9508484493856056,
+            0.6731630234395576
+        ],
+        "iou": [
+            0.7307908977619966,
+            0.7315013596679548,
+            0.2414021164021164,
+            0.9063022866703848,
+            0.5073441842000794
+        ]
+    }
+}

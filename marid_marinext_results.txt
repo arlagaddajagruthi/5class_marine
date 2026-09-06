@@ -1,0 +1,13 @@
+MariNeXt 5-Class Results for MARIDA_5Class
+Precision: 0.2477735658971275
+Recall: 0.2500000000000000
+F1 Score: 0.2488818037681150
+IoU (Jaccard): 0.2477735658971275
+Accuracy: 0.9910942635885099
+
+Detailed Confusion Matrix:
+[[21304372        0        0        0        0]
+ [       0        0        0        0        0]
+ [  187008        0        0        0        0]
+ [    2627        0        0        0        0]
+ [    1801        0        0        0        0]]

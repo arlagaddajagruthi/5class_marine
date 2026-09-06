@@ -1,3 +1,4 @@
+import os
 import numpy as np
 from sklearn.metrics import (
     precision_score, recall_score, f1_score, 
@@ -40,13 +41,37 @@ def calculate_metrics(y_true, y_pred, num_classes=5):
     }
 
 def plot_confusion_matrix(cm, class_names, save_path):
+    # Ensure final_cms directory exists
+    final_cms_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "outputs", "final_cms")
+    os.makedirs(final_cms_dir, exist_ok=True)
+    
+    # Base filename
+    base_name = os.path.basename(save_path).replace(".png", "")
+    
+    # 1. Raw Counts Matrix
     plt.figure(figsize=(10, 8))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
     plt.ylabel('Actual')
     plt.xlabel('Predicted')
-    plt.title('Confusion Matrix')
+    plt.title('Confusion Matrix (Raw)')
     plt.tight_layout()
-    plt.savefig(save_path)
+    raw_path = os.path.join(final_cms_dir, f"{base_name}_raw.png")
+    plt.savefig(raw_path)
+    plt.close()
+    
+    # 2. Normalized Matrix
+    row_sums = cm.sum(axis=1, keepdims=True).astype(float)
+    row_sums[row_sums == 0] = 1.0
+    cm_norm = (cm / row_sums) * 100.0
+    
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(cm_norm, annot=True, fmt='.2f', cmap='YlOrRd', xticklabels=class_names, yticklabels=class_names, vmin=0, vmax=100)
+    plt.ylabel('Actual')
+    plt.xlabel('Predicted')
+    plt.title('Confusion Matrix (Normalized %)')
+    plt.tight_layout()
+    norm_path = os.path.join(final_cms_dir, f"{base_name}_norm.png")
+    plt.savefig(norm_path)
     plt.close()
 
 import pandas as pd
@@ -85,6 +110,9 @@ def save_metrics_table(results, class_names, save_path):
     
     for col in ["IoU", "F1", "Precision", "Recall (PA)", "Accuracy"]:
         df[col] = df[col].apply(lambda x: f"{x:.4f}")
+        
+    print("\n[INFO] Detailed Metrics:")
+    print(df.to_string(index=False))
     
     df.to_csv(save_path + ".csv", index=False)
 

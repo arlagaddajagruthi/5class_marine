@@ -1,0 +1,13 @@
+MariNeXt 5-Class Results for MADOS_5Class
+Precision: 0.2475788995178500
+Recall: 0.2499996927998763
+F1 Score: 0.2487834074005797
+IoU (Jaccard): 0.2475785982390100
+Accuracy: 0.9903143929560402
+
+Detailed Confusion Matrix:
+[[36621034        0       45        0        0]
+ [       0        0        0        0        0]
+ [  300952        0        0        0        0]
+ [    2956        0        0        0        0]
+ [   54213        0        0        0        0]]

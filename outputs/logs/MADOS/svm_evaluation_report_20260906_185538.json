@@ -1,0 +1,64 @@
+{
+    "dataset": "MADOS_5Class",
+    "model": "SupportVectorMachine",
+    "run_timestamp": "20260906_185538",
+    "hyperparameters": {
+        "kernel": "linear",
+        "C": 1.0,
+        "max_iter": 3000,
+        "class_weight": "balanced",
+        "max_train_pixels": 250000
+    },
+    "training_samples": 156958,
+    "training_time_sec": 57.306379079818726,
+    "train_accuracy": 0.8541202105021726,
+    "val_metrics": {
+        "precision": 0.7156742438912961,
+        "recall": 0.752351059093517,
+        "f1": 0.7170808248411232,
+        "iou": 0.6183130159632226,
+        "accuracy": 0.8252634744632443
+    },
+    "checkpoint_path": "C:\\PROJECT\\5class_marine_pollution\\checkpoints\\svm\\mados\\svm_model_20260906_185538.joblib",
+    "inference_time_total_sec": 0.038138389587402344,
+    "latency_per_patch_ms": 0.05238789778489333,
+    "latency_per_1m_pixels_sec": 0.24755221655828397,
+    "throughput_pixels_sec": 4039551.7919531893,
+    "overall_metrics": {
+        "precision": 0.7080858883310197,
+        "recall": 0.7365337377246518,
+        "f1": 0.7133850462487465,
+        "iou": 0.6058877407382,
+        "accuracy": 0.8329958068829433
+    },
+    "per_class_metrics": {
+        "precision": [
+            0.9996399783987039,
+            0.7948293457308084,
+            0.18502622794468288,
+            0.8236714975845411,
+            0.737262391996362
+        ],
+        "recall": [
+            0.99958,
+            0.70096,
+            0.3987667009249743,
+            0.7727419876982843,
+            0.81062
+        ],
+        "f1": [
+            0.999609988299649,
+            0.7449492534141028,
+            0.25276872964169383,
+            0.7973943544346083,
+            0.7722029054536794
+        ],
+        "iou": [
+            0.9992202806989484,
+            0.593561061527258,
+            0.14466815809097688,
+            0.6630555555555555,
+            0.6289336478182608
+        ]
+    }
+}
