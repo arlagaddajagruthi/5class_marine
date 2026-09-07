@@ -1,0 +1,19 @@
+=== XGBoost — Raw Bands Only (No Indices) — MADOS_5Class ===
+
+Training XGBoost on 156958 pixels with 8 features (raw bands only)...
+Training time: 3.38 seconds
+Evaluating on 154062 test pixels...
+
+Metrics:
+Precision: 0.8387112957387377
+Recall: 0.8433539938241885
+F1 Score: 0.8350460955244394
+IoU (Jaccard): 0.7328496092475394
+Accuracy: 0.8915826095987329
+
+Confusion Matrix:
+[[49980     9     3     0     8]
+ [    0 40373   142    29  9456]
+ [    0    79   747     6   141]
+ [    0   596     4  2360   129]
+ [    0  5573   452    76 43899]]

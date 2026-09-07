@@ -1,0 +1,19 @@
+=== SVM — Raw Bands Only (No Indices) — MARIDA_5Class ===
+
+Training SVM on 108385 pixels with 11 features (raw bands only)...
+Training time: 2.11 seconds
+Evaluating on 103632 test pixels...
+
+Metrics:
+Precision: 0.6568208788856021
+Recall: 0.7952461975231395
+F1 Score: 0.6787963399248413
+IoU (Jaccard): 0.5717947430047632
+Accuracy: 0.8269742936544696
+
+Confusion Matrix:
+[[44959  4137    65    99   740]
+ [ 9929 37821  2127    30    93]
+ [  106     1   262     0    12]
+ [   54     0     3  1584     0]
+ [  147   118   250    20  1075]]
