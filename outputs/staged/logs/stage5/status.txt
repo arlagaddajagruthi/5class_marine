@@ -1,0 +1,6 @@
+stage5 balanced exit 0
+compare balanced exit 0
+stage5 log exit 0
+compare log exit 0
+stage5 none exit 0
+compare none exit 0

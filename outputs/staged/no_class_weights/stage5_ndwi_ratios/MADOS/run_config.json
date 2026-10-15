@@ -1,0 +1,39 @@
+{
+  "stage": "stage5_ndwi_ratios",
+  "description": "bands + NDWI + 4 band ratios",
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "NDWI",
+    "red/green",
+    "nir/red",
+    "nir/green",
+    "swir1/nir"
+  ],
+  "datasets": [
+    "MARIDA",
+    "MADOS"
+  ],
+  "models": [
+    "rf",
+    "xgb",
+    "lgbm",
+    "ada",
+    "svm"
+  ],
+  "train_cap": null,
+  "svm_cap": null,
+  "weighting": "none",
+  "no_class_weights": false,
+  "seed": 42,
+  "out_root": "outputs/staged/no_class_weights"
+}

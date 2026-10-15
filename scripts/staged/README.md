@@ -25,6 +25,7 @@ change between stages.
 | 2f, 2g | `stage2_single_index.py` | bands + 4 band ratios / bands + 4 spectral statistics |
 | 3 | `stage3_all_indices.py` | bands + all 5 indices |
 | 4 | `stage4_indices_ratios.py` | bands + all 5 indices + 4 band ratios (no environmental data yet) |
+| 5 | `stage5_ndwi_ratios.py` | bands + NDWI + 4 band ratios (only the additions that helped alone in stage 2) |
 | later | *(not yet created)* | stage 4 + environmental features (MARIDA only) |
 
 Run all stages with `scripts/staged/run_stages_1_to_3.ps1`, then use
