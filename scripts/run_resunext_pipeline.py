@@ -21,8 +21,7 @@ from src.datasets.marida import MARIDADataset
 from src.models.resunext import ResUNeXt
 from src.metrics.metrics import calculate_metrics, save_metrics_table
 
-CLASS_NAMES = ["Marine Debris", "Sargassum/Veg", "Natural Phenom/Foam",
-               "Ship/Infrastructure", "Water/Other"]
+CLASS_NAMES = ["Background/Unannotated", "Water", "Marine Debris", "Algae/Sargassum", "Other"]
 CM_FOLDER   = os.path.join(repo_root, "outputs", "confusion_matrices")
 
 
@@ -40,7 +39,7 @@ def save_dual_heatmap(cm, title, save_path):
     row_sums[row_sums == 0] = 1
     cm_norm = cm / row_sums * 100
 
-    short_names = ["Mar.Debris", "Sarg/Veg", "Nat/Foam", "Ships", "Water"]
+    short_names = ["Bg/Unann.", "Water", "Debris", "Algae/Sarg", "Other"]
 
     fig, axes = plt.subplots(1, 2, figsize=(18, 6))
     fig.suptitle(title, fontsize=14, fontweight='bold', y=1.01)
@@ -280,7 +279,7 @@ if __name__ == "__main__":
     mados_path  = os.path.abspath("MADOS_5Class/MADOS_5Class")
     marida_path = os.path.abspath("MARIDA_5Class/MARIDA_5Class")
 
-    s_mados  = run_resunext("MADOS_5Class",  mados_path,  in_channels=8,  epochs=3, batch_size=4)
+    s_mados  = run_resunext("MADOS_5Class",  mados_path,  in_channels=11,  epochs=3, batch_size=4)
     s_marida = run_resunext("MARIDA_5Class", marida_path, in_channels=11, epochs=3, batch_size=4)
 
     print("\n" + "=" * 55)

@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-CLASS_NAMES = ['Marine Debris', 'Sargassum/\nVeg', 'Natural\nPhenom/Foam', 'Ships/\nInfrastr', 'Water/\nOther']
+CLASS_NAMES = ['Background/\nUnannotated', 'Water', 'Marine\nDebris', 'Algae/\nSargassum', 'Other']
 
 cms = {
     'MADOS_5Class_XGBoost': np.array([

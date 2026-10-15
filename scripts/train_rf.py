@@ -85,7 +85,7 @@ def train_and_eval(dataset_name, dataset_class, dataset_cfg, rf_cfg):
         print(f"[INFO] After stratified subsampling: {len(y_train):,} pixels")
 
     unique, counts = np.unique(y_train, return_counts=True)
-    class_names = ["Background", "Water", "Debris", "Algae/Sargassum", "Other"]
+    class_names = ["Background/Unannotated", "Water", "Marine Debris", "Algae/Sargassum", "Other"]
     print("[INFO] Class distribution in training subset:")
     for cls_id, cnt in zip(unique, counts):
         name = class_names[int(cls_id)] if int(cls_id) < len(class_names) else f"Class {cls_id}"

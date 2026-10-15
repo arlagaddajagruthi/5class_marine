@@ -1,0 +1,45 @@
+{
+  "stage": "stage2f_ratios",
+  "description": "bands + 4 band ratios",
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "red/green",
+    "nir/red",
+    "nir/green",
+    "swir1/nir"
+  ],
+  "datasets": [
+    "MARIDA",
+    "MADOS"
+  ],
+  "models": [
+    "rf",
+    "xgb",
+    "lgbm",
+    "ada",
+    "svm"
+  ],
+  "train_cap": null,
+  "svm_cap": null,
+  "no_class_weights": false,
+  "seed": 42,
+  "only": [
+    "2a",
+    "2b",
+    "2c",
+    "2d",
+    "2e",
+    "2f",
+    "2g"
+  ]
+}

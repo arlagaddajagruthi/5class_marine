@@ -26,7 +26,7 @@ def _flatten_dataset(dataset, ignore_index, desc):
         img_tensor, mask_tensor = dataset[idx]
         mask = mask_tensor.numpy()
         
-        X = extract_pixel_features_21(img_tensor)  # (H*W, 21)
+        X = extract_pixel_features_21(img_tensor)  # (H*W, 24)
         y = mask.reshape(-1)
 
         valid = y != ignore_index
@@ -60,7 +60,7 @@ def _stratified_subsample(X, y, max_pixels, num_classes, rng):
 
 def train_and_eval(dataset_name, dataset_class, dataset_cfg, rf_cfg):
     print(f"\n{'='*60}")
-    print(f"  RF Pipeline (21-Feature Set) -- {dataset_name}")
+    print(f"  RF Pipeline (24-Feature Set) -- {dataset_name}")
     print(f"{'='*60}\n")
 
     run_timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -90,7 +90,7 @@ def train_and_eval(dataset_name, dataset_class, dataset_cfg, rf_cfg):
         print(f"[INFO] After stratified subsampling: {len(y_train):,} pixels")
 
     unique, counts = np.unique(y_train, return_counts=True)
-    class_names = ["Background", "Water", "Debris", "Algae/Sargassum", "Other"]
+    class_names = ["Background/Unannotated", "Water", "Marine Debris", "Algae/Sargassum", "Other"]
     print("[INFO] Class distribution in training subset:")
     for cls_id, cnt in zip(unique, counts):
         name = class_names[int(cls_id)] if int(cls_id) < len(class_names) else f"Class {cls_id}"

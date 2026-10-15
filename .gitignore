@@ -1,5 +1,7 @@
 data/MADOS_5Class
 data/MARIDA_5Class
+data/environmental
+data/era5_cache
 
 
 checkpoints/
@@ -30,3 +32,6 @@ Thumbs.db
 .env
 
 *.joblib
+
+outputs/staged/cache/
+*.npz

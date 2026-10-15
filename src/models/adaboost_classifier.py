@@ -6,64 +6,17 @@ import numpy as np
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 
+from src.features.pixel_features import N_FEATURES, extract_pixel_features
+
 # Feature extraction matching 5class marine repository standard
 def extract_pixel_features_21(img_tensor):
     """
-    Extract 21 spectral features per pixel from an image tensor (C, H, W).
-    Works for both C=8 (MADOS) and C=11 (MARIDA) channels.
-    Returns array of shape (H*W, 21).
+    Per-pixel features from an 11-band (C, H, W) image; see
+    src/features/pixel_features.py. Kept under its old name for existing
+    callers, but now returns 24 correctly indexed features (was 21 with
+    shifted band indices). Channels beyond the 11 bands are appended as-is.
     """
-    if hasattr(img_tensor, 'numpy'):
-        img = img_tensor.numpy()
-    else:
-        img = np.array(img_tensor, dtype=np.float32)
-        
-    C, H, W = img.shape
-    # Flatten spatial dimensions
-    pixels = img.reshape(C, -1).T  # (N_pixels, C)
-    
-    # 1. Base channels (first min(C, 8) or zero-padded)
-    if C >= 8:
-        base_feats = pixels[:, :8]  # 8 features
-    else:
-        pad = np.zeros((pixels.shape[0], 8 - C), dtype=np.float32)
-        base_feats = np.hstack([pixels, pad])
-        
-    # Key band picks for ratios/indices
-    b_blue = pixels[:, 0]
-    b_green = pixels[:, 1] if C > 1 else pixels[:, 0]
-    b_red = pixels[:, 2] if C > 2 else pixels[:, 0]
-    b_nir = pixels[:, min(6, C - 1)]
-    b_swir = pixels[:, min(7, C - 1)]
-    
-    eps = 1e-6
-    # 2. Normalized difference indices (5 features)
-    ndvi = (b_nir - b_red) / (b_nir + b_red + eps)
-    ndwi = (b_green - b_nir) / (b_green + b_nir + eps)
-    fai = b_nir - (b_red + (b_swir - b_red) * 0.5)
-    fdi = b_nir - (b_red + (b_swir - b_red) * 0.7)
-    ndmi = (b_nir - b_swir) / (b_nir + b_swir + eps)
-    
-    indices = np.column_stack([ndvi, ndwi, fai, fdi, ndmi])  # 5 features
-    
-    # 3. Spectral Ratios (4 features)
-    r1 = b_red / (b_green + eps)
-    r2 = b_nir / (b_red + eps)
-    r3 = b_nir / (b_green + eps)
-    r4 = b_swir / (b_nir + eps)
-    ratios = np.column_stack([r1, r2, r3, r4])  # 4 features
-    
-    # 4. Statistical summaries across channels per pixel (4 features)
-    mean_spec = np.mean(pixels, axis=1)
-    std_spec = np.std(pixels, axis=1)
-    max_spec = np.max(pixels, axis=1)
-    norm_spec = np.linalg.norm(pixels, axis=1)
-    stats = np.column_stack([mean_spec, std_spec, max_spec, norm_spec])  # 4 features
-    
-    # Total: 8 + 5 + 4 + 4 = 21 features
-    features = np.hstack([base_feats, indices, ratios, stats])
-    features = np.nan_to_num(features, nan=0.0, posinf=0.0, neginf=0.0)
-    return features
+    return extract_pixel_features(img_tensor)
 
 
 class MarineAdaBoostClassifier:
@@ -140,7 +93,7 @@ class MarineAdaBoostClassifier:
 
 def sample_dataset_features(dataset, max_pixels_per_class=50000, random_seed=42):
     """
-    Extracts 21 spectral features across all patches in a dataset with stratified subsampling.
+    Extracts 24 spectral features across all patches in a dataset with stratified subsampling.
     """
     np.random.seed(random_seed)
     X_list = []
@@ -151,7 +104,7 @@ def sample_dataset_features(dataset, max_pixels_per_class=50000, random_seed=42)
     
     for idx in range(total_patches):
         img_tensor, mask_tensor = dataset[idx]
-        feats = extract_pixel_features_21(img_tensor)  # (H*W, 21)
+        feats = extract_pixel_features_21(img_tensor)  # (H*W, 24)
         mask = mask_tensor.numpy().flatten()
         
         # Valid pixels (0 to 4)
@@ -166,7 +119,7 @@ def sample_dataset_features(dataset, max_pixels_per_class=50000, random_seed=42)
         y_list.append(mask_valid)
         
     if len(X_list) == 0:
-        return np.empty((0, 21)), np.empty((0,))
+        return np.empty((0, N_FEATURES)), np.empty((0,))
         
     X_all = np.vstack(X_list)
     y_all = np.concatenate(y_list)
@@ -199,7 +152,7 @@ def run_adaboost_pipeline(dataset_name, dataset_dir, max_train_pixels=250000, n_
     from src.datasets.marida import MARIDADataset
     from src.metrics.metrics import calculate_metrics, plot_confusion_matrix, save_metrics_table
 
-    CLASS_NAMES = ["Marine Debris", "Sargassum/Veg", "Natural Phenom/Foam", "Ship/Infrastructure", "Water/Other"]
+    CLASS_NAMES = ["Background/Unannotated", "Water", "Marine Debris", "Algae/Sargassum", "Other"]
 
     print(f"\n=======================================================")
     print(f" Running AdaBoost Pipeline on {dataset_name} Dataset")

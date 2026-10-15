@@ -17,7 +17,7 @@ from src.datasets.marida import MARIDADataset
 from src.models.resnet_segmentation import ResNetSegmentation
 from src.metrics.metrics import calculate_metrics, plot_confusion_matrix, save_metrics_table
 
-CLASS_NAMES = ["Marine Debris", "Sargassum/Veg", "Natural Phenom/Foam", "Ship/Infrastructure", "Water/Other"]
+CLASS_NAMES = ["Background/Unannotated", "Water", "Marine Debris", "Algae/Sargassum", "Other"]
 
 def collate_fn(batch):
     imgs = [b[0] for b in batch]
@@ -192,7 +192,7 @@ if __name__ == "__main__":
     if not os.path.exists(marida_path):
         marida_path = os.path.abspath("MARIDA_5Class")
         
-    mados_resnet_sum = train_and_evaluate_resnet("MADOS_5Class", mados_path, in_channels=8, epochs=3, batch_size=8)
+    mados_resnet_sum = train_and_evaluate_resnet("MADOS_5Class", mados_path, in_channels=11, epochs=3, batch_size=8)
     marida_resnet_sum = train_and_evaluate_resnet("MARIDA_5Class", marida_path, in_channels=11, epochs=3, batch_size=8)
     
     print("\n=======================================================")

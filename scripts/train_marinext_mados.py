@@ -12,7 +12,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from src.datasets.mados import MADOSDataset
 
 # =====================================================================
-# Build a MADOS-specific MariNeXt with in_chans=8
+# Build a MADOS-specific MariNeXt (11 S2 bands)
 # =====================================================================
 import torch.nn.functional as F
 
@@ -178,8 +178,8 @@ class LightHamHead(nn.Module):
         return self.cls_seg(self.align(self.hamburger(x)))
 
 class MariNeXtMADOS(nn.Module):
-    """MariNeXt model configured specifically for MADOS (8 input channels)"""
-    def __init__(self, in_chans=8, num_classes=5):
+    """MariNeXt model configured specifically for MADOS (11 input channels)"""
+    def __init__(self, in_chans=11, num_classes=5):
         super().__init__()
         self.backbone = MSCAN(in_chans=in_chans)
         self.decode_head = LightHamHead(in_channels=[32, 64, 160, 256], channels=256, num_classes=num_classes)
@@ -206,7 +206,7 @@ def remap_target(target_tensor, mapping_dict):
 
 def run_mados_marinext(dataset_path, batch_size=2, epochs=1):
     print(f"\n{'='*60}")
-    print(f"Starting MariNeXt 5-Class Pipeline for MADOS_5Class (8ch)")
+    print(f"Starting MariNeXt 5-Class Pipeline for MADOS_5Class (11ch)")
     print(f"Dataset Path: {dataset_path}")
     print(f"{'='*60}")
 
@@ -295,7 +295,7 @@ def run_mados_marinext(dataset_path, batch_size=2, epochs=1):
     log_dir = os.path.join(workspace_root, "outputs", "logs", "MADOS")
     os.makedirs(log_dir, exist_ok=True)
     md_path = os.path.join(log_dir, "per_class_metrics_marinext_new.md")
-    class_names = ["Background/Water", "Debris", "Algae", "Other", "Void"]
+    class_names = ["Background/Unannotated", "Water", "Marine Debris", "Algae/Sargassum", "Other"]
     pc_iou  = jaccard_score(all_targets, all_preds, average=None, zero_division=0, labels=[0,1,2,3,4])
     pc_f1   = f1_score(all_targets, all_preds, average=None, zero_division=0, labels=[0,1,2,3,4])
     pc_prec = precision_score(all_targets, all_preds, average=None, zero_division=0, labels=[0,1,2,3,4])

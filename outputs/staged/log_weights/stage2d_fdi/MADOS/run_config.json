@@ -1,0 +1,44 @@
+{
+  "stage": "stage2d_fdi",
+  "description": "bands + FDI",
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "FDI"
+  ],
+  "datasets": [
+    "MARIDA",
+    "MADOS"
+  ],
+  "models": [
+    "rf",
+    "xgb",
+    "lgbm",
+    "ada",
+    "svm"
+  ],
+  "train_cap": null,
+  "svm_cap": null,
+  "weighting": "log",
+  "no_class_weights": false,
+  "seed": 42,
+  "out_root": "outputs/staged/log_weights",
+  "only": [
+    "2a",
+    "2b",
+    "2c",
+    "2d",
+    "2e",
+    "2f",
+    "2g"
+  ]
+}

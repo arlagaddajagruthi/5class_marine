@@ -366,7 +366,7 @@ def train_and_eval(dataset_name, dataset_class, dataset_cfg, unet_cfg):
     os.makedirs(output_dir, exist_ok=True)
     os.makedirs(cm_dir, exist_ok=True)
     
-    class_names = ["Background", "Water", "Debris", "Algae/Sargassum", "Other"]
+    class_names = ["Background/Unannotated", "Water", "Marine Debris", "Algae/Sargassum", "Other"]
     cm_path = os.path.join(cm_dir, f"{dataset_name}_cm_{run_timestamp}.png")
     plot_confusion_matrix(results['confusion_matrix'], class_names, cm_path)
     

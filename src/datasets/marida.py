@@ -2,16 +2,22 @@ import os
 import torch
 import numpy as np
 import tifffile
+import json
 from torch.utils.data import Dataset
 
 class MARIDADataset(Dataset):
-    def __init__(self, root_dir, split="train"):
+    def __init__(self, root_dir, split="train", era5_features_path=None):
         self.root_dir = root_dir
         self.split = split
         self.split_file = os.path.join(root_dir, "splits", f"{split}_X.txt")
+        self.era5_features = None
         
         with open(self.split_file, "r") as f:
             self.patch_ids = [line.strip() for line in f if line.strip()]
+            
+        if era5_features_path and os.path.exists(era5_features_path):
+            with open(era5_features_path, "r") as f:
+                self.era5_features = json.load(f)
             
     def __len__(self):
         return len(self.patch_ids)
@@ -34,5 +40,13 @@ class MARIDADataset(Dataset):
             img = np.expand_dims(img, axis=0)
             
         img = np.nan_to_num(img, nan=0.0, posinf=0.0, neginf=0.0)
+        
+        # Inject ERA5 features as 3 additional channels if available
+        if self.era5_features is not None and patch_id in self.era5_features:
+            era5 = self.era5_features[patch_id]
+            u10 = np.full((1, img.shape[1], img.shape[2]), era5.get("u10", 0.0), dtype=np.float32)
+            v10 = np.full((1, img.shape[1], img.shape[2]), era5.get("v10", 0.0), dtype=np.float32)
+            sst = np.full((1, img.shape[1], img.shape[2]), era5.get("sst", 0.0), dtype=np.float32)
+            img = np.concatenate([img, u10, v10, sst], axis=0)
         
         return torch.tensor(img), torch.tensor(mask)

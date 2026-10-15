@@ -17,7 +17,7 @@ from src.datasets.marida import MARIDADataset
 from src.models.xgb_classifier import extract_pixel_features_21, MarineXGBClassifier
 from src.metrics.metrics import calculate_metrics, plot_confusion_matrix, save_metrics_table
 
-CLASS_NAMES = ["Marine Debris", "Sargassum/Veg", "Natural Phenom/Foam", "Ship/Infrastructure", "Water/Other"]
+CLASS_NAMES = ["Background/Unannotated", "Water", "Marine Debris", "Algae/Sargassum", "Other"]
 
 def sample_dataset_features(dataset, max_pixels_per_class=250000, random_seed=42):
     np.random.seed(random_seed)
@@ -29,7 +29,7 @@ def sample_dataset_features(dataset, max_pixels_per_class=250000, random_seed=42
     
     for idx in range(total_patches):
         img_tensor, mask_tensor = dataset[idx]
-        feats = extract_pixel_features_21(img_tensor) # (H*W, 21)
+        feats = extract_pixel_features_21(img_tensor) # (H*W, 24)
         mask = mask_tensor.numpy().flatten()
         
         # Valid pixels (0 to 4)

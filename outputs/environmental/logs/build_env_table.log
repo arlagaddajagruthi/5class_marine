@@ -1,0 +1,118 @@
+  1-12-19_48MYU      4 patches
+  11-1-19_19QDA      5 patches
+  11-6-18_16PCC     53 patches
+  12-1-17_16PCC     28 patches
+  12-1-17_16PEC     40 patches
+  12-1-19_16PEC     60 patches
+  12-12-20_16PCC    28 patches
+  13-12-18_16PCC    33 patches
+  14-11-18_48PZC    17 patches
+  14-12-20_18QYF     4 patches
+  14-3-20_18QYF      8 patches
+  14-9-18_16PCC     44 patches
+  15-10-20_18QYF    11 patches
+  15-11-20_16PCC    24 patches
+  15-9-20_18QYF      9 patches
+  16-2-18_16PEC     29 patches
+  17-7-16_51PTS      2 patches
+  18-1-18_48PZC     27 patches
+  18-5-19_51PTS      4 patches
+  18-9-20_16PCC     79 patches
+  18-9-20_16PDC     30 patches
+  19-3-20_18QYF      6 patches
+  19-9-18_16PCC     38 patches
+  19-9-18_16PDC     26 patches
+  20-10-20_18QYF     4 patches
+  20-4-18_30VWH     10 patches
+  21-2-17_16PCC     25 patches
+  21-2-18_16PCC     13 patches
+  22-12-20_18QYF     2 patches
+  22-3-20_18QWF      6 patches
+  23-1-21_18QYF      3 patches
+  23-9-20_16PCC     56 patches
+  24-10-18_16PDC    22 patches
+  24-11-19_48PZC     9 patches
+  24-3-20_18QYF      2 patches
+  24-4-19_36JUN     21 patches
+  24-8-20_16PCC     29 patches
+  25-5-19_48MXU      5 patches
+  26-2-18_16PCC     24 patches
+  27-1-19_16PCC     31 patches
+  27-1-19_16QED     19 patches
+  28-9-20_16PCC     16 patches
+  28-9-20_16PDC     30 patches
+  29-11-15_16PEC     9 patches
+  29-11-20_18QYF     8 patches
+  29-12-20_18QYF    13 patches
+  29-8-17_51RVQ      7 patches
+  3-1-21_18QYF       5 patches
+  3-11-16_16PDC     45 patches
+  3-11-18_16PDC     29 patches
+  30-8-17_16PCC     23 patches
+  30-8-18_16PCC     46 patches
+  4-12-20_18QYF      9 patches
+  4-3-18_50LLR      26 patches
+  4-9-16_16PCC      48 patches
+  4-9-19_16PCC      33 patches
+  6-12-17_48MYU      2 patches
+  6-12-18_48MXU     34 patches
+  7-10-18_52SDD     16 patches
+  7-3-20_18QYG      18 patches
+  8-3-18_16PEC       9 patches
+  8-3-18_16QED      19 patches
+  9-10-17_16PEC     46 patches
+
+Coverage (patches with a value / total):
+  mur_sst_c                     1381 / 1381
+  mur_sst_grad_c_per_km         1371 / 1381
+  modis_log10_chla              1377 / 1381
+  era5_u10                      1381 / 1381
+  era5_v10                      1381 / 1381
+  era5_wind_speed               1381 / 1381
+  era5_wind_speed_mean_24h      1381 / 1381
+  era5_wind_speed_mean_72h      1381 / 1381
+  era5_wind_speed_max_72h       1381 / 1381
+  era5_u10_mean_72h             1381 / 1381
+  era5_v10_mean_72h             1381 / 1381
+  era5_msl_hpa                  1381 / 1381
+  era5_precip_24h_mm            1381 / 1381
+  era5_precip_72h_mm            1381 / 1381
+  era5_precip_7d_mm             1381 / 1381
+  era5_swh                      1357 / 1381
+  era5_swh_mean_72h             1357 / 1381
+  era5_stokes_u                 1357 / 1381
+  era5_stokes_v                 1357 / 1381
+  era5_stokes_speed             1357 / 1381
+
+chl-a source:
+chla_source
+8day            1265
+month             66
+8day_nn10km       32
+month_nn10km      14
+missing            4
+
+Summary statistics:
+                                 mean        std          min          max
+mur_sst_c                   28.437399   2.702131     6.964995    31.725228
+mur_sst_grad_c_per_km        0.021954   0.015481     0.000785     0.134603
+modis_log10_chla             0.056974   0.524218    -1.079395     1.663640
+era5_u10                    -0.509229   1.977965    -6.782778     5.058008
+era5_v10                    -0.412874   1.114952    -3.227158     2.718683
+era5_wind_speed              2.119442   1.044159     0.298056     6.786477
+era5_wind_speed_mean_24h     2.733434   1.176052     0.722637     7.415188
+era5_wind_speed_mean_72h     2.929771   1.482461     0.832601    10.656691
+era5_wind_speed_max_72h      5.553179   2.500674     1.444138    22.094080
+era5_u10_mean_72h           -1.132116   1.774658    -6.624106     4.411039
+era5_v10_mean_72h           -0.590855   0.943086    -4.520815     5.805585
+era5_msl_hpa              1014.306528   2.914044  1009.155643  1021.827332
+era5_precip_24h_mm           3.067407   3.588797     0.000000    22.337218
+era5_precip_72h_mm          19.089570  28.581020     0.000000   219.362363
+era5_precip_7d_mm           43.441303  39.200116     0.629916   241.566571
+era5_swh                     0.603252   0.355839     0.116235     2.550790
+era5_swh_mean_72h            0.671430   0.425378     0.139318     2.585703
+era5_stokes_u               -0.014166   0.017868    -0.075762     0.024381
+era5_stokes_v               -0.005283   0.008460    -0.046944     0.030093
+era5_stokes_speed            0.019838   0.015026     0.001945     0.077785
+
+Saved -> C:\PROJECT\5class_marine_pollution\data\environmental\marida_env_features.csv

@@ -1,0 +1,112 @@
+
+=== stage2a_ndvi | MARIDA | 12 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, NDVI
+  train 358,442 px [350057   1943   1961   4481] | test 158,371 px [154739    381   1641   1610]
+  rf    F1=0.8995 IoU=0.8310 Acc=0.9959 debris F1/IoU=0.7759/0.6338 algae F1/IoU=0.9865/0.9733 (10s)
+  xgb   F1=0.8469 IoU=0.7571 Acc=0.9929 debris F1/IoU=0.6647/0.4978 algae F1/IoU=0.9451/0.8958 (3s)
+  lgbm  F1=0.8573 IoU=0.7707 Acc=0.9933 debris F1/IoU=0.6892/0.5258 algae F1/IoU=0.9520/0.9084 (2s)
+  ada   F1=0.7038 IoU=0.6488 Acc=0.9561 debris F1/IoU=0.0760/0.0395 algae F1/IoU=0.9747/0.9506 (151s)
+  svm   F1=0.6438 IoU=0.5375 Acc=0.9752 debris F1/IoU=0.2312/0.1307 algae F1/IoU=0.5781/0.4065 (4s)
+
+=== stage2a_ndvi | MADOS | 12 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, NDVI
+  train 761,887 px [591224   2561   4397 163705] | test 361,147 px [294020    973   3089  63065]
+  rf    F1=0.7095 IoU=0.5645 Acc=0.7227 debris F1/IoU=0.7071/0.5469 algae F1/IoU=0.8239/0.7005 (134s)
+  xgb   F1=0.6807 IoU=0.5361 Acc=0.7552 debris F1/IoU=0.5112/0.3434 algae F1/IoU=0.8295/0.7087 (14s)
+  lgbm  F1=0.6930 IoU=0.5478 Acc=0.7548 debris F1/IoU=0.5563/0.3854 algae F1/IoU=0.8323/0.7128 (10s)
+  ada   F1=0.5639 IoU=0.4360 Acc=0.7381 debris F1/IoU=0.1450/0.0782 algae F1/IoU=0.7510/0.6012 (929s)
+  svm   F1=0.5717 IoU=0.4532 Acc=0.7445 debris F1/IoU=0.1480/0.0799 algae F1/IoU=0.8273/0.7054 (23s)
+
+=== stage2b_ndwi | MARIDA | 12 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, NDWI
+  train 358,442 px [350057   1943   1961   4481] | test 158,371 px [154739    381   1641   1610]
+  rf    F1=0.8987 IoU=0.8294 Acc=0.9954 debris F1/IoU=0.7911/0.6544 algae F1/IoU=0.9865/0.9733 (43s)
+  xgb   F1=0.8623 IoU=0.7795 Acc=0.9933 debris F1/IoU=0.7013/0.5401 algae F1/IoU=0.9732/0.9477 (10s)
+  lgbm  F1=0.8665 IoU=0.7845 Acc=0.9934 debris F1/IoU=0.7167/0.5585 algae F1/IoU=0.9723/0.9461 (6s)
+  ada   F1=0.8273 IoU=0.7424 Acc=0.9931 debris F1/IoU=0.5536/0.3827 algae F1/IoU=0.9705/0.9426 (291s)
+  svm   F1=0.7622 IoU=0.6455 Acc=0.9872 debris F1/IoU=0.5287/0.3594 algae F1/IoU=0.7428/0.5908 (8s)
+
+=== stage2b_ndwi | MADOS | 12 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, NDWI
+  train 761,887 px [591224   2561   4397 163705] | test 361,147 px [294020    973   3089  63065]
+  rf    F1=0.7226 IoU=0.5802 Acc=0.7309 debris F1/IoU=0.7417/0.5895 algae F1/IoU=0.8255/0.7028 (134s)
+  xgb   F1=0.7056 IoU=0.5616 Acc=0.7653 debris F1/IoU=0.5852/0.4137 algae F1/IoU=0.8354/0.7173 (14s)
+  lgbm  F1=0.7067 IoU=0.5632 Acc=0.7634 debris F1/IoU=0.5868/0.4152 algae F1/IoU=0.8414/0.7262 (9s)
+  ada   F1=0.6637 IoU=0.5151 Acc=0.7764 debris F1/IoU=0.4797/0.3155 algae F1/IoU=0.7566/0.6085 (725s)
+  svm   F1=0.6378 IoU=0.5026 Acc=0.7486 debris F1/IoU=0.3888/0.2413 algae F1/IoU=0.8504/0.7397 (10s)
+
+=== stage2c_fai | MARIDA | 12 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, FAI
+  train 358,442 px [350057   1943   1961   4481] | test 158,371 px [154739    381   1641   1610]
+  rf    F1=0.8936 IoU=0.8223 Acc=0.9954 debris F1/IoU=0.7685/0.6240 algae F1/IoU=0.9846/0.9697 (31s)
+  xgb   F1=0.8502 IoU=0.7626 Acc=0.9929 debris F1/IoU=0.6713/0.5052 algae F1/IoU=0.9574/0.9184 (7s)
+  lgbm  F1=0.8601 IoU=0.7746 Acc=0.9933 debris F1/IoU=0.7044/0.5437 algae F1/IoU=0.9592/0.9217 (5s)
+  ada   F1=0.7714 IoU=0.6910 Acc=0.9899 debris F1/IoU=0.3558/0.2164 algae F1/IoU=0.9641/0.9307 (221s)
+  svm   F1=0.5830 IoU=0.4873 Acc=0.9624 debris F1/IoU=0.1233/0.0657 algae F1/IoU=0.4625/0.3008 (5s)
+
+=== stage2c_fai | MADOS | 12 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, FAI
+  train 761,887 px [591224   2561   4397 163705] | test 361,147 px [294020    973   3089  63065]
+  rf    F1=0.7031 IoU=0.5575 Acc=0.7263 debris F1/IoU=0.6737/0.5080 algae F1/IoU=0.8279/0.7063 (131s)
+  xgb   F1=0.6799 IoU=0.5373 Acc=0.7428 debris F1/IoU=0.5079/0.3404 algae F1/IoU=0.8529/0.7435 (15s)
+  lgbm  F1=0.6883 IoU=0.5436 Acc=0.7485 debris F1/IoU=0.5433/0.3730 algae F1/IoU=0.8390/0.7227 (9s)
+  ada   F1=0.5506 IoU=0.4338 Acc=0.6914 debris F1/IoU=0.0795/0.0414 algae F1/IoU=0.8302/0.7097 (712s)
+  svm   F1=0.5321 IoU=0.4131 Acc=0.7294 debris F1/IoU=0.0845/0.0441 algae F1/IoU=0.7559/0.6076 (12s)
+
+=== stage2d_fdi | MARIDA | 12 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, FDI
+  train 358,442 px [350057   1943   1961   4481] | test 158,371 px [154739    381   1641   1610]
+  rf    F1=0.8910 IoU=0.8200 Acc=0.9956 debris F1/IoU=0.7503/0.6004 algae F1/IoU=0.9902/0.9806 (30s)
+  xgb   F1=0.8508 IoU=0.7629 Acc=0.9929 debris F1/IoU=0.6773/0.5121 algae F1/IoU=0.9553/0.9145 (7s)
+  lgbm  F1=0.8543 IoU=0.7666 Acc=0.9930 debris F1/IoU=0.6952/0.5328 algae F1/IoU=0.9549/0.9137 (5s)
+  ada   F1=0.8033 IoU=0.7121 Acc=0.9921 debris F1/IoU=0.5073/0.3398 algae F1/IoU=0.9462/0.8980 (219s)
+  svm   F1=0.5831 IoU=0.4873 Acc=0.9624 debris F1/IoU=0.1236/0.0659 algae F1/IoU=0.4623/0.3007 (5s)
+
+=== stage2d_fdi | MADOS | 12 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, FDI
+  train 761,887 px [591224   2561   4397 163705] | test 361,147 px [294020    973   3089  63065]
+  rf    F1=0.7065 IoU=0.5607 Acc=0.7211 debris F1/IoU=0.6911/0.5280 algae F1/IoU=0.8259/0.7035 (128s)
+  xgb   F1=0.6602 IoU=0.5184 Acc=0.7510 debris F1/IoU=0.4339/0.2770 algae F1/IoU=0.8322/0.7127 (15s)
+  lgbm  F1=0.6738 IoU=0.5297 Acc=0.7394 debris F1/IoU=0.4985/0.3320 algae F1/IoU=0.8418/0.7268 (10s)
+  ada   F1=0.6251 IoU=0.4793 Acc=0.7487 debris F1/IoU=0.3772/0.2324 algae F1/IoU=0.7569/0.6088 (743s)
+  svm   F1=0.5320 IoU=0.4131 Acc=0.7294 debris F1/IoU=0.0845/0.0441 algae F1/IoU=0.7557/0.6074 (13s)
+
+=== stage2e_ndmi | MARIDA | 12 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, NDMI
+  train 358,442 px [350057   1943   1961   4481] | test 158,371 px [154739    381   1641   1610]
+  rf    F1=0.8830 IoU=0.8082 Acc=0.9953 debris F1/IoU=0.7309/0.5759 algae F1/IoU=0.9822/0.9649 (29s)
+  xgb   F1=0.8322 IoU=0.7413 Acc=0.9914 debris F1/IoU=0.6553/0.4874 algae F1/IoU=0.9644/0.9312 (7s)
+  lgbm  F1=0.8521 IoU=0.7662 Acc=0.9933 debris F1/IoU=0.6752/0.5096 algae F1/IoU=0.9669/0.9360 (6s)
+  ada   F1=0.8071 IoU=0.7210 Acc=0.9921 debris F1/IoU=0.4854/0.3205 algae F1/IoU=0.9585/0.9204 (209s)
+  svm   F1=0.6178 IoU=0.5117 Acc=0.9671 debris F1/IoU=0.2481/0.1416 algae F1/IoU=0.4597/0.2985 (5s)
+
+=== stage2e_ndmi | MADOS | 12 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, NDMI
+  train 761,887 px [591224   2561   4397 163705] | test 361,147 px [294020    973   3089  63065]
+  rf    F1=0.7075 IoU=0.5622 Acc=0.7250 debris F1/IoU=0.6890/0.5256 algae F1/IoU=0.8283/0.7070 (135s)
+  xgb   F1=0.6455 IoU=0.5063 Acc=0.7374 debris F1/IoU=0.3883/0.2409 algae F1/IoU=0.8430/0.7285 (14s)
+  lgbm  F1=0.6682 IoU=0.5291 Acc=0.7444 debris F1/IoU=0.4489/0.2894 algae F1/IoU=0.8624/0.7582 (9s)
+  ada   F1=0.5989 IoU=0.4581 Acc=0.7370 debris F1/IoU=0.2927/0.1714 algae F1/IoU=0.7557/0.6074 (742s)
+  svm   F1=0.5553 IoU=0.4349 Acc=0.7420 debris F1/IoU=0.1262/0.0673 algae F1/IoU=0.7861/0.6476 (13s)
+
+=== stage2f_ratios | MARIDA | 15 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, red/green, nir/red, nir/green, swir1/nir
+  train 358,442 px [350057   1943   1961   4481] | test 158,371 px [154739    381   1641   1610]
+  rf    F1=0.9059 IoU=0.8398 Acc=0.9957 debris F1/IoU=0.8121/0.6837 algae F1/IoU=0.9886/0.9775 (34s)
+  xgb   F1=0.8687 IoU=0.7859 Acc=0.9934 debris F1/IoU=0.7377/0.5844 algae F1/IoU=0.9647/0.9318 (8s)
+  lgbm  F1=0.8737 IoU=0.7926 Acc=0.9937 debris F1/IoU=0.7466/0.5957 algae F1/IoU=0.9657/0.9336 (6s)
+  ada   F1=0.8210 IoU=0.7360 Acc=0.9922 debris F1/IoU=0.5196/0.3510 algae F1/IoU=0.9583/0.9200 (308s)
+  svm   F1=0.8380 IoU=0.7449 Acc=0.9931 debris F1/IoU=0.6352/0.4654 algae F1/IoU=0.9255/0.8613 (6s)
+
+=== stage2f_ratios | MADOS | 15 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, red/green, nir/red, nir/green, swir1/nir
+  train 761,887 px [591224   2561   4397 163705] | test 361,147 px [294020    973   3089  63065]
+  rf    F1=0.7217 IoU=0.5786 Acc=0.7326 debris F1/IoU=0.7286/0.5731 algae F1/IoU=0.8275/0.7057 (142s)
+  xgb   F1=0.6833 IoU=0.5399 Acc=0.7709 debris F1/IoU=0.5037/0.3367 algae F1/IoU=0.8245/0.7014 (15s)
+  lgbm  F1=0.6962 IoU=0.5533 Acc=0.7638 debris F1/IoU=0.5475/0.3769 algae F1/IoU=0.8429/0.7285 (11s)
+  ada   F1=0.5678 IoU=0.4377 Acc=0.7353 debris F1/IoU=0.1684/0.0919 algae F1/IoU=0.7526/0.6033 (39293s)
+  svm   F1=0.6647 IoU=0.5254 Acc=0.7510 debris F1/IoU=0.4893/0.3239 algae F1/IoU=0.8525/0.7429 (15s)
+
+=== stage2g_specstats | MARIDA | 15 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, spec_mean, spec_std, spec_max, spec_norm
+  train 358,442 px [350057   1943   1961   4481] | test 158,371 px [154739    381   1641   1610]
+  rf    F1=0.8852 IoU=0.8104 Acc=0.9953 debris F1/IoU=0.7432/0.5914 algae F1/IoU=0.9781/0.9572 (31s)
+  xgb   F1=0.8486 IoU=0.7594 Acc=0.9927 debris F1/IoU=0.6800/0.5152 algae F1/IoU=0.9524/0.9092 (7s)
+  lgbm  F1=0.8627 IoU=0.7799 Acc=0.9935 debris F1/IoU=0.7038/0.5430 algae F1/IoU=0.9729/0.9472 (7s)
+  ada   F1=0.7907 IoU=0.7051 Acc=0.9913 debris F1/IoU=0.4324/0.2758 algae F1/IoU=0.9547/0.9133 (262s)
+  svm   F1=0.7440 IoU=0.6789 Acc=0.9850 debris F1/IoU=0.2206/0.1240 algae F1/IoU=0.9846/0.9696 (6s)
+
+=== stage2g_specstats | MADOS | 15 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, spec_mean, spec_std, spec_max, spec_norm
+  train 761,887 px [591224   2561   4397 163705] | test 361,147 px [294020    973   3089  63065]
+  rf    F1=0.6864 IoU=0.5396 Acc=0.7163 debris F1/IoU=0.6546/0.4866 algae F1/IoU=0.8171/0.6908 (141s)
+  xgb   F1=0.6725 IoU=0.5293 Acc=0.7550 debris F1/IoU=0.4752/0.3116 algae F1/IoU=0.8316/0.7118 (26s)
+  lgbm  F1=0.6891 IoU=0.5462 Acc=0.7664 debris F1/IoU=0.5146/0.3464 algae F1/IoU=0.8370/0.7197 (19s)
+  ada   F1=0.6558 IoU=0.5156 Acc=0.7938 debris F1/IoU=0.3853/0.2386 algae F1/IoU=0.7847/0.6457 (809s)
+  svm   F1=0.6931 IoU=0.5589 Acc=0.7536 debris F1/IoU=0.5404/0.3703 algae F1/IoU=0.8990/0.8166 (13s)

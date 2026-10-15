@@ -1,0 +1,106 @@
+Requesting ERA5 for 63 scenes with 4 workers...
+  [ 1/63] 11-6-18_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\11-6-18_16PCC_parts
+  [ 2/63] 12-1-17_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\12-1-17_16PCC_parts
+  [ 3/63] 11-1-19_19QDA    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\11-1-19_19QDA_parts
+  [ 4/63] 1-12-19_48MYU    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\1-12-19_48MYU_parts
+  [ 5/63] 12-1-19_16PEC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\12-1-19_16PEC_parts
+  [ 6/63] 12-1-17_16PEC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\12-1-17_16PEC_parts
+  [ 7/63] 12-12-20_16PCC   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\12-12-20_16PCC_parts
+  [ 8/63] 13-12-18_16PCC   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\13-12-18_16PCC_parts
+  [ 9/63] 14-12-20_18QYF   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\14-12-20_18QYF_parts
+  [10/63] 14-3-20_18QYF    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\14-3-20_18QYF_parts
+  [11/63] 14-9-18_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\14-9-18_16PCC_parts
+  [12/63] 14-11-18_48PZC   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\14-11-18_48PZC_parts
+  [13/63] 15-10-20_18QYF   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\15-10-20_18QYF_parts
+  [14/63] 15-11-20_16PCC   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\15-11-20_16PCC_parts
+  [15/63] 15-9-20_18QYF    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\15-9-20_18QYF_parts
+  [16/63] 16-2-18_16PEC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\16-2-18_16PEC_parts
+  [17/63] 17-7-16_51PTS    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\17-7-16_51PTS_parts
+  [18/63] 18-1-18_48PZC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\18-1-18_48PZC_parts
+  [19/63] 18-5-19_51PTS    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\18-5-19_51PTS_parts
+  [20/63] 18-9-20_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\18-9-20_16PCC_parts
+  [21/63] 18-9-20_16PDC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\18-9-20_16PDC_parts
+  [22/63] 19-3-20_18QYF    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\19-3-20_18QYF_parts
+  [23/63] 19-9-18_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\19-9-18_16PCC_parts
+  [24/63] 19-9-18_16PDC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\19-9-18_16PDC_parts
+  [25/63] 20-10-20_18QYF   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\20-10-20_18QYF_parts
+  [26/63] 20-4-18_30VWH    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\20-4-18_30VWH_parts
+  [27/63] 21-2-17_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\21-2-17_16PCC_parts
+  [28/63] 21-2-18_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\21-2-18_16PCC_parts
+  [29/63] 22-12-20_18QYF   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\22-12-20_18QYF_parts
+  [30/63] 22-3-20_18QWF    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\22-3-20_18QWF_parts
+  [31/63] 23-1-21_18QYF    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\23-1-21_18QYF_parts
+  [32/63] 23-9-20_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\23-9-20_16PCC_parts
+  [33/63] 24-10-18_16PDC   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\24-10-18_16PDC_parts
+  [34/63] 24-11-19_48PZC   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\24-11-19_48PZC_parts
+  [35/63] 24-4-19_36JUN    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\24-4-19_36JUN_parts
+  [36/63] 24-3-20_18QYF    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\24-3-20_18QYF_parts
+  [37/63] 25-5-19_48MXU    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\25-5-19_48MXU_parts
+  [38/63] 26-2-18_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\26-2-18_16PCC_parts
+  [39/63] 24-8-20_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\24-8-20_16PCC_parts
+  [40/63] 27-1-19_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\27-1-19_16PCC_parts
+Requesting ERA5 for 63 scenes with 4 workers...
+  [ 1/63] 11-1-19_19QDA    -> cached
+  [ 2/63] 1-12-19_48MYU    -> cached
+  [ 3/63] 12-1-17_16PEC    -> cached
+  [ 4/63] 12-12-20_16PCC   -> cached
+  [ 5/63] 11-6-18_16PCC    -> cached
+  [ 6/63] 12-1-17_16PCC    -> cached
+  [ 7/63] 12-1-19_16PEC    -> cached
+  [ 8/63] 14-12-20_18QYF   -> cached
+  [ 9/63] 13-12-18_16PCC   -> cached
+  [10/63] 14-9-18_16PCC    -> cached
+  [11/63] 14-3-20_18QYF    -> cached
+  [12/63] 14-11-18_48PZC   -> cached
+  [13/63] 15-11-20_16PCC   -> cached
+  [14/63] 16-2-18_16PEC    -> cached
+  [15/63] 15-10-20_18QYF   -> cached
+  [16/63] 17-7-16_51PTS    -> cached
+  [17/63] 18-5-19_51PTS    -> cached
+  [18/63] 18-1-18_48PZC    -> cached
+  [19/63] 15-9-20_18QYF    -> cached
+  [20/63] 19-3-20_18QYF    -> cached
+  [21/63] 19-9-18_16PCC    -> cached
+  [22/63] 18-9-20_16PDC    -> cached
+  [23/63] 19-9-18_16PDC    -> cached
+  [24/63] 18-9-20_16PCC    -> cached
+  [25/63] 21-2-17_16PCC    -> cached
+  [26/63] 20-4-18_30VWH    -> cached
+  [27/63] 21-2-18_16PCC    -> cached
+  [28/63] 22-3-20_18QWF    -> cached
+  [29/63] 23-1-21_18QYF    -> cached
+  [30/63] 20-10-20_18QYF   -> cached
+  [31/63] 24-10-18_16PDC   -> cached
+  [32/63] 22-12-20_18QYF   -> cached
+  [33/63] 24-11-19_48PZC   -> cached
+  [34/63] 24-4-19_36JUN    -> cached
+  [35/63] 23-9-20_16PCC    -> cached
+  [36/63] 24-8-20_16PCC    -> cached
+  [37/63] 24-3-20_18QYF    -> cached
+  [38/63] 25-5-19_48MXU    -> cached
+  [39/63] 26-2-18_16PCC    -> cached
+  [40/63] 27-1-19_16PCC    -> cached
+  [41/63] 28-9-20_16PDC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\28-9-20_16PDC_parts
+  [42/63] 29-11-15_16PEC   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\29-11-15_16PEC_parts
+  [43/63] 28-9-20_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\28-9-20_16PCC_parts
+  [44/63] 27-1-19_16QED    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\27-1-19_16QED_parts
+  [45/63] 29-11-20_18QYF   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\29-11-20_18QYF_parts
+  [46/63] 29-12-20_18QYF   -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\29-12-20_18QYF_parts
+  [47/63] 29-8-17_51RVQ    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\29-8-17_51RVQ_parts
+  [48/63] 3-1-21_18QYF     -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\3-1-21_18QYF_parts
+  [49/63] 3-11-16_16PDC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\3-11-16_16PDC_parts
+  [50/63] 3-11-18_16PDC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\3-11-18_16PDC_parts
+  [51/63] 30-8-17_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\30-8-17_16PCC_parts
+  [52/63] 30-8-18_16PCC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\30-8-18_16PCC_parts
+  [53/63] 4-3-18_50LLR     -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\4-3-18_50LLR_parts
+  [54/63] 4-12-20_18QYF    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\4-12-20_18QYF_parts
+  [55/63] 4-9-16_16PCC     -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\4-9-16_16PCC_parts
+  [56/63] 4-9-19_16PCC     -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\4-9-19_16PCC_parts
+  [57/63] 6-12-17_48MYU    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\6-12-17_48MYU_parts
+  [58/63] 6-12-18_48MXU    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\6-12-18_48MXU_parts
+  [59/63] 7-10-18_52SDD    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\7-10-18_52SDD_parts
+  [60/63] 7-3-20_18QYG     -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\7-3-20_18QYG_parts
+  [61/63] 8-3-18_16PEC     -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\8-3-18_16PEC_parts
+  [62/63] 8-3-18_16QED     -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\8-3-18_16QED_parts
+  [63/63] 9-10-17_16PEC    -> C:\PROJECT\5class_marine_pollution\data\environmental\raw\era5\9-10-17_16PEC_parts
+All ERA5 scenes downloaded.

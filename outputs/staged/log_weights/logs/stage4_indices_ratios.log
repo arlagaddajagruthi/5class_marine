@@ -1,0 +1,16 @@
+
+=== stage4_indices_ratios | MARIDA | 20 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, NDVI, NDWI, FAI, FDI, NDMI, red/green, nir/red, nir/green, swir1/nir
+  train 358,442 px [350057   1943   1961   4481] | test 158,371 px [154739    381   1641   1610]
+  rf    F1=0.8981 IoU=0.8284 Acc=0.9956 debris F1/IoU=0.7850/0.6460 algae F1/IoU=0.9849/0.9703 (51s)
+  xgb   F1=0.8702 IoU=0.7875 Acc=0.9937 debris F1/IoU=0.7326/0.5780 algae F1/IoU=0.9599/0.9229 (9s)
+  lgbm  F1=0.8768 IoU=0.7974 Acc=0.9938 debris F1/IoU=0.7487/0.5983 algae F1/IoU=0.9711/0.9438 (7s)
+  ada   F1=0.8120 IoU=0.7235 Acc=0.9917 debris F1/IoU=0.5154/0.3472 algae F1/IoU=0.9530/0.9101 (414s)
+  svm   F1=0.8079 IoU=0.6949 Acc=0.9870 debris F1/IoU=0.7182/0.5603 algae F1/IoU=0.7060/0.5455 (7s)
+
+=== stage4_indices_ratios | MADOS | 20 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, NDVI, NDWI, FAI, FDI, NDMI, red/green, nir/red, nir/green, swir1/nir
+  train 761,887 px [591224   2561   4397 163705] | test 361,147 px [294020    973   3089  63065]
+  rf    F1=0.7096 IoU=0.5639 Acc=0.7320 debris F1/IoU=0.6803/0.5155 algae F1/IoU=0.8267/0.7046 (195s)
+  xgb   F1=0.6876 IoU=0.5430 Acc=0.7617 debris F1/IoU=0.5328/0.3632 algae F1/IoU=0.8273/0.7054 (16s)
+  lgbm  F1=0.6949 IoU=0.5506 Acc=0.7563 debris F1/IoU=0.5577/0.3867 algae F1/IoU=0.8384/0.7217 (13s)
+  ada   F1=0.6371 IoU=0.4938 Acc=0.7426 debris F1/IoU=0.3928/0.2444 algae F1/IoU=0.8021/0.6695 (1238s)
+  svm   F1=0.7002 IoU=0.5629 Acc=0.7549 debris F1/IoU=0.5933/0.4217 algae F1/IoU=0.8781/0.7827 (36s)

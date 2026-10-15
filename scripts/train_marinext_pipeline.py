@@ -145,7 +145,7 @@ def evaluate_and_train_marinext(dataset_name, dataset_path, dataset_class, mappi
     os.makedirs(log_dir, exist_ok=True)
     md_filename = os.path.join(log_dir, "per_class_metrics_marinext_new.md")
 
-    class_names = ["Background/Water", "Debris", "Algae", "Other", "Class 4"]
+    class_names = ["Background/Unannotated", "Water", "Marine Debris", "Algae/Sargassum", "Other"]
     per_class_iou = jaccard_score(all_targets, all_preds, average=None, zero_division=0, labels=[0,1,2,3,4])
     per_class_f1 = f1_score(all_targets, all_preds, average=None, zero_division=0, labels=[0,1,2,3,4])
     per_class_prec = precision_score(all_targets, all_preds, average=None, zero_division=0, labels=[0,1,2,3,4])

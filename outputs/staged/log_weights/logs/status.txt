@@ -1,0 +1,5 @@
+stage1_bands exit 0
+stage2_single_index exit 0
+stage3_all_indices exit 0
+stage4_indices_ratios exit 0
+compare exit 0

@@ -9,8 +9,8 @@ def compute_spectral_indices(img, dataset_name):
     eps = 1e-8
     indices = []
     
-    if dataset_name.upper() == "MARIDA":
-        # MARIDA: 11 bands
+    if dataset_name.upper() in ("MARIDA", "MADOS"):
+        # Both datasets load as 11 S2 bands (see src/datasets/mados.py, marida.py)
         # 0:Coastal, 1:Blue, 2:Green, 3:Red, 4:RE1, 5:RE2, 6:RE3, 7:NIR, 8:NNIR, 9:SWIR1, 10:SWIR2
         blue, green, red = img[1], img[2], img[3]
         re2 = img[5]
@@ -30,9 +30,8 @@ def compute_spectral_indices(img, dataset_name):
         fai = nir - (red + (swir1 - red) * ((lambda_nir - lambda_red) / (lambda_swir1 - lambda_red)))
         indices.append(fai)
         
-        # 4. FDI = NIR - [RE2 + (SWIR1 - RE2) * 10 * (842 - 740) / 1000] -> typically scaled by wavelength diff in nm
-        lambda_re2 = 740.0
-        fdi = nir - (re2 + (swir1 - re2) * 10 * (lambda_nir - lambda_re2) / 1000.0)
+        # 4. FDI (Biermann et al. 2020): NIR - [RE2 + (SWIR1 - RE2) * (l_NIR - l_RED)/(l_SWIR1 - l_RED) * 10]
+        fdi = nir - (re2 + (swir1 - re2) * ((lambda_nir - lambda_red) / (lambda_swir1 - lambda_red)) * 10.0)
         indices.append(fdi)
         
         # 5. SI (Shadow Index)
@@ -48,28 +47,6 @@ def compute_spectral_indices(img, dataset_name):
         indices.append(bsi)
         
         # 8. NRD
-        nrd = (red - green) / (red + green + eps)
-        indices.append(nrd)
-        
-    elif dataset_name.upper() == "MADOS":
-        # MADOS: 8 bands (first 2 are masks)
-        # 2:Blue, 3:Green, 4:Red, 5:NIR
-        blue, green, red = img[2], img[3], img[4]
-        nir = img[5]
-        
-        # 1. NDVI
-        ndvi = (nir - red) / (nir + red + eps)
-        indices.append(ndvi)
-        
-        # 2. NDWI
-        ndwi = (green - nir) / (green + nir + eps)
-        indices.append(ndwi)
-        
-        # 3. SI
-        si = np.power(np.clip((1.0 - blue) * (1.0 - green) * (1.0 - red), 0, None), 1.0/3.0)
-        indices.append(si)
-        
-        # 4. NRD
         nrd = (red - green) / (red + green + eps)
         indices.append(nrd)
         
@@ -172,10 +149,8 @@ def compute_glcm_features(img, dataset_name, win_size=13, num_bins=16):
     """
     Extracts RGB, converts to grayscale, quantizes to 16 bins, runs GLCM.
     """
-    if dataset_name.upper() == "MARIDA":
+    if dataset_name.upper() in ("MARIDA", "MADOS"):
         r, g, b = img[3], img[2], img[1]
-    elif dataset_name.upper() == "MADOS":
-        r, g, b = img[4], img[3], img[2]
     else:
         raise ValueError("Unknown dataset")
         

@@ -1,0 +1,32 @@
+{
+  "stage": "stage1_bands",
+  "description": "11 Sentinel-2 bands only",
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12"
+  ],
+  "datasets": [
+    "MARIDA",
+    "MADOS"
+  ],
+  "models": [
+    "rf",
+    "xgb",
+    "lgbm",
+    "ada",
+    "svm"
+  ],
+  "train_cap": null,
+  "svm_cap": null,
+  "no_class_weights": false,
+  "seed": 42
+}
