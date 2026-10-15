@@ -1,0 +1,19 @@
+C:\Users\Sumithra\AppData\Local\Programs\Python\Python314\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\Sumithra\AppData\Local\Programs\Python\Python314\Lib\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+{'scheme': 'random pixel folds (scenes seen)', 'model': 'rf', 'stage5': 0.960249872425315, 'stage5_debris': 0.9395801331285202, 'stage6': 0.9814846267826811, 'stage6_debris': 0.967095115681234, 'delta_env': 0.021234754357366104, 'delta_env_debris': 0.027514982552713785}
+{'scheme': 'random pixel folds (scenes seen)', 'model': 'lgbm', 'stage5': 0.9617524500429584, 'stage5_debris': 0.9372489959839357, 'stage6': 0.9838938959896517, 'stage6_debris': 0.9667597056584624, 'delta_env': 0.022141445946693317, 'delta_env_debris': 0.029510709674526625}
+{'scheme': 'scene-grouped folds (scenes unseen)', 'model': 'rf', 'stage5': 0.7446246775264942, 'stage5_debris': 0.6064150943396226, 'stage6': 0.683373806343404, 'stage6_debris': 0.7141316073354909, 'delta_env': -0.06125087118309014, 'delta_env_debris': 0.10771651299586826}
+{'scheme': 'scene-grouped folds (scenes unseen)', 'model': 'lgbm', 'stage5': 0.6609196846989603, 'stage5_debris': 0.4587784168720898, 'stage6': 0.5388960573748618, 'stage6_debris': 0.356167723061921, 'delta_env': -0.12202362732409855, 'delta_env_debris': -0.1026106938101688}
+Traceback (most recent call last):
+  File "C:\PROJECT\5class_marine_pollution\scripts\verification\diagnostics.py", line 158, in <module>
+    main()
+    ~~~~^^
+  File "C:\PROJECT\5class_marine_pollution\scripts\verification\diagnostics.py", line 154, in main
+    print("\n".join(lines))
+    ~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sumithra\AppData\Local\Programs\Python\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 1246: character maps to <undefined>
