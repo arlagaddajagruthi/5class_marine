@@ -1,0 +1,7 @@
+build_env_table exit 0
+stage6 balanced exit 0
+compare balanced exit 0
+stage6 log exit 0
+compare log exit 0
+stage6 none exit 0
+compare none exit 0

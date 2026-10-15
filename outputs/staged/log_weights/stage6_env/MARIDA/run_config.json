@@ -1,0 +1,45 @@
+{
+  "stage": "stage6_env",
+  "description": "bands + NDWI + 4 band ratios + SST, chlorophyll-a, wind",
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "NDWI",
+    "red/green",
+    "nir/red",
+    "nir/green",
+    "swir1/nir",
+    "sst_c",
+    "sst_grad_c_per_km",
+    "log10_chl",
+    "wind_speed",
+    "wind_speed_mean_24h",
+    "wind_speed_mean_72h",
+    "wind_speed_max_72h"
+  ],
+  "datasets": [
+    "MARIDA"
+  ],
+  "models": [
+    "rf",
+    "xgb",
+    "lgbm",
+    "ada",
+    "svm"
+  ],
+  "train_cap": null,
+  "svm_cap": null,
+  "weighting": "log",
+  "no_class_weights": false,
+  "seed": 42,
+  "out_root": "outputs/staged/log_weights"
+}

@@ -218,8 +218,10 @@ def plot_cm(cm, path, title):
 
 # ------------------------------------------------------------- run stage ---
 
-def run_stage(stage_id, description, feature_names, args):
-    """Train/evaluate every model on every dataset for one feature set."""
+def run_stage(stage_id, description, feature_names, args, extra=None):
+    """Train/evaluate every model on every dataset for one feature set.
+    extra: optional function(dataset_name, keep_tr, keep_te) -> (E_tr, E_te, names) whose
+    columns are appended to the selected pixel features (e.g. per-patch environmental data)."""
     if args.no_class_weights:
         args.weighting = "none"
     cols = columns(feature_names)
@@ -234,6 +236,10 @@ def run_stage(stage_id, description, feature_names, args):
         lab = {c: i for i, c in enumerate(CLASSES)}
         Xtr, ytr = X_tr[keep_tr][:, cols], np.vectorize(lab.get)(y_tr[keep_tr])
         Xte, yte = X_te[keep_te][:, cols], np.vectorize(lab.get)(y_te[keep_te])
+        names = list(feature_names)
+        if extra is not None:
+            E_tr, E_te, extra_names = extra(dataset_name, keep_tr, keep_te)
+            Xtr, Xte, names = np.hstack([Xtr, E_tr]), np.hstack([Xte, E_te]), names + list(extra_names)
         print(f"  train {len(ytr):,} px {np.bincount(ytr, minlength=4)} | "
               f"test {len(yte):,} px {np.bincount(yte, minlength=4)}", flush=True)
 
@@ -258,7 +264,7 @@ def run_stage(stage_id, description, feature_names, args):
             t0 = time.time(); pred = np.asarray(model.predict(Xte)).ravel().astype(int); t_pred = time.time() - t0
             m, cm = evaluate(yte, pred)
             row = {"stage": stage_id, "description": description, "dataset": dataset_name,
-                   "model": model_name, "n_features": len(cols), "features": "|".join(feature_names),
+                   "model": model_name, "n_features": len(names), "features": "|".join(names),
                    "n_train": len(sel), "n_test": len(yte),
                    "train_time_s": round(t_fit, 2), "predict_time_s": round(t_pred, 2), **m}
             rows.append(row)
@@ -271,16 +277,16 @@ def run_stage(stage_id, description, feature_names, args):
                 os.path.join(out_dir, "confusion_matrices", f"{model_name}.csv"))
             plot_cm(cm, os.path.join(out_dir, "confusion_matrices", f"{model_name}.png"),
                     f"{stage_id} | {dataset_name} | {model_name.upper()}")
-            for f, v in zip(feature_names, importances(model, model_name, feature_names)):
+            for f, v in zip(names, importances(model, model_name, names)):
                 imp_rows.append({"model": model_name, "feature": f, "importance": float(v)})
 
         df = pd.DataFrame(rows)
         df.to_csv(os.path.join(out_dir, "metrics.csv"), index=False)
         pd.DataFrame(imp_rows).to_csv(os.path.join(out_dir, "feature_importance.csv"), index=False)
         with open(os.path.join(out_dir, "run_config.json"), "w") as f:
-            json.dump({"stage": stage_id, "description": description, "features": feature_names,
+            json.dump({"stage": stage_id, "description": description, "features": names,
                        **vars(args)}, f, indent=2)
-        write_summary(df, os.path.join(out_dir, "summary.md"), stage_id, description, dataset_name, feature_names)
+        write_summary(df, os.path.join(out_dir, "summary.md"), stage_id, description, dataset_name, names)
         all_rows += rows
     return pd.DataFrame(all_rows)
 

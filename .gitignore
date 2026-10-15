@@ -1,8 +1,11 @@
 data/MADOS_5Class
 data/MARIDA_5Class
-data/environmental
 data/era5_cache
-data
+
+data/environmental/*
+data/env_sst_chl_wind/*
+!data/environmental/marida_env_features.csv
+!data/env_sst_chl_wind/marida_env_sst_chl_wind.csv
 
 
 checkpoints/

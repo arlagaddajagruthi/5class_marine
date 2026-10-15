@@ -1,0 +1,10 @@
+
+=== stage6_env | MARIDA | 16 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, NDWI, red/green, nir/red, nir/green, swir1/nir
+  env train: patches with a filled value: sst_grad_c_per_km=3
+  env test: patches with a filled value: sst_grad_c_per_km=2
+  train 358,442 px [350057   1943   1961   4481] | test 158,371 px [154739    381   1641   1610]
+  rf    F1=0.7987 IoU=0.7236 Acc=0.9901 debris F1/IoU=0.4036/0.2528 algae F1/IoU=0.9821/0.9649 (120s)
+  xgb   F1=0.7664 IoU=0.6668 Acc=0.9777 debris F1/IoU=0.7455/0.5943 algae F1/IoU=0.9009/0.8196 (17s)
+  lgbm  F1=0.6781 IoU=0.5922 Acc=0.9700 debris F1/IoU=0.3613/0.2205 algae F1/IoU=0.9595/0.9222 (12s)
+  ada   F1=0.7994 IoU=0.7024 Acc=0.9930 debris F1/IoU=0.5125/0.3446 algae F1/IoU=0.9077/0.8310 (435s)
+  svm   F1=0.8830 IoU=0.8077 Acc=0.9955 debris F1/IoU=0.7475/0.5968 algae F1/IoU=0.9829/0.9663 (15s)
