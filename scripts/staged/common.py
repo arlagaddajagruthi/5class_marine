@@ -196,10 +196,20 @@ def evaluate(y_true, y_pred):
     per = {k: f(y_true, y_pred, average=None, labels=labels, zero_division=0)
            for k, f in [("precision", precision_score), ("recall", recall_score),
                         ("f1", f1_score), ("iou", jaccard_score)]}
+    cm = confusion_matrix(y_true, y_pred, labels=labels)
+    per.update(class_accuracies(cm))
     for i, c in enumerate(CLASSES):
         for k in per:
             out[f"{k}_c{c}"] = float(per[k][i])
-    return out, confusion_matrix(y_true, y_pred, labels=labels)
+    return out, cm
+
+
+def class_accuracies(cm):
+    """acc: TP / class pixels (per-class accuracy = recall = producer's accuracy).
+    ovr_acc: (TP + TN) / all pixels, the class as a one-vs-rest yes/no task."""
+    tp, total = np.diag(cm), cm.sum()
+    tn = total - cm.sum(0) - cm.sum(1) + tp
+    return {"acc": tp / np.clip(cm.sum(1), 1, None), "ovr_acc": (tp + tn) / total}
 
 
 def plot_cm(cm, path, title):
@@ -303,7 +313,9 @@ def write_summary(df, path, stage_id, description, dataset_name, feature_names):
         lines.append(f"| {r['model']} | {r['f1']:.4f} | {r['iou']:.4f} | {r['precision']:.4f} | "
                      f"{r['recall']:.4f} | {r['accuracy']:.4f} | {r['kappa']:.4f} | "
                      f"{r['n_train']:,} | {r['train_time_s']:.0f} |")
-    for metric, label in [("f1", "F1"), ("iou", "IoU")]:
+    for metric, label in [("acc", "accuracy (TP / class pixels = recall)"), ("precision", "precision"),
+                          ("recall", "recall"), ("f1", "F1"), ("iou", "IoU"),
+                          ("ovr_acc", "one-vs-rest accuracy ((TP + TN) / all pixels)")]:
         lines += ["", f"## Per-class {label}", "",
                   "| Model | " + " | ".join(CLASS_NAMES[c] for c in CLASSES) + " |",
                   "|" + "---|" * (1 + len(CLASSES))]

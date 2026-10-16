@@ -1,0 +1,9 @@
+waiting for resnet_paper Fri Oct 16 01:23:55 IST 2026
+start Fri Oct 16 02:46:00 IST 2026
+MADOS cache exit 0 Fri Oct 16 02:54:10 IST 2026
+MARIDA check exit 0 Fri Oct 16 02:54:52 IST 2026
+MARIDA train exit 0 Fri Oct 16 04:04:23 IST 2026
+MARIDA test exit 0 Fri Oct 16 04:05:27 IST 2026
+MADOS check exit 0 Fri Oct 16 04:05:51 IST 2026
+MADOS run start Fri Oct 16 12:53:58 IST 2026
+after_mados waiting for PID 21172 Fri Oct 16 13:26:07 IST 2026

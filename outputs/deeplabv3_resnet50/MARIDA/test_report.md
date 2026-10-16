@@ -1,0 +1,175 @@
+# DeepLabv3-ResNet50, MARIDA, 4 classes (annotated pixels only)
+
+Recipe: {"epochs": 45, "batch": 5, "lr": 0.0002, "decay": 0.0, "lr_steps": [40], "gamma": 0.1, "weight_param": 1.03, "aug": "marida", "vscp": false, "ema": false, "tta": false, "drop_last": false}
+
+Selected checkpoint: epoch 45 of 45 (model weights), lowest val loss 0.1014. Test-time augmentation: False.
+
+## Class distribution (annotated pixels per split)
+
+| class | train pixels | val pixels | test pixels | train % | val % | test % |
+|---|---|---|---|---|---|---|
+| Water | 350,057 | 187,008 | 154,739 | 97.66 | 97.69 | 97.71 |
+| Marine Debris | 1,943 | 1,075 | 381 | 0.54 | 0.56 | 0.24 |
+| Algae/Sargassum | 1,961 | 1,552 | 1,641 | 0.55 | 0.81 | 1.04 |
+| Other | 4,481 | 1,801 | 1,610 | 1.25 | 0.94 | 1.02 |
+
+model_best_val_loss and model_last hold the same weights (best epoch = last epoch), so the test results are reported once.
+
+## model_best_val_loss, test split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9740 |
+| balanced accuracy (macro recall) | 0.8412 |
+| Cohen's kappa | 0.5978 |
+| macroPrec | 0.6331 |
+| macroRec | 0.8412 |
+| macroF1 | 0.6624 |
+| IoU | 0.5653 |
+| microPrec | 0.9740 |
+| microRec | 0.9740 |
+| microF1 | 0.9740 |
+| weightPrec | 0.9910 |
+| weightRec | 0.9740 |
+| weightF1 | 0.9817 |
+
+Annotated pixels: 158,371. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 154,739 | 97.71 | 151,579 | 151,422 | 157 | 3,317 | 3,475 | 0.9786 | 0.9781 | 0.9990 | 0.9786 | 0.9887 | 0.9776 | 0.9568 | 0.00 |
+| Marine Debris | 381 | 0.24 | 3,225 | 319 | 2,906 | 62 | 155,084 | 0.8373 | 0.9813 | 0.0989 | 0.8373 | 0.1769 | 0.0970 | 0.9816 | 9.11 |
+| Algae/Sargassum | 1,641 | 1.04 | 1,579 | 1,290 | 289 | 351 | 156,441 | 0.7861 | 0.9960 | 0.8170 | 0.7861 | 0.8012 | 0.6684 | 0.9982 | 0.22 |
+| Other | 1,610 | 1.02 | 1,988 | 1,228 | 760 | 382 | 156,001 | 0.7627 | 0.9928 | 0.6177 | 0.7627 | 0.6826 | 0.5181 | 0.9952 | 0.62 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 151,422 | 2,279 | 284 | 754 | 154,739 |
+| Marine Debris | 53 | 319 | 5 | 4 | 381 |
+| Algae/Sargassum | 27 | 322 | 1,290 | 2 | 1,641 |
+| Other | 77 | 305 | 0 | 1,228 | 1,610 |
+| total predicted | 151,579 | 3,225 | 1,579 | 1,988 | 158,371 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 97.86 | 1.47 | 0.18 | 0.49 |
+| Marine Debris | 13.91 | 83.73 | 1.31 | 1.05 |
+| Algae/Sargassum | 1.65 | 19.62 | 78.61 | 0.12 |
+| Other | 4.78 | 18.94 | 0.00 | 76.27 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 99.90 | 70.67 | 17.99 | 37.93 |
+| Marine Debris | 0.03 | 9.89 | 0.32 | 0.20 |
+| Algae/Sargassum | 0.02 | 9.98 | 81.70 | 0.10 |
+| Other | 0.05 | 9.46 | 0.00 | 61.77 |
+
+### Where the errors go
+
+- **Water**: 3,317 missed pixels went to: Marine Debris 2,279 (68.7%), Other 754 (22.7%), Algae/Sargassum 284 (8.6%).
+  157 false-positive pixels came from: Other 77 (49.0%), Marine Debris 53 (33.8%), Algae/Sargassum 27 (17.2%).
+- **Marine Debris**: 62 missed pixels went to: Water 53 (85.5%), Algae/Sargassum 5 (8.1%), Other 4 (6.5%).
+  2,906 false-positive pixels came from: Water 2,279 (78.4%), Algae/Sargassum 322 (11.1%), Other 305 (10.5%).
+- **Algae/Sargassum**: 351 missed pixels went to: Marine Debris 322 (91.7%), Water 27 (7.7%), Other 2 (0.6%).
+  289 false-positive pixels came from: Water 284 (98.3%), Marine Debris 5 (1.7%).
+- **Other**: 382 missed pixels went to: Marine Debris 305 (79.8%), Water 77 (20.2%).
+  760 false-positive pixels came from: Water 754 (99.2%), Marine Debris 4 (0.5%), Algae/Sargassum 2 (0.3%).
+
+## model_best_val_loss, val split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9784 |
+| balanced accuracy (macro recall) | 0.8272 |
+| Cohen's kappa | 0.6413 |
+| macroPrec | 0.6397 |
+| macroRec | 0.8272 |
+| macroF1 | 0.6960 |
+| IoU | 0.5767 |
+| microPrec | 0.9784 |
+| microRec | 0.9784 |
+| microF1 | 0.9784 |
+| weightPrec | 0.9884 |
+| weightRec | 0.9784 |
+| weightF1 | 0.9824 |
+
+Annotated pixels: 191,436. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 187,008 | 97.69 | 184,100 | 183,859 | 241 | 3,149 | 4,187 | 0.9832 | 0.9823 | 0.9987 | 0.9832 | 0.9909 | 0.9819 | 0.9456 | 0.00 |
+| Marine Debris | 1,075 | 0.56 | 3,284 | 841 | 2,443 | 234 | 187,918 | 0.7823 | 0.9860 | 0.2561 | 0.7823 | 0.3859 | 0.2391 | 0.9872 | 2.90 |
+| Algae/Sargassum | 1,552 | 0.81 | 1,609 | 1,136 | 473 | 416 | 189,411 | 0.7320 | 0.9954 | 0.7060 | 0.7320 | 0.7188 | 0.5610 | 0.9975 | 0.42 |
+| Other | 1,801 | 0.94 | 2,443 | 1,461 | 982 | 340 | 188,653 | 0.8112 | 0.9931 | 0.5980 | 0.8112 | 0.6885 | 0.5250 | 0.9948 | 0.67 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 183,859 | 1,815 | 453 | 881 | 187,008 |
+| Marine Debris | 120 | 841 | 15 | 99 | 1,075 |
+| Algae/Sargassum | 39 | 375 | 1,136 | 2 | 1,552 |
+| Other | 82 | 253 | 5 | 1,461 | 1,801 |
+| total predicted | 184,100 | 3,284 | 1,609 | 2,443 | 191,436 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 98.32 | 0.97 | 0.24 | 0.47 |
+| Marine Debris | 11.16 | 78.23 | 1.40 | 9.21 |
+| Algae/Sargassum | 2.51 | 24.16 | 73.20 | 0.13 |
+| Other | 4.55 | 14.05 | 0.28 | 81.12 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 99.87 | 55.27 | 28.15 | 36.06 |
+| Marine Debris | 0.07 | 25.61 | 0.93 | 4.05 |
+| Algae/Sargassum | 0.02 | 11.42 | 70.60 | 0.08 |
+| Other | 0.04 | 7.70 | 0.31 | 59.80 |
+
+### Where the errors go
+
+- **Water**: 3,149 missed pixels went to: Marine Debris 1,815 (57.6%), Other 881 (28.0%), Algae/Sargassum 453 (14.4%).
+  241 false-positive pixels came from: Marine Debris 120 (49.8%), Other 82 (34.0%), Algae/Sargassum 39 (16.2%).
+- **Marine Debris**: 234 missed pixels went to: Water 120 (51.3%), Other 99 (42.3%), Algae/Sargassum 15 (6.4%).
+  2,443 false-positive pixels came from: Water 1,815 (74.3%), Algae/Sargassum 375 (15.3%), Other 253 (10.4%).
+- **Algae/Sargassum**: 416 missed pixels went to: Marine Debris 375 (90.1%), Water 39 (9.4%), Other 2 (0.5%).
+  473 false-positive pixels came from: Water 453 (95.8%), Marine Debris 15 (3.2%), Other 5 (1.1%).
+- **Other**: 340 missed pixels went to: Marine Debris 253 (74.4%), Water 82 (24.1%), Algae/Sargassum 5 (1.5%).
+  982 false-positive pixels came from: Water 881 (89.7%), Marine Debris 99 (10.1%), Algae/Sargassum 2 (0.2%).
+
+## Validation vs test, per class (model_best_val_loss)
+
+| class | precision val | recall val | F1 val | IoU val | precision test | recall test | F1 test | IoU test | F1 test - val |
+|---|---|---|---|---|---|---|---|---|---|
+| Water | 0.9987 | 0.9832 | 0.9909 | 0.9819 | 0.9990 | 0.9786 | 0.9887 | 0.9776 | -0.0022 |
+| Marine Debris | 0.2561 | 0.7823 | 0.3859 | 0.2391 | 0.0989 | 0.8373 | 0.1769 | 0.0970 | -0.2089 |
+| Algae/Sargassum | 0.7060 | 0.7320 | 0.7188 | 0.5610 | 0.8170 | 0.7861 | 0.8012 | 0.6684 | +0.0825 |
+| Other | 0.5980 | 0.8112 | 0.6885 | 0.5250 | 0.6177 | 0.7627 | 0.6826 | 0.5181 | -0.0059 |
+
+Large negative F1 test - val means the class generalises worse to the test scenes than the validation loss suggested.

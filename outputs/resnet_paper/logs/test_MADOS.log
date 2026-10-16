@@ -1,0 +1,92 @@
+C:\Users\Sumithra\AppData\Local\Programs\Python\Python314\Lib\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in samples with no predicted labels. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+C:\Users\Sumithra\AppData\Local\Programs\Python\Python314\Lib\site-packages\sklearn\metrics\_classification.py:1833: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in samples with no predicted labels. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+# ResNet-50 multi-label patch classification, MADOS (4 classes), test split
+
+Selected epoch (lowest val loss): 10 (val loss 0.4887). Threshold 0.5.
+
+## model_best_val_loss
+
+Test loss 0.5205
+
+| metric | value |
+|---|---|
+| macroPrec | 0.5766 |
+| microPrec | 0.6932 |
+| samplePrec | 0.7017 |
+| macroRec | 0.4965 |
+| microRec | 0.6822 |
+| sampleRec | 0.7001 |
+| macroF1 | 0.5110 |
+| microF1 | 0.6877 |
+| sampleF1 | 0.6740 |
+| HammingLoss | 0.2009 |
+| subsetAcc | 0.4492 |
+| coverageError | 2.4176 |
+| rankLoss | 0.3594 |
+
+```
+                 precision    recall  f1-score   support
+
+          Water     0.7279    0.8785    0.7961       469
+  Marine Debris     0.4872    0.4597    0.4730       124
+Algae/Sargassum     0.3636    0.0889    0.1429        45
+          Other     0.7277    0.5588    0.6322       306
+
+      micro avg     0.6932    0.6822    0.6877       944
+      macro avg     0.5766    0.4965    0.5110       944
+   weighted avg     0.6788    0.6822    0.6694       944
+    samples avg     0.7017    0.7001    0.6740       944
+
+```
+
+Per-class confusion (rows: annotated no/yes, columns: predicted no/yes):
+
+- Water: [[105, 154], [57, 412]]
+- Marine Debris: [[544, 60], [67, 57]]
+- Algae/Sargassum: [[676, 7], [41, 4]]
+- Other: [[358, 64], [135, 171]]
+
+## model_last
+
+Test loss 0.5195
+
+| metric | value |
+|---|---|
+| macroPrec | 0.5396 |
+| microPrec | 0.6916 |
+| samplePrec | 0.7081 |
+| macroRec | 0.5103 |
+| microRec | 0.6864 |
+| sampleRec | 0.7056 |
+| macroF1 | 0.5153 |
+| microF1 | 0.6890 |
+| sampleF1 | 0.6812 |
+| HammingLoss | 0.2009 |
+| subsetAcc | 0.4615 |
+| coverageError | 2.3915 |
+| rankLoss | 0.3530 |
+
+```
+                 precision    recall  f1-score   support
+
+          Water     0.7630    0.8443    0.8016       469
+  Marine Debris     0.4662    0.5000    0.4825       124
+Algae/Sargassum     0.2353    0.0889    0.1290        45
+          Other     0.6940    0.6078    0.6481       306
+
+      micro avg     0.6916    0.6864    0.6890       944
+      macro avg     0.5396    0.5103    0.5153       944
+   weighted avg     0.6765    0.6864    0.6779       944
+    samples avg     0.7081    0.7056    0.6812       944
+
+```
+
+Per-class confusion (rows: annotated no/yes, columns: predicted no/yes):
+
+- Water: [[136, 123], [73, 396]]
+- Marine Debris: [[533, 71], [62, 62]]
+- Algae/Sargassum: [[670, 13], [41, 4]]
+- Other: [[340, 82], [120, 186]]
+

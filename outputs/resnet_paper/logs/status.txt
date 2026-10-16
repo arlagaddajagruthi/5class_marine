@@ -1,0 +1,4 @@
+MARIDA train exit 0
+MARIDA test exit 0
+MADOS train exit 0
+MADOS test exit 0

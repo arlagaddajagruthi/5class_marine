@@ -1,0 +1,38 @@
+{
+  "recipe": {
+    "epochs": 80,
+    "batch": 5,
+    "lr": 0.0002,
+    "decay": 0.0,
+    "lr_steps": [
+      45,
+      65
+    ],
+    "gamma": 0.1,
+    "weight_param": 1.03,
+    "aug": "mados",
+    "vscp": true,
+    "ema": true,
+    "ema_decay": 0.999,
+    "tta": true,
+    "drop_last": true
+  },
+  "train_annotated_pixels": {
+    "Water": 591224,
+    "Marine Debris": 2561,
+    "Algae/Sargassum": 4397,
+    "Other": 163705
+  },
+  "train_class_fraction": {
+    "Water": 0.776,
+    "Marine Debris": 0.00336,
+    "Algae/Sargassum": 0.00577,
+    "Other": 0.21487
+  },
+  "ce_weight": {
+    "Water": 1.6917,
+    "Marine Debris": 30.472,
+    "Algae/Sargassum": 28.4525,
+    "Other": 4.5656
+  }
+}

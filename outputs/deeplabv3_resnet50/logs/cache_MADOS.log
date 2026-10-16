@@ -1,0 +1,3 @@
+MADOS train: 1433 patches cached (244 s)
+MADOS val: 642 patches cached (106 s)
+MADOS test: 728 patches cached (129 s)

@@ -14,6 +14,36 @@ Annotated classes only (1-4). Macro scores over the 4 classes; test = all annota
 | ada | 0.7246 | 0.6546 | 0.6919 | 0.9134 | 0.9765 | 0.6357 | 358,442 | 313 |
 | svm | 0.7983 | 0.6860 | 0.7490 | 0.8907 | 0.9894 | 0.7901 | 358,442 | 5 |
 
+## Per-class accuracy (TP / class pixels = recall)
+
+| Model | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| rf | 0.9979 | 0.8661 | 0.9750 | 0.8211 |
+| xgb | 0.9949 | 0.9475 | 0.9604 | 0.8801 |
+| lgbm | 0.9949 | 0.9291 | 0.9726 | 0.8888 |
+| ada | 0.9784 | 0.8819 | 0.9628 | 0.8304 |
+| svm | 0.9923 | 0.8425 | 0.9933 | 0.7348 |
+
+## Per-class precision
+
+| Model | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| rf | 0.9982 | 0.7112 | 0.9963 | 0.8252 |
+| xgb | 0.9992 | 0.6150 | 0.9381 | 0.6980 |
+| lgbm | 0.9993 | 0.6031 | 0.9477 | 0.7008 |
+| ada | 0.9988 | 0.1028 | 0.9422 | 0.7239 |
+| svm | 0.9981 | 0.4871 | 0.6573 | 0.8535 |
+
+## Per-class recall
+
+| Model | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| rf | 0.9979 | 0.8661 | 0.9750 | 0.8211 |
+| xgb | 0.9949 | 0.9475 | 0.9604 | 0.8801 |
+| lgbm | 0.9949 | 0.9291 | 0.9726 | 0.8888 |
+| ada | 0.9784 | 0.8819 | 0.9628 | 0.8304 |
+| svm | 0.9923 | 0.8425 | 0.9933 | 0.7348 |
+
 ## Per-class F1
 
 | Model | Water | Marine Debris | Algae/Sargassum | Other |
@@ -33,3 +63,13 @@ Annotated classes only (1-4). Macro scores over the 4 classes; test = all annota
 | lgbm | 0.9941 | 0.5765 | 0.9231 | 0.6443 |
 | ada | 0.9772 | 0.1014 | 0.9091 | 0.6307 |
 | svm | 0.9905 | 0.4465 | 0.6544 | 0.6525 |
+
+## Per-class one-vs-rest accuracy ((TP + TN) / all pixels)
+
+| Model | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| rf | 0.9962 | 0.9988 | 0.9997 | 0.9964 |
+| xgb | 0.9942 | 0.9984 | 0.9989 | 0.9949 |
+| lgbm | 0.9943 | 0.9984 | 0.9992 | 0.9950 |
+| ada | 0.9777 | 0.9812 | 0.9990 | 0.9951 |
+| svm | 0.9907 | 0.9975 | 0.9946 | 0.9960 |

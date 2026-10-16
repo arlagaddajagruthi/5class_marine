@@ -28,7 +28,7 @@ def main():
         raise SystemExit("No stage results found; run the stage scripts first.")
     df = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
     base = df[df.stage == "stage1_bands"].set_index(["dataset", "model"])
-    keys = ["f1", "iou", "accuracy"] + [f"{m}_c{c}" for c in CLASSES for m in ("f1", "iou")]
+    keys = ["f1", "iou", "accuracy"] + [f"{m}_c{c}" for c in CLASSES for m in ("f1", "iou", "acc")]
     for k in keys:
         df[f"d_{k}"] = [r[k] - base.loc[(r.dataset, r.model), k] if (r.dataset, r.model) in base.index else float("nan")
                         for _, r in df.iterrows()]
@@ -38,6 +38,7 @@ def main():
     tables = [("f1", "Macro F1"), ("iou", "Macro IoU")]
     for c in (2, 3):
         tables += [(f"f1_c{c}", f"F1 {CLASS_NAMES[c]}"), (f"iou_c{c}", f"IoU {CLASS_NAMES[c]}")]
+    tables += [(f"acc_c{c}", f"Class accuracy {CLASS_NAMES[c]} (TP / class pixels)") for c in CLASSES]
     stage_order = sorted(df.stage.unique())
     lines = ["# Staged feature comparison", "",
              "Scores over classes 1-4 on all annotated test pixels (macro = mean over the 4 classes). "

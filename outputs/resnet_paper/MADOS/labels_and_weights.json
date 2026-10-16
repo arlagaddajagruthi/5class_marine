@@ -1,0 +1,50 @@
+{
+  "train_patches_with_class": {
+    "Water": 905.0,
+    "Marine Debris": 250.0,
+    "Algae/Sargassum": 101.0,
+    "Other": 585.0
+  },
+  "neg_over_pos": {
+    "Water": 0.5834000110626221,
+    "Marine Debris": 4.73199987411499,
+    "Algae/Sargassum": 13.18809986114502,
+    "Other": 1.4495999813079834
+  },
+  "bce_pos_weight": {
+    "Water": 0.8345999717712402,
+    "Marine Debris": 1.6833000183105469,
+    "Algae/Sargassum": 1.9368000030517578,
+    "Other": 1.2070000171661377
+  },
+  "patches": {
+    "train": 1433,
+    "val": 642,
+    "test": 728
+  },
+  "patches_with_no_label": {
+    "train": 0,
+    "val": 0,
+    "test": 0
+  },
+  "label_counts": {
+    "train": {
+      "Water": 905,
+      "Marine Debris": 250,
+      "Algae/Sargassum": 101,
+      "Other": 585
+    },
+    "val": {
+      "Water": 398,
+      "Marine Debris": 98,
+      "Algae/Sargassum": 33,
+      "Other": 278
+    },
+    "test": {
+      "Water": 469,
+      "Marine Debris": 124,
+      "Algae/Sargassum": 45,
+      "Other": 306
+    }
+  }
+}
