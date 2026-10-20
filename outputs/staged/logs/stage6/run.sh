@@ -10,8 +10,8 @@ python -u scripts/env_sst_chl_wind/build_env_table.py > $L/build_env_table.log 2
 echo "build_env_table exit $?" >> $L/status.txt
 for spec in "balanced outputs/staged" "log outputs/staged/log_weights" "none outputs/staged/no_class_weights"; do
   set -- $spec
-  python -u scripts/staged/stage6_env.py --weighting $1 --out-root $2 > $L/stage6_$1.log 2>&1
+  python -u scripts/staged_ml/stage6_env.py --weighting $1 --out-root $2 > $L/stage6_$1.log 2>&1
   echo "stage6 $1 exit $?" >> $L/status.txt
-  python -u scripts/staged/compare_stages.py --out-root $2 > $L/compare_$1.log 2>&1
+  python -u scripts/staged_ml/compare_stages.py --out-root $2 > $L/compare_$1.log 2>&1
   echo "compare $1 exit $?" >> $L/status.txt
 done

@@ -10,3 +10,571 @@
 2026-10-16 13:38:12,034 epoch=9 lr=0.0002 train_loss=1.0279 model_val_loss=0.8924 model_val_macroF1=0.2777 model_val_IoU=0.2135 model_val_F1_debris=0.0000 ema_val_loss=0.7529 ema_val_macroF1=0.2446 ema_val_IoU=0.2192 ema_val_F1_debris=0.0000 seconds=424.1892
 2026-10-16 14:03:25,205 epoch=10 lr=0.0002 train_loss=0.9927 model_val_loss=0.6279 model_val_macroF1=0.3928 model_val_IoU=0.3019 model_val_F1_debris=0.0000 ema_val_loss=0.7174 ema_val_macroF1=0.2582 ema_val_IoU=0.2272 ema_val_F1_debris=0.0000 seconds=1511.3560
 2026-10-16 14:28:36,409 epoch=11 lr=0.0002 train_loss=0.9502 model_val_loss=0.5504 model_val_macroF1=0.3791 model_val_IoU=0.3133 model_val_F1_debris=0.0000 ema_val_loss=0.6594 ema_val_macroF1=0.2745 ema_val_IoU=0.2374 ema_val_F1_debris=0.0000 seconds=1508.5781
+2026-10-16 14:53:46,326 epoch=12 lr=0.0002 train_loss=0.9428 model_val_loss=0.5479 model_val_macroF1=0.4002 model_val_IoU=0.3298 model_val_F1_debris=0.0000 ema_val_loss=0.6339 ema_val_macroF1=0.3023 ema_val_IoU=0.2564 ema_val_F1_debris=0.0000 seconds=1507.5943
+2026-10-16 15:11:49,419 epoch=13 lr=0.0002 train_loss=0.8837 model_val_loss=0.5337 model_val_macroF1=0.4785 model_val_IoU=0.3857 model_val_F1_debris=0.0000 ema_val_loss=0.6303 ema_val_macroF1=0.3145 ema_val_IoU=0.2655 ema_val_F1_debris=0.0000 seconds=1080.6105
+2026-10-16 15:17:14,638 epoch=14 lr=0.0002 train_loss=0.8651 model_val_loss=0.6223 model_val_macroF1=0.4985 model_val_IoU=0.3863 model_val_F1_debris=0.1141 ema_val_loss=0.5981 ema_val_macroF1=0.3295 ema_val_IoU=0.2777 ema_val_F1_debris=0.0000 seconds=322.7820
+2026-10-16 15:24:51,099 epoch=15 lr=0.0002 train_loss=0.8190 model_val_loss=0.4629 model_val_macroF1=0.6260 model_val_IoU=0.5202 model_val_F1_debris=0.1410 ema_val_loss=0.5616 ema_val_macroF1=0.3381 ema_val_IoU=0.2851 ema_val_F1_debris=0.0000 seconds=452.2670
+2026-10-16 15:29:21,975 epoch=16 lr=0.0002 train_loss=0.7826 model_val_loss=0.4882 model_val_macroF1=0.5522 model_val_IoU=0.4419 model_val_F1_debris=0.1272 ema_val_loss=0.5371 ema_val_macroF1=0.3475 ema_val_IoU=0.2923 ema_val_F1_debris=0.0000 seconds=267.5848
+2026-10-16 15:33:54,299 epoch=17 lr=0.0002 train_loss=0.7498 model_val_loss=0.4105 model_val_macroF1=0.5923 model_val_IoU=0.4914 model_val_F1_debris=0.0674 ema_val_loss=0.4939 ema_val_macroF1=0.4289 ema_val_IoU=0.3451 ema_val_F1_debris=0.0000 seconds=270.6039
+2026-10-16 15:38:23,094 epoch=18 lr=0.0002 train_loss=0.7541 model_val_loss=0.5289 model_val_macroF1=0.5973 model_val_IoU=0.4931 model_val_F1_debris=0.1212 ema_val_loss=0.4569 ema_val_macroF1=0.5405 ema_val_IoU=0.4438 ema_val_F1_debris=0.0000 seconds=265.7635
+2026-10-16 15:42:49,979 epoch=19 lr=0.0002 train_loss=0.7030 model_val_loss=0.3666 model_val_macroF1=0.5120 model_val_IoU=0.4054 model_val_F1_debris=0.1399 ema_val_loss=0.4401 ema_val_macroF1=0.5662 ema_val_IoU=0.4739 ema_val_F1_debris=0.0016 seconds=264.8951
+2026-10-16 15:47:17,556 epoch=20 lr=0.0002 train_loss=0.7745 model_val_loss=0.3779 model_val_macroF1=0.6328 model_val_IoU=0.5178 model_val_F1_debris=0.2107 ema_val_loss=0.4302 ema_val_macroF1=0.5684 ema_val_IoU=0.4756 ema_val_F1_debris=0.0125 seconds=265.4536
+2026-10-16 15:51:33,808 epoch=21 lr=0.0002 train_loss=0.7605 model_val_loss=0.5693 model_val_macroF1=0.5991 model_val_IoU=0.4743 model_val_F1_debris=0.2330 ema_val_loss=0.3910 ema_val_macroF1=0.5837 ema_val_IoU=0.4879 ema_val_F1_debris=0.0417 seconds=254.1679
+2026-10-16 15:55:57,008 epoch=22 lr=0.0002 train_loss=0.6839 model_val_loss=0.4403 model_val_macroF1=0.6047 model_val_IoU=0.4896 model_val_F1_debris=0.2311 ema_val_loss=0.3723 ema_val_macroF1=0.6106 ema_val_IoU=0.5082 ema_val_F1_debris=0.1202 seconds=261.4440
+2026-10-16 16:00:20,776 epoch=23 lr=0.0002 train_loss=0.7363 model_val_loss=0.2567 model_val_macroF1=0.7042 model_val_IoU=0.5876 model_val_F1_debris=0.3457 ema_val_loss=0.3668 ema_val_macroF1=0.6281 ema_val_IoU=0.5181 ema_val_F1_debris=0.1998 seconds=261.9792
+2026-10-16 16:04:36,161 epoch=24 lr=0.0002 train_loss=0.6694 model_val_loss=0.3012 model_val_macroF1=0.7014 model_val_IoU=0.5901 model_val_F1_debris=0.3013 ema_val_loss=0.3597 ema_val_macroF1=0.6318 ema_val_IoU=0.5198 ema_val_F1_debris=0.2226 seconds=253.3788
+2026-10-16 16:08:55,667 epoch=25 lr=0.0002 train_loss=0.7255 model_val_loss=0.2869 model_val_macroF1=0.7166 model_val_IoU=0.6007 model_val_F1_debris=0.3750 ema_val_loss=0.3334 ema_val_macroF1=0.6687 ema_val_IoU=0.5533 ema_val_F1_debris=0.2887 seconds=257.6529
+2026-10-16 16:13:15,557 epoch=26 lr=0.0002 train_loss=0.7077 model_val_loss=0.5288 model_val_macroF1=0.6081 model_val_IoU=0.4702 model_val_F1_debris=0.3196 ema_val_loss=0.2984 ema_val_macroF1=0.6913 ema_val_IoU=0.5754 ema_val_F1_debris=0.3243 seconds=257.7656
+2026-10-16 16:17:36,219 epoch=27 lr=0.0002 train_loss=0.6301 model_val_loss=0.3711 model_val_macroF1=0.6081 model_val_IoU=0.4778 model_val_F1_debris=0.3229 ema_val_loss=0.2924 ema_val_macroF1=0.6954 ema_val_IoU=0.5780 ema_val_F1_debris=0.3423 seconds=258.5220
+2026-10-16 16:21:55,832 epoch=28 lr=0.0002 train_loss=0.6553 model_val_loss=0.3501 model_val_macroF1=0.6873 model_val_IoU=0.5635 model_val_F1_debris=0.3882 ema_val_loss=0.2817 ema_val_macroF1=0.6951 ema_val_IoU=0.5788 ema_val_F1_debris=0.3340 seconds=257.5715
+2026-10-16 16:26:14,488 epoch=29 lr=0.0002 train_loss=0.6603 model_val_loss=0.2786 model_val_macroF1=0.6781 model_val_IoU=0.5616 model_val_F1_debris=0.3071 ema_val_loss=0.2843 ema_val_macroF1=0.7017 ema_val_IoU=0.5864 ema_val_F1_debris=0.3390 seconds=256.4579
+2026-10-16 16:30:32,087 epoch=30 lr=0.0002 train_loss=0.6280 model_val_loss=0.2359 model_val_macroF1=0.7403 model_val_IoU=0.6220 model_val_F1_debris=0.4437 ema_val_loss=0.2749 ema_val_macroF1=0.7107 ema_val_IoU=0.5944 ema_val_F1_debris=0.3659 seconds=255.1470
+2026-10-16 16:34:51,497 epoch=31 lr=0.0002 train_loss=0.6619 model_val_loss=0.2966 model_val_macroF1=0.6819 model_val_IoU=0.5668 model_val_F1_debris=0.3052 ema_val_loss=0.2746 ema_val_macroF1=0.7095 ema_val_IoU=0.5919 ema_val_F1_debris=0.3752 seconds=257.3572
+2026-10-16 16:39:09,622 epoch=32 lr=0.0002 train_loss=0.6393 model_val_loss=0.2306 model_val_macroF1=0.6799 model_val_IoU=0.5661 model_val_F1_debris=0.2726 ema_val_loss=0.2924 ema_val_macroF1=0.7097 ema_val_IoU=0.5917 ema_val_F1_debris=0.3809 seconds=256.3079
+2026-10-16 16:43:32,200 epoch=33 lr=0.0002 train_loss=0.6291 model_val_loss=0.3097 model_val_macroF1=0.6706 model_val_IoU=0.5434 model_val_F1_debris=0.3484 ema_val_loss=0.3177 ema_val_macroF1=0.7137 ema_val_IoU=0.5949 ema_val_F1_debris=0.3958 seconds=260.9861
+2026-10-16 16:47:57,932 epoch=34 lr=0.0002 train_loss=0.6241 model_val_loss=0.3177 model_val_macroF1=0.6551 model_val_IoU=0.5422 model_val_F1_debris=0.2527 ema_val_loss=0.3230 ema_val_macroF1=0.7106 ema_val_IoU=0.5919 ema_val_F1_debris=0.3887 seconds=264.2940
+2026-10-16 16:54:04,794 epoch=35 lr=0.0002 train_loss=0.5985 model_val_loss=0.2734 model_val_macroF1=0.6759 model_val_IoU=0.5661 model_val_F1_debris=0.2673 ema_val_loss=0.3270 ema_val_macroF1=0.7036 ema_val_IoU=0.5858 ema_val_F1_debris=0.3677 seconds=365.2516
+2026-10-16 17:00:17,601 epoch=36 lr=0.0002 train_loss=0.5999 model_val_loss=0.3160 model_val_macroF1=0.7030 model_val_IoU=0.5875 model_val_F1_debris=0.3559 ema_val_loss=0.3388 ema_val_macroF1=0.7072 ema_val_IoU=0.5863 ema_val_F1_debris=0.4052 seconds=371.0752
+2026-10-16 17:07:41,205 epoch=37 lr=0.0002 train_loss=0.5855 model_val_loss=0.2638 model_val_macroF1=0.6537 model_val_IoU=0.5436 model_val_F1_debris=0.2033 ema_val_loss=0.3405 ema_val_macroF1=0.7083 ema_val_IoU=0.5870 ema_val_F1_debris=0.4180 seconds=441.9060
+2026-10-16 17:16:11,312 epoch=38 lr=0.0002 train_loss=0.6162 model_val_loss=0.2603 model_val_macroF1=0.6166 model_val_IoU=0.4982 model_val_F1_debris=0.2414 ema_val_loss=0.3103 ema_val_macroF1=0.7166 ema_val_IoU=0.5965 ema_val_F1_debris=0.4228 seconds=508.5200
+2026-10-16 17:25:15,639 epoch=39 lr=0.0002 train_loss=0.6256 model_val_loss=0.2382 model_val_macroF1=0.7280 model_val_IoU=0.6185 model_val_F1_debris=0.3696 ema_val_loss=0.2893 ema_val_macroF1=0.7159 ema_val_IoU=0.5981 ema_val_F1_debris=0.3991 seconds=542.6723
+2026-10-16 17:33:07,929 epoch=40 lr=0.0002 train_loss=0.5914 model_val_loss=0.2551 model_val_macroF1=0.7092 model_val_IoU=0.5972 model_val_F1_debris=0.3440 ema_val_loss=0.2801 ema_val_macroF1=0.7212 ema_val_IoU=0.6040 ema_val_F1_debris=0.4012 seconds=470.7405
+2026-10-16 17:40:27,678 epoch=41 lr=0.0002 train_loss=0.5831 model_val_loss=0.3738 model_val_macroF1=0.6876 model_val_IoU=0.5707 model_val_F1_debris=0.3195 ema_val_loss=0.3026 ema_val_macroF1=0.7087 ema_val_IoU=0.5927 ema_val_F1_debris=0.3695 seconds=438.0741
+2026-10-16 17:47:03,490 epoch=42 lr=0.0002 train_loss=0.5897 model_val_loss=0.2297 model_val_macroF1=0.7170 model_val_IoU=0.6120 model_val_F1_debris=0.3100 ema_val_loss=0.3267 ema_val_macroF1=0.6828 ema_val_IoU=0.5712 ema_val_F1_debris=0.2926 seconds=394.3739
+2026-10-16 18:01:14,410 epoch=43 lr=0.0002 train_loss=0.5763 model_val_loss=0.2904 model_val_macroF1=0.6942 model_val_IoU=0.5622 model_val_F1_debris=0.4391 ema_val_loss=0.3302 ema_val_macroF1=0.6789 ema_val_IoU=0.5672 ema_val_F1_debris=0.2851 seconds=849.5230
+2026-10-16 18:10:37,749 epoch=44 lr=0.0002 train_loss=0.5778 model_val_loss=0.2898 model_val_macroF1=0.7169 model_val_IoU=0.6152 model_val_F1_debris=0.2833 ema_val_loss=0.2993 ema_val_macroF1=0.6932 ema_val_IoU=0.5796 ema_val_F1_debris=0.3216 seconds=561.0182
+2026-10-16 18:14:59,565 epoch=45 lr=0.0002 train_loss=0.5348 model_val_loss=0.2534 model_val_macroF1=0.6372 model_val_IoU=0.5128 model_val_F1_debris=0.2871 ema_val_loss=0.2822 ema_val_macroF1=0.7037 ema_val_IoU=0.5905 ema_val_F1_debris=0.3364 seconds=259.6415
+2026-10-16 18:19:18,878 epoch=46 lr=0.0000 train_loss=0.5137 model_val_loss=0.2441 model_val_macroF1=0.6735 model_val_IoU=0.5526 model_val_F1_debris=0.3131 ema_val_loss=0.2708 ema_val_macroF1=0.7069 ema_val_IoU=0.5939 ema_val_F1_debris=0.3417 seconds=257.8783
+2026-10-16 18:23:42,846 epoch=47 lr=0.0000 train_loss=0.4868 model_val_loss=0.2216 model_val_macroF1=0.6917 model_val_IoU=0.5695 model_val_F1_debris=0.3589 ema_val_loss=0.2730 ema_val_macroF1=0.7120 ema_val_IoU=0.5974 ema_val_F1_debris=0.3625 seconds=262.1477
+2026-10-16 18:28:06,426 epoch=48 lr=0.0000 train_loss=0.4783 model_val_loss=0.2132 model_val_macroF1=0.6952 model_val_IoU=0.5745 model_val_F1_debris=0.3518 ema_val_loss=0.2686 ema_val_macroF1=0.6964 ema_val_IoU=0.5746 ema_val_F1_debris=0.3655 seconds=262.0414
+2026-10-16 18:32:25,291 epoch=49 lr=0.0000 train_loss=0.4716 model_val_loss=0.2234 model_val_macroF1=0.6822 model_val_IoU=0.5609 model_val_F1_debris=0.3340 ema_val_loss=0.2691 ema_val_macroF1=0.6879 ema_val_IoU=0.5636 ema_val_F1_debris=0.3658 seconds=256.7182
+2026-10-16 18:36:53,369 epoch=50 lr=0.0000 train_loss=0.4689 model_val_loss=0.2418 model_val_macroF1=0.6840 model_val_IoU=0.5625 model_val_F1_debris=0.3362 ema_val_loss=0.2676 ema_val_macroF1=0.6804 ema_val_IoU=0.5551 ema_val_F1_debris=0.3601 seconds=266.6122
+2026-10-16 18:41:21,685 epoch=51 lr=0.0000 train_loss=0.4556 model_val_loss=0.2458 model_val_macroF1=0.6738 model_val_IoU=0.5574 model_val_F1_debris=0.2817 ema_val_loss=0.2639 ema_val_macroF1=0.6818 ema_val_IoU=0.5566 ema_val_F1_debris=0.3619 seconds=266.3197
+2026-10-16 18:45:40,594 epoch=52 lr=0.0000 train_loss=0.4418 model_val_loss=0.1707 model_val_macroF1=0.7194 model_val_IoU=0.6013 model_val_F1_debris=0.3957 ema_val_loss=0.2577 ema_val_macroF1=0.6819 ema_val_IoU=0.5573 ema_val_F1_debris=0.3566 seconds=256.9163
+2026-10-16 18:50:06,753 epoch=53 lr=0.0000 train_loss=0.4343 model_val_loss=0.1793 model_val_macroF1=0.7080 model_val_IoU=0.5865 model_val_F1_debris=0.4156 ema_val_loss=0.2536 ema_val_macroF1=0.6825 ema_val_IoU=0.5576 ema_val_F1_debris=0.3609 seconds=264.1886
+2026-10-16 18:54:27,324 epoch=54 lr=0.0000 train_loss=0.4680 model_val_loss=0.2894 model_val_macroF1=0.6540 model_val_IoU=0.5310 model_val_F1_debris=0.2991 ema_val_loss=0.2519 ema_val_macroF1=0.6812 ema_val_IoU=0.5565 ema_val_F1_debris=0.3571 seconds=258.4793
+2026-10-16 18:58:49,480 epoch=55 lr=0.0000 train_loss=0.4505 model_val_loss=0.1487 model_val_macroF1=0.7352 model_val_IoU=0.6202 model_val_F1_debris=0.4163 ema_val_loss=0.2501 ema_val_macroF1=0.6816 ema_val_IoU=0.5565 ema_val_F1_debris=0.3604 seconds=260.3127
+2026-10-16 19:03:16,212 epoch=56 lr=0.0000 train_loss=0.4433 model_val_loss=0.2110 model_val_macroF1=0.7122 model_val_IoU=0.5880 model_val_F1_debris=0.4170 ema_val_loss=0.2484 ema_val_macroF1=0.6824 ema_val_IoU=0.5577 ema_val_F1_debris=0.3595 seconds=265.1554
+2026-10-16 19:07:49,793 epoch=57 lr=0.0000 train_loss=0.4153 model_val_loss=0.1951 model_val_macroF1=0.7070 model_val_IoU=0.5855 model_val_F1_debris=0.3934 ema_val_loss=0.2482 ema_val_macroF1=0.6831 ema_val_IoU=0.5583 ema_val_F1_debris=0.3612 seconds=271.2245
+2026-10-16 19:12:22,547 epoch=58 lr=0.0000 train_loss=0.3975 model_val_loss=0.2793 model_val_macroF1=0.6694 model_val_IoU=0.5442 model_val_F1_debris=0.3401 ema_val_loss=0.2505 ema_val_macroF1=0.6841 ema_val_IoU=0.5590 ema_val_F1_debris=0.3648 seconds=270.7249
+2026-10-16 19:16:47,933 epoch=59 lr=0.0000 train_loss=0.4219 model_val_loss=0.2561 model_val_macroF1=0.6952 model_val_IoU=0.5706 model_val_F1_debris=0.3827 ema_val_loss=0.2504 ema_val_macroF1=0.6856 ema_val_IoU=0.5606 ema_val_F1_debris=0.3669 seconds=263.7193
+2026-10-16 19:21:17,129 epoch=60 lr=0.0000 train_loss=0.4316 model_val_loss=0.2258 model_val_macroF1=0.7119 model_val_IoU=0.5889 model_val_F1_debris=0.4071 ema_val_loss=0.2503 ema_val_macroF1=0.6882 ema_val_IoU=0.5630 ema_val_F1_debris=0.3749 seconds=267.4360
+2026-10-16 19:25:36,916 epoch=61 lr=0.0000 train_loss=0.3963 model_val_loss=0.2379 model_val_macroF1=0.7331 model_val_IoU=0.6232 model_val_F1_debris=0.3787 ema_val_loss=0.2505 ema_val_macroF1=0.6888 ema_val_IoU=0.5638 ema_val_F1_debris=0.3735 seconds=258.0788
+2026-10-16 19:30:09,725 epoch=62 lr=0.0000 train_loss=0.4100 model_val_loss=0.2254 model_val_macroF1=0.7005 model_val_IoU=0.5791 model_val_F1_debris=0.3698 ema_val_loss=0.2490 ema_val_macroF1=0.6898 ema_val_IoU=0.5651 ema_val_F1_debris=0.3725 seconds=271.3197
+2026-10-16 19:35:33,118 epoch=63 lr=0.0000 train_loss=0.4760 model_val_loss=0.1525 model_val_macroF1=0.7545 model_val_IoU=0.6404 model_val_F1_debris=0.4618 ema_val_loss=0.2526 ema_val_macroF1=0.6872 ema_val_IoU=0.5627 ema_val_F1_debris=0.3666 seconds=321.6261
+2026-10-16 19:42:05,523 epoch=64 lr=0.0000 train_loss=0.4145 model_val_loss=0.2340 model_val_macroF1=0.7050 model_val_IoU=0.5786 model_val_F1_debris=0.4203 ema_val_loss=0.2470 ema_val_macroF1=0.6882 ema_val_IoU=0.5639 ema_val_F1_debris=0.3672 seconds=390.7299
+2026-10-16 19:48:59,648 epoch=65 lr=0.0000 train_loss=0.4049 model_val_loss=0.1771 model_val_macroF1=0.7382 model_val_IoU=0.6173 model_val_F1_debris=0.4603 ema_val_loss=0.2468 ema_val_macroF1=0.6901 ema_val_IoU=0.5656 ema_val_F1_debris=0.3719 seconds=411.9864
+2026-10-16 19:55:28,962 epoch=66 lr=0.0000 train_loss=0.4064 model_val_loss=0.2115 model_val_macroF1=0.7077 model_val_IoU=0.5814 model_val_F1_debris=0.4422 ema_val_loss=0.2460 ema_val_macroF1=0.6939 ema_val_IoU=0.5694 ema_val_F1_debris=0.3789 seconds=387.0892
+2026-10-16 20:02:30,037 epoch=67 lr=0.0000 train_loss=0.3761 model_val_loss=0.1712 model_val_macroF1=0.7363 model_val_IoU=0.6167 model_val_F1_debris=0.4607 ema_val_loss=0.2462 ema_val_macroF1=0.6960 ema_val_IoU=0.5715 ema_val_F1_debris=0.3834 seconds=419.1667
+2026-10-16 20:09:25,181 epoch=68 lr=0.0000 train_loss=0.4082 model_val_loss=0.1735 model_val_macroF1=0.7397 model_val_IoU=0.6207 model_val_F1_debris=0.4537 ema_val_loss=0.2469 ema_val_macroF1=0.6961 ema_val_IoU=0.5719 ema_val_F1_debris=0.3813 seconds=413.2246
+2026-10-16 20:16:02,091 epoch=69 lr=0.0000 train_loss=0.3981 model_val_loss=0.1607 model_val_macroF1=0.7429 model_val_IoU=0.6260 model_val_F1_debris=0.4556 ema_val_loss=0.2467 ema_val_macroF1=0.6981 ema_val_IoU=0.5740 ema_val_F1_debris=0.3851 seconds=394.8667
+2026-10-16 20:22:55,925 epoch=70 lr=0.0000 train_loss=0.3769 model_val_loss=0.3657 model_val_macroF1=0.6821 model_val_IoU=0.5528 model_val_F1_debris=0.3997 ema_val_loss=0.2450 ema_val_macroF1=0.6995 ema_val_IoU=0.5755 ema_val_F1_debris=0.3868 seconds=412.1275
+2026-10-16 20:29:16,221 epoch=71 lr=0.0000 train_loss=0.3996 model_val_loss=0.1518 model_val_macroF1=0.7892 model_val_IoU=0.6897 model_val_F1_debris=0.4648 ema_val_loss=0.2476 ema_val_macroF1=0.7002 ema_val_IoU=0.5761 ema_val_F1_debris=0.3890 seconds=377.9897
+2026-10-16 20:33:43,338 epoch=72 lr=0.0000 train_loss=0.3964 model_val_loss=0.4081 model_val_macroF1=0.6823 model_val_IoU=0.5517 model_val_F1_debris=0.4109 ema_val_loss=0.2462 ema_val_macroF1=0.7026 ema_val_IoU=0.5784 ema_val_F1_debris=0.3943 seconds=265.5429
+2026-10-16 20:38:34,557 epoch=73 lr=0.0000 train_loss=0.4057 model_val_loss=0.2845 model_val_macroF1=0.6857 model_val_IoU=0.5617 model_val_F1_debris=0.3629 ema_val_loss=0.2480 ema_val_macroF1=0.7028 ema_val_IoU=0.5789 ema_val_F1_debris=0.3934 seconds=289.7106
+2026-10-16 20:44:50,621 epoch=74 lr=0.0000 train_loss=0.3861 model_val_loss=0.3262 model_val_macroF1=0.6934 model_val_IoU=0.5646 model_val_F1_debris=0.4163 ema_val_loss=0.2488 ema_val_macroF1=0.7021 ema_val_IoU=0.5784 ema_val_F1_debris=0.3900 seconds=373.6782
+2026-10-16 20:51:43,699 epoch=75 lr=0.0000 train_loss=0.3820 model_val_loss=0.1869 model_val_macroF1=0.7387 model_val_IoU=0.6188 model_val_F1_debris=0.4601 ema_val_loss=0.2482 ema_val_macroF1=0.7039 ema_val_IoU=0.5802 ema_val_F1_debris=0.3945 seconds=411.5352
+2026-10-16 20:58:32,686 epoch=76 lr=0.0000 train_loss=0.3773 model_val_loss=0.2421 model_val_macroF1=0.7020 model_val_IoU=0.5749 model_val_F1_debris=0.4196 ema_val_loss=0.2472 ema_val_macroF1=0.7053 ema_val_IoU=0.5814 ema_val_F1_debris=0.3985 seconds=407.5185
+2026-10-16 21:05:31,828 epoch=77 lr=0.0000 train_loss=0.4130 model_val_loss=0.2902 model_val_macroF1=0.7132 model_val_IoU=0.5858 model_val_F1_debris=0.4470 ema_val_loss=0.2472 ema_val_macroF1=0.7067 ema_val_IoU=0.5829 ema_val_F1_debris=0.4008 seconds=417.1213
+2026-10-16 21:12:33,176 epoch=78 lr=0.0000 train_loss=0.3763 model_val_loss=0.2604 model_val_macroF1=0.7092 model_val_IoU=0.5831 model_val_F1_debris=0.4260 ema_val_loss=0.2451 ema_val_macroF1=0.7092 ema_val_IoU=0.5856 ema_val_F1_debris=0.4049 seconds=419.6729
+2026-10-16 21:19:05,125 epoch=79 lr=0.0000 train_loss=0.3989 model_val_loss=0.2504 model_val_macroF1=0.7186 model_val_IoU=0.5918 model_val_F1_debris=0.4550 ema_val_loss=0.2464 ema_val_macroF1=0.7087 ema_val_IoU=0.5852 ema_val_F1_debris=0.4039 seconds=390.2692
+2026-10-16 21:26:04,989 epoch=80 lr=0.0000 train_loss=0.3879 model_val_loss=0.2759 model_val_macroF1=0.7166 model_val_IoU=0.6106 model_val_F1_debris=0.3264 ema_val_loss=0.2451 ema_val_macroF1=0.7108 ema_val_IoU=0.5875 ema_val_F1_debris=0.4068 seconds=418.3204
+2026-10-16 21:26:07,378 training done
+2026-10-16 21:26:41,111 {"recipe": {"epochs": 80, "batch": 5, "lr": 0.0002, "decay": 0.0, "lr_steps": [45, 65], "gamma": 0.1, "weight_param": 1.03, "aug": "mados", "vscp": true, "ema": true, "ema_decay": 0.999, "tta": true, "drop_last": true}, "train_annotated_pixels": {"Water": 591224, "Marine Debris": 2561, "Algae/Sargassum": 4397, "Other": 163705}, "train_class_fraction": {"Water": 0.776, "Marine Debris": 0.00336, "Algae/Sargassum": 0.00577, "Other": 0.21487}, "ce_weight": {"Water": 1.6917, "Marine Debris": 30.472, "Algae/Sargassum": 28.4525, "Other": 4.5656}}
+2026-10-16 21:27:32,911 {"recipe": {"epochs": 80, "batch": 5, "lr": 0.0002, "decay": 0.0, "lr_steps": [45, 65], "gamma": 0.1, "weight_param": 1.03, "aug": "mados", "vscp": true, "ema": true, "ema_decay": 0.999, "tta": true, "drop_last": true}, "train_annotated_pixels": {"Water": 591224, "Marine Debris": 2561, "Algae/Sargassum": 4397, "Other": 163705}, "train_class_fraction": {"Water": 0.776, "Marine Debris": 0.00336, "Algae/Sargassum": 0.00577, "Other": 0.21487}, "ce_weight": {"Water": 1.6917, "Marine Debris": 30.472, "Algae/Sargassum": 28.4525, "Other": 4.5656}}
+2026-10-16 22:02:09,274 # DeepLabv3-ResNet50, MADOS, 4 classes (annotated pixels only)
+
+Recipe: {"epochs": 80, "batch": 5, "lr": 0.0002, "decay": 0.0, "lr_steps": [45, 65], "gamma": 0.1, "weight_param": 1.03, "aug": "mados", "vscp": true, "ema": true, "ema_decay": 0.999, "tta": true, "drop_last": true}
+
+Selected checkpoint: epoch 70 of 80 (ema weights), lowest val loss 0.2450. Test-time augmentation: True.
+
+## Class distribution (annotated pixels per split)
+
+| class | train pixels | val pixels | test pixels | train % | val % | test % |
+|---|---|---|---|---|---|---|
+| Water | 591,224 | 300,952 | 294,020 | 77.60 | 84.04 | 81.41 |
+| Marine Debris | 2,561 | 1,162 | 973 | 0.34 | 0.32 | 0.27 |
+| Algae/Sargassum | 4,397 | 1,794 | 3,089 | 0.58 | 0.50 | 0.86 |
+| Other | 163,705 | 54,213 | 63,065 | 21.49 | 15.14 | 17.46 |
+
+## model_best_val_loss, test split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9112 |
+| balanced accuracy (macro recall) | 0.7551 |
+| Cohen's kappa | 0.6743 |
+| macroPrec | 0.6652 |
+| macroRec | 0.7551 |
+| macroF1 | 0.6710 |
+| IoU | 0.5460 |
+| microPrec | 0.9112 |
+| microRec | 0.9112 |
+| microF1 | 0.9112 |
+| weightPrec | 0.9158 |
+| weightRec | 0.9112 |
+| weightF1 | 0.9058 |
+
+Annotated pixels: 361,147. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 294,020 | 81.41 | 313,977 | 288,947 | 25,030 | 5,073 | 42,097 | 0.9827 | 0.9166 | 0.9203 | 0.9827 | 0.9505 | 0.9056 | 0.6271 | 0.09 |
+| Marine Debris | 973 | 0.27 | 2,817 | 629 | 2,188 | 344 | 357,986 | 0.6465 | 0.9930 | 0.2233 | 0.6465 | 0.3319 | 0.1990 | 0.9939 | 3.48 |
+| Algae/Sargassum | 3,089 | 0.86 | 4,167 | 2,484 | 1,683 | 605 | 356,375 | 0.8041 | 0.9937 | 0.5961 | 0.8041 | 0.6847 | 0.5205 | 0.9953 | 0.68 |
+| Other | 63,065 | 17.46 | 40,186 | 37,014 | 3,172 | 26,051 | 294,910 | 0.5869 | 0.9191 | 0.9211 | 0.5869 | 0.7170 | 0.5588 | 0.9894 | 0.09 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 288,947 | 665 | 1,468 | 2,940 | 294,020 |
+| Marine Debris | 147 | 629 | 11 | 186 | 973 |
+| Algae/Sargassum | 225 | 334 | 2,484 | 46 | 3,089 |
+| Other | 24,658 | 1,189 | 204 | 37,014 | 63,065 |
+| total predicted | 313,977 | 2,817 | 4,167 | 40,186 | 361,147 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 98.27 | 0.23 | 0.50 | 1.00 |
+| Marine Debris | 15.11 | 64.65 | 1.13 | 19.12 |
+| Algae/Sargassum | 7.28 | 10.81 | 80.41 | 1.49 |
+| Other | 39.10 | 1.89 | 0.32 | 58.69 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 92.03 | 23.61 | 35.23 | 7.32 |
+| Marine Debris | 0.05 | 22.33 | 0.26 | 0.46 |
+| Algae/Sargassum | 0.07 | 11.86 | 59.61 | 0.11 |
+| Other | 7.85 | 42.21 | 4.90 | 92.11 |
+
+### Where the errors go
+
+- **Water**: 5,073 missed pixels went to: Other 2,940 (58.0%), Algae/Sargassum 1,468 (28.9%), Marine Debris 665 (13.1%).
+  25,030 false-positive pixels came from: Other 24,658 (98.5%), Algae/Sargassum 225 (0.9%), Marine Debris 147 (0.6%).
+- **Marine Debris**: 344 missed pixels went to: Other 186 (54.1%), Water 147 (42.7%), Algae/Sargassum 11 (3.2%).
+  2,188 false-positive pixels came from: Other 1,189 (54.3%), Water 665 (30.4%), Algae/Sargassum 334 (15.3%).
+- **Algae/Sargassum**: 605 missed pixels went to: Marine Debris 334 (55.2%), Water 225 (37.2%), Other 46 (7.6%).
+  1,683 false-positive pixels came from: Water 1,468 (87.2%), Other 204 (12.1%), Marine Debris 11 (0.7%).
+- **Other**: 26,051 missed pixels went to: Water 24,658 (94.7%), Marine Debris 1,189 (4.6%), Algae/Sargassum 204 (0.8%).
+  3,172 false-positive pixels came from: Water 2,940 (92.7%), Marine Debris 186 (5.9%), Algae/Sargassum 46 (1.5%).
+
+## model_best_val_loss, val split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9239 |
+| balanced accuracy (macro recall) | 0.7592 |
+| Cohen's kappa | 0.6696 |
+| macroPrec | 0.7140 |
+| macroRec | 0.7592 |
+| macroF1 | 0.7053 |
+| IoU | 0.5786 |
+| microPrec | 0.9239 |
+| microRec | 0.9239 |
+| microF1 | 0.9239 |
+| weightPrec | 0.9284 |
+| weightRec | 0.9239 |
+| weightF1 | 0.9165 |
+
+Annotated pixels: 358,121. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 300,952 | 84.04 | 322,356 | 298,820 | 23,536 | 2,132 | 33,633 | 0.9929 | 0.9283 | 0.9270 | 0.9929 | 0.9588 | 0.9209 | 0.5883 | 0.08 |
+| Marine Debris | 1,162 | 0.32 | 2,365 | 745 | 1,620 | 417 | 355,339 | 0.6411 | 0.9943 | 0.3150 | 0.6411 | 0.4225 | 0.2678 | 0.9955 | 2.17 |
+| Algae/Sargassum | 1,794 | 0.50 | 2,336 | 1,532 | 804 | 262 | 355,523 | 0.8540 | 0.9970 | 0.6558 | 0.8540 | 0.7419 | 0.5897 | 0.9977 | 0.52 |
+| Other | 54,213 | 15.14 | 31,064 | 29,762 | 1,302 | 24,451 | 302,606 | 0.5490 | 0.9281 | 0.9581 | 0.5490 | 0.6980 | 0.5361 | 0.9957 | 0.04 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 298,820 | 354 | 611 | 1,167 | 300,952 |
+| Marine Debris | 272 | 745 | 11 | 134 | 1,162 |
+| Algae/Sargassum | 7 | 254 | 1,532 | 1 | 1,794 |
+| Other | 23,257 | 1,012 | 182 | 29,762 | 54,213 |
+| total predicted | 322,356 | 2,365 | 2,336 | 31,064 | 358,121 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 99.29 | 0.12 | 0.20 | 0.39 |
+| Marine Debris | 23.41 | 64.11 | 0.95 | 11.53 |
+| Algae/Sargassum | 0.39 | 14.16 | 85.40 | 0.06 |
+| Other | 42.90 | 1.87 | 0.34 | 54.90 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 92.70 | 14.97 | 26.16 | 3.76 |
+| Marine Debris | 0.08 | 31.50 | 0.47 | 0.43 |
+| Algae/Sargassum | 0.00 | 10.74 | 65.58 | 0.00 |
+| Other | 7.21 | 42.79 | 7.79 | 95.81 |
+
+### Where the errors go
+
+- **Water**: 2,132 missed pixels went to: Other 1,167 (54.7%), Algae/Sargassum 611 (28.7%), Marine Debris 354 (16.6%).
+  23,536 false-positive pixels came from: Other 23,257 (98.8%), Marine Debris 272 (1.2%), Algae/Sargassum 7 (0.0%).
+- **Marine Debris**: 417 missed pixels went to: Water 272 (65.2%), Other 134 (32.1%), Algae/Sargassum 11 (2.6%).
+  1,620 false-positive pixels came from: Other 1,012 (62.5%), Water 354 (21.9%), Algae/Sargassum 254 (15.7%).
+- **Algae/Sargassum**: 262 missed pixels went to: Marine Debris 254 (96.9%), Water 7 (2.7%), Other 1 (0.4%).
+  804 false-positive pixels came from: Water 611 (76.0%), Other 182 (22.6%), Marine Debris 11 (1.4%).
+- **Other**: 24,451 missed pixels went to: Water 23,257 (95.1%), Marine Debris 1,012 (4.1%), Algae/Sargassum 182 (0.7%).
+  1,302 false-positive pixels came from: Water 1,167 (89.6%), Marine Debris 134 (10.3%), Algae/Sargassum 1 (0.1%).
+
+## model_last, test split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9152 |
+| balanced accuracy (macro recall) | 0.7697 |
+| Cohen's kappa | 0.6923 |
+| macroPrec | 0.6680 |
+| macroRec | 0.7697 |
+| macroF1 | 0.6795 |
+| IoU | 0.5554 |
+| microPrec | 0.9152 |
+| microRec | 0.9152 |
+| microF1 | 0.9152 |
+| weightPrec | 0.9198 |
+| weightRec | 0.9152 |
+| weightF1 | 0.9108 |
+
+Annotated pixels: 361,147. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 294,020 | 81.41 | 312,421 | 288,883 | 23,538 | 5,137 | 43,589 | 0.9825 | 0.9206 | 0.9247 | 0.9825 | 0.9527 | 0.9097 | 0.6494 | 0.08 |
+| Marine Debris | 973 | 0.27 | 2,822 | 650 | 2,172 | 323 | 358,002 | 0.6680 | 0.9931 | 0.2303 | 0.6680 | 0.3426 | 0.2067 | 0.9940 | 3.34 |
+| Algae/Sargassum | 3,089 | 0.86 | 4,261 | 2,528 | 1,733 | 561 | 356,325 | 0.8184 | 0.9936 | 0.5933 | 0.8184 | 0.6879 | 0.5243 | 0.9952 | 0.69 |
+| Other | 63,065 | 17.46 | 41,643 | 38,472 | 3,171 | 24,593 | 294,911 | 0.6100 | 0.9231 | 0.9239 | 0.6100 | 0.7348 | 0.5808 | 0.9894 | 0.08 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 288,883 | 658 | 1,526 | 2,953 | 294,020 |
+| Marine Debris | 132 | 650 | 11 | 180 | 973 |
+| Algae/Sargassum | 209 | 314 | 2,528 | 38 | 3,089 |
+| Other | 23,197 | 1,200 | 196 | 38,472 | 63,065 |
+| total predicted | 312,421 | 2,822 | 4,261 | 41,643 | 361,147 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 98.25 | 0.22 | 0.52 | 1.00 |
+| Marine Debris | 13.57 | 66.80 | 1.13 | 18.50 |
+| Algae/Sargassum | 6.77 | 10.17 | 81.84 | 1.23 |
+| Other | 36.78 | 1.90 | 0.31 | 61.00 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 92.47 | 23.32 | 35.81 | 7.09 |
+| Marine Debris | 0.04 | 23.03 | 0.26 | 0.43 |
+| Algae/Sargassum | 0.07 | 11.13 | 59.33 | 0.09 |
+| Other | 7.42 | 42.52 | 4.60 | 92.39 |
+
+### Where the errors go
+
+- **Water**: 5,137 missed pixels went to: Other 2,953 (57.5%), Algae/Sargassum 1,526 (29.7%), Marine Debris 658 (12.8%).
+  23,538 false-positive pixels came from: Other 23,197 (98.6%), Algae/Sargassum 209 (0.9%), Marine Debris 132 (0.6%).
+- **Marine Debris**: 323 missed pixels went to: Other 180 (55.7%), Water 132 (40.9%), Algae/Sargassum 11 (3.4%).
+  2,172 false-positive pixels came from: Other 1,200 (55.2%), Water 658 (30.3%), Algae/Sargassum 314 (14.5%).
+- **Algae/Sargassum**: 561 missed pixels went to: Marine Debris 314 (56.0%), Water 209 (37.3%), Other 38 (6.8%).
+  1,733 false-positive pixels came from: Water 1,526 (88.1%), Other 196 (11.3%), Marine Debris 11 (0.6%).
+- **Other**: 24,593 missed pixels went to: Water 23,197 (94.3%), Marine Debris 1,200 (4.9%), Algae/Sargassum 196 (0.8%).
+  3,171 false-positive pixels came from: Water 2,953 (93.1%), Marine Debris 180 (5.7%), Algae/Sargassum 38 (1.2%).
+
+## Validation vs test, per class (model_best_val_loss)
+
+| class | precision val | recall val | F1 val | IoU val | precision test | recall test | F1 test | IoU test | F1 test - val |
+|---|---|---|---|---|---|---|---|---|---|
+| Water | 0.9270 | 0.9929 | 0.9588 | 0.9209 | 0.9203 | 0.9827 | 0.9505 | 0.9056 | -0.0083 |
+| Marine Debris | 0.3150 | 0.6411 | 0.4225 | 0.2678 | 0.2233 | 0.6465 | 0.3319 | 0.1990 | -0.0905 |
+| Algae/Sargassum | 0.6558 | 0.8540 | 0.7419 | 0.5897 | 0.5961 | 0.8041 | 0.6847 | 0.5205 | -0.0572 |
+| Other | 0.9581 | 0.5490 | 0.6980 | 0.5361 | 0.9211 | 0.5869 | 0.7170 | 0.5588 | +0.0190 |
+
+Large negative F1 test - val means the class generalises worse to the test scenes than the validation loss suggested.
+
+2026-10-16 22:02:42,163 # DeepLabv3-ResNet50, MADOS, 4 classes (annotated pixels only)
+
+Recipe: {"epochs": 80, "batch": 5, "lr": 0.0002, "decay": 0.0, "lr_steps": [45, 65], "gamma": 0.1, "weight_param": 1.03, "aug": "mados", "vscp": true, "ema": true, "ema_decay": 0.999, "tta": true, "drop_last": true}
+
+Selected checkpoint: epoch 70 of 80 (ema weights), lowest val loss 0.2450. Test-time augmentation: True.
+
+## Class distribution (annotated pixels per split)
+
+| class | train pixels | val pixels | test pixels | train % | val % | test % |
+|---|---|---|---|---|---|---|
+| Water | 591,224 | 300,952 | 294,020 | 77.60 | 84.04 | 81.41 |
+| Marine Debris | 2,561 | 1,162 | 973 | 0.34 | 0.32 | 0.27 |
+| Algae/Sargassum | 4,397 | 1,794 | 3,089 | 0.58 | 0.50 | 0.86 |
+| Other | 163,705 | 54,213 | 63,065 | 21.49 | 15.14 | 17.46 |
+
+## model_best_val_loss, test split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9112 |
+| balanced accuracy (macro recall) | 0.7551 |
+| Cohen's kappa | 0.6743 |
+| macroPrec | 0.6652 |
+| macroRec | 0.7551 |
+| macroF1 | 0.6710 |
+| IoU | 0.5460 |
+| microPrec | 0.9112 |
+| microRec | 0.9112 |
+| microF1 | 0.9112 |
+| weightPrec | 0.9158 |
+| weightRec | 0.9112 |
+| weightF1 | 0.9058 |
+
+Annotated pixels: 361,147. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 294,020 | 81.41 | 313,977 | 288,947 | 25,030 | 5,073 | 42,097 | 0.9827 | 0.9166 | 0.9203 | 0.9827 | 0.9505 | 0.9056 | 0.6271 | 0.09 |
+| Marine Debris | 973 | 0.27 | 2,817 | 629 | 2,188 | 344 | 357,986 | 0.6465 | 0.9930 | 0.2233 | 0.6465 | 0.3319 | 0.1990 | 0.9939 | 3.48 |
+| Algae/Sargassum | 3,089 | 0.86 | 4,167 | 2,484 | 1,683 | 605 | 356,375 | 0.8041 | 0.9937 | 0.5961 | 0.8041 | 0.6847 | 0.5205 | 0.9953 | 0.68 |
+| Other | 63,065 | 17.46 | 40,186 | 37,014 | 3,172 | 26,051 | 294,910 | 0.5869 | 0.9191 | 0.9211 | 0.5869 | 0.7170 | 0.5588 | 0.9894 | 0.09 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 288,947 | 665 | 1,468 | 2,940 | 294,020 |
+| Marine Debris | 147 | 629 | 11 | 186 | 973 |
+| Algae/Sargassum | 225 | 334 | 2,484 | 46 | 3,089 |
+| Other | 24,658 | 1,189 | 204 | 37,014 | 63,065 |
+| total predicted | 313,977 | 2,817 | 4,167 | 40,186 | 361,147 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 98.27 | 0.23 | 0.50 | 1.00 |
+| Marine Debris | 15.11 | 64.65 | 1.13 | 19.12 |
+| Algae/Sargassum | 7.28 | 10.81 | 80.41 | 1.49 |
+| Other | 39.10 | 1.89 | 0.32 | 58.69 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 92.03 | 23.61 | 35.23 | 7.32 |
+| Marine Debris | 0.05 | 22.33 | 0.26 | 0.46 |
+| Algae/Sargassum | 0.07 | 11.86 | 59.61 | 0.11 |
+| Other | 7.85 | 42.21 | 4.90 | 92.11 |
+
+### Where the errors go
+
+- **Water**: 5,073 missed pixels went to: Other 2,940 (58.0%), Algae/Sargassum 1,468 (28.9%), Marine Debris 665 (13.1%).
+  25,030 false-positive pixels came from: Other 24,658 (98.5%), Algae/Sargassum 225 (0.9%), Marine Debris 147 (0.6%).
+- **Marine Debris**: 344 missed pixels went to: Other 186 (54.1%), Water 147 (42.7%), Algae/Sargassum 11 (3.2%).
+  2,188 false-positive pixels came from: Other 1,189 (54.3%), Water 665 (30.4%), Algae/Sargassum 334 (15.3%).
+- **Algae/Sargassum**: 605 missed pixels went to: Marine Debris 334 (55.2%), Water 225 (37.2%), Other 46 (7.6%).
+  1,683 false-positive pixels came from: Water 1,468 (87.2%), Other 204 (12.1%), Marine Debris 11 (0.7%).
+- **Other**: 26,051 missed pixels went to: Water 24,658 (94.7%), Marine Debris 1,189 (4.6%), Algae/Sargassum 204 (0.8%).
+  3,172 false-positive pixels came from: Water 2,940 (92.7%), Marine Debris 186 (5.9%), Algae/Sargassum 46 (1.5%).
+
+## model_best_val_loss, val split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9239 |
+| balanced accuracy (macro recall) | 0.7592 |
+| Cohen's kappa | 0.6696 |
+| macroPrec | 0.7140 |
+| macroRec | 0.7592 |
+| macroF1 | 0.7053 |
+| IoU | 0.5786 |
+| microPrec | 0.9239 |
+| microRec | 0.9239 |
+| microF1 | 0.9239 |
+| weightPrec | 0.9284 |
+| weightRec | 0.9239 |
+| weightF1 | 0.9165 |
+
+Annotated pixels: 358,121. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 300,952 | 84.04 | 322,356 | 298,820 | 23,536 | 2,132 | 33,633 | 0.9929 | 0.9283 | 0.9270 | 0.9929 | 0.9588 | 0.9209 | 0.5883 | 0.08 |
+| Marine Debris | 1,162 | 0.32 | 2,365 | 745 | 1,620 | 417 | 355,339 | 0.6411 | 0.9943 | 0.3150 | 0.6411 | 0.4225 | 0.2678 | 0.9955 | 2.17 |
+| Algae/Sargassum | 1,794 | 0.50 | 2,336 | 1,532 | 804 | 262 | 355,523 | 0.8540 | 0.9970 | 0.6558 | 0.8540 | 0.7419 | 0.5897 | 0.9977 | 0.52 |
+| Other | 54,213 | 15.14 | 31,064 | 29,762 | 1,302 | 24,451 | 302,606 | 0.5490 | 0.9281 | 0.9581 | 0.5490 | 0.6980 | 0.5361 | 0.9957 | 0.04 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 298,820 | 354 | 611 | 1,167 | 300,952 |
+| Marine Debris | 272 | 745 | 11 | 134 | 1,162 |
+| Algae/Sargassum | 7 | 254 | 1,532 | 1 | 1,794 |
+| Other | 23,257 | 1,012 | 182 | 29,762 | 54,213 |
+| total predicted | 322,356 | 2,365 | 2,336 | 31,064 | 358,121 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 99.29 | 0.12 | 0.20 | 0.39 |
+| Marine Debris | 23.41 | 64.11 | 0.95 | 11.53 |
+| Algae/Sargassum | 0.39 | 14.16 | 85.40 | 0.06 |
+| Other | 42.90 | 1.87 | 0.34 | 54.90 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 92.70 | 14.97 | 26.16 | 3.76 |
+| Marine Debris | 0.08 | 31.50 | 0.47 | 0.43 |
+| Algae/Sargassum | 0.00 | 10.74 | 65.58 | 0.00 |
+| Other | 7.21 | 42.79 | 7.79 | 95.81 |
+
+### Where the errors go
+
+- **Water**: 2,132 missed pixels went to: Other 1,167 (54.7%), Algae/Sargassum 611 (28.7%), Marine Debris 354 (16.6%).
+  23,536 false-positive pixels came from: Other 23,257 (98.8%), Marine Debris 272 (1.2%), Algae/Sargassum 7 (0.0%).
+- **Marine Debris**: 417 missed pixels went to: Water 272 (65.2%), Other 134 (32.1%), Algae/Sargassum 11 (2.6%).
+  1,620 false-positive pixels came from: Other 1,012 (62.5%), Water 354 (21.9%), Algae/Sargassum 254 (15.7%).
+- **Algae/Sargassum**: 262 missed pixels went to: Marine Debris 254 (96.9%), Water 7 (2.7%), Other 1 (0.4%).
+  804 false-positive pixels came from: Water 611 (76.0%), Other 182 (22.6%), Marine Debris 11 (1.4%).
+- **Other**: 24,451 missed pixels went to: Water 23,257 (95.1%), Marine Debris 1,012 (4.1%), Algae/Sargassum 182 (0.7%).
+  1,302 false-positive pixels came from: Water 1,167 (89.6%), Marine Debris 134 (10.3%), Algae/Sargassum 1 (0.1%).
+
+## model_last, test split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9152 |
+| balanced accuracy (macro recall) | 0.7697 |
+| Cohen's kappa | 0.6923 |
+| macroPrec | 0.6680 |
+| macroRec | 0.7697 |
+| macroF1 | 0.6795 |
+| IoU | 0.5554 |
+| microPrec | 0.9152 |
+| microRec | 0.9152 |
+| microF1 | 0.9152 |
+| weightPrec | 0.9198 |
+| weightRec | 0.9152 |
+| weightF1 | 0.9108 |
+
+Annotated pixels: 361,147. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 294,020 | 81.41 | 312,421 | 288,883 | 23,538 | 5,137 | 43,589 | 0.9825 | 0.9206 | 0.9247 | 0.9825 | 0.9527 | 0.9097 | 0.6494 | 0.08 |
+| Marine Debris | 973 | 0.27 | 2,822 | 650 | 2,172 | 323 | 358,002 | 0.6680 | 0.9931 | 0.2303 | 0.6680 | 0.3426 | 0.2067 | 0.9940 | 3.34 |
+| Algae/Sargassum | 3,089 | 0.86 | 4,261 | 2,528 | 1,733 | 561 | 356,325 | 0.8184 | 0.9936 | 0.5933 | 0.8184 | 0.6879 | 0.5243 | 0.9952 | 0.69 |
+| Other | 63,065 | 17.46 | 41,643 | 38,472 | 3,171 | 24,593 | 294,911 | 0.6100 | 0.9231 | 0.9239 | 0.6100 | 0.7348 | 0.5808 | 0.9894 | 0.08 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 288,883 | 658 | 1,526 | 2,953 | 294,020 |
+| Marine Debris | 132 | 650 | 11 | 180 | 973 |
+| Algae/Sargassum | 209 | 314 | 2,528 | 38 | 3,089 |
+| Other | 23,197 | 1,200 | 196 | 38,472 | 63,065 |
+| total predicted | 312,421 | 2,822 | 4,261 | 41,643 | 361,147 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 98.25 | 0.22 | 0.52 | 1.00 |
+| Marine Debris | 13.57 | 66.80 | 1.13 | 18.50 |
+| Algae/Sargassum | 6.77 | 10.17 | 81.84 | 1.23 |
+| Other | 36.78 | 1.90 | 0.31 | 61.00 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 92.47 | 23.32 | 35.81 | 7.09 |
+| Marine Debris | 0.04 | 23.03 | 0.26 | 0.43 |
+| Algae/Sargassum | 0.07 | 11.13 | 59.33 | 0.09 |
+| Other | 7.42 | 42.52 | 4.60 | 92.39 |
+
+### Where the errors go
+
+- **Water**: 5,137 missed pixels went to: Other 2,953 (57.5%), Algae/Sargassum 1,526 (29.7%), Marine Debris 658 (12.8%).
+  23,538 false-positive pixels came from: Other 23,197 (98.6%), Algae/Sargassum 209 (0.9%), Marine Debris 132 (0.6%).
+- **Marine Debris**: 323 missed pixels went to: Other 180 (55.7%), Water 132 (40.9%), Algae/Sargassum 11 (3.4%).
+  2,172 false-positive pixels came from: Other 1,200 (55.2%), Water 658 (30.3%), Algae/Sargassum 314 (14.5%).
+- **Algae/Sargassum**: 561 missed pixels went to: Marine Debris 314 (56.0%), Water 209 (37.3%), Other 38 (6.8%).
+  1,733 false-positive pixels came from: Water 1,526 (88.1%), Other 196 (11.3%), Marine Debris 11 (0.6%).
+- **Other**: 24,593 missed pixels went to: Water 23,197 (94.3%), Marine Debris 1,200 (4.9%), Algae/Sargassum 196 (0.8%).
+  3,171 false-positive pixels came from: Water 2,953 (93.1%), Marine Debris 180 (5.7%), Algae/Sargassum 38 (1.2%).
+
+## Validation vs test, per class (model_best_val_loss)
+
+| class | precision val | recall val | F1 val | IoU val | precision test | recall test | F1 test | IoU test | F1 test - val |
+|---|---|---|---|---|---|---|---|---|---|
+| Water | 0.9270 | 0.9929 | 0.9588 | 0.9209 | 0.9203 | 0.9827 | 0.9505 | 0.9056 | -0.0083 |
+| Marine Debris | 0.3150 | 0.6411 | 0.4225 | 0.2678 | 0.2233 | 0.6465 | 0.3319 | 0.1990 | -0.0905 |
+| Algae/Sargassum | 0.6558 | 0.8540 | 0.7419 | 0.5897 | 0.5961 | 0.8041 | 0.6847 | 0.5205 | -0.0572 |
+| Other | 0.9581 | 0.5490 | 0.6980 | 0.5361 | 0.9211 | 0.5869 | 0.7170 | 0.5588 | +0.0190 |
+
+Large negative F1 test - val means the class generalises worse to the test scenes than the validation loss suggested.
+

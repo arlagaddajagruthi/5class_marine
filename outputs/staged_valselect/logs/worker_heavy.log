@@ -1,8 +1,0 @@
-MADOS__stage1_bands__balanced__ada: val F1=0.3878 test F1=0.5024 (1206s)
-MADOS__stage1_bands__log__ada: val F1=0.4209 test F1=0.6124 (820s)
-MADOS__stage1_bands__none__ada: val F1=0.5909 test F1=0.5733 (938s)
-MADOS__stage2a_ndvi__balanced__ada: val F1=0.4769 test F1=0.5446 (1230s)
-MADOS__stage2a_ndvi__log__ada: val F1=0.5345 test F1=0.5639 (1076s)
-MADOS__stage2a_ndvi__none__ada: val F1=0.5485 test F1=0.5688 (1288s)
-MADOS__stage2b_ndwi__balanced__ada: val F1=0.4145 test F1=0.5084 (872s)
-MADOS__stage2b_ndwi__log__ada: val F1=0.6300 test F1=0.6637 (480s)

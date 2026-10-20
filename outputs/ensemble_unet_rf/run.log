@@ -1,0 +1,146 @@
+  [MARIDA/val] reading 328 patches...
+MARIDA MARIDA_novscp w=0.00 val F1 0.9181 test F1 0.9042 (debris 0.8131)
+MARIDA MARIDA_novscp w=0.05 val F1 0.9207 test F1 0.9070 (debris 0.8145)
+MARIDA MARIDA_novscp w=0.10 val F1 0.9234 test F1 0.9095 (debris 0.8159)
+MARIDA MARIDA_novscp w=0.15 val F1 0.9258 test F1 0.9133 (debris 0.8213)
+MARIDA MARIDA_novscp w=0.20 val F1 0.9273 test F1 0.9158 (debris 0.8266)
+MARIDA MARIDA_novscp w=0.25 val F1 0.9304 test F1 0.9154 (debris 0.8219)
+MARIDA MARIDA_novscp w=0.30 val F1 0.9330 test F1 0.9172 (debris 0.8240)
+MARIDA MARIDA_novscp w=0.35 val F1 0.9365 test F1 0.9186 (debris 0.8245)
+MARIDA MARIDA_novscp w=0.40 val F1 0.9394 test F1 0.9198 (debris 0.8245)
+MARIDA MARIDA_novscp w=0.45 val F1 0.9419 test F1 0.9201 (debris 0.8231)
+MARIDA MARIDA_novscp w=0.50 val F1 0.9410 test F1 0.9178 (debris 0.8128)
+MARIDA MARIDA_novscp w=0.55 val F1 0.9403 test F1 0.9129 (debris 0.7972)
+MARIDA MARIDA_novscp w=0.60 val F1 0.9370 test F1 0.9092 (debris 0.7860)
+MARIDA MARIDA_novscp w=0.65 val F1 0.9305 test F1 0.9032 (debris 0.7682)
+MARIDA MARIDA_novscp w=0.70 val F1 0.9256 test F1 0.8968 (debris 0.7475)
+MARIDA MARIDA_novscp w=0.75 val F1 0.9215 test F1 0.8921 (debris 0.7346)
+MARIDA MARIDA_novscp w=0.80 val F1 0.9162 test F1 0.8853 (debris 0.7159)
+MARIDA MARIDA_novscp w=0.85 val F1 0.9111 test F1 0.8798 (debris 0.7022)
+MARIDA MARIDA_novscp w=0.90 val F1 0.9071 test F1 0.8739 (debris 0.6897)
+MARIDA MARIDA_novscp w=0.95 val F1 0.9027 test F1 0.8678 (debris 0.6709)
+MARIDA MARIDA_novscp w=1.00 val F1 0.8962 test F1 0.8620 (debris 0.6574)
+MARIDA MARIDA_vscp w=0.00 val F1 0.9181 test F1 0.9042 (debris 0.8131)
+MARIDA MARIDA_vscp w=0.05 val F1 0.9203 test F1 0.9068 (debris 0.8135)
+MARIDA MARIDA_vscp w=0.10 val F1 0.9230 test F1 0.9091 (debris 0.8135)
+MARIDA MARIDA_vscp w=0.15 val F1 0.9259 test F1 0.9098 (debris 0.8112)
+MARIDA MARIDA_vscp w=0.20 val F1 0.9284 test F1 0.9124 (debris 0.8155)
+MARIDA MARIDA_vscp w=0.25 val F1 0.9303 test F1 0.9141 (debris 0.8169)
+MARIDA MARIDA_vscp w=0.30 val F1 0.9319 test F1 0.9159 (debris 0.8178)
+MARIDA MARIDA_vscp w=0.35 val F1 0.9347 test F1 0.9158 (debris 0.8120)
+MARIDA MARIDA_vscp w=0.40 val F1 0.9387 test F1 0.9151 (debris 0.8060)
+MARIDA MARIDA_vscp w=0.45 val F1 0.9405 test F1 0.9131 (debris 0.7937)
+MARIDA MARIDA_vscp w=0.50 val F1 0.9404 test F1 0.9100 (debris 0.7796)
+MARIDA MARIDA_vscp w=0.55 val F1 0.9400 test F1 0.9055 (debris 0.7568)
+MARIDA MARIDA_vscp w=0.60 val F1 0.9397 test F1 0.8971 (debris 0.7248)
+MARIDA MARIDA_vscp w=0.65 val F1 0.9369 test F1 0.8910 (debris 0.7036)
+MARIDA MARIDA_vscp w=0.70 val F1 0.9338 test F1 0.8847 (debris 0.6836)
+MARIDA MARIDA_vscp w=0.75 val F1 0.9305 test F1 0.8786 (debris 0.6622)
+MARIDA MARIDA_vscp w=0.80 val F1 0.9276 test F1 0.8724 (debris 0.6433)
+MARIDA MARIDA_vscp w=0.85 val F1 0.9241 test F1 0.8678 (debris 0.6276)
+MARIDA MARIDA_vscp w=0.90 val F1 0.9216 test F1 0.8606 (debris 0.6070)
+MARIDA MARIDA_vscp w=0.95 val F1 0.9179 test F1 0.8558 (debris 0.5938)
+MARIDA MARIDA_vscp w=1.00 val F1 0.9143 test F1 0.8487 (debris 0.5726)
+# U-Net + Random Forest ensemble, MARIDA
+
+p = w * p_unet + (1 - w) * p_rf. The U-Net run and w were chosen on the validation split (highest macro F1): **MARIDA_novscp, w_unet = 0.45** (val macro F1 0.9419). Test pixels: all annotated pixels of the official test split.
+
+U-Net probabilities are the softmax averaged over 8 TTA views, so the U-Net-only row can differ slightly from its own test report (majority vote over views).
+
+## Overall (test)
+
+| model | macro F1 | IoU | accuracy | kappa | macro precision | macro recall |
+|---|---|---|---|---|---|---|
+| Random Forest | 0.9042 | 0.8373 | 0.9956 | 0.9027 | 0.8865 | 0.9270 |
+| U-Net (MARIDA_novscp, soft TTA) | 0.8620 | 0.7843 | 0.9943 | 0.8794 | 0.8233 | 0.9147 |
+| Ensemble (w_unet = 0.45) | 0.9201 | 0.8617 | 0.9965 | 0.9243 | 0.9012 | 0.9420 |
+
+## Per-class precision (test)
+
+| class | Random Forest | U-Net (MARIDA_novscp, soft TTA) | Ensemble (w_unet = 0.45) |
+|---|---|---|---|
+| Water | 0.9982 | 0.9988 | 0.9988 |
+| Marine Debris | 0.7326 | 0.5528 | 0.7600 |
+| Algae/Sargassum | 0.9969 | 0.9927 | 0.9945 |
+| Other | 0.8183 | 0.7491 | 0.8516 |
+
+## Per-class recall (test)
+
+| class | Random Forest | U-Net (MARIDA_novscp, soft TTA) | Ensemble (w_unet = 0.45) |
+|---|---|---|---|
+| Water | 0.9978 | 0.9961 | 0.9980 |
+| Marine Debris | 0.9134 | 0.8110 | 0.8976 |
+| Algae/Sargassum | 0.9799 | 0.9933 | 0.9951 |
+| Other | 0.8168 | 0.8584 | 0.8770 |
+
+## Per-class F1 (test)
+
+| class | Random Forest | U-Net (MARIDA_novscp, soft TTA) | Ensemble (w_unet = 0.45) |
+|---|---|---|---|
+| Water | 0.9980 | 0.9975 | 0.9984 |
+| Marine Debris | 0.8131 | 0.6574 | 0.8231 |
+| Algae/Sargassum | 0.9883 | 0.9930 | 0.9948 |
+| Other | 0.8175 | 0.8000 | 0.8641 |
+  [MADOS/val] reading 642 patches...
+MADOS MADOS_vscp w=0.00 val F1 0.7821 test F1 0.7190 (debris 0.7172)
+MADOS MADOS_vscp w=0.05 val F1 0.7920 test F1 0.7233 (debris 0.7278)
+MADOS MADOS_vscp w=0.10 val F1 0.8052 test F1 0.7276 (debris 0.7380)
+MADOS MADOS_vscp w=0.15 val F1 0.8192 test F1 0.7324 (debris 0.7485)
+MADOS MADOS_vscp w=0.20 val F1 0.8373 test F1 0.7385 (debris 0.7605)
+MADOS MADOS_vscp w=0.25 val F1 0.8506 test F1 0.7443 (debris 0.7676)
+MADOS MADOS_vscp w=0.30 val F1 0.8582 test F1 0.7521 (debris 0.7725)
+MADOS MADOS_vscp w=0.35 val F1 0.8628 test F1 0.7635 (debris 0.7773)
+MADOS MADOS_vscp w=0.40 val F1 0.8689 test F1 0.7841 (debris 0.7797)
+MADOS MADOS_vscp w=0.45 val F1 0.8741 test F1 0.8077 (debris 0.7773)
+MADOS MADOS_vscp w=0.50 val F1 0.8802 test F1 0.8330 (debris 0.7732)
+MADOS MADOS_vscp w=0.55 val F1 0.8812 test F1 0.8384 (debris 0.7584)
+MADOS MADOS_vscp w=0.60 val F1 0.8767 test F1 0.8412 (debris 0.7364)
+MADOS MADOS_vscp w=0.65 val F1 0.8727 test F1 0.8441 (debris 0.7167)
+MADOS MADOS_vscp w=0.70 val F1 0.8694 test F1 0.8454 (debris 0.6996)
+MADOS MADOS_vscp w=0.75 val F1 0.8654 test F1 0.8446 (debris 0.6859)
+MADOS MADOS_vscp w=0.80 val F1 0.8625 test F1 0.8409 (debris 0.6696)
+MADOS MADOS_vscp w=0.85 val F1 0.8586 test F1 0.8370 (debris 0.6552)
+MADOS MADOS_vscp w=0.90 val F1 0.8571 test F1 0.8328 (debris 0.6422)
+MADOS MADOS_vscp w=0.95 val F1 0.8546 test F1 0.8287 (debris 0.6301)
+MADOS MADOS_vscp w=1.00 val F1 0.8521 test F1 0.8240 (debris 0.6179)
+# U-Net + Random Forest ensemble, MADOS
+
+p = w * p_unet + (1 - w) * p_rf. The U-Net run and w were chosen on the validation split (highest macro F1): **MADOS_vscp, w_unet = 0.55** (val macro F1 0.8812). Test pixels: all annotated pixels of the official test split.
+
+U-Net probabilities are the softmax averaged over 8 TTA views, so the U-Net-only row can differ slightly from its own test report (majority vote over views).
+
+## Overall (test)
+
+| model | macro F1 | IoU | accuracy | kappa | macro precision | macro recall |
+|---|---|---|---|---|---|---|
+| Random Forest | 0.7190 | 0.5750 | 0.7342 | 0.3867 | 0.7504 | 0.7480 |
+| U-Net (MADOS_vscp, soft TTA) | 0.8240 | 0.7268 | 0.9250 | 0.7273 | 0.8334 | 0.8393 |
+| Ensemble (w_unet = 0.55) | 0.8384 | 0.7365 | 0.8874 | 0.6572 | 0.8272 | 0.8543 |
+
+## Per-class precision (test)
+
+| class | Random Forest | U-Net (MADOS_vscp, soft TTA) | Ensemble (w_unet = 0.55) |
+|---|---|---|---|
+| Water | 0.9487 | 0.9290 | 0.9509 |
+| Marine Debris | 0.6844 | 0.5147 | 0.7196 |
+| Algae/Sargassum | 0.9896 | 0.9834 | 0.9893 |
+| Other | 0.3790 | 0.9063 | 0.6492 |
+
+## Per-class recall (test)
+
+| class | Random Forest | U-Net (MADOS_vscp, soft TTA) | Ensemble (w_unet = 0.55) |
+|---|---|---|---|
+| Water | 0.7171 | 0.9859 | 0.9107 |
+| Marine Debris | 0.7533 | 0.7729 | 0.8016 |
+| Algae/Sargassum | 0.7067 | 0.9566 | 0.9268 |
+| Other | 0.8150 | 0.6420 | 0.7781 |
+
+## Per-class F1 (test)
+
+| class | Random Forest | U-Net (MADOS_vscp, soft TTA) | Ensemble (w_unet = 0.55) |
+|---|---|---|---|
+| Water | 0.8168 | 0.9566 | 0.9303 |
+| Marine Debris | 0.7172 | 0.6179 | 0.7584 |
+| Algae/Sargassum | 0.8246 | 0.9698 | 0.9570 |
+| Other | 0.5174 | 0.7516 | 0.7078 |
+exit 0

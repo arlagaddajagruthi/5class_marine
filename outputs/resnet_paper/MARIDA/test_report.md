@@ -22,6 +22,17 @@ Test loss 0.5284
 | coverageError | 2.4290 |
 | rankLoss | 0.3152 |
 
+### Per class (each class is a yes/no 'present in the patch' decision)
+
+| class | patches with class | predicted present | TP | FP | FN | TN | accuracy | precision | recall | specificity | balanced acc | F1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 302 | 344 | 293 | 51 | 9 | 6 | 0.8329 | 0.8517 | 0.9702 | 0.1053 | 0.5377 | 0.9071 |
+| Marine Debris | 101 | 86 | 41 | 45 | 60 | 213 | 0.7075 | 0.4767 | 0.4059 | 0.8256 | 0.6158 | 0.4385 |
+| Algae/Sargassum | 26 | 3 | 0 | 3 | 26 | 330 | 0.9192 | 0.0000 | 0.0000 | 0.9910 | 0.4955 | 0.0000 |
+| Other | 80 | 38 | 16 | 22 | 64 | 257 | 0.7604 | 0.4211 | 0.2000 | 0.9211 | 0.5606 | 0.2712 |
+
+accuracy = (TP + TN) / test patches; recall = share of patches containing the class that were flagged; specificity = share of patches without it that were left unflagged; balanced acc = (recall + specificity) / 2, which is not inflated when the class is rare.
+
 ```
                  precision    recall  f1-score   support
 
@@ -36,13 +47,6 @@ Algae/Sargassum     0.0000    0.0000    0.0000        26
     samples avg     0.7591    0.6945    0.6915       509
 
 ```
-
-Per-class confusion (rows: annotated no/yes, columns: predicted no/yes):
-
-- Water: [[6, 51], [9, 293]]
-- Marine Debris: [[213, 45], [60, 41]]
-- Algae/Sargassum: [[330, 3], [26, 0]]
-- Other: [[257, 22], [64, 16]]
 
 ## model_last
 
@@ -64,6 +68,17 @@ Test loss 0.5261
 | coverageError | 2.4290 |
 | rankLoss | 0.3187 |
 
+### Per class (each class is a yes/no 'present in the patch' decision)
+
+| class | patches with class | predicted present | TP | FP | FN | TN | accuracy | precision | recall | specificity | balanced acc | F1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 302 | 341 | 290 | 51 | 12 | 6 | 0.8245 | 0.8504 | 0.9603 | 0.1053 | 0.5328 | 0.9020 |
+| Marine Debris | 101 | 103 | 48 | 55 | 53 | 203 | 0.6992 | 0.4660 | 0.4752 | 0.7868 | 0.6310 | 0.4706 |
+| Algae/Sargassum | 26 | 0 | 0 | 0 | 26 | 333 | 0.9276 | 0.0000 | 0.0000 | 1.0000 | 0.5000 | 0.0000 |
+| Other | 80 | 49 | 20 | 29 | 60 | 250 | 0.7521 | 0.4082 | 0.2500 | 0.8961 | 0.5730 | 0.3101 |
+
+accuracy = (TP + TN) / test patches; recall = share of patches containing the class that were flagged; specificity = share of patches without it that were left unflagged; balanced acc = (recall + specificity) / 2, which is not inflated when the class is rare.
+
 ```
                  precision    recall  f1-score   support
 
@@ -78,10 +93,3 @@ Algae/Sargassum     0.0000    0.0000    0.0000        26
     samples avg     0.7400    0.7001    0.6861       509
 
 ```
-
-Per-class confusion (rows: annotated no/yes, columns: predicted no/yes):
-
-- Water: [[6, 51], [12, 290]]
-- Marine Debris: [[203, 55], [53, 48]]
-- Algae/Sargassum: [[333, 0], [26, 0]]
-- Other: [[250, 29], [60, 20]]

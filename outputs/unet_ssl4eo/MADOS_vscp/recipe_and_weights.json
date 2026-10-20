@@ -1,0 +1,74 @@
+{
+  "dataset": "MADOS",
+  "recipe": {
+    "epochs": 80,
+    "batch": 5,
+    "lr": 0.0002,
+    "decay": 0.0,
+    "lr_steps": [
+      45,
+      65
+    ],
+    "gamma": 0.1,
+    "weight_param": 1.03,
+    "aug": "mados",
+    "vscp": true,
+    "ema": true,
+    "ema_decay": 0.999,
+    "tta": true,
+    "drop_last": true,
+    "select": "val macroF1",
+    "encoder": "resnet50 SSL4EO-S12 MoCo",
+    "inputs": "11 bands (reflectance) + NDWI, red/green, nir/red, nir/green, swir1/nir"
+  },
+  "train_annotated_pixels": {
+    "Water": 591224,
+    "Marine Debris": 2561,
+    "Algae/Sargassum": 4397,
+    "Other": 163705
+  },
+  "ce_weight": {
+    "Water": 1.6917,
+    "Marine Debris": 30.472,
+    "Algae/Sargassum": 28.4525,
+    "Other": 4.5656
+  },
+  "extra_channel_stats": {
+    "channels": [
+      "NDWI",
+      "red/green",
+      "nir/red",
+      "nir/green",
+      "swir1/nir"
+    ],
+    "p1": [
+      -0.6902466416358948,
+      0.33798208832740784,
+      0.3473215401172638,
+      0.15992261469364166,
+      0.15765711665153503
+    ],
+    "p99": [
+      0.7242218255996704,
+      1.1372877359390259,
+      8.82378101348877,
+      5.456692695617676,
+      1.1658655405044556
+    ],
+    "mean": [
+      0.2480188012123108,
+      0.7492814064025879,
+      0.9253122806549072,
+      0.6974035501480103,
+      0.6805781126022339
+    ],
+    "std": [
+      0.2198389172554016,
+      0.17430420219898224,
+      0.9492083191871643,
+      0.6408107876777649,
+      0.22094090282917023
+    ],
+    "note": "train split, 2000 random pixels per patch (all pixels, annotated or not)"
+  }
+}

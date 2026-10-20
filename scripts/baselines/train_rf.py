@@ -8,7 +8,7 @@ import numpy as np
 from datetime import datetime
 from tqdm import tqdm
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 from src.datasets.marida import MARIDADataset
 from src.datasets.mados import MADOSDataset

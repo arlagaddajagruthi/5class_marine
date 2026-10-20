@@ -1,0 +1,40 @@
+{
+  "stage": "stage7_glcm",
+  "description": "bands + 6 GLCM texture features",
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "glcm_contrast",
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    "glcm_energy",
+    "glcm_correlation",
+    "glcm_asm"
+  ],
+  "datasets": [
+    "MARIDA",
+    "MADOS"
+  ],
+  "models": [
+    "rf",
+    "xgb",
+    "lgbm",
+    "ada",
+    "svm"
+  ],
+  "train_cap": null,
+  "svm_cap": null,
+  "weighting": "balanced",
+  "no_class_weights": false,
+  "seed": 42,
+  "out_root": "outputs/staged"
+}

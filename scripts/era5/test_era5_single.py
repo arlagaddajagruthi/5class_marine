@@ -2,7 +2,7 @@
 Test ERA5 extraction on a single MARIDA GeoTIFF patch.
 
 Usage:
-    python scripts/test_era5_single.py --tif data/MARIDA_5Class/patches/S2_1-12-19_48MYU/S2_1-12-19_48MYU_0.tif
+    python scripts/era5/test_era5_single.py --tif data/MARIDA_5Class/patches/S2_1-12-19_48MYU/S2_1-12-19_48MYU_0.tif
 
 This script validates:
   1. MARIDA metadata parsing (date, CRS, WGS84 reprojection)

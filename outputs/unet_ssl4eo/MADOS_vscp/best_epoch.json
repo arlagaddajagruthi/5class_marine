@@ -1,0 +1,1 @@
+{"epoch": 79, "weights": "ema", "val_macroF1_tta": 0.848898016114186, "val_F1_debris_tta": 0.7438752783964365}

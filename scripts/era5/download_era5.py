@@ -8,8 +8,8 @@ This script:
   4. Saves a JSON lookup file for use during model training
 
 Usage:
-    python scripts/download_era5.py --dataset_dir data/MARIDA_5Class --cache_dir data/era5_cache
-    python scripts/download_era5.py --dry_run   # Preview downloads without calling CDS API
+    python scripts/era5/download_era5.py --dataset_dir data/MARIDA_5Class --cache_dir data/era5_cache
+    python scripts/era5/download_era5.py --dry_run   # Preview downloads without calling CDS API
 
 Prerequisites:
     - Valid ~/.cdsapirc with CDS API v2 credentials

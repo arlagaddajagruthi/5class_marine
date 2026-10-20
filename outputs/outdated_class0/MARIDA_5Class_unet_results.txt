@@ -1,0 +1,11 @@
+Results for MARIDA_5Class
+Precision: 0.4725700041185386
+Recall: 0.3327795025132436
+F1 Score: 0.3690161172676969
+IoU (Jaccard): 0.325176008665042
+
+Detailed Confusion Matrix:
+[[186836    143      0     29]
+ [  1045      0      0     30]
+ [  1552      0      0      0]
+ [  1200      3      0    598]]

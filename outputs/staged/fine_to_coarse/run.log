@@ -1,0 +1,13 @@
+
+=== MARIDA: train 358,442 px, test 158,371 px
+  original classes, train px: {np.int64(1): np.int64(1943), np.int64(2): np.int64(870), np.int64(3): np.int64(1091), np.int64(4): np.int64(723), np.int64(5): np.int64(3289), np.int64(7): np.int64(86877), np.int64(8): np.int64(154335), np.int64(9): np.int64(469), np.int64(10): np.int64(86820), np.int64(11): np.int64(13852), np.int64(12): np.int64(2975), np.int64(14): np.int64(4974), np.int64(15): np.int64(224)}
+  coarse        macroF1=0.9042 IoU=0.8373 debris F1=0.8131 algae F1=0.9883 other F1=0.8175
+  fine_logw     macroF1=0.8904 IoU=0.8182 debris F1=0.7633 algae F1=0.9865 other F1=0.8141
+  fine_coarsew  macroF1=0.8966 IoU=0.8266 debris F1=0.7868 algae F1=0.9878 other F1=0.8140
+
+=== MADOS: train 761,887 px, test 361,147 px
+  original classes, train px: {np.int64(1): np.int64(2561), np.int64(2): np.int64(1838), np.int64(3): np.int64(2559), np.int64(4): np.int64(1081), np.int64(5): np.int64(5908), np.int64(6): np.int64(140584), np.int64(7): np.int64(264943), np.int64(8): np.int64(157242), np.int64(9): np.int64(469), np.int64(10): np.int64(89062), np.int64(11): np.int64(70002), np.int64(12): np.int64(9975), np.int64(13): np.int64(6988), np.int64(14): np.int64(1339), np.int64(15): np.int64(7336)}
+  coarse        macroF1=0.7190 IoU=0.5750 debris F1=0.7172 algae F1=0.8246 other F1=0.5174
+  fine_logw     macroF1=0.7160 IoU=0.5721 debris F1=0.6862 algae F1=0.8407 other F1=0.5225
+  fine_coarsew  macroF1=0.7161 IoU=0.5719 debris F1=0.6885 algae F1=0.8346 other F1=0.5237
+exit 0

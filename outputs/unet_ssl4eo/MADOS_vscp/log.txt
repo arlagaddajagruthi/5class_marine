@@ -1,0 +1,330 @@
+2026-10-17 20:45:58,763 check MADOS_vscp: 0.42 s/batch, peak GPU 1.46 GiB, 286 batches/epoch -> ~2.0 min train; TTA val 0.08 s/patch x 642 -> ~0.9 min/epoch
+2026-10-18 01:19:32,091 epoch=1 lr=0.0002 train_loss=1.0746 model_val_loss=0.7015 model_val_macroF1=0.5423 model_val_F1_debris=0.0630 ema_val_loss=1.3399 ema_val_macroF1=0.2377 ema_val_F1_debris=0.0254 sel_val_tta_macroF1=0.2430 sel_val_tta_IoU=0.1620 sel_val_tta_F1_debris=0.0154 seconds=256.1744
+2026-10-18 01:23:41,894 epoch=2 lr=0.0002 train_loss=0.8349 model_val_loss=0.5295 model_val_macroF1=0.4748 model_val_F1_debris=0.0543 ema_val_loss=1.1251 ema_val_macroF1=0.3987 ema_val_F1_debris=0.0498 sel_val_tta_macroF1=0.3430 sel_val_tta_IoU=0.2641 sel_val_tta_F1_debris=0.0160 seconds=247.4871
+2026-10-18 01:29:01,801 epoch=3 lr=0.0002 train_loss=0.7371 model_val_loss=0.4249 model_val_macroF1=0.5500 model_val_F1_debris=0.1606 ema_val_loss=0.9060 ema_val_macroF1=0.5548 ema_val_F1_debris=0.1314 sel_val_tta_macroF1=0.5428 sel_val_tta_IoU=0.4404 sel_val_tta_F1_debris=0.0932 seconds=317.6021
+2026-10-18 01:33:28,414 epoch=4 lr=0.0002 train_loss=0.7100 model_val_loss=0.4113 model_val_macroF1=0.7036 model_val_F1_debris=0.3197 ema_val_loss=0.7193 ema_val_macroF1=0.6182 ema_val_F1_debris=0.1709 sel_val_tta_macroF1=0.6156 sel_val_tta_IoU=0.5063 sel_val_tta_F1_debris=0.1723 seconds=264.3169
+2026-10-18 01:37:40,625 epoch=5 lr=0.0002 train_loss=0.6628 model_val_loss=0.3132 model_val_macroF1=0.7450 model_val_F1_debris=0.4955 ema_val_loss=0.5822 ema_val_macroF1=0.6381 ema_val_F1_debris=0.1711 sel_val_tta_macroF1=0.6362 sel_val_tta_IoU=0.5287 sel_val_tta_F1_debris=0.1801 seconds=250.3262
+2026-10-18 01:41:38,377 epoch=6 lr=0.0002 train_loss=0.6441 model_val_loss=0.6881 model_val_macroF1=0.4441 model_val_F1_debris=0.2549 ema_val_loss=0.4724 ema_val_macroF1=0.6549 ema_val_F1_debris=0.2158 sel_val_tta_macroF1=0.6499 sel_val_tta_IoU=0.5408 sel_val_tta_F1_debris=0.2064 seconds=236.1558
+2026-10-18 01:45:31,597 epoch=7 lr=0.0002 train_loss=0.6128 model_val_loss=0.3507 model_val_macroF1=0.7610 model_val_F1_debris=0.5159 ema_val_loss=0.4208 ema_val_macroF1=0.6907 ema_val_F1_debris=0.3127 sel_val_tta_macroF1=0.6838 sel_val_tta_IoU=0.5700 sel_val_tta_F1_debris=0.2960 seconds=231.5061
+2026-10-18 01:49:33,669 epoch=8 lr=0.0002 train_loss=0.6082 model_val_loss=0.6518 model_val_macroF1=0.6118 model_val_F1_debris=0.5237 ema_val_loss=0.3918 ema_val_macroF1=0.7151 ema_val_F1_debris=0.3692 sel_val_tta_macroF1=0.7124 sel_val_tta_IoU=0.5980 sel_val_tta_F1_debris=0.3576 seconds=240.3699
+2026-10-18 01:53:46,462 epoch=9 lr=0.0002 train_loss=0.5520 model_val_loss=0.2066 model_val_macroF1=0.8129 model_val_F1_debris=0.5691 ema_val_loss=0.3359 ema_val_macroF1=0.7281 ema_val_F1_debris=0.4348 sel_val_tta_macroF1=0.7278 sel_val_tta_IoU=0.6102 sel_val_tta_F1_debris=0.4340 seconds=251.1946
+2026-10-18 01:57:46,154 epoch=10 lr=0.0002 train_loss=0.5344 model_val_loss=0.2296 model_val_macroF1=0.7595 model_val_F1_debris=0.4490 ema_val_loss=0.2896 ema_val_macroF1=0.7453 ema_val_F1_debris=0.4902 sel_val_tta_macroF1=0.7434 sel_val_tta_IoU=0.6252 sel_val_tta_F1_debris=0.4876 seconds=237.6785
+2026-10-18 02:01:37,364 epoch=11 lr=0.0002 train_loss=0.5053 model_val_loss=0.2737 model_val_macroF1=0.7797 model_val_F1_debris=0.5709 ema_val_loss=0.2605 ema_val_macroF1=0.7456 ema_val_F1_debris=0.5117 sel_val_tta_macroF1=0.7432 sel_val_tta_IoU=0.6246 sel_val_tta_F1_debris=0.5098 seconds=229.5162
+2026-10-18 02:05:24,995 epoch=12 lr=0.0002 train_loss=0.5564 model_val_loss=0.3083 model_val_macroF1=0.7818 model_val_F1_debris=0.5958 ema_val_loss=0.2662 ema_val_macroF1=0.7539 ema_val_F1_debris=0.5376 sel_val_tta_macroF1=0.7475 sel_val_tta_IoU=0.6290 sel_val_tta_F1_debris=0.5266 seconds=226.2283
+2026-10-18 02:09:21,287 epoch=13 lr=0.0002 train_loss=0.5007 model_val_loss=0.2092 model_val_macroF1=0.8207 model_val_F1_debris=0.5311 ema_val_loss=0.2539 ema_val_macroF1=0.7723 ema_val_F1_debris=0.5588 sel_val_tta_macroF1=0.7697 sel_val_tta_IoU=0.6535 sel_val_tta_F1_debris=0.5597 seconds=234.6276
+2026-10-18 02:13:20,777 epoch=14 lr=0.0002 train_loss=0.4790 model_val_loss=0.2553 model_val_macroF1=0.8128 model_val_F1_debris=0.6590 ema_val_loss=0.2489 ema_val_macroF1=0.7859 ema_val_F1_debris=0.5928 sel_val_tta_macroF1=0.7843 sel_val_tta_IoU=0.6698 sel_val_tta_F1_debris=0.5938 seconds=237.6418
+2026-10-18 02:17:20,964 epoch=15 lr=0.0002 train_loss=0.4772 model_val_loss=0.3404 model_val_macroF1=0.7027 model_val_F1_debris=0.4975 ema_val_loss=0.2340 ema_val_macroF1=0.8011 ema_val_F1_debris=0.6142 sel_val_tta_macroF1=0.8003 sel_val_tta_IoU=0.6897 sel_val_tta_F1_debris=0.6159 seconds=238.4878
+2026-10-18 02:21:17,671 epoch=16 lr=0.0002 train_loss=0.5207 model_val_loss=0.2454 model_val_macroF1=0.7475 model_val_F1_debris=0.3997 ema_val_loss=0.2311 ema_val_macroF1=0.8109 ema_val_F1_debris=0.6378 sel_val_tta_macroF1=0.8112 sel_val_tta_IoU=0.7039 sel_val_tta_F1_debris=0.6415 seconds=234.7356
+2026-10-18 02:25:13,704 epoch=17 lr=0.0002 train_loss=0.4325 model_val_loss=0.2479 model_val_macroF1=0.7643 model_val_F1_debris=0.5086 ema_val_loss=0.2279 ema_val_macroF1=0.8196 ema_val_F1_debris=0.6541 sel_val_tta_macroF1=0.8217 sel_val_tta_IoU=0.7179 sel_val_tta_F1_debris=0.6591 seconds=234.4362
+2026-10-18 02:29:08,319 epoch=18 lr=0.0002 train_loss=0.4432 model_val_loss=0.2573 model_val_macroF1=0.7689 model_val_F1_debris=0.5692 ema_val_loss=0.2168 ema_val_macroF1=0.8179 ema_val_F1_debris=0.6551 sel_val_tta_macroF1=0.8185 sel_val_tta_IoU=0.7140 sel_val_tta_F1_debris=0.6612 seconds=232.6912
+2026-10-18 02:33:05,012 epoch=19 lr=0.0002 train_loss=0.4329 model_val_loss=0.2495 model_val_macroF1=0.7881 model_val_F1_debris=0.5643 ema_val_loss=0.2116 ema_val_macroF1=0.8124 ema_val_F1_debris=0.6519 sel_val_tta_macroF1=0.8092 sel_val_tta_IoU=0.7015 sel_val_tta_F1_debris=0.6531 seconds=235.3012
+2026-10-18 02:37:02,374 epoch=20 lr=0.0002 train_loss=0.4474 model_val_loss=0.2286 model_val_macroF1=0.8174 model_val_F1_debris=0.6667 ema_val_loss=0.2062 ema_val_macroF1=0.8079 ema_val_F1_debris=0.6313 sel_val_tta_macroF1=0.8104 sel_val_tta_IoU=0.7042 sel_val_tta_F1_debris=0.6523 seconds=236.0380
+2026-10-18 02:41:09,619 epoch=21 lr=0.0002 train_loss=0.4283 model_val_loss=0.1918 model_val_macroF1=0.8097 model_val_F1_debris=0.6074 ema_val_loss=0.2055 ema_val_macroF1=0.8138 ema_val_F1_debris=0.6465 sel_val_tta_macroF1=0.8175 sel_val_tta_IoU=0.7141 sel_val_tta_F1_debris=0.6649 seconds=245.8966
+2026-10-18 02:45:36,265 epoch=22 lr=0.0002 train_loss=0.4155 model_val_loss=0.2797 model_val_macroF1=0.7827 model_val_F1_debris=0.6141 ema_val_loss=0.2157 ema_val_macroF1=0.8116 ema_val_F1_debris=0.6539 sel_val_tta_macroF1=0.8133 sel_val_tta_IoU=0.7101 sel_val_tta_F1_debris=0.6636 seconds=265.0195
+2026-10-18 02:50:04,409 epoch=23 lr=0.0002 train_loss=0.4067 model_val_loss=0.2621 model_val_macroF1=0.7924 model_val_F1_debris=0.5966 ema_val_loss=0.2221 ema_val_macroF1=0.8065 ema_val_F1_debris=0.6488 sel_val_tta_macroF1=0.8076 sel_val_tta_IoU=0.7039 sel_val_tta_F1_debris=0.6579 seconds=266.5656
+2026-10-18 02:54:30,933 epoch=24 lr=0.0002 train_loss=0.3796 model_val_loss=0.2795 model_val_macroF1=0.8036 model_val_F1_debris=0.6225 ema_val_loss=0.2260 ema_val_macroF1=0.8075 ema_val_F1_debris=0.6424 sel_val_tta_macroF1=0.8089 sel_val_tta_IoU=0.7067 sel_val_tta_F1_debris=0.6484 seconds=264.8796
+2026-10-18 02:58:59,503 epoch=25 lr=0.0002 train_loss=0.4241 model_val_loss=0.3573 model_val_macroF1=0.7082 model_val_F1_debris=0.4409 ema_val_loss=0.2317 ema_val_macroF1=0.8076 ema_val_F1_debris=0.6434 sel_val_tta_macroF1=0.8075 sel_val_tta_IoU=0.7046 sel_val_tta_F1_debris=0.6486 seconds=266.9372
+2026-10-18 03:03:26,112 epoch=26 lr=0.0002 train_loss=0.4119 model_val_loss=0.1689 model_val_macroF1=0.8344 model_val_F1_debris=0.6735 ema_val_loss=0.2394 ema_val_macroF1=0.8026 ema_val_F1_debris=0.6378 sel_val_tta_macroF1=0.8048 sel_val_tta_IoU=0.7007 sel_val_tta_F1_debris=0.6540 seconds=264.9739
+2026-10-18 03:08:03,662 epoch=27 lr=0.0002 train_loss=0.3962 model_val_loss=0.1604 model_val_macroF1=0.8673 model_val_F1_debris=0.6550 ema_val_loss=0.2313 ema_val_macroF1=0.8069 ema_val_F1_debris=0.6518 sel_val_tta_macroF1=0.8069 sel_val_tta_IoU=0.7031 sel_val_tta_F1_debris=0.6601 seconds=275.9783
+2026-10-18 03:12:31,780 epoch=28 lr=0.0002 train_loss=0.3744 model_val_loss=0.2023 model_val_macroF1=0.8243 model_val_F1_debris=0.6604 ema_val_loss=0.2210 ema_val_macroF1=0.8120 ema_val_F1_debris=0.6591 sel_val_tta_macroF1=0.8130 sel_val_tta_IoU=0.7108 sel_val_tta_F1_debris=0.6708 seconds=266.2573
+2026-10-18 03:17:01,210 epoch=29 lr=0.0002 train_loss=0.3509 model_val_loss=0.4897 model_val_macroF1=0.5464 model_val_F1_debris=0.5828 ema_val_loss=0.2210 ema_val_macroF1=0.8139 ema_val_F1_debris=0.6682 sel_val_tta_macroF1=0.8173 sel_val_tta_IoU=0.7159 sel_val_tta_F1_debris=0.6859 seconds=267.8645
+2026-10-18 03:21:29,698 epoch=30 lr=0.0002 train_loss=0.3460 model_val_loss=0.3811 model_val_macroF1=0.7678 model_val_F1_debris=0.5559 ema_val_loss=0.2233 ema_val_macroF1=0.8131 ema_val_F1_debris=0.6584 sel_val_tta_macroF1=0.8155 sel_val_tta_IoU=0.7139 sel_val_tta_F1_debris=0.6728 seconds=266.8282
+2026-10-18 03:26:00,714 epoch=31 lr=0.0002 train_loss=0.3769 model_val_loss=0.2425 model_val_macroF1=0.8166 model_val_F1_debris=0.6462 ema_val_loss=0.2243 ema_val_macroF1=0.8206 ema_val_F1_debris=0.6686 sel_val_tta_macroF1=0.8209 sel_val_tta_IoU=0.7206 sel_val_tta_F1_debris=0.6783 seconds=269.4045
+2026-10-18 03:30:29,142 epoch=32 lr=0.0002 train_loss=0.3797 model_val_loss=0.2280 model_val_macroF1=0.8306 model_val_F1_debris=0.6743 ema_val_loss=0.2364 ema_val_macroF1=0.8195 ema_val_F1_debris=0.6748 sel_val_tta_macroF1=0.8212 sel_val_tta_IoU=0.7210 sel_val_tta_F1_debris=0.6893 seconds=266.8034
+2026-10-18 03:35:00,023 epoch=33 lr=0.0002 train_loss=0.3781 model_val_loss=0.2020 model_val_macroF1=0.8263 model_val_F1_debris=0.6648 ema_val_loss=0.2232 ema_val_macroF1=0.8210 ema_val_F1_debris=0.6750 sel_val_tta_macroF1=0.8250 sel_val_tta_IoU=0.7257 sel_val_tta_F1_debris=0.6953 seconds=269.3278
+2026-10-18 03:39:34,830 epoch=34 lr=0.0002 train_loss=0.3695 model_val_loss=0.2314 model_val_macroF1=0.8201 model_val_F1_debris=0.6818 ema_val_loss=0.2278 ema_val_macroF1=0.8240 ema_val_F1_debris=0.6854 sel_val_tta_macroF1=0.8262 sel_val_tta_IoU=0.7275 sel_val_tta_F1_debris=0.6966 seconds=272.7220
+2026-10-18 03:44:06,536 epoch=35 lr=0.0002 train_loss=0.3564 model_val_loss=0.3108 model_val_macroF1=0.7547 model_val_F1_debris=0.6543 ema_val_loss=0.2347 ema_val_macroF1=0.8242 ema_val_F1_debris=0.6861 sel_val_tta_macroF1=0.8249 sel_val_tta_IoU=0.7258 sel_val_tta_F1_debris=0.6939 seconds=269.5440
+2026-10-18 03:48:37,420 epoch=36 lr=0.0002 train_loss=0.3477 model_val_loss=0.3364 model_val_macroF1=0.7974 model_val_F1_debris=0.6750 ema_val_loss=0.2220 ema_val_macroF1=0.8285 ema_val_F1_debris=0.6844 sel_val_tta_macroF1=0.8305 sel_val_tta_IoU=0.7328 sel_val_tta_F1_debris=0.6957 seconds=269.1329
+2026-10-18 03:53:10,554 epoch=37 lr=0.0002 train_loss=0.3780 model_val_loss=0.2934 model_val_macroF1=0.7871 model_val_F1_debris=0.6860 ema_val_loss=0.2376 ema_val_macroF1=0.8277 ema_val_F1_debris=0.6875 sel_val_tta_macroF1=0.8303 sel_val_tta_IoU=0.7326 sel_val_tta_F1_debris=0.7028 seconds=270.7084
+2026-10-18 03:57:39,995 epoch=38 lr=0.0002 train_loss=0.3664 model_val_loss=0.3508 model_val_macroF1=0.7366 model_val_F1_debris=0.5881 ema_val_loss=0.2345 ema_val_macroF1=0.8289 ema_val_F1_debris=0.6906 sel_val_tta_macroF1=0.8312 sel_val_tta_IoU=0.7339 sel_val_tta_F1_debris=0.7011 seconds=267.7773
+2026-10-18 04:02:11,321 epoch=39 lr=0.0002 train_loss=0.3541 model_val_loss=0.1800 model_val_macroF1=0.8332 model_val_F1_debris=0.6340 ema_val_loss=0.2328 ema_val_macroF1=0.8265 ema_val_F1_debris=0.6937 sel_val_tta_macroF1=0.8285 sel_val_tta_IoU=0.7302 sel_val_tta_F1_debris=0.7001 seconds=269.2687
+2026-10-18 04:06:44,023 epoch=40 lr=0.0002 train_loss=0.3137 model_val_loss=0.2285 model_val_macroF1=0.8614 model_val_F1_debris=0.6835 ema_val_loss=0.2356 ema_val_macroF1=0.8279 ema_val_F1_debris=0.6989 sel_val_tta_macroF1=0.8300 sel_val_tta_IoU=0.7319 sel_val_tta_F1_debris=0.7056 seconds=270.7519
+2026-10-18 04:11:14,827 epoch=41 lr=0.0002 train_loss=0.3806 model_val_loss=0.1777 model_val_macroF1=0.8393 model_val_F1_debris=0.6870 ema_val_loss=0.2292 ema_val_macroF1=0.8289 ema_val_F1_debris=0.6901 sel_val_tta_macroF1=0.8325 sel_val_tta_IoU=0.7352 sel_val_tta_F1_debris=0.7043 seconds=268.4900
+2026-10-18 04:15:47,244 epoch=42 lr=0.0002 train_loss=0.3669 model_val_loss=0.2601 model_val_macroF1=0.7321 model_val_F1_debris=0.3714 ema_val_loss=0.2283 ema_val_macroF1=0.8252 ema_val_F1_debris=0.6902 sel_val_tta_macroF1=0.8263 sel_val_tta_IoU=0.7274 sel_val_tta_F1_debris=0.6951 seconds=269.3606
+2026-10-18 04:20:21,421 epoch=43 lr=0.0002 train_loss=0.3250 model_val_loss=0.2117 model_val_macroF1=0.8292 model_val_F1_debris=0.6868 ema_val_loss=0.2361 ema_val_macroF1=0.8234 ema_val_F1_debris=0.6884 sel_val_tta_macroF1=0.8254 sel_val_tta_IoU=0.7268 sel_val_tta_F1_debris=0.6954 seconds=272.3196
+2026-10-18 04:24:51,122 epoch=44 lr=0.0002 train_loss=0.3302 model_val_loss=0.2974 model_val_macroF1=0.8065 model_val_F1_debris=0.7061 ema_val_loss=0.2509 ema_val_macroF1=0.8242 ema_val_F1_debris=0.6928 sel_val_tta_macroF1=0.8277 sel_val_tta_IoU=0.7299 sel_val_tta_F1_debris=0.7040 seconds=267.8911
+2026-10-18 04:29:21,814 epoch=45 lr=0.0002 train_loss=0.3368 model_val_loss=0.2504 model_val_macroF1=0.8366 model_val_F1_debris=0.7084 ema_val_loss=0.2454 ema_val_macroF1=0.8291 ema_val_F1_debris=0.6976 sel_val_tta_macroF1=0.8331 sel_val_tta_IoU=0.7371 sel_val_tta_F1_debris=0.7087 seconds=269.0814
+2026-10-18 04:33:53,060 epoch=46 lr=0.0000 train_loss=0.2985 model_val_loss=0.3193 model_val_macroF1=0.8343 model_val_F1_debris=0.7321 ema_val_loss=0.2498 ema_val_macroF1=0.8330 ema_val_F1_debris=0.7067 sel_val_tta_macroF1=0.8379 sel_val_tta_IoU=0.7430 sel_val_tta_F1_debris=0.7185 seconds=269.2372
+2026-10-18 04:38:25,638 epoch=47 lr=0.0000 train_loss=0.2944 model_val_loss=0.3701 model_val_macroF1=0.8192 model_val_F1_debris=0.7045 ema_val_loss=0.2574 ema_val_macroF1=0.8335 ema_val_F1_debris=0.7112 sel_val_tta_macroF1=0.8407 sel_val_tta_IoU=0.7466 sel_val_tta_F1_debris=0.7226 seconds=270.6071
+2026-10-18 04:42:56,436 epoch=48 lr=0.0000 train_loss=0.2786 model_val_loss=0.2747 model_val_macroF1=0.8353 model_val_F1_debris=0.7241 ema_val_loss=0.2669 ema_val_macroF1=0.8353 ema_val_F1_debris=0.7178 sel_val_tta_macroF1=0.8428 sel_val_tta_IoU=0.7493 sel_val_tta_F1_debris=0.7270 seconds=268.7444
+2026-10-18 04:47:29,277 epoch=49 lr=0.0000 train_loss=0.3008 model_val_loss=0.3126 model_val_macroF1=0.8200 model_val_F1_debris=0.7031 ema_val_loss=0.2732 ema_val_macroF1=0.8339 ema_val_F1_debris=0.7157 sel_val_tta_macroF1=0.8426 sel_val_tta_IoU=0.7491 sel_val_tta_F1_debris=0.7258 seconds=270.8409
+2026-10-18 04:51:59,953 epoch=50 lr=0.0000 train_loss=0.2972 model_val_loss=0.2660 model_val_macroF1=0.8421 model_val_F1_debris=0.7379 ema_val_loss=0.2768 ema_val_macroF1=0.8333 ema_val_F1_debris=0.7152 sel_val_tta_macroF1=0.8425 sel_val_tta_IoU=0.7488 sel_val_tta_F1_debris=0.7259 seconds=269.0591
+2026-10-18 04:56:32,667 epoch=51 lr=0.0000 train_loss=0.2860 model_val_loss=0.2871 model_val_macroF1=0.8297 model_val_F1_debris=0.6836 ema_val_loss=0.2798 ema_val_macroF1=0.8341 ema_val_F1_debris=0.7171 sel_val_tta_macroF1=0.8429 sel_val_tta_IoU=0.7494 sel_val_tta_F1_debris=0.7271 seconds=271.0995
+2026-10-18 05:01:04,069 epoch=52 lr=0.0000 train_loss=0.2562 model_val_loss=0.2757 model_val_macroF1=0.8393 model_val_F1_debris=0.7172 ema_val_loss=0.2844 ema_val_macroF1=0.8354 ema_val_F1_debris=0.7206 sel_val_tta_macroF1=0.8444 sel_val_tta_IoU=0.7513 sel_val_tta_F1_debris=0.7330 seconds=269.5063
+2026-10-18 05:05:35,786 epoch=53 lr=0.0000 train_loss=0.2775 model_val_loss=0.2964 model_val_macroF1=0.8373 model_val_F1_debris=0.7384 ema_val_loss=0.2874 ema_val_macroF1=0.8349 ema_val_F1_debris=0.7181 sel_val_tta_macroF1=0.8438 sel_val_tta_IoU=0.7506 sel_val_tta_F1_debris=0.7311 seconds=269.7854
+2026-10-18 05:10:06,875 epoch=54 lr=0.0000 train_loss=0.2754 model_val_loss=0.3253 model_val_macroF1=0.8219 model_val_F1_debris=0.6940 ema_val_loss=0.2933 ema_val_macroF1=0.8347 ema_val_F1_debris=0.7200 sel_val_tta_macroF1=0.8441 sel_val_tta_IoU=0.7508 sel_val_tta_F1_debris=0.7354 seconds=269.3590
+2026-10-18 05:14:36,134 epoch=55 lr=0.0000 train_loss=0.2678 model_val_loss=0.3051 model_val_macroF1=0.8224 model_val_F1_debris=0.6656 ema_val_loss=0.2940 ema_val_macroF1=0.8332 ema_val_F1_debris=0.7130 sel_val_tta_macroF1=0.8435 sel_val_tta_IoU=0.7503 sel_val_tta_F1_debris=0.7311 seconds=267.7546
+2026-10-18 05:19:06,168 epoch=56 lr=0.0000 train_loss=0.2613 model_val_loss=0.2346 model_val_macroF1=0.8466 model_val_F1_debris=0.7137 ema_val_loss=0.2935 ema_val_macroF1=0.8333 ema_val_F1_debris=0.7117 sel_val_tta_macroF1=0.8434 sel_val_tta_IoU=0.7500 sel_val_tta_F1_debris=0.7283 seconds=268.2893
+2026-10-18 05:23:36,859 epoch=57 lr=0.0000 train_loss=0.2471 model_val_loss=0.2809 model_val_macroF1=0.8375 model_val_F1_debris=0.7143 ema_val_loss=0.2957 ema_val_macroF1=0.8333 ema_val_F1_debris=0.7116 sel_val_tta_macroF1=0.8438 sel_val_tta_IoU=0.7508 sel_val_tta_F1_debris=0.7295 seconds=269.1699
+2026-10-18 05:28:08,888 epoch=58 lr=0.0000 train_loss=0.2650 model_val_loss=0.2530 model_val_macroF1=0.8328 model_val_F1_debris=0.6972 ema_val_loss=0.2981 ema_val_macroF1=0.8335 ema_val_F1_debris=0.7119 sel_val_tta_macroF1=0.8427 sel_val_tta_IoU=0.7494 sel_val_tta_F1_debris=0.7256 seconds=270.3625
+2026-10-18 05:32:41,442 epoch=59 lr=0.0000 train_loss=0.2656 model_val_loss=0.3522 model_val_macroF1=0.8116 model_val_F1_debris=0.6901 ema_val_loss=0.2981 ema_val_macroF1=0.8324 ema_val_F1_debris=0.7096 sel_val_tta_macroF1=0.8423 sel_val_tta_IoU=0.7490 sel_val_tta_F1_debris=0.7257 seconds=270.9490
+2026-10-18 05:37:12,292 epoch=60 lr=0.0000 train_loss=0.2616 model_val_loss=0.2710 model_val_macroF1=0.8435 model_val_F1_debris=0.7273 ema_val_loss=0.2983 ema_val_macroF1=0.8333 ema_val_F1_debris=0.7114 sel_val_tta_macroF1=0.8420 sel_val_tta_IoU=0.7486 sel_val_tta_F1_debris=0.7252 seconds=269.2335
+2026-10-18 05:41:42,448 epoch=61 lr=0.0000 train_loss=0.2386 model_val_loss=0.2902 model_val_macroF1=0.8307 model_val_F1_debris=0.7045 ema_val_loss=0.2961 ema_val_macroF1=0.8335 ema_val_F1_debris=0.7092 sel_val_tta_macroF1=0.8420 sel_val_tta_IoU=0.7487 sel_val_tta_F1_debris=0.7229 seconds=268.5265
+2026-10-18 05:46:02,472 epoch=62 lr=0.0000 train_loss=0.2650 model_val_loss=0.3052 model_val_macroF1=0.8323 model_val_F1_debris=0.7062 ema_val_loss=0.2947 ema_val_macroF1=0.8343 ema_val_F1_debris=0.7121 sel_val_tta_macroF1=0.8415 sel_val_tta_IoU=0.7481 sel_val_tta_F1_debris=0.7218 seconds=258.4119
+2026-10-18 05:50:21,344 epoch=63 lr=0.0000 train_loss=0.2806 model_val_loss=0.2598 model_val_macroF1=0.8337 model_val_F1_debris=0.7054 ema_val_loss=0.2917 ema_val_macroF1=0.8347 ema_val_F1_debris=0.7116 sel_val_tta_macroF1=0.8416 sel_val_tta_IoU=0.7483 sel_val_tta_F1_debris=0.7210 seconds=257.3658
+2026-10-18 05:54:40,417 epoch=64 lr=0.0000 train_loss=0.2463 model_val_loss=0.2999 model_val_macroF1=0.8377 model_val_F1_debris=0.7169 ema_val_loss=0.2922 ema_val_macroF1=0.8375 ema_val_F1_debris=0.7189 sel_val_tta_macroF1=0.8444 sel_val_tta_IoU=0.7517 sel_val_tta_F1_debris=0.7297 seconds=257.4366
+2026-10-18 05:59:00,751 epoch=65 lr=0.0000 train_loss=0.2508 model_val_loss=0.3000 model_val_macroF1=0.8355 model_val_F1_debris=0.7019 ema_val_loss=0.3000 ema_val_macroF1=0.8382 ema_val_F1_debris=0.7220 sel_val_tta_macroF1=0.8447 sel_val_tta_IoU=0.7519 sel_val_tta_F1_debris=0.7314 seconds=258.1446
+2026-10-18 06:03:19,678 epoch=66 lr=0.0000 train_loss=0.2434 model_val_loss=0.3271 model_val_macroF1=0.8265 model_val_F1_debris=0.6965 ema_val_loss=0.3037 ema_val_macroF1=0.8368 ema_val_F1_debris=0.7165 sel_val_tta_macroF1=0.8456 sel_val_tta_IoU=0.7531 sel_val_tta_F1_debris=0.7337 seconds=256.9738
+2026-10-18 06:07:40,223 epoch=67 lr=0.0000 train_loss=0.2302 model_val_loss=0.3100 model_val_macroF1=0.8396 model_val_F1_debris=0.7279 ema_val_loss=0.3078 ema_val_macroF1=0.8349 ema_val_F1_debris=0.7100 sel_val_tta_macroF1=0.8454 sel_val_tta_IoU=0.7527 sel_val_tta_F1_debris=0.7338 seconds=258.4187
+2026-10-18 06:11:59,343 epoch=68 lr=0.0000 train_loss=0.2743 model_val_loss=0.2905 model_val_macroF1=0.8340 model_val_F1_debris=0.7065 ema_val_loss=0.3109 ema_val_macroF1=0.8325 ema_val_F1_debris=0.7014 sel_val_tta_macroF1=0.8450 sel_val_tta_IoU=0.7522 sel_val_tta_F1_debris=0.7334 seconds=257.5972
+2026-10-18 06:16:20,877 epoch=69 lr=0.0000 train_loss=0.2435 model_val_loss=0.3170 model_val_macroF1=0.8262 model_val_F1_debris=0.6874 ema_val_loss=0.3106 ema_val_macroF1=0.8319 ema_val_F1_debris=0.6980 sel_val_tta_macroF1=0.8459 sel_val_tta_IoU=0.7534 sel_val_tta_F1_debris=0.7356 seconds=259.9573
+2026-10-18 06:20:41,377 epoch=70 lr=0.0000 train_loss=0.2417 model_val_loss=0.3708 model_val_macroF1=0.8121 model_val_F1_debris=0.6649 ema_val_loss=0.3080 ema_val_macroF1=0.8315 ema_val_F1_debris=0.6953 sel_val_tta_macroF1=0.8461 sel_val_tta_IoU=0.7537 sel_val_tta_F1_debris=0.7348 seconds=258.2092
+2026-10-18 06:24:59,759 epoch=71 lr=0.0000 train_loss=0.2566 model_val_loss=0.2338 model_val_macroF1=0.8369 model_val_F1_debris=0.6747 ema_val_loss=0.3084 ema_val_macroF1=0.8318 ema_val_F1_debris=0.6955 sel_val_tta_macroF1=0.8472 sel_val_tta_IoU=0.7551 sel_val_tta_F1_debris=0.7387 seconds=256.2629
+2026-10-18 06:29:18,606 epoch=72 lr=0.0000 train_loss=0.2518 model_val_loss=0.3830 model_val_macroF1=0.8022 model_val_F1_debris=0.6135 ema_val_loss=0.3078 ema_val_macroF1=0.8315 ema_val_F1_debris=0.6943 sel_val_tta_macroF1=0.8472 sel_val_tta_IoU=0.7549 sel_val_tta_F1_debris=0.7395 seconds=256.7373
+2026-10-18 06:33:35,898 epoch=73 lr=0.0000 train_loss=0.2708 model_val_loss=0.2902 model_val_macroF1=0.8257 model_val_F1_debris=0.6571 ema_val_loss=0.3090 ema_val_macroF1=0.8305 ema_val_F1_debris=0.6904 sel_val_tta_macroF1=0.8467 sel_val_tta_IoU=0.7544 sel_val_tta_F1_debris=0.7378 seconds=255.7215
+2026-10-18 06:37:56,205 epoch=74 lr=0.0000 train_loss=0.2430 model_val_loss=0.3030 model_val_macroF1=0.8325 model_val_F1_debris=0.6907 ema_val_loss=0.3082 ema_val_macroF1=0.8303 ema_val_F1_debris=0.6892 sel_val_tta_macroF1=0.8463 sel_val_tta_IoU=0.7539 sel_val_tta_F1_debris=0.7361 seconds=258.7492
+2026-10-18 06:42:14,574 epoch=75 lr=0.0000 train_loss=0.2412 model_val_loss=0.2959 model_val_macroF1=0.8271 model_val_F1_debris=0.6761 ema_val_loss=0.3078 ema_val_macroF1=0.8294 ema_val_F1_debris=0.6854 sel_val_tta_macroF1=0.8463 sel_val_tta_IoU=0.7538 sel_val_tta_F1_debris=0.7361 seconds=256.7607
+2026-10-18 06:46:33,756 epoch=76 lr=0.0000 train_loss=0.2332 model_val_loss=0.2638 model_val_macroF1=0.8383 model_val_F1_debris=0.6940 ema_val_loss=0.3057 ema_val_macroF1=0.8297 ema_val_F1_debris=0.6852 sel_val_tta_macroF1=0.8469 sel_val_tta_IoU=0.7546 sel_val_tta_F1_debris=0.7383 seconds=257.6380
+2026-10-18 06:50:53,756 epoch=77 lr=0.0000 train_loss=0.2556 model_val_loss=0.3162 model_val_macroF1=0.8248 model_val_F1_debris=0.6760 ema_val_loss=0.3053 ema_val_macroF1=0.8296 ema_val_F1_debris=0.6847 sel_val_tta_macroF1=0.8472 sel_val_tta_IoU=0.7549 sel_val_tta_F1_debris=0.7399 seconds=258.3953
+2026-10-18 06:55:11,780 epoch=78 lr=0.0000 train_loss=0.2256 model_val_loss=0.2937 model_val_macroF1=0.8310 model_val_F1_debris=0.6816 ema_val_loss=0.3029 ema_val_macroF1=0.8304 ema_val_F1_debris=0.6859 sel_val_tta_macroF1=0.8483 sel_val_tta_IoU=0.7563 sel_val_tta_F1_debris=0.7424 seconds=255.8948
+2026-10-18 06:59:32,788 epoch=79 lr=0.0000 train_loss=0.2652 model_val_loss=0.3052 model_val_macroF1=0.8235 model_val_F1_debris=0.6586 ema_val_loss=0.3014 ema_val_macroF1=0.8305 ema_val_F1_debris=0.6858 sel_val_tta_macroF1=0.8489 sel_val_tta_IoU=0.7571 sel_val_tta_F1_debris=0.7439 seconds=258.8544
+2026-10-18 07:03:51,220 epoch=80 lr=0.0000 train_loss=0.2444 model_val_loss=0.2941 model_val_macroF1=0.8349 model_val_F1_debris=0.6937 ema_val_loss=0.3010 ema_val_macroF1=0.8311 ema_val_F1_debris=0.6870 sel_val_tta_macroF1=0.8489 sel_val_tta_IoU=0.7570 sel_val_tta_F1_debris=0.7436 seconds=256.3963
+2026-10-18 07:03:53,361 training done
+2026-10-18 07:09:17,904 # U-Net (ResNet-50, SSL4EO-S12 pretrained), MADOS, run MADOS_vscp, 4 classes (annotated pixels only)
+
+Recipe: {"epochs": 80, "batch": 5, "lr": 0.0002, "decay": 0.0, "lr_steps": [45, 65], "gamma": 0.1, "weight_param": 1.03, "aug": "mados", "vscp": true, "ema": true, "ema_decay": 0.999, "tta": true, "drop_last": true, "select": "val macroF1", "encoder": "resnet50 SSL4EO-S12 MoCo", "inputs": "11 bands (reflectance) + NDWI, red/green, nir/red, nir/green, swir1/nir"}
+
+Selected checkpoint: epoch 79 of 80 (ema weights), highest val macro F1 with TTA 0.8489. Test-time augmentation: True. VSCP: True.
+
+## Class distribution (annotated pixels per split)
+
+| class | train pixels | val pixels | test pixels | train % | val % | test % |
+|---|---|---|---|---|---|---|
+| Water | 591,224 | 300,952 | 294,020 | 77.60 | 84.04 | 81.41 |
+| Marine Debris | 2,561 | 1,162 | 973 | 0.34 | 0.32 | 0.27 |
+| Algae/Sargassum | 4,397 | 1,794 | 3,089 | 0.58 | 0.50 | 0.86 |
+| Other | 163,705 | 54,213 | 63,065 | 21.49 | 15.14 | 17.46 |
+
+## model_best_val_f1, test split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9234 |
+| balanced accuracy (macro recall) | 0.8372 |
+| Cohen's kappa | 0.7196 |
+| macroPrec | 0.8307 |
+| macroRec | 0.8372 |
+| macroF1 | 0.8200 |
+| IoU | 0.7220 |
+| microPrec | 0.9234 |
+| microRec | 0.9234 |
+| microF1 | 0.9234 |
+| weightPrec | 0.9230 |
+| weightRec | 0.9234 |
+| weightF1 | 0.9179 |
+
+Annotated pixels: 361,147. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 294,020 | 81.41 | 312,958 | 290,063 | 22,895 | 3,957 | 44,232 | 0.9865 | 0.9256 | 0.9268 | 0.9865 | 0.9558 | 0.9153 | 0.6589 | 0.08 |
+| Marine Debris | 973 | 0.27 | 1,502 | 756 | 746 | 217 | 359,428 | 0.7770 | 0.9973 | 0.5033 | 0.7770 | 0.6109 | 0.4398 | 0.9979 | 0.99 |
+| Algae/Sargassum | 3,089 | 0.86 | 3,000 | 2,952 | 48 | 137 | 358,010 | 0.9556 | 0.9995 | 0.9840 | 0.9556 | 0.9696 | 0.9410 | 0.9999 | 0.02 |
+| Other | 63,065 | 17.46 | 43,687 | 39,698 | 3,989 | 23,367 | 294,093 | 0.6295 | 0.9243 | 0.9087 | 0.6295 | 0.7437 | 0.5920 | 0.9866 | 0.10 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 290,063 | 123 | 19 | 3,815 | 294,020 |
+| Marine Debris | 23 | 756 | 20 | 174 | 973 |
+| Algae/Sargassum | 111 | 26 | 2,952 | 0 | 3,089 |
+| Other | 22,761 | 597 | 9 | 39,698 | 63,065 |
+| total predicted | 312,958 | 1,502 | 3,000 | 43,687 | 361,147 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 98.65 | 0.04 | 0.01 | 1.30 |
+| Marine Debris | 2.36 | 77.70 | 2.06 | 17.88 |
+| Algae/Sargassum | 3.59 | 0.84 | 95.56 | 0.00 |
+| Other | 36.09 | 0.95 | 0.01 | 62.95 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 92.68 | 8.19 | 0.63 | 8.73 |
+| Marine Debris | 0.01 | 50.33 | 0.67 | 0.40 |
+| Algae/Sargassum | 0.04 | 1.73 | 98.40 | 0.00 |
+| Other | 7.27 | 39.75 | 0.30 | 90.87 |
+
+### Where the errors go
+
+- **Water**: 3,957 missed pixels went to: Other 3,815 (96.4%), Marine Debris 123 (3.1%), Algae/Sargassum 19 (0.5%).
+  22,895 false-positive pixels came from: Other 22,761 (99.4%), Algae/Sargassum 111 (0.5%), Marine Debris 23 (0.1%).
+- **Marine Debris**: 217 missed pixels went to: Other 174 (80.2%), Water 23 (10.6%), Algae/Sargassum 20 (9.2%).
+  746 false-positive pixels came from: Other 597 (80.0%), Water 123 (16.5%), Algae/Sargassum 26 (3.5%).
+- **Algae/Sargassum**: 137 missed pixels went to: Water 111 (81.0%), Marine Debris 26 (19.0%).
+  48 false-positive pixels came from: Marine Debris 20 (41.7%), Water 19 (39.6%), Other 9 (18.8%).
+- **Other**: 23,367 missed pixels went to: Water 22,761 (97.4%), Marine Debris 597 (2.6%), Algae/Sargassum 9 (0.0%).
+  3,989 false-positive pixels came from: Water 3,815 (95.6%), Marine Debris 174 (4.4%).
+
+## model_best_val_f1, val split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9300 |
+| balanced accuracy (macro recall) | 0.8493 |
+| Cohen's kappa | 0.6949 |
+| macroPrec | 0.8809 |
+| macroRec | 0.8493 |
+| macroF1 | 0.8489 |
+| IoU | 0.7571 |
+| microPrec | 0.9300 |
+| microRec | 0.9300 |
+| microF1 | 0.9300 |
+| weightPrec | 0.9320 |
+| weightRec | 0.9300 |
+| weightF1 | 0.9225 |
+
+Annotated pixels: 358,121. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 300,952 | 84.04 | 322,617 | 299,560 | 23,057 | 1,392 | 34,112 | 0.9954 | 0.9317 | 0.9285 | 0.9954 | 0.9608 | 0.9245 | 0.5967 | 0.08 |
+| Marine Debris | 1,162 | 0.32 | 1,532 | 1,002 | 530 | 160 | 356,429 | 0.8623 | 0.9981 | 0.6540 | 0.8623 | 0.7439 | 0.5922 | 0.9985 | 0.53 |
+| Algae/Sargassum | 1,794 | 0.50 | 1,769 | 1,744 | 25 | 50 | 356,302 | 0.9721 | 0.9998 | 0.9859 | 0.9721 | 0.9790 | 0.9588 | 0.9999 | 0.01 |
+| Other | 54,213 | 15.14 | 32,203 | 30,763 | 1,440 | 23,450 | 302,468 | 0.5674 | 0.9305 | 0.9553 | 0.5674 | 0.7120 | 0.5528 | 0.9953 | 0.05 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 299,560 | 70 | 13 | 1,309 | 300,952 |
+| Marine Debris | 18 | 1,002 | 12 | 130 | 1,162 |
+| Algae/Sargassum | 10 | 39 | 1,744 | 1 | 1,794 |
+| Other | 23,029 | 421 | 0 | 30,763 | 54,213 |
+| total predicted | 322,617 | 1,532 | 1,769 | 32,203 | 358,121 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 99.54 | 0.02 | 0.00 | 0.43 |
+| Marine Debris | 1.55 | 86.23 | 1.03 | 11.19 |
+| Algae/Sargassum | 0.56 | 2.17 | 97.21 | 0.06 |
+| Other | 42.48 | 0.78 | 0.00 | 56.74 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 92.85 | 4.57 | 0.73 | 4.06 |
+| Marine Debris | 0.01 | 65.40 | 0.68 | 0.40 |
+| Algae/Sargassum | 0.00 | 2.55 | 98.59 | 0.00 |
+| Other | 7.14 | 27.48 | 0.00 | 95.53 |
+
+### Where the errors go
+
+- **Water**: 1,392 missed pixels went to: Other 1,309 (94.0%), Marine Debris 70 (5.0%), Algae/Sargassum 13 (0.9%).
+  23,057 false-positive pixels came from: Other 23,029 (99.9%), Marine Debris 18 (0.1%), Algae/Sargassum 10 (0.0%).
+- **Marine Debris**: 160 missed pixels went to: Other 130 (81.2%), Water 18 (11.2%), Algae/Sargassum 12 (7.5%).
+  530 false-positive pixels came from: Other 421 (79.4%), Water 70 (13.2%), Algae/Sargassum 39 (7.4%).
+- **Algae/Sargassum**: 50 missed pixels went to: Marine Debris 39 (78.0%), Water 10 (20.0%), Other 1 (2.0%).
+  25 false-positive pixels came from: Water 13 (52.0%), Marine Debris 12 (48.0%).
+- **Other**: 23,450 missed pixels went to: Water 23,029 (98.2%), Marine Debris 421 (1.8%).
+  1,440 false-positive pixels came from: Water 1,309 (90.9%), Marine Debris 130 (9.0%), Algae/Sargassum 1 (0.1%).
+
+## model_last, test split
+
+### Overall
+
+| metric | value |
+|---|---|
+| overall accuracy | 0.9231 |
+| balanced accuracy (macro recall) | 0.8366 |
+| Cohen's kappa | 0.7182 |
+| macroPrec | 0.8310 |
+| macroRec | 0.8366 |
+| macroF1 | 0.8199 |
+| IoU | 0.7218 |
+| microPrec | 0.9231 |
+| microRec | 0.9231 |
+| microF1 | 0.9231 |
+| weightPrec | 0.9227 |
+| weightRec | 0.9231 |
+| weightF1 | 0.9175 |
+
+Annotated pixels: 361,147. Macro scores weight every class equally; micro/weighted scores are dominated by Water.
+
+### Per class
+
+| class | support | share_% | predicted | TP | FP | FN | TN | class_acc | OvR_acc | precision | recall | F1 | IoU | specificity | FP_per_TP |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Water | 294,020 | 81.41 | 313,123 | 290,089 | 23,034 | 3,931 | 44,093 | 0.9866 | 0.9253 | 0.9264 | 0.9866 | 0.9556 | 0.9150 | 0.6569 | 0.08 |
+| Marine Debris | 973 | 0.27 | 1,498 | 756 | 742 | 217 | 359,432 | 0.7770 | 0.9973 | 0.5047 | 0.7770 | 0.6119 | 0.4408 | 0.9979 | 0.98 |
+| Algae/Sargassum | 3,089 | 0.86 | 3,000 | 2,952 | 48 | 137 | 358,010 | 0.9556 | 0.9995 | 0.9840 | 0.9556 | 0.9696 | 0.9410 | 0.9999 | 0.02 |
+| Other | 63,065 | 17.46 | 43,526 | 39,562 | 3,964 | 23,503 | 294,118 | 0.6273 | 0.9239 | 0.9089 | 0.6273 | 0.7423 | 0.5902 | 0.9867 | 0.10 |
+
+class_acc = TP / support: share of that class's pixels classified correctly (per-class accuracy, = recall = producer's accuracy; their mean is the balanced accuracy).
+OvR_acc = (TP + TN) / all pixels: one-vs-rest accuracy of the class as a yes/no task (inflated by the many pixels of other classes; shown for completeness).
+FP_per_TP = false positives per correct pixel (above 1 means most predictions of that class are wrong).
+
+### Confusion matrix, pixel counts (rows true, columns predicted)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other | total true |
+|---|---|---|---|---|---|
+| Water | 290,089 | 122 | 19 | 3,790 | 294,020 |
+| Marine Debris | 23 | 756 | 20 | 174 | 973 |
+| Algae/Sargassum | 111 | 26 | 2,952 | 0 | 3,089 |
+| Other | 22,900 | 594 | 9 | 39,562 | 63,065 |
+| total predicted | 313,123 | 1,498 | 3,000 | 43,526 | 361,147 |
+
+### Confusion matrix, % of each TRUE class (row-normalised; diagonal = recall)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 98.66 | 0.04 | 0.01 | 1.29 |
+| Marine Debris | 2.36 | 77.70 | 2.06 | 17.88 |
+| Algae/Sargassum | 3.59 | 0.84 | 95.56 | 0.00 |
+| Other | 36.31 | 0.94 | 0.01 | 62.73 |
+
+### Confusion matrix, % of each PREDICTED class (column-normalised; diagonal = precision)
+
+| class | Water | Marine Debris | Algae/Sargassum | Other |
+|---|---|---|---|---|
+| Water | 92.64 | 8.14 | 0.63 | 8.71 |
+| Marine Debris | 0.01 | 50.47 | 0.67 | 0.40 |
+| Algae/Sargassum | 0.04 | 1.74 | 98.40 | 0.00 |
+| Other | 7.31 | 39.65 | 0.30 | 90.89 |
+
+### Where the errors go
+
+- **Water**: 3,931 missed pixels went to: Other 3,790 (96.4%), Marine Debris 122 (3.1%), Algae/Sargassum 19 (0.5%).
+  23,034 false-positive pixels came from: Other 22,900 (99.4%), Algae/Sargassum 111 (0.5%), Marine Debris 23 (0.1%).
+- **Marine Debris**: 217 missed pixels went to: Other 174 (80.2%), Water 23 (10.6%), Algae/Sargassum 20 (9.2%).
+  742 false-positive pixels came from: Other 594 (80.1%), Water 122 (16.4%), Algae/Sargassum 26 (3.5%).
+- **Algae/Sargassum**: 137 missed pixels went to: Water 111 (81.0%), Marine Debris 26 (19.0%).
+  48 false-positive pixels came from: Marine Debris 20 (41.7%), Water 19 (39.6%), Other 9 (18.8%).
+- **Other**: 23,503 missed pixels went to: Water 22,900 (97.4%), Marine Debris 594 (2.5%), Algae/Sargassum 9 (0.0%).
+  3,964 false-positive pixels came from: Water 3,790 (95.6%), Marine Debris 174 (4.4%).
+
+## Validation vs test, per class (model_best_val_f1)
+
+| class | precision val | recall val | F1 val | IoU val | precision test | recall test | F1 test | IoU test | F1 test - val |
+|---|---|---|---|---|---|---|---|---|---|
+| Water | 0.9285 | 0.9954 | 0.9608 | 0.9245 | 0.9268 | 0.9865 | 0.9558 | 0.9153 | -0.0050 |
+| Marine Debris | 0.6540 | 0.8623 | 0.7439 | 0.5922 | 0.5033 | 0.7770 | 0.6109 | 0.4398 | -0.1330 |
+| Algae/Sargassum | 0.9859 | 0.9721 | 0.9790 | 0.9588 | 0.9840 | 0.9556 | 0.9696 | 0.9410 | -0.0093 |
+| Other | 0.9553 | 0.5674 | 0.7120 | 0.5528 | 0.9087 | 0.6295 | 0.7437 | 0.5920 | +0.0318 |
+
+Large negative F1 test - val means the class generalises worse to the test scenes than validation suggested.
+

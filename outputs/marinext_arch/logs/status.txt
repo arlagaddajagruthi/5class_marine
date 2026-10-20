@@ -1,0 +1,11 @@
+queued (waiting for SegNeXt) Mon Oct 19 15:43:59 IST 2026
+MARIDA_novscp start Mon, Oct 19, 2026  4:26:08 PM
+MARIDA_novscp train exit 0 Mon, Oct 19, 2026  6:05:44 PM
+MARIDA_novscp test exit 0 Mon, Oct 19, 2026  6:10:18 PM
+MARIDA_vscp start Mon, Oct 19, 2026  6:10:18 PM
+MARIDA_vscp train exit 0 Mon, Oct 19, 2026  8:28:53 PM
+MARIDA_vscp test exit 0 Mon, Oct 19, 2026  8:33:35 PM
+MADOS_vscp start Mon, Oct 19, 2026  8:33:35 PM
+MADOS_vscp train exit 0 Tue, Oct 20, 2026  4:07:49 AM
+MADOS_vscp test exit 0 Tue, Oct 20, 2026  4:12:18 AM
+ALL DONE Tue, Oct 20, 2026  4:12:18 AM

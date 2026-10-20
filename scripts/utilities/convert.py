@@ -89,9 +89,9 @@ def process_mados(src_dir, dst_dir):
             copy_file(f, dst_path)
 
 if __name__ == "__main__":
-    # Resolve paths relative to the script's location (assuming it's in scripts/)
+    # Resolve paths relative to the script's location (scripts/utilities/)
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(script_dir)
+    project_root = os.path.dirname(os.path.dirname(script_dir))
     base_dir = os.path.join(project_root, "data")
     
     process_marida(os.path.join(base_dir, "MARIDA"), os.path.join(base_dir, "MARIDA_5Class"))

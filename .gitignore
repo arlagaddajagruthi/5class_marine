@@ -41,3 +41,5 @@ outputs/staged/cache/
 *.npz
 
 outputs/deeplabv3_resnet50/cache/
+
+paper/

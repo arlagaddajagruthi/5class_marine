@@ -1,1 +1,1 @@
-{"epoch": 11, "weights": "ema", "val_loss": 0.6593989251123943}
+{"epoch": 70, "weights": "ema", "val_loss": 0.24502725233083292}

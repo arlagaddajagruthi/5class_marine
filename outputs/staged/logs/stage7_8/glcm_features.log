@@ -1,0 +1,22 @@
+  [MARIDA/train] 200/694 patches, 8s
+  [MARIDA/train] 400/694 patches, 16s
+  [MARIDA/train] 600/694 patches, 25s
+  [MARIDA/train] 358,442 pixels in 28s -> C:\PROJECT\5class_marine_pollution\outputs\staged\cache\MARIDA_train_all_glcm6.npy
+  [MARIDA/val] 200/328 patches, 8s
+  [MARIDA/val] 191,436 pixels in 13s -> C:\PROJECT\5class_marine_pollution\outputs\staged\cache\MARIDA_val_all_glcm6.npy
+  [MADOS/train] 200/1433 patches, 31s
+  [MADOS/train] 400/1433 patches, 61s
+  [MADOS/train] 600/1433 patches, 90s
+  [MADOS/train] 800/1433 patches, 120s
+  [MADOS/train] 1000/1433 patches, 148s
+  [MADOS/train] 1200/1433 patches, 177s
+  [MADOS/train] 1400/1433 patches, 205s
+  [MADOS/train] 761,887 pixels in 210s -> C:\PROJECT\5class_marine_pollution\outputs\staged\cache\MADOS_train_all_glcm6.npy
+  [MADOS/test] 200/728 patches, 32s
+  [MADOS/test] 400/728 patches, 63s
+  [MADOS/test] 600/728 patches, 93s
+  [MADOS/test] 361,147 pixels in 111s -> C:\PROJECT\5class_marine_pollution\outputs\staged\cache\MADOS_test_all_glcm6.npy
+  [MADOS/val] 200/642 patches, 37s
+  [MADOS/val] 400/642 patches, 73s
+  [MADOS/val] 600/642 patches, 111s
+  [MADOS/val] 358,121 pixels in 120s -> C:\PROJECT\5class_marine_pollution\outputs\staged\cache\MADOS_val_all_glcm6.npy

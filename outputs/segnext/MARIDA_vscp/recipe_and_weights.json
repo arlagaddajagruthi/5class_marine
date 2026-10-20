@@ -1,0 +1,72 @@
+{
+  "dataset": "MARIDA",
+  "recipe": {
+    "epochs": 45,
+    "batch": 5,
+    "lr": 0.0002,
+    "decay": 0.0,
+    "lr_steps": [
+      40
+    ],
+    "gamma": 0.1,
+    "weight_param": 1.03,
+    "aug": "marida",
+    "vscp": true,
+    "ema": false,
+    "tta": true,
+    "drop_last": false,
+    "select": "val macroF1",
+    "encoder": "SegNeXt-T (MSCAN-T + LightHamHead), from scratch, stages 2-4 (H/8, as published)",
+    "inputs": "11 bands (standardised) + NDWI, red/green, nir/red, nir/green, swir1/nir"
+  },
+  "train_annotated_pixels": {
+    "Water": 350057,
+    "Marine Debris": 1943,
+    "Algae/Sargassum": 1961,
+    "Other": 4481
+  },
+  "ce_weight": {
+    "Water": 1.4359,
+    "Marine Debris": 28.7292,
+    "Algae/Sargassum": 28.6892,
+    "Other": 24.0252
+  },
+  "extra_channel_stats": {
+    "channels": [
+      "NDWI",
+      "red/green",
+      "nir/red",
+      "nir/green",
+      "swir1/nir"
+    ],
+    "p1": [
+      -0.7337251901626587,
+      0.30100879073143005,
+      0.2783273160457611,
+      0.1268978714942932,
+      0.09815289825201035
+    ],
+    "p99": [
+      0.7672723531723022,
+      1.1624984741210938,
+      11.367502212524414,
+      6.51096248626709,
+      1.199066400527954
+    ],
+    "mean": [
+      0.3064076900482178,
+      0.6926500201225281,
+      0.9797175526618958,
+      0.6818280816078186,
+      0.6290972232818604
+    ],
+    "std": [
+      0.2628059685230255,
+      0.17971017956733704,
+      1.4490002393722534,
+      0.9054728746414185,
+      0.22750011086463928
+    ],
+    "note": "train split, 2000 random pixels per patch (all pixels, annotated or not)"
+  }
+}
