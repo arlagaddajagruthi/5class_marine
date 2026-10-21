@@ -1,0 +1,8050 @@
+[
+ {
+  "id": "Fig. MADOS-1",
+  "title": "Fig. MADOS-1. Random Forest: global SHAP importance (mean |SHAP| over the 4 class outputs)",
+  "section": "A",
+  "item": "1",
+  "path": "01_global_importance/MADOS/MADOS_rf_global_bar.png",
+  "model": "rf",
+  "kind": "global_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.1316596434294504
+   ],
+   [
+    "swir1/nir",
+    0.09758260564353331
+   ],
+   [
+    "NDWI",
+    0.07813365778989452
+   ],
+   [
+    "nir/green",
+    0.07690492757515857
+   ],
+   [
+    "B12",
+    0.0637771104893487
+   ]
+  ],
+  "bottom3": [
+   [
+    "glcm_energy",
+    -0.014759555333309384
+   ],
+   [
+    "glcm_asm",
+    -0.014925116132249736
+   ],
+   [
+    "glcm_homogeneity",
+    -0.019473314358193494
+   ]
+  ],
+  "top3_share": 0.30737590686287825,
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-2",
+  "title": "Fig. MADOS-2. XGBoost: global SHAP importance (mean |SHAP| over the 4 class outputs)",
+  "section": "A",
+  "item": "1",
+  "path": "01_global_importance/MADOS/MADOS_xgb_global_bar.png",
+  "model": "xgb",
+  "kind": "global_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.1796253114156872
+   ],
+   [
+    "swir1/nir",
+    0.14471712856125432
+   ],
+   [
+    "B3",
+    0.06907851950719772
+   ],
+   [
+    "glcm_contrast",
+    0.0633258856631332
+   ],
+   [
+    "NDWI",
+    0.05681591269203539
+   ]
+  ],
+  "bottom3": [
+   [
+    "glcm_asm",
+    -7.192916826877048e-05
+   ],
+   [
+    "glcm_homogeneity",
+    -0.0044032177578316335
+   ],
+   [
+    "B8",
+    -0.010078750508811737
+   ]
+  ],
+  "top3_share": 0.39342095948413924,
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-3",
+  "title": "Fig. MADOS-3. LightGBM: global SHAP importance (mean |SHAP| over the 4 class outputs)",
+  "section": "A",
+  "item": "1",
+  "path": "01_global_importance/MADOS/MADOS_lgbm_global_bar.png",
+  "model": "lgbm",
+  "kind": "global_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.14839269481320677
+   ],
+   [
+    "swir1/nir",
+    0.12362975028202011
+   ],
+   [
+    "B3",
+    0.07186449455855155
+   ],
+   [
+    "B12",
+    0.06450033334877354
+   ],
+   [
+    "glcm_contrast",
+    0.062032582945621535
+   ]
+  ],
+  "bottom3": [
+   [
+    "glcm_asm",
+    -9.511725122162458e-05
+   ],
+   [
+    "glcm_homogeneity",
+    -0.008855869841944475
+   ],
+   [
+    "B8",
+    -0.010819903215563201
+   ]
+  ],
+  "top3_share": 0.3438869396537785,
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-4",
+  "title": "Fig. MADOS-4. AdaBoost: global SHAP importance (mean |SHAP| over the 4 class outputs)",
+  "section": "A",
+  "item": "1",
+  "path": "01_global_importance/MADOS/MADOS_ada_global_bar.png",
+  "model": "ada",
+  "kind": "global_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.295010134093981
+   ],
+   [
+    "swir1/nir",
+    0.21339750746901615
+   ],
+   [
+    "NDWI",
+    0.07409417151220862
+   ],
+   [
+    "glcm_contrast",
+    0.06659067197289233
+   ],
+   [
+    "B1",
+    0.06473313527291312
+   ]
+  ],
+  "bottom3": [
+   [
+    "glcm_dissimilarity",
+    -0.0031088715939832875
+   ],
+   [
+    "B7",
+    -0.004513315065763541
+   ],
+   [
+    "glcm_homogeneity",
+    -0.004771852876615066
+   ]
+  ],
+  "top3_share": 0.5825018130752058,
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-5",
+  "title": "Fig. MADOS-5. Linear SVM: global SHAP importance (mean |SHAP| over the 4 class outputs)",
+  "section": "A",
+  "item": "1",
+  "path": "01_global_importance/MADOS/MADOS_svm_global_bar.png",
+  "model": "svm",
+  "kind": "global_bar",
+  "top5": [
+   [
+    "glcm_dissimilarity",
+    0.12897504944221763
+   ],
+   [
+    "nir/green",
+    0.0996494266924318
+   ],
+   [
+    "glcm_homogeneity",
+    0.08326534597911729
+   ],
+   [
+    "NDWI",
+    0.07974772483417704
+   ],
+   [
+    "glcm_contrast",
+    0.06220108827801957
+   ]
+  ],
+  "bottom3": [
+   [
+    "glcm_correlation",
+    -0.0012104465547636788
+   ],
+   [
+    "B1",
+    -0.01091094110251781
+   ],
+   [
+    "swir1/nir",
+    -0.01327091362855439
+   ]
+  ],
+  "top3_share": 0.3118898221137667,
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-6",
+  "title": "Fig. MADOS-6. Random Forest: SHAP beeswarm of each pixel's TRUE-class output",
+  "section": "A",
+  "item": "2",
+  "path": "01_global_importance/MADOS/MADOS_rf_global_beeswarm_trueclass.png",
+  "model": "rf",
+  "kind": "global_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.08140942837164768,
+    0.22885047836838773,
+    0.07625056478073654
+   ],
+   [
+    "swir1/nir",
+    0.0520385488832817,
+    -0.19729209534173286,
+    0.046280800903827156
+   ],
+   [
+    "NDWI",
+    0.04674660872180957,
+    -0.1374960399278055,
+    0.04159035706160685
+   ],
+   [
+    "nir/green",
+    0.046518201210479435,
+    0.1518334109954243,
+    0.04125970481901422
+   ],
+   [
+    "B12",
+    0.03827088248846645,
+    -0.10689559923286537,
+    0.025952991129389737
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-7",
+  "title": "Fig. MADOS-7. XGBoost: SHAP beeswarm of each pixel's TRUE-class output",
+  "section": "A",
+  "item": "2",
+  "path": "01_global_importance/MADOS/MADOS_xgb_global_beeswarm_trueclass.png",
+  "model": "xgb",
+  "kind": "global_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.2800196639435404,
+    0.4807243996747526,
+    1.177394213642274
+   ],
+   [
+    "swir1/nir",
+    0.8306084745222789,
+    -0.15386502057940674,
+    0.7550865205213045
+   ],
+   [
+    "B3",
+    0.37183426415091814,
+    -0.011591917892914347,
+    0.19632429447649957
+   ],
+   [
+    "glcm_contrast",
+    0.34627494901691563,
+    -0.2648992612106374,
+    0.21692147108234475
+   ],
+   [
+    "B12",
+    0.33713999271659995,
+    -0.21385827292761156,
+    0.15720844846339235
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-8",
+  "title": "Fig. MADOS-8. LightGBM: SHAP beeswarm of each pixel's TRUE-class output",
+  "section": "A",
+  "item": "2",
+  "path": "01_global_importance/MADOS/MADOS_lgbm_global_beeswarm_trueclass.png",
+  "model": "lgbm",
+  "kind": "global_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.29755409835165,
+    0.45490369595709335,
+    1.203081581196445
+   ],
+   [
+    "swir1/nir",
+    0.874584576091135,
+    -0.19990088187561245,
+    0.8069208630467392
+   ],
+   [
+    "B12",
+    0.49147912947008887,
+    -0.1417081552167118,
+    0.2320987021955541
+   ],
+   [
+    "B3",
+    0.4835158226938446,
+    -0.028666144956812724,
+    0.2387214702354061
+   ],
+   [
+    "B2",
+    0.4239231596701239,
+    -0.3621534506695958,
+    0.3934167872618647
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-9",
+  "title": "Fig. MADOS-9. AdaBoost: SHAP beeswarm of each pixel's TRUE-class output",
+  "section": "A",
+  "item": "2",
+  "path": "01_global_importance/MADOS/MADOS_ada_global_beeswarm_trueclass.png",
+  "model": "ada",
+  "kind": "global_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.16034281646746987,
+    0.2838156092882599,
+    0.15076877209881057
+   ],
+   [
+    "swir1/nir",
+    0.08698616182782234,
+    0.27292771403787425,
+    0.07207009244178432
+   ],
+   [
+    "NDWI",
+    0.034736637809117926,
+    0.208484244213273,
+    0.030567956594668797
+   ],
+   [
+    "glcm_contrast",
+    0.029450318475278667,
+    0.10120869680573859,
+    0.011043840500238489
+   ],
+   [
+    "B1",
+    0.02943075733609145,
+    0.02676054060561085,
+    0.021555763253675347
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-10",
+  "title": "Fig. MADOS-10. Linear SVM: SHAP beeswarm of each pixel's TRUE-class output",
+  "section": "A",
+  "item": "2",
+  "path": "01_global_importance/MADOS/MADOS_svm_global_beeswarm_trueclass.png",
+  "model": "svm",
+  "kind": "global_beeswarm",
+  "top5": [
+   [
+    "glcm_dissimilarity",
+    2.5128408465274763,
+    0.3266459467003396,
+    -0.011935733827189949
+   ],
+   [
+    "nir/green",
+    2.269128977346535,
+    0.4849474548246214,
+    1.170722143934798
+   ],
+   [
+    "glcm_homogeneity",
+    1.8240421875897008,
+    0.33109811829714986,
+    -0.22096391721806058
+   ],
+   [
+    "nir/red",
+    1.806256719392759,
+    -0.6357788998464583,
+    -0.33245818469345767
+   ],
+   [
+    "NDWI",
+    1.6808564636722894,
+    -0.7244718642165724,
+    0.6507031885782895
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-11",
+  "title": "Fig. MADOS-11. Cross-model comparison of normalised global SHAP importance",
+  "section": "A",
+  "item": "3",
+  "path": "03_cross_model_comparison/MADOS/MADOS_cross_model_global_importance_heatmap.png",
+  "kind": "cross_model_heatmap",
+  "top_by_mean": [
+   [
+    "nir/red",
+    0.1629588588978887
+   ],
+   [
+    "swir1/nir",
+    0.11851958111687566
+   ],
+   [
+    "NDWI",
+    0.06655784402292327
+   ],
+   [
+    "glcm_contrast",
+    0.06021822363377605
+   ],
+   [
+    "nir/green",
+    0.05459906896486422
+   ],
+   [
+    "B3",
+    0.04940669928695769
+   ]
+  ],
+  "top1": {
+   "rf": "nir/red",
+   "xgb": "nir/red",
+   "lgbm": "nir/red",
+   "ada": "nir/red",
+   "svm": "glcm_dissimilarity"
+  },
+  "per_model_top3": {
+   "rf": [
+    "nir/red",
+    "swir1/nir",
+    "NDWI"
+   ],
+   "xgb": [
+    "nir/red",
+    "swir1/nir",
+    "B3"
+   ],
+   "lgbm": [
+    "nir/red",
+    "swir1/nir",
+    "B3"
+   ],
+   "ada": [
+    "nir/red",
+    "swir1/nir",
+    "NDWI"
+   ],
+   "svm": [
+    "glcm_dissimilarity",
+    "nir/green",
+    "glcm_homogeneity"
+   ]
+  },
+  "rank_spread": [
+   [
+    "nir/red",
+    1,
+    6
+   ],
+   [
+    "swir1/nir",
+    2,
+    20
+   ],
+   [
+    "NDWI",
+    3,
+    10
+   ],
+   [
+    "glcm_contrast",
+    4,
+    8
+   ],
+   [
+    "nir/green",
+    2,
+    14
+   ],
+   [
+    "B3",
+    3,
+    14
+   ],
+   [
+    "B1",
+    5,
+    21
+   ],
+   [
+    "B2",
+    6,
+    15
+   ]
+  ],
+  "glcm_share": {
+   "rf": 0.14414096101852547,
+   "xgb": 0.1329138639719967,
+   "lgbm": 0.1417876561271345,
+   "ada": 0.11549445068635443,
+   "svm": 0.3698403255785499
+  },
+  "band_share": {
+   "rf": 0.43221100272084,
+   "xgb": 0.40849237202335337,
+   "lgbm": 0.463947657724028,
+   "ada": 0.2280306461568858,
+   "svm": 0.3524446477708281
+  },
+  "index_ratio_share": {
+   "rf": 0.42364803626063435,
+   "xgb": 0.45859376400465,
+   "lgbm": 0.39426468614883725,
+   "ada": 0.6564749031567598,
+   "svm": 0.2777150266506221
+  }
+ },
+ {
+  "id": "Fig. MADOS-12",
+  "title": "Fig. MADOS-12. Agreement of global feature rankings between models",
+  "section": "A",
+  "item": "3",
+  "path": "03_cross_model_comparison/MADOS/MADOS_cross_model_rank_agreement.png",
+  "kind": "rank_agreement",
+  "pairs": [
+   [
+    "xgb",
+    "lgbm",
+    0.9503105590062113
+   ],
+   [
+    "xgb",
+    "ada",
+    0.7684923771880295
+   ],
+   [
+    "rf",
+    "xgb",
+    0.7492941840767929
+   ],
+   [
+    "rf",
+    "lgbm",
+    0.707509881422925
+   ],
+   [
+    "rf",
+    "ada",
+    0.6668548842461888
+   ],
+   [
+    "lgbm",
+    "ada",
+    0.647656691134952
+   ],
+   [
+    "rf",
+    "svm",
+    -0.09994353472614344
+   ],
+   [
+    "ada",
+    "svm",
+    -0.1394692264257482
+   ],
+   [
+    "xgb",
+    "svm",
+    -0.27724449463579903
+   ],
+   [
+    "lgbm",
+    "svm",
+    -0.3721061547148504
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MADOS-13",
+  "title": "Fig. MADOS-13. Random Forest: SHAP importance for the Class 1 Water output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_rf_c1_water_bar.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.12623700616380606
+   ],
+   [
+    "NDWI",
+    0.09702337220549222
+   ],
+   [
+    "swir1/nir",
+    0.09101730685792035
+   ],
+   [
+    "nir/green",
+    0.08854617319159319
+   ],
+   [
+    "B1",
+    0.0677583685387244
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.13787195716044687
+   ],
+   [
+    "NDWI",
+    0.09315735572718084
+   ],
+   [
+    "nir/green",
+    0.08519484060157956
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-14",
+  "title": "Fig. MADOS-14. Random Forest: SHAP importance for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_rf_c2_debris_bar.png",
+  "model": "rf",
+  "cls": 1,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "swir1/nir",
+    0.14953807255645965
+   ],
+   [
+    "nir/red",
+    0.1056070377212829
+   ],
+   [
+    "B12",
+    0.09049227904665468
+   ],
+   [
+    "NDWI",
+    0.0739912359418072
+   ],
+   [
+    "nir/green",
+    0.07141639340317224
+   ]
+  ],
+  "top3_true": [
+   [
+    "swir1/nir",
+    0.14330610553898543
+   ],
+   [
+    "B12",
+    0.10659804430665312
+   ],
+   [
+    "nir/red",
+    0.09625428408617151
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-15",
+  "title": "Fig. MADOS-15. Random Forest: SHAP importance for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_rf_c3_sargassum_bar.png",
+  "model": "rf",
+  "cls": 2,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.23477976567658324
+   ],
+   [
+    "nir/green",
+    0.09852721414941785
+   ],
+   [
+    "NDWI",
+    0.09500316647515593
+   ],
+   [
+    "B2",
+    0.08288547739202133
+   ],
+   [
+    "swir1/nir",
+    0.06585695470439525
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.2580067502142593
+   ],
+   [
+    "nir/green",
+    0.11248689442664078
+   ],
+   [
+    "NDWI",
+    0.10791779944153163
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-16",
+  "title": "Fig. MADOS-16. Random Forest: SHAP importance for the Class 4 Other output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_rf_c4_other_bar.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "B12",
+    0.10250120767159415
+   ],
+   [
+    "swir1/nir",
+    0.08973284282560215
+   ],
+   [
+    "B11",
+    0.08576921212937148
+   ],
+   [
+    "glcm_contrast",
+    0.07684854813948078
+   ],
+   [
+    "nir/red",
+    0.07038143578691071
+   ]
+  ],
+  "top3_true": [
+   [
+    "B12",
+    0.0957550036266031
+   ],
+   [
+    "swir1/nir",
+    0.08816339198303272
+   ],
+   [
+    "B11",
+    0.08111480886659808
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-17",
+  "title": "Fig. MADOS-17. XGBoost: SHAP importance for the Class 1 Water output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c1_water_bar.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.16238910734637
+   ],
+   [
+    "glcm_contrast",
+    0.10955737625984523
+   ],
+   [
+    "swir1/nir",
+    0.08659678806787327
+   ],
+   [
+    "B3",
+    0.0771525127973199
+   ],
+   [
+    "NDWI",
+    0.07599234113736775
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.17052432094988837
+   ],
+   [
+    "B3",
+    0.11421790350884485
+   ],
+   [
+    "glcm_contrast",
+    0.11410494637324328
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-18",
+  "title": "Fig. MADOS-18. XGBoost: SHAP importance for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c2_debris_bar.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "swir1/nir",
+    0.29056996627170395
+   ],
+   [
+    "nir/red",
+    0.1513816332363574
+   ],
+   [
+    "nir/green",
+    0.07608574371589998
+   ],
+   [
+    "NDWI",
+    0.07538163220731951
+   ],
+   [
+    "B5",
+    0.07109842339478752
+   ]
+  ],
+  "top3_true": [
+   [
+    "swir1/nir",
+    0.297543716681778
+   ],
+   [
+    "nir/red",
+    0.1617999033694525
+   ],
+   [
+    "B12",
+    0.07814301639748207
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-19",
+  "title": "Fig. MADOS-19. XGBoost: SHAP importance for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c3_sargassum_bar.png",
+  "model": "xgb",
+  "cls": 2,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.2968254492566303
+   ],
+   [
+    "B2",
+    0.1260666987449011
+   ],
+   [
+    "B3",
+    0.11959586674699756
+   ],
+   [
+    "B6",
+    0.07710820260716798
+   ],
+   [
+    "glcm_contrast",
+    0.05887931427359343
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.36321522261862044
+   ],
+   [
+    "B2",
+    0.13442470763017267
+   ],
+   [
+    "B3",
+    0.06919995522011908
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-20",
+  "title": "Fig. MADOS-20. XGBoost: SHAP importance for the Class 4 Other output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c4_other_bar.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "swir1/nir",
+    0.14364524491577146
+   ],
+   [
+    "B1",
+    0.11534436569101833
+   ],
+   [
+    "B12",
+    0.11133468773203549
+   ],
+   [
+    "glcm_contrast",
+    0.10748072734192034
+   ],
+   [
+    "glcm_energy",
+    0.06729844928892871
+   ]
+  ],
+  "top3_true": [
+   [
+    "B1",
+    0.13547155864311483
+   ],
+   [
+    "swir1/nir",
+    0.13251154454273906
+   ],
+   [
+    "B12",
+    0.13192239099844605
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-21",
+  "title": "Fig. MADOS-21. LightGBM: SHAP importance for the Class 1 Water output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c1_water_bar.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.1547911375618666
+   ],
+   [
+    "glcm_contrast",
+    0.09573653072001402
+   ],
+   [
+    "swir1/nir",
+    0.08083735787548724
+   ],
+   [
+    "B8A",
+    0.08074101298172108
+   ],
+   [
+    "NDWI",
+    0.06594201667026607
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.16416391276947687
+   ],
+   [
+    "glcm_contrast",
+    0.1025607386376756
+   ],
+   [
+    "B3",
+    0.10210208346249311
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-22",
+  "title": "Fig. MADOS-22. LightGBM: SHAP importance for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c2_debris_bar.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "swir1/nir",
+    0.23220961509765192
+   ],
+   [
+    "nir/red",
+    0.11360890574553278
+   ],
+   [
+    "B12",
+    0.10078963012580008
+   ],
+   [
+    "B5",
+    0.08337782408658571
+   ],
+   [
+    "NDWI",
+    0.06649953074339664
+   ]
+  ],
+  "top3_true": [
+   [
+    "swir1/nir",
+    0.23264197081276644
+   ],
+   [
+    "B12",
+    0.11889016454767497
+   ],
+   [
+    "nir/red",
+    0.1173856662792163
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-23",
+  "title": "Fig. MADOS-23. LightGBM: SHAP importance for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c3_sargassum_bar.png",
+  "model": "lgbm",
+  "cls": 2,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.23474245387964507
+   ],
+   [
+    "B3",
+    0.12407735044991262
+   ],
+   [
+    "B2",
+    0.12108041166602537
+   ],
+   [
+    "B6",
+    0.07357804570583594
+   ],
+   [
+    "B7",
+    0.05342976875546725
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.2954100931630088
+   ],
+   [
+    "B2",
+    0.13228335428165774
+   ],
+   [
+    "B6",
+    0.08478062156461952
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-24",
+  "title": "Fig. MADOS-24. LightGBM: SHAP importance for the Class 4 Other output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c4_other_bar.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "swir1/nir",
+    0.1347926709870174
+   ],
+   [
+    "B12",
+    0.12381898736354989
+   ],
+   [
+    "B1",
+    0.10775061179979685
+   ],
+   [
+    "glcm_contrast",
+    0.10437820028306127
+   ],
+   [
+    "B3",
+    0.06927929461984056
+   ]
+  ],
+  "top3_true": [
+   [
+    "B12",
+    0.13921351045972002
+   ],
+   [
+    "swir1/nir",
+    0.12638644600087742
+   ],
+   [
+    "B1",
+    0.11748403675772456
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-25",
+  "title": "Fig. MADOS-25. AdaBoost: SHAP importance for the Class 1 Water output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_ada_c1_water_bar.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.3718394314261102
+   ],
+   [
+    "swir1/nir",
+    0.15921340597151423
+   ],
+   [
+    "red/green",
+    0.0698845704936787
+   ],
+   [
+    "glcm_contrast",
+    0.06738532444796687
+   ],
+   [
+    "NDWI",
+    0.06686467895396682
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.37834900121342413
+   ],
+   [
+    "swir1/nir",
+    0.11976781046371662
+   ],
+   [
+    "NDWI",
+    0.08352615309403619
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-26",
+  "title": "Fig. MADOS-26. AdaBoost: SHAP importance for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_ada_c2_debris_bar.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "swir1/nir",
+    0.4161267547067222
+   ],
+   [
+    "nir/red",
+    0.1841905499493443
+   ],
+   [
+    "NDWI",
+    0.10952350251340302
+   ],
+   [
+    "red/green",
+    0.0713548157371329
+   ],
+   [
+    "B1",
+    0.05400111305877482
+   ]
+  ],
+  "top3_true": [
+   [
+    "swir1/nir",
+    0.3801757035766871
+   ],
+   [
+    "nir/red",
+    0.20029186746143324
+   ],
+   [
+    "red/green",
+    0.08711488128149658
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-27",
+  "title": "Fig. MADOS-27. AdaBoost: SHAP importance for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_ada_c3_sargassum_bar.png",
+  "model": "ada",
+  "cls": 2,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.5080630619123205
+   ],
+   [
+    "B2",
+    0.07084524738931575
+   ],
+   [
+    "glcm_contrast",
+    0.06259074451287731
+   ],
+   [
+    "B1",
+    0.05743142743800359
+   ],
+   [
+    "NDWI",
+    0.05001204646159133
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.5865678033618521
+   ],
+   [
+    "B2",
+    0.06454170895635061
+   ],
+   [
+    "NDWI",
+    0.05216232769307636
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-28",
+  "title": "Fig. MADOS-28. AdaBoost: SHAP importance for the Class 4 Other output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_ada_c4_other_bar.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "swir1/nir",
+    0.2433626663367957
+   ],
+   [
+    "nir/red",
+    0.12061449903075541
+   ],
+   [
+    "B1",
+    0.11446911247316238
+   ],
+   [
+    "glcm_contrast",
+    0.09980094983197339
+   ],
+   [
+    "NDWI",
+    0.07046625595693792
+   ]
+  ],
+  "top3_true": [
+   [
+    "swir1/nir",
+    0.2513090802327083
+   ],
+   [
+    "B1",
+    0.1361523749158937
+   ],
+   [
+    "nir/red",
+    0.10163160039489554
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-29",
+  "title": "Fig. MADOS-29. Linear SVM: SHAP importance for the Class 1 Water output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_svm_c1_water_bar.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "glcm_dissimilarity",
+    0.12253501741395749
+   ],
+   [
+    "nir/red",
+    0.10677303016647777
+   ],
+   [
+    "B8",
+    0.08880639487955362
+   ],
+   [
+    "nir/green",
+    0.08596369137137523
+   ],
+   [
+    "glcm_homogeneity",
+    0.08467479445780532
+   ]
+  ],
+  "top3_true": [
+   [
+    "glcm_dissimilarity",
+    0.10551923875327265
+   ],
+   [
+    "nir/red",
+    0.10294505952447339
+   ],
+   [
+    "glcm_homogeneity",
+    0.08796238052211015
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-30",
+  "title": "Fig. MADOS-30. Linear SVM: SHAP importance for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_svm_c2_debris_bar.png",
+  "model": "svm",
+  "cls": 1,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "NDWI",
+    0.21860761611810844
+   ],
+   [
+    "nir/green",
+    0.21523857407436903
+   ],
+   [
+    "nir/red",
+    0.0727499186565726
+   ],
+   [
+    "B5",
+    0.07234036590722956
+   ],
+   [
+    "B11",
+    0.0700541140247395
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/green",
+    0.12420448079851643
+   ],
+   [
+    "NDWI",
+    0.11995365443973711
+   ],
+   [
+    "B5",
+    0.10814916698177855
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-31",
+  "title": "Fig. MADOS-31. Linear SVM: SHAP importance for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_svm_c3_sargassum_bar.png",
+  "model": "svm",
+  "cls": 2,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "glcm_dissimilarity",
+    0.17587115030866052
+   ],
+   [
+    "glcm_homogeneity",
+    0.1080267223308992
+   ],
+   [
+    "glcm_contrast",
+    0.10232869704849595
+   ],
+   [
+    "B8A",
+    0.06402991063052839
+   ],
+   [
+    "B6",
+    0.058959544254373254
+   ]
+  ],
+  "top3_true": [
+   [
+    "glcm_dissimilarity",
+    0.09660705821668679
+   ],
+   [
+    "nir/red",
+    0.09427004404638012
+   ],
+   [
+    "nir/green",
+    0.0909641375952856
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-32",
+  "title": "Fig. MADOS-32. Linear SVM: SHAP importance for the Class 4 Other output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MADOS/MADOS_svm_c4_other_bar.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "glcm_dissimilarity",
+    0.15638240679451076
+   ],
+   [
+    "B8",
+    0.11794582513015728
+   ],
+   [
+    "glcm_homogeneity",
+    0.11274676221772814
+   ],
+   [
+    "nir/green",
+    0.09374293020148065
+   ],
+   [
+    "B3",
+    0.07943963930359968
+   ]
+  ],
+  "top3_true": [
+   [
+    "glcm_dissimilarity",
+    0.18188658155021956
+   ],
+   [
+    "glcm_homogeneity",
+    0.12840265110168056
+   ],
+   [
+    "B8",
+    0.1178142402207912
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-33",
+  "title": "Fig. MADOS-33. Random Forest: SHAP beeswarm for the Class 1 Water output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_rf_c1_water_beeswarm.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.05506121335725233,
+    -0.8993469926020782,
+    0.08722485567540385,
+    -0.015459993373740535
+   ],
+   [
+    "NDWI",
+    0.042319005812880284,
+    0.952539425374601,
+    0.05674211572547985,
+    -0.015652605030549542
+   ],
+   [
+    "swir1/nir",
+    0.039699320384733054,
+    0.659065152128578,
+    0.035510907062664104,
+    -0.014634313469762539
+   ],
+   [
+    "nir/green",
+    0.0386214778235797,
+    -0.9413922926335365,
+    0.05174412330001296,
+    -0.01615852240023345
+   ],
+   [
+    "B1",
+    0.02955439217252071,
+    0.5085908075720563,
+    0.026100975804822905,
+    4.511869896212476e-05
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-34",
+  "title": "Fig. MADOS-34. Random Forest: SHAP beeswarm for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_rf_c2_debris_beeswarm.png",
+  "model": "rf",
+  "cls": 1,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "swir1/nir",
+    0.05015434757283748,
+    -0.7616536678150471,
+    0.06100883494673442,
+    -0.025451690308126697
+   ],
+   [
+    "nir/red",
+    0.03542009058603571,
+    -0.02911711744244267,
+    0.049409888437454925,
+    -0.02224877516200785
+   ],
+   [
+    "B12",
+    0.030350673499890995,
+    -0.8573727888964742,
+    0.02797748147740035,
+    -0.013212264735774248
+   ],
+   [
+    "NDWI",
+    0.024816303308765088,
+    -0.4966112129244534,
+    0.02994511707704089,
+    -0.018618986062142896
+   ],
+   [
+    "nir/green",
+    0.023952713552522462,
+    0.48081796584580966,
+    0.029230998218316203,
+    -0.01761736891217575
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-35",
+  "title": "Fig. MADOS-35. Random Forest: SHAP beeswarm for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_rf_c3_sargassum_beeswarm.png",
+  "model": "rf",
+  "cls": 2,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.08351536957332324,
+    0.7925908906881185,
+    0.13935805576445734,
+    -0.05854436444832799
+   ],
+   [
+    "nir/green",
+    0.03504789554161866,
+    0.916210212645981,
+    0.054752783666257514,
+    -0.02368123264700379
+   ],
+   [
+    "NDWI",
+    0.03379432863792126,
+    -0.9291729299812013,
+    0.05292011123003916,
+    -0.022939827839884616
+   ],
+   [
+    "B2",
+    0.02948384949915812,
+    -0.7599513680217834,
+    0.037322647424146885,
+    -0.02227535842303211
+   ],
+   [
+    "swir1/nir",
+    0.023426498852067604,
+    -0.88921633278912,
+    0.04184073754262428,
+    -0.015543243275224326
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-36",
+  "title": "Fig. MADOS-36. Random Forest: SHAP beeswarm for the Class 4 Other output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_rf_c4_other_beeswarm.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "B12",
+    0.042785716174311525,
+    0.8196081752045624,
+    0.04698258623482072,
+    -0.011873896109330472
+   ],
+   [
+    "swir1/nir",
+    0.037455987415788164,
+    0.7762123307030074,
+    0.04676272406328581,
+    -0.006078487422533732
+   ],
+   [
+    "B11",
+    0.03580150175809663,
+    0.8245542167943585,
+    0.0407606979556861,
+    -0.010591699840335969
+   ],
+   [
+    "glcm_contrast",
+    0.032077867605602266,
+    0.7599568711022957,
+    0.015412814747060268,
+    -0.01135948948664954
+   ],
+   [
+    "nir/red",
+    0.02937838688854601,
+    -0.2477671859494347,
+    0.029009459245630052,
+    -0.005414286859241225
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-37",
+  "title": "Fig. MADOS-37. XGBoost: SHAP beeswarm for the Class 1 Water output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c1_water_beeswarm.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.6129145175251407,
+    -0.8951560830776829,
+    0.9000591300867139,
+    -0.20324802266032752
+   ],
+   [
+    "glcm_contrast",
+    0.41350868607459207,
+    -0.7610351902032977,
+    0.5859428668929119,
+    -0.03717308441609647
+   ],
+   [
+    "swir1/nir",
+    0.32684722174522046,
+    0.7095477833996683,
+    0.27095573840083576,
+    -0.10539713836337339
+   ],
+   [
+    "B3",
+    0.2912011521570731,
+    0.8355518887011446,
+    0.40919209604806484,
+    -0.1098574445545312
+   ],
+   [
+    "NDWI",
+    0.28682224974898735,
+    0.8720185500128819,
+    0.365995626067377,
+    -0.12584207529204805
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-38",
+  "title": "Fig. MADOS-38. XGBoost: SHAP beeswarm for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c2_debris_beeswarm.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "swir1/nir",
+    1.6620430415101184,
+    -0.7226558421221125,
+    1.8711958690517312,
+    -0.5062326190676918
+   ],
+   [
+    "nir/red",
+    0.8658939991673393,
+    0.023587995547219128,
+    1.0721253932919212,
+    -0.34559667211751705
+   ],
+   [
+    "nir/green",
+    0.43520595925212235,
+    0.4925090581530075,
+    0.45082484700013403,
+    -0.2328965483410434
+   ],
+   [
+    "NDWI",
+    0.4311784830187767,
+    -0.8071006570390001,
+    0.3281134210265278,
+    -0.18767518542022046
+   ],
+   [
+    "B5",
+    0.4066787816437662,
+    -0.8971176776963224,
+    0.3850040410528833,
+    -0.11380595844230168
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-39",
+  "title": "Fig. MADOS-39. XGBoost: SHAP beeswarm for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c3_sargassum_beeswarm.png",
+  "model": "xgb",
+  "cls": 2,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.7318631337022892,
+    0.9125299512578307,
+    2.6621021405278675,
+    -1.188117334472393
+   ],
+   [
+    "B2",
+    0.7355510401504763,
+    -0.8878170339518268,
+    1.0413183241842505,
+    -0.48466485181440777
+   ],
+   [
+    "B3",
+    0.6977962067639993,
+    -0.8772901571154679,
+    0.215282700434072,
+    -0.2204246966731347
+   ],
+   [
+    "B6",
+    0.449896913272904,
+    0.883697243034345,
+    0.35863383135195714,
+    -0.07669193725425956
+   ],
+   [
+    "glcm_contrast",
+    0.34353831177038024,
+    -0.9169673371764769,
+    0.19797880907444584,
+    -0.031399725555727
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-40",
+  "title": "Fig. MADOS-40. XGBoost: SHAP beeswarm for the Class 4 Other output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c4_other_beeswarm.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "swir1/nir",
+    0.430884423948129,
+    0.7991346806445768,
+    0.4464944553132521,
+    -0.12792972514826287
+   ],
+   [
+    "B1",
+    0.3459918954893297,
+    0.34607379136086946,
+    0.3156431900556466,
+    -0.10273738476457141
+   ],
+   [
+    "B12",
+    0.3339642938893818,
+    0.8525081610186266,
+    0.34135673052340737,
+    -0.128564102283916
+   ],
+   [
+    "glcm_contrast",
+    0.32240378937294345,
+    0.9075738179760955,
+    0.07095269932008232,
+    -0.10144801329265513
+   ],
+   [
+    "glcm_energy",
+    0.20187130852445373,
+    -0.8094884347805199,
+    0.07548294697839883,
+    -0.040782015597218
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-41",
+  "title": "Fig. MADOS-41. LightGBM: SHAP beeswarm for the Class 1 Water output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c1_water_beeswarm.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.713137107317486,
+    -0.9036528197432054,
+    1.032862312543874,
+    -0.26708587306274517
+   ],
+   [
+    "glcm_contrast",
+    0.44106706403003926,
+    -0.7812984494317362,
+    0.6335071152459946,
+    -0.04517340655479494
+   ],
+   [
+    "swir1/nir",
+    0.3724251947917411,
+    0.7682548473440863,
+    0.30510027797160366,
+    -0.10888546320605826
+   ],
+   [
+    "B8A",
+    0.3719813249428116,
+    -0.9051689596921797,
+    0.15371729089245784,
+    -0.03200841356546653
+   ],
+   [
+    "NDWI",
+    0.30380097827060576,
+    0.8621327803375695,
+    0.3715593263909279,
+    -0.14261290085012604
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-42",
+  "title": "Fig. MADOS-42. LightGBM: SHAP beeswarm for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c2_debris_beeswarm.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "swir1/nir",
+    1.648799152984569,
+    -0.7447183504988546,
+    1.8515203032922083,
+    -0.4928734578479553
+   ],
+   [
+    "nir/red",
+    0.8066774818345251,
+    0.09784723478600893,
+    0.9782513436944835,
+    -0.353923594651902
+   ],
+   [
+    "B12",
+    0.7156545034156407,
+    -0.7926627684016023,
+    0.4448639890908216,
+    -0.13802946885259948
+   ],
+   [
+    "B5",
+    0.5920223659724287,
+    -0.9197496677675181,
+    0.5098951940282384,
+    -0.15245072471671825
+   ],
+   [
+    "NDWI",
+    0.4721784234364048,
+    -0.5341933746772975,
+    0.5119793032722286,
+    -0.23127214960253076
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-43",
+  "title": "Fig. MADOS-43. LightGBM: SHAP beeswarm for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c3_sargassum_beeswarm.png",
+  "model": "lgbm",
+  "cls": 2,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.7616688994017338,
+    0.9424153488995479,
+    2.7147314821665174,
+    -1.1472208902355625
+   ],
+   [
+    "B3",
+    0.9311618149814975,
+    -0.8140486355236113,
+    0.2740298638702719,
+    -0.37876102074835927
+   ],
+   [
+    "B2",
+    0.9086707241637627,
+    -0.9277371995665873,
+    1.315782880166241,
+    -0.5930372884779415
+   ],
+   [
+    "B6",
+    0.5521802837810841,
+    0.8884614309561166,
+    0.7124537838068238,
+    -0.10190298268870666
+   ],
+   [
+    "B7",
+    0.4009737495842669,
+    0.9229237331558293,
+    0.2737525229084887,
+    -0.09387611511588023
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-44",
+  "title": "Fig. MADOS-44. LightGBM: SHAP beeswarm for the Class 4 Other output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c4_other_beeswarm.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "swir1/nir",
+    0.47528440113810416,
+    0.8485319006017557,
+    0.5052728584249369,
+    -0.11793913870652263
+   ],
+   [
+    "B12",
+    0.4365907495391896,
+    0.8660176835610282,
+    0.45565065789761283,
+    -0.17267063837404278
+   ],
+   [
+    "B1",
+    0.3799330084234573,
+    0.2241876847938226,
+    0.2716755247686424,
+    -0.1097318270137087
+   ],
+   [
+    "glcm_contrast",
+    0.368041749229719,
+    0.8890298107088274,
+    0.10255003648058153,
+    -0.11784076584165537
+   ],
+   [
+    "B3",
+    0.24428159048671583,
+    -0.7856182765935333,
+    0.07402402848417963,
+    -0.07448046136164897
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-45",
+  "title": "Fig. MADOS-45. AdaBoost: SHAP beeswarm for the Class 1 Water output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_ada_c1_water_beeswarm.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.1583046302850585,
+    -0.9690566922485039,
+    0.20149375769810673,
+    -0.042048788224484684
+   ],
+   [
+    "swir1/nir",
+    0.06778253525205792,
+    0.6581297686453048,
+    0.04616094066344861,
+    -0.020424049321220567
+   ],
+   [
+    "red/green",
+    0.02975222679370491,
+    -0.5109561919692651,
+    0.01909757396286004,
+    -0.011187283531364908
+   ],
+   [
+    "glcm_contrast",
+    0.028688213168951867,
+    -0.8163591902581018,
+    0.0281001102654147,
+    -0.002123797381912461
+   ],
+   [
+    "NDWI",
+    0.02846655676171944,
+    0.8957540519549015,
+    0.04063303008071186,
+    -0.012726695335875655
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-46",
+  "title": "Fig. MADOS-46. AdaBoost: SHAP beeswarm for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_ada_c2_debris_beeswarm.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "swir1/nir",
+    0.1469977643423866,
+    -0.8243788174409106,
+    0.12655774792782032,
+    -0.03432068254879947
+   ],
+   [
+    "nir/red",
+    0.0650657491961329,
+    0.17688542334726723,
+    0.07278961884209033,
+    -0.03281122546566055
+   ],
+   [
+    "NDWI",
+    0.03868943736570064,
+    -0.807217632842976,
+    0.03273637776705825,
+    -0.01706026055958355
+   ],
+   [
+    "red/green",
+    0.025206258116745976,
+    0.6700487778066564,
+    0.027833070913442254,
+    -0.00911159876273531
+   ],
+   [
+    "B1",
+    0.019076021433024486,
+    -0.861928643086706,
+    0.01259464436241348,
+    -0.005961959261490526
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-47",
+  "title": "Fig. MADOS-47. AdaBoost: SHAP beeswarm for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_ada_c3_sargassum_beeswarm.png",
+  "model": "ada",
+  "cls": 2,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.17054553881578396,
+    0.9001112917865256,
+    0.2860344768129833,
+    -0.11246683471517172
+   ],
+   [
+    "B2",
+    0.02378118346779851,
+    -0.9311147207796392,
+    0.03129648460025783,
+    -0.01442294375185609
+   ],
+   [
+    "glcm_contrast",
+    0.021010329323393934,
+    -0.900362390461335,
+    0.008535770225006853,
+    -0.0014253673844796136
+   ],
+   [
+    "B1",
+    0.01927846063145651,
+    -0.8517468454081537,
+    0.012127443235895286,
+    -0.014792045060890572
+   ],
+   [
+    "NDWI",
+    0.016787938447971787,
+    -0.7752862962331701,
+    0.02002812053210412,
+    -0.01015792774453423
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-48",
+  "title": "Fig. MADOS-48. AdaBoost: SHAP beeswarm for the Class 4 Other output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_ada_c4_other_beeswarm.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "swir1/nir",
+    0.09081493425861216,
+    0.9249321639198786,
+    0.09779908608365612,
+    -0.034224275774537814
+   ],
+   [
+    "nir/red",
+    0.045009359755101196,
+    -0.3931729162296776,
+    0.042757235042062046,
+    -0.013698181094717517
+   ],
+   [
+    "B1",
+    0.04271610383124798,
+    0.8566419657457442,
+    0.05239330790419869,
+    -0.008381987098942691
+   ],
+   [
+    "glcm_contrast",
+    0.03724242848898863,
+    0.927248612716029,
+    0.0003282035184752511,
+    -0.006962966339790728
+   ],
+   [
+    "NDWI",
+    0.02629568659197537,
+    0.801276761041041,
+    0.028874297998800955,
+    -0.000812391941044351
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-49",
+  "title": "Fig. MADOS-49. Linear SVM: SHAP beeswarm for the Class 1 Water output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_svm_c1_water_beeswarm.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "glcm_dissimilarity",
+    2.1134777305154935,
+    -1.0,
+    1.6724903690875284,
+    -0.4728212147116489
+   ],
+   [
+    "nir/red",
+    1.8416157784036469,
+    -1.0,
+    1.8473668627799338,
+    -0.2323410227683678
+   ],
+   [
+    "B8",
+    1.5317281693544906,
+    -1.0,
+    0.7010517984972621,
+    0.0026532322897590177
+   ],
+   [
+    "nir/green",
+    1.4826973642361738,
+    1.0,
+    -1.5344724095051634,
+    0.13606610354056234
+   ],
+   [
+    "glcm_homogeneity",
+    1.4604665360104958,
+    -1.0,
+    -1.1872444477971653,
+    0.2359725605255794
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-50",
+  "title": "Fig. MADOS-50. Linear SVM: SHAP beeswarm for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_svm_c2_debris_beeswarm.png",
+  "model": "svm",
+  "cls": 1,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "NDWI",
+    5.572528552913934,
+    -1.0,
+    0.3231048181430058,
+    -0.584609578299908
+   ],
+   [
+    "nir/green",
+    5.486648274275507,
+    -1.0,
+    1.9069074999434072,
+    0.7536047022243162
+   ],
+   [
+    "nir/red",
+    1.8544687789692034,
+    -1.0,
+    0.8987770646975164,
+    0.08653173550577874
+   ],
+   [
+    "B5",
+    1.8440288664438984,
+    -1.0,
+    0.7031748397231408,
+    -0.29739077018107446
+   ],
+   [
+    "B11",
+    1.785750000773245,
+    1.0,
+    -0.17121434066618663,
+    0.046001945399879736
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-51",
+  "title": "Fig. MADOS-51. Linear SVM: SHAP beeswarm for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_svm_c3_sargassum_beeswarm.png",
+  "model": "svm",
+  "cls": 2,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "glcm_dissimilarity",
+    8.730947983135016,
+    1.0,
+    -3.002912045391364,
+    0.6511690113301589
+   ],
+   [
+    "glcm_homogeneity",
+    5.362878970225314,
+    1.0,
+    1.0020250883501323,
+    0.2526926150771118
+   ],
+   [
+    "glcm_contrast",
+    5.080006183756701,
+    -1.0,
+    2.531254153354318,
+    -1.177635665247266
+   ],
+   [
+    "B8A",
+    3.178701100770579,
+    -1.0,
+    -1.2113010025212099,
+    0.6683922263270453
+   ],
+   [
+    "B6",
+    2.9269878151751114,
+    1.0,
+    1.1501916953828386,
+    -0.4235592244902918
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-52",
+  "title": "Fig. MADOS-52. Linear SVM: SHAP beeswarm for the Class 4 Other output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MADOS/MADOS_svm_c4_other_beeswarm.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "glcm_dissimilarity",
+    2.5161417357484552,
+    1.0,
+    0.8582745478161559,
+    -0.3868996508625071
+   ],
+   [
+    "B8",
+    1.8977097184419003,
+    1.0,
+    -0.3395816718570839,
+    -0.17961219864312744
+   ],
+   [
+    "glcm_homogeneity",
+    1.8140584980208314,
+    1.0,
+    -0.5541815282347516,
+    0.38318585854973547
+   ],
+   [
+    "nir/green",
+    1.508293061515787,
+    -1.0,
+    1.12268534171894,
+    0.007677181804218915
+   ],
+   [
+    "B3",
+    1.2781577929494217,
+    -1.0,
+    -0.4700380158946937,
+    0.060688812153597414
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-53",
+  "title": "Fig. MADOS-53. Class-wise SHAP importance across all five models and four class outputs",
+  "section": "B",
+  "item": "6",
+  "path": "03_cross_model_comparison/MADOS/MADOS_class_wise_importance_heatmap.png",
+  "kind": "class_heatmap",
+  "per_class": {
+   "0": {
+    "mean_top4": [
+     [
+      "nir/red",
+      0.18440594253292614
+     ],
+     [
+      "swir1/nir",
+      0.08471474251590339
+     ],
+     [
+      "glcm_contrast",
+      0.07378702092450343
+     ],
+     [
+      "NDWI",
+      0.06969698287152698
+     ]
+    ],
+    "model_top1": {
+     "rf": "nir/red",
+     "xgb": "nir/red",
+     "lgbm": "nir/red",
+     "ada": "nir/red",
+     "svm": "glcm_dissimilarity"
+    }
+   },
+   "1": {
+    "mean_top4": [
+     [
+      "swir1/nir",
+      0.22566821322215422
+     ],
+     [
+      "nir/red",
+      0.125507609061818
+     ],
+     [
+      "NDWI",
+      0.10880070350480697
+     ],
+     [
+      "nir/green",
+      0.08970329995757363
+     ]
+    ],
+    "model_top1": {
+     "rf": "swir1/nir",
+     "xgb": "swir1/nir",
+     "lgbm": "swir1/nir",
+     "ada": "swir1/nir",
+     "svm": "NDWI"
+    }
+   },
+   "2": {
+    "mean_top4": [
+     [
+      "nir/red",
+      0.26420983362950434
+     ],
+     [
+      "B2",
+      0.08409409737237433
+     ],
+     [
+      "B3",
+      0.07262870914639716
+     ],
+     [
+      "glcm_contrast",
+      0.05992827943327824
+     ]
+    ],
+    "model_top1": {
+     "rf": "nir/red",
+     "xgb": "nir/red",
+     "lgbm": "nir/red",
+     "ada": "nir/red",
+     "svm": "glcm_dissimilarity"
+    }
+   },
+   "3": {
+    "mean_top4": [
+     [
+      "swir1/nir",
+      0.12276601993038401
+     ],
+     [
+      "glcm_contrast",
+      0.08602659708763204
+     ],
+     [
+      "B1",
+      0.08278228000706139
+     ],
+     [
+      "B12",
+      0.07101160801799085
+     ]
+    ],
+    "model_top1": {
+     "rf": "B12",
+     "xgb": "swir1/nir",
+     "lgbm": "swir1/nir",
+     "ada": "swir1/nir",
+     "svm": "glcm_dissimilarity"
+    }
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-54",
+  "title": "Fig. MADOS-54. XGBoost: class-versus-rest SHAP for Class 1 Water (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c1_water_vs_rest_beeswarm.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "nir/red",
+    0.1864017420587308
+   ],
+   [
+    "swir1/nir",
+    0.1398167633452936
+   ],
+   [
+    "B3",
+    0.08677204558256031
+   ],
+   [
+    "NDWI",
+    0.07442190462147294
+   ],
+   [
+    "glcm_contrast",
+    0.0660025191897486
+   ]
+  ],
+  "top5_class": [
+   [
+    "nir/red",
+    0.16238910734637
+   ],
+   [
+    "glcm_contrast",
+    0.10955737625984523
+   ],
+   [
+    "swir1/nir",
+    0.08659678806787327
+   ],
+   [
+    "B3",
+    0.0771525127973199
+   ],
+   [
+    "NDWI",
+    0.07599234113736775
+   ]
+  ],
+  "rank_corr": 0.9424054206662904,
+  "rho": [
+   [
+    "nir/red",
+    -0.9547161629973354
+   ],
+   [
+    "swir1/nir",
+    0.6941027736824817
+   ],
+   [
+    "B3",
+    0.9259230334985008
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MADOS-55",
+  "title": "Fig. MADOS-55. XGBoost: class-versus-rest SHAP for Class 2 Marine Debris (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c2_debris_vs_rest_beeswarm.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "swir1/nir",
+    0.24423947991577877
+   ],
+   [
+    "nir/red",
+    0.16045117755648827
+   ],
+   [
+    "NDWI",
+    0.06504223136391707
+   ],
+   [
+    "B12",
+    0.061643688499430645
+   ],
+   [
+    "B5",
+    0.06021520856699717
+   ]
+  ],
+  "top5_class": [
+   [
+    "swir1/nir",
+    0.29056996627170395
+   ],
+   [
+    "nir/red",
+    0.1513816332363574
+   ],
+   [
+    "nir/green",
+    0.07608574371589998
+   ],
+   [
+    "NDWI",
+    0.07538163220731951
+   ],
+   [
+    "B5",
+    0.07109842339478752
+   ]
+  ],
+  "rank_corr": 0.9446640316205535,
+  "rho": [
+   [
+    "swir1/nir",
+    -0.740109270909216
+   ],
+   [
+    "nir/red",
+    -0.13112702161598722
+   ],
+   [
+    "NDWI",
+    -0.8101967501366321
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MADOS-56",
+  "title": "Fig. MADOS-56. XGBoost: class-versus-rest SHAP for Class 3 Sargassum (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c3_sargassum_vs_rest_beeswarm.png",
+  "model": "xgb",
+  "cls": 2,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "nir/red",
+    0.29695229627762343
+   ],
+   [
+    "B2",
+    0.11575760243429443
+   ],
+   [
+    "B3",
+    0.10505139507889269
+   ],
+   [
+    "B6",
+    0.0679794842561223
+   ],
+   [
+    "swir1/nir",
+    0.04849817403718884
+   ]
+  ],
+  "top5_class": [
+   [
+    "nir/red",
+    0.2968254492566303
+   ],
+   [
+    "B2",
+    0.1260666987449011
+   ],
+   [
+    "B3",
+    0.11959586674699756
+   ],
+   [
+    "B6",
+    0.07710820260716798
+   ],
+   [
+    "glcm_contrast",
+    0.05887931427359343
+   ]
+  ],
+  "rank_corr": 0.9582156973461323,
+  "rho": [
+   [
+    "nir/red",
+    0.8874035606969172
+   ],
+   [
+    "B2",
+    -0.8909190195460535
+   ],
+   [
+    "B3",
+    -0.8879969376506457
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MADOS-57",
+  "title": "Fig. MADOS-57. XGBoost: class-versus-rest SHAP for Class 4 Other (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MADOS/MADOS_xgb_c4_other_vs_rest_beeswarm.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "swir1/nir",
+    0.17163902383977597
+   ],
+   [
+    "glcm_contrast",
+    0.11422315632643733
+   ],
+   [
+    "B12",
+    0.10076884216062146
+   ],
+   [
+    "B1",
+    0.07669604902331108
+   ],
+   [
+    "nir/red",
+    0.07425542885897146
+   ]
+  ],
+  "top5_class": [
+   [
+    "swir1/nir",
+    0.14364524491577146
+   ],
+   [
+    "B1",
+    0.11534436569101833
+   ],
+   [
+    "B12",
+    0.11133468773203549
+   ],
+   [
+    "glcm_contrast",
+    0.10748072734192034
+   ],
+   [
+    "glcm_energy",
+    0.06729844928892871
+   ]
+  ],
+  "rank_corr": 0.9220779220779223,
+  "rho": [
+   [
+    "swir1/nir",
+    0.9093797009581256
+   ],
+   [
+    "glcm_contrast",
+    0.9138367969477968
+   ],
+   [
+    "B12",
+    0.8589349341482131
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MADOS-58",
+  "title": "Fig. MADOS-58. LightGBM: class-versus-rest SHAP for Class 1 Water (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c1_water_vs_rest_beeswarm.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "nir/red",
+    0.1734134927735448
+   ],
+   [
+    "swir1/nir",
+    0.12083416032901248
+   ],
+   [
+    "B3",
+    0.07418005602082206
+   ],
+   [
+    "B8A",
+    0.062330361129088734
+   ],
+   [
+    "NDWI",
+    0.060763768701352604
+   ]
+  ],
+  "top5_class": [
+   [
+    "nir/red",
+    0.1547911375618666
+   ],
+   [
+    "glcm_contrast",
+    0.09573653072001402
+   ],
+   [
+    "swir1/nir",
+    0.08083735787548724
+   ],
+   [
+    "B8A",
+    0.08074101298172108
+   ],
+   [
+    "NDWI",
+    0.06594201667026607
+   ]
+  ],
+  "rank_corr": 0.9322416713721063,
+  "rho": [
+   [
+    "nir/red",
+    -0.9588376589150409
+   ],
+   [
+    "swir1/nir",
+    0.7501886112420911
+   ],
+   [
+    "B3",
+    0.9129756980959287
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MADOS-59",
+  "title": "Fig. MADOS-59. LightGBM: class-versus-rest SHAP for Class 2 Marine Debris (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c2_debris_vs_rest_beeswarm.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "swir1/nir",
+    0.20111599089060783
+   ],
+   [
+    "nir/red",
+    0.12138248918506861
+   ],
+   [
+    "B12",
+    0.09090793553920468
+   ],
+   [
+    "B5",
+    0.0730958743108666
+   ],
+   [
+    "red/green",
+    0.05722253578674405
+   ]
+  ],
+  "top5_class": [
+   [
+    "swir1/nir",
+    0.23220961509765192
+   ],
+   [
+    "nir/red",
+    0.11360890574553278
+   ],
+   [
+    "B12",
+    0.10078963012580008
+   ],
+   [
+    "B5",
+    0.08337782408658571
+   ],
+   [
+    "NDWI",
+    0.06649953074339664
+   ]
+  ],
+  "rank_corr": 0.9367588932806326,
+  "rho": [
+   [
+    "swir1/nir",
+    -0.7620684806031116
+   ],
+   [
+    "nir/red",
+    -0.0925298906457574
+   ],
+   [
+    "B12",
+    -0.8114560637349624
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MADOS-60",
+  "title": "Fig. MADOS-60. LightGBM: class-versus-rest SHAP for Class 3 Sargassum (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c3_sargassum_vs_rest_beeswarm.png",
+  "model": "lgbm",
+  "cls": 2,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "nir/red",
+    0.2403782482811765
+   ],
+   [
+    "B2",
+    0.11516939361762349
+   ],
+   [
+    "B3",
+    0.1120477526723901
+   ],
+   [
+    "B6",
+    0.06792361923010667
+   ],
+   [
+    "B7",
+    0.05050284304636462
+   ]
+  ],
+  "top5_class": [
+   [
+    "nir/red",
+    0.23474245387964507
+   ],
+   [
+    "B3",
+    0.12407735044991262
+   ],
+   [
+    "B2",
+    0.12108041166602537
+   ],
+   [
+    "B6",
+    0.07357804570583594
+   ],
+   [
+    "B7",
+    0.05342976875546725
+   ]
+  ],
+  "rank_corr": 0.9412761151891589,
+  "rho": [
+   [
+    "nir/red",
+    0.9327481824640155
+   ],
+   [
+    "B2",
+    -0.9309779520680221
+   ],
+   [
+    "B3",
+    -0.8150015951660411
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MADOS-61",
+  "title": "Fig. MADOS-61. LightGBM: class-versus-rest SHAP for Class 4 Other (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MADOS/MADOS_lgbm_c4_other_vs_rest_beeswarm.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "swir1/nir",
+    0.14972996645688857
+   ],
+   [
+    "B12",
+    0.11694565984941013
+   ],
+   [
+    "glcm_contrast",
+    0.11118305385064246
+   ],
+   [
+    "B1",
+    0.0706010937904552
+   ],
+   [
+    "nir/red",
+    0.06991779552278428
+   ]
+  ],
+  "top5_class": [
+   [
+    "swir1/nir",
+    0.1347926709870174
+   ],
+   [
+    "B12",
+    0.12381898736354989
+   ],
+   [
+    "B1",
+    0.10775061179979685
+   ],
+   [
+    "glcm_contrast",
+    0.10437820028306127
+   ],
+   [
+    "B3",
+    0.06927929461984056
+   ]
+  ],
+  "rank_corr": 0.8848108413325806,
+  "rho": [
+   [
+    "swir1/nir",
+    0.9427817797095692
+   ],
+   [
+    "B12",
+    0.8389890675666123
+   ],
+   [
+    "glcm_contrast",
+    0.926177401761665
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MADOS-62",
+  "title": "Fig. MADOS-62. Random Forest: dependence plots of the 3 most important features for the Class 1 Water output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_rf_c1_water_dependence_top3.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "glcm_homogeneity",
+    -0.8993469926020782,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "NDWI",
+    "swir1/nir",
+    0.952539425374601,
+    -0.42178624868392944,
+    0.4307260513305664
+   ],
+   [
+    "swir1/nir",
+    "B1",
+    0.659065152128578,
+    0.06762968003749847,
+    0.9427033066749573
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-63",
+  "title": "Fig. MADOS-63. Random Forest: dependence plots of the 3 most important features for the Class 2 Marine Debris output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_rf_c2_debris_dependence_top3.png",
+  "model": "rf",
+  "cls": 1,
+  "kind": "dependence",
+  "panels": [
+   [
+    "swir1/nir",
+    "B5",
+    -0.7616536678150471,
+    0.06762968003749847,
+    0.9427033066749573
+   ],
+   [
+    "nir/red",
+    "B5",
+    -0.02911711744244267,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "B12",
+    "B11",
+    -0.8573727888964742,
+    0.002142596524208784,
+    0.060957834124565125
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-64",
+  "title": "Fig. MADOS-64. Random Forest: dependence plots of the 3 most important features for the Class 3 Sargassum output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_rf_c3_sargassum_dependence_top3.png",
+  "model": "rf",
+  "cls": 2,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "B2",
+    0.7925908906881185,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "nir/green",
+    "B4",
+    0.916210212645981,
+    0.39788106083869934,
+    2.4588823318481445
+   ],
+   [
+    "NDWI",
+    "B4",
+    -0.9291729299812013,
+    -0.42178624868392944,
+    0.4307260513305664
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-65",
+  "title": "Fig. MADOS-65. Random Forest: dependence plots of the 3 most important features for the Class 4 Other output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_rf_c4_other_dependence_top3.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "dependence",
+  "panels": [
+   [
+    "B12",
+    "B1",
+    0.8196081752045624,
+    0.002142596524208784,
+    0.060957834124565125
+   ],
+   [
+    "swir1/nir",
+    "NDWI",
+    0.7762123307030074,
+    0.06762968003749847,
+    0.9427033066749573
+   ],
+   [
+    "B11",
+    "nir/green",
+    0.8245542167943585,
+    0.0038115759380161762,
+    0.08796830475330353
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-66",
+  "title": "Fig. MADOS-66. XGBoost: dependence plots of the 3 most important features for the Class 1 Water output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_xgb_c1_water_dependence_top3.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "B5",
+    -0.8951560830776829,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "glcm_contrast",
+    "B4",
+    -0.7610351902032977,
+    0.0,
+    5.317728519439697
+   ],
+   [
+    "swir1/nir",
+    "B4",
+    0.7095477833996683,
+    0.06762968003749847,
+    0.9427033066749573
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-67",
+  "title": "Fig. MADOS-67. XGBoost: dependence plots of the 3 most important features for the Class 2 Marine Debris output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_xgb_c2_debris_dependence_top3.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "dependence",
+  "panels": [
+   [
+    "swir1/nir",
+    "B5",
+    -0.7226558421221125,
+    0.06762968003749847,
+    0.9427033066749573
+   ],
+   [
+    "nir/red",
+    "swir1/nir",
+    0.023587995547219128,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "nir/green",
+    "B12",
+    0.4925090581530075,
+    0.39788106083869934,
+    2.4588823318481445
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-68",
+  "title": "Fig. MADOS-68. XGBoost: dependence plots of the 3 most important features for the Class 3 Sargassum output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_xgb_c3_sargassum_dependence_top3.png",
+  "model": "xgb",
+  "cls": 2,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "B8",
+    0.9125299512578307,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "B2",
+    "nir/red",
+    -0.8878170339518268,
+    0.029683740809559822,
+    0.11532769352197647
+   ],
+   [
+    "B3",
+    "B2",
+    -0.8772901571154679,
+    0.024134501814842224,
+    0.12545159459114075
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-69",
+  "title": "Fig. MADOS-69. XGBoost: dependence plots of the 3 most important features for the Class 4 Other output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_xgb_c4_other_dependence_top3.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "dependence",
+  "panels": [
+   [
+    "swir1/nir",
+    "B2",
+    0.7991346806445768,
+    0.06762968003749847,
+    0.9427033066749573
+   ],
+   [
+    "B1",
+    "B5",
+    0.34607379136086946,
+    0.03370249271392822,
+    0.09236978739500046
+   ],
+   [
+    "B12",
+    "B1",
+    0.8525081610186266,
+    0.002142596524208784,
+    0.060957834124565125
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-70",
+  "title": "Fig. MADOS-70. LightGBM: dependence plots of the 3 most important features for the Class 1 Water output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_lgbm_c1_water_dependence_top3.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "B5",
+    -0.9036528197432054,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "glcm_contrast",
+    "B4",
+    -0.7812984494317362,
+    0.0,
+    5.317728519439697
+   ],
+   [
+    "swir1/nir",
+    "B4",
+    0.7682548473440863,
+    0.06762968003749847,
+    0.9427033066749573
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-71",
+  "title": "Fig. MADOS-71. LightGBM: dependence plots of the 3 most important features for the Class 2 Marine Debris output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_lgbm_c2_debris_dependence_top3.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "dependence",
+  "panels": [
+   [
+    "swir1/nir",
+    "B5",
+    -0.7447183504988546,
+    0.06762968003749847,
+    0.9427033066749573
+   ],
+   [
+    "nir/red",
+    "swir1/nir",
+    0.09784723478600893,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "B12",
+    "B6",
+    -0.7926627684016023,
+    0.002142596524208784,
+    0.060957834124565125
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-72",
+  "title": "Fig. MADOS-72. LightGBM: dependence plots of the 3 most important features for the Class 3 Sargassum output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_lgbm_c3_sargassum_dependence_top3.png",
+  "model": "lgbm",
+  "cls": 2,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "glcm_homogeneity",
+    0.9424153488995479,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "B3",
+    "nir/red",
+    -0.8140486355236113,
+    0.024134501814842224,
+    0.12545159459114075
+   ],
+   [
+    "B2",
+    "nir/red",
+    -0.9277371995665873,
+    0.029683740809559822,
+    0.11532769352197647
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-73",
+  "title": "Fig. MADOS-73. LightGBM: dependence plots of the 3 most important features for the Class 4 Other output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_lgbm_c4_other_dependence_top3.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "dependence",
+  "panels": [
+   [
+    "swir1/nir",
+    "B2",
+    0.8485319006017557,
+    0.06762968003749847,
+    0.9427033066749573
+   ],
+   [
+    "B12",
+    "glcm_energy",
+    0.8660176835610282,
+    0.002142596524208784,
+    0.060957834124565125
+   ],
+   [
+    "B1",
+    "glcm_asm",
+    0.2241876847938226,
+    0.03370249271392822,
+    0.09236978739500046
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-74",
+  "title": "Fig. MADOS-74. AdaBoost: dependence plots of the 3 most important features for the Class 1 Water output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_ada_c1_water_dependence_top3.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "swir1/nir",
+    -0.9690566922485039,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "swir1/nir",
+    "B4",
+    0.6581297686453048,
+    0.06762968003749847,
+    0.9427033066749573
+   ],
+   [
+    "red/green",
+    "swir1/nir",
+    -0.5109561919692651,
+    0.665026843547821,
+    1.2452521324157715
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-75",
+  "title": "Fig. MADOS-75. AdaBoost: dependence plots of the 3 most important features for the Class 2 Marine Debris output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_ada_c2_debris_dependence_top3.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "dependence",
+  "panels": [
+   [
+    "swir1/nir",
+    "NDWI",
+    -0.8243788174409106,
+    0.06762968003749847,
+    0.9427033066749573
+   ],
+   [
+    "nir/red",
+    "swir1/nir",
+    0.17688542334726723,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "NDWI",
+    "swir1/nir",
+    -0.807217632842976,
+    -0.42178624868392944,
+    0.4307260513305664
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-76",
+  "title": "Fig. MADOS-76. AdaBoost: dependence plots of the 3 most important features for the Class 3 Sargassum output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_ada_c3_sargassum_dependence_top3.png",
+  "model": "ada",
+  "cls": 2,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "B2",
+    0.9001112917865256,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "B2",
+    "nir/red",
+    -0.9311147207796392,
+    0.029683740809559822,
+    0.11532769352197647
+   ],
+   [
+    "glcm_contrast",
+    "nir/red",
+    -0.900362390461335,
+    0.0,
+    5.317728519439697
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-77",
+  "title": "Fig. MADOS-77. AdaBoost: dependence plots of the 3 most important features for the Class 4 Other output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_ada_c4_other_dependence_top3.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "dependence",
+  "panels": [
+   [
+    "swir1/nir",
+    "B6",
+    0.9249321639198786,
+    0.06762968003749847,
+    0.9427033066749573
+   ],
+   [
+    "nir/red",
+    "B4",
+    -0.3931729162296776,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "B1",
+    "swir1/nir",
+    0.8566419657457442,
+    0.03370249271392822,
+    0.09236978739500046
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-78",
+  "title": "Fig. MADOS-78. Linear SVM: dependence plots of the 3 most important features for the Class 1 Water output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_svm_c1_water_dependence_top3.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "dependence",
+  "panels": [
+   [
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    -1.0,
+    0.0,
+    1.3128873109817505
+   ],
+   [
+    "nir/red",
+    "nir/green",
+    -1.0,
+    0.4613773822784424,
+    2.8700509071350098
+   ],
+   [
+    "B8",
+    "B6",
+    -1.0,
+    0.01592598296701908,
+    0.15149372816085815
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-79",
+  "title": "Fig. MADOS-79. Linear SVM: dependence plots of the 3 most important features for the Class 2 Marine Debris output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_svm_c2_debris_dependence_top3.png",
+  "model": "svm",
+  "cls": 1,
+  "kind": "dependence",
+  "panels": [
+   [
+    "NDWI",
+    "nir/green",
+    -1.0,
+    -0.42178624868392944,
+    0.4307260513305664
+   ],
+   [
+    "nir/green",
+    "NDWI",
+    -1.0,
+    0.39788106083869934,
+    2.4588823318481445
+   ],
+   [
+    "nir/red",
+    "nir/green",
+    -1.0,
+    0.4613773822784424,
+    2.8700509071350098
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-80",
+  "title": "Fig. MADOS-80. Linear SVM: dependence plots of the 3 most important features for the Class 3 Sargassum output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_svm_c3_sargassum_dependence_top3.png",
+  "model": "svm",
+  "cls": 2,
+  "kind": "dependence",
+  "panels": [
+   [
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    1.0,
+    0.0,
+    1.3128873109817505
+   ],
+   [
+    "glcm_homogeneity",
+    "glcm_dissimilarity",
+    1.0,
+    0.6133527755737305,
+    1.0
+   ],
+   [
+    "glcm_contrast",
+    "glcm_dissimilarity",
+    -1.0,
+    0.0,
+    5.317728519439697
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-81",
+  "title": "Fig. MADOS-81. Linear SVM: dependence plots of the 3 most important features for the Class 4 Other output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_svm_c4_other_dependence_top3.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "dependence",
+  "panels": [
+   [
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    1.0,
+    0.0,
+    1.3128873109817505
+   ],
+   [
+    "B8",
+    "B6",
+    1.0,
+    0.01592598296701908,
+    0.15149372816085815
+   ],
+   [
+    "glcm_homogeneity",
+    "glcm_dissimilarity",
+    1.0,
+    0.6133527755737305,
+    1.0
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-82",
+  "title": "Fig. MADOS-82. Random Forest: mean |SHAP interaction| between the top features, per class output",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_rf_interaction_matrices.png",
+  "model": "rf",
+  "kind": "interaction_matrix",
+  "per_class": {
+   "0": {
+    "offdiag_fraction": 0.567319404999935,
+    "top_pairs": [
+     [
+      "NDWI",
+      "nir/red",
+      0.015265910119402256
+     ],
+     [
+      "nir/red",
+      "nir/green",
+      0.013781770585897229
+     ],
+     [
+      "B1",
+      "swir1/nir",
+      0.012167832483098079
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      0.09557957203832682
+     ],
+     [
+      "glcm_contrast",
+      0.0675403051401582
+     ],
+     [
+      "NDWI",
+      0.06285836804668951
+     ]
+    ]
+   },
+   "1": {
+    "offdiag_fraction": 0.6532903800858691,
+    "top_pairs": [
+     [
+      "nir/red",
+      "swir1/nir",
+      0.013207768316628309
+     ],
+     [
+      "NDWI",
+      "swir1/nir",
+      0.010082920905282053
+     ],
+     [
+      "nir/green",
+      "swir1/nir",
+      0.009987970207724036
+     ]
+    ],
+    "top_main": [
+     [
+      "swir1/nir",
+      0.048875643516574196
+     ],
+     [
+      "B12",
+      0.028440221655169785
+     ],
+     [
+      "B1",
+      0.02409879504938596
+     ]
+    ]
+   },
+   "2": {
+    "offdiag_fraction": 0.5647666977804491,
+    "top_pairs": [
+     [
+      "B2",
+      "nir/red",
+      0.008467614894312069
+     ],
+     [
+      "NDWI",
+      "nir/red",
+      0.008101564006941144
+     ],
+     [
+      "nir/red",
+      "glcm_energy",
+      0.00806312429010508
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      0.08423216489132843
+     ],
+     [
+      "NDWI",
+      0.03849790188137802
+     ],
+     [
+      "nir/green",
+      0.033657592465515876
+     ]
+    ]
+   },
+   "3": {
+    "offdiag_fraction": 0.5742906476771253,
+    "top_pairs": [
+     [
+      "B1",
+      "B2",
+      0.012300492650271574
+     ],
+     [
+      "B1",
+      "B12",
+      0.010577248466455283
+     ],
+     [
+      "B1",
+      "nir/red",
+      0.01037002769000852
+     ]
+    ],
+    "top_main": [
+     [
+      "B1",
+      0.07003333818296009
+     ],
+     [
+      "glcm_contrast",
+      0.06051183925483483
+     ],
+     [
+      "B12",
+      0.059268473721181034
+     ]
+    ]
+   }
+  },
+  "n": 160
+ },
+ {
+  "id": "Fig. MADOS-83",
+  "title": "Fig. MADOS-83. Random Forest: strongest interaction pair for the Marine Debris output (nir/red x swir1/nir)",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_rf_c2_debris_top_interaction_pair.png",
+  "model": "rf",
+  "cls": 1,
+  "kind": "interaction_pair",
+  "pair": [
+   "nir/red",
+   "swir1/nir"
+  ],
+  "rho_i": -0.31180417203797023,
+  "rho_j": 0.01085491620766436,
+  "range": [
+   -0.053140877104241833,
+   0.056087713970933074
+  ],
+  "main_range": [
+   -0.022083465285608037,
+   0.14568461386651094
+  ]
+ },
+ {
+  "id": "Fig. MADOS-84",
+  "title": "Fig. MADOS-84. XGBoost: mean |SHAP interaction| between the top features, per class output",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_xgb_interaction_matrices.png",
+  "model": "xgb",
+  "kind": "interaction_matrix",
+  "per_class": {
+   "0": {
+    "offdiag_fraction": 0.5795630697484074,
+    "top_pairs": [
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.2440803131001303
+     ],
+     [
+      "swir1/nir",
+      "glcm_correlation",
+      0.14865384766599163
+     ],
+     [
+      "B1",
+      "glcm_correlation",
+      0.1359595384776185
+     ]
+    ],
+    "top_main": [
+     [
+      "glcm_contrast",
+      0.7185239628888667
+     ],
+     [
+      "nir/red",
+      0.5270284750367864
+     ],
+     [
+      "swir1/nir",
+      0.5195817508152686
+     ]
+    ]
+   },
+   "1": {
+    "offdiag_fraction": 0.5192890854534578,
+    "top_pairs": [
+     [
+      "nir/red",
+      "swir1/nir",
+      0.5621090847067535
+     ],
+     [
+      "B5",
+      "swir1/nir",
+      0.2619539667153731
+     ],
+     [
+      "NDWI",
+      "swir1/nir",
+      0.26110309018113187
+     ]
+    ],
+    "top_main": [
+     [
+      "swir1/nir",
+      1.8130383511073886
+     ],
+     [
+      "nir/red",
+      0.839824737329036
+     ],
+     [
+      "nir/green",
+      0.48124036430963313
+     ]
+    ]
+   },
+   "2": {
+    "offdiag_fraction": 0.4898292632774553,
+    "top_pairs": [
+     [
+      "B2",
+      "nir/red",
+      0.49478866283316164
+     ],
+     [
+      "nir/red",
+      "swir1/nir",
+      0.31340772745461437
+     ],
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.2994243016815744
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      2.849899907410145
+     ],
+     [
+      "B2",
+      1.117443829542026
+     ],
+     [
+      "B6",
+      0.5959252127679064
+     ]
+    ]
+   },
+   "3": {
+    "offdiag_fraction": 0.5545335847758477,
+    "top_pairs": [
+     [
+      "B1",
+      "glcm_energy",
+      0.15100427191937343
+     ],
+     [
+      "B1",
+      "swir1/nir",
+      0.15068219920649426
+     ],
+     [
+      "B1",
+      "B5",
+      0.15055400883575204
+     ]
+    ],
+    "top_main": [
+     [
+      "glcm_energy",
+      0.5367792001925409
+     ],
+     [
+      "B1",
+      0.4657349910456105
+     ],
+     [
+      "swir1/nir",
+      0.42769162366166713
+     ]
+    ]
+   }
+  },
+  "n": 160
+ },
+ {
+  "id": "Fig. MADOS-85",
+  "title": "Fig. MADOS-85. XGBoost: strongest interaction pair for the Marine Debris output (nir/red x swir1/nir)",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_xgb_c2_debris_top_interaction_pair.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "interaction_pair",
+  "pair": [
+   "nir/red",
+   "swir1/nir"
+  ],
+  "rho_i": -0.03182057892886441,
+  "rho_j": -0.3261455525606469,
+  "range": [
+   -1.0885204076766968,
+   1.1786878108978271
+  ],
+  "main_range": [
+   -1.240586519241333,
+   1.4893014430999756
+  ]
+ },
+ {
+  "id": "Fig. MADOS-86",
+  "title": "Fig. MADOS-86. LightGBM: mean |SHAP interaction| between the top features, per class output",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_lgbm_interaction_matrices.png",
+  "model": "lgbm",
+  "kind": "interaction_matrix",
+  "per_class": {
+   "0": {
+    "offdiag_fraction": 0.6298065081670251,
+    "top_pairs": [
+     [
+      "red/green",
+      "nir/green",
+      0.30146244679198964
+     ],
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.2812754313926186
+     ],
+     [
+      "B3",
+      "nir/red",
+      0.26026226785622064
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      1.0018377754371177
+     ],
+     [
+      "glcm_contrast",
+      0.8750212083555343
+     ],
+     [
+      "glcm_correlation",
+      0.356520098924446
+     ]
+    ]
+   },
+   "1": {
+    "offdiag_fraction": 0.6964560673893065,
+    "top_pairs": [
+     [
+      "nir/red",
+      "swir1/nir",
+      0.5906144474998594
+     ],
+     [
+      "B5",
+      "swir1/nir",
+      0.3660032398706715
+     ],
+     [
+      "NDWI",
+      "swir1/nir",
+      0.33117534084571293
+     ]
+    ],
+    "top_main": [
+     [
+      "swir1/nir",
+      0.6960978496375827
+     ],
+     [
+      "nir/red",
+      0.5261986419335597
+     ],
+     [
+      "NDWI",
+      0.42114614780050885
+     ]
+    ]
+   },
+   "2": {
+    "offdiag_fraction": 0.6627972274512445,
+    "top_pairs": [
+     [
+      "B11",
+      "nir/red",
+      0.37298469405360346
+     ],
+     [
+      "B3",
+      "B6",
+      0.35695643359576945
+     ],
+     [
+      "B2",
+      "nir/red",
+      0.3493848689575242
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      1.2192324582437668
+     ],
+     [
+      "B3",
+      0.417697640200398
+     ],
+     [
+      "B7",
+      0.3918084810035037
+     ]
+    ]
+   },
+   "3": {
+    "offdiag_fraction": 0.5868746463753941,
+    "top_pairs": [
+     [
+      "B1",
+      "B3",
+      0.1603209040719349
+     ],
+     [
+      "B1",
+      "glcm_correlation",
+      0.15545491255755184
+     ],
+     [
+      "B12",
+      "glcm_energy",
+      0.1550876320448205
+     ]
+    ],
+    "top_main": [
+     [
+      "glcm_energy",
+      0.5194822732790798
+     ],
+     [
+      "glcm_contrast",
+      0.4608181192627751
+     ],
+     [
+      "B12",
+      0.41371613777078775
+     ]
+    ]
+   }
+  },
+  "n": 160
+ },
+ {
+  "id": "Fig. MADOS-87",
+  "title": "Fig. MADOS-87. LightGBM: strongest interaction pair for the Marine Debris output (nir/red x swir1/nir)",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_lgbm_c2_debris_top_interaction_pair.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "interaction_pair",
+  "pair": [
+   "nir/red",
+   "swir1/nir"
+  ],
+  "rho_i": 0.27925993202859484,
+  "rho_j": -0.6683376303761865,
+  "range": [
+   -0.9862437069725325,
+   1.6751780773590152
+  ],
+  "main_range": [
+   -0.45067849843577434,
+   1.169407996686028
+  ]
+ },
+ {
+  "id": "Fig. MADOS-88",
+  "title": "Fig. MADOS-88. AdaBoost: mean |SHAP interaction| between the top features, per class output",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_ada_interaction_matrices.png",
+  "model": "ada",
+  "kind": "interaction_matrix",
+  "per_class": {
+   "0": {
+    "offdiag_fraction": 0.46305767250394914,
+    "top_pairs": [
+     [
+      "nir/red",
+      "swir1/nir",
+      0.05294245869454939
+     ],
+     [
+      "red/green",
+      "swir1/nir",
+      0.018391285801783838
+     ],
+     [
+      "B3",
+      "nir/red",
+      0.016460306985418033
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      0.14425496327119108
+     ],
+     [
+      "NDWI",
+      0.03979421253348463
+     ],
+     [
+      "glcm_contrast",
+      0.03449404265306256
+     ]
+    ]
+   },
+   "1": {
+    "offdiag_fraction": 0.4852096506718156,
+    "top_pairs": [
+     [
+      "nir/red",
+      "swir1/nir",
+      0.03847877470691621
+     ],
+     [
+      "NDWI",
+      "swir1/nir",
+      0.03425005559772755
+     ],
+     [
+      "red/green",
+      "swir1/nir",
+      0.01798284752885095
+     ]
+    ],
+    "top_main": [
+     [
+      "swir1/nir",
+      0.08615718095740153
+     ],
+     [
+      "nir/red",
+      0.053444783496772605
+     ],
+     [
+      "NDWI",
+      0.04021034849155915
+     ]
+    ]
+   },
+   "2": {
+    "offdiag_fraction": 0.5041302936279455,
+    "top_pairs": [
+     [
+      "nir/red",
+      "swir1/nir",
+      0.022133790529075402
+     ],
+     [
+      "B2",
+      "nir/red",
+      0.016417166419722597
+     ],
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.014564366405376736
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      0.1076107533282979
+     ],
+     [
+      "B1",
+      0.0170618088047211
+     ],
+     [
+      "B6",
+      0.013144350032171912
+     ]
+    ]
+   },
+   "3": {
+    "offdiag_fraction": 0.503392948762661,
+    "top_pairs": [
+     [
+      "NDWI",
+      "swir1/nir",
+      0.024640142156665053
+     ],
+     [
+      "B3",
+      "nir/red",
+      0.024044651313817743
+     ],
+     [
+      "nir/red",
+      "swir1/nir",
+      0.02007921397942316
+     ]
+    ],
+    "top_main": [
+     [
+      "swir1/nir",
+      0.07627179312883842
+     ],
+     [
+      "B1",
+      0.050814689416151956
+     ],
+     [
+      "glcm_contrast",
+      0.03876733569084777
+     ]
+    ]
+   }
+  },
+  "n": 160
+ },
+ {
+  "id": "Fig. MADOS-89",
+  "title": "Fig. MADOS-89. AdaBoost: strongest interaction pair for the Marine Debris output (nir/red x swir1/nir)",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_ada_c2_debris_top_interaction_pair.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "interaction_pair",
+  "pair": [
+   "nir/red",
+   "swir1/nir"
+  ],
+  "rho_i": 0.18483588666400277,
+  "rho_j": -0.5101576531067633,
+  "range": [
+   -0.10124316181244805,
+   0.10069082261237432
+  ],
+  "main_range": [
+   -0.027766505760405628,
+   0.14071970890075777
+  ]
+ },
+ {
+  "id": "Fig. MADOS-90",
+  "title": "Fig. MADOS-90. Distribution of normalised SHAP values of the 6 most important features for the Class 1 Water output, all models",
+  "section": "C",
+  "item": "10",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_all_models_c1_water_shap_distribution.png",
+  "cls": 0,
+  "kind": "distribution",
+  "spread": {
+   "nir/red": {
+    "rf": [
+     -0.21787066150073528,
+     0.33717011325007684
+    ],
+    "xgb": [
+     -0.25958494982123465,
+     0.4179738423530109
+    ],
+    "lgbm": [
+     -0.2604330216527389,
+     0.4019745753588642
+    ],
+    "ada": [
+     -0.5141137224625152,
+     0.7979651514604122
+    ],
+    "svm": [
+     -0.3035787940801854,
+     0.14940253191748112
+    ]
+   },
+   "swir1/nir": {
+    "rf": [
+     -0.17008624273945813,
+     0.224999737464704
+    ],
+    "xgb": [
+     -0.1239102319713393,
+     0.2583431133872203
+    ],
+    "lgbm": [
+     -0.11740758219683314,
+     0.22678788317074602
+    ],
+    "ada": [
+     -0.22010923858450812,
+     0.4073896058913968
+    ],
+    "svm": [
+     -0.009305779296440648,
+     0.01134351636013783
+    ]
+   },
+   "glcm_contrast": {
+    "rf": [
+     -0.12157743819489263,
+     0.15160560468310363
+    ],
+    "xgb": [
+     -0.20910255043297907,
+     0.2656069755850238
+    ],
+    "lgbm": [
+     -0.19696084571623204,
+     0.23111398225381435
+    ],
+    "ada": [
+     -0.14597536943974004,
+     0.08769724104565829
+    ],
+    "svm": [
+     -0.031849877083592354,
+     0.18987205363673024
+    ]
+   },
+   "NDWI": {
+    "rf": [
+     -0.1529963468154451,
+     0.24382887862198166
+    ],
+    "xgb": [
+     -0.12777087969868692,
+     0.1967572999257842
+    ],
+    "lgbm": [
+     -0.12378718033648754,
+     0.13437818936616439
+    ],
+    "ada": [
+     -0.09214546560809676,
+     0.21217946953309605
+    ],
+    "svm": [
+     -0.08766684223235294,
+     0.10337012235202225
+    ]
+   },
+   "nir/green": {
+    "rf": [
+     -0.14185062612879046,
+     0.22565562102299766
+    ],
+    "xgb": [
+     -0.06999005339602683,
+     0.14505730776215287
+    ],
+    "lgbm": [
+     -0.051751299636663986,
+     0.11525558189538902
+    ],
+    "ada": [
+     -0.03286165442437632,
+     0.06150740364731513
+    ],
+    "svm": [
+     -0.1311592702005697,
+     0.2402904118871418
+    ]
+   },
+   "B3": {
+    "rf": [
+     -0.07717293745582365,
+     0.13024099132164813
+    ],
+    "xgb": [
+     -0.0959639531887742,
+     0.30514376602155324
+    ],
+    "lgbm": [
+     -0.10039315814242014,
+     0.2569661776952765
+    ],
+    "ada": [
+     -0.10215711196122179,
+     0.14667824669258922
+    ],
+    "svm": [
+     -0.06202597696456937,
+     0.11142645532931822
+    ]
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-91",
+  "title": "Fig. MADOS-91. Distribution of normalised SHAP values of the 6 most important features for the Class 2 Marine Debris output, all models",
+  "section": "C",
+  "item": "10",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_all_models_c2_debris_shap_distribution.png",
+  "cls": 1,
+  "kind": "distribution",
+  "spread": {
+   "swir1/nir": {
+    "rf": [
+     -0.2570111806348541,
+     0.3100520054572669
+    ],
+    "xgb": [
+     -0.5622553473377349,
+     0.41876276880128377
+    ],
+    "lgbm": [
+     -0.4753742006872076,
+     0.3283219386541517
+    ],
+    "ada": [
+     -0.8171632621459696,
+     0.5033937887555849
+    ],
+    "svm": [
+     -0.07659156946890797,
+     0.06283274240695845
+    ]
+   },
+   "nir/red": {
+    "rf": [
+     -0.26545175651498737,
+     0.2347851399819492
+    ],
+    "xgb": [
+     -0.3066527304505577,
+     0.24883592165780768
+    ],
+    "lgbm": [
+     -0.23377033638082462,
+     0.1923821482444053
+    ],
+    "ada": [
+     -0.32266359899233765,
+     0.324804065232076
+    ],
+    "svm": [
+     -0.2068437370444485,
+     0.10179557541015784
+    ]
+   },
+   "NDWI": {
+    "rf": [
+     -0.125013890237763,
+     0.1566838859055989
+    ],
+    "xgb": [
+     -0.17908347511354422,
+     0.08445408639581994
+    ],
+    "lgbm": [
+     -0.16796642630390934,
+     0.09610680490804806
+    ],
+    "ada": [
+     -0.34368118070397335,
+     0.1435760614236014
+    ],
+    "svm": [
+     -0.4492150476766339,
+     0.5296804727793245
+    ]
+   },
+   "nir/green": {
+    "rf": [
+     -0.12048480546214532,
+     0.1506665964146578
+    ],
+    "xgb": [
+     -0.15181377851829128,
+     0.10579798104512222
+    ],
+    "lgbm": [
+     -0.11116622604977477,
+     0.06417860881267606
+    ],
+    "ada": [
+     -0.10125941870124182,
+     0.05612166291681733
+    ],
+    "svm": [
+     -0.6016466346808506,
+     0.32840067526469513
+    ]
+   },
+   "B12": {
+    "rf": [
+     -0.2547843767988622,
+     0.19581909990337523
+    ],
+    "xgb": [
+     -0.2115903920259722,
+     0.09155463785581712
+    ],
+    "lgbm": [
+     -0.26770059657904155,
+     0.14935194235159438
+    ],
+    "ada": [
+     0.0,
+     0.0
+    ],
+    "svm": [
+     -0.17917323592509538,
+     0.06860309615559955
+    ]
+   },
+   "B5": {
+    "rf": [
+     -0.1266010502691187,
+     0.13719758950955555
+    ],
+    "xgb": [
+     -0.14146201487039695,
+     0.12379967829172776
+    ],
+    "lgbm": [
+     -0.17873734497740457,
+     0.12971057658925433
+    ],
+    "ada": [
+     -0.04359369673505346,
+     0.021762820646535192
+    ],
+    "svm": [
+     -0.1779078539803863,
+     0.09146641002917458
+    ]
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-92",
+  "title": "Fig. MADOS-92. Distribution of normalised SHAP values of the 6 most important features for the Class 3 Sargassum output, all models",
+  "section": "C",
+  "item": "10",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_all_models_c3_sargassum_shap_distribution.png",
+  "cls": 2,
+  "kind": "distribution",
+  "spread": {
+   "nir/red": {
+    "rf": [
+     -0.2408794629353789,
+     0.6172451116968537
+    ],
+    "xgb": [
+     -0.4414603093762737,
+     0.698201325421978
+    ],
+    "lgbm": [
+     -0.3329933171994565,
+     0.5401192331243442
+    ],
+    "ada": [
+     -0.5819567260844479,
+     1.1806323485444545
+    ],
+    "svm": [
+     -0.13260315426455085,
+     0.06525899494197021
+    ]
+   },
+   "B2": {
+    "rf": [
+     -0.10369702194623916,
+     0.21581467107785363
+    ],
+    "xgb": [
+     -0.19263798779360117,
+     0.2970810922736362
+    ],
+    "lgbm": [
+     -0.2048265054743586,
+     0.26633455396230904
+    ],
+    "ada": [
+     -0.11366264349574505,
+     0.1586483830991354
+    ],
+    "svm": [
+     -0.04719427383335681,
+     0.0293422836122342
+    ]
+   },
+   "B3": {
+    "rf": [
+     -0.06928228672610127,
+     0.100144671108746
+    ],
+    "xgb": [
+     -0.17636756508515627,
+     0.2795551733016702
+    ],
+    "lgbm": [
+     -0.1690915612010115,
+     0.2717571649002655
+    ],
+    "ada": [
+     -0.1042421297277562,
+     0.11228465548085928
+    ],
+    "svm": [
+     -0.03488345300014288,
+     0.06266631672199376
+    ]
+   },
+   "glcm_contrast": {
+    "rf": [
+     -0.0594876827309635,
+     0.042073508744817516
+    ],
+    "xgb": [
+     -0.14283511561617146,
+     0.10319913873612094
+    ],
+    "lgbm": [
+     -0.14035464764055186,
+     0.08600420646484468
+    ],
+    "ada": [
+     -0.16800001131289505,
+     0.12568618857177002
+    ],
+    "svm": [
+     -0.4973175816808214,
+     0.0834219862515851
+    ]
+   },
+   "B6": {
+    "rf": [
+     -0.06553500887921017,
+     0.07275251316212067
+    ],
+    "xgb": [
+     -0.272944689854248,
+     0.09847880026947235
+    ],
+    "lgbm": [
+     -0.17203231283867906,
+     0.17343455476157654
+    ],
+    "ada": [
+     -0.04047799173119519,
+     0.030028301838379703
+    ],
+    "svm": [
+     -0.07662175921110086,
+     0.1478052723311292
+    ]
+   },
+   "NDWI": {
+    "rf": [
+     -0.11526825098458171,
+     0.2984830164720011
+    ],
+    "xgb": [
+     -0.0395645365861953,
+     0.09732701004100316
+    ],
+    "lgbm": [
+     -0.015597841129865312,
+     0.06023864568653913
+    ],
+    "ada": [
+     -0.05700955430518944,
+     0.09714718667601242
+    ],
+    "svm": [
+     -0.08977786604122104,
+     0.10585928226532637
+    ]
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-93",
+  "title": "Fig. MADOS-93. Distribution of normalised SHAP values of the 6 most important features for the Class 4 Other output, all models",
+  "section": "C",
+  "item": "10",
+  "path": "04_dependence_and_interactions/MADOS/MADOS_all_models_c4_other_shap_distribution.png",
+  "cls": 3,
+  "kind": "distribution",
+  "spread": {
+   "swir1/nir": {
+    "rf": [
+     -0.1823460000435928,
+     0.1871543046211057
+    ],
+    "xgb": [
+     -0.22240326847163688,
+     0.24571645334655492
+    ],
+    "lgbm": [
+     -0.25753169167718537,
+     0.21228676539821534
+    ],
+    "ada": [
+     -0.32078038609706705,
+     0.4579807985399439
+    ],
+    "svm": [
+     -0.004409038808657784,
+     0.0036170038249332052
+    ]
+   },
+   "glcm_contrast": {
+    "rf": [
+     -0.1494865544688261,
+     0.1950491035283181
+    ],
+    "xgb": [
+     -0.19897539706562908,
+     0.25982144602746654
+    ],
+    "lgbm": [
+     -0.21039044181795752,
+     0.22809062459951274
+    ],
+    "ada": [
+     -0.13720936316248045,
+     0.21115289451107794
+    ],
+    "svm": [
+     -0.20229540721313477,
+     0.03393381875270978
+    ]
+   },
+   "B1": {
+    "rf": [
+     -0.09341800873470515,
+     0.20557993996642954
+    ],
+    "xgb": [
+     -0.1747333519618665,
+     0.2916427188132386
+    ],
+    "lgbm": [
+     -0.16675911480218022,
+     0.24771081793429797
+    ],
+    "ada": [
+     -0.12978175335098688,
+     0.19647845707270903
+    ],
+    "svm": [
+     -0.032290593101958115,
+     0.04117935077007262
+    ]
+   },
+   "B12": {
+    "rf": [
+     -0.13929396308621927,
+     0.2961293624457533
+    ],
+    "xgb": [
+     -0.13999229116558756,
+     0.512014463690283
+    ],
+    "lgbm": [
+     -0.17795139323009068,
+     0.5034047339301629
+    ],
+    "ada": [
+     -0.014187113439496486,
+     0.02364806471663193
+    ],
+    "svm": [
+     -0.008870240321558611,
+     0.023166733732282004
+    ]
+   },
+   "B3": {
+    "rf": [
+     -0.07054666959911625,
+     0.10802576753451798
+    ],
+    "xgb": [
+     -0.17170057098546568,
+     0.121311597512069
+    ],
+    "lgbm": [
+     -0.16224771519840486,
+     0.1437812680028217
+    ],
+    "ada": [
+     -0.13113142958374907,
+     0.09262975746906062
+    ],
+    "svm": [
+     -0.19544512643773584,
+     0.1087953024659725
+    ]
+   },
+   "nir/red": {
+    "rf": [
+     -0.14228929967114518,
+     0.1573095816257143
+    ],
+    "xgb": [
+     -0.033127482910760925,
+     0.10609495800358475
+    ],
+    "lgbm": [
+     -0.03168613752538483,
+     0.097514621379554
+    ],
+    "ada": [
+     -0.2590052518196101,
+     0.21256367264758258
+    ],
+    "svm": [
+     -0.044222891873210914,
+     0.08985879966895637
+    ]
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-94",
+  "title": "Fig. MADOS-94. Random Forest: waterfall for a correctly classified Water pixel (explaining the Water output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_rf_c1_water_correct_waterfall.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "waterfall_correct",
+  "test_index": 131382,
+  "base": 0.2648000000000001,
+  "fx": 0.990000000422357,
+  "top3": [
+   [
+    "nir/red",
+    0.4101150333881378,
+    0.1838214869234532
+   ],
+   [
+    "NDWI",
+    0.3882797360420227,
+    0.09392553724916664
+   ],
+   [
+    "nir/green",
+    0.44062331318855286,
+    0.0925172006891728
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-95",
+  "title": "Fig. MADOS-95. XGBoost: waterfall for a correctly classified Water pixel (explaining the Water output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_xgb_c1_water_correct_waterfall.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "waterfall_correct",
+  "test_index": 131382,
+  "base": -0.3829322969259281,
+  "fx": 5.274605206823807,
+  "top3": [
+   [
+    "nir/red",
+    0.4101150333881378,
+    1.7473221972529427
+   ],
+   [
+    "B3",
+    0.08428015559911728,
+    1.1741534555476392
+   ],
+   [
+    "glcm_contrast",
+    0.033520299941301346,
+    0.7073352907996742
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-96",
+  "title": "Fig. MADOS-96. LightGBM: waterfall for a correctly classified Water pixel (explaining the Water output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_lgbm_c1_water_correct_waterfall.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "waterfall_correct",
+  "test_index": 131382,
+  "base": -2.414699578961328,
+  "fx": 3.962031382463437,
+  "top3": [
+   [
+    "nir/red",
+    0.4101150333881378,
+    1.8835941925772932
+   ],
+   [
+    "B3",
+    0.08428015559911728,
+    0.9196749029110651
+   ],
+   [
+    "glcm_contrast",
+    0.033520299941301346,
+    0.7127387534582522
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-97",
+  "title": "Fig. MADOS-97. AdaBoost: waterfall for a correctly classified Water pixel (explaining the Water output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_ada_c1_water_correct_waterfall.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "waterfall_correct",
+  "test_index": 131382,
+  "base": 0.049761646049854766,
+  "fx": 0.6234707250496733,
+  "top3": [
+   [
+    "nir/red",
+    0.4101150333881378,
+    0.3648167209950043
+   ],
+   [
+    "NDWI",
+    0.3882797360420227,
+    0.07876518693752586
+   ],
+   [
+    "B3",
+    0.08428015559911728,
+    0.07069223291822709
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-98",
+  "title": "Fig. MADOS-98. Linear SVM: waterfall for a correctly classified Water pixel (explaining the Water output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_svm_c1_water_correct_waterfall.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "waterfall_correct",
+  "test_index": 131382,
+  "base": 0.07637266057754355,
+  "fx": 1.6122151565817044,
+  "top3": [
+   [
+    "nir/red",
+    0.4101150333881378,
+    2.7431665469667097
+   ],
+   [
+    "glcm_dissimilarity",
+    0.033520299941301346,
+    2.606252158721346
+   ],
+   [
+    "glcm_homogeneity",
+    0.9832398295402527,
+    -2.1365482716191724
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-99",
+  "title": "Fig. MADOS-99. Random Forest: waterfall for a correctly classified Marine Debris pixel (explaining the Marine Debris output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_rf_c2_debris_correct_waterfall.png",
+  "model": "rf",
+  "cls": 1,
+  "kind": "waterfall_correct",
+  "test_index": 276574,
+  "base": 0.22780000000000022,
+  "fx": 0.940000005651773,
+  "top3": [
+   [
+    "swir1/nir",
+    0.27804508805274963,
+    0.10745705469552191
+   ],
+   [
+    "nir/red",
+    0.9497901797294617,
+    0.08215316936181864
+   ],
+   [
+    "B12",
+    0.007461783941835165,
+    0.06602025942083227
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-100",
+  "title": "Fig. MADOS-100. XGBoost: waterfall for a correctly classified Marine Debris pixel (explaining the Marine Debris output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_xgb_c2_debris_correct_waterfall.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "waterfall_correct",
+  "test_index": 276574,
+  "base": -2.769083466596855,
+  "fx": 4.216911402363188,
+  "top3": [
+   [
+    "swir1/nir",
+    0.27804508805274963,
+    2.402775855856598
+   ],
+   [
+    "nir/red",
+    0.9497901797294617,
+    1.231631790761312
+   ],
+   [
+    "B5",
+    0.03207338973879814,
+    0.6014559272275073
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-101",
+  "title": "Fig. MADOS-101. LightGBM: waterfall for a correctly classified Marine Debris pixel (explaining the Marine Debris output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_lgbm_c2_debris_correct_waterfall.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "waterfall_correct",
+  "test_index": 276574,
+  "base": -5.111675771245898,
+  "fx": 2.6613161812043487,
+  "top3": [
+   [
+    "swir1/nir",
+    0.27804508805274963,
+    2.4263108767662196
+   ],
+   [
+    "B12",
+    0.007461783941835165,
+    1.1316346071864245
+   ],
+   [
+    "nir/red",
+    0.9497901797294617,
+    1.0253384561749408
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-102",
+  "title": "Fig. MADOS-102. AdaBoost: waterfall for a correctly classified Marine Debris pixel (explaining the Marine Debris output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_ada_c2_debris_correct_waterfall.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "waterfall_correct",
+  "test_index": 276574,
+  "base": -0.06559234496775519,
+  "fx": 0.3395685455506997,
+  "top3": [
+   [
+    "swir1/nir",
+    0.27804508805274963,
+    0.1848591693711933
+   ],
+   [
+    "nir/red",
+    0.9497901797294617,
+    0.06559650946292095
+   ],
+   [
+    "NDWI",
+    0.04595648869872093,
+    0.04494016268057749
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-103",
+  "title": "Fig. MADOS-103. Linear SVM: waterfall for a correctly classified Marine Debris pixel (explaining the Marine Debris output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_svm_c2_debris_correct_waterfall.png",
+  "model": "svm",
+  "cls": 1,
+  "kind": "waterfall_correct",
+  "test_index": 276574,
+  "base": -3.1820593967991817,
+  "fx": 1.388807650827225,
+  "top3": [
+   [
+    "nir/green",
+    0.9121028184890747,
+    2.456135284205964
+   ],
+   [
+    "B5",
+    0.03207338973879814,
+    1.4623654502621142
+   ],
+   [
+    "B11",
+    0.010696597397327423,
+    -1.3487487190137337
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-104",
+  "title": "Fig. MADOS-104. Random Forest: waterfall for a correctly classified Sargassum pixel (explaining the Sargassum output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_rf_c3_sargassum_correct_waterfall.png",
+  "model": "rf",
+  "cls": 2,
+  "kind": "waterfall_correct",
+  "test_index": 137368,
+  "base": 0.24445000000000014,
+  "fx": 1.0000000079272904,
+  "top3": [
+   [
+    "nir/red",
+    2.6480939388275146,
+    0.23947721643652983
+   ],
+   [
+    "nir/green",
+    2.115518808364868,
+    0.10319046418122042
+   ],
+   [
+    "NDWI",
+    -0.3580608665943146,
+    0.0874447943807408
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-105",
+  "title": "Fig. MADOS-105. XGBoost: waterfall for a correctly classified Sargassum pixel (explaining the Sargassum output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_xgb_c3_sargassum_correct_waterfall.png",
+  "model": "xgb",
+  "cls": 2,
+  "kind": "waterfall_correct",
+  "test_index": 137368,
+  "base": -2.7514078786323073,
+  "fx": 5.977438174609997,
+  "top3": [
+   [
+    "nir/red",
+    2.6480939388275146,
+    3.812939641858102
+   ],
+   [
+    "B2",
+    0.031303659081459045,
+    1.5799641434816294
+   ],
+   [
+    "swir1/nir",
+    0.07400002330541611,
+    0.7021288809459656
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-106",
+  "title": "Fig. MADOS-106. LightGBM: waterfall for a correctly classified Sargassum pixel (explaining the Sargassum output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_lgbm_c3_sargassum_correct_waterfall.png",
+  "model": "lgbm",
+  "cls": 2,
+  "kind": "waterfall_correct",
+  "test_index": 137368,
+  "base": -5.396393352141063,
+  "fx": 5.299134513870046,
+  "top3": [
+   [
+    "nir/red",
+    2.6480939388275146,
+    3.969209550691303
+   ],
+   [
+    "B2",
+    0.031303659081459045,
+    1.8811291073536267
+   ],
+   [
+    "B6",
+    0.08052221685647964,
+    1.2112779596110341
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-107",
+  "title": "Fig. MADOS-107. AdaBoost: waterfall for a correctly classified Sargassum pixel (explaining the Sargassum output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_ada_c3_sargassum_correct_waterfall.png",
+  "model": "ada",
+  "cls": 2,
+  "kind": "waterfall_correct",
+  "test_index": 137368,
+  "base": -0.10781632591529629,
+  "fx": 0.4723758962509281,
+  "top3": [
+   [
+    "nir/red",
+    2.6480939388275146,
+    0.38931756327394396
+   ],
+   [
+    "B2",
+    0.031303659081459045,
+    0.053254755179514175
+   ],
+   [
+    "swir1/nir",
+    0.07400002330541611,
+    0.031946721561835145
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-108",
+  "title": "Fig. MADOS-108. Linear SVM: waterfall for a correctly classified Sargassum pixel (explaining the Sargassum output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_svm_c3_sargassum_correct_waterfall.png",
+  "model": "svm",
+  "cls": 2,
+  "kind": "waterfall_correct",
+  "test_index": 137368,
+  "base": -2.3861322931408067,
+  "fx": 6.43267367371327,
+  "top3": [
+   [
+    "nir/red",
+    2.6480939388275146,
+    -5.677802136819573
+   ],
+   [
+    "nir/green",
+    2.115518808364868,
+    4.838934253976597
+   ],
+   [
+    "NDWI",
+    -0.3580608665943146,
+    4.529289741129684
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-109",
+  "title": "Fig. MADOS-109. Random Forest: waterfall for a correctly classified Other pixel (explaining the Other output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_rf_c4_other_correct_waterfall.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "waterfall_correct",
+  "test_index": 360630,
+  "base": 0.2629500000000001,
+  "fx": 0.6500000012765303,
+  "top3": [
+   [
+    "B12",
+    0.0390893816947937,
+    0.06872373302843589
+   ],
+   [
+    "B1",
+    0.08587231487035751,
+    -0.0687174921426828
+   ],
+   [
+    "B11",
+    0.046187642961740494,
+    0.04415830842971207
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-110",
+  "title": "Fig. MADOS-110. XGBoost: waterfall for a correctly classified Other pixel (explaining the Other output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_xgb_c4_other_correct_waterfall.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "waterfall_correct",
+  "test_index": 360630,
+  "base": 0.23324984046738184,
+  "fx": 2.686713666918388,
+  "top3": [
+   [
+    "glcm_energy",
+    0.44088655710220337,
+    0.5978873257950181
+   ],
+   [
+    "swir1/nir",
+    0.7712008953094482,
+    0.5571679931929975
+   ],
+   [
+    "B5",
+    0.05928605794906616,
+    0.46217427618190415
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-111",
+  "title": "Fig. MADOS-111. LightGBM: waterfall for a correctly classified Other pixel (explaining the Other output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_lgbm_c4_other_correct_waterfall.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "waterfall_correct",
+  "test_index": 360630,
+  "base": -1.7755272946231306,
+  "fx": 0.38978556311315016,
+  "top3": [
+   [
+    "glcm_energy",
+    0.44088655710220337,
+    0.6401024701166897
+   ],
+   [
+    "swir1/nir",
+    0.7712008953094482,
+    0.5301728029554943
+   ],
+   [
+    "B12",
+    0.0390893816947937,
+    0.4826595649140654
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-112",
+  "title": "Fig. MADOS-112. AdaBoost: waterfall for a correctly classified Other pixel (explaining the Other output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_ada_c4_other_correct_waterfall.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "waterfall_correct",
+  "test_index": 360630,
+  "base": 0.12364702483319688,
+  "fx": 0.4897466289930233,
+  "top3": [
+   [
+    "swir1/nir",
+    0.7712008953094482,
+    0.17984988568816335
+   ],
+   [
+    "B1",
+    0.08587231487035751,
+    0.03853890221042093
+   ],
+   [
+    "B2",
+    0.0862082839012146,
+    0.033274395781336355
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-113",
+  "title": "Fig. MADOS-113. Linear SVM: waterfall for a correctly classified Other pixel (explaining the Other output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_svm_c4_other_correct_waterfall.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "waterfall_correct",
+  "test_index": 360630,
+  "base": -0.20036287768985037,
+  "fx": 1.3259914165765432,
+  "top3": [
+   [
+    "glcm_homogeneity",
+    0.8009882569313049,
+    -1.3420646013978723
+   ],
+   [
+    "glcm_energy",
+    0.44088655710220337,
+    1.0919032826536512
+   ],
+   [
+    "B2",
+    0.0862082839012146,
+    0.9245384942988378
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-114",
+  "title": "Fig. MADOS-114. Random Forest: misclassified pixel (true Water, predicted Other), explaining the predicted-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_rf_true-c1_water_pred-c4_other_predicted-output_waterfall.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 3,
+  "test_index": 273195,
+  "n_errors_test": 39748,
+  "base": 0.2629500000000001,
+  "fx": 0.8300000012946225,
+  "top3": [
+   [
+    "B12",
+    0.03888529911637306,
+    0.08534485767013866
+   ],
+   [
+    "B11",
+    0.06662403047084808,
+    0.0771672150042138
+   ],
+   [
+    "glcm_contrast",
+    2.8625800609588623,
+    0.0735290187963501
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-115",
+  "title": "Fig. MADOS-115. Random Forest: misclassified pixel (true Water, predicted Other), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_rf_true-c1_water_pred-c4_other_true-output_waterfall.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 3,
+  "test_index": 273195,
+  "n_errors_test": 39748,
+  "base": 0.2648000000000001,
+  "fx": 0.16999999920350234,
+  "top3": [
+   [
+    "swir1/nir",
+    2.1748907566070557,
+    0.05157673551127152
+   ],
+   [
+    "glcm_contrast",
+    2.8625800609588623,
+    -0.048037544173599775
+   ],
+   [
+    "nir/red",
+    0.6303552389144897,
+    0.04176610909846167
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-116",
+  "title": "Fig. MADOS-116. Random Forest: misclassified pixel (true Other, predicted Water), explaining the predicted-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_rf_true-c4_other_pred-c1_water_predicted-output_waterfall.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 3,
+  "pred": 0,
+  "test_index": 209095,
+  "n_errors_test": 17433,
+  "base": 0.2648000000000001,
+  "fx": 0.8000000034961008,
+  "top3": [
+   [
+    "swir1/nir",
+    0.9642046093940735,
+    0.1009577673135924
+   ],
+   [
+    "B1",
+    0.08737201988697052,
+    0.07242966725631747
+   ],
+   [
+    "glcm_contrast",
+    0.24853098392486572,
+    0.060510275856185895
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-117",
+  "title": "Fig. MADOS-117. Random Forest: misclassified pixel (true Other, predicted Water), explaining the true-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_rf_true-c4_other_pred-c1_water_true-output_waterfall.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 3,
+  "pred": 0,
+  "test_index": 209095,
+  "n_errors_test": 17433,
+  "base": 0.2629500000000001,
+  "fx": 0.19999999978372726,
+  "top3": [
+   [
+    "B12",
+    0.05430465191602707,
+    0.06621178987879095
+   ],
+   [
+    "glcm_contrast",
+    0.24853098392486572,
+    -0.0570292986372705
+   ],
+   [
+    "B1",
+    0.08737201988697052,
+    -0.0496571387793262
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-118",
+  "title": "Fig. MADOS-118. XGBoost: misclassified pixel (true Water, predicted Other), explaining the predicted-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_xgb_true-c1_water_pred-c4_other_predicted-output_waterfall.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 3,
+  "test_index": 235919,
+  "n_errors_test": 39529,
+  "base": 0.23324984046738184,
+  "fx": 2.502648894906363,
+  "top3": [
+   [
+    "B1",
+    0.08707679808139801,
+    0.8345676579329302
+   ],
+   [
+    "swir1/nir",
+    0.5653306245803833,
+    0.70154329943005
+   ],
+   [
+    "B3",
+    0.04589551314711571,
+    0.3402113927358005
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-119",
+  "title": "Fig. MADOS-119. XGBoost: misclassified pixel (true Water, predicted Other), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_xgb_true-c1_water_pred-c4_other_true-output_waterfall.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 3,
+  "test_index": 235919,
+  "n_errors_test": 39529,
+  "base": -0.3829322969259281,
+  "fx": -0.06643241971075425,
+  "top3": [
+   [
+    "glcm_correlation",
+    -0.022113021463155746,
+    0.6385060647269711
+   ],
+   [
+    "nir/red",
+    0.7623105049133301,
+    0.43239152611873577
+   ],
+   [
+    "B3",
+    0.04589551314711571,
+    -0.2962036513898056
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-120",
+  "title": "Fig. MADOS-120. XGBoost: misclassified pixel (true Other, predicted Water), explaining the predicted-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_xgb_true-c4_other_pred-c1_water_predicted-output_waterfall.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 3,
+  "pred": 0,
+  "test_index": 149586,
+  "n_errors_test": 13282,
+  "base": -0.3829322969259281,
+  "fx": 2.3868959287701452,
+  "top3": [
+   [
+    "swir1/nir",
+    0.9103133678436279,
+    1.216105558526615
+   ],
+   [
+    "B11",
+    0.03326413407921791,
+    0.4440425677355961
+   ],
+   [
+    "nir/red",
+    0.8554754257202148,
+    0.36732306605408666
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-121",
+  "title": "Fig. MADOS-121. XGBoost: misclassified pixel (true Other, predicted Water), explaining the true-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_xgb_true-c4_other_pred-c1_water_true-output_waterfall.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 3,
+  "pred": 0,
+  "test_index": 149586,
+  "n_errors_test": 13282,
+  "base": 0.23324984046738184,
+  "fx": 0.3316360667624971,
+  "top3": [
+   [
+    "B1",
+    0.06655701249837875,
+    0.30165246842079796
+   ],
+   [
+    "B11",
+    0.03326413407921791,
+    -0.2814698675618274
+   ],
+   [
+    "glcm_contrast",
+    0.18095619976520538,
+    -0.22189588717883452
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-122",
+  "title": "Fig. MADOS-122. LightGBM: misclassified pixel (true Water, predicted Other), explaining the predicted-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_lgbm_true-c1_water_pred-c4_other_predicted-output_waterfall.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 3,
+  "test_index": 243788,
+  "n_errors_test": 40569,
+  "base": -1.7755272946231306,
+  "fx": 0.777414144970793,
+  "top3": [
+   [
+    "B1",
+    0.08521062880754471,
+    0.777407715809386
+   ],
+   [
+    "swir1/nir",
+    0.6209850311279297,
+    0.6906450524914544
+   ],
+   [
+    "B3",
+    0.045120079070329666,
+    0.47474577131099066
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-123",
+  "title": "Fig. MADOS-123. LightGBM: misclassified pixel (true Water, predicted Other), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_lgbm_true-c1_water_pred-c4_other_true-output_waterfall.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 3,
+  "test_index": 243788,
+  "n_errors_test": 40569,
+  "base": -2.414699578961328,
+  "fx": -2.2355062308779736,
+  "top3": [
+   [
+    "glcm_contrast",
+    0.0,
+    0.5894083313827286
+   ],
+   [
+    "nir/red",
+    0.8032588958740234,
+    0.5425858374891687
+   ],
+   [
+    "B3",
+    0.045120079070329666,
+    -0.403987882372021
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-124",
+  "title": "Fig. MADOS-124. LightGBM: misclassified pixel (true Other, predicted Water), explaining the predicted-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_lgbm_true-c4_other_pred-c1_water_predicted-output_waterfall.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 3,
+  "pred": 0,
+  "test_index": 310023,
+  "n_errors_test": 13500,
+  "base": -2.414699578961328,
+  "fx": 0.1388276454839512,
+  "top3": [
+   [
+    "nir/red",
+    0.7399082183837891,
+    0.596905247939867
+   ],
+   [
+    "B5",
+    0.014893683604896069,
+    0.5507381473184796
+   ],
+   [
+    "B3",
+    0.024430133402347565,
+    -0.48417814894753974
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-125",
+  "title": "Fig. MADOS-125. LightGBM: misclassified pixel (true Other, predicted Water), explaining the true-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_lgbm_true-c4_other_pred-c1_water_true-output_waterfall.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 3,
+  "pred": 0,
+  "test_index": 310023,
+  "n_errors_test": 13500,
+  "base": -1.7755272946231306,
+  "fx": -2.075824650677783,
+  "top3": [
+   [
+    "B1",
+    0.053378861397504807,
+    -0.4920305913535412
+   ],
+   [
+    "swir1/nir",
+    0.5447163581848145,
+    0.4072948917851318
+   ],
+   [
+    "B5",
+    0.014893683604896069,
+    -0.3860436236212263
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-126",
+  "title": "Fig. MADOS-126. AdaBoost: misclassified pixel (true Water, predicted Other), explaining the predicted-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_ada_true-c1_water_pred-c4_other_predicted-output_waterfall.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 3,
+  "test_index": 231919,
+  "n_errors_test": 42568,
+  "base": 0.12364702483319688,
+  "fx": 0.3800730600315799,
+  "top3": [
+   [
+    "swir1/nir",
+    0.645868182182312,
+    0.12882159982516897
+   ],
+   [
+    "B1",
+    0.0867321789264679,
+    0.06782928973669186
+   ],
+   [
+    "nir/red",
+    0.7976577877998352,
+    0.06086222132493276
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-127",
+  "title": "Fig. MADOS-127. AdaBoost: misclassified pixel (true Water, predicted Other), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_ada_true-c1_water_pred-c4_other_true-output_waterfall.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 3,
+  "test_index": 231919,
+  "n_errors_test": 42568,
+  "base": 0.049761646049854766,
+  "fx": 0.23768302240624417,
+  "top3": [
+   [
+    "nir/red",
+    0.7976577877998352,
+    0.13505697174638043
+   ],
+   [
+    "swir1/nir",
+    0.645868182182312,
+    0.047679267979692665
+   ],
+   [
+    "glcm_contrast",
+    0.12713675200939178,
+    0.027843083181069234
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-128",
+  "title": "Fig. MADOS-128. AdaBoost: misclassified pixel (true Other, predicted Water), explaining the predicted-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_ada_true-c4_other_pred-c1_water_predicted-output_waterfall.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 3,
+  "pred": 0,
+  "test_index": 209334,
+  "n_errors_test": 17221,
+  "base": 0.049761646049854766,
+  "fx": 0.402432660616877,
+  "top3": [
+   [
+    "nir/red",
+    0.8171328902244568,
+    0.13056911284395029
+   ],
+   [
+    "swir1/nir",
+    0.9083783626556396,
+    0.12719474104291295
+   ],
+   [
+    "B3",
+    0.08301567286252975,
+    0.038566964959609325
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-129",
+  "title": "Fig. MADOS-129. AdaBoost: misclassified pixel (true Other, predicted Water), explaining the true-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_ada_true-c4_other_pred-c1_water_true-output_waterfall.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 3,
+  "pred": 0,
+  "test_index": 209334,
+  "n_errors_test": 17221,
+  "base": 0.12364702483319688,
+  "fx": 0.2642340086030961,
+  "top3": [
+   [
+    "swir1/nir",
+    0.9083783626556396,
+    0.12708845332090277
+   ],
+   [
+    "B1",
+    0.08801748603582382,
+    0.05852622614067513
+   ],
+   [
+    "glcm_contrast",
+    0.22930021584033966,
+    -0.04039215155935381
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-130",
+  "title": "Fig. MADOS-130. Linear SVM: misclassified pixel (true Water, predicted Other), explaining the predicted-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_svm_true-c1_water_pred-c4_other_predicted-output_waterfall.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 3,
+  "test_index": 235143,
+  "n_errors_test": 58359,
+  "base": -0.20036287768985037,
+  "fx": 0.6051539451370125,
+  "top3": [
+   [
+    "glcm_dissimilarity",
+    0.0,
+    -3.4438878289038604
+   ],
+   [
+    "glcm_homogeneity",
+    1.0,
+    3.021294685384125
+   ],
+   [
+    "B8",
+    0.030367886647582054,
+    -1.8908520620075422
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-131",
+  "title": "Fig. MADOS-131. Linear SVM: misclassified pixel (true Water, predicted Other), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_svm_true-c1_water_pred-c4_other_true-output_waterfall.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 3,
+  "test_index": 235143,
+  "n_errors_test": 58359,
+  "base": 0.07637266057754355,
+  "fx": 0.3040765245688305,
+  "top3": [
+   [
+    "glcm_dissimilarity",
+    0.0,
+    2.892754461869199
+   ],
+   [
+    "glcm_homogeneity",
+    1.0,
+    -2.432391120928013
+   ],
+   [
+    "glcm_energy",
+    1.0,
+    2.2559524320350306
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-132",
+  "title": "Fig. MADOS-132. Linear SVM: misclassified pixel (true Other, predicted Water), explaining the predicted-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_svm_true-c4_other_pred-c1_water_predicted-output_waterfall.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 3,
+  "pred": 0,
+  "test_index": 167479,
+  "n_errors_test": 20786,
+  "base": 0.07637266057754355,
+  "fx": 0.5165142621484452,
+  "top3": [
+   [
+    "glcm_energy",
+    0.4798092842102051,
+    -1.3517213362835716
+   ],
+   [
+    "B8",
+    0.03971491754055023,
+    1.122177724628475
+   ],
+   [
+    "nir/green",
+    0.7694695591926575,
+    -1.1071234663796383
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-133",
+  "title": "Fig. MADOS-133. Linear SVM: misclassified pixel (true Other, predicted Water), explaining the true-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MADOS/MADOS_svm_true-c4_other_pred-c1_water_true-output_waterfall.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 3,
+  "pred": 0,
+  "test_index": 167479,
+  "n_errors_test": 20786,
+  "base": -0.20036287768985037,
+  "fx": 0.041496076489927064,
+  "top3": [
+   [
+    "B8",
+    0.03971491754055023,
+    -1.3903038518537736
+   ],
+   [
+    "nir/green",
+    0.7694695591926575,
+    1.1262356586449882
+   ],
+   [
+    "glcm_energy",
+    0.4798092842102051,
+    0.9101459297310517
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-134",
+  "title": "Fig. MADOS-134. Random Forest: multi-output decision plot for the misclassified pixel of its waterfalls (true Water, predicted Other)",
+  "section": "D",
+  "item": "12",
+  "path": "05_individual_predictions/MADOS/MADOS_rf_true-c1_water_pred-c4_other_decision_plot.png",
+  "model": "rf",
+  "kind": "decision",
+  "true": 0,
+  "pred": 3,
+  "test_index": 273195,
+  "outputs": [
+   0.17,
+   0.0,
+   0.0,
+   0.83
+  ],
+  "base": [
+   0.2648000000000001,
+   0.22780000000000022,
+   0.24445000000000014,
+   0.2629500000000001
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MADOS-135",
+  "title": "Fig. MADOS-135. XGBoost: multi-output decision plot for the misclassified pixel of its waterfalls (true Water, predicted Other)",
+  "section": "D",
+  "item": "12",
+  "path": "05_individual_predictions/MADOS/MADOS_xgb_true-c1_water_pred-c4_other_decision_plot.png",
+  "model": "xgb",
+  "kind": "decision",
+  "true": 0,
+  "pred": 3,
+  "test_index": 235919,
+  "outputs": [
+   -0.06643249094486237,
+   -2.5697102546691895,
+   -5.899282455444336,
+   2.502647638320923
+  ],
+  "base": [
+   -0.3829322969259281,
+   -2.769083466596855,
+   -2.7514078786323073,
+   0.23324984046738184
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-136",
+  "title": "Fig. MADOS-136. LightGBM: multi-output decision plot for the misclassified pixel of its waterfalls (true Water, predicted Other)",
+  "section": "D",
+  "item": "12",
+  "path": "05_individual_predictions/MADOS/MADOS_lgbm_true-c1_water_pred-c4_other_decision_plot.png",
+  "model": "lgbm",
+  "kind": "decision",
+  "true": 0,
+  "pred": 3,
+  "test_index": 243788,
+  "outputs": [
+   -2.235506232835158,
+   -7.931336370783376,
+   -9.015056381041854,
+   0.7774141221458204
+  ],
+  "base": [
+   -2.414699578961328,
+   -5.111675771245898,
+   -5.396393352141063,
+   -1.7755272946231306
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MADOS-137",
+  "title": "Fig. MADOS-137. AdaBoost: multi-output decision plot for the misclassified pixel of its waterfalls (true Water, predicted Other)",
+  "section": "D",
+  "item": "12",
+  "path": "05_individual_predictions/MADOS/MADOS_ada_true-c1_water_pred-c4_other_decision_plot.png",
+  "model": "ada",
+  "kind": "decision",
+  "true": 0,
+  "pred": 3,
+  "test_index": 231919,
+  "outputs": [
+   0.23768302196028446,
+   -0.2844227478222089,
+   -0.33333333333333337,
+   0.38007305919525775
+  ],
+  "base": [
+   0.049761646049854766,
+   -0.06559234496775519,
+   -0.10781632591529629,
+   0.12364702483319688
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MADOS-138",
+  "title": "Fig. MADOS-138. Linear SVM: multi-output decision plot for the misclassified pixel of its waterfalls (true Water, predicted Other)",
+  "section": "D",
+  "item": "12",
+  "path": "05_individual_predictions/MADOS/MADOS_svm_true-c1_water_pred-c4_other_decision_plot.png",
+  "model": "svm",
+  "kind": "decision",
+  "true": 0,
+  "pred": 3,
+  "test_index": 235143,
+  "outputs": [
+   0.3040765055670523,
+   -1.2074011596649294,
+   -1.475228503505603,
+   0.6051539716931652
+  ],
+  "base": [
+   0.07637266057754355,
+   -3.1820593967991817,
+   -2.3861322931408067,
+   -0.20036287768985037
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MADOS-139",
+  "title": "Fig. MADOS-139. Confusion case study: true Class 1 Water predicted as Class 4 Other (220773 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MADOS/MADOS_case_true-c1_water_pred-c4_other.png",
+  "kind": "case_study",
+  "true": 0,
+  "pred": 3,
+  "total": 220773,
+  "per_model": {
+   "rf": {
+    "n_mis": 200,
+    "n_test_errors": 39748,
+    "top_shift": [
+     [
+      "nir/red",
+      0.02458139689797433,
+      -0.1147055844517136
+     ],
+     [
+      "B1",
+      0.08366927951900624,
+      -0.05170135015440712
+     ],
+     [
+      "nir/green",
+      0.034401440385430276,
+      -0.07036038775915926
+     ],
+     [
+      "B3",
+      0.05091052799320352,
+      -0.046058888519867634
+     ]
+    ],
+    "margin_mis_mean": 0.59015
+   },
+   "xgb": {
+    "n_mis": 179,
+    "n_test_errors": 39529,
+    "top_shift": [
+     [
+      "B3",
+      0.38605912253697144,
+      -0.7670878516755681
+     ],
+     [
+      "B1",
+      0.7371435201621316,
+      -0.253251224348313
+     ],
+     [
+      "nir/red",
+      -0.23711911614715606,
+      -1.0274323604992
+     ],
+     [
+      "swir1/nir",
+      0.39386635207191834,
+      -0.2821830421896232
+     ]
+    ],
+    "margin_mis_mean": 2.451298713684082
+   },
+   "lgbm": {
+    "n_mis": 176,
+    "n_test_errors": 40569,
+    "top_shift": [
+     [
+      "B3",
+      0.5397334868023095,
+      -0.8131205022987129
+     ],
+     [
+      "B1",
+      0.7430389425481533,
+      -0.3129586453381176
+     ],
+     [
+      "nir/red",
+      -0.23768421930182002,
+      -1.1346351213796382
+     ],
+     [
+      "B5",
+      0.2949014515782052,
+      -0.4375682576275634
+     ]
+    ],
+    "margin_mis_mean": 2.8845918167967968
+   },
+   "ada": {
+    "n_mis": 198,
+    "n_test_errors": 42568,
+    "top_shift": [
+     [
+      "nir/red",
+      -0.059653195087425226,
+      -0.24360067899969257
+     ],
+     [
+      "swir1/nir",
+      0.06619039947858181,
+      -0.041766150611361956
+     ],
+     [
+      "B1",
+      0.05669668794593436,
+      -0.002324533593344945
+     ],
+     [
+      "B3",
+      0.012200371293704423,
+      -0.046776579912454784
+     ]
+    ],
+    "margin_mis_mean": 0.15353069083555743
+   },
+   "svm": {
+    "n_mis": 224,
+    "n_test_errors": 58359,
+    "top_shift": [
+     [
+      "B4",
+      0.4384096151390183,
+      -1.4572331968876242
+     ],
+     [
+      "glcm_dissimilarity",
+      -2.1290432006027795,
+      -3.966335735591231
+     ],
+     [
+      "B3",
+      0.23729375468422992,
+      -1.5570336536368234
+     ],
+     [
+      "glcm_homogeneity",
+      1.3929262957020392,
+      2.9674592380273657
+     ]
+    ],
+    "margin_mis_mean": 0.4482266509622388
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-140",
+  "title": "Fig. MADOS-140. Confusion case study: true Class 4 Other predicted as Class 1 Water (82222 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MADOS/MADOS_case_true-c4_other_pred-c1_water.png",
+  "kind": "case_study",
+  "true": 3,
+  "pred": 0,
+  "total": 82222,
+  "per_model": {
+   "rf": {
+    "n_mis": 238,
+    "n_test_errors": 17433,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      0.054863443288189276,
+      -0.04812145776606087
+     ],
+     [
+      "swir1/nir",
+      0.05546338504051316,
+      -0.04268247903418574
+     ],
+     [
+      "B1",
+      0.06983370404663415,
+      -0.02540232000759255
+     ],
+     [
+      "B11",
+      0.020679039995904886,
+      -0.06887413104211795
+     ]
+    ],
+    "margin_mis_mean": 0.5655042016806722
+   },
+   "xgb": {
+    "n_mis": 179,
+    "n_test_errors": 13282,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      0.6802137451757517,
+      -0.24216285227598427
+     ],
+     [
+      "B1",
+      0.4146649390029289,
+      -0.4350225935351234
+     ],
+     [
+      "swir1/nir",
+      0.47919219418335723,
+      -0.3225825313315677
+     ],
+     [
+      "B8A",
+      0.25408868229625087,
+      -0.12630034322218422
+     ]
+    ],
+    "margin_mis_mean": 2.1245689392089844
+   },
+   "lgbm": {
+    "n_mis": 190,
+    "n_test_errors": 13500,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      0.743242345501629,
+      -0.3227735635596924
+     ],
+     [
+      "B1",
+      0.5366913527208902,
+      -0.39361890449577275
+     ],
+     [
+      "swir1/nir",
+      0.40115972831842756,
+      -0.3106726795427288
+     ],
+     [
+      "B8A",
+      0.32997444430763656,
+      -0.12070736288873625
+     ]
+    ],
+    "margin_mis_mean": 2.372423100289025
+   },
+   "ada": {
+    "n_mis": 209,
+    "n_test_errors": 17221,
+    "top_shift": [
+     [
+      "swir1/nir",
+      0.026877411642080077,
+      -0.06204110306134824
+     ],
+     [
+      "glcm_contrast",
+      0.06003106972667759,
+      -0.019030927978389182
+     ],
+     [
+      "B1",
+      -0.007284525287049066,
+      -0.07280813662228323
+     ],
+     [
+      "nir/red",
+      0.08707946384788502,
+      0.023059908841885902
+     ]
+    ],
+    "margin_mis_mean": 0.16284462372663452
+   },
+   "svm": {
+    "n_mis": 269,
+    "n_test_errors": 20786,
+    "top_shift": [
+     [
+      "glcm_dissimilarity",
+      2.517695013950986,
+      -3.737637911164456
+     ],
+     [
+      "glcm_homogeneity",
+      -1.5149816233738023,
+      2.3912729001774
+     ],
+     [
+      "B8",
+      2.4644965350643764,
+      -0.3256799515700912
+     ],
+     [
+      "glcm_energy",
+      0.911515272510782,
+      -1.0920390209789392
+     ]
+    ],
+    "margin_mis_mean": 0.5972519172510761
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-141",
+  "title": "Fig. MADOS-141. Confusion case study: true Class 1 Water predicted as Class 2 Marine Debris (5722 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MADOS/MADOS_case_true-c1_water_pred-c2_debris.png",
+  "kind": "case_study",
+  "true": 0,
+  "pred": 1,
+  "total": 5722,
+  "per_model": {
+   "rf": {
+    "n_mis": 21,
+    "n_test_errors": 21,
+    "top_shift": [
+     [
+      "nir/red",
+      0.04864650092442924,
+      -0.11859292637043067
+     ],
+     [
+      "swir1/nir",
+      0.07249219398436832,
+      -0.06851835285401804
+     ],
+     [
+      "NDWI",
+      0.034216721707105345,
+      -0.08720394938343104
+     ],
+     [
+      "nir/green",
+      0.03680464374084271,
+      -0.08208747712531633
+     ]
+    ],
+    "margin_mis_mean": 0.3314285714285714
+   },
+   "xgb": {
+    "n_mis": 68,
+    "n_test_errors": 130,
+    "top_shift": [
+     [
+      "swir1/nir",
+      1.776611290919082,
+      -1.0831727898436374
+     ],
+     [
+      "nir/red",
+      1.2137754175490552,
+      -1.3482788927618787
+     ],
+     [
+      "NDWI",
+      0.2985719678910391,
+      -0.8156537874582427
+     ],
+     [
+      "nir/green",
+      0.49409989530881665,
+      -0.6181490473188049
+     ]
+    ],
+    "margin_mis_mean": 2.723512649536133
+   },
+   "lgbm": {
+    "n_mis": 65,
+    "n_test_errors": 120,
+    "top_shift": [
+     [
+      "swir1/nir",
+      1.6797261330963162,
+      -1.1555612775941624
+     ],
+     [
+      "nir/red",
+      1.178805252026384,
+      -1.6540934259176656
+     ],
+     [
+      "NDWI",
+      0.3955094035104244,
+      -0.8519208168028622
+     ],
+     [
+      "B5",
+      0.410719728982544,
+      -0.7738964301416801
+     ]
+    ],
+    "margin_mis_mean": 2.6778771240938073
+   },
+   "ada": {
+    "n_mis": 82,
+    "n_test_errors": 5423,
+    "top_shift": [
+     [
+      "nir/red",
+      0.20102880395804773,
+      -0.271513257671159
+     ],
+     [
+      "swir1/nir",
+      0.18197980334954586,
+      -0.10234114415607153
+     ],
+     [
+      "NDWI",
+      0.0487962936691616,
+      -0.09816080497428248
+     ],
+     [
+      "nir/green",
+      0.01856634686405701,
+      -0.025061612983212474
+     ]
+    ],
+    "margin_mis_mean": 0.27295238203912514
+   },
+   "svm": {
+    "n_mis": 28,
+    "n_test_errors": 28,
+    "top_shift": [
+     [
+      "NDWI",
+      -1.3258164746392096,
+      -6.153495235834129
+     ],
+     [
+      "nir/green",
+      4.186739928854044,
+      7.6323719451904815
+     ],
+     [
+      "B5",
+      1.7338554197378,
+      -0.8149895639906503
+     ],
+     [
+      "glcm_dissimilarity",
+      -0.048533348712746616,
+      -2.3501601537322636
+     ]
+    ],
+    "margin_mis_mean": 0.447834385506701
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-142",
+  "title": "Fig. MADOS-142. Confusion case study: true Class 4 Other predicted as Class 2 Marine Debris (4221 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MADOS/MADOS_case_true-c4_other_pred-c2_debris.png",
+  "kind": "case_study",
+  "true": 3,
+  "pred": 1,
+  "total": 4221,
+  "per_model": {
+   "rf": {
+    "n_mis": 61,
+    "n_test_errors": 334,
+    "top_shift": [
+     [
+      "swir1/nir",
+      0.0863977594636402,
+      -0.10859633601931913
+     ],
+     [
+      "B12",
+      0.08549419200738567,
+      -0.08797966829295256
+     ],
+     [
+      "B11",
+      0.02821725421456809,
+      -0.06541275249966906
+     ],
+     [
+      "B1",
+      0.043500258404795,
+      -0.04812272616189101
+     ]
+    ],
+    "margin_mis_mean": 0.4070491803278689
+   },
+   "xgb": {
+    "n_mis": 126,
+    "n_test_errors": 1029,
+    "top_shift": [
+     [
+      "swir1/nir",
+      2.242170672741279,
+      -2.0845534513132296
+     ],
+     [
+      "B12",
+      0.563689545327645,
+      -0.7597652245443983
+     ],
+     [
+      "nir/red",
+      1.1671099734161963,
+      0.14158079996445475
+     ],
+     [
+      "B1",
+      0.4076793435340297,
+      -0.550793342620695
+     ]
+    ],
+    "margin_mis_mean": 2.139519453048706
+   },
+   "lgbm": {
+    "n_mis": 120,
+    "n_test_errors": 990,
+    "top_shift": [
+     [
+      "swir1/nir",
+      2.234893306203893,
+      -2.0298796430852852
+     ],
+     [
+      "B12",
+      0.9393980083756757,
+      -1.1062127854394959
+     ],
+     [
+      "B1",
+      0.5014219653347353,
+      -0.5936769031346122
+     ],
+     [
+      "nir/red",
+      1.170538970809389,
+      0.07772761846821158
+     ]
+    ],
+    "margin_mis_mean": 2.5109720168327723
+   },
+   "ada": {
+    "n_mis": 129,
+    "n_test_errors": 1481,
+    "top_shift": [
+     [
+      "swir1/nir",
+      0.23228703223797412,
+      -0.26116054379400194
+     ],
+     [
+      "nir/red",
+      0.053762958121423725,
+      -0.04933135876634815
+     ],
+     [
+      "B1",
+      0.01105467886159056,
+      -0.08173661538417863
+     ],
+     [
+      "NDWI",
+      0.02865114820888266,
+      -0.04564499626563902
+     ]
+    ],
+    "margin_mis_mean": 0.14663072887009737
+   },
+   "svm": {
+    "n_mis": 52,
+    "n_test_errors": 387,
+    "top_shift": [
+     [
+      "NDWI",
+      2.5313990720067325,
+      -2.5680348587349147
+     ],
+     [
+      "nir/green",
+      -0.05372082432994967,
+      2.599853852878757
+     ],
+     [
+      "B8",
+      -1.7117930870655864,
+      -0.1813789027893963
+     ],
+     [
+      "B11",
+      3.9648886678234496,
+      2.4559772571318006
+     ]
+    ],
+    "margin_mis_mean": 0.7675237160930019
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-143",
+  "title": "Fig. MADOS-143. Confusion case study: true Class 3 Sargassum predicted as Class 1 Water (1322 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MADOS/MADOS_case_true-c3_sargassum_pred-c1_water.png",
+  "kind": "case_study",
+  "true": 2,
+  "pred": 0,
+  "total": 1322,
+  "per_model": {
+   "rf": {
+    "n_mis": 146,
+    "n_test_errors": 249,
+    "top_shift": [
+     [
+      "nir/red",
+      0.08271806038200649,
+      -0.28397141210348303
+     ],
+     [
+      "NDWI",
+      0.08476543074356545,
+      -0.14010467691806003
+     ],
+     [
+      "nir/green",
+      0.07743035503118906,
+      -0.13914435692181773
+     ],
+     [
+      "swir1/nir",
+      0.02422489985421527,
+      -0.08771558133468903
+     ]
+    ],
+    "margin_mis_mean": 0.6220547945205479
+   },
+   "xgb": {
+    "n_mis": 92,
+    "n_test_errors": 132,
+    "top_shift": [
+     [
+      "nir/red",
+      1.5132052546238879,
+      -4.186304212460155
+     ],
+     [
+      "B2",
+      0.17102278014285613,
+      -1.2527640737390204
+     ],
+     [
+      "NDWI",
+      0.4055672017094786,
+      -0.7649035632098314
+     ],
+     [
+      "swir1/nir",
+      0.020069937165114782,
+      -0.8303014868372627
+     ]
+    ],
+    "margin_mis_mean": 6.055177211761475
+   },
+   "lgbm": {
+    "n_mis": 106,
+    "n_test_errors": 172,
+    "top_shift": [
+     [
+      "nir/red",
+      0.7567538656173662,
+      -4.362511800971082
+     ],
+     [
+      "B2",
+      -0.15625503722481102,
+      -1.583348140153263
+     ],
+     [
+      "swir1/nir",
+      0.08436036812893295,
+      -1.0601107205099836
+     ],
+     [
+      "NDWI",
+      0.305995737079576,
+      -0.7504068339406446
+     ]
+    ],
+    "margin_mis_mean": 6.524514237363279
+   },
+   "ada": {
+    "n_mis": 106,
+    "n_test_errors": 180,
+    "top_shift": [
+     [
+      "nir/red",
+      0.2729148573772641,
+      -0.5735267282291858
+     ],
+     [
+      "NDWI",
+      0.031875990657492775,
+      -0.056318497200428516
+     ],
+     [
+      "swir1/nir",
+      0.001792945098911655,
+      -0.07721889061229242
+     ],
+     [
+      "B1",
+      0.042342642672147976,
+      -0.021069743529845485
+     ]
+    ],
+    "margin_mis_mean": 0.5798782466604531
+   },
+   "svm": {
+    "n_mis": 309,
+    "n_test_errors": 589,
+    "top_shift": [
+     [
+      "glcm_dissimilarity",
+      10.25834121038626,
+      2.2504323738732723
+     ],
+     [
+      "glcm_homogeneity",
+      -7.063371269305693,
+      0.0279757447070938
+     ],
+     [
+      "B6",
+      2.4233004710384263,
+      -2.269240597997098
+     ],
+     [
+      "B8A",
+      -2.2886674620012175,
+      2.011616381918377
+     ]
+    ],
+    "margin_mis_mean": 1.099131058436362
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-144",
+  "title": "Fig. MADOS-144. Confusion case study: true Class 3 Sargassum predicted as Class 4 Other (1166 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MADOS/MADOS_case_true-c3_sargassum_pred-c4_other.png",
+  "kind": "case_study",
+  "true": 2,
+  "pred": 3,
+  "total": 1166,
+  "per_model": {
+   "rf": {
+    "n_mis": 226,
+    "n_test_errors": 591,
+    "top_shift": [
+     [
+      "nir/red",
+      0.05112937217058113,
+      -0.23892657921101831
+     ],
+     [
+      "swir1/nir",
+      0.049237465247642755,
+      -0.11361946251076845
+     ],
+     [
+      "B11",
+      0.044797165690582195,
+      -0.0938742568722515
+     ],
+     [
+      "nir/green",
+      0.04630771622542619,
+      -0.0886559834684935
+     ]
+    ],
+    "margin_mis_mean": 0.4256194690265487
+   },
+   "xgb": {
+    "n_mis": 119,
+    "n_test_errors": 208,
+    "top_shift": [
+     [
+      "nir/red",
+      0.44078030016002046,
+      -3.289778338816327
+     ],
+     [
+      "B2",
+      0.335777560096023,
+      -1.434976868119216
+     ],
+     [
+      "swir1/nir",
+      0.2802061335524034,
+      -1.0038641228224647
+     ],
+     [
+      "B11",
+      0.4654538212345825,
+      -0.6617814305393397
+     ]
+    ],
+    "margin_mis_mean": 4.8079915046691895
+   },
+   "lgbm": {
+    "n_mis": 114,
+    "n_test_errors": 215,
+    "top_shift": [
+     [
+      "nir/red",
+      0.39268628715670256,
+      -3.370411022976366
+     ],
+     [
+      "B2",
+      0.180463362252572,
+      -1.687018675179409
+     ],
+     [
+      "swir1/nir",
+      0.4618549040011962,
+      -1.2869474308471103
+     ],
+     [
+      "B6",
+      0.07717538186862374,
+      -0.8194375639143889
+     ]
+    ],
+    "margin_mis_mean": 5.832513886133189
+   },
+   "ada": {
+    "n_mis": 66,
+    "n_test_errors": 100,
+    "top_shift": [
+     [
+      "nir/red",
+      -0.11632863515541735,
+      -0.43512757128284213
+     ],
+     [
+      "B2",
+      0.026485550367620875,
+      -0.06645684496359705
+     ],
+     [
+      "B11",
+      0.05167383288852623,
+      -0.039150848152003995
+     ],
+     [
+      "B1",
+      0.03998910740575274,
+      -0.046143074894479844
+     ]
+    ],
+    "margin_mis_mean": 0.21871918074791052
+   },
+   "svm": {
+    "n_mis": 46,
+    "n_test_errors": 52,
+    "top_shift": [
+     [
+      "B8",
+      8.376404641558349,
+      2.097470410384586
+     ],
+     [
+      "B8A",
+      6.3441212944083585,
+      1.8340468886445584
+     ],
+     [
+      "B3",
+      -1.998334422731972,
+      1.9192703588110636
+     ],
+     [
+      "B7",
+      -6.007053239171395,
+      -2.338652473028483
+     ]
+    ],
+    "margin_mis_mean": 1.769732135402937
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-145",
+  "title": "Fig. MADOS-145. Confusion case study: true Class 1 Water predicted as Class 3 Sargassum (996 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MADOS/MADOS_case_true-c1_water_pred-c3_sargassum.png",
+  "kind": "case_study",
+  "true": 0,
+  "pred": 2,
+  "total": 996,
+  "per_model": {
+   "rf": {
+    "n_mis": 27,
+    "n_test_errors": 27,
+    "top_shift": [
+     [
+      "nir/red",
+      0.12287974159162493,
+      -0.16386254824173582
+     ],
+     [
+      "B1",
+      0.07536091824834391,
+      -0.044755585590514985
+     ],
+     [
+      "NDWI",
+      0.012798222203869284,
+      -0.09101906357682792
+     ],
+     [
+      "B4",
+      0.052499088554827954,
+      -0.04899426420734183
+     ]
+    ],
+    "margin_mis_mean": 0.3055555555555556
+   },
+   "xgb": {
+    "n_mis": 74,
+    "n_test_errors": 170,
+    "top_shift": [
+     [
+      "nir/red",
+      1.2354057430833394,
+      -2.5069896088846333
+     ],
+     [
+      "B3",
+      1.6234842129619167,
+      -0.8000535212505526
+     ],
+     [
+      "B2",
+      1.127873158730862,
+      -0.48862402222307283
+     ],
+     [
+      "B1",
+      0.6877524347910202,
+      -0.22423545029766398
+     ]
+    ],
+    "margin_mis_mean": 1.5536037683486938
+   },
+   "lgbm": {
+    "n_mis": 68,
+    "n_test_errors": 142,
+    "top_shift": [
+     [
+      "nir/red",
+      1.2401171750327726,
+      -2.8037683776038844
+     ],
+     [
+      "B3",
+      1.9001379502004128,
+      -0.891630326859261
+     ],
+     [
+      "B2",
+      1.4891415436034194,
+      -0.6534757345099853
+     ],
+     [
+      "B6",
+      -1.1989976457595786,
+      -0.2263983869538233
+     ]
+    ],
+    "margin_mis_mean": 1.580750503424005
+   },
+   "ada": {
+    "n_mis": 87,
+    "n_test_errors": 644,
+    "top_shift": [
+     [
+      "nir/red",
+      0.2705305998810251,
+      -0.3743333579708017
+     ],
+     [
+      "B1",
+      0.07768164218601442,
+      -0.02898611477061554
+     ],
+     [
+      "B3",
+      0.06153452024947659,
+      -0.028729423221190764
+     ],
+     [
+      "swir1/nir",
+      0.01219647091373148,
+      -0.05669588208126142
+     ]
+    ],
+    "margin_mis_mean": 0.2919174998249017
+   },
+   "svm": {
+    "n_mis": 13,
+    "n_test_errors": 13,
+    "top_shift": [
+     [
+      "B4",
+      3.887333301005907,
+      -2.536491980021154
+     ],
+     [
+      "B6",
+      -3.6464860922549294,
+      -0.30220355792225995
+     ],
+     [
+      "B8A",
+      3.1130404345537404,
+      1.0550543926997686
+     ],
+     [
+      "NDWI",
+      -0.09457828079056264,
+      -1.823263243037756
+     ]
+    ],
+    "margin_mis_mean": 0.7138512938186936
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-146",
+  "title": "Fig. MADOS-146. Confusion case study: true Class 3 Sargassum predicted as Class 2 Marine Debris (940 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MADOS/MADOS_case_true-c3_sargassum_pred-c2_debris.png",
+  "kind": "case_study",
+  "true": 2,
+  "pred": 1,
+  "total": 940,
+  "per_model": {
+   "rf": {
+    "n_mis": 29,
+    "n_test_errors": 29,
+    "top_shift": [
+     [
+      "nir/red",
+      0.053024931809154886,
+      -0.2691859089012419
+     ],
+     [
+      "nir/green",
+      0.04696149328573229,
+      -0.10243522203086441
+     ],
+     [
+      "NDWI",
+      0.04227735504462426,
+      -0.09995175530539038
+     ],
+     [
+      "B2",
+      0.011685484254457364,
+      -0.08218916189628854
+     ]
+    ],
+    "margin_mis_mean": 0.20862068965517244
+   },
+   "xgb": {
+    "n_mis": 110,
+    "n_test_errors": 244,
+    "top_shift": [
+     [
+      "nir/red",
+      0.13313705699019854,
+      -4.693197669650635
+     ],
+     [
+      "B2",
+      -0.06441165024821849,
+      -1.4841531180159386
+     ],
+     [
+      "swir1/nir",
+      1.5371836497733877,
+      0.6318661525467604
+     ],
+     [
+      "B3",
+      0.4488840960616045,
+      -0.2717019125346114
+     ]
+    ],
+    "margin_mis_mean": 2.177382707595825
+   },
+   "lgbm": {
+    "n_mis": 100,
+    "n_test_errors": 222,
+    "top_shift": [
+     [
+      "nir/red",
+      -0.3278856384647311,
+      -4.498003838446367
+     ],
+     [
+      "B2",
+      -0.39478873496375144,
+      -1.8021085500493044
+     ],
+     [
+      "B3",
+      0.810935769622843,
+      -0.3514283437922892
+     ],
+     [
+      "swir1/nir",
+      1.4846527461966332,
+      0.5419306810407902
+     ]
+    ],
+    "margin_mis_mean": 2.6341037381615484
+   },
+   "ada": {
+    "n_mis": 203,
+    "n_test_errors": 442,
+    "top_shift": [
+     [
+      "nir/red",
+      0.03270542867343502,
+      -0.44565225015950793
+     ],
+     [
+      "nir/green",
+      0.0208573481614651,
+      -0.023330383934275462
+     ],
+     [
+      "glcm_contrast",
+      -0.05099166698830394,
+      -0.007049945295144317
+     ],
+     [
+      "B2",
+      -0.013842366977140032,
+      -0.05499475457714799
+     ]
+    ],
+    "margin_mis_mean": 0.1591230426015564
+   },
+   "svm": {
+    "n_mis": 3,
+    "n_test_errors": 3
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-147",
+  "title": "Fig. MADOS-147. Confusion case study: true Class 2 Marine Debris predicted as Class 4 Other (754 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MADOS/MADOS_case_true-c2_debris_pred-c4_other.png",
+  "kind": "case_study",
+  "true": 1,
+  "pred": 3,
+  "total": 754,
+  "per_model": {
+   "rf": {
+    "n_mis": 148,
+    "n_test_errors": 183,
+    "top_shift": [
+     [
+      "B12",
+      0.1319386473364759,
+      -0.09905926889114956
+     ],
+     [
+      "swir1/nir",
+      0.02746088526808732,
+      -0.09835368000956383
+     ],
+     [
+      "B11",
+      0.06938657553499926,
+      -0.043904430131090175
+     ],
+     [
+      "glcm_contrast",
+      0.09092038924941019,
+      -0.010607652118696135
+     ]
+    ],
+    "margin_mis_mean": 0.6208108108108108
+   },
+   "xgb": {
+    "n_mis": 95,
+    "n_test_errors": 101,
+    "top_shift": [
+     [
+      "B12",
+      2.0802476446441878,
+      -0.6203096633835689
+     ],
+     [
+      "swir1/nir",
+      0.24429270147326815,
+      -2.3794058836098793
+     ],
+     [
+      "B5",
+      0.44115661518220906,
+      -0.5793578976115695
+     ],
+     [
+      "glcm_dissimilarity",
+      0.6356256008012247,
+      -0.001092881802016424
+     ]
+    ],
+    "margin_mis_mean": 4.972620964050293
+   },
+   "lgbm": {
+    "n_mis": 100,
+    "n_test_errors": 107,
+    "top_shift": [
+     [
+      "B12",
+      2.698974554868721,
+      -1.129430616175728
+     ],
+     [
+      "swir1/nir",
+      0.017755845685288964,
+      -2.2638223398548196
+     ],
+     [
+      "B5",
+      0.5105953895235167,
+      -0.7301068269905614
+     ],
+     [
+      "B8A",
+      -0.8297957391086329,
+      0.11890095744676314
+     ]
+    ],
+    "margin_mis_mean": 4.747093462715318
+   },
+   "ada": {
+    "n_mis": 133,
+    "n_test_errors": 147,
+    "top_shift": [
+     [
+      "swir1/nir",
+      0.04936938602758722,
+      -0.24095165978825023
+     ],
+     [
+      "B1",
+      0.05499822180161053,
+      -0.04892653356728953
+     ],
+     [
+      "B11",
+      0.04092498798751801,
+      -0.013227364802616642
+     ],
+     [
+      "glcm_contrast",
+      0.05296326762216718,
+      0.009270197569259573
+     ]
+    ],
+    "margin_mis_mean": 0.37031727499206746
+   },
+   "svm": {
+    "n_mis": 152,
+    "n_test_errors": 216,
+    "top_shift": [
+     [
+      "glcm_dissimilarity",
+      7.877068610807775,
+      -0.3643092906677845
+     ],
+     [
+      "B11",
+      -3.9678762627096815,
+      1.4347816260109203
+     ],
+     [
+      "B5",
+      2.9073603985427425,
+      -1.7850299911304466
+     ],
+     [
+      "B8",
+      3.301661623762598,
+      -1.13740593866815
+     ]
+    ],
+    "margin_mis_mean": 3.3200719500955476
+   }
+  }
+ },
+ {
+  "id": "Fig. MADOS-148",
+  "title": "Fig. MADOS-148. Confusion case study: true Class 2 Marine Debris predicted as Class 1 Water (244 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MADOS/MADOS_case_true-c2_debris_pred-c1_water.png",
+  "kind": "case_study",
+  "true": 1,
+  "pred": 0,
+  "total": 244,
+  "per_model": {
+   "rf": {
+    "n_mis": 39,
+    "n_test_errors": 39,
+    "top_shift": [
+     [
+      "swir1/nir",
+      0.0388924194733874,
+      -0.14997256614782772
+     ],
+     [
+      "NDWI",
+      0.06085622450263081,
+      -0.05539582018333382
+     ],
+     [
+      "nir/green",
+      0.04964693863995849,
+      -0.053372571336239426
+     ],
+     [
+      "nir/red",
+      0.025320574338260453,
+      -0.06161029506091459
+     ]
+    ],
+    "margin_mis_mean": 0.3358974358974359
+   },
+   "xgb": {
+    "n_mis": 9,
+    "n_test_errors": 9,
+    "top_shift": [
+     [
+      "swir1/nir",
+      -1.1319188462318077,
+      -2.5301234035577216
+     ],
+     [
+      "nir/red",
+      -0.10410626154404273,
+      -1.2234901285445168
+     ],
+     [
+      "NDWI",
+      0.39397330993277135,
+      -0.43967963027942986
+     ],
+     [
+      "red/green",
+      0.014863642979924215,
+      -0.5358684194612112
+     ]
+    ],
+    "margin_mis_mean": 0.9858813881874084
+   },
+   "lgbm": {
+    "n_mis": 6,
+    "n_test_errors": 6,
+    "top_shift": [
+     [
+      "swir1/nir",
+      -0.6018234628001664,
+      -2.5095530072781784
+     ],
+     [
+      "red/green",
+      0.37272207438174526,
+      -0.7147917132565353
+     ],
+     [
+      "NDWI",
+      0.4751490783455665,
+      -0.6036749562895671
+     ],
+     [
+      "nir/red",
+      -0.3428433374946569,
+      -1.1098212464693786
+     ]
+    ],
+    "margin_mis_mean": 1.8925435785255063
+   },
+   "ada": {
+    "n_mis": 58,
+    "n_test_errors": 59,
+    "top_shift": [
+     [
+      "nir/red",
+      0.17879280147771945,
+      -0.12694801197455197
+     ],
+     [
+      "swir1/nir",
+      -0.15298367694033316,
+      -0.24507336461635218
+     ],
+     [
+      "glcm_contrast",
+      0.039430909722557715,
+      -0.023748240468064535
+     ],
+     [
+      "NDWI",
+      -0.0007545626664670692,
+      -0.058599563503682284
+     ]
+    ],
+    "margin_mis_mean": 0.14005884860689222
+   },
+   "svm": {
+    "n_mis": 102,
+    "n_test_errors": 131,
+    "top_shift": [
+     [
+      "nir/green",
+      -5.208415669501258,
+      -2.621178461770233
+     ],
+     [
+      "NDWI",
+      2.420631260669874,
+      -0.14557010247026667
+     ],
+     [
+      "glcm_dissimilarity",
+      2.182859065647385,
+      0.529760001433188
+     ],
+     [
+      "glcm_homogeneity",
+      -1.5479726607966857,
+      -0.38050149598758215
+     ]
+    ],
+    "margin_mis_mean": 0.49923819832470984
+   }
+  }
+ }
+]

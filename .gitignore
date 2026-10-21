@@ -8,6 +8,9 @@ data/env_sst_chl_wind/*
 !data/env_sst_chl_wind/marida_env_sst_chl_wind.csv
 
 
+SHAP\Analysis2\results\run_log_compute.txt
+SHAP\Analysis2\results\run_log_replot.txt
+
 checkpoints/
 
 __pycache__/
