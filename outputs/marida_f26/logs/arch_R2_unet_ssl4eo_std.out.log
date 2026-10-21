@@ -1,0 +1,13 @@
+# Architecture and input pipeline: run R2_unet_ssl4eo_std
+
+**Model**: U-Net (segmentation_models_pytorch) with a ResNet-50 encoder: 5 encoder stages (strides 2-32), a decoder of 5 upsampling blocks (256, 128, 64, 32, 16 channels) with skip connections from every encoder stage, and a 3x3 convolution to the class scores at full resolution.
+
+**Initialisation**: Encoder initialised from SSL4EO-S12 MoCo ResNet-50 weights (torchgeo `ResNet50_Weights.SENTINEL2_ALL_MOCO`, pretrained on 13-band Sentinel-2 L1C / 10000). First convolution (64 filters, 7×7, stride 2): the pretrained filters of B1–B8, B8A, B11, B12 are copied to input channels 1–11 (B9 and B10 dropped); the filters of channels 12–26 start at zero, so at the start the network sees only the bands and learns how to use the 15 extra channels. The decoder is randomly initialised.
+
+**Parameters**: 32,593,668 (32,593,668 trainable).
+
+**Output**: 4 class scores per pixel (Water, Marine Debris, Algae/Sargassum, Other); softmax → probabilities; prediction = argmax. Unlabelled pixels are ignored by the loss and the scores.
+
+## How the features are fed in
+
+-> C:\PROJECT\5class_marine_pollution\outputs\marida_f26\runs\R2_unet_ssl4eo_std/architecture.md, model_summary.txt

@@ -30,6 +30,7 @@ gives overall and per-class precision, recall, F1, IoU and accuracy, plus kappa.
 | `scripts/unet_ssl4eo/` | U-Net with an SSL4EO-S12 pretrained ResNet-50 encoder |
 | `scripts/segnext/` | SegNeXt-T and the MariNeXt architecture (`--first-stage`) |
 | `scripts/ensemble/` | U-Net + Random Forest probability ensemble |
+| `scripts/marida_f26/` | MARIDA study: U-Net, SegNeXt-T, MariNeXt arch. on 26 features, RF, ensemble, SHAP and Seg-Grad-CAM (see its README) |
 | `scripts/resnet_paper/` | MARIDA's multi-label ResNet baseline (patch classifier) |
 | `outputs/<pipeline>/` | results of each pipeline, with `logs/` holding the runner scripts |
 | `outputs/paper_compare/` | MADOS paper's MariNeXt results collapsed to our 4 classes |

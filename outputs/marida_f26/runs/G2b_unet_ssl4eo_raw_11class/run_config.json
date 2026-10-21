@@ -1,0 +1,128 @@
+{
+  "run": "G2b_unet_ssl4eo_raw_11class",
+  "title": "U-Net (ResNet-50), SSL4EO-S12 pretrained, raw-reflectance bands",
+  "dataset": "MARIDA",
+  "model": "unet",
+  "init": "ssl4eo",
+  "bands": "raw",
+  "classes": 11,
+  "class_names": [
+    "Marine Debris",
+    "Dense Sargassum",
+    "Sparse Sargassum",
+    "Natural Organic Material",
+    "Ship",
+    "Clouds",
+    "Marine Water",
+    "Sediment-Laden Water",
+    "Foam",
+    "Turbid Water",
+    "Shallow Water"
+  ],
+  "channels": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "NDVI",
+    "NDWI",
+    "FAI",
+    "FDI",
+    "NDMI",
+    "red/green",
+    "nir/red",
+    "nir/green",
+    "swir1/nir",
+    "glcm_contrast",
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    "glcm_energy",
+    "glcm_correlation",
+    "glcm_asm"
+  ],
+  "groups": {
+    "bands": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7",
+      "B8",
+      "B8A",
+      "B11",
+      "B12"
+    ],
+    "indices": [
+      "NDVI",
+      "NDWI",
+      "FAI",
+      "FDI",
+      "NDMI"
+    ],
+    "ratios": [
+      "red/green",
+      "nir/red",
+      "nir/green",
+      "swir1/nir"
+    ],
+    "GLCM": [
+      "glcm_contrast",
+      "glcm_dissimilarity",
+      "glcm_homogeneity",
+      "glcm_energy",
+      "glcm_correlation",
+      "glcm_asm"
+    ]
+  },
+  "recipe": {
+    "epochs": 45,
+    "batch": 5,
+    "lr": 0.0002,
+    "decay": 0.0,
+    "lr_steps": [
+      40
+    ],
+    "gamma": 0.1,
+    "weight_param": 1.03,
+    "seed": 0,
+    "vscp": false,
+    "ema": false,
+    "tta": "soft, 8 views (4 rotations x 2 flips), softmax averaged",
+    "select": "best validation macro F1 with soft TTA"
+  },
+  "train_annotated_pixels": {
+    "Marine Debris": 1943,
+    "Dense Sargassum": 870,
+    "Sparse Sargassum": 1091,
+    "Natural Organic Material": 723,
+    "Ship": 3289,
+    "Clouds": 65295,
+    "Marine Water": 100725,
+    "Sediment-Laden Water": 154335,
+    "Foam": 469,
+    "Turbid Water": 86820,
+    "Shallow Water": 13852
+  },
+  "ce_weight": {
+    "Marine Debris": 29.4619,
+    "Dense Sargassum": 31.722,
+    "Sparse Sargassum": 31.2281,
+    "Natural Organic Material": 32.0594,
+    "Ship": 27.0508,
+    "Clouds": 5.9789,
+    "Marine Water": 4.2602,
+    "Sediment-Laden Water": 3.0406,
+    "Foam": 32.6599,
+    "Turbid Water": 4.7896,
+    "Shallow Water": 16.5571
+  }
+}
