@@ -1,0 +1,6 @@
+
+=== MARIDA: train 358,442 [350057   1943   1961   4481] | test 158,371 [154739    381   1641   1610] | 22 features
+  xgb   fit      9s  F1 0.8828 (recorded 0.8828)  debris F1 0.7739 (recorded 0.7739)  max|diff| 0.00e+00
+  lgbm  fit      6s  F1 0.8855 (recorded 0.8855)  debris F1 0.7783 (recorded 0.7783)  max|diff| 1.11e-16
+  svm   fit      4s  F1 0.8472 (recorded 0.8472)  debris F1 0.7446 (recorded 0.7446)  max|diff| 1.11e-16
+  ada   fit    236s  F1 0.7988 (recorded 0.7988)  debris F1 0.4880 (recorded 0.4880)  max|diff| 1.11e-16

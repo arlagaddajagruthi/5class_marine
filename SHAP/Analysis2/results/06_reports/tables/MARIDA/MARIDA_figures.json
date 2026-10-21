@@ -1,0 +1,7981 @@
+[
+ {
+  "id": "Fig. MARIDA-1",
+  "title": "Fig. MARIDA-1. Random Forest: global SHAP importance (mean |SHAP| over the 4 class outputs)",
+  "section": "A",
+  "item": "1",
+  "path": "01_global_importance/MARIDA/MARIDA_rf_global_bar.png",
+  "model": "rf",
+  "kind": "global_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.14538208320751803
+   ],
+   [
+    "glcm_contrast",
+    0.09668403437133398
+   ],
+   [
+    "NDWI",
+    0.08802008055699426
+   ],
+   [
+    "nir/green",
+    0.08314744705391942
+   ],
+   [
+    "swir1/nir",
+    0.06732903112997732
+   ]
+  ],
+  "bottom3": [
+   [
+    "glcm_energy",
+    -0.010042266569906136
+   ],
+   [
+    "glcm_asm",
+    -0.01196006830896954
+   ],
+   [
+    "glcm_homogeneity",
+    -0.01623178658911254
+   ]
+  ],
+  "top3_share": 0.3300861981358462,
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-2",
+  "title": "Fig. MARIDA-2. XGBoost: global SHAP importance (mean |SHAP| over the 4 class outputs)",
+  "section": "A",
+  "item": "1",
+  "path": "01_global_importance/MARIDA/MARIDA_xgb_global_bar.png",
+  "model": "xgb",
+  "kind": "global_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.19789053314272356
+   ],
+   [
+    "glcm_contrast",
+    0.10488529107384525
+   ],
+   [
+    "swir1/nir",
+    0.07115866880951917
+   ],
+   [
+    "B1",
+    0.06664810379078598
+   ],
+   [
+    "B11",
+    0.05724704451598764
+   ]
+  ],
+  "bottom3": [
+   [
+    "glcm_asm",
+    -0.0
+   ],
+   [
+    "glcm_homogeneity",
+    -0.007372922467895401
+   ],
+   [
+    "B8",
+    -0.01404335865978167
+   ]
+  ],
+  "top3_share": 0.37393449302608806,
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-3",
+  "title": "Fig. MARIDA-3. LightGBM: global SHAP importance (mean |SHAP| over the 4 class outputs)",
+  "section": "A",
+  "item": "1",
+  "path": "01_global_importance/MARIDA/MARIDA_lgbm_global_bar.png",
+  "model": "lgbm",
+  "kind": "global_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.1656805335936893
+   ],
+   [
+    "glcm_contrast",
+    0.11618662432107692
+   ],
+   [
+    "B1",
+    0.06690553902468369
+   ],
+   [
+    "swir1/nir",
+    0.06353615638267636
+   ],
+   [
+    "B2",
+    0.0567301077534232
+   ]
+  ],
+  "bottom3": [
+   [
+    "glcm_asm",
+    -0.0
+   ],
+   [
+    "glcm_homogeneity",
+    -0.007080977621390276
+   ],
+   [
+    "glcm_dissimilarity",
+    -0.017108100107846757
+   ]
+  ],
+  "top3_share": 0.3487726969394499,
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-4",
+  "title": "Fig. MARIDA-4. AdaBoost: global SHAP importance (mean |SHAP| over the 4 class outputs)",
+  "section": "A",
+  "item": "1",
+  "path": "01_global_importance/MARIDA/MARIDA_ada_global_bar.png",
+  "model": "ada",
+  "kind": "global_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.2798441223966476
+   ],
+   [
+    "glcm_contrast",
+    0.19134396556626285
+   ],
+   [
+    "swir1/nir",
+    0.11918990216761742
+   ],
+   [
+    "B3",
+    0.049367992977675704
+   ],
+   [
+    "red/green",
+    0.049015169305456324
+   ]
+  ],
+  "bottom3": [
+   [
+    "glcm_asm",
+    -0.0012535783953871585
+   ],
+   [
+    "glcm_energy",
+    -0.0013369326147124822
+   ],
+   [
+    "B8",
+    -0.0037218142811318105
+   ]
+  ],
+  "top3_share": 0.5903779901305278,
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-5",
+  "title": "Fig. MARIDA-5. Linear SVM: global SHAP importance (mean |SHAP| over the 4 class outputs)",
+  "section": "A",
+  "item": "1",
+  "path": "01_global_importance/MARIDA/MARIDA_svm_global_bar.png",
+  "model": "svm",
+  "kind": "global_bar",
+  "top5": [
+   [
+    "B4",
+    0.1320411213975207
+   ],
+   [
+    "NDWI",
+    0.08380323610010708
+   ],
+   [
+    "glcm_dissimilarity",
+    0.07480681105341754
+   ],
+   [
+    "glcm_contrast",
+    0.07352309878862999
+   ],
+   [
+    "B11",
+    0.07160529310975032
+   ]
+  ],
+  "bottom3": [
+   [
+    "glcm_correlation",
+    -0.0018250286044291216
+   ],
+   [
+    "red/green",
+    -0.005714584213222571
+   ],
+   [
+    "B2",
+    -0.006273104148832047
+   ]
+  ],
+  "top3_share": 0.29065116855104534,
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-6",
+  "title": "Fig. MARIDA-6. Random Forest: SHAP beeswarm of each pixel's TRUE-class output",
+  "section": "A",
+  "item": "2",
+  "path": "01_global_importance/MARIDA/MARIDA_rf_global_beeswarm_trueclass.png",
+  "model": "rf",
+  "kind": "global_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.10359966669291357,
+    0.3037688260612834,
+    0.10211666164877649
+   ],
+   [
+    "glcm_contrast",
+    0.06862512641546119,
+    0.23002274304758782,
+    0.06657860012098868
+   ],
+   [
+    "NDWI",
+    0.06152436740245086,
+    -0.12365423864877684,
+    0.05962182456065295
+   ],
+   [
+    "nir/green",
+    0.05901177573659183,
+    0.15243396002358334,
+    0.057025794126857314
+   ],
+   [
+    "B11",
+    0.04370987623800349,
+    0.01797585829726821,
+    0.04121535709534823
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-7",
+  "title": "Fig. MARIDA-7. XGBoost: SHAP beeswarm of each pixel's TRUE-class output",
+  "section": "A",
+  "item": "2",
+  "path": "01_global_importance/MARIDA/MARIDA_xgb_global_beeswarm_trueclass.png",
+  "model": "xgb",
+  "kind": "global_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.639837761655322,
+    0.2193846843622276,
+    1.5899751432604046
+   ],
+   [
+    "glcm_contrast",
+    0.8865636946788791,
+    0.15562323972059663,
+    0.8498083382945237
+   ],
+   [
+    "B11",
+    0.4758303907855045,
+    0.15928453218065491,
+    0.44806223202617845
+   ],
+   [
+    "swir1/nir",
+    0.45509039013552494,
+    0.020488631088064046,
+    0.4047537120773085
+   ],
+   [
+    "red/green",
+    0.38716849850941143,
+    0.04931533144045234,
+    0.35701534757602454
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-8",
+  "title": "Fig. MARIDA-8. LightGBM: SHAP beeswarm of each pixel's TRUE-class output",
+  "section": "A",
+  "item": "2",
+  "path": "01_global_importance/MARIDA/MARIDA_lgbm_global_beeswarm_trueclass.png",
+  "model": "lgbm",
+  "kind": "global_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.9527709335484225,
+    0.3199529976060851,
+    1.90321787844291
+   ],
+   [
+    "glcm_contrast",
+    1.1626253113752405,
+    0.18870662077099745,
+    1.1063564338311578
+   ],
+   [
+    "B11",
+    0.5602707841291013,
+    0.10852915088643524,
+    0.5120280541130161
+   ],
+   [
+    "swir1/nir",
+    0.4920985768267323,
+    0.026192654197163517,
+    0.4368771495847427
+   ],
+   [
+    "B2",
+    0.47560066449827304,
+    -0.496823712263064,
+    0.3390139022119385
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-9",
+  "title": "Fig. MARIDA-9. AdaBoost: SHAP beeswarm of each pixel's TRUE-class output",
+  "section": "A",
+  "item": "2",
+  "path": "01_global_importance/MARIDA/MARIDA_ada_global_beeswarm_trueclass.png",
+  "model": "ada",
+  "kind": "global_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.178523505915539,
+    0.24994235059449335,
+    0.1748995387349593
+   ],
+   [
+    "glcm_contrast",
+    0.10701061284982917,
+    0.32074950848103917,
+    0.09380864857702012
+   ],
+   [
+    "swir1/nir",
+    0.05531451819403876,
+    0.3091173995423102,
+    0.04313110972259262
+   ],
+   [
+    "nir/green",
+    0.027149137628045,
+    -0.08365225379688626,
+    0.02280385645399947
+   ],
+   [
+    "red/green",
+    0.02496798579107997,
+    -0.10289843328208906,
+    0.01918400864095068
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-10",
+  "title": "Fig. MARIDA-10. Linear SVM: SHAP beeswarm of each pixel's TRUE-class output",
+  "section": "A",
+  "item": "2",
+  "path": "01_global_importance/MARIDA/MARIDA_svm_global_beeswarm_trueclass.png",
+  "model": "svm",
+  "kind": "global_beeswarm",
+  "top5": [
+   [
+    "B4",
+    3.383235813430242,
+    -0.6660039783486622,
+    3.0391894810649767
+   ],
+   [
+    "glcm_dissimilarity",
+    2.228416243643729,
+    0.22879912206552744,
+    1.3424190905009497
+   ],
+   [
+    "B11",
+    2.015220208105872,
+    -0.003157446123519175,
+    1.408996879738127
+   ],
+   [
+    "NDWI",
+    1.6898556035398695,
+    -0.49965468031575017,
+    0.5825762413539063
+   ],
+   [
+    "B5",
+    1.6243190420699343,
+    -0.017653092963844486,
+    0.6184123597014753
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-11",
+  "title": "Fig. MARIDA-11. Cross-model comparison of normalised global SHAP importance",
+  "section": "A",
+  "item": "3",
+  "path": "03_cross_model_comparison/MARIDA/MARIDA_cross_model_global_importance_heatmap.png",
+  "kind": "cross_model_heatmap",
+  "top_by_mean": [
+   [
+    "nir/red",
+    0.1639817163492989
+   ],
+   [
+    "glcm_contrast",
+    0.11652460282422979
+   ],
+   [
+    "swir1/nir",
+    0.06738361463148758
+   ],
+   [
+    "NDWI",
+    0.06331929035949845
+   ],
+   [
+    "B11",
+    0.0560209432902973
+   ],
+   [
+    "nir/green",
+    0.05244643722309984
+   ]
+  ],
+  "top1": {
+   "rf": "nir/red",
+   "xgb": "nir/red",
+   "lgbm": "nir/red",
+   "ada": "nir/red",
+   "svm": "B4"
+  },
+  "per_model_top3": {
+   "rf": [
+    "nir/red",
+    "glcm_contrast",
+    "NDWI"
+   ],
+   "xgb": [
+    "nir/red",
+    "glcm_contrast",
+    "swir1/nir"
+   ],
+   "lgbm": [
+    "nir/red",
+    "glcm_contrast",
+    "B1"
+   ],
+   "ada": [
+    "nir/red",
+    "glcm_contrast",
+    "swir1/nir"
+   ],
+   "svm": [
+    "B4",
+    "NDWI",
+    "glcm_dissimilarity"
+   ]
+  },
+  "rank_spread": [
+   [
+    "nir/red",
+    1,
+    17
+   ],
+   [
+    "glcm_contrast",
+    2,
+    4
+   ],
+   [
+    "swir1/nir",
+    3,
+    18
+   ],
+   [
+    "NDWI",
+    2,
+    9
+   ],
+   [
+    "B11",
+    5,
+    10
+   ],
+   [
+    "nir/green",
+    4,
+    15
+   ],
+   [
+    "B4",
+    1,
+    17
+   ],
+   [
+    "B3",
+    4,
+    13
+   ]
+  ],
+  "glcm_share": {
+   "rf": 0.19742996978068675,
+   "xgb": 0.18273022090255758,
+   "lgbm": 0.19020856200719713,
+   "ada": 0.21757239280311702,
+   "svm": 0.2776349334398247
+  },
+  "band_share": {
+   "rf": 0.38788206916966733,
+   "xgb": 0.4059597458764972,
+   "lgbm": 0.4521871350848814,
+   "ada": 0.25060947653769894,
+   "svm": 0.5153492552486018
+  },
+  "index_ratio_share": {
+   "rf": 0.4146879610496461,
+   "xgb": 0.41131003322094517,
+   "lgbm": 0.3576043029079216,
+   "ada": 0.5318181306591839,
+   "svm": 0.20701581131157362
+  }
+ },
+ {
+  "id": "Fig. MARIDA-12",
+  "title": "Fig. MARIDA-12. Agreement of global feature rankings between models",
+  "section": "A",
+  "item": "3",
+  "path": "03_cross_model_comparison/MARIDA/MARIDA_cross_model_rank_agreement.png",
+  "kind": "rank_agreement",
+  "pairs": [
+   [
+    "xgb",
+    "lgbm",
+    0.953698475437606
+   ],
+   [
+    "xgb",
+    "ada",
+    0.7910784867306607
+   ],
+   [
+    "lgbm",
+    "ada",
+    0.7346132128740825
+   ],
+   [
+    "rf",
+    "xgb",
+    0.6725014116318464
+   ],
+   [
+    "rf",
+    "ada",
+    0.6239412761151892
+   ],
+   [
+    "rf",
+    "lgbm",
+    0.6058723884810843
+   ],
+   [
+    "rf",
+    "svm",
+    0.40033879164313946
+   ],
+   [
+    "ada",
+    "svm",
+    -0.014116318464144554
+   ],
+   [
+    "xgb",
+    "svm",
+    -0.1044607566346697
+   ],
+   [
+    "lgbm",
+    "svm",
+    -0.189158667419537
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-13",
+  "title": "Fig. MARIDA-13. Random Forest: SHAP importance for the Class 1 Water output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_rf_c1_water_bar.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.16315179761220197
+   ],
+   [
+    "glcm_contrast",
+    0.10418564120659857
+   ],
+   [
+    "NDWI",
+    0.09917268163589767
+   ],
+   [
+    "nir/green",
+    0.09131085052870795
+   ],
+   [
+    "swir1/nir",
+    0.06411331071381283
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.18600157459304384
+   ],
+   [
+    "glcm_contrast",
+    0.11176778483055663
+   ],
+   [
+    "NDWI",
+    0.1053986315492754
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-14",
+  "title": "Fig. MARIDA-14. Random Forest: SHAP importance for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_rf_c2_debris_bar.png",
+  "model": "rf",
+  "cls": 1,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.13230650938750002
+   ],
+   [
+    "swir1/nir",
+    0.10030070202551639
+   ],
+   [
+    "NDWI",
+    0.09734321401198338
+   ],
+   [
+    "nir/green",
+    0.09339528478097793
+   ],
+   [
+    "B12",
+    0.0748569976510298
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.11259386258708882
+   ],
+   [
+    "swir1/nir",
+    0.09029138206657629
+   ],
+   [
+    "NDWI",
+    0.08968487076751398
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-15",
+  "title": "Fig. MARIDA-15. Random Forest: SHAP importance for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_rf_c3_sargassum_bar.png",
+  "model": "rf",
+  "cls": 2,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.22894970611861756
+   ],
+   [
+    "NDWI",
+    0.11549759168346815
+   ],
+   [
+    "nir/green",
+    0.10945047684836089
+   ],
+   [
+    "B2",
+    0.06806780963654509
+   ],
+   [
+    "B4",
+    0.049942370176681
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.25840389303937855
+   ],
+   [
+    "NDWI",
+    0.13070676265921166
+   ],
+   [
+    "nir/green",
+    0.12755946072196805
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-16",
+  "title": "Fig. MARIDA-16. Random Forest: SHAP importance for the Class 4 Other output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_rf_c4_other_bar.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "glcm_contrast",
+    0.18697816203550033
+   ],
+   [
+    "B11",
+    0.1241791535452284
+   ],
+   [
+    "glcm_dissimilarity",
+    0.075393718734016
+   ],
+   [
+    "swir1/nir",
+    0.059844622649382145
+   ],
+   [
+    "B12",
+    0.05447584217989695
+   ]
+  ],
+  "top3_true": [
+   [
+    "glcm_contrast",
+    0.22380847122154854
+   ],
+   [
+    "B11",
+    0.12629793555359903
+   ],
+   [
+    "glcm_dissimilarity",
+    0.0977989687931581
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-17",
+  "title": "Fig. MARIDA-17. XGBoost: SHAP importance for the Class 1 Water output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c1_water_bar.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.24212264600655867
+   ],
+   [
+    "glcm_contrast",
+    0.12293445111181854
+   ],
+   [
+    "B8A",
+    0.09867866468915742
+   ],
+   [
+    "B1",
+    0.07749479209636337
+   ],
+   [
+    "NDWI",
+    0.06515771840223854
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.30000131657538126
+   ],
+   [
+    "glcm_contrast",
+    0.15146494157373605
+   ],
+   [
+    "red/green",
+    0.0779901030944463
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-18",
+  "title": "Fig. MARIDA-18. XGBoost: SHAP importance for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c2_debris_bar.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.22247309650248653
+   ],
+   [
+    "swir1/nir",
+    0.14345264539027053
+   ],
+   [
+    "NDWI",
+    0.0947969325644841
+   ],
+   [
+    "red/green",
+    0.08780878113857817
+   ],
+   [
+    "B12",
+    0.05888050475699618
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.23570597831680634
+   ],
+   [
+    "swir1/nir",
+    0.12545183929487516
+   ],
+   [
+    "red/green",
+    0.09529974262427904
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-19",
+  "title": "Fig. MARIDA-19. XGBoost: SHAP importance for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c3_sargassum_bar.png",
+  "model": "xgb",
+  "cls": 2,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.25119853083616245
+   ],
+   [
+    "B3",
+    0.12993468632954994
+   ],
+   [
+    "glcm_contrast",
+    0.08211871247968508
+   ],
+   [
+    "B2",
+    0.07548620080004034
+   ],
+   [
+    "B6",
+    0.05626108694087128
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.3023864780637165
+   ],
+   [
+    "B2",
+    0.09050658759010649
+   ],
+   [
+    "B3",
+    0.08794361490388838
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-20",
+  "title": "Fig. MARIDA-20. XGBoost: SHAP importance for the Class 4 Other output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c4_other_bar.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "glcm_contrast",
+    0.20559891020607263
+   ],
+   [
+    "B11",
+    0.1761228591424141
+   ],
+   [
+    "B1",
+    0.10018225674369406
+   ],
+   [
+    "glcm_correlation",
+    0.05633462210013952
+   ],
+   [
+    "swir1/nir",
+    0.05317286655620379
+   ]
+  ],
+  "top3_true": [
+   [
+    "glcm_contrast",
+    0.3101189042907153
+   ],
+   [
+    "B11",
+    0.19832909247203193
+   ],
+   [
+    "B12",
+    0.06102505725479981
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-21",
+  "title": "Fig. MARIDA-21. LightGBM: SHAP importance for the Class 1 Water output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c1_water_bar.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.19801400969063895
+   ],
+   [
+    "glcm_contrast",
+    0.12404875536732052
+   ],
+   [
+    "B8A",
+    0.11582637189414502
+   ],
+   [
+    "B5",
+    0.07732804427419952
+   ],
+   [
+    "swir1/nir",
+    0.060845808514981205
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.24606278138314816
+   ],
+   [
+    "glcm_contrast",
+    0.15806352724185407
+   ],
+   [
+    "B5",
+    0.07936395660474257
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-22",
+  "title": "Fig. MARIDA-22. LightGBM: SHAP importance for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c2_debris_bar.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.16525437415888014
+   ],
+   [
+    "swir1/nir",
+    0.136093334331191
+   ],
+   [
+    "NDWI",
+    0.12316366990099664
+   ],
+   [
+    "red/green",
+    0.08358757894574416
+   ],
+   [
+    "B2",
+    0.07896961872477865
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.17963436796979051
+   ],
+   [
+    "swir1/nir",
+    0.11874155392218226
+   ],
+   [
+    "NDWI",
+    0.112119455209498
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-23",
+  "title": "Fig. MARIDA-23. LightGBM: SHAP importance for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c3_sargassum_bar.png",
+  "model": "lgbm",
+  "cls": 2,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.23340529692259765
+   ],
+   [
+    "B3",
+    0.114827260955496
+   ],
+   [
+    "glcm_contrast",
+    0.1055865020143309
+   ],
+   [
+    "B6",
+    0.10392849431005248
+   ],
+   [
+    "B2",
+    0.09237932849523628
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.3416540868546391
+   ],
+   [
+    "B2",
+    0.11246479416307928
+   ],
+   [
+    "B3",
+    0.07949154963866446
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-24",
+  "title": "Fig. MARIDA-24. LightGBM: SHAP importance for the Class 4 Other output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c4_other_bar.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "glcm_contrast",
+    0.21462030137333768
+   ],
+   [
+    "B11",
+    0.15105497117884423
+   ],
+   [
+    "B1",
+    0.11298346161999222
+   ],
+   [
+    "swir1/nir",
+    0.05077221533684334
+   ],
+   [
+    "glcm_correlation",
+    0.048983415375225006
+   ]
+  ],
+  "top3_true": [
+   [
+    "glcm_contrast",
+    0.32850856178916016
+   ],
+   [
+    "B11",
+    0.1842079777655872
+   ],
+   [
+    "B12",
+    0.0538423782811954
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-25",
+  "title": "Fig. MARIDA-25. AdaBoost: SHAP importance for the Class 1 Water output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_ada_c1_water_bar.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.33136790740569466
+   ],
+   [
+    "glcm_contrast",
+    0.21831057183428404
+   ],
+   [
+    "swir1/nir",
+    0.09702071163042197
+   ],
+   [
+    "B4",
+    0.06150049548623293
+   ],
+   [
+    "nir/green",
+    0.05155749704162427
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.35517053109058394
+   ],
+   [
+    "glcm_contrast",
+    0.21417366637489757
+   ],
+   [
+    "B4",
+    0.07570763553638578
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-26",
+  "title": "Fig. MARIDA-26. AdaBoost: SHAP importance for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_ada_c2_debris_bar.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.26362215115307425
+   ],
+   [
+    "swir1/nir",
+    0.23519927172715208
+   ],
+   [
+    "nir/green",
+    0.0857056365724644
+   ],
+   [
+    "red/green",
+    0.07425326606442141
+   ],
+   [
+    "glcm_contrast",
+    0.06979945877424013
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.2898734813215018
+   ],
+   [
+    "swir1/nir",
+    0.19832615806741383
+   ],
+   [
+    "nir/green",
+    0.08945653443973092
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-27",
+  "title": "Fig. MARIDA-27. AdaBoost: SHAP importance for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_ada_c3_sargassum_bar.png",
+  "model": "ada",
+  "cls": 2,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/red",
+    0.41684875830514895
+   ],
+   [
+    "glcm_contrast",
+    0.11169518706973945
+   ],
+   [
+    "B3",
+    0.08517329158801651
+   ],
+   [
+    "swir1/nir",
+    0.054505297228372294
+   ],
+   [
+    "B4",
+    0.05203415969403807
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/red",
+    0.5019661118984903
+   ],
+   [
+    "swir1/nir",
+    0.07774424123796117
+   ],
+   [
+    "B3",
+    0.06758404467062055
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-28",
+  "title": "Fig. MARIDA-28. AdaBoost: SHAP importance for the Class 4 Other output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_ada_c4_other_bar.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "glcm_contrast",
+    0.3478691629081
+   ],
+   [
+    "swir1/nir",
+    0.11489437040310137
+   ],
+   [
+    "nir/red",
+    0.07976273204572358
+   ],
+   [
+    "B11",
+    0.06965336930567276
+   ],
+   [
+    "B1",
+    0.06952562692361756
+   ]
+  ],
+  "top3_true": [
+   [
+    "glcm_contrast",
+    0.42976505771341234
+   ],
+   [
+    "swir1/nir",
+    0.1356912089102713
+   ],
+   [
+    "B11",
+    0.09661386010174874
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-29",
+  "title": "Fig. MARIDA-29. Linear SVM: SHAP importance for the Class 1 Water output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_svm_c1_water_bar.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "B11",
+    0.1253731424918838
+   ],
+   [
+    "glcm_dissimilarity",
+    0.12423835578823565
+   ],
+   [
+    "B8A",
+    0.10590295331051576
+   ],
+   [
+    "B5",
+    0.08286175118402182
+   ],
+   [
+    "B12",
+    0.08038001940501067
+   ]
+  ],
+  "top3_true": [
+   [
+    "glcm_dissimilarity",
+    0.11287599067871451
+   ],
+   [
+    "B8A",
+    0.10481668088529339
+   ],
+   [
+    "B5",
+    0.10346290496227162
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-30",
+  "title": "Fig. MARIDA-30. Linear SVM: SHAP importance for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_svm_c2_debris_bar.png",
+  "model": "svm",
+  "cls": 1,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "nir/green",
+    0.2376851408432933
+   ],
+   [
+    "NDWI",
+    0.20732842195443119
+   ],
+   [
+    "B5",
+    0.06984155869612492
+   ],
+   [
+    "nir/red",
+    0.06107568793967693
+   ],
+   [
+    "B8A",
+    0.05784334700239348
+   ]
+  ],
+  "top3_true": [
+   [
+    "nir/green",
+    0.18156328696692964
+   ],
+   [
+    "NDWI",
+    0.11415376529878804
+   ],
+   [
+    "B5",
+    0.11232108506349057
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-31",
+  "title": "Fig. MARIDA-31. Linear SVM: SHAP importance for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_svm_c3_sargassum_bar.png",
+  "model": "svm",
+  "cls": 2,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "B4",
+    0.2650096596372446
+   ],
+   [
+    "glcm_contrast",
+    0.14054297428480997
+   ],
+   [
+    "glcm_dissimilarity",
+    0.07351878586402108
+   ],
+   [
+    "B6",
+    0.06996316903164353
+   ],
+   [
+    "B11",
+    0.05857406445799314
+   ]
+  ],
+  "top3_true": [
+   [
+    "B4",
+    0.27259108409172356
+   ],
+   [
+    "glcm_contrast",
+    0.09659800191718769
+   ],
+   [
+    "B6",
+    0.07753353998253677
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-32",
+  "title": "Fig. MARIDA-32. Linear SVM: SHAP importance for the Class 4 Other output",
+  "section": "B",
+  "item": "4",
+  "path": "02_class_specific/MARIDA/MARIDA_svm_c4_other_bar.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "class_bar",
+  "top5": [
+   [
+    "glcm_dissimilarity",
+    0.148906116865246
+   ],
+   [
+    "B11",
+    0.09754036013962626
+   ],
+   [
+    "B3",
+    0.09369786047647198
+   ],
+   [
+    "glcm_energy",
+    0.08899248059231583
+   ],
+   [
+    "glcm_asm",
+    0.0810341263181446
+   ]
+  ],
+  "top3_true": [
+   [
+    "glcm_dissimilarity",
+    0.20855495174277616
+   ],
+   [
+    "B11",
+    0.11494683236279304
+   ],
+   [
+    "B3",
+    0.10133527022562876
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-33",
+  "title": "Fig. MARIDA-33. Random Forest: SHAP beeswarm for the Class 1 Water output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_rf_c1_water_beeswarm.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.08591878389818614,
+    -0.9654068214030127,
+    0.14027627594679726,
+    -0.03321636196557022
+   ],
+   [
+    "glcm_contrast",
+    0.05486610459175366,
+    -0.7014652172613959,
+    0.08442190920233851,
+    -0.01847720784453328
+   ],
+   [
+    "NDWI",
+    0.05222618645202743,
+    0.9612573133731342,
+    0.07977333235087564,
+    -0.018795899741461407
+   ],
+   [
+    "nir/green",
+    0.04808599935125011,
+    -0.9643652738647736,
+    0.07609930849176519,
+    -0.016552212668493705
+   ],
+   [
+    "swir1/nir",
+    0.033763266901359404,
+    0.48072436592095613,
+    0.023498073860111896,
+    -0.0034310851468764268
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-34",
+  "title": "Fig. MARIDA-34. Random Forest: SHAP beeswarm for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_rf_c2_debris_beeswarm.png",
+  "model": "rf",
+  "cls": 1,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.05244774095820694,
+    -0.14630332407575164,
+    0.06287408711619354,
+    -0.03565330092650838
+   ],
+   [
+    "swir1/nir",
+    0.03976029042043178,
+    -0.5966854292896826,
+    0.0391946352049966,
+    -0.01215625904718003
+   ],
+   [
+    "NDWI",
+    0.03858790996886622,
+    -0.3117232650856007,
+    0.047096391751541136,
+    -0.025931471214140557
+   ],
+   [
+    "nir/green",
+    0.03702290783414382,
+    0.22678999082638251,
+    0.04266780087059198,
+    -0.025865646536127475
+   ],
+   [
+    "B12",
+    0.029674128959230495,
+    -0.5926334483484182,
+    0.04145920429345304,
+    -0.00648409910258994
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-35",
+  "title": "Fig. MARIDA-35. Random Forest: SHAP beeswarm for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_rf_c3_sargassum_beeswarm.png",
+  "model": "rf",
+  "cls": 2,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.09091830367348579,
+    0.8894154872493235,
+    0.1869497504109731,
+    -0.057584288021304796
+   ],
+   [
+    "NDWI",
+    0.045865291955401746,
+    -0.9074651440730168,
+    0.09370967342827934,
+    -0.028507617631147657
+   ],
+   [
+    "nir/green",
+    0.043463919915020625,
+    0.9381794917913138,
+    0.09188212958279482,
+    -0.02644001699253383
+   ],
+   [
+    "B2",
+    0.02703043341631609,
+    -0.8757522982024711,
+    0.05020761335017166,
+    -0.015120160894308928
+   ],
+   [
+    "B4",
+    0.019832633353740255,
+    -0.8943300837496908,
+    0.0321892904993523,
+    -0.013027205674095715
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-36",
+  "title": "Fig. MARIDA-36. Random Forest: SHAP beeswarm for the Class 4 Other output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_rf_c4_other_beeswarm.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "glcm_contrast",
+    0.07513523078005009,
+    0.8463627102084117,
+    0.13715413935026338,
+    -0.05110884945624333
+   ],
+   [
+    "B11",
+    0.049900102012557714,
+    0.7439989815266553,
+    0.0721050631814683,
+    -0.03934132951800385
+   ],
+   [
+    "glcm_dissimilarity",
+    0.030296182157202686,
+    0.8508055694694642,
+    0.05981901663450271,
+    -0.01950258451173562
+   ],
+   [
+    "swir1/nir",
+    0.024047939528107194,
+    0.8739251049374429,
+    0.0301180566344179,
+    -0.016833140431886755
+   ],
+   [
+    "B12",
+    0.021890550904800438,
+    0.6454717666479537,
+    0.03530819026957391,
+    -0.015557224302390671
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-37",
+  "title": "Fig. MARIDA-37. XGBoost: SHAP beeswarm for the Class 1 Water output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c1_water_beeswarm.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.2565007521016796,
+    -0.9315667770108985,
+    2.1002353723820852,
+    -0.633718774307883
+   ],
+   [
+    "glcm_contrast",
+    0.6379710152226856,
+    -0.9048962832324542,
+    1.076674067053293,
+    -0.39301297473066604
+   ],
+   [
+    "B8A",
+    0.5120950825680184,
+    -0.9202643094125805,
+    0.4303107122259636,
+    0.02799103521494803
+   ],
+   [
+    "B1",
+    0.40216091373132534,
+    0.9574277038067248,
+    0.3517969640136505,
+    -0.21507232175569027
+   ],
+   [
+    "NDWI",
+    0.3381374007263428,
+    0.902155161218862,
+    0.3985314433631791,
+    -0.07047332257716414
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-38",
+  "title": "Fig. MARIDA-38. XGBoost: SHAP beeswarm for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c2_debris_beeswarm.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.2137319413691945,
+    0.13033834073901845,
+    1.358365380523151,
+    -0.6878727880593899
+   ],
+   [
+    "swir1/nir",
+    0.782625227595255,
+    -0.6130444198451602,
+    0.6928109630699852,
+    -0.18420241286798428
+   ],
+   [
+    "NDWI",
+    0.517177433164598,
+    -0.3046468504492017,
+    0.4762861950491331,
+    -0.28086223829879003
+   ],
+   [
+    "red/green",
+    0.47905263187361624,
+    0.37784916995723317,
+    0.5039997293545253,
+    -0.16347827819040364
+   ],
+   [
+    "B12",
+    0.3212305239195891,
+    -0.5358295648457125,
+    0.3925683970152922,
+    -0.0574530055359876
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-39",
+  "title": "Fig. MARIDA-39. XGBoost: SHAP beeswarm for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c3_sargassum_beeswarm.png",
+  "model": "xgb",
+  "cls": 2,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.5052527852256083,
+    0.8866981030196798,
+    2.7808165240744165,
+    -0.9336386353204242
+   ],
+   [
+    "B3",
+    0.7786054633517567,
+    -0.9233153557563561,
+    0.7098376997210561,
+    -0.2265051288697506
+   ],
+   [
+    "glcm_contrast",
+    0.492078597226382,
+    -0.8659424394134381,
+    0.37374010486437087,
+    -0.007627957105469881
+   ],
+   [
+    "B2",
+    0.4523347076200444,
+    -0.8672545194473136,
+    0.8231126387796267,
+    -0.19941439011712758
+   ],
+   [
+    "B6",
+    0.33713237707111243,
+    0.753692998809263,
+    0.2368479141080864,
+    -0.11069070220563121
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-40",
+  "title": "Fig. MARIDA-40. XGBoost: SHAP beeswarm for the Class 4 Other output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c4_other_beeswarm.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "glcm_contrast",
+    0.9501093757286179,
+    0.9514143561823374,
+    1.8042346890800867,
+    -0.5644261439938655
+   ],
+   [
+    "B11",
+    0.8138952661938569,
+    0.9099348100885574,
+    1.1029475480406987,
+    -0.6568372925383311
+   ],
+   [
+    "B1",
+    0.46296014564684157,
+    -0.9222004994217846,
+    -0.07781420012752847,
+    0.22031768522462497
+   ],
+   [
+    "glcm_correlation",
+    0.26033237521455627,
+    0.2916689766220723,
+    0.2847763436825955,
+    -0.13743672966375667
+   ],
+   [
+    "swir1/nir",
+    0.24572133674628646,
+    0.8690555183587699,
+    0.26071841550438657,
+    -0.12504649291104755
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-41",
+  "title": "Fig. MARIDA-41. LightGBM: SHAP beeswarm for the Class 1 Water output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c1_water_beeswarm.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.3769180737257956,
+    -0.9482081652425041,
+    2.2169553897598604,
+    -0.7028710477461214
+   ],
+   [
+    "glcm_contrast",
+    0.8625903467906401,
+    -0.8887588898694093,
+    1.4442767794829667,
+    -0.4627578010941063
+   ],
+   [
+    "B8A",
+    0.8054148548595009,
+    -0.9361264480122615,
+    0.5700743650219006,
+    0.03628657994714457
+   ],
+   [
+    "B5",
+    0.5377113565517955,
+    0.9038738046889492,
+    0.47284659006235813,
+    -0.17990065619219361
+   ],
+   [
+    "swir1/nir",
+    0.42309982806583807,
+    0.5468263043009515,
+    0.3979467841849881,
+    -0.09569413447931867
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-42",
+  "title": "Fig. MARIDA-42. LightGBM: SHAP beeswarm for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c2_debris_beeswarm.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.0761842609453838,
+    0.2796862155454382,
+    1.213574407287069,
+    -0.6015423607696059
+   ],
+   [
+    "swir1/nir",
+    0.8862791388867787,
+    -0.6056752480482196,
+    0.7941641677783021,
+    -0.18803023584644848
+   ],
+   [
+    "NDWI",
+    0.8020774260431444,
+    -0.24565574698315765,
+    0.7461879469891598,
+    -0.44645562946410994
+   ],
+   [
+    "red/green",
+    0.5443464799633912,
+    0.4578708195556762,
+    0.531464610445433,
+    -0.20478325069128667
+   ],
+   [
+    "B2",
+    0.5142729879135114,
+    0.7045281094235336,
+    0.05059907979830653,
+    -0.2333046652277083
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-43",
+  "title": "Fig. MARIDA-43. LightGBM: SHAP beeswarm for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c3_sargassum_beeswarm.png",
+  "model": "lgbm",
+  "cls": 2,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    1.953757142627461,
+    0.8943848962254913,
+    4.105465288213941,
+    -1.118917837510415
+   ],
+   [
+    "B3",
+    0.9611803340287743,
+    -0.8988717871556711,
+    0.8929407290814576,
+    -0.2605253063607597
+   ],
+   [
+    "glcm_contrast",
+    0.88382905270551,
+    -0.919061261081532,
+    0.4855916462249016,
+    0.05876360262293986
+   ],
+   [
+    "B6",
+    0.869950428537698,
+    0.8909363296443472,
+    0.5983698300194005,
+    -0.325309280968802
+   ],
+   [
+    "B2",
+    0.773276250618039,
+    -0.9455487492516255,
+    1.3521321825610453,
+    -0.34320628578758366
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-44",
+  "title": "Fig. MARIDA-44. LightGBM: SHAP beeswarm for the Class 4 Other output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c4_other_beeswarm.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "glcm_contrast",
+    1.327053656621528,
+    0.9553837386151179,
+    2.3128770702239545,
+    -0.7704760787756605
+   ],
+   [
+    "B11",
+    0.9340125354918904,
+    0.9281658322675149,
+    1.2356629350775066,
+    -0.7192432716393236
+   ],
+   [
+    "B1",
+    0.6986063989340536,
+    -0.9297824237753705,
+    -0.172814004089656,
+    0.3546217803815275
+   ],
+   [
+    "swir1/nir",
+    0.3139379340462705,
+    0.8742646919589874,
+    0.24297468352615254,
+    -0.1731984888744311
+   ],
+   [
+    "glcm_correlation",
+    0.3028773143619252,
+    0.059745315245756506,
+    0.17482444167817912,
+    -0.10177235453640814
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-45",
+  "title": "Fig. MARIDA-45. AdaBoost: SHAP beeswarm for the Class 1 Water output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_ada_c1_water_beeswarm.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.16479058325510476,
+    -0.9649254006211828,
+    0.2519787270903626,
+    -0.07480789239128417
+   ],
+   [
+    "glcm_contrast",
+    0.10856671892272951,
+    -0.8807577788763762,
+    0.15104842777128602,
+    -0.03820935834175778
+   ],
+   [
+    "swir1/nir",
+    0.04824878722437139,
+    0.3968076014634867,
+    0.010722213812482853,
+    -0.009393545546317987
+   ],
+   [
+    "B4",
+    0.030584441930420005,
+    0.6685911047324433,
+    0.04365889000052314,
+    -0.014936616557532558
+   ],
+   [
+    "nir/green",
+    0.025639749109018853,
+    -0.8623128115140039,
+    0.040584055689945435,
+    -0.011867600270213248
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-46",
+  "title": "Fig. MARIDA-46. AdaBoost: SHAP beeswarm for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_ada_c2_debris_beeswarm.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.08723187435547122,
+    0.2540872483167539,
+    0.08891202322962344,
+    -0.04355652519287994
+   ],
+   [
+    "swir1/nir",
+    0.07782681853577617,
+    -0.5212284803222681,
+    0.059089520726578,
+    -0.01162608267562916
+   ],
+   [
+    "nir/green",
+    0.028359769041956355,
+    0.15100001175896646,
+    0.028723687248087177,
+    -0.009411170012434012
+   ],
+   [
+    "red/green",
+    0.024570209853321156,
+    0.4282148391832047,
+    0.013074347788239052,
+    -0.007543309851394345
+   ],
+   [
+    "glcm_contrast",
+    0.023096456770580465,
+    0.6573146964406527,
+    -0.014090207999178286,
+    -0.0048031961091037365
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-47",
+  "title": "Fig. MARIDA-47. AdaBoost: SHAP beeswarm for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_ada_c3_sargassum_beeswarm.png",
+  "model": "ada",
+  "cls": 2,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/red",
+    0.16598213974880824,
+    0.9305068676500415,
+    0.32994494993691714,
+    -0.10052531833411583
+   ],
+   [
+    "glcm_contrast",
+    0.0444751382368452,
+    -0.8698605208279069,
+    0.03423482119194814,
+    0.005934304748287344
+   ],
+   [
+    "B3",
+    0.033914567107524295,
+    -0.7333869681212082,
+    0.022614789659725888,
+    -0.016756617075398876
+   ],
+   [
+    "swir1/nir",
+    0.021703089385208978,
+    -0.8528157126512533,
+    0.045724893274715094,
+    -0.010790816574901368
+   ],
+   [
+    "B4",
+    0.020719124128289263,
+    -0.7622160409523446,
+    0.020145168795702436,
+    -0.007757415379240411
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-48",
+  "title": "Fig. MARIDA-48. AdaBoost: SHAP beeswarm for the Class 4 Other output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_ada_c4_other_beeswarm.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "glcm_contrast",
+    0.13006424326946,
+    0.9213706979840839,
+    0.20404155334402457,
+    -0.08799994783422443
+   ],
+   [
+    "swir1/nir",
+    0.04295767183694932,
+    0.920691959223,
+    0.05698781107659452,
+    -0.025697701522017856
+   ],
+   [
+    "nir/red",
+    0.02982235992953598,
+    0.005095602286905571,
+    0.028762454682933942,
+    -0.014309649070706091
+   ],
+   [
+    "B11",
+    0.02604258651205561,
+    0.4933137006096924,
+    0.03440062004303714,
+    -0.01863341892111348
+   ],
+   [
+    "B1",
+    0.025994825117752786,
+    -0.8961509114527715,
+    -0.008846316110007078,
+    0.00978679064455274
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-49",
+  "title": "Fig. MARIDA-49. Linear SVM: SHAP beeswarm for the Class 1 Water output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_svm_c1_water_beeswarm.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "B11",
+    2.518585317281639,
+    -1.0,
+    1.8778821929161926,
+    0.15558809141985447
+   ],
+   [
+    "glcm_dissimilarity",
+    2.49578891070485,
+    -1.0,
+    2.0832049314448153,
+    -0.5543020714471046
+   ],
+   [
+    "B8A",
+    2.1274542375125898,
+    -0.9999999999999999,
+    0.837143492081625,
+    0.04250237144403545
+   ],
+   [
+    "B5",
+    1.6645860967378394,
+    1.0,
+    0.8033528973584954,
+    -0.2647723432468115
+   ],
+   [
+    "B12",
+    1.61473129453845,
+    1.0,
+    -1.079496768461222,
+    -0.16354411127004545
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-50",
+  "title": "Fig. MARIDA-50. Linear SVM: SHAP beeswarm for the Class 2 Marine Debris output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_svm_c2_debris_beeswarm.png",
+  "model": "svm",
+  "cls": 1,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "nir/green",
+    7.277223917178808,
+    -1.0,
+    3.4605317928968846,
+    -0.2927294359734266
+   ],
+   [
+    "NDWI",
+    6.347789961142197,
+    -1.0,
+    -1.222337297790087,
+    -0.24835440661229805
+   ],
+   [
+    "B5",
+    2.1383442799715473,
+    -1.0,
+    2.269448954731949,
+    -0.7603521741490489
+   ],
+   [
+    "nir/red",
+    1.8699589526540967,
+    -1.0,
+    0.8232122864005403,
+    -0.2249440607418142
+   ],
+   [
+    "B8A",
+    1.7709941259349382,
+    0.9999999999999999,
+    -1.8390902484440639,
+    0.34535639604939944
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-51",
+  "title": "Fig. MARIDA-51. Linear SVM: SHAP beeswarm for the Class 3 Sargassum output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_svm_c3_sargassum_beeswarm.png",
+  "model": "svm",
+  "cls": 2,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "B4",
+    12.760853969097461,
+    -0.9999999999999999,
+    11.233865841173367,
+    -3.7748621065900156
+   ],
+   [
+    "glcm_contrast",
+    6.767483018113456,
+    -1.0,
+    3.9809408942294975,
+    -1.5467334409006348
+   ],
+   [
+    "glcm_dissimilarity",
+    3.540106770750593,
+    1.0,
+    -1.5897901858524748,
+    0.3312083501140003
+   ],
+   [
+    "B6",
+    3.368895248762516,
+    1.0,
+    1.1549707969987628,
+    -0.5898886784718798
+   ],
+   [
+    "B11",
+    2.8204824078793864,
+    -1.0,
+    2.323595164574942,
+    0.1006995796859908
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-52",
+  "title": "Fig. MARIDA-52. Linear SVM: SHAP beeswarm for the Class 4 Other output",
+  "section": "B",
+  "item": "5",
+  "path": "02_class_specific/MARIDA/MARIDA_svm_c4_other_beeswarm.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "class_beeswarm",
+  "top5": [
+   [
+    "glcm_dissimilarity",
+    2.624558172978235,
+    1.0,
+    4.837450991992468,
+    -1.759811619543582
+   ],
+   [
+    "B11",
+    1.7192064019194488,
+    1.0,
+    2.4238437559083126,
+    -1.3414393710197843
+   ],
+   [
+    "B3",
+    1.651480078059133,
+    1.0,
+    2.080016055497023,
+    -0.5281730060113792
+   ],
+   [
+    "glcm_energy",
+    1.568544981154382,
+    1.0,
+    -1.3255832330028154,
+    0.5356264368534523
+   ],
+   [
+    "glcm_asm",
+    1.4282742911824284,
+    -1.0,
+    1.105164320109276,
+    -0.44999668778155544
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-53",
+  "title": "Fig. MARIDA-53. Class-wise SHAP importance across all five models and four class outputs",
+  "section": "B",
+  "item": "6",
+  "path": "03_cross_model_comparison/MARIDA/MARIDA_class_wise_importance_heatmap.png",
+  "kind": "class_heatmap",
+  "per_class": {
+   "0": {
+    "mean_top4": [
+     [
+      "nir/red",
+      0.18996686265166443
+     ],
+     [
+      "glcm_contrast",
+      0.12155909545440872
+     ],
+     [
+      "B8A",
+      0.07760265326556756
+     ],
+     [
+      "swir1/nir",
+      0.061313303865151644
+     ]
+    ],
+    "model_top1": {
+     "rf": "nir/red",
+     "xgb": "nir/red",
+     "lgbm": "nir/red",
+     "ada": "nir/red",
+     "svm": "B11"
+    }
+   },
+   "1": {
+    "mean_top4": [
+     [
+      "nir/red",
+      0.16894636382832356
+     ],
+     [
+      "swir1/nir",
+      0.12939915299344756
+     ],
+     [
+      "NDWI",
+      0.11537506174367056
+     ],
+     [
+      "nir/green",
+      0.09952301058990279
+     ]
+    ],
+    "model_top1": {
+     "rf": "nir/red",
+     "xgb": "nir/red",
+     "lgbm": "nir/red",
+     "ada": "nir/red",
+     "svm": "nir/green"
+    }
+   },
+   "2": {
+    "mean_top4": [
+     [
+      "nir/red",
+      0.2313198700569717
+     ],
+     [
+      "glcm_contrast",
+      0.09786996010253993
+     ],
+     [
+      "B4",
+      0.08258890204986147
+     ],
+     [
+      "B3",
+      0.08131629297891071
+     ]
+    ],
+    "model_top1": {
+     "rf": "nir/red",
+     "xgb": "nir/red",
+     "lgbm": "nir/red",
+     "ada": "nir/red",
+     "svm": "B4"
+    }
+   },
+   "3": {
+    "mean_top4": [
+     [
+      "glcm_contrast",
+      0.20045121356245338
+     ],
+     [
+      "B11",
+      0.12371014266235716
+     ],
+     [
+      "B1",
+      0.06722527297100808
+     ],
+     [
+      "glcm_dissimilarity",
+      0.06157722060153885
+     ]
+    ],
+    "model_top1": {
+     "rf": "glcm_contrast",
+     "xgb": "glcm_contrast",
+     "lgbm": "glcm_contrast",
+     "ada": "glcm_contrast",
+     "svm": "glcm_dissimilarity"
+    }
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-54",
+  "title": "Fig. MARIDA-54. XGBoost: class-versus-rest SHAP for Class 1 Water (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c1_water_vs_rest_beeswarm.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "nir/red",
+    0.2419460528811871
+   ],
+   [
+    "glcm_contrast",
+    0.10523620246745294
+   ],
+   [
+    "B8A",
+    0.07622486231616087
+   ],
+   [
+    "swir1/nir",
+    0.07466048391761755
+   ],
+   [
+    "B1",
+    0.07162228317793848
+   ]
+  ],
+  "top5_class": [
+   [
+    "nir/red",
+    0.24212264600655867
+   ],
+   [
+    "glcm_contrast",
+    0.12293445111181854
+   ],
+   [
+    "B8A",
+    0.09867866468915742
+   ],
+   [
+    "B1",
+    0.07749479209636337
+   ],
+   [
+    "NDWI",
+    0.06515771840223854
+   ]
+  ],
+  "rank_corr": 0.9322416713721063,
+  "rho": [
+   [
+    "nir/red",
+    -0.9468542216814981
+   ],
+   [
+    "glcm_contrast",
+    -0.8868724254535235
+   ],
+   [
+    "B8A",
+    -0.9243524392885275
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-55",
+  "title": "Fig. MARIDA-55. XGBoost: class-versus-rest SHAP for Class 2 Marine Debris (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c2_debris_vs_rest_beeswarm.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "nir/red",
+    0.21894661752120817
+   ],
+   [
+    "swir1/nir",
+    0.1250442131045051
+   ],
+   [
+    "NDWI",
+    0.0815595123634872
+   ],
+   [
+    "red/green",
+    0.08038283351523377
+   ],
+   [
+    "B2",
+    0.06587410597671946
+   ]
+  ],
+  "top5_class": [
+   [
+    "nir/red",
+    0.22247309650248653
+   ],
+   [
+    "swir1/nir",
+    0.14345264539027053
+   ],
+   [
+    "NDWI",
+    0.0947969325644841
+   ],
+   [
+    "red/green",
+    0.08780878113857817
+   ],
+   [
+    "B12",
+    0.05888050475699618
+   ]
+  ],
+  "rank_corr": 0.9469226425748165,
+  "rho": [
+   [
+    "nir/red",
+    -0.04360944008226644
+   ],
+   [
+    "swir1/nir",
+    -0.5741215941367348
+   ],
+   [
+    "NDWI",
+    -0.34480298944652044
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-56",
+  "title": "Fig. MARIDA-56. XGBoost: class-versus-rest SHAP for Class 3 Sargassum (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c3_sargassum_vs_rest_beeswarm.png",
+  "model": "xgb",
+  "cls": 2,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "nir/red",
+    0.2428643402845633
+   ],
+   [
+    "B3",
+    0.10506732599162737
+   ],
+   [
+    "glcm_contrast",
+    0.07628939022392334
+   ],
+   [
+    "B2",
+    0.0700265848878241
+   ],
+   [
+    "B11",
+    0.06700691636691122
+   ]
+  ],
+  "top5_class": [
+   [
+    "nir/red",
+    0.25119853083616245
+   ],
+   [
+    "B3",
+    0.12993468632954994
+   ],
+   [
+    "glcm_contrast",
+    0.08211871247968508
+   ],
+   [
+    "B2",
+    0.07548620080004034
+   ],
+   [
+    "B6",
+    0.05626108694087128
+   ]
+  ],
+  "rank_corr": 0.9593450028232637,
+  "rho": [
+   [
+    "nir/red",
+    0.8429162916830434
+   ],
+   [
+    "B3",
+    -0.9196442971245958
+   ],
+   [
+    "glcm_contrast",
+    -0.7790553289565041
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-57",
+  "title": "Fig. MARIDA-57. XGBoost: class-versus-rest SHAP for Class 4 Other (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MARIDA/MARIDA_xgb_c4_other_vs_rest_beeswarm.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "glcm_contrast",
+    0.1975199273406279
+   ],
+   [
+    "B11",
+    0.13823107087841743
+   ],
+   [
+    "B1",
+    0.09186164534791753
+   ],
+   [
+    "B3",
+    0.06874486684458045
+   ],
+   [
+    "swir1/nir",
+    0.06299178850624793
+   ]
+  ],
+  "top5_class": [
+   [
+    "glcm_contrast",
+    0.20559891020607263
+   ],
+   [
+    "B11",
+    0.1761228591424141
+   ],
+   [
+    "B1",
+    0.10018225674369406
+   ],
+   [
+    "glcm_correlation",
+    0.05633462210013952
+   ],
+   [
+    "swir1/nir",
+    0.05317286655620379
+   ]
+  ],
+  "rank_corr": 0.9254658385093169,
+  "rho": [
+   [
+    "glcm_contrast",
+    0.9548723395305591
+   ],
+   [
+    "B11",
+    0.8908835791571801
+   ],
+   [
+    "B1",
+    -0.9199754205864207
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-58",
+  "title": "Fig. MARIDA-58. LightGBM: class-versus-rest SHAP for Class 1 Water (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c1_water_vs_rest_beeswarm.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "nir/red",
+    0.21621378815150602
+   ],
+   [
+    "glcm_contrast",
+    0.10481915552940686
+   ],
+   [
+    "B8A",
+    0.091092605550208
+   ],
+   [
+    "swir1/nir",
+    0.07072277592105394
+   ],
+   [
+    "B5",
+    0.06396764455789673
+   ]
+  ],
+  "top5_class": [
+   [
+    "nir/red",
+    0.19801400969063895
+   ],
+   [
+    "glcm_contrast",
+    0.12404875536732052
+   ],
+   [
+    "B8A",
+    0.11582637189414502
+   ],
+   [
+    "B5",
+    0.07732804427419952
+   ],
+   [
+    "swir1/nir",
+    0.060845808514981205
+   ]
+  ],
+  "rank_corr": 0.9582156973461323,
+  "rho": [
+   [
+    "nir/red",
+    -0.9722751803512973
+   ],
+   [
+    "glcm_contrast",
+    -0.8827385940987899
+   ],
+   [
+    "B8A",
+    -0.9361129185931284
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-59",
+  "title": "Fig. MARIDA-59. LightGBM: class-versus-rest SHAP for Class 2 Marine Debris (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c2_debris_vs_rest_beeswarm.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "nir/red",
+    0.17641787072156057
+   ],
+   [
+    "swir1/nir",
+    0.11658634412932178
+   ],
+   [
+    "NDWI",
+    0.09858261790729468
+   ],
+   [
+    "B2",
+    0.08590642589564738
+   ],
+   [
+    "red/green",
+    0.0720302266951167
+   ]
+  ],
+  "top5_class": [
+   [
+    "nir/red",
+    0.16525437415888014
+   ],
+   [
+    "swir1/nir",
+    0.136093334331191
+   ],
+   [
+    "NDWI",
+    0.12316366990099664
+   ],
+   [
+    "red/green",
+    0.08358757894574416
+   ],
+   [
+    "B2",
+    0.07896961872477865
+   ]
+  ],
+  "rank_corr": 0.9491812535290796,
+  "rho": [
+   [
+    "nir/red",
+    0.08030374687812933
+   ],
+   [
+    "swir1/nir",
+    -0.6816016654900483
+   ],
+   [
+    "NDWI",
+    -0.2738289887701311
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-60",
+  "title": "Fig. MARIDA-60. LightGBM: class-versus-rest SHAP for Class 3 Sargassum (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c3_sargassum_vs_rest_beeswarm.png",
+  "model": "lgbm",
+  "cls": 2,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "nir/red",
+    0.2193977084647609
+   ],
+   [
+    "B3",
+    0.09871810134724888
+   ],
+   [
+    "glcm_contrast",
+    0.09646801730279306
+   ],
+   [
+    "B2",
+    0.08929373740745362
+   ],
+   [
+    "B6",
+    0.08140619292507091
+   ]
+  ],
+  "top5_class": [
+   [
+    "nir/red",
+    0.23340529692259765
+   ],
+   [
+    "B3",
+    0.114827260955496
+   ],
+   [
+    "glcm_contrast",
+    0.1055865020143309
+   ],
+   [
+    "B6",
+    0.10392849431005248
+   ],
+   [
+    "B2",
+    0.09237932849523628
+   ]
+  ],
+  "rank_corr": 0.9514398644833428,
+  "rho": [
+   [
+    "nir/red",
+    0.8668144819316098
+   ],
+   [
+    "B3",
+    -0.8871446690694309
+   ],
+   [
+    "glcm_contrast",
+    -0.915021235363841
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-61",
+  "title": "Fig. MARIDA-61. LightGBM: class-versus-rest SHAP for Class 4 Other (log[p_k / geometric mean of other p])",
+  "section": "B",
+  "item": "7",
+  "path": "02_class_specific/MARIDA/MARIDA_lgbm_c4_other_vs_rest_beeswarm.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "vs_rest",
+  "top5": [
+   [
+    "glcm_contrast",
+    0.20637118834715107
+   ],
+   [
+    "B11",
+    0.12079655141778439
+   ],
+   [
+    "B1",
+    0.09120442457699034
+   ],
+   [
+    "B3",
+    0.06866363192075761
+   ],
+   [
+    "swir1/nir",
+    0.0519852636276164
+   ]
+  ],
+  "top5_class": [
+   [
+    "glcm_contrast",
+    0.21462030137333768
+   ],
+   [
+    "B11",
+    0.15105497117884423
+   ],
+   [
+    "B1",
+    0.11298346161999222
+   ],
+   [
+    "swir1/nir",
+    0.05077221533684334
+   ],
+   [
+    "glcm_correlation",
+    0.048983415375225006
+   ]
+  ],
+  "rank_corr": 0.839638622247318,
+  "rho": [
+   [
+    "glcm_contrast",
+    0.9544420552467717
+   ],
+   [
+    "B11",
+    0.9325039494193115
+   ],
+   [
+    "B1",
+    -0.9242981266204051
+   ]
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-62",
+  "title": "Fig. MARIDA-62. Random Forest: dependence plots of the 3 most important features for the Class 1 Water output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_rf_c1_water_dependence_top3.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "glcm_contrast",
+    -0.9654068214030127,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "glcm_contrast",
+    "B3",
+    -0.7014652172613959,
+    0.00827991496771574,
+    8.363801956176758
+   ],
+   [
+    "NDWI",
+    "B4",
+    0.9612573133731342,
+    -0.44791078567504883,
+    0.4839944541454315
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-63",
+  "title": "Fig. MARIDA-63. Random Forest: dependence plots of the 3 most important features for the Class 2 Marine Debris output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_rf_c2_debris_dependence_top3.png",
+  "model": "rf",
+  "cls": 1,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "B5",
+    -0.14630332407575164,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "swir1/nir",
+    "B5",
+    -0.5966854292896826,
+    0.07936681807041168,
+    0.943188488483429
+   ],
+   [
+    "NDWI",
+    "B6",
+    -0.3117232650856007,
+    -0.44791078567504883,
+    0.4839944541454315
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-64",
+  "title": "Fig. MARIDA-64. Random Forest: dependence plots of the 3 most important features for the Class 3 Sargassum output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_rf_c3_sargassum_dependence_top3.png",
+  "model": "rf",
+  "cls": 2,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "glcm_dissimilarity",
+    0.8894154872493235,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "NDWI",
+    "B8A",
+    -0.9074651440730168,
+    -0.44791078567504883,
+    0.4839944541454315
+   ],
+   [
+    "nir/green",
+    "B11",
+    0.9381794917913138,
+    0.3477073013782501,
+    2.622574806213379
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-65",
+  "title": "Fig. MARIDA-65. Random Forest: dependence plots of the 3 most important features for the Class 4 Other output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_rf_c4_other_dependence_top3.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "dependence",
+  "panels": [
+   [
+    "glcm_contrast",
+    "B2",
+    0.8463627102084117,
+    0.00827991496771574,
+    8.363801956176758
+   ],
+   [
+    "B11",
+    "nir/green",
+    0.7439989815266553,
+    0.004643251188099384,
+    0.0971715971827507
+   ],
+   [
+    "glcm_dissimilarity",
+    "B4",
+    0.8508055694694642,
+    0.00827991496771574,
+    1.5596420764923096
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-66",
+  "title": "Fig. MARIDA-66. XGBoost: dependence plots of the 3 most important features for the Class 1 Water output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_xgb_c1_water_dependence_top3.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "glcm_contrast",
+    -0.9315667770108985,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "glcm_contrast",
+    "B3",
+    -0.9048962832324542,
+    0.00827991496771574,
+    8.363801956176758
+   ],
+   [
+    "B8A",
+    "B11",
+    -0.9202643094125805,
+    0.014694604091346264,
+    0.16701935231685638
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-67",
+  "title": "Fig. MARIDA-67. XGBoost: dependence plots of the 3 most important features for the Class 2 Marine Debris output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_xgb_c2_debris_dependence_top3.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "B5",
+    0.13033834073901845,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "swir1/nir",
+    "B5",
+    -0.6130444198451602,
+    0.07936681807041168,
+    0.943188488483429
+   ],
+   [
+    "NDWI",
+    "B1",
+    -0.3046468504492017,
+    -0.44791078567504883,
+    0.4839944541454315
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-68",
+  "title": "Fig. MARIDA-68. XGBoost: dependence plots of the 3 most important features for the Class 3 Sargassum output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_xgb_c3_sargassum_dependence_top3.png",
+  "model": "xgb",
+  "cls": 2,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "glcm_dissimilarity",
+    0.8866981030196798,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "B3",
+    "nir/red",
+    -0.9233153557563561,
+    0.02253963053226471,
+    0.1622125506401062
+   ],
+   [
+    "glcm_contrast",
+    "nir/red",
+    -0.8659424394134381,
+    0.00827991496771574,
+    8.363801956176758
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-69",
+  "title": "Fig. MARIDA-69. XGBoost: dependence plots of the 3 most important features for the Class 4 Other output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_xgb_c4_other_dependence_top3.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "dependence",
+  "panels": [
+   [
+    "glcm_contrast",
+    "nir/red",
+    0.9514143561823374,
+    0.00827991496771574,
+    8.363801956176758
+   ],
+   [
+    "B11",
+    "nir/red",
+    0.9099348100885574,
+    0.004643251188099384,
+    0.0971715971827507
+   ],
+   [
+    "B1",
+    "glcm_dissimilarity",
+    -0.9222004994217846,
+    0.02698412351310253,
+    0.08081931620836258
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-70",
+  "title": "Fig. MARIDA-70. LightGBM: dependence plots of the 3 most important features for the Class 1 Water output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_lgbm_c1_water_dependence_top3.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "glcm_contrast",
+    -0.9482081652425041,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "glcm_contrast",
+    "B3",
+    -0.8887588898694093,
+    0.00827991496771574,
+    8.363801956176758
+   ],
+   [
+    "B8A",
+    "B11",
+    -0.9361264480122615,
+    0.014694604091346264,
+    0.16701935231685638
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-71",
+  "title": "Fig. MARIDA-71. LightGBM: dependence plots of the 3 most important features for the Class 2 Marine Debris output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_lgbm_c2_debris_dependence_top3.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "B5",
+    0.2796862155454382,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "swir1/nir",
+    "B5",
+    -0.6056752480482196,
+    0.07936681807041168,
+    0.943188488483429
+   ],
+   [
+    "NDWI",
+    "glcm_dissimilarity",
+    -0.24565574698315765,
+    -0.44791078567504883,
+    0.4839944541454315
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-72",
+  "title": "Fig. MARIDA-72. LightGBM: dependence plots of the 3 most important features for the Class 3 Sargassum output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_lgbm_c3_sargassum_dependence_top3.png",
+  "model": "lgbm",
+  "cls": 2,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "glcm_dissimilarity",
+    0.8943848962254913,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "B3",
+    "nir/red",
+    -0.8988717871556711,
+    0.02253963053226471,
+    0.1622125506401062
+   ],
+   [
+    "glcm_contrast",
+    "nir/red",
+    -0.919061261081532,
+    0.00827991496771574,
+    8.363801956176758
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-73",
+  "title": "Fig. MARIDA-73. LightGBM: dependence plots of the 3 most important features for the Class 4 Other output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_lgbm_c4_other_dependence_top3.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "dependence",
+  "panels": [
+   [
+    "glcm_contrast",
+    "nir/red",
+    0.9553837386151179,
+    0.00827991496771574,
+    8.363801956176758
+   ],
+   [
+    "B11",
+    "nir/red",
+    0.9281658322675149,
+    0.004643251188099384,
+    0.0971715971827507
+   ],
+   [
+    "B1",
+    "glcm_dissimilarity",
+    -0.9297824237753705,
+    0.02698412351310253,
+    0.08081931620836258
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-74",
+  "title": "Fig. MARIDA-74. AdaBoost: dependence plots of the 3 most important features for the Class 1 Water output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_ada_c1_water_dependence_top3.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "glcm_contrast",
+    -0.9649254006211828,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "glcm_contrast",
+    "B2",
+    -0.8807577788763762,
+    0.00827991496771574,
+    8.363801956176758
+   ],
+   [
+    "swir1/nir",
+    "B5",
+    0.3968076014634867,
+    0.07936681807041168,
+    0.943188488483429
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-75",
+  "title": "Fig. MARIDA-75. AdaBoost: dependence plots of the 3 most important features for the Class 2 Marine Debris output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_ada_c2_debris_dependence_top3.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "swir1/nir",
+    0.2540872483167539,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "swir1/nir",
+    "NDWI",
+    -0.5212284803222681,
+    0.07936681807041168,
+    0.943188488483429
+   ],
+   [
+    "nir/green",
+    "swir1/nir",
+    0.15100001175896646,
+    0.3477073013782501,
+    2.622574806213379
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-76",
+  "title": "Fig. MARIDA-76. AdaBoost: dependence plots of the 3 most important features for the Class 3 Sargassum output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_ada_c3_sargassum_dependence_top3.png",
+  "model": "ada",
+  "cls": 2,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/red",
+    "glcm_homogeneity",
+    0.9305068676500415,
+    0.36738428473472595,
+    3.0839662551879883
+   ],
+   [
+    "glcm_contrast",
+    "nir/red",
+    -0.8698605208279069,
+    0.00827991496771574,
+    8.363801956176758
+   ],
+   [
+    "B3",
+    "swir1/nir",
+    -0.7333869681212082,
+    0.02253963053226471,
+    0.1622125506401062
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-77",
+  "title": "Fig. MARIDA-77. AdaBoost: dependence plots of the 3 most important features for the Class 4 Other output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_ada_c4_other_dependence_top3.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "dependence",
+  "panels": [
+   [
+    "glcm_contrast",
+    "B2",
+    0.9213706979840839,
+    0.00827991496771574,
+    8.363801956176758
+   ],
+   [
+    "swir1/nir",
+    "glcm_contrast",
+    0.920691959223,
+    0.07936681807041168,
+    0.943188488483429
+   ],
+   [
+    "nir/red",
+    "glcm_contrast",
+    0.005095602286905571,
+    0.36738428473472595,
+    3.0839662551879883
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-78",
+  "title": "Fig. MARIDA-78. Linear SVM: dependence plots of the 3 most important features for the Class 1 Water output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_svm_c1_water_dependence_top3.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "dependence",
+  "panels": [
+   [
+    "B11",
+    "B12",
+    -1.0,
+    0.004643251188099384,
+    0.0971715971827507
+   ],
+   [
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    -1.0,
+    0.00827991496771574,
+    1.5596420764923096
+   ],
+   [
+    "B8A",
+    "B7",
+    -0.9999999999999999,
+    0.014694604091346264,
+    0.16701935231685638
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-79",
+  "title": "Fig. MARIDA-79. Linear SVM: dependence plots of the 3 most important features for the Class 2 Marine Debris output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_svm_c2_debris_dependence_top3.png",
+  "model": "svm",
+  "cls": 1,
+  "kind": "dependence",
+  "panels": [
+   [
+    "nir/green",
+    "NDWI",
+    -1.0,
+    0.3477073013782501,
+    2.622574806213379
+   ],
+   [
+    "NDWI",
+    "nir/green",
+    -1.0,
+    -0.44791078567504883,
+    0.4839944541454315
+   ],
+   [
+    "B5",
+    "B7",
+    -1.0,
+    0.014777718111872673,
+    0.15039297938346863
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-80",
+  "title": "Fig. MARIDA-80. Linear SVM: dependence plots of the 3 most important features for the Class 3 Sargassum output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_svm_c3_sargassum_dependence_top3.png",
+  "model": "svm",
+  "cls": 2,
+  "kind": "dependence",
+  "panels": [
+   [
+    "B4",
+    "B3",
+    -0.9999999999999999,
+    0.017358504235744476,
+    0.170235276222229
+   ],
+   [
+    "glcm_contrast",
+    "glcm_dissimilarity",
+    -1.0,
+    0.00827991496771574,
+    8.363801956176758
+   ],
+   [
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    1.0,
+    0.00827991496771574,
+    1.5596420764923096
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-81",
+  "title": "Fig. MARIDA-81. Linear SVM: dependence plots of the 3 most important features for the Class 4 Other output",
+  "section": "C",
+  "item": "8",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_svm_c4_other_dependence_top3.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "dependence",
+  "panels": [
+   [
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    1.0,
+    0.00827991496771574,
+    1.5596420764923096
+   ],
+   [
+    "B11",
+    "B12",
+    1.0,
+    0.004643251188099384,
+    0.0971715971827507
+   ],
+   [
+    "B3",
+    "B4",
+    1.0,
+    0.02253963053226471,
+    0.1622125506401062
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-82",
+  "title": "Fig. MARIDA-82. Random Forest: mean |SHAP interaction| between the top features, per class output",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_rf_interaction_matrices.png",
+  "model": "rf",
+  "kind": "interaction_matrix",
+  "per_class": {
+   "0": {
+    "offdiag_fraction": 0.49416804196686226,
+    "top_pairs": [
+     [
+      "NDWI",
+      "nir/red",
+      0.02480876255044106
+     ],
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.02378437256257282
+     ],
+     [
+      "nir/red",
+      "nir/green",
+      0.021179748209175626
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      0.2036036110312364
+     ],
+     [
+      "glcm_contrast",
+      0.1360412395653176
+     ],
+     [
+      "NDWI",
+      0.08875719325492885
+     ]
+    ]
+   },
+   "1": {
+    "offdiag_fraction": 0.6425339257076842,
+    "top_pairs": [
+     [
+      "NDWI",
+      "nir/red",
+      0.016844091272980366
+     ],
+     [
+      "nir/red",
+      "swir1/nir",
+      0.014238041021141226
+     ],
+     [
+      "nir/red",
+      "nir/green",
+      0.01275633550664831
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      0.056640107217679446
+     ],
+     [
+      "swir1/nir",
+      0.045289510005996805
+     ],
+     [
+      "glcm_contrast",
+      0.03206654907500474
+     ]
+    ]
+   },
+   "2": {
+    "offdiag_fraction": 0.5479526236536356,
+    "top_pairs": [
+     [
+      "NDWI",
+      "nir/red",
+      0.010483239236007209
+     ],
+     [
+      "B2",
+      "nir/red",
+      0.00914422299736145
+     ],
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.008771317045801226
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      0.09959008053775839
+     ],
+     [
+      "NDWI",
+      0.049136531891178795
+     ],
+     [
+      "nir/green",
+      0.04252551341811331
+     ]
+    ]
+   },
+   "3": {
+    "offdiag_fraction": 0.5517176096802833,
+    "top_pairs": [
+     [
+      "B11",
+      "glcm_contrast",
+      0.014064163905998225
+     ],
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.013722001626045952
+     ],
+     [
+      "glcm_contrast",
+      "glcm_homogeneity",
+      0.012669075030732859
+     ]
+    ],
+    "top_main": [
+     [
+      "glcm_contrast",
+      0.11976715232557636
+     ],
+     [
+      "glcm_dissimilarity",
+      0.06293708648856608
+     ],
+     [
+      "nir/red",
+      0.05194798787598744
+     ]
+    ]
+   }
+  },
+  "n": 160
+ },
+ {
+  "id": "Fig. MARIDA-83",
+  "title": "Fig. MARIDA-83. Random Forest: strongest interaction pair for the Marine Debris output (NDWI x nir/red)",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_rf_c2_debris_top_interaction_pair.png",
+  "model": "rf",
+  "cls": 1,
+  "kind": "interaction_pair",
+  "pair": [
+   "NDWI",
+   "nir/red"
+  ],
+  "rho_i": 0.8120414859955468,
+  "rho_j": -0.8611039493730225,
+  "range": [
+   -0.06820297904437234,
+   0.019740244623967146
+  ],
+  "main_range": [
+   -0.03415948850124045,
+   0.07366177578259551
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-84",
+  "title": "Fig. MARIDA-84. XGBoost: mean |SHAP interaction| between the top features, per class output",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_xgb_interaction_matrices.png",
+  "model": "xgb",
+  "kind": "interaction_matrix",
+  "per_class": {
+   "0": {
+    "offdiag_fraction": 0.5208875417708271,
+    "top_pairs": [
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.7064616110350471
+     ],
+     [
+      "B8A",
+      "swir1/nir",
+      0.24423993274685926
+     ],
+     [
+      "nir/red",
+      "swir1/nir",
+      0.21315499140837346
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      2.026849622139707
+     ],
+     [
+      "glcm_contrast",
+      0.8339013866148889
+     ],
+     [
+      "B8A",
+      0.5602783041831572
+     ]
+    ]
+   },
+   "1": {
+    "offdiag_fraction": 0.5671193455930126,
+    "top_pairs": [
+     [
+      "nir/red",
+      "swir1/nir",
+      0.38110537876491435
+     ],
+     [
+      "red/green",
+      "nir/red",
+      0.2277371138916351
+     ],
+     [
+      "NDWI",
+      "nir/red",
+      0.21845058090693784
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      1.1258552424260415
+     ],
+     [
+      "swir1/nir",
+      0.8084395973652135
+     ],
+     [
+      "red/green",
+      0.5359036142122932
+     ]
+    ]
+   },
+   "2": {
+    "offdiag_fraction": 0.5007114273747686,
+    "top_pairs": [
+     [
+      "B3",
+      "nir/red",
+      0.5175968820578418
+     ],
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.43254639947554097
+     ],
+     [
+      "B2",
+      "nir/red",
+      0.3789768373244442
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      2.7550561017356814
+     ],
+     [
+      "B2",
+      0.7830972964991816
+     ],
+     [
+      "glcm_contrast",
+      0.7535637654655147
+     ]
+    ]
+   },
+   "3": {
+    "offdiag_fraction": 0.5521874048667723,
+    "top_pairs": [
+     [
+      "B11",
+      "glcm_contrast",
+      0.33578962729661727
+     ],
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.2294561219168827
+     ],
+     [
+      "B1",
+      "glcm_contrast",
+      0.1760874200524995
+     ]
+    ],
+    "top_main": [
+     [
+      "glcm_contrast",
+      1.4527056894497945
+     ],
+     [
+      "B11",
+      0.8998685895465315
+     ],
+     [
+      "B1",
+      0.33232466896879487
+     ]
+    ]
+   }
+  },
+  "n": 160
+ },
+ {
+  "id": "Fig. MARIDA-85",
+  "title": "Fig. MARIDA-85. XGBoost: strongest interaction pair for the Marine Debris output (nir/red x swir1/nir)",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_xgb_c2_debris_top_interaction_pair.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "interaction_pair",
+  "pair": [
+   "nir/red",
+   "swir1/nir"
+  ],
+  "rho_i": -0.11681120356263915,
+  "rho_j": 0.26579749208953474,
+  "range": [
+   -1.4100300073623657,
+   1.3469064235687256
+  ],
+  "main_range": [
+   -1.8244179487228394,
+   1.8418772220611572
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-86",
+  "title": "Fig. MARIDA-86. LightGBM: mean |SHAP interaction| between the top features, per class output",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_lgbm_interaction_matrices.png",
+  "model": "lgbm",
+  "kind": "interaction_matrix",
+  "per_class": {
+   "0": {
+    "offdiag_fraction": 0.6554428458858715,
+    "top_pairs": [
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.7684142954939714
+     ],
+     [
+      "red/green",
+      "nir/red",
+      0.5497110330009216
+     ],
+     [
+      "nir/red",
+      "swir1/nir",
+      0.5129661016817775
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      1.5187441752810251
+     ],
+     [
+      "glcm_contrast",
+      1.2774530571810228
+     ],
+     [
+      "B5",
+      0.5109850175216782
+     ]
+    ]
+   },
+   "1": {
+    "offdiag_fraction": 0.6641250261443047,
+    "top_pairs": [
+     [
+      "nir/red",
+      "swir1/nir",
+      0.45891825902514216
+     ],
+     [
+      "NDWI",
+      "nir/red",
+      0.4550711841084726
+     ],
+     [
+      "NDWI",
+      "swir1/nir",
+      0.3678959322692362
+     ]
+    ],
+    "top_main": [
+     [
+      "NDWI",
+      0.8278101727622127
+     ],
+     [
+      "nir/red",
+      0.7261163065925829
+     ],
+     [
+      "swir1/nir",
+      0.6904092026283845
+     ]
+    ]
+   },
+   "2": {
+    "offdiag_fraction": 0.5947580221324675,
+    "top_pairs": [
+     [
+      "B3",
+      "B6",
+      0.4430362628645338
+     ],
+     [
+      "B3",
+      "nir/red",
+      0.3095263092887284
+     ],
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.3078844385994687
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      2.186377208906168
+     ],
+     [
+      "B3",
+      0.5657818282569498
+     ],
+     [
+      "B6",
+      0.557495509844755
+     ]
+    ]
+   },
+   "3": {
+    "offdiag_fraction": 0.6044296327007402,
+    "top_pairs": [
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.29343116532259106
+     ],
+     [
+      "B11",
+      "glcm_contrast",
+      0.22346538527365783
+     ],
+     [
+      "glcm_contrast",
+      "glcm_correlation",
+      0.20373022027211535
+     ]
+    ],
+    "top_main": [
+     [
+      "glcm_contrast",
+      1.3151056627600641
+     ],
+     [
+      "B11",
+      0.6037595495125949
+     ],
+     [
+      "B1",
+      0.529599550179704
+     ]
+    ]
+   }
+  },
+  "n": 160
+ },
+ {
+  "id": "Fig. MARIDA-87",
+  "title": "Fig. MARIDA-87. LightGBM: strongest interaction pair for the Marine Debris output (nir/red x swir1/nir)",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_lgbm_c2_debris_top_interaction_pair.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "interaction_pair",
+  "pair": [
+   "nir/red",
+   "swir1/nir"
+  ],
+  "rho_i": 0.2965750615258409,
+  "rho_j": -0.21874780264854096,
+  "range": [
+   -1.1100287612591215,
+   1.3078251537397552
+  ],
+  "main_range": [
+   -0.23836325284845175,
+   1.5563009057931423
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-88",
+  "title": "Fig. MARIDA-88. AdaBoost: mean |SHAP interaction| between the top features, per class output",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_ada_interaction_matrices.png",
+  "model": "ada",
+  "kind": "interaction_matrix",
+  "per_class": {
+   "0": {
+    "offdiag_fraction": 0.3604926897452956,
+    "top_pairs": [
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.05661733554418157
+     ],
+     [
+      "B4",
+      "glcm_contrast",
+      0.023863674280200604
+     ],
+     [
+      "nir/red",
+      "swir1/nir",
+      0.017050021140146636
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      0.24504377506521607
+     ],
+     [
+      "glcm_contrast",
+      0.14247183726598053
+     ],
+     [
+      "swir1/nir",
+      0.04849026257326568
+     ]
+    ]
+   },
+   "1": {
+    "offdiag_fraction": 0.4116377432090084,
+    "top_pairs": [
+     [
+      "nir/red",
+      "swir1/nir",
+      0.02218197433123789
+     ],
+     [
+      "swir1/nir",
+      "glcm_contrast",
+      0.011788034155454381
+     ],
+     [
+      "red/green",
+      "swir1/nir",
+      0.010213427745025847
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      0.06813469355157517
+     ],
+     [
+      "swir1/nir",
+      0.06564405764598022
+     ],
+     [
+      "red/green",
+      0.024265195035943102
+     ]
+    ]
+   },
+   "2": {
+    "offdiag_fraction": 0.4256997426353739,
+    "top_pairs": [
+     [
+      "B3",
+      "B6",
+      0.018994162310920597
+     ],
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.018698860942588567
+     ],
+     [
+      "red/green",
+      "nir/red",
+      0.012113001478677343
+     ]
+    ],
+    "top_main": [
+     [
+      "nir/red",
+      0.14538110187317216
+     ],
+     [
+      "B3",
+      0.02061953596997715
+     ],
+     [
+      "B6",
+      0.019039483023051532
+     ]
+    ]
+   },
+   "3": {
+    "offdiag_fraction": 0.450828091727114,
+    "top_pairs": [
+     [
+      "nir/red",
+      "glcm_contrast",
+      0.04879824434003363
+     ],
+     [
+      "B11",
+      "nir/red",
+      0.01370278538379311
+     ],
+     [
+      "red/green",
+      "nir/red",
+      0.012880320428484313
+     ]
+    ],
+    "top_main": [
+     [
+      "glcm_contrast",
+      0.1409965187322187
+     ],
+     [
+      "nir/red",
+      0.06440846769072635
+     ],
+     [
+      "B1",
+      0.030391503986220248
+     ]
+    ]
+   }
+  },
+  "n": 160
+ },
+ {
+  "id": "Fig. MARIDA-89",
+  "title": "Fig. MARIDA-89. AdaBoost: strongest interaction pair for the Marine Debris output (nir/red x swir1/nir)",
+  "section": "C",
+  "item": "9",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_ada_c2_debris_top_interaction_pair.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "interaction_pair",
+  "pair": [
+   "nir/red",
+   "swir1/nir"
+  ],
+  "rho_i": 0.2187689796973946,
+  "rho_j": -0.146850069468452,
+  "range": [
+   -0.05433598552941068,
+   0.0381293231636396
+  ],
+  "main_range": [
+   -0.057743926220888996,
+   0.1886524278986346
+  ]
+ },
+ {
+  "id": "Fig. MARIDA-90",
+  "title": "Fig. MARIDA-90. Distribution of normalised SHAP values of the 6 most important features for the Class 1 Water output, all models",
+  "section": "C",
+  "item": "10",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_all_models_c1_water_shap_distribution.png",
+  "cls": 0,
+  "kind": "distribution",
+  "spread": {
+   "nir/red": {
+    "rf": [
+     -0.23015453930271015,
+     0.3476054986480266
+    ],
+    "xgb": [
+     -0.2968228028173719,
+     0.5896638284563611
+    ],
+    "lgbm": [
+     -0.2654325981990292,
+     0.4718336356960383
+    ],
+    "ada": [
+     -0.5116241091223106,
+     0.6438012377298247
+    ],
+    "svm": [
+     -0.04134128480024747,
+     0.019877755734565822
+    ]
+   },
+   "glcm_contrast": {
+    "rf": [
+     -0.25197342972212794,
+     0.21879249810726456
+    ],
+    "xgb": [
+     -0.32439475611085594,
+     0.320755235402421
+    ],
+    "lgbm": [
+     -0.3057435981969452,
+     0.3024198929357233
+    ],
+    "ada": [
+     -0.5053999103403396,
+     0.41412698624306377
+    ],
+    "svm": [
+     -0.029162293308020407,
+     0.13278679129788956
+    ]
+   },
+   "B8A": {
+    "rf": [
+     -0.1063561246462614,
+     0.10050388706101085
+    ],
+    "xgb": [
+     -0.14059656629376513,
+     0.24960221829849322
+    ],
+    "lgbm": [
+     -0.17133456926244364,
+     0.29557643429244457
+    ],
+    "ada": [
+     -0.05187422395109889,
+     0.044160761387113695
+    ],
+    "svm": [
+     -0.23221082197416573,
+     0.14716685940166727
+    ]
+   },
+   "swir1/nir": {
+    "rf": [
+     -0.10134704226653496,
+     0.17316246671496238
+    ],
+    "xgb": [
+     -0.10178396430343621,
+     0.20667166836265113
+    ],
+    "lgbm": [
+     -0.10556848371246498,
+     0.17297905889061235
+    ],
+    "ada": [
+     -0.10954980972901554,
+     0.3396371910694948
+    ],
+    "svm": [
+     -0.029192087966581737,
+     0.05297303704217924
+    ]
+   },
+   "NDWI": {
+    "rf": [
+     -0.15413254184866548,
+     0.2247435913154404
+    ],
+    "xgb": [
+     -0.09910764221093588,
+     0.1265478644704553
+    ],
+    "lgbm": [
+     -0.08279528229157389,
+     0.11192542623285372
+    ],
+    "ada": [
+     -0.04124115542299832,
+     0.07122282497696444
+    ],
+    "svm": [
+     -0.06905431679865404,
+     0.07130997948851225
+    ]
+   },
+   "B5": {
+    "rf": [
+     -0.09174360589042312,
+     0.14737219165834847
+    ],
+    "xgb": [
+     -0.08915424855773027,
+     0.06511353486301313
+    ],
+    "lgbm": [
+     -0.147701564751611,
+     0.14229596569289718
+    ],
+    "ada": [
+     -0.010926376204944677,
+     0.01598552638117734
+    ],
+    "svm": [
+     -0.1109272571305412,
+     0.16894760217886026
+    ]
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-91",
+  "title": "Fig. MARIDA-91. Distribution of normalised SHAP values of the 6 most important features for the Class 2 Marine Debris output, all models",
+  "section": "C",
+  "item": "10",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_all_models_c2_debris_shap_distribution.png",
+  "cls": 1,
+  "kind": "distribution",
+  "spread": {
+   "nir/red": {
+    "rf": [
+     -0.22669814167840702,
+     0.22678091076971266
+    ],
+    "xgb": [
+     -0.3384219035466882,
+     0.33736180372516544
+    ],
+    "lgbm": [
+     -0.3407257111885908,
+     0.24114237652559908
+    ],
+    "ada": [
+     -0.4068756967483844,
+     0.47474319743846505
+    ],
+    "svm": [
+     -0.166356259336956,
+     0.07998757426126973
+    ]
+   },
+   "swir1/nir": {
+    "rf": [
+     -0.27106433190034906,
+     0.15710416273828923
+    ],
+    "xgb": [
+     -0.46242781276487327,
+     0.1643461756914752
+    ],
+    "lgbm": [
+     -0.42730745652247915,
+     0.15601066768386923
+    ],
+    "ada": [
+     -0.7744882064130106,
+     0.2231817579239588
+    ],
+    "svm": [
+     -0.0793755111549091,
+     0.04374181722262779
+    ]
+   },
+   "NDWI": {
+    "rf": [
+     -0.16829517790908874,
+     0.1866361312276636
+    ],
+    "xgb": [
+     -0.1575702795982179,
+     0.11988437929892998
+    ],
+    "lgbm": [
+     -0.22215523337652218,
+     0.1704074667859628
+    ],
+    "ada": [
+     -0.13883289469873755,
+     0.08083395225474792
+    ],
+    "svm": [
+     -0.4446288615280784,
+     0.43056445229704504
+    ]
+   },
+   "nir/green": {
+    "rf": [
+     -0.15294476345728442,
+     0.16570276803367667
+    ],
+    "xgb": [
+     -0.08748409085817838,
+     0.06593616259768968
+    ],
+    "lgbm": [
+     -0.0830183747684403,
+     0.04107885882273932
+    ],
+    "ada": [
+     -0.15185424646408924,
+     0.09169738597549656
+    ],
+    "svm": [
+     -0.6228836328875914,
+     0.35592901942628463
+    ]
+   },
+   "red/green": {
+    "rf": [
+     -0.08915068100229094,
+     0.08316614346077762
+    ],
+    "xgb": [
+     -0.19304933293844356,
+     0.14359932704278985
+    ],
+    "lgbm": [
+     -0.18981603108373032,
+     0.1418045987852537
+    ],
+    "ada": [
+     -0.2082972533144447,
+     0.11303689780083835
+    ],
+    "svm": [
+     -0.013597127151179528,
+     0.012707734568608523
+    ]
+   },
+   "B12": {
+    "rf": [
+     -0.24871246774710437,
+     0.1309781278035738
+    ],
+    "xgb": [
+     -0.1847206954109315,
+     0.09181162614487351
+    ],
+    "lgbm": [
+     -0.24883254169400595,
+     0.11037602137014609
+    ],
+    "ada": [
+     -0.014495702272542432,
+     0.005383316838889736
+    ],
+    "svm": [
+     -0.07987657897038844,
+     0.031705218129563735
+    ]
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-92",
+  "title": "Fig. MARIDA-92. Distribution of normalised SHAP values of the 6 most important features for the Class 3 Sargassum output, all models",
+  "section": "C",
+  "item": "10",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_all_models_c3_sargassum_shap_distribution.png",
+  "cls": 2,
+  "kind": "distribution",
+  "spread": {
+   "nir/red": {
+    "rf": [
+     -0.2224544104431994,
+     0.5330009484560175
+    ],
+    "xgb": [
+     -0.27263629380872045,
+     0.6235180946259493
+    ],
+    "lgbm": [
+     -0.21150784370026024,
+     0.6362335845647542
+    ],
+    "ada": [
+     -0.40439167692077727,
+     0.9741113158748986
+    ],
+    "svm": [
+     -0.07135481790792313,
+     0.034308891165608583
+    ]
+   },
+   "glcm_contrast": {
+    "rf": [
+     -0.10117801579169564,
+     0.07907542651101512
+    ],
+    "xgb": [
+     -0.16762817889201687,
+     0.1489486483331604
+    ],
+    "lgbm": [
+     -0.1810275332415993,
+     0.17899952331675767
+    ],
+    "ada": [
+     -0.1918227952682014,
+     0.22546075800591112
+    ],
+    "svm": [
+     -0.48706082226731445,
+     0.10696704407850817
+    ]
+   },
+   "B4": {
+    "rf": [
+     -0.08189999770545572,
+     0.11688126818515208
+    ],
+    "xgb": [
+     -0.04155040288638406,
+     0.05215877444106624
+    ],
+    "lgbm": [
+     -0.02370905225871696,
+     0.031680228659614576
+    ],
+    "ada": [
+     -0.1382205927684715,
+     0.0571074272258178
+    ],
+    "svm": [
+     -0.5640594873178022,
+     0.3170206308795713
+    ]
+   },
+   "B3": {
+    "rf": [
+     -0.069241978059352,
+     0.08596171586961092
+    ],
+    "xgb": [
+     -0.17990539520085608,
+     0.3424166433619803
+    ],
+    "lgbm": [
+     -0.1544056988336649,
+     0.28981184195098125
+    ],
+    "ada": [
+     -0.08622437577560221,
+     0.30462172656474557
+    ],
+    "svm": [
+     -0.042013278852180494,
+     0.08377054509298522
+    ]
+   },
+   "B6": {
+    "rf": [
+     -0.0701523693728601,
+     0.06509364671517116
+    ],
+    "xgb": [
+     -0.15513998993531686,
+     0.06432422126423093
+    ],
+    "lgbm": [
+     -0.25451463726278045,
+     0.15411159116629541
+    ],
+    "ada": [
+     -0.05789814798639379,
+     0.03742618974471844
+    ],
+    "svm": [
+     -0.09678062546510392,
+     0.15552309209000523
+    ]
+   },
+   "B2": {
+    "rf": [
+     -0.06883180005368814,
+     0.18806296794012184
+    ],
+    "xgb": [
+     -0.09605530467692121,
+     0.2010890416106125
+    ],
+    "lgbm": [
+     -0.1345997550652319,
+     0.18114744783181086
+    ],
+    "ada": [
+     -0.034153558231146144,
+     0.057663649456463566
+    ],
+    "svm": [
+     -0.001843645590243685,
+     0.004621624054944821
+    ]
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-93",
+  "title": "Fig. MARIDA-93. Distribution of normalised SHAP values of the 6 most important features for the Class 4 Other output, all models",
+  "section": "C",
+  "item": "10",
+  "path": "04_dependence_and_interactions/MARIDA/MARIDA_all_models_c4_other_shap_distribution.png",
+  "cls": 3,
+  "kind": "distribution",
+  "spread": {
+   "glcm_contrast": {
+    "rf": [
+     -0.2476514828257509,
+     0.4444518994664921
+    ],
+    "xgb": [
+     -0.323024417965955,
+     0.5390244428316657
+    ],
+    "lgbm": [
+     -0.319415348508715,
+     0.5089922766098042
+    ],
+    "ada": [
+     -0.5475707979662965,
+     0.6932043436070737
+    ],
+    "svm": [
+     -0.1635383912224385,
+     0.03591588052799299
+    ]
+   },
+   "B11": {
+    "rf": [
+     -0.1755185972471611,
+     0.38201399029654926
+    ],
+    "xgb": [
+     -0.2562312943716719,
+     0.4828486697435516
+    ],
+    "lgbm": [
+     -0.24411757068975415,
+     0.3656567979924916
+    ],
+    "ada": [
+     -0.07052248774210401,
+     0.23758709236129139
+    ],
+    "svm": [
+     -0.10942012535422165,
+     0.29003247847561664
+    ]
+   },
+   "B1": {
+    "rf": [
+     -0.05405113374792456,
+     0.06908929154577766
+    ],
+    "xgb": [
+     -0.137036297981181,
+     0.20674094710506175
+    ],
+    "lgbm": [
+     -0.1394675429932458,
+     0.2299982665844562
+    ],
+    "ada": [
+     -0.11761029876500155,
+     0.1021689642628897
+    ],
+    "svm": [
+     -0.02632733386260194,
+     0.03121655916356837
+    ]
+   },
+   "glcm_dissimilarity": {
+    "rf": [
+     -0.0934268815987681,
+     0.2172245929917981
+    ],
+    "xgb": [
+     -0.10046399303945577,
+     0.06908829379036699
+    ],
+    "lgbm": [
+     -0.07039277793938939,
+     0.10585753961667496
+    ],
+    "ada": [
+     -0.056000242970648186,
+     0.02732249394558205
+    ],
+    "svm": [
+     -0.1822219481667732,
+     0.437574253077831
+    ]
+   },
+   "swir1/nir": {
+    "rf": [
+     -0.15188536645981912,
+     0.14951790760561318
+    ],
+    "xgb": [
+     -0.12401165641077716,
+     0.10964173210820118
+    ],
+    "lgbm": [
+     -0.13467108410577155,
+     0.0788786850841567
+    ],
+    "ada": [
+     -0.24733880964473548,
+     0.3296550164379279
+    ],
+    "svm": [
+     -0.018820427864830704,
+     0.010371457187953634
+    ]
+   },
+   "B3": {
+    "rf": [
+     -0.06374711300400335,
+     0.08579329734994251
+    ],
+    "xgb": [
+     -0.09160627992906908,
+     0.04816226295240211
+    ],
+    "lgbm": [
+     -0.10479532814695357,
+     0.04600066022257495
+    ],
+    "ada": [
+     -0.18752623555994086,
+     0.06410431430651327
+    ],
+    "svm": [
+     -0.11595950388236827,
+     0.23121239556464587
+    ]
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-94",
+  "title": "Fig. MARIDA-94. Random Forest: waterfall for a correctly classified Water pixel (explaining the Water output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_rf_c1_water_correct_waterfall.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "waterfall_correct",
+  "test_index": 73935,
+  "base": 0.2628499999999999,
+  "fx": 0.999999997047607,
+  "top3": [
+   [
+    "nir/red",
+    0.3798885941505432,
+    0.1814783769745384
+   ],
+   [
+    "glcm_contrast",
+    0.1655982881784439,
+    0.10734299785131299
+   ],
+   [
+    "nir/green",
+    0.43567562103271484,
+    0.09668702489712956
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-95",
+  "title": "Fig. MARIDA-95. XGBoost: waterfall for a correctly classified Water pixel (explaining the Water output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_xgb_c1_water_correct_waterfall.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "waterfall_correct",
+  "test_index": 73935,
+  "base": -0.8404274978817685,
+  "fx": 5.734037796527216,
+  "top3": [
+   [
+    "nir/red",
+    0.3798885941505432,
+    3.0510924054076893
+   ],
+   [
+    "glcm_contrast",
+    0.1655982881784439,
+    1.5506990676825807
+   ],
+   [
+    "NDWI",
+    0.3930659592151642,
+    0.6559314720408292
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-96",
+  "title": "Fig. MARIDA-96. LightGBM: waterfall for a correctly classified Water pixel (explaining the Water output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_lgbm_c1_water_correct_waterfall.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "waterfall_correct",
+  "test_index": 73935,
+  "base": -2.9216183477495696,
+  "fx": 5.2064168837477,
+  "top3": [
+   [
+    "nir/red",
+    0.3798885941505432,
+    3.0608592841459905
+   ],
+   [
+    "glcm_contrast",
+    0.1655982881784439,
+    1.9221372385736322
+   ],
+   [
+    "B5",
+    0.10446082800626755,
+    0.9575925070676021
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-97",
+  "title": "Fig. MARIDA-97. AdaBoost: waterfall for a correctly classified Water pixel (explaining the Water output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_ada_c1_water_correct_waterfall.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "waterfall_correct",
+  "test_index": 73935,
+  "base": 0.036578290199361846,
+  "fx": 0.7300640512752246,
+  "top3": [
+   [
+    "nir/red",
+    0.3798885941505432,
+    0.3083883747516666
+   ],
+   [
+    "glcm_contrast",
+    0.1655982881784439,
+    0.20543699443805963
+   ],
+   [
+    "nir/green",
+    0.43567562103271484,
+    0.0721856920683058
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-98",
+  "title": "Fig. MARIDA-98. Linear SVM: waterfall for a correctly classified Water pixel (explaining the Water output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_svm_c1_water_correct_waterfall.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "waterfall_correct",
+  "test_index": 73935,
+  "base": -0.5564426177573907,
+  "fx": 3.0748570143419336,
+  "top3": [
+   [
+    "B11",
+    0.01031234860420227,
+    2.193391047519834
+   ],
+   [
+    "glcm_dissimilarity",
+    0.1655982881784439,
+    2.00074804105417
+   ],
+   [
+    "B3",
+    0.10909409075975418,
+    -1.5896193667947345
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-99",
+  "title": "Fig. MARIDA-99. Random Forest: waterfall for a correctly classified Marine Debris pixel (explaining the Marine Debris output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_rf_c2_debris_correct_waterfall.png",
+  "model": "rf",
+  "cls": 1,
+  "kind": "waterfall_correct",
+  "test_index": 10406,
+  "base": 0.24115000000000017,
+  "fx": 0.8900000058845996,
+  "top3": [
+   [
+    "NDWI",
+    0.05302288010716438,
+    0.07220676760869935
+   ],
+   [
+    "nir/red",
+    0.9351441264152527,
+    0.07061508134850783
+   ],
+   [
+    "nir/green",
+    0.8992670774459839,
+    0.06803196108317422
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-100",
+  "title": "Fig. MARIDA-100. XGBoost: waterfall for a correctly classified Marine Debris pixel (explaining the Marine Debris output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_xgb_c2_debris_correct_waterfall.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "waterfall_correct",
+  "test_index": 10406,
+  "base": -2.172064566378989,
+  "fx": 3.900354441141377,
+  "top3": [
+   [
+    "nir/red",
+    0.9351441264152527,
+    1.7675002238032176
+   ],
+   [
+    "swir1/nir",
+    0.3498196601867676,
+    0.7920420246793947
+   ],
+   [
+    "red/green",
+    0.961606502532959,
+    0.7439385971758747
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-101",
+  "title": "Fig. MARIDA-101. LightGBM: waterfall for a correctly classified Marine Debris pixel (explaining the Marine Debris output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_lgbm_c2_debris_correct_waterfall.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "waterfall_correct",
+  "test_index": 10406,
+  "base": -4.4224332032272615,
+  "fx": 3.0213485503029407,
+  "top3": [
+   [
+    "nir/red",
+    0.9351441264152527,
+    1.5710789262573235
+   ],
+   [
+    "NDWI",
+    0.05302288010716438,
+    1.1547444261074997
+   ],
+   [
+    "swir1/nir",
+    0.3498196601867676,
+    0.9365790356788785
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-102",
+  "title": "Fig. MARIDA-102. AdaBoost: waterfall for a correctly classified Marine Debris pixel (explaining the Marine Debris output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_ada_c2_debris_correct_waterfall.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "waterfall_correct",
+  "test_index": 10406,
+  "base": 0.011868603781553586,
+  "fx": 0.3203679067713568,
+  "top3": [
+   [
+    "nir/red",
+    0.9351441264152527,
+    0.10244389106985181
+   ],
+   [
+    "swir1/nir",
+    0.3498196601867676,
+    0.07059933284705039
+   ],
+   [
+    "glcm_contrast",
+    0.42761752009391785,
+    -0.03764029560552444
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-103",
+  "title": "Fig. MARIDA-103. Linear SVM: waterfall for a correctly classified Marine Debris pixel (explaining the Marine Debris output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_svm_c2_debris_correct_waterfall.png",
+  "model": "svm",
+  "cls": 1,
+  "kind": "waterfall_correct",
+  "test_index": 10406,
+  "base": -2.769382309428892,
+  "fx": 1.5618745744870668,
+  "top3": [
+   [
+    "nir/green",
+    0.8992670774459839,
+    3.6314323116424174
+   ],
+   [
+    "B5",
+    0.0215130802243948,
+    2.5039005181366734
+   ],
+   [
+    "B8A",
+    0.022416748106479645,
+    -2.1394184104944682
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-104",
+  "title": "Fig. MARIDA-104. Random Forest: waterfall for a correctly classified Sargassum pixel (explaining the Sargassum output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_rf_c3_sargassum_correct_waterfall.png",
+  "model": "rf",
+  "cls": 2,
+  "kind": "waterfall_correct",
+  "test_index": 140297,
+  "base": 0.2468000000000001,
+  "fx": 0.9800000014465104,
+  "top3": [
+   [
+    "nir/red",
+    2.557143449783325,
+    0.19392323350770993
+   ],
+   [
+    "NDWI",
+    -0.3446127474308014,
+    0.12795129917343273
+   ],
+   [
+    "nir/green",
+    2.0515880584716797,
+    0.12011554712260875
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-105",
+  "title": "Fig. MARIDA-105. XGBoost: waterfall for a correctly classified Sargassum pixel (explaining the Sargassum output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_xgb_c3_sargassum_correct_waterfall.png",
+  "model": "xgb",
+  "cls": 2,
+  "kind": "waterfall_correct",
+  "test_index": 140297,
+  "base": -2.790435582483685,
+  "fx": 5.7120943096977985,
+  "top3": [
+   [
+    "nir/red",
+    2.557143449783325,
+    3.10641846232611
+   ],
+   [
+    "nir/green",
+    2.0515880584716797,
+    0.878915808480233
+   ],
+   [
+    "B11",
+    0.006626071408390999,
+    0.7990223801793763
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-106",
+  "title": "Fig. MARIDA-106. LightGBM: waterfall for a correctly classified Sargassum pixel (explaining the Sargassum output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_lgbm_c3_sargassum_correct_waterfall.png",
+  "model": "lgbm",
+  "cls": 2,
+  "kind": "waterfall_correct",
+  "test_index": 140297,
+  "base": -5.539846385885215,
+  "fx": 5.832139272138119,
+  "top3": [
+   [
+    "nir/red",
+    2.557143449783325,
+    4.5329158264963185
+   ],
+   [
+    "B2",
+    0.031481921672821045,
+    1.2595110710302833
+   ],
+   [
+    "B6",
+    0.07466401159763336,
+    1.0685104637464975
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-107",
+  "title": "Fig. MARIDA-107. AdaBoost: waterfall for a correctly classified Sargassum pixel (explaining the Sargassum output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_ada_c3_sargassum_correct_waterfall.png",
+  "model": "ada",
+  "cls": 2,
+  "kind": "waterfall_correct",
+  "test_index": 140297,
+  "base": -0.10366539746122459,
+  "fx": 0.5584093510853589,
+  "top3": [
+   [
+    "nir/red",
+    2.557143449783325,
+    0.3756046110019088
+   ],
+   [
+    "swir1/nir",
+    0.09108443558216095,
+    0.0643885892489925
+   ],
+   [
+    "glcm_contrast",
+    0.32759082317352295,
+    0.034418653591419573
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-108",
+  "title": "Fig. MARIDA-108. Linear SVM: waterfall for a correctly classified Sargassum pixel (explaining the Sargassum output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_svm_c3_sargassum_correct_waterfall.png",
+  "model": "svm",
+  "cls": 2,
+  "kind": "waterfall_correct",
+  "test_index": 140297,
+  "base": -5.786385070011904,
+  "fx": 10.269950160142042,
+  "top3": [
+   [
+    "B4",
+    0.028446942567825317,
+    12.188060708764231
+   ],
+   [
+    "glcm_contrast",
+    0.32759082317352295,
+    4.0576080273057515
+   ],
+   [
+    "NDWI",
+    -0.3446127474308014,
+    3.044622415572727
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-109",
+  "title": "Fig. MARIDA-109. Random Forest: waterfall for a correctly classified Other pixel (explaining the Other output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_rf_c4_other_correct_waterfall.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "waterfall_correct",
+  "test_index": 9926,
+  "base": 0.24920000000000017,
+  "fx": 0.9000000051438304,
+  "top3": [
+   [
+    "glcm_contrast",
+    5.34254789352417,
+    0.18508975434523184
+   ],
+   [
+    "glcm_dissimilarity",
+    1.2869925498962402,
+    0.09754357763145577
+   ],
+   [
+    "B11",
+    0.05786983296275139,
+    0.09083047639146904
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-110",
+  "title": "Fig. MARIDA-110. XGBoost: waterfall for a correctly classified Other pixel (explaining the Other output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_xgb_c4_other_correct_waterfall.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "waterfall_correct",
+  "test_index": 9926,
+  "base": -0.742014085279775,
+  "fx": 4.108496925358409,
+  "top3": [
+   [
+    "B11",
+    0.05786983296275139,
+    1.6520513471672893
+   ],
+   [
+    "glcm_contrast",
+    5.34254789352417,
+    1.4224195587122812
+   ],
+   [
+    "B8A",
+    0.10255803167819977,
+    0.4843196731756689
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-111",
+  "title": "Fig. MARIDA-111. LightGBM: waterfall for a correctly classified Other pixel (explaining the Other output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_lgbm_c4_other_correct_waterfall.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "waterfall_correct",
+  "test_index": 9926,
+  "base": -2.9134050663156064,
+  "fx": 2.1823822180158476,
+  "top3": [
+   [
+    "glcm_contrast",
+    5.34254789352417,
+    2.193882832858362
+   ],
+   [
+    "B11",
+    0.05786983296275139,
+    1.7867605126061243
+   ],
+   [
+    "B1",
+    0.08144745975732803,
+    -0.7144331837579375
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-112",
+  "title": "Fig. MARIDA-112. AdaBoost: waterfall for a correctly classified Other pixel (explaining the Other output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_ada_c4_other_correct_waterfall.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "waterfall_correct",
+  "test_index": 9926,
+  "base": 0.05521850348030941,
+  "fx": 0.5894303549673621,
+  "top3": [
+   [
+    "glcm_contrast",
+    5.34254789352417,
+    0.28805526131996884
+   ],
+   [
+    "swir1/nir",
+    0.6704294085502625,
+    0.10274053301487583
+   ],
+   [
+    "B11",
+    0.05786983296275139,
+    0.0389876791043207
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-113",
+  "title": "Fig. MARIDA-113. Linear SVM: waterfall for a correctly classified Other pixel (explaining the Other output)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_svm_c4_other_correct_waterfall.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "waterfall_correct",
+  "test_index": 9926,
+  "base": 0.21764616426730687,
+  "fx": 2.94619057561642,
+  "top3": [
+   [
+    "glcm_dissimilarity",
+    1.2869925498962402,
+    5.792580063512599
+   ],
+   [
+    "glcm_homogeneity",
+    0.6436001658439636,
+    -2.436617281444639
+   ],
+   [
+    "B3",
+    0.1233014315366745,
+    2.370548180873124
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-114",
+  "title": "Fig. MARIDA-114. Random Forest: misclassified pixel (true Water, predicted Other), explaining the predicted-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_rf_true-c1_water_pred-c4_other_predicted-output_waterfall.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 3,
+  "test_index": 9820,
+  "n_errors_test": 219,
+  "base": 0.24920000000000017,
+  "fx": 0.6600000045103277,
+  "top3": [
+   [
+    "glcm_contrast",
+    4.1159186363220215,
+    0.1548585550568012
+   ],
+   [
+    "glcm_dissimilarity",
+    1.1060363054275513,
+    0.06814463309239499
+   ],
+   [
+    "B12",
+    0.010751919820904732,
+    0.025161201031276476
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-115",
+  "title": "Fig. MARIDA-115. Random Forest: misclassified pixel (true Water, predicted Other), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_rf_true-c1_water_pred-c4_other_true-output_waterfall.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 3,
+  "test_index": 9820,
+  "n_errors_test": 219,
+  "base": 0.2628499999999999,
+  "fx": 0.3399999989648092,
+  "top3": [
+   [
+    "glcm_contrast",
+    4.1159186363220215,
+    -0.1078601931807765
+   ],
+   [
+    "NDWI",
+    0.336203396320343,
+    0.08577953012947902
+   ],
+   [
+    "nir/green",
+    0.49676835536956787,
+    0.0767176281710249
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-116",
+  "title": "Fig. MARIDA-116. Random Forest: misclassified pixel (true Other, predicted Water), explaining the predicted-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_rf_true-c4_other_pred-c1_water_predicted-output_waterfall.png",
+  "model": "rf",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 3,
+  "pred": 0,
+  "test_index": 83082,
+  "n_errors_test": 196,
+  "base": 0.2628499999999999,
+  "fx": 0.7700000032489086,
+  "top3": [
+   [
+    "nir/red",
+    0.6898431777954102,
+    0.0860016154968325
+   ],
+   [
+    "NDWI",
+    0.2502693831920624,
+    0.08535729740467722
+   ],
+   [
+    "swir1/nir",
+    0.5492721796035767,
+    0.0737698583128369
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-117",
+  "title": "Fig. MARIDA-117. Random Forest: misclassified pixel (true Other, predicted Water), explaining the true-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_rf_true-c4_other_pred-c1_water_true-output_waterfall.png",
+  "model": "rf",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 3,
+  "pred": 0,
+  "test_index": 83082,
+  "n_errors_test": 196,
+  "base": 0.24920000000000017,
+  "fx": 0.2099999990726359,
+  "top3": [
+   [
+    "B8A",
+    0.027622461318969727,
+    -0.040937421031895696
+   ],
+   [
+    "B8",
+    0.021214809268712997,
+    -0.03136131387864225
+   ],
+   [
+    "nir/green",
+    0.5996326804161072,
+    0.028772532795968715
+   ]
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-118",
+  "title": "Fig. MARIDA-118. XGBoost: misclassified pixel (true Water, predicted Other), explaining the predicted-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_xgb_true-c1_water_pred-c4_other_predicted-output_waterfall.png",
+  "model": "xgb",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 3,
+  "test_index": 158339,
+  "n_errors_test": 540,
+  "base": -0.742014085279775,
+  "fx": 1.6029424500858616,
+  "top3": [
+   [
+    "glcm_contrast",
+    3.5413994789123535,
+    1.8058365623609278
+   ],
+   [
+    "nir/green",
+    0.7847511768341064,
+    0.3817711432924261
+   ],
+   [
+    "B1",
+    0.05858403816819191,
+    -0.2246804020291893
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-119",
+  "title": "Fig. MARIDA-119. XGBoost: misclassified pixel (true Water, predicted Other), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_xgb_true-c1_water_pred-c4_other_true-output_waterfall.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 3,
+  "test_index": 158339,
+  "n_errors_test": 540,
+  "base": -0.8404274978817685,
+  "fx": -0.8503737230551034,
+  "top3": [
+   [
+    "glcm_contrast",
+    3.5413994789123535,
+    -0.8111595153812959
+   ],
+   [
+    "swir1/nir",
+    0.5771754384040833,
+    0.4374248208128847
+   ],
+   [
+    "B8",
+    0.03712744638323784,
+    0.4317750110398629
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-120",
+  "title": "Fig. MARIDA-120. XGBoost: misclassified pixel (true Water, predicted Marine Debris), explaining the predicted-class output (Marine Debris)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_xgb_true-c1_water_pred-c2_debris_predicted-output_waterfall.png",
+  "model": "xgb",
+  "cls": 1,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 1,
+  "test_index": 157552,
+  "n_errors_test": 115,
+  "base": -2.172064566378989,
+  "fx": 2.54191348040497,
+  "top3": [
+   [
+    "nir/red",
+    0.9788574576377869,
+    1.8833622255102092
+   ],
+   [
+    "swir1/nir",
+    0.4481509327888489,
+    0.41348992444516625
+   ],
+   [
+    "glcm_correlation",
+    0.34037989377975464,
+    0.41195029571827035
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-121",
+  "title": "Fig. MARIDA-121. XGBoost: misclassified pixel (true Water, predicted Marine Debris), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_xgb_true-c1_water_pred-c2_debris_true-output_waterfall.png",
+  "model": "xgb",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 1,
+  "test_index": 157552,
+  "n_errors_test": 115,
+  "base": -0.8404274978817685,
+  "fx": -0.4873851985147247,
+  "top3": [
+   [
+    "nir/red",
+    0.9788574576377869,
+    -1.1438203321839682
+   ],
+   [
+    "B8A",
+    0.0242115817964077,
+    0.9797225803883339
+   ],
+   [
+    "B8",
+    0.03396309167146683,
+    0.3406272022545454
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-122",
+  "title": "Fig. MARIDA-122. LightGBM: misclassified pixel (true Water, predicted Other), explaining the predicted-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_lgbm_true-c1_water_pred-c4_other_predicted-output_waterfall.png",
+  "model": "lgbm",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 3,
+  "test_index": 85393,
+  "n_errors_test": 530,
+  "base": -2.9134050663156064,
+  "fx": -0.1451599814720952,
+  "top3": [
+   [
+    "glcm_contrast",
+    1.2624198198318481,
+    1.465296976979007
+   ],
+   [
+    "B11",
+    0.02737721987068653,
+    0.3350814784975955
+   ],
+   [
+    "nir/green",
+    0.7622792720794678,
+    0.3045611672103405
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-123",
+  "title": "Fig. MARIDA-123. LightGBM: misclassified pixel (true Water, predicted Other), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_lgbm_true-c1_water_pred-c4_other_true-output_waterfall.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 3,
+  "test_index": 85393,
+  "n_errors_test": 530,
+  "base": -2.9216183477495696,
+  "fx": -3.143691821543286,
+  "top3": [
+   [
+    "glcm_contrast",
+    1.2624198198318481,
+    -0.4047339945373824
+   ],
+   [
+    "nir/red",
+    0.9457434415817261,
+    -0.3954261073877569
+   ],
+   [
+    "swir1/nir",
+    0.5224616527557373,
+    0.3553404898705776
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-124",
+  "title": "Fig. MARIDA-124. LightGBM: misclassified pixel (true Water, predicted Marine Debris), explaining the predicted-class output (Marine Debris)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_lgbm_true-c1_water_pred-c2_debris_predicted-output_waterfall.png",
+  "model": "lgbm",
+  "cls": 1,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 1,
+  "test_index": 157550,
+  "n_errors_test": 115,
+  "base": -4.4224332032272615,
+  "fx": 0.9104290322100885,
+  "top3": [
+   [
+    "nir/red",
+    0.9381932020187378,
+    1.446059590523364
+   ],
+   [
+    "NDWI",
+    0.11178889125585556,
+    0.8458956950617721
+   ],
+   [
+    "B12",
+    0.010156012140214443,
+    0.7791342249483568
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-125",
+  "title": "Fig. MARIDA-125. LightGBM: misclassified pixel (true Water, predicted Marine Debris), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_lgbm_true-c1_water_pred-c2_debris_true-output_waterfall.png",
+  "model": "lgbm",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 1,
+  "test_index": 157550,
+  "n_errors_test": 115,
+  "base": -2.9216183477495696,
+  "fx": -2.173414350471391,
+  "top3": [
+   [
+    "B8A",
+    0.0242115817964077,
+    1.4362491537455935
+   ],
+   [
+    "nir/red",
+    0.9381932020187378,
+    -1.0237926517380402
+   ],
+   [
+    "B5",
+    0.028459690511226654,
+    -0.4546475847963302
+   ]
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-126",
+  "title": "Fig. MARIDA-126. AdaBoost: misclassified pixel (true Water, predicted Other), explaining the predicted-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_ada_true-c1_water_pred-c4_other_predicted-output_waterfall.png",
+  "model": "ada",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 3,
+  "test_index": 158339,
+  "n_errors_test": 745,
+  "base": 0.05521850348030941,
+  "fx": 0.276821438070501,
+  "top3": [
+   [
+    "glcm_contrast",
+    3.5413994789123535,
+    0.17865299557335676
+   ],
+   [
+    "swir1/nir",
+    0.5771754384040833,
+    0.061283387557487
+   ],
+   [
+    "B8A",
+    0.036925770342350006,
+    -0.028321906342171133
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-127",
+  "title": "Fig. MARIDA-127. AdaBoost: misclassified pixel (true Water, predicted Other), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_ada_true-c1_water_pred-c4_other_true-output_waterfall.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 3,
+  "test_index": 158339,
+  "n_errors_test": 745,
+  "base": 0.036578290199361846,
+  "fx": -0.05393553987556221,
+  "top3": [
+   [
+    "glcm_contrast",
+    3.5413994789123535,
+    -0.14920844958804083
+   ],
+   [
+    "swir1/nir",
+    0.5771754384040833,
+    0.04319357927714009
+   ],
+   [
+    "B8A",
+    0.036925770342350006,
+    0.028458683711942285
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-128",
+  "title": "Fig. MARIDA-128. AdaBoost: misclassified pixel (true Water, predicted Marine Debris), explaining the predicted-class output (Marine Debris)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_ada_true-c1_water_pred-c2_debris_predicted-output_waterfall.png",
+  "model": "ada",
+  "cls": 1,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 1,
+  "test_index": 60274,
+  "n_errors_test": 549,
+  "base": 0.011868603781553586,
+  "fx": 0.21616306302509147,
+  "top3": [
+   [
+    "nir/red",
+    1.0519059896469116,
+    0.14662803855666426
+   ],
+   [
+    "red/green",
+    1.328108549118042,
+    -0.07479596830729861
+   ],
+   [
+    "swir1/nir",
+    0.12240529805421829,
+    0.061093833040213215
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-129",
+  "title": "Fig. MARIDA-129. AdaBoost: misclassified pixel (true Water, predicted Marine Debris), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_ada_true-c1_water_pred-c2_debris_true-output_waterfall.png",
+  "model": "ada",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 1,
+  "test_index": 60274,
+  "n_errors_test": 549,
+  "base": 0.036578290199361846,
+  "fx": -0.008994765034328119,
+  "top3": [
+   [
+    "nir/red",
+    1.0519059896469116,
+    -0.09558484019129537
+   ],
+   [
+    "red/green",
+    1.328108549118042,
+    0.09092993158556055
+   ],
+   [
+    "glcm_contrast",
+    0.6821581125259399,
+    -0.08936966738954652
+   ]
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-130",
+  "title": "Fig. MARIDA-130. Linear SVM: misclassified pixel (true Water, predicted Sargassum), explaining the predicted-class output (Sargassum)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_svm_true-c1_water_pred-c3_sargassum_predicted-output_waterfall.png",
+  "model": "svm",
+  "cls": 2,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 2,
+  "test_index": 59654,
+  "n_errors_test": 687,
+  "base": -5.786385070011904,
+  "fx": 0.5735181426736862,
+  "top3": [
+   [
+    "B4",
+    0.1331898272037506,
+    -16.880025032187316
+   ],
+   [
+    "B6",
+    0.1466638296842575,
+    6.915002540836048
+   ],
+   [
+    "B7",
+    0.16161242127418518,
+    4.551533533253583
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-131",
+  "title": "Fig. MARIDA-131. Linear SVM: misclassified pixel (true Water, predicted Sargassum), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_svm_true-c1_water_pred-c3_sargassum_true-output_waterfall.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 2,
+  "test_index": 59654,
+  "n_errors_test": 687,
+  "base": -0.5564426177573907,
+  "fx": 0.0868979598649331,
+  "top3": [
+   [
+    "B8A",
+    0.16528983414173126,
+    -4.578284926602182
+   ],
+   [
+    "B5",
+    0.13532473146915436,
+    2.7692421557600024
+   ],
+   [
+    "B8",
+    0.14100582897663116,
+    2.3787369842239787
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-132",
+  "title": "Fig. MARIDA-132. Linear SVM: misclassified pixel (true Water, predicted Other), explaining the predicted-class output (Other)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_svm_true-c1_water_pred-c4_other_predicted-output_waterfall.png",
+  "model": "svm",
+  "cls": 3,
+  "kind": "waterfall_mis",
+  "role": "predicted",
+  "true": 0,
+  "pred": 3,
+  "test_index": 157417,
+  "n_errors_test": 359,
+  "base": 0.21764616426730687,
+  "fx": 0.6640988441909517,
+  "top3": [
+   [
+    "glcm_dissimilarity",
+    0.8871527910232544,
+    2.977016300361512
+   ],
+   [
+    "glcm_energy",
+    0.40782344341278076,
+    -2.096661736354599
+   ],
+   [
+    "glcm_homogeneity",
+    0.6762130260467529,
+    -2.0297660066422134
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-133",
+  "title": "Fig. MARIDA-133. Linear SVM: misclassified pixel (true Water, predicted Other), explaining the true-class output (Water)",
+  "section": "D",
+  "item": "11",
+  "path": "05_individual_predictions/MARIDA/MARIDA_svm_true-c1_water_pred-c4_other_true-output_waterfall.png",
+  "model": "svm",
+  "cls": 0,
+  "kind": "waterfall_mis",
+  "role": "true",
+  "true": 0,
+  "pred": 3,
+  "test_index": 157417,
+  "n_errors_test": 359,
+  "base": -0.5564426177573907,
+  "fx": -0.3642975495704205,
+  "top3": [
+   [
+    "glcm_dissimilarity",
+    0.8871527910232544,
+    -2.8309543091584803
+   ],
+   [
+    "glcm_homogeneity",
+    0.6762130260467529,
+    2.5419234053850848
+   ],
+   [
+    "B8A",
+    0.050351954996585846,
+    1.1723614267818834
+   ]
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-134",
+  "title": "Fig. MARIDA-134. Random Forest: multi-output decision plot for the misclassified pixel of its waterfalls (true Water, predicted Other)",
+  "section": "D",
+  "item": "12",
+  "path": "05_individual_predictions/MARIDA/MARIDA_rf_true-c1_water_pred-c4_other_decision_plot.png",
+  "model": "rf",
+  "kind": "decision",
+  "true": 0,
+  "pred": 3,
+  "test_index": 9820,
+  "outputs": [
+   0.34,
+   0.0,
+   0.0,
+   0.66
+  ],
+  "base": [
+   0.2628499999999999,
+   0.24115000000000017,
+   0.2468000000000001,
+   0.24920000000000017
+  ],
+  "scale": "class probability"
+ },
+ {
+  "id": "Fig. MARIDA-135",
+  "title": "Fig. MARIDA-135. XGBoost: multi-output decision plot for the misclassified pixel of its waterfalls (true Water, predicted Marine Debris)",
+  "section": "D",
+  "item": "12",
+  "path": "05_individual_predictions/MARIDA/MARIDA_xgb_true-c1_water_pred-c2_debris_decision_plot.png",
+  "model": "xgb",
+  "kind": "decision",
+  "true": 0,
+  "pred": 1,
+  "test_index": 157552,
+  "outputs": [
+   -0.48738497495651245,
+   2.5419135093688965,
+   -5.652458667755127,
+   -2.236499786376953
+  ],
+  "base": [
+   -0.8404274978817685,
+   -2.172064566378989,
+   -2.790435582483685,
+   -0.742014085279775
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-136",
+  "title": "Fig. MARIDA-136. LightGBM: multi-output decision plot for the misclassified pixel of its waterfalls (true Water, predicted Marine Debris)",
+  "section": "D",
+  "item": "12",
+  "path": "05_individual_predictions/MARIDA/MARIDA_lgbm_true-c1_water_pred-c2_debris_decision_plot.png",
+  "model": "lgbm",
+  "kind": "decision",
+  "true": 0,
+  "pred": 1,
+  "test_index": 157550,
+  "outputs": [
+   -2.1734143440898563,
+   0.9104289997628953,
+   -8.095265147274612,
+   -4.721572211084933
+  ],
+  "base": [
+   -2.9216183477495696,
+   -4.4224332032272615,
+   -5.539846385885215,
+   -2.9134050663156064
+  ],
+  "scale": "raw softmax margin (log-odds scale)"
+ },
+ {
+  "id": "Fig. MARIDA-137",
+  "title": "Fig. MARIDA-137. AdaBoost: multi-output decision plot for the misclassified pixel of its waterfalls (true Water, predicted Marine Debris)",
+  "section": "D",
+  "item": "12",
+  "path": "05_individual_predictions/MARIDA/MARIDA_ada_true-c1_water_pred-c2_debris_decision_plot.png",
+  "model": "ada",
+  "kind": "decision",
+  "true": 0,
+  "pred": 1,
+  "test_index": 60274,
+  "outputs": [
+   -0.008994766658440663,
+   0.2161630656281566,
+   -0.2819223448923786,
+   0.0747540459226628
+  ],
+  "base": [
+   0.036578290199361846,
+   0.011868603781553586,
+   -0.10366539746122459,
+   0.05521850348030941
+  ],
+  "scale": "SAMME decision score"
+ },
+ {
+  "id": "Fig. MARIDA-138",
+  "title": "Fig. MARIDA-138. Linear SVM: multi-output decision plot for the misclassified pixel of its waterfalls (true Water, predicted Sargassum)",
+  "section": "D",
+  "item": "12",
+  "path": "05_individual_predictions/MARIDA/MARIDA_svm_true-c1_water_pred-c3_sargassum_decision_plot.png",
+  "model": "svm",
+  "kind": "decision",
+  "true": 0,
+  "pred": 2,
+  "test_index": 59654,
+  "outputs": [
+   0.08689784243527088,
+   -0.36127925778570535,
+   0.5735174271508443,
+   -0.8556939361924779
+  ],
+  "base": [
+   -0.5564426177573907,
+   -2.769382309428892,
+   -5.786385070011904,
+   0.21764616426730687
+  ],
+  "scale": "one-vs-rest SVM margin"
+ },
+ {
+  "id": "Fig. MARIDA-139",
+  "title": "Fig. MARIDA-139. Confusion case study: true Class 1 Water predicted as Class 4 Other (2393 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MARIDA/MARIDA_case_true-c1_water_pred-c4_other.png",
+  "kind": "case_study",
+  "true": 0,
+  "pred": 3,
+  "total": 2393,
+  "per_model": {
+   "rf": {
+    "n_mis": 61,
+    "n_test_errors": 219,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      0.2300605185113837,
+      -0.15975448791834762
+     ],
+     [
+      "glcm_dissimilarity",
+      0.08640236182790205,
+      -0.06266262678819524
+     ],
+     [
+      "nir/red",
+      -0.024889337648836506,
+      -0.16423747941681696
+     ],
+     [
+      "NDWI",
+      -0.00905563185928307,
+      -0.08731300684152381
+     ]
+    ],
+    "margin_mis_mean": 0.3639344262295083
+   },
+   "xgb": {
+    "n_mis": 128,
+    "n_test_errors": 540,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      2.6087143125282135,
+      -2.1043643838325297
+     ],
+     [
+      "nir/red",
+      -0.2241464055703637,
+      -2.4832771908973323
+     ],
+     [
+      "glcm_correlation",
+      0.2587903602609007,
+      -0.5456078803083724
+     ],
+     [
+      "B11",
+      0.12886746654808576,
+      -0.6275354202853861
+     ]
+    ],
+    "margin_mis_mean": 2.4189324378967285
+   },
+   "lgbm": {
+    "n_mis": 114,
+    "n_test_errors": 530,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      3.406365349602722,
+      -2.9159285032427626
+     ],
+     [
+      "nir/red",
+      -0.3194900771040838,
+      -2.6177008636637438
+     ],
+     [
+      "B11",
+      0.29807797571846373,
+      -0.7095250539571765
+     ],
+     [
+      "glcm_correlation",
+      0.36247870979065117,
+      -0.4560630239814977
+     ]
+    ],
+    "margin_mis_mean": 3.0164756443006557
+   },
+   "ada": {
+    "n_mis": 128,
+    "n_test_errors": 745,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      0.3527677422111946,
+      -0.3121558754436142
+     ],
+     [
+      "nir/red",
+      -0.021831725871998057,
+      -0.27964349588479465
+     ],
+     [
+      "B4",
+      0.005624137762665667,
+      -0.052285935051099366
+     ],
+     [
+      "nir/green",
+      -0.014588153009499366,
+      -0.0501610363120055
+     ]
+    ],
+    "margin_mis_mean": 0.33575298756705174
+   },
+   "svm": {
+    "n_mis": 82,
+    "n_test_errors": 359,
+    "top_shift": [
+     [
+      "glcm_dissimilarity",
+      6.269992626704975,
+      -4.273892014539495
+     ],
+     [
+      "glcm_homogeneity",
+      -3.4629944659097913,
+      2.417763214288268
+     ],
+     [
+      "glcm_energy",
+      -2.2530123442496053,
+      1.8598784306207734
+     ],
+     [
+      "glcm_asm",
+      2.0848850241136385,
+      -1.7962906179381286
+     ]
+    ],
+    "margin_mis_mean": 1.229118501704637
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-140",
+  "title": "Fig. MARIDA-140. Confusion case study: true Class 1 Water predicted as Class 2 Marine Debris (966 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MARIDA/MARIDA_case_true-c1_water_pred-c2_debris.png",
+  "kind": "case_study",
+  "true": 0,
+  "pred": 1,
+  "total": 966,
+  "per_model": {
+   "rf": {
+    "n_mis": 36,
+    "n_test_errors": 50,
+    "top_shift": [
+     [
+      "nir/red",
+      0.09319069012226272,
+      -0.178984644897042
+     ],
+     [
+      "NDWI",
+      0.04850227253757109,
+      -0.11503039005155534
+     ],
+     [
+      "nir/green",
+      0.052002401411830705,
+      -0.10768992872827833
+     ],
+     [
+      "glcm_contrast",
+      0.018121716981127814,
+      -0.10146477863118758
+     ]
+    ],
+    "margin_mis_mean": 0.3141666666666667
+   },
+   "xgb": {
+    "n_mis": 67,
+    "n_test_errors": 115,
+    "top_shift": [
+     [
+      "nir/red",
+      2.2584076916011724,
+      -3.1506490936528238
+     ],
+     [
+      "red/green",
+      0.4542573966018819,
+      -0.966052400149531
+     ],
+     [
+      "NDWI",
+      0.36009999414822114,
+      -0.8620478152541888
+     ],
+     [
+      "glcm_contrast",
+      0.12489031433729877,
+      -0.9828087992730676
+     ]
+    ],
+    "margin_mis_mean": 2.844679832458496
+   },
+   "lgbm": {
+    "n_mis": 67,
+    "n_test_errors": 115,
+    "top_shift": [
+     [
+      "nir/red",
+      2.021979123581424,
+      -3.4967660035369637
+     ],
+     [
+      "NDWI",
+      0.8000409826025632,
+      -1.1490604702960827
+     ],
+     [
+      "glcm_contrast",
+      0.1837511766267421,
+      -1.325470495297136
+     ],
+     [
+      "red/green",
+      0.33888708709404886,
+      -1.1035416241273444
+     ]
+    ],
+    "margin_mis_mean": 3.1439798485322523
+   },
+   "ada": {
+    "n_mis": 128,
+    "n_test_errors": 549,
+    "top_shift": [
+     [
+      "nir/red",
+      0.21204265359380772,
+      -0.335067747462449
+     ],
+     [
+      "glcm_contrast",
+      0.0018359673026361691,
+      -0.18147023006626145
+     ],
+     [
+      "nir/green",
+      0.013654795993247721,
+      -0.061465634028214325
+     ],
+     [
+      "B4",
+      0.005335439576415413,
+      -0.05078702200435014
+     ]
+    ],
+    "margin_mis_mean": 0.24031479433286856
+   },
+   "svm": {
+    "n_mis": 70,
+    "n_test_errors": 137,
+    "top_shift": [
+     [
+      "NDWI",
+      -1.979390071580524,
+      -9.418552342696914
+     ],
+     [
+      "B5",
+      3.24555614269643,
+      -1.8353482241437196
+     ],
+     [
+      "nir/green",
+      3.709102976751228,
+      7.329993811998265
+     ],
+     [
+      "B4",
+      1.1819514895333258,
+      -1.2998721486307145
+     ]
+    ],
+    "margin_mis_mean": 0.6956166342332555
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-141",
+  "title": "Fig. MARIDA-141. Confusion case study: true Class 1 Water predicted as Class 3 Sargassum (904 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MARIDA/MARIDA_case_true-c1_water_pred-c3_sargassum.png",
+  "kind": "case_study",
+  "true": 0,
+  "pred": 2,
+  "total": 904,
+  "per_model": {
+   "rf": {
+    "n_mis": 9,
+    "n_test_errors": 9,
+    "top_shift": [
+     [
+      "nir/red",
+      0.16277965089077853,
+      -0.21788298111034668
+     ],
+     [
+      "NDWI",
+      0.02802260537905169,
+      -0.11674993286769283
+     ],
+     [
+      "nir/green",
+      0.028818947160193502,
+      -0.11045495894840594
+     ],
+     [
+      "glcm_contrast",
+      0.04065020830707322,
+      -0.07646837127003941
+     ]
+    ],
+    "margin_mis_mean": 0.28555555555555556
+   },
+   "xgb": {
+    "n_mis": 58,
+    "n_test_errors": 74,
+    "top_shift": [
+     [
+      "nir/red",
+      2.013844260294788,
+      -3.5154125758410912
+     ],
+     [
+      "B3",
+      1.4768993101111156,
+      -0.5944963047863503
+     ],
+     [
+      "B2",
+      1.7315148978499477,
+      -0.31416516815028683
+     ],
+     [
+      "B8A",
+      -1.9556912890525735,
+      -0.5208027224850182
+     ]
+    ],
+    "margin_mis_mean": 1.2733910083770752
+   },
+   "lgbm": {
+    "n_mis": 58,
+    "n_test_errors": 71,
+    "top_shift": [
+     [
+      "nir/red",
+      2.3015396736506903,
+      -3.8008186936227077
+     ],
+     [
+      "B2",
+      2.395087686372477,
+      -0.5052221017256784
+     ],
+     [
+      "B3",
+      1.9413383215020235,
+      -0.8200038539107325
+     ],
+     [
+      "B8A",
+      -2.530745908125782,
+      -0.6323875083339232
+     ]
+    ],
+    "margin_mis_mean": 1.517991164360181
+   },
+   "ada": {
+    "n_mis": 45,
+    "n_test_errors": 63,
+    "top_shift": [
+     [
+      "nir/red",
+      0.27270970672109013,
+      -0.3973938999269018
+     ],
+     [
+      "glcm_contrast",
+      0.03956869157000134,
+      -0.11833667650397509
+     ],
+     [
+      "B3",
+      0.11098242084795819,
+      -0.019088078096957076
+     ],
+     [
+      "B4",
+      0.04742893933755759,
+      -0.07284002475901681
+     ]
+    ],
+    "margin_mis_mean": 0.2517739049392084
+   },
+   "svm": {
+    "n_mis": 45,
+    "n_test_errors": 687,
+    "top_shift": [
+     [
+      "NDWI",
+      1.4583221689735875,
+      -3.437353602431992
+     ],
+     [
+      "B6",
+      3.3994947682166425,
+      -0.2932799693284699
+     ],
+     [
+      "B8A",
+      2.376150446088827,
+      -0.8033956516564745
+     ],
+     [
+      "B7",
+      2.2561931002145625,
+      -0.24458049168805418
+     ]
+    ],
+    "margin_mis_mean": 0.8294147455467357
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-142",
+  "title": "Fig. MARIDA-142. Confusion case study: true Class 4 Other predicted as Class 1 Water (606 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MARIDA/MARIDA_case_true-c4_other_pred-c1_water.png",
+  "kind": "case_study",
+  "true": 3,
+  "pred": 0,
+  "total": 606,
+  "per_model": {
+   "rf": {
+    "n_mis": 128,
+    "n_test_errors": 196,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      -0.006830185433971243,
+      -0.25321987090708475
+     ],
+     [
+      "B11",
+      0.037309005841610655,
+      -0.11206905005368438
+     ],
+     [
+      "B8A",
+      0.053394716555138624,
+      -0.0635571386382452
+     ],
+     [
+      "nir/green",
+      0.09031410649985547,
+      -0.014005057622934237
+     ]
+    ],
+    "margin_mis_mean": 0.5165625
+   },
+   "xgb": {
+    "n_mis": 72,
+    "n_test_errors": 82,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      0.011802554464076964,
+      -3.0053587663033143
+     ],
+     [
+      "B11",
+      0.29154697713626077,
+      -1.3410712751527418
+     ],
+     [
+      "B8A",
+      0.8130377331083317,
+      -0.5468421163524402
+     ],
+     [
+      "nir/red",
+      1.1287487729489172,
+      -0.14239970197947077
+     ]
+    ],
+    "margin_mis_mean": 2.4219653606414795
+   },
+   "lgbm": {
+    "n_mis": 80,
+    "n_test_errors": 93,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      -0.07213876458600496,
+      -3.952577127646059
+     ],
+     [
+      "B8A",
+      1.1467229692213115,
+      -0.8978378993214738
+     ],
+     [
+      "B11",
+      0.21623466158407703,
+      -1.6893022710691183
+     ],
+     [
+      "nir/red",
+      1.2655107608872984,
+      -0.0510707628591309
+     ]
+    ],
+    "margin_mis_mean": 2.64353812634359
+   },
+   "ada": {
+    "n_mis": 77,
+    "n_test_errors": 92,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      0.11690375882120768,
+      -0.4154945789135771
+     ],
+     [
+      "nir/red",
+      0.1711613138703186,
+      -0.014265463228760171
+     ],
+     [
+      "B11",
+      0.016194650508711324,
+      -0.05041114374750371
+     ],
+     [
+      "B8A",
+      0.026315118825469802,
+      -0.026897041334431684
+     ]
+    ],
+    "margin_mis_mean": 0.307725569664244
+   },
+   "svm": {
+    "n_mis": 104,
+    "n_test_errors": 143,
+    "top_shift": [
+     [
+      "glcm_dissimilarity",
+      -0.010041373439371738,
+      -10.561720383066056
+     ],
+     [
+      "B11",
+      1.9976553161535384,
+      -7.018564818405415
+     ],
+     [
+      "B12",
+      -1.1168586565445353,
+      4.186542616633208
+     ],
+     [
+      "B8A",
+      2.690098562184048,
+      -2.491907840533028
+     ]
+    ],
+    "margin_mis_mean": 1.1185902503934915
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-143",
+  "title": "Fig. MARIDA-143. Confusion case study: true Class 4 Other predicted as Class 2 Marine Debris (333 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MARIDA/MARIDA_case_true-c4_other_pred-c2_debris.png",
+  "kind": "case_study",
+  "true": 3,
+  "pred": 1,
+  "total": 333,
+  "per_model": {
+   "rf": {
+    "n_mis": 51,
+    "n_test_errors": 52,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      0.00390866439225789,
+      -0.16848052015269532
+     ],
+     [
+      "B11",
+      0.0375630356160102,
+      -0.11894021004049786
+     ],
+     [
+      "B12",
+      0.03457868555446767,
+      -0.09164536256379884
+     ],
+     [
+      "swir1/nir",
+      0.033706165177016016,
+      -0.0864705164086194
+     ]
+    ],
+    "margin_mis_mean": 0.4031372549019609
+   },
+   "xgb": {
+    "n_mis": 54,
+    "n_test_errors": 55,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      -0.30475263690183874,
+      -2.1382151614610807
+     ],
+     [
+      "swir1/nir",
+      0.4801538493947061,
+      -1.2682393532712204
+     ],
+     [
+      "B11",
+      0.21329792093749414,
+      -1.2253980933164086
+     ],
+     [
+      "B12",
+      0.3809855688833879,
+      -0.8236274090445256
+     ]
+    ],
+    "margin_mis_mean": 2.428081750869751
+   },
+   "lgbm": {
+    "n_mis": 53,
+    "n_test_errors": 56,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      -0.3548264716053931,
+      -2.7727795610877948
+     ],
+     [
+      "swir1/nir",
+      0.5031608909038873,
+      -1.327620594165872
+     ],
+     [
+      "B12",
+      0.6410014637978007,
+      -1.1313536990433288
+     ],
+     [
+      "B11",
+      0.22032045560305497,
+      -1.4522410414473506
+     ]
+    ],
+    "margin_mis_mean": 2.6931583190637505
+   },
+   "ada": {
+    "n_mis": 79,
+    "n_test_errors": 108,
+    "top_shift": [
+     [
+      "swir1/nir",
+      0.07358372413783175,
+      -0.16112340132953729
+     ],
+     [
+      "glcm_contrast",
+      -0.06341976968886161,
+      -0.19609458708136868
+     ],
+     [
+      "nir/red",
+      0.10105139893007353,
+      -0.00262578120203629
+     ],
+     [
+      "B11",
+      0.030461084839469393,
+      -0.062324344217760064
+     ]
+    ],
+    "margin_mis_mean": 0.16430943838463
+   },
+   "svm": {
+    "n_mis": 54,
+    "n_test_errors": 62,
+    "top_shift": [
+     [
+      "glcm_dissimilarity",
+      1.2084494365722007,
+      -5.523663743978647
+     ],
+     [
+      "glcm_homogeneity",
+      -0.9333207094839887,
+      2.6514357923926153
+     ],
+     [
+      "B3",
+      0.3342276477469529,
+      -2.0508349425988994
+     ],
+     [
+      "B5",
+      1.201760314988382,
+      -1.119433805825154
+     ]
+    ],
+    "margin_mis_mean": 0.7652280793313261
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-144",
+  "title": "Fig. MARIDA-144. Confusion case study: true Class 2 Marine Debris predicted as Class 1 Water (101 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MARIDA/MARIDA_case_true-c2_debris_pred-c1_water.png",
+  "kind": "case_study",
+  "true": 1,
+  "pred": 0,
+  "total": 101,
+  "per_model": {
+   "rf": {
+    "n_mis": 29,
+    "n_test_errors": 29,
+    "top_shift": [
+     [
+      "swir1/nir",
+      0.13193019352966576,
+      -0.08744003002617327
+     ],
+     [
+      "NDWI",
+      0.05469925412008749,
+      -0.05537914131805591
+     ],
+     [
+      "nir/red",
+      0.024111126287025265,
+      -0.07369824762969707
+     ],
+     [
+      "nir/green",
+      0.041456716210999923,
+      -0.05491752374555136
+     ]
+    ],
+    "margin_mis_mean": 0.37689655172413794
+   },
+   "xgb": {
+    "n_mis": 8,
+    "n_test_errors": 8,
+    "top_shift": [
+     [
+      "nir/red",
+      1.1364366517623967,
+      -2.0772090753580357
+     ],
+     [
+      "swir1/nir",
+      1.2950598199205159,
+      -1.0483151005649973
+     ],
+     [
+      "NDWI",
+      0.28031020337075463,
+      -0.40056464187230767
+     ],
+     [
+      "glcm_contrast",
+      0.32341339400832114,
+      -0.17558429810134904
+     ]
+    ],
+    "margin_mis_mean": 2.727550983428955
+   },
+   "lgbm": {
+    "n_mis": 7,
+    "n_test_errors": 7,
+    "top_shift": [
+     [
+      "nir/red",
+      0.6923900651814205,
+      -1.8859161198025316
+     ],
+     [
+      "swir1/nir",
+      1.2278467714754517,
+      -1.110402598482892
+     ],
+     [
+      "NDWI",
+      0.017649386805174527,
+      -0.7573220546945248
+     ],
+     [
+      "red/green",
+      0.008891699666024338,
+      -0.7436243304853332
+     ]
+    ],
+    "margin_mis_mean": 1.4725796684186652
+   },
+   "ada": {
+    "n_mis": 33,
+    "n_test_errors": 33,
+    "top_shift": [
+     [
+      "nir/red",
+      0.15050456746899396,
+      -0.12628570636103437
+     ],
+     [
+      "swir1/nir",
+      -0.024556636216972638,
+      -0.10927460905066126
+     ],
+     [
+      "glcm_contrast",
+      0.12679236952495893,
+      0.06072853290382005
+     ],
+     [
+      "NDWI",
+      0.000231322395795194,
+      -0.025759761932783534
+     ]
+    ],
+    "margin_mis_mean": 0.14606426927142763
+   },
+   "svm": {
+    "n_mis": 24,
+    "n_test_errors": 24,
+    "top_shift": [
+     [
+      "NDWI",
+      4.223704326410353,
+      1.3138987123286545
+     ],
+     [
+      "nir/green",
+      -5.245731276339537,
+      -3.257947300664688
+     ],
+     [
+      "swir1/nir",
+      0.7121712101514664,
+      -0.4078527875802295
+     ],
+     [
+      "B12",
+      -1.39673907628927,
+      -2.1117519020524655
+     ]
+    ],
+    "margin_mis_mean": 0.3954393797060823
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-145",
+  "title": "Fig. MARIDA-145. Confusion case study: true Class 3 Sargassum predicted as Class 4 Other (85 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MARIDA/MARIDA_case_true-c3_sargassum_pred-c4_other.png",
+  "kind": "case_study",
+  "true": 2,
+  "pred": 3,
+  "total": 85,
+  "per_model": {
+   "rf": {
+    "n_mis": 11,
+    "n_test_errors": 11,
+    "top_shift": [
+     [
+      "nir/red",
+      0.03976936101212217,
+      -0.19433368625671685
+     ],
+     [
+      "nir/green",
+      0.025204214910259207,
+      -0.09322975308900396
+     ],
+     [
+      "NDWI",
+      0.024303524182642144,
+      -0.08994278057691328
+     ],
+     [
+      "swir1/nir",
+      0.011482729620519404,
+      -0.08511544256530479
+     ]
+    ],
+    "margin_mis_mean": 0.26545454545454544
+   },
+   "xgb": {
+    "n_mis": 39,
+    "n_test_errors": 40,
+    "top_shift": [
+     [
+      "nir/red",
+      -0.8810213966896043,
+      -2.7502325612616794
+     ],
+     [
+      "B11",
+      -0.28079326360026385,
+      -1.5079189521451384
+     ],
+     [
+      "swir1/nir",
+      0.26135994448914385,
+      -0.712638835591842
+     ],
+     [
+      "B12",
+      0.41846786886845405,
+      -0.4103210072810932
+     ]
+    ],
+    "margin_mis_mean": 1.9481698274612427
+   },
+   "lgbm": {
+    "n_mis": 27,
+    "n_test_errors": 27,
+    "top_shift": [
+     [
+      "nir/red",
+      -1.5055233598353408,
+      -3.9507156933895473
+     ],
+     [
+      "B11",
+      -0.12988688629509715,
+      -1.6437850578643187
+     ],
+     [
+      "B6",
+      0.6388301166443368,
+      -0.6676645153115154
+     ],
+     [
+      "swir1/nir",
+      0.19108567269976007,
+      -0.8953303132655427
+     ]
+    ],
+    "margin_mis_mean": 2.175754053063867
+   },
+   "ada": {
+    "n_mis": 7,
+    "n_test_errors": 7,
+    "top_shift": [
+     [
+      "nir/red",
+      -0.13234937119962914,
+      -0.35518610853297977
+     ],
+     [
+      "swir1/nir",
+      0.020573617189074862,
+      -0.11524041866273245
+     ],
+     [
+      "glcm_contrast",
+      0.06845325264572498,
+      -0.06590092747211482
+     ],
+     [
+      "B3",
+      0.008913239206969072,
+      -0.038094124770165
+     ]
+    ],
+    "margin_mis_mean": 0.1302058130760528
+   },
+   "svm": {
+    "n_mis": 0,
+    "n_test_errors": 0
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-146",
+  "title": "Fig. MARIDA-146. Confusion case study: true Class 3 Sargassum predicted as Class 2 Marine Debris (67 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MARIDA/MARIDA_case_true-c3_sargassum_pred-c2_debris.png",
+  "kind": "case_study",
+  "true": 2,
+  "pred": 1,
+  "total": 67,
+  "per_model": {
+   "rf": {
+    "n_mis": 5,
+    "n_test_errors": 5,
+    "top_shift": [
+     [
+      "nir/red",
+      -0.03857876187368586,
+      -0.26378734378321333
+     ],
+     [
+      "nir/green",
+      0.030379049930462754,
+      -0.1261363434529911
+     ],
+     [
+      "NDWI",
+      0.025817304650837487,
+      -0.12451104992209165
+     ],
+     [
+      "B7",
+      0.03325965945635571,
+      -0.019421383485934324
+     ]
+    ],
+    "margin_mis_mean": 0.17200000000000001
+   },
+   "xgb": {
+    "n_mis": 13,
+    "n_test_errors": 13,
+    "top_shift": [
+     [
+      "nir/red",
+      0.005734577022202916,
+      -4.1462407694688395
+     ],
+     [
+      "NDWI",
+      0.538563634942223,
+      -0.7993157968611505
+     ],
+     [
+      "nir/green",
+      0.3138262564319526,
+      -0.8761364880167947
+     ],
+     [
+      "B2",
+      -0.5373402417263535,
+      -1.528133418848205
+     ]
+    ],
+    "margin_mis_mean": 2.671308994293213
+   },
+   "lgbm": {
+    "n_mis": 10,
+    "n_test_errors": 10,
+    "top_shift": [
+     [
+      "nir/red",
+      0.38876020775899817,
+      -4.86004153238871
+     ],
+     [
+      "NDWI",
+      0.7126911658769239,
+      -0.9263473164752857
+     ],
+     [
+      "B2",
+      -1.005676769259182,
+      -2.4786941799174924
+     ],
+     [
+      "B6",
+      0.7319150985322194,
+      -0.6957210978196197
+     ]
+    ],
+    "margin_mis_mean": 3.2077318182570544
+   },
+   "ada": {
+    "n_mis": 34,
+    "n_test_errors": 34,
+    "top_shift": [
+     [
+      "nir/red",
+      -0.045804081070699096,
+      -0.41721036069454265
+     ],
+     [
+      "nir/green",
+      0.028596899653493886,
+      -0.04337486358531509
+     ],
+     [
+      "swir1/nir",
+      0.060553569759940716,
+      0.0065755610811748955
+     ],
+     [
+      "NDWI",
+      0.01655857204163433,
+      -0.017569613645920742
+     ]
+    ],
+    "margin_mis_mean": 0.11630488654772332
+   },
+   "svm": {
+    "n_mis": 5,
+    "n_test_errors": 5,
+    "top_shift": [
+     [
+      "nir/green",
+      1.7767734025457507,
+      -11.923844886588356
+     ],
+     [
+      "NDWI",
+      0.4113693620933123,
+      6.92791510691293
+     ],
+     [
+      "B7",
+      4.427410280958119,
+      -1.412345259898088
+     ],
+     [
+      "B5",
+      5.325290449244916,
+      0.21307245046240528
+     ]
+    ],
+    "margin_mis_mean": 0.2822390887769742
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-147",
+  "title": "Fig. MARIDA-147. Confusion case study: true Class 3 Sargassum predicted as Class 1 Water (39 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MARIDA/MARIDA_case_true-c3_sargassum_pred-c1_water.png",
+  "kind": "case_study",
+  "true": 2,
+  "pred": 0,
+  "total": 39,
+  "per_model": {
+   "rf": {
+    "n_mis": 17,
+    "n_test_errors": 17,
+    "top_shift": [
+     [
+      "nir/red",
+      0.004670510229756599,
+      -0.2997201681340466
+     ],
+     [
+      "NDWI",
+      0.03816664869663028,
+      -0.16650156829072943
+     ],
+     [
+      "nir/green",
+      0.02617325484610292,
+      -0.15368580850421934
+     ],
+     [
+      "swir1/nir",
+      0.1210004853321703,
+      -0.05354726566100533
+     ]
+    ],
+    "margin_mis_mean": 0.3735294117647059
+   },
+   "xgb": {
+    "n_mis": 6,
+    "n_test_errors": 6,
+    "top_shift": [
+     [
+      "nir/red",
+      0.5194843127351972,
+      -4.168772175701867
+     ],
+     [
+      "swir1/nir",
+      1.288273129647423,
+      -0.4087024659074494
+     ],
+     [
+      "B3",
+      -2.0703097520158433,
+      -0.7341980835303777
+     ],
+     [
+      "NDWI",
+      0.38633665982859383,
+      -0.828959647318762
+     ]
+    ],
+    "margin_mis_mean": 2.35998272895813
+   },
+   "lgbm": {
+    "n_mis": 5,
+    "n_test_errors": 5,
+    "top_shift": [
+     [
+      "nir/red",
+      0.2853109285403043,
+      -5.7389360680532535
+     ],
+     [
+      "swir1/nir",
+      1.6409584861737678,
+      -0.6569189134328214
+     ],
+     [
+      "B3",
+      -2.9339584338103886,
+      -0.8866157442766938
+     ],
+     [
+      "B8A",
+      0.739980390800687,
+      -0.3246450659949103
+     ]
+    ],
+    "margin_mis_mean": 1.6205908684531907
+   },
+   "ada": {
+    "n_mis": 8,
+    "n_test_errors": 8,
+    "top_shift": [
+     [
+      "nir/red",
+      0.12132307722851693,
+      -0.5668449281268594
+     ],
+     [
+      "swir1/nir",
+      0.12589414289599518,
+      -0.07913647102813529
+     ],
+     [
+      "B3",
+      -0.1031207660803193,
+      -0.028443352298139487
+     ],
+     [
+      "glcm_contrast",
+      0.035156527925501,
+      -0.023970476452733997
+     ]
+    ],
+    "margin_mis_mean": 0.29596811248238225
+   },
+   "svm": {
+    "n_mis": 3,
+    "n_test_errors": 3
+   }
+  }
+ },
+ {
+  "id": "Fig. MARIDA-148",
+  "title": "Fig. MARIDA-148. Confusion case study: true Class 2 Marine Debris predicted as Class 4 Other (38 test errors summed over the 5 models)",
+  "section": "D",
+  "item": "13",
+  "path": "05_individual_predictions/MARIDA/MARIDA_case_true-c2_debris_pred-c4_other.png",
+  "kind": "case_study",
+  "true": 1,
+  "pred": 3,
+  "total": 38,
+  "per_model": {
+   "rf": {
+    "n_mis": 4,
+    "n_test_errors": 4
+   },
+   "xgb": {
+    "n_mis": 12,
+    "n_test_errors": 12,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      0.5559033899261401,
+      -0.6053355123397433
+     ],
+     [
+      "nir/red",
+      -0.5846302831887443,
+      -1.358766292903298
+     ],
+     [
+      "red/green",
+      0.07794887910494554,
+      -0.561432180002908
+     ],
+     [
+      "NDWI",
+      -0.1670854748969092,
+      -0.6364148232272968
+     ]
+    ],
+    "margin_mis_mean": 1.202367901802063
+   },
+   "lgbm": {
+    "n_mis": 13,
+    "n_test_errors": 13,
+    "top_shift": [
+     [
+      "glcm_contrast",
+      0.7204499875296292,
+      -0.945813495383586
+     ],
+     [
+      "NDWI",
+      -0.042429181754615956,
+      -0.927296022469773
+     ],
+     [
+      "nir/red",
+      -0.6591663627232041,
+      -1.2711017411446182
+     ],
+     [
+      "red/green",
+      -0.00033353676663517597,
+      -0.5975560103232789
+     ]
+    ],
+    "margin_mis_mean": 1.302356723043761
+   },
+   "ada": {
+    "n_mis": 2,
+    "n_test_errors": 2
+   },
+   "svm": {
+    "n_mis": 7,
+    "n_test_errors": 7,
+    "top_shift": [
+     [
+      "nir/green",
+      -0.14720751826762488,
+      -3.329634513446537
+     ],
+     [
+      "NDWI",
+      -2.0674152681940834,
+      1.0289620902337353
+     ],
+     [
+      "B8",
+      -0.3067252136716895,
+      1.5598548147324163
+     ],
+     [
+      "glcm_dissimilarity",
+      -0.48636260327975595,
+      -2.000629514121886
+     ]
+    ],
+    "margin_mis_mean": 0.3917103403030297
+   }
+  }
+ }
+]
