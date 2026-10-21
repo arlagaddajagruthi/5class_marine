@@ -2,12 +2,16 @@
 
 Scores over classes 1-4 on all annotated test pixels (macro = mean over the 4 classes). Each cell: score (Δ vs stage 1, bands only, same model and dataset).
 
+📄 **Paper rows** (top of each table, values in _italics_, in the rf column) are the published Random Forest results of the MARIDA and MADOS papers. They use the papers' own class schemes (MARIDA 11 classes, MADOS 15 classes), so only marine debris is the same class as ours; their macro scores average over more, and different, classes. Tables without a published value have no paper rows.
+
 ## MADOS
 
 ### Macro F1
 
 | Stage | ada | lgbm | rf | svm | xgb | mean Δ |
 |---|---|---|---|---|---|---|
+| 📄 **MADOS paper: RF** (15 classes) | – | – | _0.566_ | – | – | – |
+| 📄 **MADOS paper: RF++ (Mikeli et al., 2022)** (15 classes) | – | – | _0.644_ | – | – | – |
 | stage1_bands | 0.6124 (+0.0000) | 0.6813 (+0.0000) | 0.7097 (+0.0000) | 0.5321 (+0.0000) | 0.6625 (+0.0000) | +0.0000 |
 | stage2a_ndvi | 0.5639 (-0.0485) | 0.6930 (+0.0117) | 0.7095 (-0.0002) | 0.5717 (+0.0397) | 0.6807 (+0.0182) | +0.0042 |
 | stage2b_ndwi | 0.6637 (+0.0513) | 0.7067 (+0.0255) | 0.7226 (+0.0129) | 0.6378 (+0.1057) | 0.7056 (+0.0432) | +0.0477 |
@@ -26,6 +30,8 @@ Scores over classes 1-4 on all annotated test pixels (macro = mean over the 4 cl
 
 | Stage | ada | lgbm | rf | svm | xgb | mean Δ |
 |---|---|---|---|---|---|---|
+| 📄 **MADOS paper: RF** (15 classes) | – | – | _0.439_ | – | – | – |
+| 📄 **MADOS paper: RF++ (Mikeli et al., 2022)** (15 classes) | – | – | _0.524_ | – | – | – |
 | stage1_bands | 0.4663 (+0.0000) | 0.5383 (+0.0000) | 0.5638 (+0.0000) | 0.4131 (+0.0000) | 0.5188 (+0.0000) | +0.0000 |
 | stage2a_ndvi | 0.4360 (-0.0303) | 0.5478 (+0.0095) | 0.5645 (+0.0006) | 0.4532 (+0.0401) | 0.5361 (+0.0173) | +0.0074 |
 | stage2b_ndwi | 0.5151 (+0.0488) | 0.5632 (+0.0249) | 0.5802 (+0.0163) | 0.5026 (+0.0895) | 0.5616 (+0.0428) | +0.0445 |
@@ -190,6 +196,9 @@ Scores over classes 1-4 on all annotated test pixels (macro = mean over the 4 cl
 
 | Stage | ada | lgbm | rf | svm | xgb | mean Δ |
 |---|---|---|---|---|---|---|
+| 📄 **MARIDA paper: RF_SS (bands + spectral signatures)** (11 classes) | – | – | _0.690_ | – | – | – |
+| 📄 **MARIDA paper: RF_SS+SI (+ spectral indices)** (11 classes) | – | – | _0.700_ | – | – | – |
+| 📄 **MARIDA paper: RF_SS+SI+GLCM (+ texture)** (11 classes) | – | – | _0.790_ | – | – | – |
 | stage1_bands | 0.7975 (+0.0000) | 0.8614 (+0.0000) | 0.8849 (+0.0000) | 0.5831 (+0.0000) | 0.8441 (+0.0000) | +0.0000 |
 | stage2a_ndvi | 0.7038 (-0.0937) | 0.8573 (-0.0040) | 0.8995 (+0.0146) | 0.6438 (+0.0608) | 0.8469 (+0.0029) | -0.0039 |
 | stage2b_ndwi | 0.8273 (+0.0298) | 0.8665 (+0.0051) | 0.8987 (+0.0138) | 0.7622 (+0.1791) | 0.8623 (+0.0182) | +0.0492 |
@@ -209,6 +218,9 @@ Scores over classes 1-4 on all annotated test pixels (macro = mean over the 4 cl
 
 | Stage | ada | lgbm | rf | svm | xgb | mean Δ |
 |---|---|---|---|---|---|---|
+| 📄 **MARIDA paper: RF_SS (bands + spectral signatures)** (11 classes) | – | – | _0.570_ | – | – | – |
+| 📄 **MARIDA paper: RF_SS+SI (+ spectral indices)** (11 classes) | – | – | _0.590_ | – | – | – |
+| 📄 **MARIDA paper: RF_SS+SI+GLCM (+ texture)** (11 classes) | – | – | _0.690_ | – | – | – |
 | stage1_bands | 0.7156 (+0.0000) | 0.7786 (+0.0000) | 0.8102 (+0.0000) | 0.4873 (+0.0000) | 0.7575 (+0.0000) | +0.0000 |
 | stage2a_ndvi | 0.6488 (-0.0668) | 0.7707 (-0.0079) | 0.8310 (+0.0208) | 0.5375 (+0.0502) | 0.7571 (-0.0004) | -0.0008 |
 | stage2b_ndwi | 0.7424 (+0.0268) | 0.7845 (+0.0059) | 0.8294 (+0.0191) | 0.6455 (+0.1582) | 0.7795 (+0.0220) | +0.0464 |
@@ -228,6 +240,9 @@ Scores over classes 1-4 on all annotated test pixels (macro = mean over the 4 cl
 
 | Stage | ada | lgbm | rf | svm | xgb | mean Δ |
 |---|---|---|---|---|---|---|
+| 📄 **MARIDA paper: RF_SS (bands + spectral signatures)** (11 classes) | – | – | _0.710_ | – | – | – |
+| 📄 **MARIDA paper: RF_SS+SI (+ spectral indices)** (11 classes) | – | – | _0.800_ | – | – | – |
+| 📄 **MARIDA paper: RF_SS+SI+GLCM (+ texture)** (11 classes) | – | – | _0.790_ | – | – | – |
 | stage1_bands | 0.4318 (+0.0000) | 0.6977 (+0.0000) | 0.7420 (+0.0000) | 0.1232 (+0.0000) | 0.6454 (+0.0000) | +0.0000 |
 | stage2a_ndvi | 0.0760 (-0.3558) | 0.6892 (-0.0084) | 0.7759 (+0.0339) | 0.2312 (+0.1080) | 0.6647 (+0.0193) | -0.0406 |
 | stage2b_ndwi | 0.5536 (+0.1217) | 0.7167 (+0.0190) | 0.7911 (+0.0492) | 0.5287 (+0.4055) | 0.7013 (+0.0560) | +0.1303 |
@@ -247,6 +262,9 @@ Scores over classes 1-4 on all annotated test pixels (macro = mean over the 4 cl
 
 | Stage | ada | lgbm | rf | svm | xgb | mean Δ |
 |---|---|---|---|---|---|---|
+| 📄 **MARIDA paper: RF_SS (bands + spectral signatures)** (11 classes) | – | – | _0.550_ | – | – | – |
+| 📄 **MARIDA paper: RF_SS+SI (+ spectral indices)** (11 classes) | – | – | _0.670_ | – | – | – |
+| 📄 **MARIDA paper: RF_SS+SI+GLCM (+ texture)** (11 classes) | – | – | _0.650_ | – | – | – |
 | stage1_bands | 0.2754 (+0.0000) | 0.5357 (+0.0000) | 0.5898 (+0.0000) | 0.0657 (+0.0000) | 0.4764 (+0.0000) | +0.0000 |
 | stage2a_ndvi | 0.0395 (-0.2359) | 0.5258 (-0.0099) | 0.6338 (+0.0440) | 0.1307 (+0.0651) | 0.4978 (+0.0214) | -0.0231 |
 | stage2b_ndwi | 0.3827 (+0.1073) | 0.5585 (+0.0228) | 0.6544 (+0.0647) | 0.3594 (+0.2937) | 0.5401 (+0.0636) | +0.1104 |
@@ -323,6 +341,9 @@ Scores over classes 1-4 on all annotated test pixels (macro = mean over the 4 cl
 
 | Stage | ada | lgbm | rf | svm | xgb | mean Δ |
 |---|---|---|---|---|---|---|
+| 📄 **MARIDA paper: RF_SS (bands + spectral signatures)** (11 classes) | – | – | _0.910_ | – | – | – |
+| 📄 **MARIDA paper: RF_SS+SI (+ spectral indices)** (11 classes) | – | – | _0.920_ | – | – | – |
+| 📄 **MARIDA paper: RF_SS+SI+GLCM (+ texture)** (11 classes) | – | – | _0.920_ | – | – | – |
 | stage1_bands | 0.8399 (+0.0000) | 0.9449 (+0.0000) | 0.8793 (+0.0000) | 0.3307 (+0.0000) | 0.9291 (+0.0000) | +0.0000 |
 | stage2a_ndvi | 0.6903 (-0.1496) | 0.9081 (-0.0367) | 0.8268 (-0.0525) | 0.4488 (+0.1181) | 0.8976 (-0.0315) | -0.0304 |
 | stage2b_ndwi | 0.8478 (+0.0079) | 0.9396 (-0.0052) | 0.8898 (+0.0105) | 0.7008 (+0.3701) | 0.9554 (+0.0262) | +0.0819 |

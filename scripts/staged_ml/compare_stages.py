@@ -1,6 +1,7 @@
 """
 Collect every finished stage into one comparison, with deltas against stage 1
-(bands only) for the same dataset and model.
+(bands only) for the same dataset and model. The published ML results of the
+MARIDA and MADOS papers are listed at the top of each table.
 
 Output: <--out-root, default outputs/staged>/comparison/
   all_results.csv, comparison.md, delta_{f1,iou,debris_f1,debris_iou}_<dataset>.png
@@ -16,6 +17,25 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 from common import CLASS_NAMES, CLASSES, OUT_ROOT
+
+# Published ML results, in the papers' own class schemes (MARIDA.pdf Table 4, 11
+# classes; MADOS.pdf Table 4, 15 classes, mean of 5 runs). Only marine debris is the
+# same class as ours; MARIDA's "PA" (producer's accuracy) is our class accuracy.
+# Shown in the rf column. Keys as in metrics.csv.
+PAPER = {
+    "MARIDA": [
+        ("RF_SS (bands + spectral signatures)", "11 classes",
+         dict(f1=.69, iou=.57, f1_c2=.71, iou_c2=.55, acc_c2=.91)),
+        ("RF_SS+SI (+ spectral indices)", "11 classes",
+         dict(f1=.70, iou=.59, f1_c2=.80, iou_c2=.67, acc_c2=.92)),
+        ("RF_SS+SI+GLCM (+ texture)", "11 classes",
+         dict(f1=.79, iou=.69, f1_c2=.79, iou_c2=.65, acc_c2=.92)),
+    ],
+    "MADOS": [
+        ("RF", "15 classes", dict(f1=.566, iou=.439)),
+        ("RF++ (Mikeli et al., 2022)", "15 classes", dict(f1=.644, iou=.524)),
+    ],
+}
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
@@ -42,7 +62,12 @@ def main():
     stage_order = sorted(df.stage.unique())
     lines = ["# Staged feature comparison", "",
              "Scores over classes 1-4 on all annotated test pixels (macro = mean over the 4 classes). "
-             "Each cell: score (Δ vs stage 1, bands only, same model and dataset).", ""]
+             "Each cell: score (Δ vs stage 1, bands only, same model and dataset).", "",
+             "📄 **Paper rows** (top of each table, values in _italics_, in the rf column) are the "
+             "published Random Forest results of the MARIDA and MADOS papers. They use the papers' "
+             "own class schemes (MARIDA 11 classes, MADOS 15 classes), so only marine debris is the "
+             "same class as ours; their macro scores average over more, and different, classes. "
+             "Tables without a published value have no paper rows.", ""]
     for ds, g in df.groupby("dataset"):
         lines += [f"## {ds}", ""]
         piv = g.pivot(index="stage", columns="model", values="f1").reindex(stage_order).dropna(how="all")
@@ -52,6 +77,10 @@ def main():
             d = g.pivot(index="stage", columns="model", values=f"d_{key}").reindex(piv.index)
             lines += [f"### {title}", "", "| Stage | " + " | ".join(models) + " | mean Δ |",
                       "|" + "---|" * (len(models) + 2)]
+            for name, classes, vals in PAPER.get(ds, []):
+                if key in vals:
+                    cells = [f"_{vals[key]:.3f}_" if m == "rf" else "–" for m in models]
+                    lines.append(f"| 📄 **{ds} paper: {name}** ({classes}) | " + " | ".join(cells) + " | – |")
             for st in p.index:
                 lines.append(f"| {st} | " + " | ".join(f"{p.loc[st, m]:.4f} ({d.loc[st, m]:+.4f})" for m in models)
                              + f" | {d.loc[st].mean():+.4f} |")

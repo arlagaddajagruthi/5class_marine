@@ -27,15 +27,6 @@ CLASSES = ["Water", "Marine Debris", "Algae/Sargassum", "Other"]
 SHORT = ["water", "debris", "algae", "other"]
 NAN = float("nan")
 
-# MADOS paper, MariNeXt (Table 5) collapsed to our 4 classes: published row
-# percentages x test pixels (scripts/paper_compare/mados_table5_to_4class.py).
-MARINEXT_PAPER_CM = np.array([
-    [288947, 325, 0, 4929],
-    [154, 685, 20, 113],
-    [123, 28, 2917, 21],
-    [15338, 684, 15, 46980],
-])
-
 # Published results in the papers' own class schemes. MARIDA Table 4 (11 classes,
 # PA = recall, no precision/kappa/OA); MADOS Table 4 (15 classes, mean of 5 runs)
 # and Table 5 (MariNeXt per class). Only marine debris maps 1:1 onto our classes.
@@ -113,8 +104,6 @@ def collect():
         rows.append({"dataset": ds, "model": model, "kind": kind, "setting": setting, **r})
 
     # paper rows first, so they sit at the top of every table
-    add("MADOS", "MariNeXt, collapsed to our 4 classes", "paper", "MADOS paper, Table 5",
-        scores(MARINEXT_PAPER_CM))
     for ds, entries in PUBLISHED.items():
         for model, classes, vals in entries:
             add(ds, model, "paper", f"{ds} paper, {classes}", vals)
@@ -210,12 +199,10 @@ def main():
          "The Random Forest rows are the per-pixel baselines from the staged study (log class weights).", "",
          "📄 **Paper rows** (top of each table, values in _italics_) are the published results. "
          "**Bold** = best of our models in the column.", "",
-         "- **MADOS, MariNeXt collapsed to our 4 classes**: the paper's published confusion matrix "
-         "(Table 5) merged into our classes. This is the like-for-like comparison.",
-         "- **The other paper rows** are in the papers' own class schemes (MARIDA 11 classes, "
-         "MADOS 15 classes), so only marine debris is the same class; their macro scores average "
-         "over more, and different, classes. The MARIDA paper reports no precision, kappa or OA, "
-         "and its 'PA' is recall.", "",
+         "The paper results are in the papers' own class schemes (MARIDA 11 classes, MADOS 15 "
+         "classes), so only marine debris is the same class; their macro scores average over more, "
+         "and different, classes. The MARIDA paper reports no precision, kappa or OA, and its 'PA' "
+         "is recall.", "",
          "Inputs: DeepLabv3 uses the 11 Sentinel-2 bands; U-Net, SegNeXt-T and the MariNeXt "
          "architecture use 16 channels (11 bands + NDWI + red/green, NIR/red, NIR/green, SWIR1/NIR). "
          "The ensemble averages U-Net and RF class probabilities, p = w·p_U-Net + (1−w)·p_RF.", ""]

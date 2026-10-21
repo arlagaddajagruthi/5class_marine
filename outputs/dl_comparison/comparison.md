@@ -4,8 +4,7 @@ Our scores are recomputed from the saved **test** confusion matrices: classes 1-
 
 📄 **Paper rows** (top of each table, values in _italics_) are the published results. **Bold** = best of our models in the column.
 
-- **MADOS, MariNeXt collapsed to our 4 classes**: the paper's published confusion matrix (Table 5) merged into our classes. This is the like-for-like comparison.
-- **The other paper rows** are in the papers' own class schemes (MARIDA 11 classes, MADOS 15 classes), so only marine debris is the same class; their macro scores average over more, and different, classes. The MARIDA paper reports no precision, kappa or OA, and its 'PA' is recall.
+The paper results are in the papers' own class schemes (MARIDA 11 classes, MADOS 15 classes), so only marine debris is the same class; their macro scores average over more, and different, classes. The MARIDA paper reports no precision, kappa or OA, and its 'PA' is recall.
 
 Inputs: DeepLabv3 uses the 11 Sentinel-2 bands; U-Net, SegNeXt-T and the MariNeXt architecture use 16 channels (11 bands + NDWI + red/green, NIR/red, NIR/green, SWIR1/NIR). The ensemble averages U-Net and RF class probabilities, p = w·p_U-Net + (1−w)·p_RF.
 
@@ -48,8 +47,8 @@ Inputs: DeepLabv3 uses the 11 Sentinel-2 bands; U-Net, SegNeXt-T and the MariNeX
 | SegNeXt-T (16 ch, from scratch, VSCP) | 0.996 | 0.444 | 0.980 | 0.782 |
 | MariNeXt architecture (16 ch, from scratch, no VSCP) | 0.998 | 0.442 | 0.961 | 0.835 |
 | MariNeXt architecture (16 ch, from scratch, VSCP) | 0.997 | 0.501 | 0.980 | 0.860 |
-| U-Net + RF ensemble (RF stage 5) (U-Net novscp, w_unet = 0.45) | 0.998 | 0.823 | **0.995** | 0.864 |
-| U-Net + RF ensemble (RF stage 8) (U-Net novscp, w_unet = 0.45) | **0.998** | **0.836** | 0.995 | **0.864** |
+| U-Net + RF ensemble (RF stage 5) (U-Net novscp, w_unet = 0.45) | 0.998 | 0.823 | 0.995 | 0.864 |
+| U-Net + RF ensemble (RF stage 8) (U-Net novscp, w_unet = 0.45) | **0.998** | **0.836** | **0.995** | **0.864** |
 
 ### Per-class Precision
 
@@ -148,7 +147,6 @@ The MARIDA paper gives no confusion matrix, so its classes cannot be merged into
 
 | Model | Macro F1 | mIoU | κ | OA | Macro P | Macro R |
 |---|---|---|---|---|---|---|
-| 📄 **MariNeXt, collapsed to our 4 classes** (MADOS paper, Table 5) | _0.814_ | _0.724_ | _0.791_ | _0.940_ | _0.809_ | _0.844_ |
 | 📄 **MariNeXt** (MADOS paper, 15 classes) | _0.760_ | _0.643_ | – | _0.891_ | – | – |
 | 📄 **SegNeXt-T** (MADOS paper, 15 classes) | _0.606_ | _0.492_ | – | _0.866_ | – | – |
 | 📄 **U-Net** (MADOS paper, 15 classes) | _0.638_ | _0.510_ | – | _0.829_ | – | – |
@@ -167,7 +165,6 @@ The MARIDA paper gives no confusion matrix, so its classes cannot be merged into
 
 | Model | Water | Marine Debris | Algae/Sargassum | Other |
 |---|---|---|---|---|
-| 📄 **MariNeXt, collapsed to our 4 classes** (MADOS paper, Table 5) | _0.965_ | _0.509_ | _0.966_ | _0.817_ |
 | 📄 **MariNeXt** (MADOS paper, 15 classes) | – | _0.513_ | – | – |
 | Random Forest, stage 5 (log weights, per-pixel features) | 0.817 | 0.717 | 0.825 | 0.517 |
 | Random Forest, stage 8 (log weights, per-pixel features) | 0.898 | 0.708 | 0.829 | 0.608 |
@@ -182,7 +179,6 @@ The MARIDA paper gives no confusion matrix, so its classes cannot be merged into
 
 | Model | Water | Marine Debris | Algae/Sargassum | Other |
 |---|---|---|---|---|
-| 📄 **MariNeXt, collapsed to our 4 classes** (MADOS paper, Table 5) | _0.949_ | _0.398_ | _0.988_ | _0.903_ |
 | 📄 **MariNeXt** (MADOS paper, 15 classes) | – | _0.406_ | – | – |
 | Random Forest, stage 5 (log weights, per-pixel features) | 0.949 | 0.684 | 0.990 | 0.379 |
 | Random Forest, stage 8 (log weights, per-pixel features) | 0.935 | 0.659 | 0.980 | 0.528 |
@@ -197,7 +193,6 @@ The MARIDA paper gives no confusion matrix, so its classes cannot be merged into
 
 | Model | Water | Marine Debris | Algae/Sargassum | Other |
 |---|---|---|---|---|
-| 📄 **MariNeXt, collapsed to our 4 classes** (MADOS paper, Table 5) | _0.982_ | _0.705_ | _0.944_ | _0.746_ |
 | 📄 **MariNeXt** (MADOS paper, 15 classes) | – | _0.704_ | – | – |
 | Random Forest, stage 5 (log weights, per-pixel features) | 0.717 | 0.753 | 0.707 | 0.815 |
 | Random Forest, stage 8 (log weights, per-pixel features) | 0.865 | 0.764 | 0.719 | 0.718 |
@@ -212,7 +207,6 @@ The MARIDA paper gives no confusion matrix, so its classes cannot be merged into
 
 | Model | Water | Marine Debris | Algae/Sargassum | Other |
 |---|---|---|---|---|
-| 📄 **MariNeXt, collapsed to our 4 classes** (MADOS paper, Table 5) | _0.933_ | _0.341_ | _0.934_ | _0.690_ |
 | 📄 **MariNeXt** (MADOS paper, 15 classes) | – | _0.346_ | – | – |
 | Random Forest, stage 5 (log weights, per-pixel features) | 0.690 | 0.559 | 0.701 | 0.349 |
 | Random Forest, stage 8 (log weights, per-pixel features) | 0.815 | 0.548 | 0.708 | 0.437 |
@@ -227,7 +221,6 @@ The MARIDA paper gives no confusion matrix, so its classes cannot be merged into
 
 | Model | Debris found (TP) | Debris missed (FN) | False alarms (FP) | FP per TP | Water → Other | Other → Water |
 |---|---|---|---|---|---|---|
-| 📄 **MariNeXt, collapsed to our 4 classes** (MADOS paper, Table 5) | 685 / 972 | 287 | 1037 | 1.51 | 4,929 (1.7 %) | 15,338 (24.3 %) |
 | Random Forest, stage 5 (log weights, per-pixel features) | 733 / 973 | 240 | 338 | 0.46 | 83,130 (28.3 %) | 11,354 (18.0 %) |
 | Random Forest, stage 8 (log weights, per-pixel features) | 743 / 973 | 230 | 384 | 0.52 | 39,748 (13.5 %) | 17,433 (27.6 %) |
 | DeepLabv3-ResNet50 (11 bands, from scratch) | 629 / 973 | 344 | 2188 | 3.48 | 2,940 (1.0 %) | 24,658 (39.1 %) |
@@ -237,19 +230,3 @@ The MARIDA paper gives no confusion matrix, so its classes cannot be merged into
 | U-Net + RF ensemble (RF stage 5) (U-Net vscp, w_unet = 0.55) | 780 / 973 | 193 | 304 | 0.39 | 26,215 (8.9 %) | 13,723 (21.8 %) |
 | U-Net + RF ensemble (RF stage 8) (U-Net vscp, w_unet = 0.45) | 775 / 973 | 198 | 325 | 0.42 | 28,407 (9.7 %) | 17,007 (27.0 %) |
 
-## ResNet-50 patch classifier (MARIDA paper's multi-label baseline)
-
-Different task: it predicts which classes are *present in a patch* (multi-label, threshold 0.5), not a class per pixel, so it is not comparable with the tables above. Scores are per patch.
-
-| Dataset | Class | Patches with class | Precision | Recall | F1 |
-|---|---|---|---|---|---|
-| MARIDA | Water | 302 | 0.852 | 0.970 | 0.907 |
-| MARIDA | Marine Debris | 101 | 0.477 | 0.406 | 0.439 |
-| MARIDA | Algae/Sargassum | 26 | 0.000 | 0.000 | 0.000 |
-| MARIDA | Other | 80 | 0.421 | 0.200 | 0.271 |
-| MARIDA | **macro** | | 0.437 | 0.394 | 0.404 |
-| MADOS | Water | 469 | 0.728 | 0.878 | 0.796 |
-| MADOS | Marine Debris | 124 | 0.487 | 0.460 | 0.473 |
-| MADOS | Algae/Sargassum | 45 | 0.364 | 0.089 | 0.143 |
-| MADOS | Other | 306 | 0.728 | 0.559 | 0.632 |
-| MADOS | **macro** | | 0.577 | 0.496 | 0.511 |
