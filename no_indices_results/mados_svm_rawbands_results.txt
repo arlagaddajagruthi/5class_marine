@@ -1,0 +1,19 @@
+=== SVM — Raw Bands Only (No Indices) — MADOS_5Class ===
+
+Training SVM on 156958 pixels with 8 features (raw bands only)...
+Training time: 1.94 seconds
+Evaluating on 154062 test pixels...
+
+Metrics:
+Precision: 0.5953244262054798
+Recall: 0.6208813434429168
+F1 Score: 0.6042839818364414
+IoU (Jaccard): 0.5052713278971264
+Accuracy: 0.8006841401513677
+
+Confusion Matrix:
+[[48980    18     0   939    63]
+ [    0 32867  1198   696 15239]
+ [    0   218     4    14   737]
+ [    0   342     0  2085   662]
+ [    0  9472   725   384 39419]]

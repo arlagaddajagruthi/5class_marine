@@ -1,0 +1,206 @@
+{
+  "MADOS": {
+    "Random Forest": {
+      "dataset": "MADOS_5Class",
+      "model": "Random Forest",
+      "num_features": 8,
+      "feature_type": "raw_bands_only",
+      "train_pixels": 156958,
+      "test_pixels": 154062,
+      "train_time_sec": 3.484055995941162,
+      "inference_time_sec": 0.27945637702941895,
+      "latency_per_patch_ms": 0.38386864976568535,
+      "latency_per_1m_pixels_sec": 1.8139215188003461,
+      "throughput_pixels_sec": 551291.7673865842,
+      "metrics": {
+        "precision": 0.8487720388110274,
+        "recall": 0.831793452991868,
+        "f1": 0.8330250971582964,
+        "iou": 0.7277877981475902,
+        "accuracy": 0.8881424361620647
+      }
+    },
+    "SVM": {
+      "dataset": "MADOS_5Class",
+      "model": "SVM",
+      "num_features": 8,
+      "feature_type": "raw_bands_only",
+      "train_pixels": 156958,
+      "test_pixels": 154062,
+      "train_time_sec": 1.942004680633545,
+      "inference_time_sec": 0.018567323684692383,
+      "latency_per_patch_ms": 0.025504565500951076,
+      "latency_per_1m_pixels_sec": 0.12051851647189044,
+      "throughput_pixels_sec": 8297480.165491737,
+      "metrics": {
+        "precision": 0.5953244262054798,
+        "recall": 0.6208813434429168,
+        "f1": 0.6042839818364414,
+        "iou": 0.5052713278971264,
+        "accuracy": 0.8006841401513677
+      }
+    },
+    "XGBoost": {
+      "dataset": "MADOS_5Class",
+      "model": "XGBoost",
+      "num_features": 8,
+      "feature_type": "raw_bands_only",
+      "train_pixels": 156958,
+      "test_pixels": 154062,
+      "train_time_sec": 3.382781744003296,
+      "inference_time_sec": 0.15321826934814453,
+      "latency_per_patch_ms": 0.2104646556980007,
+      "latency_per_1m_pixels_sec": 0.994523434384498,
+      "throughput_pixels_sec": 1005506.723548341,
+      "metrics": {
+        "precision": 0.8387112957387377,
+        "recall": 0.8433539938241885,
+        "f1": 0.8350460955244394,
+        "iou": 0.7328496092475394,
+        "accuracy": 0.8915826095987329
+      }
+    },
+    "AdaBoost": {
+      "dataset": "MADOS_5Class",
+      "model": "AdaBoost",
+      "num_features": 8,
+      "feature_type": "raw_bands_only",
+      "train_pixels": 156958,
+      "test_pixels": 154062,
+      "train_time_sec": 40.86895394325256,
+      "inference_time_sec": 1.5502195358276367,
+      "latency_per_patch_ms": 2.129422439323677,
+      "latency_per_1m_pixels_sec": 10.062309562563362,
+      "throughput_pixels_sec": 99380.7628141835,
+      "metrics": {
+        "precision": 0.8448393635902184,
+        "recall": 0.7070593856754581,
+        "f1": 0.7553749416695666,
+        "iou": 0.6377949367538689,
+        "accuracy": 0.8528319767366385
+      }
+    },
+    "LightGBM": {
+      "dataset": "MADOS_5Class",
+      "model": "LightGBM",
+      "num_features": 8,
+      "feature_type": "raw_bands_only",
+      "train_pixels": 156958,
+      "test_pixels": 154062,
+      "train_time_sec": 1.4385449886322021,
+      "inference_time_sec": 0.599043607711792,
+      "latency_per_patch_ms": 0.8228620985052089,
+      "latency_per_1m_pixels_sec": 3.888328125766198,
+      "throughput_pixels_sec": 257179.9415212545,
+      "metrics": {
+        "precision": 0.8424681710770698,
+        "recall": 0.8491777669075395,
+        "f1": 0.8391992733268789,
+        "iou": 0.7386250330865745,
+        "accuracy": 0.8936986408069478
+      }
+    }
+  },
+  "MARIDA": {
+    "Random Forest": {
+      "dataset": "MARIDA_5Class",
+      "model": "Random Forest",
+      "num_features": 11,
+      "feature_type": "raw_bands_only",
+      "train_pixels": 108385,
+      "test_pixels": 103632,
+      "train_time_sec": 4.204282283782959,
+      "inference_time_sec": 0.2624542713165283,
+      "latency_per_patch_ms": 0.7310703936393547,
+      "latency_per_1m_pixels_sec": 2.53256012927019,
+      "throughput_pixels_sec": 394857.3573604236,
+      "metrics": {
+        "precision": 0.8042554045048224,
+        "recall": 0.8381712070935494,
+        "f1": 0.8051910705572018,
+        "iou": 0.6838903958279834,
+        "accuracy": 0.7651883588080902
+      }
+    },
+    "SVM": {
+      "dataset": "MARIDA_5Class",
+      "model": "SVM",
+      "num_features": 11,
+      "feature_type": "raw_bands_only",
+      "train_pixels": 108385,
+      "test_pixels": 103632,
+      "train_time_sec": 2.1148793697357178,
+      "inference_time_sec": 0.023154258728027344,
+      "latency_per_patch_ms": 0.06449654241790347,
+      "latency_per_1m_pixels_sec": 0.22342769345402333,
+      "throughput_pixels_sec": 4475720.9123934265,
+      "metrics": {
+        "precision": 0.6568208788856021,
+        "recall": 0.7952461975231395,
+        "f1": 0.6787963399248413,
+        "iou": 0.5717947430047632,
+        "accuracy": 0.8269742936544696
+      }
+    },
+    "XGBoost": {
+      "dataset": "MARIDA_5Class",
+      "model": "XGBoost",
+      "num_features": 11,
+      "feature_type": "raw_bands_only",
+      "train_pixels": 108385,
+      "test_pixels": 103632,
+      "train_time_sec": 1.4533095359802246,
+      "inference_time_sec": 0.11110353469848633,
+      "latency_per_patch_ms": 0.3094805980459229,
+      "latency_per_1m_pixels_sec": 1.072096791516967,
+      "throughput_pixels_sec": 932751.6021991322,
+      "metrics": {
+        "precision": 0.796183569915552,
+        "recall": 0.8500920014470014,
+        "f1": 0.8147512189661021,
+        "iou": 0.6968666195294013,
+        "accuracy": 0.8071734599351552
+      }
+    },
+    "AdaBoost": {
+      "dataset": "MARIDA_5Class",
+      "model": "AdaBoost",
+      "num_features": 11,
+      "feature_type": "raw_bands_only",
+      "train_pixels": 108385,
+      "test_pixels": 103632,
+      "train_time_sec": 40.124372243881226,
+      "inference_time_sec": 1.5656723976135254,
+      "latency_per_patch_ms": 4.361204450176951,
+      "latency_per_1m_pixels_sec": 15.108001366503833,
+      "throughput_pixels_sec": 66190.09197451585,
+      "metrics": {
+        "precision": 0.7172862808269993,
+        "recall": 0.6433419754341771,
+        "f1": 0.6711379404555267,
+        "iou": 0.5412264178381978,
+        "accuracy": 0.7857032576810251
+      }
+    },
+    "LightGBM": {
+      "dataset": "MARIDA_5Class",
+      "model": "LightGBM",
+      "num_features": 11,
+      "feature_type": "raw_bands_only",
+      "train_pixels": 108385,
+      "test_pixels": 103632,
+      "train_time_sec": 3.701555013656616,
+      "inference_time_sec": 1.510563850402832,
+      "latency_per_patch_ms": 4.207698747640201,
+      "latency_per_1m_pixels_sec": 14.576229836371313,
+      "throughput_pixels_sec": 68604.84578150323,
+      "metrics": {
+        "precision": 0.7980921453163345,
+        "recall": 0.8450439467912867,
+        "f1": 0.8117900002544669,
+        "iou": 0.6919089585289745,
+        "accuracy": 0.7855392156862745
+      }
+    }
+  }
+}
