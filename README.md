@@ -22,6 +22,7 @@ gives overall and per-class precision, recall, F1, IoU and accuracy, plus kappa.
 | `data/` | the 4-class datasets and the environmental covariates (see `data/README.md`) |
 | `src/datasets/`, `src/features/`, `src/metrics/`, `src/environmental/` | dataset loaders, per-pixel features, metrics, environmental-data helpers |
 | `scripts/utilities/convert.py` | builds `data/*_5Class` from the original MARIDA/MADOS (15 classes → 4) |
+| `scripts/utilities/dl_comparison.py` | all deep models, RF and ensembles side by side, overall and per class → `outputs/dl_comparison/comparison.md` |
 | `scripts/staged_ml/` | **staged feature ablation** (RF, XGBoost, LightGBM, AdaBoost, SVM; stages 1–8) |
 | `scripts/env_sst_chl_wind/` | SST, chlorophyll-a and wind covariates for stage 6 (MARIDA) |
 | `scripts/environmental/` | patch metadata, MUR SST and ERA5 downloads; first environmental experiments |
@@ -48,6 +49,7 @@ powershell -File scripts/staged_ml/run_all_stages.ps1     # staged ML, all stage
 python scripts/unet_ssl4eo/unet.py train --dataset MADOS --run MADOS_vscp --vscp
 python scripts/unet_ssl4eo/unet.py test  --dataset MADOS --run MADOS_vscp --vscp
 python scripts/ensemble/unet_rf.py --datasets MARIDA MADOS
+python scripts/utilities/dl_comparison.py                 # outputs/dl_comparison/comparison.md
 ```
 
 Main packages: torch (CUDA), torchgeo, segmentation-models-pytorch, timm,
