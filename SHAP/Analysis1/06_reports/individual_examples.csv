@@ -1,0 +1,121 @@
+dataset,model,true,predicted,example,pixel,explained_output,base,output
+MARIDA,rf,Water,Water,correct,595,Water,0.275,1.0
+MARIDA,rf,Water,Other,wrong_trueclass,908,Water,0.275,0.45
+MARIDA,rf,Water,Other,wrong_predclass,908,Other,0.24240000000000006,0.55
+MARIDA,rf,Marine Debris,Marine Debris,correct,986,Marine Debris,0.2419,0.83
+MARIDA,rf,Marine Debris,Water,wrong_trueclass,951,Marine Debris,0.2419,0.08
+MARIDA,rf,Marine Debris,Water,wrong_predclass,951,Water,0.275,0.89
+MARIDA,rf,Algae/Sargassum,Algae/Sargassum,correct,1271,Algae/Sargassum,0.2407,0.98
+MARIDA,rf,Algae/Sargassum,Water,wrong_trueclass,1466,Algae/Sargassum,0.2407,0.1
+MARIDA,rf,Algae/Sargassum,Water,wrong_predclass,1466,Water,0.275,0.85
+MARIDA,rf,Other,Other,correct,1542,Other,0.24240000000000006,0.97
+MARIDA,rf,Other,Water,wrong_trueclass,1343,Other,0.24240000000000006,0.0
+MARIDA,rf,Other,Water,wrong_predclass,1343,Water,0.275,0.99
+MARIDA,xgb,Water,Water,correct,612,Water,-0.7258355021476746,5.52400016784668
+MARIDA,xgb,Water,Other,wrong_trueclass,908,Water,-0.7258355021476746,-0.9787961840629578
+MARIDA,xgb,Water,Other,wrong_predclass,908,Other,-0.9499289989471436,2.6765072345733643
+MARIDA,xgb,Marine Debris,Marine Debris,correct,1076,Marine Debris,-2.2115349769592285,3.4310381412506104
+MARIDA,xgb,Marine Debris,Water,wrong_trueclass,951,Marine Debris,-2.2115349769592285,-2.085982084274292
+MARIDA,xgb,Marine Debris,Water,wrong_predclass,951,Water,-0.7258355021476746,3.273974895477295
+MARIDA,xgb,Algae/Sargassum,Algae/Sargassum,correct,1278,Algae/Sargassum,-2.672896385192871,5.476916313171387
+MARIDA,xgb,Algae/Sargassum,Water,wrong_trueclass,567,Algae/Sargassum,-2.672896385192871,-1.013986349105835
+MARIDA,xgb,Algae/Sargassum,Water,wrong_predclass,567,Water,-0.7258355021476746,4.092066764831543
+MARIDA,xgb,Other,Other,correct,104,Other,-0.9499289989471436,4.191037654876709
+MARIDA,xgb,Other,Water,wrong_trueclass,960,Other,-0.9499289989471436,-3.1483662128448486
+MARIDA,xgb,Other,Water,wrong_predclass,960,Water,-0.7258355021476746,4.013156414031982
+MARIDA,lgbm,Water,Water,correct,676,Water,-2.747205145604139,4.752009315104737
+MARIDA,lgbm,Water,Other,wrong_trueclass,908,Water,-2.747205145604139,-3.0031914844481573
+MARIDA,lgbm,Water,Other,wrong_predclass,908,Other,-3.1172063455924195,1.2844800392168727
+MARIDA,lgbm,Marine Debris,Marine Debris,correct,970,Marine Debris,-4.517643161004056,1.9523819217014813
+MARIDA,lgbm,Marine Debris,Other,wrong_trueclass,984,Marine Debris,-4.517643161004056,-2.8915859504145924
+MARIDA,lgbm,Marine Debris,Other,wrong_predclass,984,Other,-3.1172063455924195,0.7236857146100071
+MARIDA,lgbm,Algae/Sargassum,Algae/Sargassum,correct,1209,Algae/Sargassum,-5.396664478896561,5.375762175952401
+MARIDA,lgbm,Algae/Sargassum,Other,wrong_trueclass,1495,Algae/Sargassum,-5.396664478896561,-6.2366777869648775
+MARIDA,lgbm,Algae/Sargassum,Other,wrong_predclass,1495,Other,-3.1172063455924195,-0.8010732506947822
+MARIDA,lgbm,Other,Other,correct,116,Other,-3.1172063455924195,2.457993914631987
+MARIDA,lgbm,Other,Marine Debris,wrong_trueclass,1453,Other,-3.1172063455924195,-5.090746152040311
+MARIDA,lgbm,Other,Marine Debris,wrong_predclass,1453,Marine Debris,-4.517643161004056,2.151510671876625
+MARIDA,ada,Water,Water,correct,1760,Water,0.2557825848415252,0.31122602956348466
+MARIDA,ada,Water,Other,wrong_trueclass,908,Water,0.2557825848415252,0.25410112194712664
+MARIDA,ada,Water,Other,wrong_predclass,908,Other,0.2524873443957209,0.2880834069371571
+MARIDA,ada,Marine Debris,Marine Debris,correct,761,Marine Debris,0.2502959390934702,0.27453072855708605
+MARIDA,ada,Marine Debris,Water,wrong_trueclass,1021,Marine Debris,0.2502959390934702,0.24446582692553537
+MARIDA,ada,Marine Debris,Water,wrong_predclass,1021,Water,0.2557825848415252,0.27994493662389086
+MARIDA,ada,Algae/Sargassum,Algae/Sargassum,correct,1210,Algae/Sargassum,0.24143413166928368,0.29280465533432126
+MARIDA,ada,Algae/Sargassum,Water,wrong_trueclass,1466,Algae/Sargassum,0.24143413166928368,0.24064783894924466
+MARIDA,ada,Algae/Sargassum,Water,wrong_predclass,1466,Water,0.2557825848415252,0.284117967422777
+MARIDA,ada,Other,Other,correct,83,Other,0.2524873443957209,0.29067732768293186
+MARIDA,ada,Other,Water,wrong_trueclass,960,Other,0.2524873443957209,0.2424745405839986
+MARIDA,ada,Other,Water,wrong_predclass,960,Water,0.2557825848415252,0.2996070449902393
+MARIDA,svm,Water,Water,correct,1334,Water,-0.43801699202552347,2.4933811813861166
+MARIDA,svm,Water,Other,wrong_trueclass,908,Water,-0.43801699202552347,-0.807596009089866
+MARIDA,svm,Water,Other,wrong_predclass,908,Other,0.1309498865308097,1.7585081945884464
+MARIDA,svm,Marine Debris,Marine Debris,correct,783,Marine Debris,-2.992822078940952,1.330901979286525
+MARIDA,svm,Marine Debris,Water,wrong_trueclass,951,Marine Debris,-2.992822078940952,-0.6558901365572791
+MARIDA,svm,Marine Debris,Water,wrong_predclass,951,Water,-0.43801699202552347,0.7553911688645045
+MARIDA,svm,Algae/Sargassum,Algae/Sargassum,correct,1177,Algae/Sargassum,-7.8120220194085865,9.675779724945809
+MARIDA,svm,Algae/Sargassum,Water,wrong_trueclass,1618,Algae/Sargassum,-7.8120220194085865,0.23640247722557461
+MARIDA,svm,Algae/Sargassum,Water,wrong_predclass,1618,Water,-0.43801699202552347,0.4969232484671662
+MARIDA,svm,Other,Other,correct,509,Other,0.1309498865308097,2.9548179252743063
+MARIDA,svm,Other,Algae/Sargassum,wrong_trueclass,801,Other,0.1309498865308097,1.3930053505719264
+MARIDA,svm,Other,Algae/Sargassum,wrong_predclass,801,Algae/Sargassum,-7.8120220194085865,4.808955115074014
+MADOS,rf,Water,Water,correct,1679,Water,0.2618,0.99
+MADOS,rf,Water,Other,wrong_trueclass,1124,Water,0.2618,0.0
+MADOS,rf,Water,Other,wrong_predclass,1124,Other,0.26309999999999995,1.0
+MADOS,rf,Marine Debris,Marine Debris,correct,1733,Marine Debris,0.2296,0.82
+MADOS,rf,Marine Debris,Other,wrong_trueclass,1488,Marine Debris,0.2296,0.0
+MADOS,rf,Marine Debris,Other,wrong_predclass,1488,Other,0.26309999999999995,1.0
+MADOS,rf,Algae/Sargassum,Algae/Sargassum,correct,486,Algae/Sargassum,0.24550000000000005,0.98
+MADOS,rf,Algae/Sargassum,Water,wrong_trueclass,886,Algae/Sargassum,0.24550000000000005,0.0
+MADOS,rf,Algae/Sargassum,Water,wrong_predclass,886,Water,0.2618,0.95
+MADOS,rf,Other,Other,correct,1076,Other,0.26309999999999995,0.89
+MADOS,rf,Other,Water,wrong_trueclass,6,Other,0.26309999999999995,0.0
+MADOS,rf,Other,Water,wrong_predclass,6,Water,0.2618,1.0
+MADOS,xgb,Water,Water,correct,1971,Water,-0.42727741599082947,4.4865241050720215
+MADOS,xgb,Water,Other,wrong_trueclass,1133,Water,-0.42727741599082947,-1.1516141891479492
+MADOS,xgb,Water,Other,wrong_predclass,1133,Other,0.34647026658058167,3.8671016693115234
+MADOS,xgb,Marine Debris,Marine Debris,correct,1246,Marine Debris,-2.679769515991211,3.613105058670044
+MADOS,xgb,Marine Debris,Other,wrong_trueclass,1491,Marine Debris,-2.679769515991211,-5.553601264953613
+MADOS,xgb,Marine Debris,Other,wrong_predclass,1491,Other,0.34647026658058167,5.134315013885498
+MADOS,xgb,Algae/Sargassum,Algae/Sargassum,correct,389,Algae/Sargassum,-2.6032323837280273,5.7309770584106445
+MADOS,xgb,Algae/Sargassum,Water,wrong_trueclass,945,Algae/Sargassum,-2.6032323837280273,-5.104390621185303
+MADOS,xgb,Algae/Sargassum,Water,wrong_predclass,945,Water,-0.42727741599082947,3.3713490962982178
+MADOS,xgb,Other,Other,correct,1089,Other,0.34647026658058167,3.197856903076172
+MADOS,xgb,Other,Water,wrong_trueclass,315,Other,0.34647026658058167,-1.3428208827972412
+MADOS,xgb,Other,Water,wrong_predclass,315,Water,-0.42727741599082947,3.825141429901123
+MADOS,lgbm,Water,Water,correct,1888,Water,-2.4784261182278446,3.0855527436619394
+MADOS,lgbm,Water,Other,wrong_trueclass,1133,Water,-2.4784261182278446,-3.3951391122163264
+MADOS,lgbm,Water,Other,wrong_predclass,1133,Other,-1.5939805588691065,2.366854390310552
+MADOS,lgbm,Marine Debris,Marine Debris,correct,1931,Marine Debris,-5.0201095187414015,2.1975596283842016
+MADOS,lgbm,Marine Debris,Other,wrong_trueclass,1488,Marine Debris,-5.0201095187414015,-8.091542496021807
+MADOS,lgbm,Marine Debris,Other,wrong_predclass,1488,Other,-1.5939805588691065,3.6757467128855295
+MADOS,lgbm,Algae/Sargassum,Algae/Sargassum,correct,519,Algae/Sargassum,-5.313242740594905,4.7053446586430985
+MADOS,lgbm,Algae/Sargassum,Water,wrong_trueclass,886,Algae/Sargassum,-5.313242740594905,-9.829160501561827
+MADOS,lgbm,Algae/Sargassum,Water,wrong_predclass,886,Water,-2.4784261182278446,0.8270548819298714
+MADOS,lgbm,Other,Other,correct,1711,Other,-1.5939805588691065,1.4030572496291696
+MADOS,lgbm,Other,Water,wrong_trueclass,1055,Other,-1.5939805588691065,-3.6702075298971804
+MADOS,lgbm,Other,Water,wrong_predclass,1055,Water,-2.4784261182278446,2.900701519699898
+MADOS,ada,Water,Water,correct,154,Water,0.2531545345813672,0.2943131867870541
+MADOS,ada,Water,Other,wrong_trueclass,625,Water,0.2531545345813672,0.24554429932308597
+MADOS,ada,Water,Other,wrong_predclass,625,Other,0.26044251837521754,0.3035371802394057
+MADOS,ada,Marine Debris,Marine Debris,correct,1933,Marine Debris,0.24505248141720112,0.277845303423623
+MADOS,ada,Marine Debris,Other,wrong_trueclass,1536,Marine Debris,0.24505248141720112,0.22734303022543548
+MADOS,ada,Marine Debris,Other,wrong_predclass,1536,Other,0.26044251837521754,0.3217814374614928
+MADOS,ada,Algae/Sargassum,Algae/Sargassum,correct,1474,Algae/Sargassum,0.24135046562621415,0.2912028116622856
+MADOS,ada,Algae/Sargassum,Water,wrong_trueclass,864,Algae/Sargassum,0.24135046562621415,0.22328995333839854
+MADOS,ada,Algae/Sargassum,Water,wrong_predclass,864,Water,0.2531545345813672,0.282711328881211
+MADOS,ada,Other,Other,correct,1324,Other,0.26044251837521754,0.28591300871256176
+MADOS,ada,Other,Water,wrong_trueclass,642,Other,0.26044251837521754,0.25497434911365024
+MADOS,ada,Other,Water,wrong_predclass,642,Water,0.2531545345813672,0.29872019722549664
+MADOS,svm,Water,Water,correct,825,Water,0.046151421959943324,1.3220393371517205
+MADOS,svm,Water,Other,wrong_trueclass,1348,Water,0.046151421959943324,-1.368495295874678
+MADOS,svm,Water,Other,wrong_predclass,1348,Other,-0.1381437886735346,2.5584463961849035
+MADOS,svm,Marine Debris,Marine Debris,correct,13,Marine Debris,-2.899468686292218,1.5938894267203243
+MADOS,svm,Marine Debris,Other,wrong_trueclass,1546,Marine Debris,-2.899468686292218,-0.9392467915393534
+MADOS,svm,Marine Debris,Other,wrong_predclass,1546,Other,-0.1381437886735346,5.768757915646772
+MADOS,svm,Algae/Sargassum,Algae/Sargassum,correct,203,Algae/Sargassum,-2.1322508671860976,4.9812247334591095
+MADOS,svm,Algae/Sargassum,Other,wrong_trueclass,614,Algae/Sargassum,-2.1322508671860976,-2.5430003965405676
+MADOS,svm,Algae/Sargassum,Other,wrong_predclass,614,Other,-0.1381437886735346,1.2308944401892354
+MADOS,svm,Other,Other,correct,1212,Other,-0.1381437886735346,0.8649034427397878
+MADOS,svm,Other,Marine Debris,wrong_trueclass,1964,Other,-0.1381437886735346,1.6962159961127563
+MADOS,svm,Other,Marine Debris,wrong_predclass,1964,Marine Debris,-2.899468686292218,5.520989030404957

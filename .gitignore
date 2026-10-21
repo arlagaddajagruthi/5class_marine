@@ -43,3 +43,5 @@ outputs/staged/cache/
 outputs/deeplabv3_resnet50/cache/
 
 paper/
+# per-class feature analysis working outputs (published copies live in SHAP/<name>/)
+outputs/feature_analysis/

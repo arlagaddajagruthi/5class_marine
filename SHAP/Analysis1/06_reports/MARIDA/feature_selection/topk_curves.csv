@@ -1,0 +1,181 @@
+model,cls,k,f1,features
+rf,Water,1,0.9807610256877926,nir/red
+rf,Water,2,0.99419241620694,nir/red|glcm_contrast
+rf,Water,3,0.9948375125667939,nir/red|glcm_contrast|NDWI
+rf,Water,4,0.9947045816037553,nir/red|glcm_contrast|NDWI|nir/green
+rf,Water,6,0.9978383862535583,nir/red|glcm_contrast|NDWI|nir/green|swir1/nir|B5
+rf,Water,8,0.9980937487883996,nir/red|glcm_contrast|NDWI|nir/green|swir1/nir|B5|B8A|glcm_dissimilarity
+rf,Water,11,0.9981743864807664,nir/red|glcm_contrast|NDWI|nir/green|swir1/nir|B5|B8A|glcm_dissimilarity|B11|B8|B1
+rf,Water,15,0.998103116769805,nir/red|glcm_contrast|NDWI|nir/green|swir1/nir|B5|B8A|glcm_dissimilarity|B11|B8|B1|B4|B12|red/green|glcm_correlation
+rf,Water,22,0.9983389455859256,nir/red|glcm_contrast|NDWI|nir/green|swir1/nir|B5|B8A|glcm_dissimilarity|B11|B8|B1|B4|B12|red/green|glcm_correlation|B7|B3|B6|B2|glcm_homogeneity|glcm_asm|glcm_energy
+rf,Marine Debris,1,0.030518819938962362,nir/red
+rf,Marine Debris,2,0.10808435852372583,nir/red|swir1/nir
+rf,Marine Debris,3,0.3323076923076923,nir/red|swir1/nir|NDWI
+rf,Marine Debris,4,0.37318590186592954,nir/red|swir1/nir|NDWI|nir/green
+rf,Marine Debris,6,0.7657142857142857,nir/red|swir1/nir|NDWI|nir/green|B12|B5
+rf,Marine Debris,8,0.7771295215869312,nir/red|swir1/nir|NDWI|nir/green|B12|B5|B4|B11
+rf,Marine Debris,11,0.8442822384428224,nir/red|swir1/nir|NDWI|nir/green|B12|B5|B4|B11|glcm_contrast|red/green|B2
+rf,Marine Debris,15,0.8427370948379351,nir/red|swir1/nir|NDWI|nir/green|B12|B5|B4|B11|glcm_contrast|red/green|B2|B6|B1|B3|B7
+rf,Marine Debris,22,0.8375451263537906,nir/red|swir1/nir|NDWI|nir/green|B12|B5|B4|B11|glcm_contrast|red/green|B2|B6|B1|B3|B7|B8|glcm_correlation|glcm_dissimilarity|B8A|glcm_homogeneity|glcm_asm|glcm_energy
+rf,Algae/Sargassum,1,0.8706105662764948,nir/red
+rf,Algae/Sargassum,2,0.9436663554310614,nir/red|NDWI
+rf,Algae/Sargassum,3,0.9427588364091336,nir/red|NDWI|nir/green
+rf,Algae/Sargassum,4,0.9764885496183207,nir/red|NDWI|nir/green|B2
+rf,Algae/Sargassum,6,0.9813854134879463,nir/red|NDWI|nir/green|B2|B4|glcm_contrast
+rf,Algae/Sargassum,8,0.9827904118008605,nir/red|NDWI|nir/green|B2|B4|glcm_contrast|swir1/nir|B3
+rf,Algae/Sargassum,11,0.9883292383292384,nir/red|NDWI|nir/green|B2|B4|glcm_contrast|swir1/nir|B3|B11|red/green|B6
+rf,Algae/Sargassum,15,0.987411728584587,nir/red|NDWI|nir/green|B2|B4|glcm_contrast|swir1/nir|B3|B11|red/green|B6|B7|B12|glcm_dissimilarity|B5
+rf,Algae/Sargassum,22,0.9871165644171779,nir/red|NDWI|nir/green|B2|B4|glcm_contrast|swir1/nir|B3|B11|red/green|B6|B7|B12|glcm_dissimilarity|B5|glcm_homogeneity|B8A|B1|B8|glcm_correlation|glcm_asm|glcm_energy
+rf,Other,1,0.4945260347129506,glcm_contrast
+rf,Other,2,0.7175468483816013,glcm_contrast|B11
+rf,Other,3,0.7616511318242344,glcm_contrast|B11|glcm_dissimilarity
+rf,Other,4,0.6558265582655827,glcm_contrast|B11|glcm_dissimilarity|swir1/nir
+rf,Other,6,0.8252333440617959,glcm_contrast|B11|glcm_dissimilarity|swir1/nir|nir/red|B12
+rf,Other,8,0.8385692068429238,glcm_contrast|B11|glcm_dissimilarity|swir1/nir|nir/red|B12|B8A|B8
+rf,Other,11,0.8307210031347962,glcm_contrast|B11|glcm_dissimilarity|swir1/nir|nir/red|B12|B8A|B8|glcm_correlation|B3|NDWI
+rf,Other,15,0.8277812696417347,glcm_contrast|B11|glcm_dissimilarity|swir1/nir|nir/red|B12|B8A|B8|glcm_correlation|B3|NDWI|nir/green|B1|B4|B5
+rf,Other,22,0.8532253038329698,glcm_contrast|B11|glcm_dissimilarity|swir1/nir|nir/red|B12|B8A|B8|glcm_correlation|B3|NDWI|nir/green|B1|B4|B5|B2|red/green|B7|B6|glcm_homogeneity|glcm_asm|glcm_energy
+xgb,Water,1,0.9651139650277284,nir/red
+xgb,Water,2,0.9790171121621755,nir/red|glcm_contrast
+xgb,Water,3,0.9858801134300825,nir/red|glcm_contrast|B8A
+xgb,Water,4,0.9816561104117433,nir/red|glcm_contrast|B8A|nir/green
+xgb,Water,6,0.9927575116019656,nir/red|glcm_contrast|B8A|nir/green|B1|swir1/nir
+xgb,Water,8,0.9967964394805632,nir/red|glcm_contrast|B8A|nir/green|B1|swir1/nir|red/green|glcm_correlation
+xgb,Water,11,0.9969230569914623,nir/red|glcm_contrast|B8A|nir/green|B1|swir1/nir|red/green|glcm_correlation|B5|B8|glcm_dissimilarity
+xgb,Water,15,0.9969226782417155,nir/red|glcm_contrast|B8A|nir/green|B1|swir1/nir|red/green|glcm_correlation|B5|B8|glcm_dissimilarity|NDWI|B12|B11|glcm_energy
+xgb,Water,22,0.9972280331340713,nir/red|glcm_contrast|B8A|nir/green|B1|swir1/nir|red/green|glcm_correlation|B5|B8|glcm_dissimilarity|NDWI|B12|B11|glcm_energy|B3|B4|B6|B2|B7|glcm_homogeneity|glcm_asm
+xgb,Marine Debris,1,0.0664265706282513,nir/red
+xgb,Marine Debris,2,0.11008385293485272,nir/red|swir1/nir
+xgb,Marine Debris,3,0.5431192660550459,nir/red|swir1/nir|red/green
+xgb,Marine Debris,4,0.5142857142857142,nir/red|swir1/nir|red/green|nir/green
+xgb,Marine Debris,6,0.6859903381642513,nir/red|swir1/nir|red/green|nir/green|B2|glcm_correlation
+xgb,Marine Debris,8,0.6889312977099237,nir/red|swir1/nir|red/green|nir/green|B2|glcm_correlation|NDWI|B12
+xgb,Marine Debris,11,0.6889312977099237,nir/red|swir1/nir|red/green|nir/green|B2|glcm_correlation|NDWI|B12|B1|B5|glcm_contrast
+xgb,Marine Debris,15,0.7417355371900827,nir/red|swir1/nir|red/green|nir/green|B2|glcm_correlation|NDWI|B12|B1|B5|glcm_contrast|B3|B8A|B7|B4
+xgb,Marine Debris,22,0.7643312101910829,nir/red|swir1/nir|red/green|nir/green|B2|glcm_correlation|NDWI|B12|B1|B5|glcm_contrast|B3|B8A|B7|B4|glcm_energy|B8|B6|glcm_homogeneity|glcm_dissimilarity|B11|glcm_asm
+xgb,Algae/Sargassum,1,0.9373000639795266,nir/red
+xgb,Algae/Sargassum,2,0.951061865189289,nir/red|B3
+xgb,Algae/Sargassum,3,0.9194865810968494,nir/red|B3|glcm_contrast
+xgb,Algae/Sargassum,4,0.919431279620853,nir/red|B3|glcm_contrast|B2
+xgb,Algae/Sargassum,6,0.9272052526405937,nir/red|B3|glcm_contrast|B2|B6|red/green
+xgb,Algae/Sargassum,8,0.957973174366617,nir/red|B3|glcm_contrast|B2|B6|red/green|nir/green|B1
+xgb,Algae/Sargassum,11,0.9569147333534197,nir/red|B3|glcm_contrast|B2|B6|red/green|nir/green|B1|B11|NDWI|B7
+xgb,Algae/Sargassum,15,0.9670530811470409,nir/red|B3|glcm_contrast|B2|B6|red/green|nir/green|B1|B11|NDWI|B7|B12|swir1/nir|B8A|glcm_energy
+xgb,Algae/Sargassum,22,0.9599518217404396,nir/red|B3|glcm_contrast|B2|B6|red/green|nir/green|B1|B11|NDWI|B7|B12|swir1/nir|B8A|glcm_energy|B4|B5|glcm_correlation|glcm_dissimilarity|B8|glcm_homogeneity|glcm_asm
+xgb,Other,1,0.5476864966949953,glcm_contrast
+xgb,Other,2,0.7183435094239448,glcm_contrast|B11
+xgb,Other,3,0.6407156673114119,glcm_contrast|B11|B1
+xgb,Other,4,0.6120514556533514,glcm_contrast|B11|B1|glcm_correlation
+xgb,Other,6,0.7562349155269509,glcm_contrast|B11|B1|glcm_correlation|nir/red|swir1/nir
+xgb,Other,8,0.750130958617077,glcm_contrast|B11|B1|glcm_correlation|nir/red|swir1/nir|NDWI|B12
+xgb,Other,11,0.7888768898488121,glcm_contrast|B11|B1|glcm_correlation|nir/red|swir1/nir|NDWI|B12|glcm_dissimilarity|B3|B6
+xgb,Other,15,0.7984811499864388,glcm_contrast|B11|B1|glcm_correlation|nir/red|swir1/nir|NDWI|B12|glcm_dissimilarity|B3|B6|glcm_energy|B4|glcm_homogeneity|B8A
+xgb,Other,22,0.8031581813231691,glcm_contrast|B11|B1|glcm_correlation|nir/red|swir1/nir|NDWI|B12|glcm_dissimilarity|B3|B6|glcm_energy|B4|glcm_homogeneity|B8A|B2|B8|B5|red/green|B7|nir/green|glcm_asm
+lgbm,Water,1,0.9645076069351883,nir/red
+lgbm,Water,2,0.980021244898429,nir/red|glcm_contrast
+lgbm,Water,3,0.9892224938875306,nir/red|glcm_contrast|B8A
+lgbm,Water,4,0.9868273570077088,nir/red|glcm_contrast|B8A|B5
+lgbm,Water,6,0.9961459795338223,nir/red|glcm_contrast|B8A|B5|swir1/nir|red/green
+lgbm,Water,8,0.9965201951801139,nir/red|glcm_contrast|B8A|B5|swir1/nir|red/green|B1|NDWI
+lgbm,Water,11,0.9967965847512251,nir/red|glcm_contrast|B8A|B5|swir1/nir|red/green|B1|NDWI|B11|nir/green|B8
+lgbm,Water,15,0.997189610625085,nir/red|glcm_contrast|B8A|B5|swir1/nir|red/green|B1|NDWI|B11|nir/green|B8|B6|glcm_correlation|B12|B2
+lgbm,Water,22,0.9973386517130406,nir/red|glcm_contrast|B8A|B5|swir1/nir|red/green|B1|NDWI|B11|nir/green|B8|B6|glcm_correlation|B12|B2|B4|glcm_dissimilarity|B3|glcm_energy|B7|glcm_homogeneity|glcm_asm
+lgbm,Marine Debris,1,0.060109289617486336,nir/red
+lgbm,Marine Debris,2,0.12265679240916455,nir/red|swir1/nir
+lgbm,Marine Debris,3,0.21261516654854712,nir/red|swir1/nir|NDWI
+lgbm,Marine Debris,4,0.5398550724637681,nir/red|swir1/nir|NDWI|red/green
+lgbm,Marine Debris,6,0.6660359508041628,nir/red|swir1/nir|NDWI|red/green|B2|B12
+lgbm,Marine Debris,8,0.7006737247353224,nir/red|swir1/nir|NDWI|red/green|B2|B12|B1|glcm_correlation
+lgbm,Marine Debris,11,0.7265469061876247,nir/red|swir1/nir|NDWI|red/green|B2|B12|B1|glcm_correlation|B5|glcm_contrast|nir/green
+lgbm,Marine Debris,15,0.7512794268167861,nir/red|swir1/nir|NDWI|red/green|B2|B12|B1|glcm_correlation|B5|glcm_contrast|nir/green|B3|B7|B8A|B6
+lgbm,Marine Debris,22,0.7782608695652173,nir/red|swir1/nir|NDWI|red/green|B2|B12|B1|glcm_correlation|B5|glcm_contrast|nir/green|B3|B7|B8A|B6|B4|glcm_energy|glcm_dissimilarity|B8|B11|glcm_homogeneity|glcm_asm
+lgbm,Algae/Sargassum,1,0.9076411960132891,nir/red
+lgbm,Algae/Sargassum,2,0.9498022512929724,nir/red|B3
+lgbm,Algae/Sargassum,3,0.9326241134751773,nir/red|B3|B6
+lgbm,Algae/Sargassum,4,0.8727867066194498,nir/red|B3|B6|glcm_contrast
+lgbm,Algae/Sargassum,6,0.9455415918611609,nir/red|B3|B6|glcm_contrast|B2|B1
+lgbm,Algae/Sargassum,8,0.9649969824984912,nir/red|B3|B6|glcm_contrast|B2|B1|red/green|B11
+lgbm,Algae/Sargassum,11,0.9709923664122138,nir/red|B3|B6|glcm_contrast|B2|B1|red/green|B11|B12|B7|NDWI
+lgbm,Algae/Sargassum,15,0.9639721465334544,nir/red|B3|B6|glcm_contrast|B2|B1|red/green|B11|B12|B7|NDWI|glcm_correlation|B4|swir1/nir|nir/green
+lgbm,Algae/Sargassum,22,0.9644149577804584,nir/red|B3|B6|glcm_contrast|B2|B1|red/green|B11|B12|B7|NDWI|glcm_correlation|B4|swir1/nir|nir/green|glcm_energy|B5|B8A|glcm_dissimilarity|glcm_homogeneity|B8|glcm_asm
+lgbm,Other,1,0.5345656192236599,glcm_contrast
+lgbm,Other,2,0.7196630692287445,glcm_contrast|B11
+lgbm,Other,3,0.584299732381802,glcm_contrast|B11|B1
+lgbm,Other,4,0.7016515716568993,glcm_contrast|B11|B1|swir1/nir
+lgbm,Other,6,0.7581088510170423,glcm_contrast|B11|B1|swir1/nir|glcm_correlation|B3
+lgbm,Other,8,0.7623080995235575,glcm_contrast|B11|B1|swir1/nir|glcm_correlation|B3|glcm_dissimilarity|nir/red
+lgbm,Other,11,0.7879114948731786,glcm_contrast|B11|B1|swir1/nir|glcm_correlation|B3|glcm_dissimilarity|nir/red|B8|B12|glcm_energy
+lgbm,Other,15,0.7952928297755884,glcm_contrast|B11|B1|swir1/nir|glcm_correlation|B3|glcm_dissimilarity|nir/red|B8|B12|glcm_energy|NDWI|B2|B6|B4
+lgbm,Other,22,0.8016483516483517,glcm_contrast|B11|B1|swir1/nir|glcm_correlation|B3|glcm_dissimilarity|nir/red|B8|B12|glcm_energy|NDWI|B2|B6|B4|B8A|nir/green|B5|glcm_homogeneity|red/green|B7|glcm_asm
+ada,Water,1,0.9719900037206178,nir/red
+ada,Water,2,0.9822265823656986,nir/red|glcm_contrast
+ada,Water,3,0.9830980092335861,nir/red|glcm_contrast|swir1/nir
+ada,Water,4,0.9809933201995717,nir/red|glcm_contrast|swir1/nir|B4
+ada,Water,6,0.9914761997786026,nir/red|glcm_contrast|swir1/nir|B4|nir/green|B1
+ada,Water,8,0.9949508388227277,nir/red|glcm_contrast|swir1/nir|B4|nir/green|B1|red/green|NDWI
+ada,Water,11,0.9948428346558915,nir/red|glcm_contrast|swir1/nir|B4|nir/green|B1|red/green|NDWI|B8A|B11|glcm_homogeneity
+ada,Water,15,0.9951004886532508,nir/red|glcm_contrast|swir1/nir|B4|nir/green|B1|red/green|NDWI|B8A|B11|glcm_homogeneity|glcm_correlation|glcm_dissimilarity|B3|B6
+ada,Water,22,0.9953547817850353,nir/red|glcm_contrast|swir1/nir|B4|nir/green|B1|red/green|NDWI|B8A|B11|glcm_homogeneity|glcm_correlation|glcm_dissimilarity|B3|B6|B12|B5|B8|B7|glcm_energy|glcm_asm|B2
+ada,Marine Debris,1,0.0576,nir/red
+ada,Marine Debris,2,0.06923597025016903,nir/red|swir1/nir
+ada,Marine Debris,3,0.07363130009509578,nir/red|swir1/nir|nir/green
+ada,Marine Debris,4,0.3406451612903226,nir/red|swir1/nir|nir/green|red/green
+ada,Marine Debris,6,0.5015384615384615,nir/red|swir1/nir|nir/green|red/green|glcm_contrast|NDWI
+ada,Marine Debris,8,0.4871259568545581,nir/red|swir1/nir|nir/green|red/green|glcm_contrast|NDWI|B11|B1
+ada,Marine Debris,11,0.5059347181008902,nir/red|swir1/nir|nir/green|red/green|glcm_contrast|NDWI|B11|B1|B3|B4|B6
+ada,Marine Debris,15,0.5340393343419062,nir/red|swir1/nir|nir/green|red/green|glcm_contrast|NDWI|B11|B1|B3|B4|B6|B7|B5|glcm_homogeneity|glcm_dissimilarity
+ada,Marine Debris,22,0.4878048780487805,nir/red|swir1/nir|nir/green|red/green|glcm_contrast|NDWI|B11|B1|B3|B4|B6|B7|B5|glcm_homogeneity|glcm_dissimilarity|B12|glcm_energy|glcm_asm|B8A|glcm_correlation|B2|B8
+ada,Algae/Sargassum,1,0.9352148813341886,nir/red
+ada,Algae/Sargassum,2,0.9207683073229291,nir/red|glcm_contrast
+ada,Algae/Sargassum,3,0.9325513196480938,nir/red|glcm_contrast|B3
+ada,Algae/Sargassum,4,0.9458098904352976,nir/red|glcm_contrast|B3|B4
+ada,Algae/Sargassum,6,0.9621489621489622,nir/red|glcm_contrast|B3|B4|swir1/nir|B1
+ada,Algae/Sargassum,8,0.9637023593466425,nir/red|glcm_contrast|B3|B4|swir1/nir|B1|red/green|B7
+ada,Algae/Sargassum,11,0.96094459582198,nir/red|glcm_contrast|B3|B4|swir1/nir|B1|red/green|B7|nir/green|NDWI|B6
+ada,Algae/Sargassum,15,0.9641772920461446,nir/red|glcm_contrast|B3|B4|swir1/nir|B1|red/green|B7|nir/green|NDWI|B6|B2|B11|B12|B8A
+ada,Algae/Sargassum,22,0.9667986597624124,nir/red|glcm_contrast|B3|B4|swir1/nir|B1|red/green|B7|nir/green|NDWI|B6|B2|B11|B12|B8A|glcm_dissimilarity|B8|glcm_homogeneity|glcm_correlation|glcm_energy|B5|glcm_asm
+ada,Other,1,0.5370201928324541,glcm_contrast
+ada,Other,2,0.5221436546334202,glcm_contrast|swir1/nir
+ada,Other,3,0.6130198915009042,glcm_contrast|swir1/nir|nir/red
+ada,Other,4,0.5983318700614574,glcm_contrast|swir1/nir|nir/red|B1
+ada,Other,6,0.6724890829694323,glcm_contrast|swir1/nir|nir/red|B1|B11|B3
+ada,Other,8,0.6994727592267135,glcm_contrast|swir1/nir|nir/red|B1|B11|B3|red/green|NDWI
+ada,Other,11,0.7257516339869281,glcm_contrast|swir1/nir|nir/red|B1|B11|B3|red/green|NDWI|nir/green|B8A|B2
+ada,Other,15,0.7336010709504686,glcm_contrast|swir1/nir|nir/red|B1|B11|B3|red/green|NDWI|nir/green|B8A|B2|B7|B4|glcm_correlation|glcm_dissimilarity
+ada,Other,22,0.7397333333333334,glcm_contrast|swir1/nir|nir/red|B1|B11|B3|red/green|NDWI|nir/green|B8A|B2|B7|B4|glcm_correlation|glcm_dissimilarity|glcm_homogeneity|B8|B12|B6|B5|glcm_asm|glcm_energy
+svm,Water,1,0.9891209243675854,glcm_dissimilarity
+svm,Water,2,0.9904173265529681,glcm_dissimilarity|B11
+svm,Water,3,0.9903453505071502,glcm_dissimilarity|B11|B8A
+svm,Water,4,0.969149125759886,glcm_dissimilarity|B11|B8A|B5
+svm,Water,6,0.9743353635275391,glcm_dissimilarity|B11|B8A|B5|B3|B12
+svm,Water,8,0.9842864603734169,glcm_dissimilarity|B11|B8A|B5|B3|B12|B8|glcm_homogeneity
+svm,Water,11,0.9878631370876088,glcm_dissimilarity|B11|B8A|B5|B3|B12|B8|glcm_homogeneity|glcm_contrast|glcm_asm|glcm_energy
+svm,Water,15,0.9952271946150304,glcm_dissimilarity|B11|B8A|B5|B3|B12|B8|glcm_homogeneity|glcm_contrast|glcm_asm|glcm_energy|NDWI|nir/green|swir1/nir|B4
+svm,Water,22,0.9956137649328125,glcm_dissimilarity|B11|B8A|B5|B3|B12|B8|glcm_homogeneity|glcm_contrast|glcm_asm|glcm_energy|NDWI|nir/green|swir1/nir|B4|B6|nir/red|B1|B7|red/green|B2|glcm_correlation
+svm,Marine Debris,1,0.0,nir/green
+svm,Marine Debris,2,0.0,nir/green|NDWI
+svm,Marine Debris,3,0.35174746335963925,nir/green|NDWI|B5
+svm,Marine Debris,4,0.28663793103448276,nir/green|NDWI|B5|nir/red
+svm,Marine Debris,6,0.36563436563436563,nir/green|NDWI|B5|nir/red|B4|B8A
+svm,Marine Debris,8,0.10746128578132333,nir/green|NDWI|B5|nir/red|B4|B8A|B11|B7
+svm,Marine Debris,11,0.6888412017167382,nir/green|NDWI|B5|nir/red|B4|B8A|B11|B7|glcm_energy|B6|swir1/nir
+svm,Marine Debris,15,0.7415730337078652,nir/green|NDWI|B5|nir/red|B4|B8A|B11|B7|glcm_energy|B6|swir1/nir|B8|B12|glcm_asm|glcm_homogeneity
+svm,Marine Debris,22,0.7446351931330472,nir/green|NDWI|B5|nir/red|B4|B8A|B11|B7|glcm_energy|B6|swir1/nir|B8|B12|glcm_asm|glcm_homogeneity|B2|B3|glcm_contrast|red/green|B1|glcm_dissimilarity|glcm_correlation
+svm,Algae/Sargassum,1,0.0,B4
+svm,Algae/Sargassum,2,0.0,B4|glcm_contrast
+svm,Algae/Sargassum,3,0.0,B4|glcm_contrast|glcm_dissimilarity
+svm,Algae/Sargassum,4,0.7752057613168725,B4|glcm_contrast|glcm_dissimilarity|B6
+svm,Algae/Sargassum,6,0.47685185185185186,B4|glcm_contrast|glcm_dissimilarity|B6|B11|B7
+svm,Algae/Sargassum,8,0.4018170019467878,B4|glcm_contrast|glcm_dissimilarity|B6|B11|B7|glcm_energy|B5
+svm,Algae/Sargassum,11,0.9346704871060172,B4|glcm_contrast|glcm_dissimilarity|B6|B11|B7|glcm_energy|B5|glcm_asm|NDWI|B3
+svm,Algae/Sargassum,15,0.845675815639565,B4|glcm_contrast|glcm_dissimilarity|B6|B11|B7|glcm_energy|B5|glcm_asm|NDWI|B3|glcm_homogeneity|B12|nir/red|B8
+svm,Algae/Sargassum,22,0.8214285714285714,B4|glcm_contrast|glcm_dissimilarity|B6|B11|B7|glcm_energy|B5|glcm_asm|NDWI|B3|glcm_homogeneity|B12|nir/red|B8|red/green|swir1/nir|nir/green|B1|B8A|B2|glcm_correlation
+svm,Other,1,0.6465696465696466,glcm_dissimilarity
+svm,Other,2,0.6347183278103492,glcm_dissimilarity|B3
+svm,Other,3,0.7265625,glcm_dissimilarity|B3|B11
+svm,Other,4,0.7110615770409585,glcm_dissimilarity|B3|B11|glcm_energy
+svm,Other,6,0.7266044670624824,glcm_dissimilarity|B3|B11|glcm_energy|glcm_asm|glcm_homogeneity
+svm,Other,8,0.753448275862069,glcm_dissimilarity|B3|B11|glcm_energy|glcm_asm|glcm_homogeneity|B12|B8A
+svm,Other,11,0.7878969442780108,glcm_dissimilarity|B3|B11|glcm_energy|glcm_asm|glcm_homogeneity|B12|B8A|glcm_contrast|NDWI|B8
+svm,Other,15,0.8120347394540943,glcm_dissimilarity|B3|B11|glcm_energy|glcm_asm|glcm_homogeneity|B12|B8A|glcm_contrast|NDWI|B8|B5|B4|B6|B1
+svm,Other,22,0.8269516176907095,glcm_dissimilarity|B3|B11|glcm_energy|glcm_asm|glcm_homogeneity|B12|B8A|glcm_contrast|NDWI|B8|B5|B4|B6|B1|B2|nir/green|nir/red|glcm_correlation|swir1/nir|red/green|B7
