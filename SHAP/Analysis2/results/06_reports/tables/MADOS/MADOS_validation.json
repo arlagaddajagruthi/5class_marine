@@ -1,0 +1,577 @@
+{
+  "dataset": "MADOS",
+  "n_features": 22,
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "NDWI",
+    "red/green",
+    "nir/red",
+    "nir/green",
+    "swir1/nir",
+    "glcm_contrast",
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    "glcm_energy",
+    "glcm_correlation",
+    "glcm_asm"
+  ],
+  "feature_order_matches_meta": true,
+  "class_encoding": {
+    "0": {
+      "label": 1,
+      "name": "Water"
+    },
+    "1": {
+      "label": 2,
+      "name": "Marine Debris"
+    },
+    "2": {
+      "label": 3,
+      "name": "Algae/Sargassum"
+    },
+    "3": {
+      "label": 4,
+      "name": "Other"
+    }
+  },
+  "train_counts": [
+    591224,
+    2561,
+    4397,
+    163705
+  ],
+  "test_counts": [
+    294020,
+    973,
+    3089,
+    63065
+  ],
+  "models": {
+    "rf": {
+      "n_features_in": 22,
+      "classes_": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "raw_output_shape_probe": [
+        5016,
+        4
+      ],
+      "argmax_raw_equals_predict": true,
+      "predict_matches_saved": true,
+      "explained_output": "class probability",
+      "explainer": "TreeExplainer (interventional TreeSHAP)",
+      "test_macro_f1": 0.7608794874515405,
+      "recorded_macro_f1": 0.7608794874515405,
+      "shap_shape": [
+        2443,
+        22,
+        4
+      ],
+      "base_values": [
+        0.2648000000000001,
+        0.22780000000000022,
+        0.24445000000000014,
+        0.2629500000000001
+      ],
+      "additivity_max_abs_error": 0.010000006077505064,
+      "max_abs_output": 1.0,
+      "additivity_pixels_above_1e-5": 1,
+      "shap_seconds": null,
+      "interaction_cache_max_abs_diff": 0.0,
+      "interaction_additivity_max_abs_error": 5.357297938601846e-12
+    },
+    "xgb": {
+      "n_features_in": 22,
+      "classes_": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "raw_output_shape_probe": [
+        5016,
+        4
+      ],
+      "argmax_raw_equals_predict": true,
+      "predict_matches_saved": true,
+      "explained_output": "raw softmax margin (log-odds scale)",
+      "explainer": "TreeExplainer (interventional TreeSHAP)",
+      "test_macro_f1": 0.7360477571678445,
+      "recorded_macro_f1": 0.7360477571678445,
+      "shap_shape": [
+        2443,
+        22,
+        4
+      ],
+      "base_values": [
+        -0.3829322969259281,
+        -2.769083466596855,
+        -2.7514078786323073,
+        0.23324984046738184
+      ],
+      "additivity_max_abs_error": 2.8776741594072064e-06,
+      "max_abs_output": 7.136811256408691,
+      "additivity_pixels_above_1e-5": 0,
+      "shap_seconds": null,
+      "interaction_cache_max_abs_diff": 0.0,
+      "interaction_additivity_max_abs_error": 7.643135859325412e-06
+    },
+    "lgbm": {
+      "n_features_in": 22,
+      "classes_": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "raw_output_shape_probe": [
+        5016,
+        4
+      ],
+      "argmax_raw_equals_predict": true,
+      "predict_matches_saved": true,
+      "explained_output": "raw softmax margin (log-odds scale)",
+      "explainer": "TreeExplainer (interventional TreeSHAP)",
+      "test_macro_f1": 0.7363659417358686,
+      "recorded_macro_f1": 0.7363659417358686,
+      "shap_shape": [
+        2443,
+        22,
+        4
+      ],
+      "base_values": [
+        -2.414699578961328,
+        -5.111675771245898,
+        -5.396393352141063,
+        -1.7755272946231306
+      ],
+      "additivity_max_abs_error": 3.084305826295264e-07,
+      "max_abs_output": 10.695121391769245,
+      "additivity_pixels_above_1e-5": 0,
+      "shap_seconds": null,
+      "interaction_cache_max_abs_diff": 0.0,
+      "interaction_additivity_max_abs_error": 2.3092638912203256e-14
+    },
+    "ada": {
+      "n_features_in": 22,
+      "classes_": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "raw_output_shape_probe": [
+        5016,
+        4
+      ],
+      "argmax_raw_equals_predict": true,
+      "predict_matches_saved": true,
+      "explained_output": "SAMME decision score",
+      "explainer": "TreeExplainer (interventional TreeSHAP) on exact tree rewrite of SAMME decision_function",
+      "test_macro_f1": 0.601608694277155,
+      "recorded_macro_f1": 0.601608694277155,
+      "shap_shape": [
+        2443,
+        22,
+        4
+      ],
+      "base_values": [
+        0.049761646049854766,
+        -0.06559234496775519,
+        -0.10781632591529629,
+        0.12364702483319688
+      ],
+      "additivity_max_abs_error": 5.865548047268021e-09,
+      "max_abs_output": 0.8260859553178612,
+      "additivity_pixels_above_1e-5": 0,
+      "shap_seconds": null,
+      "interaction_cache_max_abs_diff": 0.0,
+      "interaction_additivity_max_abs_error": 4.605704706506231e-12
+    },
+    "svm": {
+      "n_features_in": 22,
+      "classes_": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "raw_output_shape_probe": [
+        5016,
+        4
+      ],
+      "argmax_raw_equals_predict": true,
+      "predict_matches_saved": true,
+      "explained_output": "one-vs-rest SVM margin",
+      "explainer": "LinearExplainer (interventional; exact for linear margin), validated with KernelExplainer",
+      "test_macro_f1": 0.7139731504774441,
+      "recorded_macro_f1": 0.7139731504774441,
+      "shap_shape": [
+        2443,
+        22,
+        4
+      ],
+      "base_values": [
+        0.07637266057754355,
+        -3.1820593967991817,
+        -2.3861322931408067,
+        -0.20036287768985037
+      ],
+      "additivity_max_abs_error": 4.153626022684875e-06,
+      "max_abs_output": 57.177450726784926,
+      "additivity_pixels_above_1e-5": 0,
+      "shap_seconds": null,
+      "kernel_check": {
+        "n": 40,
+        "max_abs_diff": 2.5953216535867796e-06,
+        "max_abs_phi": 42.36172799652524,
+        "corr": 0.999999999999995
+      }
+    }
+  },
+  "explanation_set": {
+    "n_total": 2443,
+    "n_stratified": 1200,
+    "stratified_per_class": [
+      300,
+      300,
+      300,
+      300
+    ],
+    "n_extra_misclassified": 1243,
+    "per_class_cap": 300,
+    "err_per_pair_cap": 30
+  },
+  "background": {
+    "source": "train split",
+    "per_class": [
+      50,
+      50,
+      50,
+      50
+    ]
+  },
+  "interaction_subset": {
+    "n": 160,
+    "per_class": [
+      40,
+      40,
+      40,
+      40
+    ]
+  },
+  "timings_s": {},
+  "contrast_check": {
+    "rf": {
+      "reduces_to_scaled_class_shap": true,
+      "max_dev": 9.86457679430508e-10
+    },
+    "xgb": {
+      "reduces_to_scaled_class_shap": false,
+      "rank_corr_with_class_shap": [
+        0.9424054206662904,
+        0.9446640316205535,
+        0.9582156973461323,
+        0.9220779220779223
+      ]
+    },
+    "lgbm": {
+      "reduces_to_scaled_class_shap": false,
+      "rank_corr_with_class_shap": [
+        0.9322416713721063,
+        0.9367588932806326,
+        0.9412761151891589,
+        0.8848108413325806
+      ]
+    },
+    "ada": {
+      "reduces_to_scaled_class_shap": true,
+      "max_dev": 1.090617596233301e-09
+    },
+    "svm": {
+      "reduces_to_scaled_class_shap": false,
+      "rank_corr_with_class_shap": [
+        0.5595708639186902,
+        0.6645962732919255,
+        0.9040090344438172,
+        0.3269339356295879
+      ]
+    }
+  },
+  "confusion_pairs": [
+    [
+      "Class 1 Water",
+      "Class 4 Other",
+      220773
+    ],
+    [
+      "Class 4 Other",
+      "Class 1 Water",
+      82222
+    ],
+    [
+      "Class 1 Water",
+      "Class 2 Marine Debris",
+      5722
+    ],
+    [
+      "Class 4 Other",
+      "Class 2 Marine Debris",
+      4221
+    ],
+    [
+      "Class 3 Sargassum",
+      "Class 1 Water",
+      1322
+    ],
+    [
+      "Class 3 Sargassum",
+      "Class 4 Other",
+      1166
+    ],
+    [
+      "Class 1 Water",
+      "Class 3 Sargassum",
+      996
+    ],
+    [
+      "Class 3 Sargassum",
+      "Class 2 Marine Debris",
+      940
+    ],
+    [
+      "Class 2 Marine Debris",
+      "Class 4 Other",
+      754
+    ],
+    [
+      "Class 2 Marine Debris",
+      "Class 1 Water",
+      244
+    ],
+    [
+      "Class 4 Other",
+      "Class 3 Sargassum",
+      114
+    ],
+    [
+      "Class 2 Marine Debris",
+      "Class 3 Sargassum",
+      46
+    ]
+  ],
+  "test_metrics": {
+    "rf": {
+      "f1": 0.7608794874515405,
+      "accuracy": 0.8375370693927957,
+      "kappa": 0.5296456763429689,
+      "f1_c1": 0.8983735743376358,
+      "f1_c2": 0.7076190476190476,
+      "f1_c3": 0.8291316526610645,
+      "f1_c4": 0.6083936751884144,
+      "recall_c1": 0.8646486633562342,
+      "recall_c2": 0.763617677286742,
+      "recall_c3": 0.7186791842020072,
+      "recall_c4": 0.718100372631412
+    },
+    "xgb": {
+      "f1": 0.7360477571678445,
+      "accuracy": 0.8481089417882469,
+      "kappa": 0.5707008446045032,
+      "f1_c1": 0.9051838029748911,
+      "f1_c2": 0.5301577482214661,
+      "f1_c3": 0.8660328435609335,
+      "f1_c4": 0.6428166339140872,
+      "recall_c1": 0.864536426093463,
+      "recall_c2": 0.880781089414183,
+      "recall_c3": 0.8109420524441567,
+      "recall_c4": 0.7728375485610085
+    },
+    "lgbm": {
+      "f1": 0.7363659417358686,
+      "accuracy": 0.8447668124060286,
+      "kappa": 0.5628138657765892,
+      "f1_c1": 0.9028164318302974,
+      "f1_c2": 0.5402153261557948,
+      "f1_c3": 0.8656195462478184,
+      "f1_c4": 0.636812462709564,
+      "recall_c1": 0.8611284946602272,
+      "recall_c2": 0.8766700924974307,
+      "recall_c3": 0.8028488183878277,
+      "recall_c4": 0.7700467771347023
+    },
+    "ada": {
+      "f1": 0.601608694277155,
+      "accuracy": 0.8108332618019809,
+      "kappa": 0.4820237824325606,
+      "f1_c1": 0.8813087552638431,
+      "f1_c2": 0.16539861065167052,
+      "f1_c3": 0.7695058517555267,
+      "f1_c4": 0.5902215594375799,
+      "recall_c1": 0.8345860825794164,
+      "recall_c2": 0.7708119218910586,
+      "recall_c3": 0.7662674004532211,
+      "recall_c4": 0.7028938396892096
+    },
+    "svm": {
+      "f1": 0.7139731504774441,
+      "accuracy": 0.7767861840192498,
+      "kappa": 0.39950084146888043,
+      "f1_c1": 0.8550184524608725,
+      "f1_c2": 0.6152314584370333,
+      "f1_c3": 0.8738384560400286,
+      "f1_c4": 0.5118042349718422,
+      "recall_c1": 0.8013740561866539,
+      "recall_c2": 0.6351490236382322,
+      "recall_c3": 0.7915182907089673,
+      "recall_c4": 0.6636169031951161
+    }
+  },
+  "confusion_matrices": {
+    "rf": [
+      [
+        254224,
+        21,
+        27,
+        39748
+      ],
+      [
+        39,
+        743,
+        8,
+        183
+      ],
+      [
+        249,
+        29,
+        2220,
+        591
+      ],
+      [
+        17433,
+        334,
+        11,
+        45287
+      ]
+    ],
+    "xgb": [
+      [
+        254191,
+        130,
+        170,
+        39529
+      ],
+      [
+        9,
+        857,
+        6,
+        101
+      ],
+      [
+        132,
+        244,
+        2505,
+        208
+      ],
+      [
+        13282,
+        1029,
+        15,
+        48739
+      ]
+    ],
+    "lgbm": [
+      [
+        253189,
+        120,
+        142,
+        40569
+      ],
+      [
+        6,
+        853,
+        7,
+        107
+      ],
+      [
+        172,
+        222,
+        2480,
+        215
+      ],
+      [
+        13500,
+        990,
+        12,
+        48563
+      ]
+    ],
+    "ada": [
+      [
+        245385,
+        5423,
+        644,
+        42568
+      ],
+      [
+        59,
+        750,
+        17,
+        147
+      ],
+      [
+        180,
+        442,
+        2367,
+        100
+      ],
+      [
+        17221,
+        1481,
+        35,
+        44328
+      ]
+    ],
+    "svm": [
+      [
+        235620,
+        28,
+        13,
+        58359
+      ],
+      [
+        131,
+        618,
+        8,
+        216
+      ],
+      [
+        589,
+        3,
+        2445,
+        52
+      ],
+      [
+        20786,
+        387,
+        41,
+        41851
+      ]
+    ]
+  },
+  "n_figures": 148,
+  "runtime_s": 169.9
+}

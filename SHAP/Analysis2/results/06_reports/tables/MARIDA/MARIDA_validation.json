@@ -1,0 +1,567 @@
+{
+  "dataset": "MARIDA",
+  "n_features": 22,
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "NDWI",
+    "red/green",
+    "nir/red",
+    "nir/green",
+    "swir1/nir",
+    "glcm_contrast",
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    "glcm_energy",
+    "glcm_correlation",
+    "glcm_asm"
+  ],
+  "feature_order_matches_meta": true,
+  "class_encoding": {
+    "0": {
+      "label": 1,
+      "name": "Water"
+    },
+    "1": {
+      "label": 2,
+      "name": "Marine Debris"
+    },
+    "2": {
+      "label": 3,
+      "name": "Algae/Sargassum"
+    },
+    "3": {
+      "label": 4,
+      "name": "Other"
+    }
+  },
+  "train_counts": [
+    350057,
+    1943,
+    1961,
+    4481
+  ],
+  "test_counts": [
+    154739,
+    381,
+    1641,
+    1610
+  ],
+  "models": {
+    "rf": {
+      "n_features_in": 22,
+      "classes_": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "raw_output_shape_probe": [
+        5109,
+        4
+      ],
+      "argmax_raw_equals_predict": true,
+      "predict_matches_saved": true,
+      "explained_output": "class probability",
+      "explainer": "TreeExplainer (interventional TreeSHAP)",
+      "test_macro_f1": 0.9164799855905712,
+      "recorded_macro_f1": 0.9164799855905712,
+      "shap_shape": [
+        1815,
+        22,
+        4
+      ],
+      "base_values": [
+        0.2628499999999999,
+        0.24115000000000017,
+        0.2468000000000001,
+        0.24920000000000017
+      ],
+      "additivity_max_abs_error": 0.010000005385163768,
+      "max_abs_output": 1.0,
+      "additivity_pixels_above_1e-5": 7,
+      "shap_seconds": null,
+      "interaction_cache_max_abs_diff": 0.0,
+      "interaction_additivity_max_abs_error": 3.1885605267234496e-13
+    },
+    "xgb": {
+      "n_features_in": 22,
+      "classes_": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "raw_output_shape_probe": [
+        5109,
+        4
+      ],
+      "argmax_raw_equals_predict": true,
+      "predict_matches_saved": true,
+      "explained_output": "raw softmax margin (log-odds scale)",
+      "explainer": "TreeExplainer (interventional TreeSHAP)",
+      "test_macro_f1": 0.8827704002166403,
+      "recorded_macro_f1": 0.8827704002166403,
+      "shap_shape": [
+        1815,
+        22,
+        4
+      ],
+      "base_values": [
+        -0.8404274978817685,
+        -2.172064566378989,
+        -2.790435582483685,
+        -0.742014085279775
+      ],
+      "additivity_max_abs_error": 3.0144447471514013e-06,
+      "max_abs_output": 6.592526435852051,
+      "additivity_pixels_above_1e-5": 0,
+      "shap_seconds": null,
+      "interaction_cache_max_abs_diff": 0.0,
+      "interaction_additivity_max_abs_error": 6.587177793448973e-06
+    },
+    "lgbm": {
+      "n_features_in": 22,
+      "classes_": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "raw_output_shape_probe": [
+        5109,
+        4
+      ],
+      "argmax_raw_equals_predict": true,
+      "predict_matches_saved": true,
+      "explained_output": "raw softmax margin (log-odds scale)",
+      "explainer": "TreeExplainer (interventional TreeSHAP)",
+      "test_macro_f1": 0.8854715926367277,
+      "recorded_macro_f1": 0.8854715926367277,
+      "shap_shape": [
+        1815,
+        22,
+        4
+      ],
+      "base_values": [
+        -2.9216183477495696,
+        -4.4224332032272615,
+        -5.539846385885215,
+        -2.9134050663156064
+      ],
+      "additivity_max_abs_error": 2.6751321957618757e-07,
+      "max_abs_output": 10.406365882583103,
+      "additivity_pixels_above_1e-5": 0,
+      "shap_seconds": null,
+      "interaction_cache_max_abs_diff": 0.0,
+      "interaction_additivity_max_abs_error": 3.4638958368304884e-14
+    },
+    "ada": {
+      "n_features_in": 22,
+      "classes_": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "raw_output_shape_probe": [
+        5109,
+        4
+      ],
+      "argmax_raw_equals_predict": true,
+      "predict_matches_saved": true,
+      "explained_output": "SAMME decision score",
+      "explainer": "TreeExplainer (interventional TreeSHAP) on exact tree rewrite of SAMME decision_function",
+      "test_macro_f1": 0.798791188996139,
+      "recorded_macro_f1": 0.798791188996139,
+      "shap_shape": [
+        1815,
+        22,
+        4
+      ],
+      "base_values": [
+        0.036578290199361846,
+        0.011868603781553586,
+        -0.10366539746122459,
+        0.05521850348030941
+      ],
+      "additivity_max_abs_error": 5.641072831075178e-09,
+      "max_abs_output": 0.815941109625735,
+      "additivity_pixels_above_1e-5": 0,
+      "shap_seconds": null,
+      "interaction_cache_max_abs_diff": 0.0,
+      "interaction_additivity_max_abs_error": 2.06673567149096e-12
+    },
+    "svm": {
+      "n_features_in": 22,
+      "classes_": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "raw_output_shape_probe": [
+        5109,
+        4
+      ],
+      "argmax_raw_equals_predict": true,
+      "predict_matches_saved": true,
+      "explained_output": "one-vs-rest SVM margin",
+      "explainer": "LinearExplainer (interventional; exact for linear margin), validated with KernelExplainer",
+      "test_macro_f1": 0.8471572867962851,
+      "recorded_macro_f1": 0.8471572867962851,
+      "shap_shape": [
+        1815,
+        22,
+        4
+      ],
+      "base_values": [
+        -0.5564426177573907,
+        -2.769382309428892,
+        -5.786385070011904,
+        0.21764616426730687
+      ],
+      "additivity_max_abs_error": 3.5251240504408088e-06,
+      "max_abs_output": 63.28986707809479,
+      "additivity_pixels_above_1e-5": 0,
+      "shap_seconds": null,
+      "kernel_check": {
+        "n": 40,
+        "max_abs_diff": 2.3604324184134384e-06,
+        "max_abs_phi": 27.153548104448106,
+        "corr": 0.9999999999999953
+      }
+    }
+  },
+  "explanation_set": {
+    "n_total": 1815,
+    "n_stratified": 1200,
+    "stratified_per_class": [
+      300,
+      300,
+      300,
+      300
+    ],
+    "n_extra_misclassified": 615,
+    "per_class_cap": 300,
+    "err_per_pair_cap": 30
+  },
+  "background": {
+    "source": "train split",
+    "per_class": [
+      50,
+      50,
+      50,
+      50
+    ]
+  },
+  "interaction_subset": {
+    "n": 160,
+    "per_class": [
+      40,
+      40,
+      40,
+      40
+    ]
+  },
+  "timings_s": {},
+  "contrast_check": {
+    "rf": {
+      "reduces_to_scaled_class_shap": true,
+      "max_dev": 1.1927618476237356e-09
+    },
+    "xgb": {
+      "reduces_to_scaled_class_shap": false,
+      "rank_corr_with_class_shap": [
+        0.9322416713721063,
+        0.9469226425748165,
+        0.9593450028232637,
+        0.9254658385093169
+      ]
+    },
+    "lgbm": {
+      "reduces_to_scaled_class_shap": false,
+      "rank_corr_with_class_shap": [
+        0.9582156973461323,
+        0.9491812535290796,
+        0.9514398644833428,
+        0.839638622247318
+      ]
+    },
+    "ada": {
+      "reduces_to_scaled_class_shap": true,
+      "max_dev": 1.4377292412159903e-09
+    },
+    "svm": {
+      "reduces_to_scaled_class_shap": false,
+      "rank_corr_with_class_shap": [
+        0.6770186335403727,
+        0.7041219649915303,
+        0.8588368153585546,
+        0.5121400338791644
+      ]
+    }
+  },
+  "confusion_pairs": [
+    [
+      "Class 1 Water",
+      "Class 4 Other",
+      2393
+    ],
+    [
+      "Class 1 Water",
+      "Class 2 Marine Debris",
+      966
+    ],
+    [
+      "Class 1 Water",
+      "Class 3 Sargassum",
+      904
+    ],
+    [
+      "Class 4 Other",
+      "Class 1 Water",
+      606
+    ],
+    [
+      "Class 4 Other",
+      "Class 2 Marine Debris",
+      333
+    ],
+    [
+      "Class 2 Marine Debris",
+      "Class 1 Water",
+      101
+    ],
+    [
+      "Class 3 Sargassum",
+      "Class 4 Other",
+      85
+    ],
+    [
+      "Class 3 Sargassum",
+      "Class 2 Marine Debris",
+      67
+    ],
+    [
+      "Class 3 Sargassum",
+      "Class 1 Water",
+      39
+    ],
+    [
+      "Class 2 Marine Debris",
+      "Class 4 Other",
+      38
+    ]
+  ],
+  "test_metrics": {
+    "rf": {
+      "f1": 0.9164799855905712,
+      "accuracy": 0.99625562760859,
+      "kappa": 0.9174301419758041,
+      "f1_c1": 0.9983195558456835,
+      "f1_c2": 0.8311377245508982,
+      "f1_c3": 0.9868057686406874,
+      "f1_c4": 0.8496568933250156,
+      "recall_c1": 0.9982034264148018,
+      "recall_c2": 0.910761154855643,
+      "recall_c3": 0.979890310786106,
+      "recall_c4": 0.8459627329192546
+    },
+    "xgb": {
+      "f1": 0.8827704002166403,
+      "accuracy": 0.9940014270289383,
+      "kappa": 0.877572402097532,
+      "f1_c1": 0.997328757143551,
+      "f1_c2": 0.7739130434782608,
+      "f1_c3": 0.9582071471835252,
+      "f1_c4": 0.8016326530612244,
+      "recall_c1": 0.9952888412100376,
+      "recall_c2": 0.9343832020997376,
+      "recall_c3": 0.9640463132236441,
+      "recall_c4": 0.9149068322981366
+    },
+    "lgbm": {
+      "f1": 0.8854715926367277,
+      "accuracy": 0.9941150842010217,
+      "kappa": 0.8795618805933619,
+      "f1_c1": 0.9973418979690287,
+      "f1_c2": 0.7782608695652173,
+      "f1_c3": 0.9644149577804584,
+      "f1_c4": 0.8018686452322067,
+      "recall_c1": 0.9953728536438777,
+      "recall_c2": 0.9396325459317585,
+      "recall_c3": 0.9744058500914077,
+      "recall_c4": 0.9062111801242236
+    },
+    "ada": {
+      "f1": 0.798791188996139,
+      "accuracy": 0.9896256259037324,
+      "kappa": 0.8028792325229989,
+      "f1_c1": 0.9951663238757648,
+      "f1_c2": 0.48801128349788436,
+      "f1_c3": 0.9654335961188599,
+      "f1_c4": 0.7465535524920467,
+      "recall_c1": 0.9912303944060644,
+      "recall_c2": 0.9081364829396326,
+      "recall_c3": 0.9701401584399756,
+      "recall_c4": 0.8745341614906832
+    },
+    "svm": {
+      "f1": 0.8471572867962851,
+      "accuracy": 0.9908947976586623,
+      "kappa": 0.8225683180148134,
+      "f1_c1": 0.9956137649328125,
+      "f1_c2": 0.7446351931330472,
+      "f1_c3": 0.8214285714285714,
+      "f1_c4": 0.8269516176907095,
+      "recall_c1": 0.992354868520541,
+      "recall_c2": 0.910761154855643,
+      "recall_c3": 0.9951249238269348,
+      "recall_c4": 0.8652173913043478
+    }
+  },
+  "confusion_matrices": {
+    "rf": [
+      [
+        154461,
+        50,
+        9,
+        219
+      ],
+      [
+        29,
+        347,
+        1,
+        4
+      ],
+      [
+        17,
+        5,
+        1608,
+        11
+      ],
+      [
+        196,
+        52,
+        0,
+        1362
+      ]
+    ],
+    "xgb": [
+      [
+        154010,
+        115,
+        74,
+        540
+      ],
+      [
+        8,
+        356,
+        5,
+        12
+      ],
+      [
+        6,
+        13,
+        1582,
+        40
+      ],
+      [
+        82,
+        55,
+        0,
+        1473
+      ]
+    ],
+    "lgbm": [
+      [
+        154023,
+        115,
+        71,
+        530
+      ],
+      [
+        7,
+        358,
+        3,
+        13
+      ],
+      [
+        5,
+        10,
+        1599,
+        27
+      ],
+      [
+        93,
+        56,
+        2,
+        1459
+      ]
+    ],
+    "ada": [
+      [
+        153382,
+        549,
+        63,
+        745
+      ],
+      [
+        33,
+        346,
+        0,
+        2
+      ],
+      [
+        8,
+        34,
+        1592,
+        7
+      ],
+      [
+        92,
+        108,
+        2,
+        1408
+      ]
+    ],
+    "svm": [
+      [
+        153556,
+        137,
+        687,
+        359
+      ],
+      [
+        24,
+        347,
+        3,
+        7
+      ],
+      [
+        3,
+        5,
+        1633,
+        0
+      ],
+      [
+        143,
+        62,
+        12,
+        1393
+      ]
+    ]
+  },
+  "n_figures": 148,
+  "runtime_s": 119.4
+}
