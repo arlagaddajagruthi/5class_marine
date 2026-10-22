@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marine Debris Mapper</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#0b4f7a"/><path d="M3 18c4-3 7-3 10 0s7 3 10 0 5-3 6-2v8a13 13 0 0 1-26 0z" fill="#2fb3e6"/><circle cx="20" cy="11" r="3" fill="#ff4d4d"/></svg>
+    <div>
+      <h1>Marine Debris Mapper</h1>
+      <p>Find floating debris, Sargassum and other surface features in Sentinel-2 images</p>
+    </div>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="analyse">Analyse</button>
+    <button class="tab" data-tab="about">How it works</button>
+  </nav>
+</header>
+
+<main id="tab-analyse" class="layout">
+  <!-- ============ left: inputs ============ -->
+  <aside class="panel inputs">
+    <section>
+      <h2>1 · Choose an image</h2>
+      <div id="drop" class="drop" tabindex="0">
+        <input id="file" type="file" multiple accept=".tif,.tiff,.jp2,.zip,.jpg,.jpeg,.png">
+        <div class="drop-icon">⬆</div>
+        <div><strong>Drop files here</strong> or click to browse</div>
+        <div class="hint">MARIDA patch (.tif) · MADOS patch (11 band files or .zip) · Sentinel-2 GeoTIFF (11/12/13 bands) · single-band B01–B12 files</div>
+      </div>
+      <label class="check"><input type="checkbox" id="boa"> Subtract L2A offset (1000) — for Sentinel-2 L2A from 2022 onwards</label>
+    </section>
+
+    <section>
+      <h2>…or try a test-set sample</h2>
+      <div class="sample-filter">
+        <button class="chip active" data-ds="MARIDA">MARIDA</button>
+        <button class="chip" data-ds="MADOS">MADOS</button>
+      </div>
+      <div id="gallery" class="gallery"></div>
+    </section>
+
+    <section>
+      <h2>2 · Settings</h2>
+      <label class="field">Model
+        <select id="model"></select>
+      </label>
+      <label class="field">Uncertainty threshold <span id="thrv">0.50</span>
+        <input type="range" id="thr" min="0.25" max="0.9" step="0.05" value="0.5">
+        <small>Pixels whose top-class probability is below this are marked <em>Uncertain</em>.</small>
+      </label>
+      <label class="check"><input type="checkbox" id="scope" checked> Mask cloud / land pixels (outside the ocean-only model's scope)</label>
+    </section>
+  </aside>
+
+  <!-- ============ centre: viewer ============ -->
+  <section class="panel viewer-panel">
+    <div class="viewer-head">
+      <div>
+        <h2 id="title">No image loaded</h2>
+        <div id="subtitle" class="muted">Pick a sample on the left or upload a Sentinel-2 image.</div>
+      </div>
+      <div class="view-switch" role="tablist">
+        <button class="seg active" data-view="image">Image</button>
+        <button class="seg" data-view="map" id="mapBtn" disabled title="Needs a georeferenced image">Map</button>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="seg-group" id="layerBtns">
+        <button class="seg active" data-layer="pred">Prediction</button>
+        <button class="seg" data-layer="gt" id="gtBtn" disabled>Ground truth</button>
+        <button class="seg" data-layer="conf">Confidence</button>
+        <button class="seg" data-layer="none">True colour only</button>
+      </div>
+      <label class="inline">Opacity <input type="range" id="opacity" min="0" max="1" step="0.05" value="0.75"></label>
+      <div class="seg-group">
+        <button class="seg icon" id="zoomOut" title="Zoom out">−</button>
+        <button class="seg icon" id="zoomFit" title="Fit">⤢</button>
+        <button class="seg icon" id="zoomIn" title="Zoom in">+</button>
+      </div>
+    </div>
+
+    <div id="stage" class="stage">
+      <div id="empty" class="empty">
+        <div class="empty-art">🛰️</div>
+        <p>Results appear here: the satellite image with every pixel coloured by what the model thinks is on the sea surface.</p>
+      </div>
+      <div id="canvasWrap" class="canvas-wrap hidden">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div id="map" class="map hidden"></div>
+      <div id="loading" class="loading hidden"><div class="spinner"></div><span id="loadingText">Analysing…</span></div>
+      <div id="tooltip" class="tooltip hidden"></div>
+    </div>
+
+    <div id="legend" class="legend"></div>
+    <div id="notes" class="notes hidden"></div>
+    <div id="error" class="error hidden"></div>
+  </section>
+
+  <!-- ============ right: results ============ -->
+  <aside class="panel results">
+    <section>
+      <h2>What's in this image</h2>
+      <p id="headline" class="headline muted">—</p>
+      <div id="summary" class="summary"></div>
+    </section>
+    <section>
+      <div class="row-between">
+        <h2>Detected patches</h2>
+        <button id="csvBtn" class="link" disabled>Download CSV</button>
+      </div>
+      <div class="region-filter">
+        <button class="chip active" data-cls="all">All</button>
+        <button class="chip" data-cls="2">Debris</button>
+        <button class="chip" data-cls="3">Algae</button>
+        <button class="chip" data-cls="4">Other</button>
+      </div>
+      <div id="regions" class="regions"><p class="muted">No patches yet.</p></div>
+    </section>
+    <section id="gtSection" class="hidden">
+      <h2>Check against ground truth</h2>
+      <div id="gtMetrics"></div>
+    </section>
+  </aside>
+</main>
+
+<main id="tab-about" class="about hidden">
+  <div class="about-inner">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><strong>Read the 11 Sentinel-2 bands</strong> (B1–B8, B8A, B11, B12) as surface reflectance. The infrared bands matter most: clear water absorbs near- and short-wave infrared, while anything floating reflects it.</li>
+      <li><strong>Compute features for every pixel</strong>: the 11 bands, NDWI, four band ratios (red/green, NIR/red, NIR/green, SWIR1/NIR), and, for stage-8 models, six GLCM texture features from a 13×13 window.</li>
+      <li><strong>Classify each pixel</strong> with a Random Forest (100 trees, log class weights) into Water, Marine Debris, Algae/Sargassum or Other, with a probability for each class.</li>
+      <li><strong>Group neighbouring pixels</strong> of the same class into <em>patches</em> and report each patch's size, area, confidence and location.</li>
+    </ol>
+    <h3>Model scores on the official test sets</h3>
+    <p class="muted">Every annotated test pixel, 4 classes, macro = mean over the classes. The models were retrained by this site from the team's code; the numbers should match <code>outputs/dl_comparison/comparison.md</code>.</p>
+    <div id="scoreTable"></div>
+    <h3>Classes</h3>
+    <div id="classTable"></div>
+    <h3>Limitations</h3>
+    <ul class="limits">
+      <li><strong>Sentinel-2 only.</strong> Ordinary photos (JPG/PNG, Google Maps) have no infrared bands, so they cannot be analysed.</li>
+      <li><strong>Different processing.</strong> MARIDA and MADOS images were atmospherically corrected in a particular way. Standard Sentinel-2 L1C/L2A downloads differ, so expect lower accuracy on them than the test scores above.</li>
+      <li><strong>Ocean only.</strong> The model never saw land or clouds. The cloud/land guard masks the obvious cases, but coastlines can still be mislabelled.</li>
+      <li><strong>10 m pixels.</strong> Only aggregated debris (patches and windrows tens of metres long) is visible, not single items.</li>
+      <li><strong>Pixel-based.</strong> Each pixel is classified from its own spectrum plus local texture. The U-Net + RF ensemble in the repository scores higher but needs the trained U-Net weights.</li>
+    </ul>
+    <p class="muted small">Team 07 · Amrita Vishwa Vidyapeetham, Coimbatore · Data: MARIDA (Kikaki et al., 2022), MADOS (Kikaki et al., 2024).</p>
+  </div>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+[
+  {
+    "dataset": "MARIDA",
+    "id": "22-12-20_18QYF_0",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 86,
+      "Marine Debris": 28,
+      "Algae/Sargassum": 0,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "17-7-16_51PTS_0",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 18,
+      "Marine Debris": 26,
+      "Algae/Sargassum": 0,
+      "Other": 4
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "27-1-19_16PCC_28",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 69,
+      "Marine Debris": 20,
+      "Algae/Sargassum": 0,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "4-3-18_50LLR_7",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 103,
+      "Marine Debris": 14,
+      "Algae/Sargassum": 0,
+      "Other": 16
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "28-9-20_16PCC_4",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 8,
+      "Marine Debris": 11,
+      "Algae/Sargassum": 0,
+      "Other": 1
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "3-11-16_16PDC_2",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 3,
+      "Marine Debris": 11,
+      "Algae/Sargassum": 0,
+      "Other": 4
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "28-9-20_16PCC_8",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 7,
+      "Marine Debris": 10,
+      "Algae/Sargassum": 0,
+      "Other": 1
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "14-11-18_48PZC_7",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 40,
+      "Marine Debris": 9,
+      "Algae/Sargassum": 0,
+      "Other": 8
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "30-8-18_16PCC_23",
+    "why": "Algae / Sargassum",
+    "counts": {
+      "Water": 0,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 237,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "27-1-19_16QED_12",
+    "why": "Algae / Sargassum",
+    "counts": {
+      "Water": 0,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 169,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "27-1-19_16QED_0",
+    "why": "Algae / Sargassum",
+    "counts": {
+      "Water": 0,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 164,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "14-9-18_16PCC_39",
+    "why": "Other floating features",
+    "counts": {
+      "Water": 404,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 0,
+      "Other": 165
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "30-8-18_16PCC_9",
+    "why": "Other floating features",
+    "counts": {
+      "Water": 25,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 0,
+      "Other": 84
+    }
+  },
+  {
+    "dataset": "MARIDA",
+    "id": "30-8-18_16PCC_10",
+    "why": "Other floating features",
+    "counts": {
+      "Water": 159,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 0,
+      "Other": 80
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_161_8",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 12,
+      "Marine Debris": 164,
+      "Algae/Sargassum": 0,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_167_12",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 10,
+      "Marine Debris": 59,
+      "Algae/Sargassum": 0,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_167_8",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 8,
+      "Marine Debris": 50,
+      "Algae/Sargassum": 0,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_161_9",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 141,
+      "Marine Debris": 36,
+      "Algae/Sargassum": 0,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_161_10",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 4,
+      "Marine Debris": 35,
+      "Algae/Sargassum": 0,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_148_1",
+    "why": "Marine debris",
+    "counts": {
+      "Water": 4,
+      "Marine Debris": 34,
+      "Algae/Sargassum": 0,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_152_27",
+    "why": "Algae / Sargassum",
+    "counts": {
+      "Water": 0,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 401,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_142_5",
+    "why": "Algae / Sargassum",
+    "counts": {
+      "Water": 48,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 304,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_141_22",
+    "why": "Algae / Sargassum",
+    "counts": {
+      "Water": 4,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 300,
+      "Other": 0
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_156_8",
+    "why": "Other floating features",
+    "counts": {
+      "Water": 0,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 0,
+      "Other": 3931
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_145_17",
+    "why": "Other floating features",
+    "counts": {
+      "Water": 0,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 0,
+      "Other": 3893
+    }
+  },
+  {
+    "dataset": "MADOS",
+    "id": "Scene_155_6",
+    "why": "Other floating features",
+    "counts": {
+      "Water": 0,
+      "Marine Debris": 0,
+      "Algae/Sargassum": 0,
+      "Other": 3845
+    }
+  }
+]
