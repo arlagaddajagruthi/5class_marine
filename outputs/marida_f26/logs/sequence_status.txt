@@ -1,0 +1,34 @@
+started 2026-10-21T18:47:23
+running R1 2026-10-21T18:47:23
+done R1 2026-10-21T20:59:28
+running rf 2026-10-21T20:59:28
+done rf 2026-10-21T21:03:26
+running ensemble 2026-10-21T21:03:26
+done ensemble 2026-10-21T21:04:15
+running xai-R1 2026-10-21T21:04:15
+done xai-R1 2026-10-21T21:12:22
+running R2 2026-10-21T21:12:22
+done R2 2026-10-21T23:20:36
+running R3 2026-10-21T23:20:36
+done R3 2026-10-22T01:55:46
+running R4 2026-10-22T01:55:46
+done R4 2026-10-22T03:55:04
+running R5 2026-10-22T03:55:04
+done R5 2026-10-22T06:18:43
+running G2b 2026-10-22T06:18:43
+done G2b 2026-10-22T08:51:04
+running xai-R2 2026-10-22T08:51:04
+done xai-R2 2026-10-22T09:04:21
+running xai-R3 2026-10-22T09:04:21
+done xai-R3 2026-10-22T09:17:53
+running xai-R4 2026-10-22T09:17:53
+done xai-R4 2026-10-22T09:27:25
+running xai-R5 2026-10-22T09:27:25
+done xai-R5 2026-10-22T09:40:25
+running xai-rf 2026-10-22T09:40:25
+done xai-rf 2026-10-22T09:46:39
+running xai-ensemble 2026-10-22T09:46:39
+done xai-ensemble 2026-10-22T09:46:47
+running compare 2026-10-22T09:46:47
+FAILED compare 2026-10-22T09:46:55
+done compare (rerun manually after fix) 2026-10-22T09:52:01

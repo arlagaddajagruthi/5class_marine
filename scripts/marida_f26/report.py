@@ -56,6 +56,7 @@ def overall_and_classwise(yt, prob, names):
     div = lambda a, b: np.divide(a, b, out=np.full(len(a), np.nan), where=b > 0)
     prec, rec = div(tp, pred), div(tp, sup)
     f1 = div(2 * prec * rec, prec + rec)
+    f1[(sup > 0) & (tp == 0)] = 0.0  # class present but never found: F1 0, not 0/0
     iou = div(tp, tp + fp + fn)
     ap = np.array([average_precision_score(yt == k, prob[:, k]) if sup[k] else np.nan for k in range(n)])
     cw = pd.DataFrame({"support": sup, "share_%": 100 * sup / tot, "predicted": pred, "TP": tp.astype(int),

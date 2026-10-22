@@ -1,0 +1,25 @@
+comparison,A,B,what differs,metric,A - B,ci_low,ci_high,P(A > B),clear
+band scaling,R1_unet_ssl4eo_raw,R2_unet_ssl4eo_std,U-Net SSL4EO: raw reflectance vs standardised bands,macro_F1,-0.02561686998671564,-0.044500054372951764,-0.0006219980083431207,0.023,True
+band scaling,R1_unet_ssl4eo_raw,R2_unet_ssl4eo_std,U-Net SSL4EO: raw reflectance vs standardised bands,mIoU,-0.033150435050794846,-0.0526013722935975,-0.008040615285779065,0.0115,True
+band scaling,R1_unet_ssl4eo_raw,R2_unet_ssl4eo_std,U-Net SSL4EO: raw reflectance vs standardised bands,F1_Marine Debris,-0.0027198711085024696,-0.11435778861893196,0.1214053665409236,0.4575,False
+pretraining,R2_unet_ssl4eo_std,R3_unet_scratch_std,"U-Net, standardised bands: SSL4EO weights vs from scratch",macro_F1,-0.0065851801923568765,-0.03152773321719725,0.02117322114837231,0.3,False
+pretraining,R2_unet_ssl4eo_std,R3_unet_scratch_std,"U-Net, standardised bands: SSL4EO weights vs from scratch",mIoU,-0.006615495610223787,-0.03052548271303927,0.021995442616629682,0.28,False
+pretraining,R2_unet_ssl4eo_std,R3_unet_scratch_std,"U-Net, standardised bands: SSL4EO weights vs from scratch",F1_Marine Debris,-0.03159916885560832,-0.14379218934904295,0.09090594850695753,0.302,False
+architecture: U-Net vs SegNeXt-T,R3_unet_scratch_std,R4_segnext_scratch_std,"from scratch, standardised bands",macro_F1,0.11671591752233323,0.06849178103297138,0.1495859552772553,1.0,True
+architecture: U-Net vs SegNeXt-T,R3_unet_scratch_std,R4_segnext_scratch_std,"from scratch, standardised bands",mIoU,0.11729904513143707,0.06383556625939714,0.15870028817268114,1.0,True
+architecture: U-Net vs SegNeXt-T,R3_unet_scratch_std,R4_segnext_scratch_std,"from scratch, standardised bands",F1_Marine Debris,0.3334420130032029,0.21790419803907043,0.40820324441345934,1.0,True
+architecture: U-Net vs MariNeXt,R3_unet_scratch_std,R5_marinext_scratch_std,"from scratch, standardised bands",macro_F1,0.05102040759456805,0.018335721134833945,0.07482213157748234,0.9945,True
+architecture: U-Net vs MariNeXt,R3_unet_scratch_std,R5_marinext_scratch_std,"from scratch, standardised bands",mIoU,0.05447643602535479,0.01575275693895992,0.08589529962169327,0.992,True
+architecture: U-Net vs MariNeXt,R3_unet_scratch_std,R5_marinext_scratch_std,"from scratch, standardised bands",F1_Marine Debris,0.15120577363140297,0.05098972972337569,0.22742104895870247,1.0,True
+architecture: MariNeXt vs SegNeXt-T,R5_marinext_scratch_std,R4_segnext_scratch_std,MariNeXt adds stage-1 features (1/4 vs 1/8 output),macro_F1,0.06569550992776518,0.037561451759476075,0.09227812112415033,1.0,True
+architecture: MariNeXt vs SegNeXt-T,R5_marinext_scratch_std,R4_segnext_scratch_std,MariNeXt adds stage-1 features (1/4 vs 1/8 output),mIoU,0.06282260910608228,0.03852226826748669,0.08795940333806135,1.0,True
+architecture: MariNeXt vs SegNeXt-T,R5_marinext_scratch_std,R4_segnext_scratch_std,MariNeXt adds stage-1 features (1/4 vs 1/8 output),F1_Marine Debris,0.18223623937179995,0.08101142639250683,0.26501493130451875,1.0,True
+deep vs RF,R1_unet_ssl4eo_raw,R6_rf,best-setting U-Net vs RF on the same 26 features,macro_F1,-0.09360209230449057,-0.11587844687272772,-0.06906419535543344,0.0,True
+deep vs RF,R1_unet_ssl4eo_raw,R6_rf,best-setting U-Net vs RF on the same 26 features,mIoU,-0.11740434504590436,-0.1432110209224258,-0.08914547176426463,0.0,True
+deep vs RF,R1_unet_ssl4eo_raw,R6_rf,best-setting U-Net vs RF on the same 26 features,F1_Marine Debris,-0.2525464647132747,-0.32895735649856545,-0.1641114599028391,0.0,True
+ensemble vs U-Net,R7_ensemble_unet_rf,R1_unet_ssl4eo_raw,adding the RF to the U-Net,macro_F1,0.09612070586922838,0.07865530733595331,0.11895417438580878,1.0,True
+ensemble vs U-Net,R7_ensemble_unet_rf,R1_unet_ssl4eo_raw,adding the RF to the U-Net,mIoU,0.12180271836167167,0.10065071802282534,0.15115936012411169,1.0,True
+ensemble vs U-Net,R7_ensemble_unet_rf,R1_unet_ssl4eo_raw,adding the RF to the U-Net,F1_Marine Debris,0.25443094387048104,0.17992754009848058,0.3327036144513708,1.0,True
+ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,macro_F1,0.002518613564737815,-0.005051131629232733,0.01392629172464724,0.7675,False
+ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,mIoU,0.004398373315767312,-0.005959602266591776,0.022192773765994607,0.8145,False
+ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,F1_Marine Debris,0.0018844791572063535,-0.0270254894234982,0.03770533874193638,0.5335,False

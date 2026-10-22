@@ -1,0 +1,8 @@
+{
+  "epoch": 43,
+  "val_macroF1_tta": 0.857634020277646,
+  "val_F1_Water": 0.9960825771276167,
+  "val_F1_Marine Debris": 0.7133512889572913,
+  "val_F1_Algae/Sargassum": 0.9725063938618926,
+  "val_F1_Other": 0.7485958211637834
+}

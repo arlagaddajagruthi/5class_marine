@@ -1,0 +1,8 @@
+C:\PROJECT\5class_marine_pollution\scripts\marida_f26\report.py:192: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
+  plt.tight_layout()
+C:\PROJECT\5class_marine_pollution\scripts\marida_f26\report.py:194: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
+  plt.savefig(os.path.join(figs, f), dpi=120)
+C:\PROJECT\5class_marine_pollution\scripts\marida_f26\report.py:192: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
+  plt.tight_layout()
+C:\PROJECT\5class_marine_pollution\scripts\marida_f26\report.py:194: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
+  plt.savefig(os.path.join(figs, f), dpi=120)

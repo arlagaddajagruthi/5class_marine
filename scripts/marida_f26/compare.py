@@ -98,14 +98,14 @@ def bootstrap(runs):
             lo, hi = np.nanpercentile(boot[r][:, j], [2.5, 97.5])
             ci.append({"run": r, "metric": k, "value": point[k], "ci_low": lo, "ci_high": hi})
     diffs = []
-    for name, a, b, what in CONTRASTS:
+    for cname, a, b, what in CONTRASTS:
         if a not in boot or b not in boot:
             continue
         pa, pb = scores(cm[a][1].sum(0)), scores(cm[b][1].sum(0))
         for j, k in enumerate(keys):
             d = boot[a][:, j] - boot[b][:, j]
             lo, hi = np.nanpercentile(d, [2.5, 97.5])
-            diffs.append({"comparison": name, "A": a, "B": b, "what differs": what, "metric": k,
+            diffs.append({"comparison": cname, "A": a, "B": b, "what differs": what, "metric": k,
                           "A - B": pa[k] - pb[k], "ci_low": lo, "ci_high": hi,
                           "P(A > B)": float(np.nanmean(d > 0)), "clear": bool(lo > 0 or hi < 0)})
     return pd.DataFrame(ci), pd.DataFrame(diffs), len(scenes)
@@ -143,8 +143,8 @@ def main():
     # overall table
     L += ["## Overall", "", "| Model | Macro F1 [95% CI] | mIoU | κ | OA | Macro P | Macro R | Macro AUPRC | "
           "Debris F1 [95% CI] |", "|---|---|---|---|---|---|---|---|---|"]
-    for name, (mf, mi, pa, df1, di, dpa) in PAPER.items():
-        L.append(f"| 📄 **{name}** (11 classes) | _{mf:.2f}_ | _{mi:.2f}_ | – | – | – | _{pa:.2f}_ | – | _{df1:.2f}_ |")
+    for pname, (mf, mi, pa, df1, di, dpa) in PAPER.items():
+        L.append(f"| 📄 **{pname}** (11 classes) | _{mf:.2f}_ | _{mi:.2f}_ | – | – | – | _{pa:.2f}_ | – | _{df1:.2f}_ |")
     best = {k: max(met[r][k] for r in runs) for k in ("macro_F1", "mIoU", "kappa", "OA", "macro_precision",
                                                        "macro_recall", "macro_AUPRC", "F1_Marine Debris")}
     b = lambda r, k: f"**{met[r][k]:.3f}**" if met[r][k] == best[k] else f"{met[r][k]:.3f}"
@@ -159,8 +159,8 @@ def main():
         L += ["", f"## Per-class {metric}", "", "| Model | " + " | ".join(NAMES) + " |", "|---" * 5 + "|"]
         paper_k = {"F1": 3, "IoU": 4, "Recall (class accuracy)": 5}.get(metric)
         if paper_k is not None:
-            for name, v in PAPER.items():
-                L.append(f"| 📄 **{name}** | – | _{v[paper_k]:.2f}_ | – | – |")
+            for pname, v in PAPER.items():
+                L.append(f"| 📄 **{pname}** | – | _{v[paper_k]:.2f}_ | – | – |")
         bc = {c: max(cw[r].loc[c, col] for r in runs) for c in NAMES}
         for r in runs:
             L.append(f"| {label[r]} | " + " | ".join(
@@ -194,8 +194,8 @@ def main():
               "directly comparable with the paper.", "",
               "| Model | Macro F1 | mIoU | Macro PA (recall) | " + " | ".join(PAPER_CLASS_F1) + " |",
               "|---" * (4 + len(PAPER_CLASS_F1)) + "|"]
-        for k, (name, v) in enumerate(PAPER.items()):
-            L.append(f"| 📄 **{name}** | _{v[0]:.2f}_ | _{v[1]:.2f}_ | _{v[2]:.2f}_ | "
+        for k, (pname, v) in enumerate(PAPER.items()):
+            L.append(f"| 📄 **{pname}** | _{v[0]:.2f}_ | _{v[1]:.2f}_ | _{v[2]:.2f}_ | "
                      + " | ".join(f"_{PAPER_CLASS_F1[c][k]:.2f}_" for c in PAPER_CLASS_F1) + " |")
         L.append(f"| **G2b (ours)** | {gm['macro_F1']:.3f} | {gm['mIoU']:.3f} | {gm['macro_recall']:.3f} | "
                  + " | ".join(fmt(gc.loc[c, "F1"]) for c in PAPER_CLASS_F1) + " |")
@@ -211,9 +211,9 @@ def main():
         for j, x in enumerate(v):
             a_.text(j, x.ci_high + 0.01, f"{x.value:.3f}", ha="center", fontsize=8)
         if k == "F1_Marine Debris":
-            for name, pv in PAPER.items():
+            for pname, pv in PAPER.items():
                 a_.axhline(pv[3], ls=":", lw=1, color="grey")
-                a_.text(len(runs) - 0.5, pv[3], name, fontsize=6, va="bottom", ha="right")
+                a_.text(len(runs) - 0.5, pv[3], pname, fontsize=6, va="bottom", ha="right")
         a_.set_xticks(range(len(runs)), runs, rotation=30, ha="right", fontsize=8)
         a_.set_ylim(0, 1.05)
         a_.set_title(f"{t} (test, 95% scene-bootstrap CI)" + ("; dotted: MARIDA paper" if "Debris" in t else ""))
