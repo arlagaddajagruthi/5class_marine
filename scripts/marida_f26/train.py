@@ -1,10 +1,15 @@
 """
-MARIDA 26-feature study: train, test and document U-Net, SegNeXt-T and the
-MariNeXt architecture on the 26 input channels of features26.py.
+26-feature study (MARIDA or MADOS, `--dataset`): train, test and document U-Net,
+SegNeXt-T and the MariNeXt architecture on the 26 input channels of features26.py.
 
-Runs (single seed 0, no VSCP, MARIDA recipe as in the MARIDA U-Net code: 45 epochs,
-Adam 2e-4, batch 5, LR / 10 at epoch 40, weighted CE 1/ln(1.03 + p_c), rotation +
-flip augmentation):
+Single seed 0. Each dataset uses its paper's recipe (RECIPES below):
+  MARIDA  the MARIDA U-Net code: 45 epochs, Adam 2e-4, batch 5, LR / 10 at epoch 40,
+          weighted CE 1/ln(1.03 + p_c), rotation + flip augmentation, no VSCP
+  MADOS   the MADOS/MariNeXt code: 80 epochs, Adam 2e-4, batch 5 (drop_last), LR / 10
+          at epochs 45 and 65, the same weighted CE, flip + rotation augmentation,
+          VSCP copy-paste (batch // 2 extra samples per batch), EMA of the weights
+          (decay 0.999; the EMA model is validated, selected and tested)
+Runs:
   R1   --model unet     --init ssl4eo  --bands raw
   R2   --model unet     --init ssl4eo  --bands std
   R3   --model unet     --init scratch --bands std
@@ -14,14 +19,15 @@ flip augmentation):
 
 Checkpoint: best validation macro F1 with soft 8-view test-time augmentation (the
 softmax averaged over 4 rotations x 2 flips), evaluated every epoch. Test: the
-same soft TTA; class probabilities are stored for every pixel.
+same soft TTA; class probabilities are stored for every pixel. MADOS runs: R3, R4, R5.
 
 Commands (repo root):
   python scripts/marida_f26/train.py arch  --run R1 --model unet --init ssl4eo --bands raw
   python scripts/marida_f26/train.py check --run R1 --model unet --init ssl4eo --bands raw
   python scripts/marida_f26/train.py train --run R1 --model unet --init ssl4eo --bands raw [--resume]
   python scripts/marida_f26/train.py test  --run R1 --model unet --init ssl4eo --bands raw
-Outputs: outputs/marida_f26/runs/<run>/
+  (add --dataset MADOS for MADOS)
+Outputs: outputs/<dataset>_f26/runs/<run>/
 """
 import argparse
 import json
@@ -43,11 +49,20 @@ REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 sys.path[:0] = [HERE, os.path.join(REPO, "scripts", "segnext")]
 import features26 as F26  # noqa: E402
 
-RUNS = os.path.join(REPO, "outputs", "marida_f26", "runs")
+DATASET = F26.DATASET
+RUNS = os.path.join(F26.STUDY, "runs")
 ORIG_MARIDA = "C:/PROJECT/marine_pollution_detection/MARIDA"
-RECIPE = dict(epochs=45, batch=5, lr=2e-4, decay=0.0, lr_steps=[40], gamma=0.1, weight_param=1.03, seed=0,
-              vscp=False, ema=False, tta="soft, 8 views (4 rotations x 2 flips), softmax averaged",
-              select="best validation macro F1 with soft TTA")
+_TTA = "soft, 8 views (4 rotations x 2 flips), softmax averaged"
+RECIPES = {
+    "MARIDA": dict(epochs=45, batch=5, lr=2e-4, decay=0.0, lr_steps=[40], gamma=0.1, weight_param=1.03, seed=0,
+                   augmentation="rotation -90/0/90/180 + horizontal flip (MARIDA U-Net)", vscp=False, ema=False,
+                   drop_last=False, tta=_TTA, select="best validation macro F1 with soft TTA"),
+    "MADOS": dict(epochs=80, batch=5, lr=2e-4, decay=0.0, lr_steps=[45, 65], gamma=0.1, weight_param=1.03, seed=0,
+                  augmentation="h / v / both / no flip, then p = 0.8 rotation by k x 90 (MADOS code)", vscp=True,
+                  ema=True, ema_decay=0.999, drop_last=True, tta=_TTA,
+                  select="best validation macro F1 of the EMA model with soft TTA"),
+}
+RECIPE = RECIPES[DATASET]
 SSL4EO_KEEP = [0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 12]     # B1-B8, B8A, B11, B12 of the 13 pretrained bands
 
 CLASSES4 = ["Water", "Marine Debris", "Algae/Sargassum", "Other"]
@@ -55,6 +70,28 @@ CLASSES4 = ["Water", "Marine Debris", "Algae/Sargassum", "Other"]
 CLASSES11 = ["Marine Debris", "Dense Sargassum", "Sparse Sargassum", "Natural Organic Material", "Ship",
              "Clouds", "Marine Water", "Sediment-Laden Water", "Foam", "Turbid Water", "Shallow Water"]
 ORIG_TO_11 = {1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9, 11: 10, 12: 6, 13: 6, 14: 6, 15: 6}
+
+
+def vscp(image, target):
+    """Very Simple Copy-Paste, gkakogeorgiou/mados utils/vscp.py (as scripts/deeplabv3_resnet50/deeplab.py):
+    sample i + n's annotated pixels are pasted onto sample i, giving n = batch // 2 extra samples."""
+    n = image.shape[0] // 2
+    image_temp, target_temp = image[:n * 2].copy(), target[:n * 2].copy()
+    ia, ta = [], []
+    for i in range(n):
+        m = target_temp[i + n] != -1
+        image_temp[i][:, m] = image_temp[i + n][:, m]
+        ia.append(image_temp[i].copy())
+        target_temp[i][m] = target_temp[i + n][m]
+        ta.append(target_temp[i].copy())
+    return np.stack(ia), np.stack(ta)
+
+
+def with_vscp(x, t):
+    if not RECIPE["vscp"]:
+        return x, t
+    ia, ta = vscp(x.numpy(), t.numpy())
+    return torch.cat([x, torch.from_numpy(ia)]), torch.cat([t, torch.from_numpy(ta)])
 
 
 def class_names(n):
@@ -208,7 +245,9 @@ def setup(a):
         w = 1 / np.log(RECIPE["weight_param"] + p)
         title = (f"{MODEL_NAME[a.model]}, {'SSL4EO-S12 pretrained' if a.init == 'ssl4eo' else 'from scratch'}, "
                  f"{'raw-reflectance' if a.bands == 'raw' else 'standardised'} bands")
-        cfg = {"run": a.run, "title": title, "dataset": "MARIDA", "model": a.model, "init": a.init, "bands": a.bands,
+        if a.classes == 11 and DATASET != "MARIDA":
+            sys.exit("--classes 11 is the MARIDA paper's class scheme")
+        cfg = {"run": a.run, "title": title, "dataset": DATASET, "model": a.model, "init": a.init, "bands": a.bands,
                "classes": a.classes, "class_names": names, "channels": F26.CHANNELS,
                "groups": F26.GROUPS, "recipe": RECIPE,
                "train_annotated_pixels": dict(zip(names, counts.tolist())),
@@ -222,12 +261,13 @@ def cmd_arch(a):
     from torchinfo import summary
     out, cfg, _ = setup(a)
     net = build_model(a.model, a.init, F26.N_CH, a.classes)
-    s = summary(net, input_size=(1, F26.N_CH, 256, 256), depth=4, verbose=0,
+    P = F26.PATCH
+    s = summary(net, input_size=(1, F26.N_CH, P, P), depth=4, verbose=0,
                 col_names=("output_size", "num_params"), device="cpu")
     open(os.path.join(out, "model_summary.txt"), "w", encoding="utf-8").write(str(s))
     st = json.load(open(F26.stats_path()))
     band_txt = ("reflectance unchanged (the SSL4EO pretraining scale)" if a.bands == "raw"
-                else "(x − mean) / std with the MARIDA paper's band statistics")
+                else f"(x − mean) / std with the {DATASET} paper's band statistics")
     if a.model == "unet" and a.init == "ssl4eo":
         init_txt = ("Encoder initialised from SSL4EO-S12 MoCo ResNet-50 weights (torchgeo "
                     "`ResNet50_Weights.SENTINEL2_ALL_MOCO`, pretrained on 13-band Sentinel-2 L1C / 10000). "
@@ -245,16 +285,17 @@ def cmd_arch(a):
              "scores.", "",
              "## How the features are fed in", "",
              "```",
-             "MARIDA patch (11 bands, 256×256, Rayleigh-corrected reflectance, NaN → 0)",
+             f"{DATASET} patch (11 bands, {P}×{P}, Rayleigh-corrected reflectance, NaN → 0)",
              "   ├─ 20 spectral features per pixel (src/features/pixel_features.py, as the staged ML)",
              "   │     11 bands │ NDVI NDWI FAI FDI NDMI │ red/green nir/red nir/green swir1/nir",
              "   └─ 6 GLCM maps (glcm_maps.py, 13×13 window, as the staged ML)",
              "         contrast dissimilarity homogeneity energy correlation ASM",
-             "        ↓  stacked in that order → tensor 26 × 256 × 256",
+             f"        ↓  stacked in that order → tensor 26 × {P} × {P}",
              f"   bands (ch 1–11): {band_txt}",
              "   other 15 channels: clipped to the train 1st–99th percentile, standardised",
-             "        ↓  training only: rotate −90/0/90/180°, horizontal flip (channels and labels together)",
-             f"   {a.model} → {a.classes} × 256 × 256 class scores",
+             f"        ↓  training only: {RECIPE['augmentation']} (channels and labels together)"
+             + ("; VSCP copy-paste adds batch // 2 samples" if RECIPE["vscp"] else ""),
+             f"   {a.model} → {a.classes} × {P} × {P} class scores",
              "        ↓  test: softmax averaged over 8 views (4 rotations × 2 flips)",
              "   per-pixel class probabilities → argmax",
              "```", "",
@@ -283,7 +324,8 @@ def loaders(a, cfg):
     tr = RunDataset("train", True, a.bands, a.classes)
     g = torch.Generator()
     g.manual_seed(0)
-    return DataLoader(tr, batch_size=RECIPE["batch"], shuffle=True, generator=g, num_workers=0), g
+    return DataLoader(tr, batch_size=RECIPE["batch"], shuffle=True, generator=g, num_workers=0,
+                      drop_last=RECIPE["drop_last"]), g
 
 
 def cmd_check(a):
@@ -297,7 +339,7 @@ def cmd_check(a):
     torch.cuda.reset_peak_memory_stats()
     it, t0 = iter(loader), time.time()
     for _ in range(a.batches):
-        x, t = next(it)
+        x, t = with_vscp(*next(it))
         opt.zero_grad()
         loss = crit(model(x.to(device)), t.to(device))
         loss.backward()
@@ -333,11 +375,18 @@ def cmd_train(a):
     crit = nn.CrossEntropyLoss(ignore_index=-1, weight=w.to(device))
     opt = torch.optim.Adam(model.parameters(), lr=RECIPE["lr"], weight_decay=RECIPE["decay"])
     sched = torch.optim.lr_scheduler.MultiStepLR(opt, RECIPE["lr_steps"], gamma=RECIPE["gamma"])
+    ema = None
+    if RECIPE["ema"]:                                    # timm ModelEma, as the MADOS code
+        from timm.utils import ModelEma
+        ema = ModelEma(model, decay=RECIPE["ema_decay"], device=device, resume="")
+    evaluated = lambda: ema.ema if ema is not None else model   # noqa: E731  (the model that is validated)
     hist, best, start = [], -np.inf, 1
     state_path = os.path.join(out, "train_state.pth")
     if a.resume and os.path.exists(state_path):
         s = torch.load(state_path, map_location=device, weights_only=False)
         model.load_state_dict(s["model"]); opt.load_state_dict(s["opt"]); sched.load_state_dict(s["sched"])
+        if ema is not None:
+            ema.ema.load_state_dict(s["ema"])
         hist, best, start = s["hist"], s["best"], s["epoch"] + 1
         g.set_state(s["gen"].cpu()); torch.set_rng_state(s["torch_rng"].cpu())
         torch.cuda.set_rng_state(s["cuda_rng"].cpu()); np.random.set_state(s["np_rng"]); random.setstate(s["py_rng"])
@@ -349,15 +398,18 @@ def cmd_train(a):
         model.train()
         tot, n = 0.0, 0
         for x, t in loader:
+            x, t = with_vscp(x, t)
             x, t = x.to(device), t.to(device)
             opt.zero_grad()
             loss = crit(model(x), t)
             loss.backward()
             opt.step()
+            if ema is not None:
+                ema.update(model)
             tot += loss.item() * x.shape[0]
             n += x.shape[0]
         # validation scores with soft TTA (the selection criterion)
-        yt, pr, _, _ = predict(model, val, device, tta=True)
+        yt, pr, _, _ = predict(evaluated(), val, device, tta=True)
         mf1, f1c = quick_scores(yt, pr.argmax(1), a.classes)
         row = {"epoch": epoch, "lr": opt.param_groups[0]["lr"], "train_loss": tot / n,
                "val_macroF1": mf1, **{f"val_F1_{c}": float(v) for c, v in zip(names, f1c)},
@@ -368,17 +420,18 @@ def cmd_train(a):
                      + ", ".join(f"{c} {v:.3f}" for c, v in zip(names, f1c)) + f" ({row['seconds']:.0f} s)")
         if mf1 > best:
             best = mf1
-            torch.save(model.state_dict(), os.path.join(out, "model_best_val_f1.pth"))
-            json.dump({"epoch": epoch, "val_macroF1_tta": mf1,
+            torch.save(evaluated().state_dict(), os.path.join(out, "model_best_val_f1.pth"))
+            json.dump({"epoch": epoch, "weights": "ema" if ema is not None else "model", "val_macroF1_tta": mf1,
                        **{f"val_F1_{c}": float(v) for c, v in zip(names, f1c)}},
                       open(os.path.join(out, "best_epoch.json"), "w"), indent=2)
         sched.step()
         s = {"epoch": epoch, "model": model.state_dict(), "opt": opt.state_dict(), "sched": sched.state_dict(),
+             "ema": ema.ema.state_dict() if ema is not None else None,
              "hist": hist, "best": best, "gen": g.get_state(), "torch_rng": torch.get_rng_state(),
              "cuda_rng": torch.cuda.get_rng_state(), "np_rng": np.random.get_state(), "py_rng": random.getstate()}
         torch.save(s, state_path + ".tmp")
         os.replace(state_path + ".tmp", state_path)
-    torch.save(model.state_dict(), os.path.join(out, "model_last.pth"))
+    torch.save(evaluated().state_dict(), os.path.join(out, "model_last.pth"))
     os.remove(state_path)
     logging.info("training done")
 

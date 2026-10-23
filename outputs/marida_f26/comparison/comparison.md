@@ -1,6 +1,6 @@
 # MARIDA, 26 features: comparison of all runs
 
-Test split, every annotated pixel, 4 classes (Water, Marine Debris, Algae/Sargassum, Other). 95% confidence intervals from a scene bootstrap (15 test scenes, 2000 resamples). 📄 rows (italic) are the MARIDA paper's published results (Table 4). They are in the paper's 11 classes, so only Marine Debris is directly comparable; macro scores average over different classes. Run G2b below compares in the paper's own 11 classes. **Bold** = best of our runs.
+Test split, every annotated pixel, 4 classes (Water, Marine Debris, Algae/Sargassum, Other). 95% confidence intervals from a scene bootstrap (15 test scenes, 2000 resamples). 📄 rows (italic) are the MARIDA paper (Table 4) published results. They are in the paper's 11 classes, so only Marine Debris is directly comparable; macro scores average over different classes. Run G2b below compares in the paper's own 11 classes. **Bold** = best of our runs.
 
 ## Overall
 
@@ -15,8 +15,8 @@ Test split, every annotated pixel, 4 classes (Water, Marine Debris, Algae/Sargas
 | R3_unet_scratch_std: U-Net (ResNet-50), from scratch, standardised bands | 0.854 [0.780–0.896] | 0.775 | 0.881 | 0.994 | 0.809 | 0.929 | 0.919 | 0.609 [0.524–0.709] |
 | R4_segnext_scratch_std: SegNeXt-T, from scratch, standardised bands | 0.737 [0.691–0.780] | 0.658 | 0.712 | 0.983 | 0.674 | 0.924 | 0.826 | 0.275 [0.173–0.441] |
 | R5_marinext_scratch_std: MariNeXt architecture, from scratch, standardised bands | 0.803 [0.753–0.838] | 0.721 | 0.818 | 0.990 | 0.742 | 0.940 | 0.865 | 0.457 [0.351–0.584] |
-| R6_rf: Random Forest on the 26 features | 0.915 [0.859–0.946] | 0.853 | 0.916 | 0.996 | **0.902** | 0.931 | 0.951 | 0.827 [0.764–0.890] |
-| R7_ensemble_unet_rf: U-Net (R1_unet_ssl4eo_raw) + Random Forest (R6_rf) ensemble | **0.917** [0.862–0.952] | **0.857** | **0.918** | **0.996** | 0.891 | **0.949** | **0.959** | **0.829** [0.767–0.889] |
+| R6_rf: Random Forest on the 26 features | 0.915 [0.859–0.946] | 0.853 | 0.916 | 0.996 | **0.902** | 0.931 | 0.951 | **0.827** [0.764–0.890] |
+| R7_ensemble_unet_rf: U-Net (R3_unet_scratch_std) + Random Forest (R6_rf) ensemble | **0.919** [0.859–0.954] | **0.859** | **0.924** | **0.997** | 0.892 | **0.952** | **0.962** | 0.820 [0.752–0.892] |
 
 ## Per-class F1
 
@@ -31,20 +31,20 @@ Test split, every annotated pixel, 4 classes (Water, Marine Debris, Algae/Sargas
 | R3_unet_scratch_std: U-Net (ResNet-50), from scratch, standardised bands | 0.998 | 0.609 | 0.981 | 0.827 |
 | R4_segnext_scratch_std: SegNeXt-T, from scratch, standardised bands | 0.992 | 0.275 | 0.963 | 0.717 |
 | R5_marinext_scratch_std: MariNeXt architecture, from scratch, standardised bands | 0.996 | 0.457 | 0.977 | 0.780 |
-| R6_rf: Random Forest on the 26 features | 0.998 | 0.827 | 0.986 | 0.849 |
-| R7_ensemble_unet_rf: U-Net (R1_unet_ssl4eo_raw) + Random Forest (R6_rf) ensemble | **0.998** | **0.829** | **0.991** | **0.851** |
+| R6_rf: Random Forest on the 26 features | 0.998 | **0.827** | 0.986 | 0.849 |
+| R7_ensemble_unet_rf: U-Net (R3_unet_scratch_std) + Random Forest (R6_rf) ensemble | **0.998** | 0.820 | **0.991** | **0.865** |
 
 ## Per-class Precision
 
 | Model | Water | Marine Debris | Algae/Sargassum | Other |
 |---|---|---|---|---|
-| R1_unet_ssl4eo_raw: U-Net (ResNet-50), SSL4EO-S12 pretrained, raw-reflectance bands | 0.999 | 0.427 | 0.998 | 0.624 |
+| R1_unet_ssl4eo_raw: U-Net (ResNet-50), SSL4EO-S12 pretrained, raw-reflectance bands | 0.999 | 0.427 | **0.998** | 0.624 |
 | R2_unet_ssl4eo_std: U-Net (ResNet-50), SSL4EO-S12 pretrained, standardised bands | 0.999 | 0.440 | 0.972 | 0.776 |
 | R3_unet_scratch_std: U-Net (ResNet-50), from scratch, standardised bands | 0.999 | 0.470 | 0.991 | 0.775 |
 | R4_segnext_scratch_std: SegNeXt-T, from scratch, standardised bands | 1.000 | 0.165 | 0.935 | 0.596 |
 | R5_marinext_scratch_std: MariNeXt architecture, from scratch, standardised bands | **1.000** | 0.308 | 0.964 | 0.695 |
 | R6_rf: Random Forest on the 26 features | 0.998 | **0.763** | 0.994 | **0.854** |
-| R7_ensemble_unet_rf: U-Net (R1_unet_ssl4eo_raw) + Random Forest (R6_rf) ensemble | 0.999 | 0.753 | **0.999** | 0.815 |
+| R7_ensemble_unet_rf: U-Net (R3_unet_scratch_std) + Random Forest (R6_rf) ensemble | 0.999 | 0.731 | 0.997 | 0.840 |
 
 ## Per-class Recall (class accuracy)
 
@@ -60,7 +60,7 @@ Test split, every annotated pixel, 4 classes (Water, Marine Debris, Algae/Sargas
 | R4_segnext_scratch_std: SegNeXt-T, from scratch, standardised bands | 0.984 | 0.819 | **0.993** | 0.902 |
 | R5_marinext_scratch_std: MariNeXt architecture, from scratch, standardised bands | 0.992 | 0.890 | 0.990 | 0.889 |
 | R6_rf: Random Forest on the 26 features | **0.998** | 0.903 | 0.977 | 0.843 |
-| R7_ensemble_unet_rf: U-Net (R1_unet_ssl4eo_raw) + Random Forest (R6_rf) ensemble | 0.998 | **0.921** | 0.984 | 0.891 |
+| R7_ensemble_unet_rf: U-Net (R3_unet_scratch_std) + Random Forest (R6_rf) ensemble | 0.998 | **0.934** | 0.985 | 0.890 |
 
 ## Per-class IoU
 
@@ -75,20 +75,20 @@ Test split, every annotated pixel, 4 classes (Water, Marine Debris, Algae/Sargas
 | R3_unet_scratch_std: U-Net (ResNet-50), from scratch, standardised bands | 0.995 | 0.438 | 0.963 | 0.705 |
 | R4_segnext_scratch_std: SegNeXt-T, from scratch, standardised bands | 0.983 | 0.160 | 0.929 | 0.559 |
 | R5_marinext_scratch_std: MariNeXt architecture, from scratch, standardised bands | 0.991 | 0.297 | 0.955 | 0.639 |
-| R6_rf: Random Forest on the 26 features | 0.997 | 0.705 | 0.972 | 0.737 |
-| R7_ensemble_unet_rf: U-Net (R1_unet_ssl4eo_raw) + Random Forest (R6_rf) ensemble | **0.997** | **0.708** | **0.983** | **0.741** |
+| R6_rf: Random Forest on the 26 features | 0.997 | **0.705** | 0.972 | 0.737 |
+| R7_ensemble_unet_rf: U-Net (R3_unet_scratch_std) + Random Forest (R6_rf) ensemble | **0.997** | 0.695 | **0.982** | **0.761** |
 
 ## Per-class AUPRC
 
 | Model | Water | Marine Debris | Algae/Sargassum | Other |
 |---|---|---|---|---|
 | R1_unet_ssl4eo_raw: U-Net (ResNet-50), SSL4EO-S12 pretrained, raw-reflectance bands | 1.000 | 0.737 | **1.000** | 0.863 |
-| R2_unet_ssl4eo_std: U-Net (ResNet-50), SSL4EO-S12 pretrained, standardised bands | 1.000 | 0.626 | 0.994 | **0.938** |
+| R2_unet_ssl4eo_std: U-Net (ResNet-50), SSL4EO-S12 pretrained, standardised bands | 1.000 | 0.626 | 0.994 | 0.938 |
 | R3_unet_scratch_std: U-Net (ResNet-50), from scratch, standardised bands | 1.000 | 0.750 | 0.998 | 0.930 |
 | R4_segnext_scratch_std: SegNeXt-T, from scratch, standardised bands | 1.000 | 0.494 | 0.992 | 0.819 |
 | R5_marinext_scratch_std: MariNeXt architecture, from scratch, standardised bands | 1.000 | 0.554 | 0.998 | 0.907 |
 | R6_rf: Random Forest on the 26 features | 1.000 | 0.885 | 0.999 | 0.920 |
-| R7_ensemble_unet_rf: U-Net (R1_unet_ssl4eo_raw) + Random Forest (R6_rf) ensemble | **1.000** | **0.914** | 1.000 | 0.924 |
+| R7_ensemble_unet_rf: U-Net (R3_unet_scratch_std) + Random Forest (R6_rf) ensemble | **1.000** | **0.907** | 1.000 | **0.940** |
 
 ## Marine debris pixels
 
@@ -100,7 +100,7 @@ Test split, every annotated pixel, 4 classes (Water, Marine Debris, Algae/Sargas
 | R4_segnext_scratch_std: SegNeXt-T, from scratch, standardised bands | 312 / 381 | 69 | 1574 | 5.04 |
 | R5_marinext_scratch_std: MariNeXt architecture, from scratch, standardised bands | 339 / 381 | 42 | 762 | 2.25 |
 | R6_rf: Random Forest on the 26 features | 344 / 381 | 37 | 107 | 0.31 |
-| R7_ensemble_unet_rf: U-Net (R1_unet_ssl4eo_raw) + Random Forest (R6_rf) ensemble | 351 / 381 | 30 | 115 | 0.33 |
+| R7_ensemble_unet_rf: U-Net (R3_unet_scratch_std) + Random Forest (R6_rf) ensemble | 356 / 381 | 25 | 131 | 0.37 |
 
 ## Controlled comparisons (paired scene bootstrap)
 
@@ -123,15 +123,15 @@ A − B with its 95% CI; **clear** = the CI excludes 0 (single training run per 
 | architecture: MariNeXt vs SegNeXt-T | R5_marinext_scratch_std vs R4_segnext_scratch_std | MariNeXt adds stage-1 features (1/4 vs 1/8 output) | macro_F1 | **+0.066 [+0.038, +0.092]** | 1.00 |
 | architecture: MariNeXt vs SegNeXt-T | R5_marinext_scratch_std vs R4_segnext_scratch_std | MariNeXt adds stage-1 features (1/4 vs 1/8 output) | mIoU | **+0.063 [+0.039, +0.088]** | 1.00 |
 | architecture: MariNeXt vs SegNeXt-T | R5_marinext_scratch_std vs R4_segnext_scratch_std | MariNeXt adds stage-1 features (1/4 vs 1/8 output) | F1_Marine Debris | **+0.182 [+0.081, +0.265]** | 1.00 |
-| deep vs RF | R1_unet_ssl4eo_raw vs R6_rf | best-setting U-Net vs RF on the same 26 features | macro_F1 | **-0.094 [-0.116, -0.069]** | 0.00 |
-| deep vs RF | R1_unet_ssl4eo_raw vs R6_rf | best-setting U-Net vs RF on the same 26 features | mIoU | **-0.117 [-0.143, -0.089]** | 0.00 |
-| deep vs RF | R1_unet_ssl4eo_raw vs R6_rf | best-setting U-Net vs RF on the same 26 features | F1_Marine Debris | **-0.253 [-0.329, -0.164]** | 0.00 |
-| ensemble vs U-Net | R7_ensemble_unet_rf vs R1_unet_ssl4eo_raw | adding the RF to the U-Net | macro_F1 | **+0.096 [+0.079, +0.119]** | 1.00 |
-| ensemble vs U-Net | R7_ensemble_unet_rf vs R1_unet_ssl4eo_raw | adding the RF to the U-Net | mIoU | **+0.122 [+0.101, +0.151]** | 1.00 |
-| ensemble vs U-Net | R7_ensemble_unet_rf vs R1_unet_ssl4eo_raw | adding the RF to the U-Net | F1_Marine Debris | **+0.254 [+0.180, +0.333]** | 1.00 |
-| ensemble vs RF | R7_ensemble_unet_rf vs R6_rf | adding the U-Net to the RF | macro_F1 | +0.003 [-0.005, +0.014] | 0.77 |
-| ensemble vs RF | R7_ensemble_unet_rf vs R6_rf | adding the U-Net to the RF | mIoU | +0.004 [-0.006, +0.022] | 0.81 |
-| ensemble vs RF | R7_ensemble_unet_rf vs R6_rf | adding the U-Net to the RF | F1_Marine Debris | +0.002 [-0.027, +0.038] | 0.53 |
+| deep vs RF | R3_unet_scratch_std vs R6_rf | U-Net (from scratch, the ensemble member) vs RF on the same 26 features | macro_F1 | **-0.061 [-0.090, -0.041]** | 0.00 |
+| deep vs RF | R3_unet_scratch_std vs R6_rf | U-Net (from scratch, the ensemble member) vs RF on the same 26 features | mIoU | **-0.078 [-0.116, -0.053]** | 0.00 |
+| deep vs RF | R3_unet_scratch_std vs R6_rf | U-Net (from scratch, the ensemble member) vs RF on the same 26 features | F1_Marine Debris | **-0.218 [-0.281, -0.148]** | 0.00 |
+| ensemble vs U-Net | R7_ensemble_unet_rf vs R3_unet_scratch_std | adding the RF to the U-Net | macro_F1 | **+0.065 [+0.052, +0.095]** | 1.00 |
+| ensemble vs U-Net | R7_ensemble_unet_rf vs R3_unet_scratch_std | adding the RF to the U-Net | mIoU | **+0.084 [+0.070, +0.120]** | 1.00 |
+| ensemble vs U-Net | R7_ensemble_unet_rf vs R3_unet_scratch_std | adding the RF to the U-Net | F1_Marine Debris | **+0.212 [+0.151, +0.283]** | 1.00 |
+| ensemble vs RF | R7_ensemble_unet_rf vs R6_rf | adding the U-Net to the RF | macro_F1 | +0.004 [-0.006, +0.017] | 0.79 |
+| ensemble vs RF | R7_ensemble_unet_rf vs R6_rf | adding the U-Net to the RF | mIoU | +0.006 [-0.009, +0.026] | 0.81 |
+| ensemble vs RF | R7_ensemble_unet_rf vs R6_rf | adding the U-Net to the RF | F1_Marine Debris | -0.007 [-0.040, +0.042] | 0.37 |
 
 ## In the MARIDA paper's 11 classes (run G2b)
 
@@ -155,37 +155,37 @@ Share of |SHAP| per feature group (%), per class; deep models: GradientSHAP, RF:
 
 | group | R1_unet_ssl4eo_raw | R2_unet_ssl4eo_std | R3_unet_scratch_std | R4_segnext_scratch_std | R5_marinext_scratch_std | R6_rf | R7_ensemble_unet_rf |
 |---|---|---|---|---|---|---|---|
-| bands | 12.9 | 78.6 | 20.2 | 23.8 | 25.3 | 21.8 | 18.7 |
-| indices | 42.4 | 10.6 | 53.5 | 34.5 | 34.5 | 30.7 | 34.8 |
-| ratios | 27.0 | 7.3 | 14.6 | 22.2 | 22.6 | 21.1 | 23.2 |
-| GLCM | 17.8 | 3.5 | 11.6 | 19.5 | 17.6 | 26.4 | 23.4 |
+| bands | 12.9 | 78.6 | 20.2 | 23.8 | 25.3 | 21.8 | 21.2 |
+| indices | 42.4 | 10.6 | 53.5 | 34.5 | 34.5 | 30.7 | 39.9 |
+| ratios | 27.0 | 7.3 | 14.6 | 22.2 | 22.6 | 21.1 | 18.5 |
+| GLCM | 17.8 | 3.5 | 11.6 | 19.5 | 17.6 | 26.4 | 20.5 |
 
 ### Marine Debris
 
 | group | R1_unet_ssl4eo_raw | R2_unet_ssl4eo_std | R3_unet_scratch_std | R4_segnext_scratch_std | R5_marinext_scratch_std | R6_rf | R7_ensemble_unet_rf |
 |---|---|---|---|---|---|---|---|
-| bands | 1.2 | 56.2 | 7.3 | 11.2 | 11.3 | 27.4 | 18.2 |
-| indices | 61.2 | 22.3 | 53.2 | 36.6 | 46.7 | 38.8 | 46.6 |
-| ratios | 34.8 | 20.1 | 35.6 | 26.3 | 23.9 | 25.6 | 28.8 |
-| GLCM | 2.9 | 1.4 | 3.9 | 25.9 | 18.1 | 8.2 | 6.3 |
+| bands | 1.2 | 56.2 | 7.3 | 11.2 | 11.3 | 27.4 | 19.4 |
+| indices | 61.2 | 22.3 | 53.2 | 36.6 | 46.7 | 38.8 | 44.6 |
+| ratios | 34.8 | 20.1 | 35.6 | 26.3 | 23.9 | 25.6 | 29.6 |
+| GLCM | 2.9 | 1.4 | 3.9 | 25.9 | 18.1 | 8.2 | 6.5 |
 
 ### Algae/Sargassum
 
 | group | R1_unet_ssl4eo_raw | R2_unet_ssl4eo_std | R3_unet_scratch_std | R4_segnext_scratch_std | R5_marinext_scratch_std | R6_rf | R7_ensemble_unet_rf |
 |---|---|---|---|---|---|---|---|
-| bands | 2.5 | 45.9 | 5.6 | 13.4 | 14.0 | 12.1 | 8.8 |
-| indices | 76.5 | 41.8 | 77.3 | 57.5 | 55.0 | 46.9 | 57.3 |
-| ratios | 15.0 | 8.5 | 9.6 | 13.6 | 13.5 | 38.1 | 30.0 |
-| GLCM | 6.0 | 3.9 | 7.5 | 15.4 | 17.4 | 2.8 | 3.9 |
+| bands | 2.5 | 45.9 | 5.6 | 13.4 | 14.0 | 12.1 | 9.5 |
+| indices | 76.5 | 41.8 | 77.3 | 57.5 | 55.0 | 46.9 | 59.1 |
+| ratios | 15.0 | 8.5 | 9.6 | 13.6 | 13.5 | 38.1 | 26.7 |
+| GLCM | 6.0 | 3.9 | 7.5 | 15.4 | 17.4 | 2.8 | 4.7 |
 
 ### Other
 
 | group | R1_unet_ssl4eo_raw | R2_unet_ssl4eo_std | R3_unet_scratch_std | R4_segnext_scratch_std | R5_marinext_scratch_std | R6_rf | R7_ensemble_unet_rf |
 |---|---|---|---|---|---|---|---|
-| bands | 8.0 | 81.2 | 51.3 | 22.8 | 31.5 | 25.3 | 19.3 |
-| indices | 26.3 | 8.3 | 13.0 | 12.6 | 12.4 | 9.5 | 15.4 |
-| ratios | 16.0 | 5.7 | 11.5 | 11.3 | 11.2 | 7.4 | 10.4 |
-| GLCM | 49.7 | 4.8 | 24.3 | 53.3 | 44.9 | 57.8 | 55.0 |
+| bands | 8.0 | 81.2 | 51.3 | 22.8 | 31.5 | 25.3 | 35.7 |
+| indices | 26.3 | 8.3 | 13.0 | 12.6 | 12.4 | 9.5 | 10.9 |
+| ratios | 16.0 | 5.7 | 11.5 | 11.3 | 11.2 | 7.4 | 9.0 |
+| GLCM | 49.7 | 4.8 | 24.3 | 53.3 | 44.9 | 57.8 | 44.4 |
 
 
 ## Figures

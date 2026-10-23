@@ -14,12 +14,12 @@ architecture: U-Net vs MariNeXt,R3_unet_scratch_std,R5_marinext_scratch_std,"fro
 architecture: MariNeXt vs SegNeXt-T,R5_marinext_scratch_std,R4_segnext_scratch_std,MariNeXt adds stage-1 features (1/4 vs 1/8 output),macro_F1,0.06569550992776518,0.037561451759476075,0.09227812112415033,1.0,True
 architecture: MariNeXt vs SegNeXt-T,R5_marinext_scratch_std,R4_segnext_scratch_std,MariNeXt adds stage-1 features (1/4 vs 1/8 output),mIoU,0.06282260910608228,0.03852226826748669,0.08795940333806135,1.0,True
 architecture: MariNeXt vs SegNeXt-T,R5_marinext_scratch_std,R4_segnext_scratch_std,MariNeXt adds stage-1 features (1/4 vs 1/8 output),F1_Marine Debris,0.18223623937179995,0.08101142639250683,0.26501493130451875,1.0,True
-deep vs RF,R1_unet_ssl4eo_raw,R6_rf,best-setting U-Net vs RF on the same 26 features,macro_F1,-0.09360209230449057,-0.11587844687272772,-0.06906419535543344,0.0,True
-deep vs RF,R1_unet_ssl4eo_raw,R6_rf,best-setting U-Net vs RF on the same 26 features,mIoU,-0.11740434504590436,-0.1432110209224258,-0.08914547176426463,0.0,True
-deep vs RF,R1_unet_ssl4eo_raw,R6_rf,best-setting U-Net vs RF on the same 26 features,F1_Marine Debris,-0.2525464647132747,-0.32895735649856545,-0.1641114599028391,0.0,True
-ensemble vs U-Net,R7_ensemble_unet_rf,R1_unet_ssl4eo_raw,adding the RF to the U-Net,macro_F1,0.09612070586922838,0.07865530733595331,0.11895417438580878,1.0,True
-ensemble vs U-Net,R7_ensemble_unet_rf,R1_unet_ssl4eo_raw,adding the RF to the U-Net,mIoU,0.12180271836167167,0.10065071802282534,0.15115936012411169,1.0,True
-ensemble vs U-Net,R7_ensemble_unet_rf,R1_unet_ssl4eo_raw,adding the RF to the U-Net,F1_Marine Debris,0.25443094387048104,0.17992754009848058,0.3327036144513708,1.0,True
-ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,macro_F1,0.002518613564737815,-0.005051131629232733,0.01392629172464724,0.7675,False
-ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,mIoU,0.004398373315767312,-0.005959602266591776,0.022192773765994607,0.8145,False
-ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,F1_Marine Debris,0.0018844791572063535,-0.0270254894234982,0.03770533874193638,0.5335,False
+deep vs RF,R3_unet_scratch_std,R6_rf,"U-Net (from scratch, the ensemble member) vs RF on the same 26 features",macro_F1,-0.06140004212541805,-0.08972237528178158,-0.040875384203574464,0.0,True
+deep vs RF,R3_unet_scratch_std,R6_rf,"U-Net (from scratch, the ensemble member) vs RF on the same 26 features",mIoU,-0.07763841438488572,-0.11571636739397145,-0.053283345138886926,0.0,True
+deep vs RF,R3_unet_scratch_std,R6_rf,"U-Net (from scratch, the ensemble member) vs RF on the same 26 features",F1_Marine Debris,-0.2182274247491639,-0.28102856766360435,-0.14800134920737393,0.0,True
+ensemble vs U-Net,R7_ensemble_unet_rf,R3_unet_scratch_std,adding the RF to the U-Net,macro_F1,0.06505016557681664,0.051564483168341675,0.09499274372624839,1.0,True
+ensemble vs U-Net,R7_ensemble_unet_rf,R3_unet_scratch_std,adding the RF to the U-Net,mIoU,0.08394382036798287,0.07022999520810982,0.12026282525651735,1.0,True
+ensemble vs U-Net,R7_ensemble_unet_rf,R3_unet_scratch_std,adding the RF to the U-Net,F1_Marine Debris,0.21158084552193945,0.15086907735904512,0.28250744848208453,1.0,True
+ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,macro_F1,0.0036501234513985903,-0.006206089001977324,0.016533200894867785,0.793,False
+ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,mIoU,0.006305405983097145,-0.008510769270363585,0.025972031517472953,0.815,False
+ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,F1_Marine Debris,-0.006646579227224447,-0.03963740426919238,0.04159299400519863,0.3665,False

@@ -1,0 +1,9 @@
+{
+  "epoch": 50,
+  "weights": "ema",
+  "val_macroF1_tta": 0.8477921183336252,
+  "val_F1_Water": 0.9685111101025099,
+  "val_F1_Marine Debris": 0.6573889993373094,
+  "val_F1_Algae/Sargassum": 0.9760978321289605,
+  "val_F1_Other": 0.789170531765721
+}

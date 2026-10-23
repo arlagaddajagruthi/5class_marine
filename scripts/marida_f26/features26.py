@@ -1,6 +1,6 @@
 """
-Step 2 of the MARIDA 26-feature study: the 26 input channels, their scaling, and
-the feature-correlation analysis.
+Step 2 of the 26-feature study (MARIDA or MADOS, `--dataset`): the 26 input
+channels, their scaling, and the feature-correlation analysis.
 
 The 26 channels are every staged-ML feature except the 4 spectral statistics, in
 this order, identical to the staged-ML features at every pixel:
@@ -10,17 +10,21 @@ this order, identical to the staged-ML features at every pixel:
   GLCM (6)      contrast, dissimilarity, homogeneity, energy, correlation, ASM
 
 How a patch is turned into the model input
-  1. read the 11 Rayleigh-corrected bands (MARIDADataset, NaN -> 0, as the staged ML;
-     only 7 of 1,381 patches contain NaN)
+  1. read the 11 Rayleigh-corrected bands, NaN -> 0, as the staged ML (MARIDA:
+     MARIDADataset, only 7 of 1,381 patches contain NaN; MADOS: the stacked band
+     cache of scripts/deeplabv3_resnet50, identical to MADOSDataset, 20/60 m bands
+     nearest-neighbour upsampled to 10 m)
   2. the 5 indices and 4 ratios: src/features/pixel_features.extract_pixel_features at
      every pixel (the function the staged ML used)
   3. the 6 GLCM maps: precomputed by glcm_maps.py (identical to the ML GLCM)
   4. scaling, with statistics from the train split only:
        bands, "raw"  -> reflectance unchanged (SSL4EO pretraining scale)
-       bands, "std"  -> (x - mean) / std with the MARIDA paper's band statistics
+       bands, "std"  -> (x - mean) / std with the dataset paper's band statistics
        other 15      -> clipped to the train 1st-99th percentile, then (x - mean) / std
-  5. training only: the 26 channels and the label are rotated (-90/0/90/180 deg)
-     and flipped together, as in the MARIDA U-Net dataloader. Every feature is
+  5. training only: the 26 channels and the label are rotated and flipped together,
+     as in each paper's dataloader (MARIDA: rotation by -90/0/90/180 deg + random
+     horizontal flip; MADOS: one of h / v / both / no flip, then with p = 0.8 a
+     rotation by k x 90 deg). Every feature is
      per pixel or averaged over the 4 GLCM directions, so these transforms do not
      change the feature values.
 
@@ -28,7 +32,8 @@ Usage (repo root):
   python scripts/marida_f26/features26.py stats        # train statistics -> channel_stats.json, channel_spec.md
   python scripts/marida_f26/features26.py verify       # features == staged-ML features at every annotated pixel
   python scripts/marida_f26/features26.py correlation  # correlation matrices, heatmaps, per-class distributions
-Outputs: outputs/marida_f26/features/
+  (add --dataset MADOS for MADOS)
+Outputs: outputs/<dataset>_f26/features/
 """
 import argparse
 import json
@@ -41,12 +46,14 @@ from torch.utils.data import Dataset
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
-sys.path[:0] = [REPO, os.path.join(REPO, "scripts", "resnet_paper")]
+sys.path[:0] = [HERE, REPO, os.path.join(REPO, "scripts", "resnet_paper")]
+from runs import DATASET, STUDY  # noqa: E402  (reads --dataset)
 from src.datasets.marida import MARIDADataset  # noqa: E402
 from src.features.pixel_features import FEATURE_NAMES, extract_pixel_features  # noqa: E402
 
-DATA = os.path.join(REPO, "data", "MARIDA_5Class")
-OUT = os.path.join(REPO, "outputs", "marida_f26", "features")
+DATA = os.path.join(REPO, "data", f"{DATASET}_5Class")
+OUT = os.path.join(STUDY, "features")
+MADOS_STACK = os.path.join(REPO, "outputs", "deeplabv3_resnet50", "cache")   # MADOS bands stacked once
 GLCM_DIR = os.path.join(OUT, "glcm")
 ML_CACHE = os.path.join(REPO, "outputs", "staged", "balanced_weights", "cache")
 
@@ -74,14 +81,51 @@ FORMULA = {
     **{g: f"GLCM {g[5:]}, grey B4/B3/B2 in [0, 0.15], 17 levels, 13x13 window, d = 1, 4 directions averaged"
        for g in GLCM_NAMES},
 }
-# MARIDA paper band statistics (marine-debris.github.io), as used by every earlier MARIDA model
-BAND_MEAN = np.array([0.05197577, 0.04783991, 0.04056812, 0.03163572, 0.02972606, 0.03457443,
-                      0.03875053, 0.03436435, 0.0392113, 0.02358126, 0.01588816], np.float32)
-BAND_STD = np.array([0.04725893, 0.04743808, 0.04699043, 0.04967381, 0.04946782, 0.06458357,
-                     0.07594915, 0.07120246, 0.08251058, 0.05111466, 0.03524419], np.float32)
+# each paper's band statistics, as used by every earlier model on that dataset:
+# MARIDA marine-debris.github.io, MADOS gkakogeorgiou/mados utils/dataset.py
+_BAND_STATS = {
+    "MARIDA": ([0.05197577, 0.04783991, 0.04056812, 0.03163572, 0.02972606, 0.03457443,
+                0.03875053, 0.03436435, 0.0392113, 0.02358126, 0.01588816],
+               [0.04725893, 0.04743808, 0.04699043, 0.04967381, 0.04946782, 0.06458357,
+                0.07594915, 0.07120246, 0.08251058, 0.05111466, 0.03524419]),
+    "MADOS": ([0.0582676, 0.05223386, 0.04381474, 0.0357083, 0.03412902, 0.03680401,
+               0.03999107, 0.03566642, 0.03965081, 0.0267993, 0.01978944],
+              [0.03240627, 0.03432253, 0.0354812, 0.0375769, 0.03785412, 0.04992323,
+               0.05884482, 0.05545856, 0.06423746, 0.04211187, 0.03019115]),
+}
+BAND_MEAN, BAND_STD = (np.array(v, np.float32) for v in _BAND_STATS[DATASET])
+PATCH = {"MARIDA": 256, "MADOS": 240}[DATASET]
 SPLITS = ["train", "val", "test"]
 CLASS_NAMES = ["Water", "Marine Debris", "Algae/Sargassum", "Other"]
 IDENTITY_STATS = {"p1": [-np.inf] * N_CH, "p99": [np.inf] * N_CH, "mean": [0.0] * N_CH, "std": [1.0] * N_CH}
+
+
+class MadosStack:
+    """MADOS patches from the stacked band cache (outputs/deeplabv3_resnet50/cache, `deeplab.py cache
+    --dataset MADOS`): the same values and masks as src.datasets.mados.MADOSDataset (NaN/inf -> 0), read
+    from one array instead of 11 tif files per patch."""
+
+    def __init__(self, split):
+        self.patch_ids = [ln.strip() for ln in open(os.path.join(DATA, "splits", f"{split}_X.txt")) if ln.strip()]
+        self.X = np.load(os.path.join(MADOS_STACK, f"MADOS_{split}_X.npy"), mmap_mode="r")
+        self.Y = np.load(os.path.join(MADOS_STACK, f"MADOS_{split}_y.npy"), mmap_mode="r")
+        assert len(self.X) == len(self.patch_ids)
+
+    def __len__(self):
+        return len(self.patch_ids)
+
+    def __getitem__(self, i):
+        img = np.nan_to_num(np.array(self.X[i], np.float32), nan=0.0, posinf=0.0, neginf=0.0)
+        return torch.from_numpy(img), torch.from_numpy(self.Y[i].astype(np.int64))
+
+
+def open_split(split):
+    """The dataset's patches of one split: ds[i] -> (11-band image NaN -> 0, mask 0-4), ds.patch_ids."""
+    return MARIDADataset(DATA, split=split) if DATASET == "MARIDA" else MadosStack(split)
+
+
+def glcm_path(split):
+    return os.path.join(GLCM_DIR, f"{DATASET}_{split}_glcm6.npy")
 
 
 def stats_path():
@@ -97,18 +141,19 @@ def patch_features(img, glcm):
 
 
 class MaridaF26(Dataset):
-    """MARIDA patches as (26, H, W) scaled channels + target (classes 1-4 -> 0-3, unlabelled -> -1)."""
+    """Patches of the study's dataset (MARIDA or MADOS; the name is historical) as (26, H, W) scaled
+    channels + target (classes 1-4 -> 0-3, unlabelled -> -1)."""
 
     def __init__(self, split, train, band_scaling, stats=None):
         assert band_scaling in ("raw", "std")
-        self.ds = MARIDADataset(DATA, split=split)
+        self.ds = open_split(split)
         self.ids = self.ds.patch_ids
         self.train, self.band_scaling = train, band_scaling
-        self.glcm = np.load(os.path.join(GLCM_DIR, f"MARIDA_{split}_glcm6.npy"), mmap_mode="r")
+        self.glcm = np.load(glcm_path(split), mmap_mode="r")
         st = stats or json.load(open(stats_path()))
         self.lo, self.hi, self.mu, self.sd = (np.array(st[k], np.float32)[:, None, None]
                                               for k in ("p1", "p99", "mean", "std"))
-        if train:
+        if train and DATASET == "MARIDA":
             from resnet_ml import RandomRotationTransform
             from torchvision import transforms
             self.aug = transforms.Compose([RandomRotationTransform([-90, 0, 90, 180]),
@@ -134,8 +179,16 @@ class MaridaF26(Dataset):
         x = torch.from_numpy(self.scale(x))
         target = torch.from_numpy(mask.astype(np.int64) - 1)
         if self.train:
-            stack = self.aug(torch.cat([x, target[None].float()]))
-            x, target = stack[:-1], stack[-1].round().long()
+            stack = torch.cat([x, target[None].float()])
+            if DATASET == "MARIDA":                                  # MARIDA U-Net dataloader
+                stack = self.aug(stack)
+            else:                                                    # MADOS dataset.py: flip, then p = 0.8 rotation
+                f = [1, 0, -1, 2, 2][np.random.randint(0, 5)]        # (H, W) axis 1 = W, 0 = H, -1 = both, 2 = none
+                if f != 2:
+                    stack = torch.flip(stack, {1: (2,), 0: (1,), -1: (1, 2)}[f])
+                if np.random.random() < 0.8:
+                    stack = torch.rot90(stack, np.random.randint(0, 4), dims=(2, 1))
+            x, target = stack[:-1].contiguous(), stack[-1].round().long()
         return x.float(), target
 
 
@@ -160,27 +213,31 @@ def cmd_stats():
     st = {"channels": CHANNELS, "p1": p1.tolist(), "p99": p99.tolist(), "mean": mean.tolist(), "std": std.tolist(),
           "unclipped": [CHANNELS[k] for k in np.flatnonzero(flat)],
           "note": "train split, 2000 random pixels per patch (all pixels, annotated or not); bands are not "
-                  "clipped (raw: unchanged; std: MARIDA paper mean/std)"}
+                  f"clipped (raw: unchanged; std: {DATASET} paper mean/std)"}
     os.makedirs(OUT, exist_ok=True)
     json.dump(st, open(stats_path(), "w"), indent=2)
 
-    lines = ["# MARIDA 26-channel input specification", "",
+    nan_txt = ("7 of 1,381 patches contain NaN" if DATASET == "MARIDA" else
+               "20/60 m bands nearest-neighbour upsampled to 10 m, as in MADOSDataset")
+    lines = [f"# {DATASET} 26-channel input specification", "",
              "The 26 channels are every staged-ML feature except the 4 spectral statistics, in the model's "
              "input order. Every value is "
-             "computed per pixel from the 11 Rayleigh-corrected bands (NaN → 0, as in the staged ML; 7 of 1,381 "
-             "patches contain NaN), with the same code as the staged ML, so the features equal the RF's "
+             f"computed per pixel from the 11 Rayleigh-corrected bands (NaN → 0, as in the staged ML; {nan_txt}), "
+             "with the same code as the staged ML, so the features equal the RF's "
              "features (checked in `verify_features.json`).", "",
              "Scaling (train-split statistics only):", "",
              "- **bands, raw** (U-Net with SSL4EO weights: R1, G2b): reflectance unchanged, the scale the "
              "SSL4EO encoder was pretrained on (L1C / 10000).",
-             "- **bands, std** (R2, R3, SegNeXt-T, MariNeXt arch.): (x − mean) / std with the MARIDA paper's "
+             f"- **bands, std** (R2, R3, SegNeXt-T, MariNeXt arch.): (x − mean) / std with the {DATASET} paper's "
              "band statistics.",
              "- **the 15 other channels** (all models): clipped to the train 1st–99th percentile, then "
              "(x − mean) / std of the clipped values"
              + (f"; {', '.join(st['unclipped'])} keep their full range because their 1st and 99th "
                 "percentiles are equal." if st["unclipped"] else "."), "",
-             "Augmentation (training only): the 26 channels and the label are rotated by −90/0/90/180° and "
-             "flipped horizontally together. Every feature is per pixel or averaged over the 4 GLCM "
+             "Augmentation (training only): the 26 channels and the label are transformed together, as in the "
+             + ("MARIDA U-Net dataloader (rotation by −90/0/90/180°, random horizontal flip)" if DATASET == "MARIDA"
+                else "MADOS code (one of horizontal / vertical / both / no flip, then with p = 0.8 a rotation by "
+                     "k × 90°; VSCP copy-paste on top, in train.py)") + ". Every feature is per pixel or averaged over the 4 GLCM "
              "directions, so these transforms do not change the feature values.", "",
              "| # | Channel | Group | Definition | 1st pct | 99th pct | mean | std |",
              "|---|---|---|---|---|---|---|---|"]
@@ -193,8 +250,8 @@ def cmd_stats():
 
 def ml_features(split):
     """The 26 staged-ML features of every annotated pixel of a split (staged caches), and the labels 1-4."""
-    z = np.load(os.path.join(ML_CACHE, f"MARIDA_{split}_all_seed42_f24.npz"))
-    g = np.load(os.path.join(ML_CACHE, f"MARIDA_{split}_all_glcm6.npy"))
+    z = np.load(os.path.join(ML_CACHE, f"{DATASET}_{split}_all_seed42_f24.npz"))
+    g = np.load(os.path.join(ML_CACHE, f"{DATASET}_{split}_all_glcm6.npy"))
     return np.hstack([z["X"][:, SPECTRAL_IDX], g]), z["y"]
 
 
@@ -252,7 +309,7 @@ def cmd_correlation():
         plt.savefig(path, dpi=130)
         plt.close()
 
-    summary = ["# Feature correlation, MARIDA train split (annotated pixels)", "",
+    summary = [f"# Feature correlation, {DATASET} train split (annotated pixels)", "",
                f"{len(df):,} pixels with the 26 features. Heatmaps are ordered by hierarchical "
                "clustering on 1 − |Spearman ρ| (the all-classes order is used for every heatmap, so they can be "
                "compared), tick colours show the feature group, and every cell shows ρ. Strongly correlated "
@@ -331,7 +388,7 @@ def cmd_correlation():
             b.set_alpha(0.6)
         ax.set_xticks(range(1, 5), ["water", "debris", "algae", "other"], fontsize=9)
         ax.set_title(f"{c} ({GROUP_OF[c]})", fontsize=11, color=GROUP_COLORS[GROUP_OF[c]])
-    fig.suptitle("Per-class distribution of each feature, MARIDA train (clipped to the 1st-99th percentile; "
+    fig.suptitle(f"Per-class distribution of each feature, {DATASET} train (clipped to the 1st-99th percentile; "
                  "line = median)", fontsize=14)
     plt.tight_layout(rect=(0, 0, 1, 0.98))
     plt.savefig(os.path.join(out, "distributions.png"), dpi=100)

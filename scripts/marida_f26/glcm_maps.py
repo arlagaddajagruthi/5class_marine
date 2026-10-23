@@ -1,13 +1,14 @@
 """
-Step 1 of the MARIDA 26-feature study: full-image GLCM texture maps.
+Step 1 of the 26-feature study (MARIDA or MADOS, `--dataset`): full-image GLCM texture maps.
 
 The deep models need the 6 GLCM features at every pixel of every patch, not only
 at the annotated pixels used by the staged ML. This script runs the staged-ML
 GLCM kernel (scripts/staged_ml/glcm_features.py, MARIDA reference settings:
 B4/B3/B2 clipped to [0, 0.15], grey, 17 levels, 13 x 13 window with reflect
-padding, distance 1, 0/45/90/135 deg averaged) on all 256 x 256 pixels.
+padding, distance 1, 0/45/90/135 deg averaged) on every pixel (MARIDA 256 x 256,
+MADOS 240 x 240).
 
-The image is read exactly as the staged ML read it (MARIDADataset: NaN -> 0), so
+The image is read exactly as the staged ML read it (features26.open_split: NaN -> 0), so
 the maps equal the ML GLCM features at the annotated pixels; `--verify` checks
 this against the staged cache, pixel by pixel.
 
@@ -19,8 +20,9 @@ Usage (repo root):
   python scripts/marida_f26/glcm_maps.py                # all splits
   python scripts/marida_f26/glcm_maps.py --verify       # compare with the staged ML cache
   python scripts/marida_f26/glcm_maps.py --figure       # example maps for one test patch
-Output: outputs/marida_f26/features/glcm/MARIDA_<split>_glcm6.npy
-        float32 (n_patches, 6, 256, 256), patches in splits/<split>_X.txt order (~2.2 GB in total)
+  (add --dataset MADOS for MADOS)
+Output: outputs/<dataset>_f26/features/glcm/<DATASET>_<split>_glcm6.npy
+        float32 (n_patches, 6, H, W), patches in splits/<split>_X.txt order (MARIDA ~2.2 GB, MADOS ~3.9 GB)
 """
 import argparse
 import json
@@ -32,19 +34,19 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
-sys.path[:0] = [REPO, os.path.join(REPO, "scripts", "staged_ml")]
+sys.path[:0] = [HERE, REPO, os.path.join(REPO, "scripts", "staged_ml")]
+import features26 as F26  # noqa: E402  (reads --dataset through runs.py)
 from glcm_features import GLCM_NAMES, OFFSETS, LEVELS, WIN, _glcm_at, quantise  # noqa: E402
-from src.datasets.marida import MARIDADataset  # noqa: E402
 
-DATA = os.path.join(REPO, "data", "MARIDA_5Class")
-OUT = os.path.join(REPO, "outputs", "marida_f26", "features", "glcm")
+DATASET = F26.DATASET
+OUT = F26.GLCM_DIR
 ML_CACHE = os.path.join(REPO, "outputs", "staged", "balanced_weights", "cache")
 SPLITS = ["train", "val", "test"]
 CLASSES = [1, 2, 3, 4]
 
 
 def map_path(split):
-    return os.path.join(OUT, f"MARIDA_{split}_glcm6.npy")
+    return F26.glcm_path(split)
 
 
 def glcm_map(img):
@@ -58,7 +60,7 @@ def glcm_map(img):
 
 
 def build(split, limit=None):
-    ds = MARIDADataset(DATA, split=split)
+    ds = F26.open_split(split)
     n = len(ds) if limit is None else min(limit, len(ds))
     path = map_path(split)
     if limit is None and os.path.exists(path):
@@ -88,7 +90,7 @@ def verify():
     """Annotated pixels of the maps vs the staged ML cache (same pixel order as glcm_features.split_features)."""
     report = {}
     for split in SPLITS:
-        ds = MARIDADataset(DATA, split=split)
+        ds = F26.open_split(split)
         G = np.load(map_path(split), mmap_mode="r")
         rows = []
         for i in range(len(ds)):
@@ -97,7 +99,7 @@ def verify():
             if len(sel):
                 rows.append(G[i].reshape(6, -1)[:, sel].T)
         ours = np.vstack(rows)
-        ref = np.load(os.path.join(ML_CACHE, f"MARIDA_{split}_all_glcm6.npy"))
+        ref = np.load(os.path.join(ML_CACHE, f"{DATASET}_{split}_all_glcm6.npy"))
         if ours.shape != ref.shape:
             raise SystemExit(f"{split}: shape {ours.shape} vs staged cache {ref.shape}")
         diff = np.abs(ours - ref).max(axis=0)
@@ -115,7 +117,7 @@ def figure():
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    ds = MARIDADataset(DATA, split="test")
+    ds = F26.open_split("test")
     G = np.load(map_path("test"), mmap_mode="r")
     # the test patch with the most debris pixels
     idx = int(np.argmax([(ds[i][1].numpy() == 2).sum() for i in range(len(ds))]))
@@ -150,7 +152,7 @@ if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     if a.time:
         s = build("train", limit=a.time)
-        total = sum(len(MARIDADataset(DATA, split=sp)) for sp in SPLITS)
+        total = sum(len(F26.open_split(sp)) for sp in SPLITS)
         print(f"{s:.2f} s/patch -> about {s * total / 3600:.1f} h for all {total} patches")
     elif a.verify:
         raise SystemExit(0 if verify() < 1e-5 else 1)

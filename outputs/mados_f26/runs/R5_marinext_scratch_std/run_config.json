@@ -1,0 +1,111 @@
+{
+  "run": "R5_marinext_scratch_std",
+  "title": "MariNeXt architecture, from scratch, standardised bands",
+  "dataset": "MADOS",
+  "model": "marinext",
+  "init": "scratch",
+  "bands": "std",
+  "classes": 4,
+  "class_names": [
+    "Water",
+    "Marine Debris",
+    "Algae/Sargassum",
+    "Other"
+  ],
+  "channels": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "NDVI",
+    "NDWI",
+    "FAI",
+    "FDI",
+    "NDMI",
+    "red/green",
+    "nir/red",
+    "nir/green",
+    "swir1/nir",
+    "glcm_contrast",
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    "glcm_energy",
+    "glcm_correlation",
+    "glcm_asm"
+  ],
+  "groups": {
+    "bands": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7",
+      "B8",
+      "B8A",
+      "B11",
+      "B12"
+    ],
+    "indices": [
+      "NDVI",
+      "NDWI",
+      "FAI",
+      "FDI",
+      "NDMI"
+    ],
+    "ratios": [
+      "red/green",
+      "nir/red",
+      "nir/green",
+      "swir1/nir"
+    ],
+    "GLCM": [
+      "glcm_contrast",
+      "glcm_dissimilarity",
+      "glcm_homogeneity",
+      "glcm_energy",
+      "glcm_correlation",
+      "glcm_asm"
+    ]
+  },
+  "recipe": {
+    "epochs": 80,
+    "batch": 5,
+    "lr": 0.0002,
+    "decay": 0.0,
+    "lr_steps": [
+      45,
+      65
+    ],
+    "gamma": 0.1,
+    "weight_param": 1.03,
+    "seed": 0,
+    "augmentation": "h / v / both / no flip, then p = 0.8 rotation by k x 90 (MADOS code)",
+    "vscp": true,
+    "ema": true,
+    "ema_decay": 0.999,
+    "drop_last": true,
+    "tta": "soft, 8 views (4 rotations x 2 flips), softmax averaged",
+    "select": "best validation macro F1 of the EMA model with soft TTA"
+  },
+  "train_annotated_pixels": {
+    "Water": 591224,
+    "Marine Debris": 2561,
+    "Algae/Sargassum": 4397,
+    "Other": 163705
+  },
+  "ce_weight": {
+    "Water": 1.6917,
+    "Marine Debris": 30.472,
+    "Algae/Sargassum": 28.4525,
+    "Other": 4.5656
+  }
+}

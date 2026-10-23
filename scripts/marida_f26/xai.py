@@ -1,5 +1,5 @@
 """
-Explainability for the MARIDA 26-feature study: GradientSHAP (all 26 features and
+Explainability for the 26-feature study (MARIDA or MADOS, `--dataset`): GradientSHAP (all 26 features and
 the 4 feature groups, per class) and Seg-Grad-CAM figures.
 
 What is explained (the same for every model)
@@ -35,7 +35,8 @@ Usage (repo root):
   python scripts/marida_f26/xai.py --run R1            # one deep model
   python scripts/marida_f26/xai.py --run R6_rf         # RF (needs: pip install shap)
   python scripts/marida_f26/xai.py --run R7_ensemble   # after its members
-Outputs: outputs/marida_f26/xai/<run>/
+  (add --dataset MADOS for MADOS)
+Outputs: outputs/<dataset>_f26/xai/<run>/
 """
 import argparse
 import json
@@ -56,7 +57,7 @@ REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 sys.path.insert(0, HERE)
 import features26 as F  # noqa: E402
 
-ROOT = os.path.join(REPO, "outputs", "marida_f26")
+ROOT = F.STUDY
 RUNS = os.path.join(ROOT, "runs")
 XAI = os.path.join(ROOT, "xai")
 NAMES = F.CLASS_NAMES

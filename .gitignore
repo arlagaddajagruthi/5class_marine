@@ -47,3 +47,6 @@ outputs/marida_f26/features/glcm/*.npy
 paper/
 # MARIDA 26-feature study: per-run test probability maps (~190 MB each)
 outputs/marida_f26/runs/*/prob_maps_test.npy
+
+outputs/mados_f26/runs/*/prob_maps_test.npy
+outputs/mados_f26/features/glcm/*.npy

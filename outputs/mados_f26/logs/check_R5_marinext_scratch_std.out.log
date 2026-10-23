@@ -1,0 +1,1 @@
+check R5_marinext_scratch_std: 0.66 s/batch, peak GPU 1.18 GiB, loss 1.184; 286 batches/epoch -> 3.1 min train + 0.13 s/patch TTA val x 642 = 1.4 min -> ~4.5 min/epoch, ~6.0 h for 80 epochs

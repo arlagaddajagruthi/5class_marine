@@ -1,5 +1,5 @@
 """
-Detailed metrics, stored files and graphs for one run of the MARIDA 26-feature study.
+Detailed metrics, stored files and graphs for one run of the 26-feature study (MARIDA or MADOS).
 
 run_report(run_dir) reads what train.py test (or rf_ensemble.py) saved:
   run_config.json, pred_val.npz, pred_test.npz (labels, class probabilities and
@@ -218,8 +218,7 @@ def fig_scenes(ps, names, figs, split):
 def example_patches(run_cfg, n_each=2):
     """Fixed test patches for prediction panels: most pixels of each non-water class (same for every run)."""
     import features26 as F
-    from src.datasets.marida import MARIDADataset
-    ds = MARIDADataset(F.DATA, split="test")
+    ds = F.open_split("test")
     counts = np.array([[(ds[i][1].numpy() == c).sum() for c in (1, 2, 3, 4)] for i in range(len(ds))])
     picks = []
     for c in (1, 2, 3):                                  # debris, algae, other
@@ -239,8 +238,7 @@ def fig_panels(run, figs, names):
     cache = os.path.join(os.path.dirname(os.path.dirname(run)), "example_patches.json")
     if os.path.exists(cache):
         picks = json.load(open(cache))
-        from src.datasets.marida import MARIDADataset
-        ds = MARIDADataset(F.DATA, split="test")
+        ds = F.open_split("test")
     else:
         picks, ds = example_patches(None)
         json.dump(picks, open(cache, "w"))
@@ -288,11 +286,12 @@ def fig_panels(run, figs, names):
 # ------------------------------------------------------------------- report ---
 def run_report(run):
     cfg = json.load(open(os.path.join(run, "run_config.json")))
+    os.environ.setdefault("F26_DATASET", cfg.get("dataset", "MARIDA"))   # for features26 when run on its own
     names = cfg["class_names"]
     figs = os.path.join(run, "figures")
     os.makedirs(figs, exist_ok=True)
     title = cfg.get("title", f"{cfg['model']} ({cfg['init']} init, {cfg['bands']} bands)")
-    lines = [f"# Run {cfg['run']}: {title}, MARIDA, {len(names)} classes", "",
+    lines = [f"# Run {cfg['run']}: {title}, {cfg.get('dataset', 'MARIDA')}, {len(names)} classes", "",
              f"Inputs: {len(cfg['channels'])} channels ({', '.join(cfg['channels'])}). "
              "See `architecture.md` for the model and how the features are fed in.", ""]
     if os.path.exists(os.path.join(run, "best_epoch.json")):

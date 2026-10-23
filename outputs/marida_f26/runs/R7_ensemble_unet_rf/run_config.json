@@ -75,14 +75,14 @@
       "glcm_asm"
     ]
   },
-  "title": "U-Net (R1_unet_ssl4eo_raw) + Random Forest (R6_rf) ensemble",
-  "notes": "p = w \u00b7 p_U-Net + (1 \u2212 w) \u00b7 p_RF with w = 0.35, chosen by validation macro F1 over w = 0, 0.05, \u2026, 1 (`weight_curve.csv`).\n\n![weight curve](figures/weight_curve.png)",
+  "title": "U-Net (R3_unet_scratch_std) + Random Forest (R6_rf) ensemble",
+  "notes": "p = w \u00b7 p_U-Net + (1 \u2212 w) \u00b7 p_RF with w = 0.40, chosen by validation macro F1 over w = 0, 0.05, \u2026, 1 (`weight_curve.csv`).\n\n![weight curve](figures/weight_curve.png)",
   "recipe": {
     "epochs": "-"
   },
-  "w_unet": 0.35,
+  "w_unet": 0.4,
   "members": [
-    "R1_unet_ssl4eo_raw",
+    "R3_unet_scratch_std",
     "R6_rf"
   ]
 }

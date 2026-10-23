@@ -1,0 +1,13 @@
+# Architecture and input pipeline: run R3_unet_scratch_std
+
+**Model**: U-Net (segmentation_models_pytorch) with a ResNet-50 encoder: 5 encoder stages (strides 2-32), a decoder of 5 upsampling blocks (256, 128, 64, 32, 16 channels) with skip connections from every encoder stage, and a 3x3 convolution to the class scores at full resolution.
+
+**Initialisation**: All weights randomly initialised (PyTorch / timm defaults); trained from scratch.
+
+**Parameters**: 32,593,668 (32,593,668 trainable).
+
+**Output**: 4 class scores per pixel (Water, Marine Debris, Algae/Sargassum, Other); softmax → probabilities; prediction = argmax. Unlabelled pixels are ignored by the loss and the scores.
+
+## How the features are fed in
+
+-> C:\PROJECT\5class_marine_pollution\outputs\mados_f26\runs\R3_unet_scratch_std/architecture.md, model_summary.txt

@@ -1,10 +1,15 @@
-# MARIDA, 26 features: deep models, RF, ensemble and explainability
+# MARIDA and MADOS, 26 features: deep models, RF, ensemble and explainability
 
 U-Net, SegNeXt-T and the MariNeXt architecture trained on MARIDA with 26 input
 channels, compared with a Random Forest on the same features, their ensemble and
 the MARIDA paper, with SHAP feature importance (per feature and per group, per
 class) and Seg-Grad-CAM. Single seed, no VSCP, 4 classes (Water, Marine Debris,
 Algae/Sargassum, Other) unless stated.
+
+Every script takes `--dataset MARIDA|MADOS` (default MARIDA; the runner: `-Dataset MADOS`).
+Outputs: `outputs/marida_f26/` and `outputs/mados_f26/`. MADOS runs: R3, R4, R5, R6, R7.
+The deep-learning comparison of both datasets (R3, R4, R5, R7, layout of the staged-ML
+comparison): `dl_comparison_f26.py` -> `outputs/dl_comparison_f26/comparison.md`.
 
 ## Input features (26, `features26.py`)
 
@@ -32,12 +37,16 @@ Run folders carry the model name (`runs.py`); the runner's steps use the short I
 | R4 (`R4_segnext_scratch_std`) | SegNeXt-T | scratch | standardised | |
 | R5 (`R5_marinext_scratch_std`) | MariNeXt architecture | scratch | standardised | |
 | R6 (`R6_rf`) | Random Forest (staged-ML settings) | – | unscaled | ML on the same 26 features |
-| R7 (`R7_ensemble_unet_rf`) | R1 + R6 | – | – | w chosen on validation |
+| R7 (`R7_ensemble_unet_rf`) | R3 + R6 (from-scratch U-Net + RF) | – | – | w chosen on validation |
 | G2b (`G2b_unet_ssl4eo_raw_11class`) | U-Net as R1 | SSL4EO-S12 | raw | the MARIDA paper's 11 classes, for a direct comparison |
 
-Recipe (all deep runs): the MARIDA U-Net recipe, 45 epochs, Adam 2e-4, batch 5,
-LR / 10 at epoch 40, weighted CE 1/ln(1.03 + p), rotation + flip augmentation,
-checkpoint = best validation macro F1 with soft 8-view TTA, seed 0.
+Recipe: each dataset's paper. MARIDA: the MARIDA U-Net recipe, 45 epochs, Adam 2e-4,
+batch 5, LR / 10 at epoch 40, weighted CE 1/ln(1.03 + p), rotation + flip augmentation,
+no VSCP. MADOS: the MADOS/MariNeXt recipe, 80 epochs, Adam 2e-4, batch 5, LR / 10 at
+epochs 45 and 65, the same weighted CE, flip + rotation augmentation, VSCP copy-paste,
+EMA of the weights (decay 0.999). Checkpoint = best validation macro F1 with soft
+8-view TTA (MADOS: of the EMA model), seed 0. The earlier R1 + RF ensemble is kept in
+`outputs/marida_f26/runs/R7_ensemble_unet_rf_R1/` for reference only.
 
 ## Run it, one step at a time (repo root)
 

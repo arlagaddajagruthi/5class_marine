@@ -1,0 +1,1 @@
+check R3_unet_scratch_std: 0.70 s/batch, peak GPU 1.47 GiB, loss 1.096; 286 batches/epoch -> 3.3 min train + 0.12 s/patch TTA val x 642 = 1.3 min -> ~4.6 min/epoch, ~6.2 h for 80 epochs

@@ -1,0 +1,230 @@
+# Feature correlation, MADOS train split (annotated pixels)
+
+761,887 pixels with the 26 features. Heatmaps are ordered by hierarchical clustering on 1 − |Spearman ρ| (the all-classes order is used for every heatmap, so they can be compared), tick colours show the feature group, and every cell shows ρ. Strongly correlated features carry largely the same information, so SHAP can split credit between them; read feature importance together with these clusters and with the grouped results.
+
+## all classes: 33 feature pairs with |Spearman ρ| ≥ 0.90
+
+| Feature | Feature | ρ |
+|---|---|---|
+| glcm_energy | glcm_asm | +1.000 |
+| NDWI | nir/green | -1.000 |
+| NDMI | swir1/nir | -1.000 |
+| NDVI | nir/red | +1.000 |
+| glcm_dissimilarity | glcm_homogeneity | -0.999 |
+| glcm_contrast | glcm_dissimilarity | +0.998 |
+| B6 | B7 | +0.998 |
+| glcm_contrast | glcm_homogeneity | -0.996 |
+| B11 | B12 | +0.991 |
+| B6 | B8 | +0.990 |
+| B4 | B5 | +0.989 |
+| B8 | B8A | +0.988 |
+| B7 | B8 | +0.988 |
+| B6 | B8A | +0.987 |
+| B7 | B8A | +0.985 |
+| B5 | B7 | +0.983 |
+| B5 | B6 | +0.980 |
+| glcm_homogeneity | glcm_energy | +0.976 |
+| glcm_homogeneity | glcm_asm | +0.976 |
+| glcm_dissimilarity | glcm_energy | -0.974 |
+| glcm_dissimilarity | glcm_asm | -0.974 |
+| glcm_contrast | glcm_energy | -0.970 |
+| glcm_contrast | glcm_asm | -0.970 |
+| B4 | B7 | +0.963 |
+| B5 | B8 | +0.963 |
+| B4 | B6 | +0.959 |
+| B3 | B4 | +0.957 |
+| B5 | B8A | +0.949 |
+| B4 | B8 | +0.945 |
+| B1 | B2 | +0.941 |
+| B3 | B5 | +0.934 |
+| B4 | B8A | +0.924 |
+| B2 | B3 | +0.905 |
+
+## Water: 33 feature pairs with |Spearman ρ| ≥ 0.90
+
+| Feature | Feature | ρ |
+|---|---|---|
+| glcm_energy | glcm_asm | +1.000 |
+| NDWI | nir/green | -1.000 |
+| NDMI | swir1/nir | -1.000 |
+| NDVI | nir/red | +1.000 |
+| glcm_dissimilarity | glcm_homogeneity | -1.000 |
+| glcm_contrast | glcm_dissimilarity | +0.999 |
+| glcm_contrast | glcm_homogeneity | -0.999 |
+| B6 | B7 | +0.998 |
+| B6 | B8 | +0.995 |
+| B4 | B5 | +0.994 |
+| B7 | B8 | +0.993 |
+| B8 | B8A | +0.991 |
+| B11 | B12 | +0.990 |
+| B6 | B8A | +0.988 |
+| B7 | B8A | +0.986 |
+| B5 | B7 | +0.985 |
+| B5 | B6 | +0.982 |
+| glcm_homogeneity | glcm_energy | +0.974 |
+| glcm_homogeneity | glcm_asm | +0.974 |
+| glcm_dissimilarity | glcm_energy | -0.973 |
+| glcm_dissimilarity | glcm_asm | -0.973 |
+| B5 | B8 | +0.972 |
+| glcm_contrast | glcm_asm | -0.971 |
+| glcm_contrast | glcm_energy | -0.971 |
+| B4 | B7 | +0.969 |
+| B4 | B6 | +0.965 |
+| B1 | B2 | +0.957 |
+| B5 | B8A | +0.956 |
+| B3 | B4 | +0.956 |
+| B4 | B8 | +0.955 |
+| B4 | B8A | +0.935 |
+| B3 | B5 | +0.935 |
+| B2 | B3 | +0.917 |
+
+## Marine Debris: 40 feature pairs with |Spearman ρ| ≥ 0.90
+
+| Feature | Feature | ρ |
+|---|---|---|
+| glcm_energy | glcm_asm | +1.000 |
+| NDWI | nir/green | -1.000 |
+| NDMI | swir1/nir | -1.000 |
+| NDVI | nir/red | +1.000 |
+| B7 | B8A | +0.986 |
+| B6 | B7 | +0.985 |
+| glcm_dissimilarity | glcm_homogeneity | -0.984 |
+| B5 | B6 | +0.982 |
+| B6 | B8A | +0.981 |
+| B5 | B7 | +0.979 |
+| B11 | B12 | +0.978 |
+| B3 | B4 | +0.976 |
+| B5 | B8A | +0.974 |
+| glcm_contrast | glcm_dissimilarity | +0.971 |
+| B4 | B8 | +0.969 |
+| B2 | B3 | +0.962 |
+| B3 | B8 | +0.947 |
+| B8 | B8A | +0.940 |
+| B4 | B5 | +0.939 |
+| B4 | B7 | +0.938 |
+| B4 | B6 | +0.938 |
+| B7 | B8 | +0.936 |
+| glcm_homogeneity | glcm_energy | +0.936 |
+| glcm_homogeneity | glcm_asm | +0.936 |
+| B2 | B4 | +0.935 |
+| B4 | B8A | +0.933 |
+| B6 | B8 | +0.932 |
+| B3 | B5 | +0.931 |
+| B8 | FDI | +0.929 |
+| B3 | B6 | +0.927 |
+| B5 | B8 | +0.926 |
+| B3 | B7 | +0.925 |
+| glcm_contrast | glcm_homogeneity | -0.920 |
+| B2 | B8 | +0.917 |
+| B3 | B8A | +0.915 |
+| B2 | B5 | +0.912 |
+| B2 | B7 | +0.908 |
+| B2 | B6 | +0.908 |
+| B4 | FDI | +0.905 |
+| B8A | B11 | +0.903 |
+
+## Algae/Sargassum: 46 feature pairs with |Spearman ρ| ≥ 0.90
+
+| Feature | Feature | ρ |
+|---|---|---|
+| glcm_energy | glcm_asm | +1.000 |
+| NDWI | nir/green | -1.000 |
+| NDVI | nir/red | +1.000 |
+| NDMI | swir1/nir | -1.000 |
+| glcm_dissimilarity | glcm_homogeneity | -0.998 |
+| B7 | B8A | +0.991 |
+| B6 | B7 | +0.986 |
+| glcm_contrast | glcm_dissimilarity | +0.985 |
+| FAI | FDI | +0.985 |
+| B6 | B8A | +0.982 |
+| B5 | B6 | +0.981 |
+| B5 | B7 | +0.979 |
+| B3 | B4 | +0.979 |
+| B8 | FAI | +0.974 |
+| B8 | FDI | +0.974 |
+| glcm_contrast | glcm_homogeneity | -0.973 |
+| B5 | B8A | +0.972 |
+| NDWI | nir/red | -0.967 |
+| nir/red | nir/green | +0.967 |
+| NDVI | NDWI | -0.967 |
+| NDVI | nir/green | +0.967 |
+| FAI | nir/green | +0.955 |
+| NDWI | FAI | -0.955 |
+| B8 | B8A | +0.949 |
+| B7 | B8 | +0.948 |
+| B11 | B12 | +0.948 |
+| B8A | FDI | +0.947 |
+| B7 | FDI | +0.946 |
+| glcm_homogeneity | glcm_asm | +0.945 |
+| glcm_homogeneity | glcm_energy | +0.945 |
+| B6 | B8 | +0.940 |
+| glcm_dissimilarity | glcm_asm | -0.940 |
+| glcm_dissimilarity | glcm_energy | -0.940 |
+| B6 | FDI | +0.934 |
+| FDI | nir/green | +0.933 |
+| NDWI | FDI | -0.933 |
+| B5 | B8 | +0.928 |
+| B8A | FAI | +0.918 |
+| B7 | FAI | +0.915 |
+| B5 | FDI | +0.913 |
+| FAI | nir/red | +0.912 |
+| NDVI | FAI | +0.912 |
+| glcm_contrast | glcm_asm | -0.911 |
+| glcm_contrast | glcm_energy | -0.911 |
+| B8 | nir/green | +0.903 |
+| B8 | NDWI | -0.903 |
+
+## Other: 34 feature pairs with |Spearman ρ| ≥ 0.90
+
+| Feature | Feature | ρ |
+|---|---|---|
+| glcm_energy | glcm_asm | +1.000 |
+| NDWI | nir/green | -1.000 |
+| NDMI | swir1/nir | -1.000 |
+| NDVI | nir/red | +1.000 |
+| B6 | B7 | +0.994 |
+| B7 | B8A | +0.993 |
+| B5 | B6 | +0.993 |
+| B6 | B8A | +0.990 |
+| B5 | B7 | +0.990 |
+| glcm_contrast | glcm_dissimilarity | +0.989 |
+| B5 | B8A | +0.985 |
+| B11 | B12 | +0.985 |
+| glcm_dissimilarity | glcm_homogeneity | -0.983 |
+| B4 | B8 | +0.975 |
+| B4 | B5 | +0.974 |
+| B8 | B8A | +0.973 |
+| B7 | B8 | +0.972 |
+| B6 | B8 | +0.971 |
+| B4 | B6 | +0.971 |
+| B4 | B7 | +0.969 |
+| B5 | B8 | +0.969 |
+| B2 | B3 | +0.966 |
+| B4 | B8A | +0.964 |
+| glcm_contrast | glcm_homogeneity | -0.955 |
+| B3 | B4 | +0.950 |
+| glcm_homogeneity | glcm_energy | +0.940 |
+| glcm_homogeneity | glcm_asm | +0.940 |
+| B3 | B5 | +0.933 |
+| B3 | B8 | +0.929 |
+| B3 | B6 | +0.921 |
+| B3 | B7 | +0.918 |
+| B2 | B4 | +0.915 |
+| B3 | B8A | +0.910 |
+| B2 | B5 | +0.901 |
+
+## Grouped: mean |Spearman ρ| within and between groups (all classes)
+
+| | bands | indices | ratios | GLCM |
+|---|---|---|---|---|
+| bands | 0.78 | 0.41 | 0.46 | 0.35 |
+| indices | 0.41 | 0.45 | 0.53 | 0.25 |
+| ratios | 0.46 | 0.53 | 0.45 | 0.34 |
+| GLCM | 0.35 | 0.25 | 0.34 | 0.80 |
+
+## Files
+
+- `spearman_<class>.png/.csv`, `pearson_<class>.png/.csv`: all classes and each class (water, marine_debris, algae, other)
+- `spearman_groups.png/.csv`: group-level correlation
+- `distributions.png`: per-class distribution of every feature
+

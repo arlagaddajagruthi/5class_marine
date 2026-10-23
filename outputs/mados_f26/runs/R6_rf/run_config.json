@@ -1,0 +1,89 @@
+{
+  "run": "R6_rf",
+  "dataset": "MADOS",
+  "model": "rf",
+  "init": "-",
+  "bands": "unscaled",
+  "classes": 4,
+  "class_names": [
+    "Water",
+    "Marine Debris",
+    "Algae/Sargassum",
+    "Other"
+  ],
+  "channels": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "NDVI",
+    "NDWI",
+    "FAI",
+    "FDI",
+    "NDMI",
+    "red/green",
+    "nir/red",
+    "nir/green",
+    "swir1/nir",
+    "glcm_contrast",
+    "glcm_dissimilarity",
+    "glcm_homogeneity",
+    "glcm_energy",
+    "glcm_correlation",
+    "glcm_asm"
+  ],
+  "groups": {
+    "bands": [
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7",
+      "B8",
+      "B8A",
+      "B11",
+      "B12"
+    ],
+    "indices": [
+      "NDVI",
+      "NDWI",
+      "FAI",
+      "FDI",
+      "NDMI"
+    ],
+    "ratios": [
+      "red/green",
+      "nir/red",
+      "nir/green",
+      "swir1/nir"
+    ],
+    "GLCM": [
+      "glcm_contrast",
+      "glcm_dissimilarity",
+      "glcm_homogeneity",
+      "glcm_energy",
+      "glcm_correlation",
+      "glcm_asm"
+    ]
+  },
+  "title": "Random Forest on the 26 features",
+  "notes": "Random Forest as in the staged ML: 100 trees, seed 42, log class weights (Water 1.692, Marine Debris 30.472, Algae/Sargassum 28.453, Other 4.566) as sample weights, all 761,887 annotated train pixels, fitted in 206 s. Impurity importance in `impurity_importance.csv` (SHAP in the XAI step).",
+  "recipe": {
+    "epochs": "-"
+  },
+  "ce_weight": {
+    "Water": 1.6917,
+    "Marine Debris": 30.472,
+    "Algae/Sargassum": 28.4525,
+    "Other": 4.5656
+  }
+}

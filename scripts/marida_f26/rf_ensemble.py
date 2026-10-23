@@ -1,19 +1,20 @@
 """
-MARIDA 26-feature study: R6 Random Forest on the same 26 features, and R7 the
+26-feature study (MARIDA or MADOS, `--dataset`): R6 Random Forest on the same 26 features, and R7 the
 U-Net + RF probability ensemble.
 
 R6  Random Forest exactly as the staged ML (scripts/staged_ml/common.py): 100 trees,
     seed 42, log class weights 1/ln(1.03 + p_c) as sample weights, trained on every
-    annotated train pixel (358,442) with the 26 features (staged caches, identical
+    annotated train pixel (MARIDA 358,442, MADOS 761,887) with the 26 features (staged caches, identical
     to features26.py). It predicts val/test pixels in the same order as the deep
     models, plus full probability maps of the test patches.
 R7  p = w * p_U-Net + (1 - w) * p_RF, w in {0, 0.05, ..., 1} chosen by validation
-    macro F1 (the test split is used only for the report). U-Net = run R1 by default.
+    macro F1 (the test split is used only for the report). U-Net = run R3 (from scratch) by default.
 
-Usage (repo root), after R1 has been tested:
+Usage (repo root), after R3 has been tested:
   python scripts/marida_f26/rf_ensemble.py rf
-  python scripts/marida_f26/rf_ensemble.py ensemble [--unet R1]
-Outputs: outputs/marida_f26/runs/R6_rf/, outputs/marida_f26/runs/R7_ensemble_unet_rf/ (same files as the deep runs)
+  python scripts/marida_f26/rf_ensemble.py ensemble [--unet R3]
+  (add --dataset MADOS for MADOS)
+Outputs: outputs/<dataset>_f26/runs/R6_rf/, .../R7_ensemble_unet_rf/ (same files as the deep runs)
 """
 import argparse
 import json
@@ -31,12 +32,12 @@ import features26 as F  # noqa: E402
 import report  # noqa: E402
 from runs import name  # noqa: E402
 
-RUNS = os.path.join(REPO, "outputs", "marida_f26", "runs")
+RUNS = os.path.join(F.STUDY, "runs")
 NAMES = F.CLASS_NAMES
 
 
 def base_config(run, model, title, notes):
-    return {"run": run, "dataset": "MARIDA", "model": model, "init": "-", "bands": "unscaled", "classes": 4,
+    return {"run": run, "dataset": F.DATASET, "model": model, "init": "-", "bands": "unscaled", "classes": 4,
             "class_names": NAMES, "channels": F.CHANNELS, "groups": F.GROUPS, "title": title, "notes": notes,
             "recipe": {"epochs": "-"}}
 
@@ -77,10 +78,10 @@ def cmd_rf(a):
         np.savez_compressed(os.path.join(out, f"pred_{split}.npz"), y=y, prob=prob, patch=pid,
                             patch_ids=np.array(ds.ids))
         if split == "test":                              # full maps, for the prediction panels and the ensemble
-            maps = np.zeros((len(ds), 4, 256, 256), np.float16)
+            maps = np.zeros((len(ds), 4, F.PATCH, F.PATCH), np.float16)
             for i in range(len(ds)):
                 x, _ = ds.unscaled(i)
-                maps[i] = rf.predict_proba(x.reshape(F.N_CH, -1).T).T.reshape(4, 256, 256)
+                maps[i] = rf.predict_proba(x.reshape(F.N_CH, -1).T).T.reshape(4, F.PATCH, F.PATCH)
             np.save(os.path.join(out, "prob_maps_test.npy"), maps)
     cfg = base_config(name("R6"), "rf", "Random Forest on the 26 features",
                       f"Random Forest as in the staged ML: 100 trees, seed 42, log class weights "
@@ -147,7 +148,7 @@ def cmd_ensemble(a):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("command", choices=["rf", "ensemble"])
-    ap.add_argument("--unet", default="R1")
+    ap.add_argument("--unet", default="R3")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     {"rf": cmd_rf, "ensemble": cmd_ensemble}[a.command](a)

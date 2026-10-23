@@ -1,14 +1,14 @@
 """
-Final comparison of the MARIDA 26-feature study, with the MARIDA paper's results at
-the top of every table, scene-bootstrap 95% confidence intervals (G3), the
+Final comparison of the 26-feature study (MARIDA or MADOS, `--dataset`), with the
+dataset paper's results at the top of every table, scene-bootstrap 95% confidence intervals (G3), the
 controlled comparisons between runs, and the cross-model XAI summary.
 
 Bootstrap (G3): the test scenes are resampled with replacement (2,000 times); each
 resample's scores are recomputed from per-scene confusion matrices. The same
 resamples are used for every run, so differences between runs are paired.
 
-Usage (repo root):  python scripts/marida_f26/compare.py
-Output: outputs/marida_f26/comparison/  (comparison.md, all_results.csv, bootstrap_ci.csv,
+Usage (repo root):  python scripts/marida_f26/compare.py [--dataset MADOS]
+Output: outputs/<dataset>_f26/comparison/  (comparison.md, all_results.csv, bootstrap_ci.csv,
         differences.csv, figures/)
 """
 import json
@@ -27,7 +27,7 @@ sys.path.insert(0, HERE)
 import features26 as F  # noqa: E402
 from runs import name  # noqa: E402
 
-ROOT = os.path.join(os.path.dirname(os.path.dirname(HERE)), "outputs", "marida_f26")
+ROOT = F.STUDY
 RUNS, XAI, OUT = os.path.join(ROOT, "runs"), os.path.join(ROOT, "xai"), os.path.join(ROOT, "comparison")
 NAMES = F.CLASS_NAMES
 ORDER4 = [name(r) for r in ("R1", "R2", "R3", "R4", "R5", "R6", "R7")]
@@ -39,17 +39,37 @@ CONTRASTS = [
     ("architecture: U-Net vs SegNeXt-T", name("R3"), name("R4"), "from scratch, standardised bands"),
     ("architecture: U-Net vs MariNeXt", name("R3"), name("R5"), "from scratch, standardised bands"),
     ("architecture: MariNeXt vs SegNeXt-T", name("R5"), name("R4"), "MariNeXt adds stage-1 features (1/4 vs 1/8 output)"),
-    ("deep vs RF", name("R1"), name("R6"), "best-setting U-Net vs RF on the same 26 features"),
-    ("ensemble vs U-Net", name("R7"), name("R1"), "adding the RF to the U-Net"),
+    ("deep vs RF", name("R3"), name("R6"), "U-Net (from scratch, the ensemble member) vs RF on the same 26 features"),
+    ("ensemble vs U-Net", name("R7"), name("R3"), "adding the RF to the U-Net"),
     ("ensemble vs RF", name("R7"), name("R6"), "adding the U-Net to the RF"),
 ]
-# MARIDA paper (MARIDA.pdf Table 4, 11 classes; PA = producer's accuracy = recall)
-PAPER = {  # model: (macro F1, mIoU, macro PA, debris F1, debris IoU, debris PA)
-    "RF_SS (paper)": (.69, .57, .72, .71, .55, .91),
-    "RF_SS+SI (paper)": (.70, .59, .73, .80, .67, .92),
-    "RF_SS+SI+GLCM (paper)": (.79, .69, .79, .79, .65, .92),
-    "U-Net (paper)": (.69, .57, .69, .50, .33, .70),
+# model: (macro F1, mIoU, macro PA, debris F1, debris IoU, debris PA); None = not published
+PAPERS = {
+    # MARIDA.pdf Table 4, 11 classes; PA = producer's accuracy = recall
+    "MARIDA": {
+        "RF_SS (paper)": (.69, .57, .72, .71, .55, .91),
+        "RF_SS+SI (paper)": (.70, .59, .73, .80, .67, .92),
+        "RF_SS+SI+GLCM (paper)": (.79, .69, .79, .79, .65, .92),
+        "U-Net (paper)": (.69, .57, .69, .50, .33, .70),
+    },
+    # MADOS.pdf Table 4 (15 classes, mean of 5 runs) and Table 5 (MariNeXt per class)
+    "MADOS": {
+        "RF (paper)": (.566, .439, None, None, None, None),
+        "RF++ (Mikeli et al. 2022, paper)": (.644, .524, None, None, None, None),
+        "U-Net (paper)": (.638, .510, None, None, None, None),
+        "SegNeXt-T (paper)": (.606, .492, None, None, None, None),
+        "MariNeXt (paper)": (.760, .643, None, .513, .346, .704),
+    },
 }
+PAPER = PAPERS[F.DATASET]
+PAPER_SCHEME = {"MARIDA": "11 classes", "MADOS": "15 classes"}[F.DATASET]
+PAPER_TABLE = {"MARIDA": "MARIDA paper (Table 4)", "MADOS": "MADOS paper (Tables 4 and 5)"}[F.DATASET]
+MODEL_COLOR = {"unet": "#1f77b4", "segnext": "#9467bd", "marinext": "#8c564b", "rf": "#7f7f7f", "ensemble": "#2ca02c"}
+
+
+def pf(v):
+    """A paper value in italics, or – when the paper does not publish it."""
+    return "–" if v is None else f"_{v:.2f}_"
 PAPER_CLASS_F1 = {  # MARIDA Table 4, F1 per class: RF_SS, RF_SS+SI, RF_SS+SI+GLCM, U-Net
     "Marine Debris": (.71, .80, .79, .50), "Dense Sargassum": (.93, .93, .93, .75),
     "Sparse Sargassum": (.69, .82, .91, .79), "Natural Organic Material": (.47, .29, .31, .04),
@@ -134,17 +154,18 @@ def main():
         rows.append({"run": r, "title": cfg[r].get("title", ""), **met[r]})
     pd.DataFrame(rows).to_csv(os.path.join(OUT, "all_results.csv"), index=False)
 
-    L = ["# MARIDA, 26 features: comparison of all runs", "",
+    L = [f"# {F.DATASET}, 26 features: comparison of all runs", "",
          "Test split, every annotated pixel, 4 classes (Water, Marine Debris, Algae/Sargassum, Other). "
          f"95% confidence intervals from a scene bootstrap ({n_sc} test scenes, {N_BOOT} resamples). "
-         "📄 rows (italic) are the MARIDA paper's published results (Table 4). They are in the paper's 11 "
-         "classes, so only Marine Debris is directly comparable; macro scores average over different classes. "
-         "Run G2b below compares in the paper's own 11 classes. **Bold** = best of our runs.", ""]
+         f"📄 rows (italic) are the {PAPER_TABLE} published results. They are in the paper's {PAPER_SCHEME}, "
+         "so only Marine Debris is directly comparable; macro scores average over different classes."
+         + (" Run G2b below compares in the paper's own 11 classes." if F.DATASET == "MARIDA" else "")
+         + " **Bold** = best of our runs.", ""]
     # overall table
     L += ["## Overall", "", "| Model | Macro F1 [95% CI] | mIoU | κ | OA | Macro P | Macro R | Macro AUPRC | "
           "Debris F1 [95% CI] |", "|---|---|---|---|---|---|---|---|---|"]
     for pname, (mf, mi, pa, df1, di, dpa) in PAPER.items():
-        L.append(f"| 📄 **{pname}** (11 classes) | _{mf:.2f}_ | _{mi:.2f}_ | – | – | – | _{pa:.2f}_ | – | _{df1:.2f}_ |")
+        L.append(f"| 📄 **{pname}** ({PAPER_SCHEME}) | {pf(mf)} | {pf(mi)} | – | – | – | {pf(pa)} | – | {pf(df1)} |")
     best = {k: max(met[r][k] for r in runs) for k in ("macro_F1", "mIoU", "kappa", "OA", "macro_precision",
                                                        "macro_recall", "macro_AUPRC", "F1_Marine Debris")}
     b = lambda r, k: f"**{met[r][k]:.3f}**" if met[r][k] == best[k] else f"{met[r][k]:.3f}"
@@ -160,7 +181,8 @@ def main():
         paper_k = {"F1": 3, "IoU": 4, "Recall (class accuracy)": 5}.get(metric)
         if paper_k is not None:
             for pname, v in PAPER.items():
-                L.append(f"| 📄 **{pname}** | – | _{v[paper_k]:.2f}_ | – | – |")
+                if v[paper_k] is not None:
+                    L.append(f"| 📄 **{pname}** | – | {pf(v[paper_k])} | – | – |")
         bc = {c: max(cw[r].loc[c, col] for r in runs) for c in NAMES}
         for r in runs:
             L.append(f"| {label[r]} | " + " | ".join(
@@ -207,16 +229,18 @@ def main():
         v = [cig(r, k) for r in runs]
         a_.bar(range(len(runs)), [x.value for x in v],
                yerr=[[x.value - x.ci_low for x in v], [x.ci_high - x.value for x in v]], capsize=4,
-               color=["#1f77b4"] * 3 + ["#9467bd", "#8c564b", "#7f7f7f", "#2ca02c"][:len(runs) - 3])
+               color=[MODEL_COLOR.get(cfg[r]["model"], "#1f77b4") for r in runs])
         for j, x in enumerate(v):
             a_.text(j, x.ci_high + 0.01, f"{x.value:.3f}", ha="center", fontsize=8)
         if k == "F1_Marine Debris":
             for pname, pv in PAPER.items():
+                if pv[3] is None:
+                    continue
                 a_.axhline(pv[3], ls=":", lw=1, color="grey")
                 a_.text(len(runs) - 0.5, pv[3], pname, fontsize=6, va="bottom", ha="right")
         a_.set_xticks(range(len(runs)), runs, rotation=30, ha="right", fontsize=8)
         a_.set_ylim(0, 1.05)
-        a_.set_title(f"{t} (test, 95% scene-bootstrap CI)" + ("; dotted: MARIDA paper" if "Debris" in t else ""))
+        a_.set_title(f"{t} (test, 95% scene-bootstrap CI)" + (f"; dotted: {F.DATASET} paper" if "Debris" in t else ""))
     plt.tight_layout()
     plt.savefig(os.path.join(OUT, "figures", "overall_ci.png"), dpi=120)
     plt.close()
