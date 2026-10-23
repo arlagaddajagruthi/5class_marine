@@ -1,0 +1,19 @@
+comparison,A,B,what differs,metric,A - B,ci_low,ci_high,P(A > B),clear
+architecture: U-Net vs SegNeXt-T,R3_unet_scratch_std,R4_segnext_scratch_std,"from scratch, standardised bands",macro_F1,-0.0019619565624825475,-0.06114364887194869,0.03741882886537409,0.4265,False
+architecture: U-Net vs SegNeXt-T,R3_unet_scratch_std,R4_segnext_scratch_std,"from scratch, standardised bands",mIoU,-0.018617661639832694,-0.09042653789677772,0.03227785561917841,0.252,False
+architecture: U-Net vs SegNeXt-T,R3_unet_scratch_std,R4_segnext_scratch_std,"from scratch, standardised bands",F1_Marine Debris,0.14608303937865785,-0.0005048909908810989,0.23154409618498842,0.9745,False
+architecture: U-Net vs MariNeXt,R3_unet_scratch_std,R5_marinext_scratch_std,"from scratch, standardised bands",macro_F1,-0.014088662863649848,-0.08180469864071735,0.025531869962558604,0.2395,False
+architecture: U-Net vs MariNeXt,R3_unet_scratch_std,R5_marinext_scratch_std,"from scratch, standardised bands",mIoU,-0.03528741187969309,-0.12257046918119362,0.01724870791042882,0.0945,False
+architecture: U-Net vs MariNeXt,R3_unet_scratch_std,R5_marinext_scratch_std,"from scratch, standardised bands",F1_Marine Debris,0.142192515673137,0.03545140543856828,0.2098019133155537,0.9985,True
+architecture: MariNeXt vs SegNeXt-T,R5_marinext_scratch_std,R4_segnext_scratch_std,MariNeXt adds stage-1 features (1/4 vs 1/8 output),macro_F1,0.0121267063011673,-0.01120337650006297,0.041806877604391175,0.86,False
+architecture: MariNeXt vs SegNeXt-T,R5_marinext_scratch_std,R4_segnext_scratch_std,MariNeXt adds stage-1 features (1/4 vs 1/8 output),mIoU,0.016669750239860393,-0.012337190493907297,0.06252901117733763,0.867,False
+architecture: MariNeXt vs SegNeXt-T,R5_marinext_scratch_std,R4_segnext_scratch_std,MariNeXt adds stage-1 features (1/4 vs 1/8 output),F1_Marine Debris,0.003890523705520843,-0.05969554515282319,0.04507332383942109,0.57,False
+deep vs RF,R3_unet_scratch_std,R6_rf,"U-Net (from scratch, the ensemble member) vs RF on the same 26 features",macro_F1,-0.0072158196850132805,-0.0688676975607202,0.05486187722807897,0.373,False
+deep vs RF,R3_unet_scratch_std,R6_rf,"U-Net (from scratch, the ensemble member) vs RF on the same 26 features",mIoU,0.007727026483110189,-0.07664366898214474,0.07487076925193932,0.4985,False
+deep vs RF,R3_unet_scratch_std,R6_rf,"U-Net (from scratch, the ensemble member) vs RF on the same 26 features",F1_Marine Debris,-0.1504052338446905,-0.3716511418653476,-0.024023426907016143,0.003,True
+ensemble vs U-Net,R7_ensemble_unet_rf,R3_unet_scratch_std,adding the RF to the U-Net,macro_F1,0.03889711992308442,0.01028850947627102,0.07943499134730109,0.999,True
+ensemble vs U-Net,R7_ensemble_unet_rf,R3_unet_scratch_std,adding the RF to the U-Net,mIoU,0.039811254492975734,0.007017101169634552,0.09131593567142218,0.9925,True
+ensemble vs U-Net,R7_ensemble_unet_rf,R3_unet_scratch_std,adding the RF to the U-Net,F1_Marine Debris,0.16399603262067453,0.06780732146489715,0.30836584109149473,1.0,True
+ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,macro_F1,0.03168130023807114,0.0022604271038200565,0.07881969594543645,0.9865,True
+ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,mIoU,0.04753828097608592,0.004533884382428024,0.09132319513320951,0.9895,True
+ensemble vs RF,R7_ensemble_unet_rf,R6_rf,adding the U-Net to the RF,F1_Marine Debris,0.013590798775984014,-0.07353118690359386,0.0569104457970446,0.626,False

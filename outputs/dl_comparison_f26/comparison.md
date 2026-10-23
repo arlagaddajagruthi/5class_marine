@@ -8,7 +8,151 @@ Training recipes follow each dataset's paper: MARIDA 45 epochs, no VSCP; MADOS 8
 
 ## MADOS
 
-_Runs not finished yet._
+### Macro F1
+
+| Model | score |
+|---|---|
+| 📄 **MADOS paper: RF** (15 classes) | _0.566_ |
+| 📄 **MADOS paper: RF++ (Mikeli et al. 2022)** (15 classes) | _0.644_ |
+| 📄 **MADOS paper: U-Net** (15 classes) | _0.638_ |
+| 📄 **MADOS paper: SegNeXt-T** (15 classes) | _0.606_ |
+| 📄 **MADOS paper: MariNeXt** (15 classes) | _0.760_ |
+| U-Net (R3, from scratch) | 0.7478 [0.668–0.826] |
+| SegNeXt-T (R4) | 0.7497 [0.673–0.838] (+0.0020) |
+| MariNeXt arch. (R5) | 0.7619 [0.682–0.858] (+0.0141) |
+| U-Net + RF ensemble (R7) | **0.7867 [0.704–0.869] (+0.0389)** |
+
+### Macro IoU
+
+| Model | score |
+|---|---|
+| 📄 **MADOS paper: RF** (15 classes) | _0.439_ |
+| 📄 **MADOS paper: RF++ (Mikeli et al. 2022)** (15 classes) | _0.524_ |
+| 📄 **MADOS paper: U-Net** (15 classes) | _0.510_ |
+| 📄 **MADOS paper: SegNeXt-T** (15 classes) | _0.492_ |
+| 📄 **MADOS paper: MariNeXt** (15 classes) | _0.643_ |
+| U-Net (R3, from scratch) | 0.6279 [0.537–0.728] |
+| SegNeXt-T (R4) | 0.6465 [0.560–0.754] (+0.0186) |
+| MariNeXt arch. (R5) | 0.6632 [0.573–0.786] (+0.0353) |
+| U-Net + RF ensemble (R7) | **0.6677 [0.568–0.785] (+0.0398)** |
+
+### Cohen's κ
+
+| Model | score |
+|---|---|
+| U-Net (R3, from scratch) | 0.5354 |
+| SegNeXt-T (R4) | 0.6704 (+0.1350) |
+| MariNeXt arch. (R5) | **0.7029 (+0.1675)** |
+| U-Net + RF ensemble (R7) | 0.5348 (-0.0006) |
+
+### F1 Marine Debris
+
+| Model | score |
+|---|---|
+| 📄 **MADOS paper: MariNeXt** (15 classes) | _0.513_ |
+| U-Net (R3, from scratch) | 0.5437 [0.311–0.733] |
+| SegNeXt-T (R4) | 0.3976 [0.178–0.643] (-0.1461) |
+| MariNeXt arch. (R5) | 0.4015 [0.195–0.630] (-0.1422) |
+| U-Net + RF ensemble (R7) | **0.7077 [0.456–0.882] (+0.1640)** |
+
+### IoU Marine Debris
+
+| Model | score |
+|---|---|
+| 📄 **MADOS paper: MariNeXt** (15 classes) | _0.346_ |
+| U-Net (R3, from scratch) | 0.3733 |
+| SegNeXt-T (R4) | 0.2481 (-0.1252) |
+| MariNeXt arch. (R5) | 0.2512 (-0.1222) |
+| U-Net + RF ensemble (R7) | **0.5476 (+0.1743)** |
+
+### F1 Algae/Sargassum
+
+| Model | score |
+|---|---|
+| U-Net (R3, from scratch) | 0.9381 |
+| SegNeXt-T (R4) | 0.9472 (+0.0091) |
+| MariNeXt arch. (R5) | **0.9577 (+0.0196)** |
+| U-Net + RF ensemble (R7) | 0.9303 (-0.0078) |
+
+### IoU Algae/Sargassum
+
+| Model | score |
+|---|---|
+| U-Net (R3, from scratch) | 0.8834 |
+| SegNeXt-T (R4) | 0.8996 (+0.0162) |
+| MariNeXt arch. (R5) | **0.9189 (+0.0355)** |
+| U-Net + RF ensemble (R7) | 0.8696 (-0.0138) |
+
+### F1 Other
+
+| Model | score |
+|---|---|
+| U-Net (R3, from scratch) | 0.6118 |
+| SegNeXt-T (R4) | 0.7214 (+0.1096) |
+| MariNeXt arch. (R5) | **0.7521 (+0.1403)** |
+| U-Net + RF ensemble (R7) | 0.6123 (+0.0005) |
+
+### Class accuracy Water (TP / class pixels)
+
+| Model | score |
+|---|---|
+| U-Net (R3, from scratch) | 0.8596 |
+| SegNeXt-T (R4) | **0.9065 (+0.0469)** |
+| MariNeXt arch. (R5) | 0.8956 (+0.0360) |
+| U-Net + RF ensemble (R7) | 0.8578 (-0.0018) |
+
+### Class accuracy Marine Debris (TP / class pixels)
+
+| Model | score |
+|---|---|
+| 📄 **MADOS paper: MariNeXt** (15 classes) | _0.704_ |
+| U-Net (R3, from scratch) | 0.7801 |
+| SegNeXt-T (R4) | 0.7533 (-0.0267) |
+| MariNeXt arch. (R5) | **0.8232 (+0.0432)** |
+| U-Net + RF ensemble (R7) | 0.8037 (+0.0236) |
+
+### Class accuracy Algae/Sargassum (TP / class pixels)
+
+| Model | score |
+|---|---|
+| U-Net (R3, from scratch) | 0.9003 |
+| SegNeXt-T (R4) | **0.9660 (+0.0657)** |
+| MariNeXt arch. (R5) | 0.9466 (+0.0463) |
+| U-Net + RF ensemble (R7) | 0.8789 (-0.0214) |
+
+### Class accuracy Other (TP / class pixels)
+
+| Model | score |
+|---|---|
+| U-Net (R3, from scratch) | 0.7293 |
+| SegNeXt-T (R4) | 0.8054 (+0.0761) |
+| MariNeXt arch. (R5) | **0.8921 (+0.1628)** |
+| U-Net + RF ensemble (R7) | 0.7355 (+0.0063) |
+
+### Feature importance by group (share of \|SHAP\|, %), MADOS
+
+Deep models: GradientSHAP; R7: weighted mix of its members' shares (approximation). Per-feature values in `outputs/mados_f26/xai/<run>/`.
+
+| class | group | R3 | R4 | R5 | R7 |
+|---|---|---|---|---|---|
+| Water | bands | 29.2 | 24.8 | 28.0 | 31.1 |
+| Water | indices | 26.1 | 28.7 | 25.8 | 25.2 |
+| Water | ratios | 21.0 | 18.6 | 17.4 | 18.0 |
+| Water | GLCM | 23.6 | 28.0 | 28.8 | 25.6 |
+| Marine Debris | bands | 12.4 | 19.9 | 21.4 | 20.8 |
+| Marine Debris | indices | 50.0 | 36.8 | 37.7 | 44.4 |
+| Marine Debris | ratios | 27.4 | 16.9 | 18.8 | 25.7 |
+| Marine Debris | GLCM | 10.2 | 26.5 | 22.2 | 9.0 |
+| Algae/Sargassum | bands | 6.4 | 13.8 | 12.5 | 10.9 |
+| Algae/Sargassum | indices | 74.6 | 56.3 | 55.0 | 62.4 |
+| Algae/Sargassum | ratios | 13.4 | 15.5 | 16.8 | 22.2 |
+| Algae/Sargassum | GLCM | 5.6 | 14.3 | 15.7 | 4.4 |
+| Other | bands | 43.9 | 30.2 | 32.0 | 40.8 |
+| Other | indices | 17.7 | 20.2 | 17.4 | 19.4 |
+| Other | ratios | 20.0 | 19.5 | 17.2 | 18.2 |
+| Other | GLCM | 18.4 | 30.0 | 33.4 | 21.6 |
+
+![delta macro F1 MADOS](delta_f1_MADOS.png) ![delta debris F1 MADOS](delta_debris_f1_MADOS.png)
 
 ## MARIDA
 
