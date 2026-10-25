@@ -228,16 +228,19 @@ def plot_cm(cm, path, title):
 
 # ------------------------------------------------------------- run stage ---
 
-def run_stage(stage_id, description, feature_names, args, extra=None):
+def run_stage(stage_id, description, feature_names, args, extra=None, subdir="", on_model=None):
     """Train/evaluate every model on every dataset for one feature set.
     extra: optional function(dataset_name, keep_tr, keep_te) -> (E_tr, E_te, names) whose
-    columns are appended to the selected pixel features (e.g. per-patch environmental data)."""
+    columns are appended to the selected pixel features (e.g. per-patch environmental data).
+    subdir: optional folder between <stage> and <dataset> (e.g. "training").
+    on_model: optional function(dataset_name, model_name, model, data) called after each fit,
+    data = dict(Xtr, ytr, Xte, yte, pred, names, sel)."""
     if args.no_class_weights:
         args.weighting = "none"
     cols = columns(feature_names)
     all_rows = []
     for dataset_name in args.datasets:
-        out_dir = os.path.join(args.out_root, stage_id, dataset_name)
+        out_dir = os.path.join(args.out_root, stage_id, subdir, dataset_name)
         os.makedirs(os.path.join(out_dir, "confusion_matrices"), exist_ok=True)
         print(f"\n=== {stage_id} | {dataset_name} | {len(cols)} features: {', '.join(feature_names)}", flush=True)
 
@@ -273,6 +276,9 @@ def run_stage(stage_id, description, feature_names, args, extra=None):
             t0 = time.time(); model.fit(Xtr[sel], ytr[sel], **fit_kw); t_fit = time.time() - t0
             t0 = time.time(); pred = np.asarray(model.predict(Xte)).ravel().astype(int); t_pred = time.time() - t0
             m, cm = evaluate(yte, pred)
+            if on_model is not None:
+                on_model(dataset_name, model_name, model,
+                         dict(Xtr=Xtr, ytr=ytr, Xte=Xte, yte=yte, pred=pred, names=names, sel=sel))
             row = {"stage": stage_id, "description": description, "dataset": dataset_name,
                    "model": model_name, "n_features": len(names), "features": "|".join(names),
                    "n_train": len(sel), "n_test": len(yte),
