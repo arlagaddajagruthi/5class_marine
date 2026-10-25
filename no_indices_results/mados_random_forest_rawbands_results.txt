@@ -1,0 +1,19 @@
+=== Random Forest — Raw Bands Only (No Indices) — MADOS_5Class ===
+
+Training Random Forest on 156958 pixels with 8 features (raw bands only)...
+Training time: 3.48 seconds
+Evaluating on 154062 test pixels...
+
+Metrics:
+Precision: 0.8487720388110274
+Recall: 0.8317934529918680
+F1 Score: 0.8330250971582964
+IoU (Jaccard): 0.7277877981475902
+Accuracy: 0.8881424361620647
+
+Confusion Matrix:
+[[49980     8     1     0    11]
+ [    0 39810   138    14 10038]
+ [    0    47   752     6   168]
+ [    0   248     5  2188   648]
+ [    0  5494   369    38 44099]]

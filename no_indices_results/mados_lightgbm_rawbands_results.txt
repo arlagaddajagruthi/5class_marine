@@ -1,0 +1,19 @@
+=== LightGBM — Raw Bands Only (No Indices) — MADOS_5Class ===
+
+Training LightGBM on 156958 pixels with 8 features (raw bands only)...
+Training time: 1.44 seconds
+Evaluating on 154062 test pixels...
+
+Metrics:
+Precision: 0.8424681710770698
+Recall: 0.8491777669075395
+F1 Score: 0.8391992733268789
+IoU (Jaccard): 0.7386250330865745
+Accuracy: 0.8936986408069478
+
+Confusion Matrix:
+[[49980     6     4     0    10]
+ [    0 40677   142    34  9147]
+ [    1    66   764     7   135]
+ [    1   613     4  2378    93]
+ [   17  5596   466    35 43886]]

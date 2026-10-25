@@ -1,0 +1,19 @@
+=== Random Forest — Raw Bands Only (No Indices) — MARIDA_5Class ===
+
+Training Random Forest on 108385 pixels with 11 features (raw bands only)...
+Training time: 4.20 seconds
+Evaluating on 103632 test pixels...
+
+Metrics:
+Precision: 0.8042554045048224
+Recall: 0.8381712070935494
+F1 Score: 0.8051910705572018
+IoU (Jaccard): 0.6838903958279834
+Accuracy: 0.7651883588080902
+
+Confusion Matrix:
+[[47647  2025    35    40   253]
+ [21461 28370    31     2   136]
+ [   38     4   325     1    13]
+ [   35     0     7  1579    20]
+ [  115    23    91     4  1377]]

@@ -1,0 +1,19 @@
+=== AdaBoost — Raw Bands Only (No Indices) — MARIDA_5Class ===
+
+Training AdaBoost on 108385 pixels with 11 features (raw bands only)...
+Training time: 40.12 seconds
+Evaluating on 103632 test pixels...
+
+Metrics:
+Precision: 0.7172862808269993
+Recall: 0.6433419754341771
+F1 Score: 0.6711379404555267
+IoU (Jaccard): 0.5412264178381978
+Accuracy: 0.7857032576810251
+
+Confusion Matrix:
+[[45778  3892    10    26   294]
+ [16658 33305     9     1    27]
+ [  240    43    98     0     0]
+ [  132     3   184  1307    15]
+ [  431   162    81     0   936]]

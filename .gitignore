@@ -8,6 +8,9 @@ data/env_sst_chl_wind/*
 !data/env_sst_chl_wind/marida_env_sst_chl_wind.csv
 
 
+SHAP\Analysis2\results\run_log_compute.txt
+SHAP\Analysis2\results\run_log_replot.txt
+
 checkpoints/
 
 __pycache__/
@@ -50,3 +53,5 @@ outputs/marida_f26/runs/*/prob_maps_test.npy
 
 outputs/mados_f26/runs/*/prob_maps_test.npy
 outputs/mados_f26/features/glcm/*.npy
+# per-class feature analysis working outputs (published copies live in SHAP/<name>/)
+outputs/feature_analysis/

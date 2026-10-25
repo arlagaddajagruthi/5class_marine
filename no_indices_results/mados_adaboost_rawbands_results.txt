@@ -1,0 +1,19 @@
+=== AdaBoost — Raw Bands Only (No Indices) — MADOS_5Class ===
+
+Training AdaBoost on 156958 pixels with 8 features (raw bands only)...
+Training time: 40.87 seconds
+Evaluating on 154062 test pixels...
+
+Metrics:
+Precision: 0.8448393635902184
+Recall: 0.7070593856754581
+F1 Score: 0.7553749416695666
+IoU (Jaccard): 0.6377949367538689
+Accuracy: 0.8528319767366385
+
+Confusion Matrix:
+[[49980    10     0     0    10]
+ [    0 37913    69     0 12018]
+ [    0   132   330     6   505]
+ [    0   720     4  1893   472]
+ [    0  8604    74    49 41273]]

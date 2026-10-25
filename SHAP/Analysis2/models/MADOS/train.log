@@ -1,0 +1,9 @@
+  [MADOS/train] reading 1433 patches...
+  [MADOS/test] reading 728 patches...
+
+=== MADOS: train 761,887 [591224   2561   4397 163705] | test 361,147 [294020    973   3089  63065] | 22 features
+  rf    fit     68s  F1 0.7609 (recorded 0.7609)  debris F1 0.7076 (recorded 0.7076)  max|diff| 0.00e+00
+  xgb   fit     16s  F1 0.7360 (recorded 0.7360)  debris F1 0.5302 (recorded 0.5302)  max|diff| 1.11e-16
+  lgbm  fit     13s  F1 0.7364 (recorded 0.7364)  debris F1 0.5402 (recorded 0.5402)  max|diff| 0.00e+00
+  ada   fit    648s  F1 0.6016 (recorded 0.6016)  debris F1 0.1654 (recorded 0.1654)  max|diff| 2.78e-17
+  svm   fit     19s  F1 0.7140 (recorded 0.7140)  debris F1 0.6152 (recorded 0.6152)  max|diff| 5.55e-17

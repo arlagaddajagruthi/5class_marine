@@ -1,0 +1,19 @@
+=== LightGBM — Raw Bands Only (No Indices) — MARIDA_5Class ===
+
+Training LightGBM on 108385 pixels with 11 features (raw bands only)...
+Training time: 3.70 seconds
+Evaluating on 103632 test pixels...
+
+Metrics:
+Precision: 0.7980921453163345
+Recall: 0.8450439467912867
+F1 Score: 0.8117900002544669
+IoU (Jaccard): 0.6919089585289745
+Accuracy: 0.7855392156862745
+
+Confusion Matrix:
+[[45527  4165    45    30   233]
+ [17209 32629    44     4   114]
+ [   30     3   330     0    18]
+ [   47     0     5  1562    27]
+ [  119    27   101     4  1359]]
