@@ -1,5 +1,6 @@
 FROM python:3.12-slim
 ENV NUMBA_CACHE_DIR=/tmp/numba PYTHONUNBUFFERED=1 ONE_MODEL_IN_MEMORY=1 CACHE_SIZE=2
+RUN apt-get update && apt-get install -y --no-install-recommends libexpat1 && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
