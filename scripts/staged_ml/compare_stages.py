@@ -43,7 +43,8 @@ def main():
     ap.add_argument("--out-root", default=OUT_ROOT, help="Folder holding the stage outputs (default: outputs/staged)")
     root = ap.parse_args().out_root
     OUT = os.path.join(root, "comparison")
-    files = sorted(glob.glob(os.path.join(root, "stage*", "*", "metrics.csv")))
+    files = sorted(glob.glob(os.path.join(root, "stage*", "*", "metrics.csv"))
+                   + glob.glob(os.path.join(root, "stage*", "training", "*", "metrics.csv")))
     if not files:
         raise SystemExit("No stage results found; run the stage scripts first.")
     df = pd.concat([pd.read_csv(f) for f in files], ignore_index=True)

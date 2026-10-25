@@ -1,0 +1,251 @@
+model,scope,kind,group,share
+rf,All classes,group,Bands,0.27713230576653813
+rf,All classes,group,Indices,0.2409142835412076
+rf,All classes,group,Ratios,0.16943394689641056
+rf,All classes,group,Environment,0.3125194637958435
+rf,All classes,env_subgroup,SST,0.02351407754806739
+rf,All classes,env_subgroup,Chlorophyll-a,0.05930965789866509
+rf,All classes,env_subgroup,Wind speed,0.06823579935156217
+rf,All classes,env_subgroup,Wind direction (u/v),0.07923734184772772
+rf,All classes,env_subgroup,Pressure / precipitation,0.03025904384562283
+rf,All classes,env_subgroup,Waves / Stokes drift,0.0519635433041982
+rf,Water,group,Bands,0.22228309716210942
+rf,Water,group,Indices,0.31010489097622007
+rf,Water,group,Ratios,0.20663963045833858
+rf,Water,group,Environment,0.26097238140333195
+rf,Water,env_subgroup,SST,0.015983076958076756
+rf,Water,env_subgroup,Chlorophyll-a,0.04523251008617916
+rf,Water,env_subgroup,Wind speed,0.056289439436616406
+rf,Water,env_subgroup,Wind direction (u/v),0.07120224551540363
+rf,Water,env_subgroup,Pressure / precipitation,0.030187532723622408
+rf,Water,env_subgroup,Waves / Stokes drift,0.04207757668343358
+rf,Marine Debris,group,Bands,0.23805861520142158
+rf,Marine Debris,group,Indices,0.25141143401456717
+rf,Marine Debris,group,Ratios,0.18600577544903774
+rf,Marine Debris,group,Environment,0.3245241753349737
+rf,Marine Debris,env_subgroup,SST,0.028427233840373326
+rf,Marine Debris,env_subgroup,Chlorophyll-a,0.03355299709205398
+rf,Marine Debris,env_subgroup,Wind speed,0.08093592005014771
+rf,Marine Debris,env_subgroup,Wind direction (u/v),0.09506655424378183
+rf,Marine Debris,env_subgroup,Pressure / precipitation,0.03399685067394058
+rf,Marine Debris,env_subgroup,Waves / Stokes drift,0.05254461943467625
+rf,Algae/Sargassum,group,Bands,0.1820960084371787
+rf,Algae/Sargassum,group,Indices,0.30832597616023755
+rf,Algae/Sargassum,group,Ratios,0.22740712893966977
+rf,Algae/Sargassum,group,Environment,0.28217088646291416
+rf,Algae/Sargassum,env_subgroup,SST,0.014844990336929566
+rf,Algae/Sargassum,env_subgroup,Chlorophyll-a,0.09115064140224607
+rf,Algae/Sargassum,env_subgroup,Wind speed,0.03585143775554822
+rf,Algae/Sargassum,env_subgroup,Wind direction (u/v),0.06858625932771936
+rf,Algae/Sargassum,env_subgroup,Pressure / precipitation,0.022121190376058256
+rf,Algae/Sargassum,env_subgroup,Waves / Stokes drift,0.04961636726441263
+rf,Other,group,Bands,0.5058404608694433
+rf,Other,group,Indices,0.10378224667646684
+rf,Other,group,Ratios,0.08371814581388724
+rf,Other,group,Environment,0.30665914664020255
+rf,Other,env_subgroup,SST,0.032457135058697725
+rf,Other,env_subgroup,Chlorophyll-a,0.051903617877912374
+rf,Other,env_subgroup,Wind speed,0.07473801603524932
+rf,Other,env_subgroup,Wind direction (u/v),0.05785119012175016
+rf,Other,env_subgroup,Pressure / precipitation,0.028097858063950043
+rf,Other,env_subgroup,Waves / Stokes drift,0.06161132948264294
+xgb,All classes,group,Bands,0.24778067416874133
+xgb,All classes,group,Indices,0.24733738783094253
+xgb,All classes,group,Ratios,0.12380769587763765
+xgb,All classes,group,Environment,0.3810742421226784
+xgb,All classes,env_subgroup,SST,0.023198303708449743
+xgb,All classes,env_subgroup,Chlorophyll-a,0.11616052619627329
+xgb,All classes,env_subgroup,Wind speed,0.07114470692913175
+xgb,All classes,env_subgroup,Wind direction (u/v),0.08606074205197603
+xgb,All classes,env_subgroup,Pressure / precipitation,0.03703142195275417
+xgb,All classes,env_subgroup,Waves / Stokes drift,0.04747854128409337
+xgb,Water,group,Bands,0.18884703125872362
+xgb,Water,group,Indices,0.35537232878694547
+xgb,Water,group,Ratios,0.2577828616168461
+xgb,Water,group,Environment,0.19799777833748475
+xgb,Water,env_subgroup,SST,0.01641542651088285
+xgb,Water,env_subgroup,Chlorophyll-a,0.03522574851253746
+xgb,Water,env_subgroup,Wind speed,0.04039678330572866
+xgb,Water,env_subgroup,Wind direction (u/v),0.06247620786195829
+xgb,Water,env_subgroup,Pressure / precipitation,0.018996193888196077
+xgb,Water,env_subgroup,Waves / Stokes drift,0.02448741825818143
+xgb,Marine Debris,group,Bands,0.27724126744825617
+xgb,Marine Debris,group,Indices,0.2569027706218295
+xgb,Marine Debris,group,Ratios,0.23014965494318604
+xgb,Marine Debris,group,Environment,0.23570630698672826
+xgb,Marine Debris,env_subgroup,SST,0.019839715515712043
+xgb,Marine Debris,env_subgroup,Chlorophyll-a,0.03597899986420933
+xgb,Marine Debris,env_subgroup,Wind speed,0.04420174701633353
+xgb,Marine Debris,env_subgroup,Wind direction (u/v),0.07292510573932293
+xgb,Marine Debris,env_subgroup,Pressure / precipitation,0.03457089311421801
+xgb,Marine Debris,env_subgroup,Waves / Stokes drift,0.028189845736932406
+xgb,Algae/Sargassum,group,Bands,0.08494248673997931
+xgb,Algae/Sargassum,group,Indices,0.32725119270187136
+xgb,Algae/Sargassum,group,Ratios,0.008625579575329842
+xgb,Algae/Sargassum,group,Environment,0.5791807409828196
+xgb,Algae/Sargassum,env_subgroup,SST,0.015890473537186263
+xgb,Algae/Sargassum,env_subgroup,Chlorophyll-a,0.28512929761099537
+xgb,Algae/Sargassum,env_subgroup,Wind speed,0.04611130701689459
+xgb,Algae/Sargassum,env_subgroup,Wind direction (u/v),0.07039496319830223
+xgb,Algae/Sargassum,env_subgroup,Pressure / precipitation,0.024348033526356238
+xgb,Algae/Sargassum,env_subgroup,Waves / Stokes drift,0.137306666093085
+xgb,Other,group,Bands,0.5272710640475236
+xgb,Other,group,Indices,0.0663051769141531
+xgb,Other,group,Ratios,0.008856511379328668
+xgb,Other,group,Environment,0.3975672476589947
+xgb,Other,env_subgroup,SST,0.039376500403853314
+xgb,Other,env_subgroup,Chlorophyll-a,0.049739233562505654
+xgb,Other,env_subgroup,Wind speed,0.11923559036463904
+xgb,Other,env_subgroup,Wind direction (u/v),0.08653563169092221
+xgb,Other,env_subgroup,Pressure / precipitation,0.05507035147564771
+xgb,Other,env_subgroup,Waves / Stokes drift,0.04760994016142677
+lgbm,All classes,group,Bands,0.26725640154682884
+lgbm,All classes,group,Indices,0.21625837141284532
+lgbm,All classes,group,Ratios,0.14282220801584186
+lgbm,All classes,group,Environment,0.3736630190244842
+lgbm,All classes,env_subgroup,SST,0.025511830570890924
+lgbm,All classes,env_subgroup,Chlorophyll-a,0.10665775740908506
+lgbm,All classes,env_subgroup,Wind speed,0.06385313536768657
+lgbm,All classes,env_subgroup,Wind direction (u/v),0.09185726089416545
+lgbm,All classes,env_subgroup,Pressure / precipitation,0.046229021198790715
+lgbm,All classes,env_subgroup,Waves / Stokes drift,0.039554013583865455
+lgbm,Water,group,Bands,0.24159656709091065
+lgbm,Water,group,Indices,0.33238126739319823
+lgbm,Water,group,Ratios,0.21637364097831555
+lgbm,Water,group,Environment,0.2096485245375755
+lgbm,Water,env_subgroup,SST,0.018870015439445775
+lgbm,Water,env_subgroup,Chlorophyll-a,0.031453349706664066
+lgbm,Water,env_subgroup,Wind speed,0.03829198612404107
+lgbm,Water,env_subgroup,Wind direction (u/v),0.0705407197117627
+lgbm,Water,env_subgroup,Pressure / precipitation,0.02668916133586749
+lgbm,Water,env_subgroup,Waves / Stokes drift,0.023803292219794353
+lgbm,Marine Debris,group,Bands,0.2759931928722185
+lgbm,Marine Debris,group,Indices,0.30000885905477787
+lgbm,Marine Debris,group,Ratios,0.15622430903216683
+lgbm,Marine Debris,group,Environment,0.2677736390408368
+lgbm,Marine Debris,env_subgroup,SST,0.02147584332858309
+lgbm,Marine Debris,env_subgroup,Chlorophyll-a,0.03777922883578261
+lgbm,Marine Debris,env_subgroup,Wind speed,0.059474518255388
+lgbm,Marine Debris,env_subgroup,Wind direction (u/v),0.07884970797500636
+lgbm,Marine Debris,env_subgroup,Pressure / precipitation,0.03146022484592409
+lgbm,Marine Debris,env_subgroup,Waves / Stokes drift,0.03873411580015263
+lgbm,Algae/Sargassum,group,Bands,0.1393032164110796
+lgbm,Algae/Sargassum,group,Indices,0.14382793160927565
+lgbm,Algae/Sargassum,group,Ratios,0.24679657498072716
+lgbm,Algae/Sargassum,group,Environment,0.47007227699891735
+lgbm,Algae/Sargassum,env_subgroup,SST,0.01449150985398225
+lgbm,Algae/Sargassum,env_subgroup,Chlorophyll-a,0.26851869693124353
+lgbm,Algae/Sargassum,env_subgroup,Wind speed,0.03533352348797916
+lgbm,Algae/Sargassum,env_subgroup,Wind direction (u/v),0.04453530690810085
+lgbm,Algae/Sargassum,env_subgroup,Pressure / precipitation,0.024016370667548866
+lgbm,Algae/Sargassum,env_subgroup,Waves / Stokes drift,0.08317686915006271
+lgbm,Other,group,Bands,0.5249534448112051
+lgbm,Other,group,Indices,0.0511852291446359
+lgbm,Other,group,Ratios,0.023472522983174187
+lgbm,Other,group,Environment,0.400388803060985
+lgbm,Other,env_subgroup,SST,0.03304283552277426
+lgbm,Other,env_subgroup,Chlorophyll-a,0.042278386173405055
+lgbm,Other,env_subgroup,Wind speed,0.11821370880017995
+lgbm,Other,env_subgroup,Wind direction (u/v),0.10063715605722262
+lgbm,Other,env_subgroup,Pressure / precipitation,0.07523110302331458
+lgbm,Other,env_subgroup,Waves / Stokes drift,0.03098561348408845
+ada,All classes,group,Bands,0.20398861417011446
+ada,All classes,group,Indices,0.25696362411809365
+ada,All classes,group,Ratios,0.22642085719500096
+ada,All classes,group,Environment,0.312626904516791
+ada,All classes,env_subgroup,SST,0.03012987773721968
+ada,All classes,env_subgroup,Chlorophyll-a,0.11468391960163922
+ada,All classes,env_subgroup,Wind speed,0.06301461820944697
+ada,All classes,env_subgroup,Wind direction (u/v),0.06209126274912813
+ada,All classes,env_subgroup,Pressure / precipitation,0.02009297037064784
+ada,All classes,env_subgroup,Waves / Stokes drift,0.0226142558487091
+ada,Water,group,Bands,0.18923193004793004
+ada,Water,group,Indices,0.30892436825533703
+ada,Water,group,Ratios,0.2939547025283079
+ada,Water,group,Environment,0.20788899916842493
+ada,Water,env_subgroup,SST,0.025770517345069383
+ada,Water,env_subgroup,Chlorophyll-a,0.03587187714379104
+ada,Water,env_subgroup,Wind speed,0.04751841551882886
+ada,Water,env_subgroup,Wind direction (u/v),0.07249013316570072
+ada,Water,env_subgroup,Pressure / precipitation,0.014102935954854805
+ada,Water,env_subgroup,Waves / Stokes drift,0.012135120040180187
+ada,Marine Debris,group,Bands,0.18487143859078387
+ada,Marine Debris,group,Indices,0.29236623697939207
+ada,Marine Debris,group,Ratios,0.23413304458460707
+ada,Marine Debris,group,Environment,0.2886292798452169
+ada,Marine Debris,env_subgroup,SST,0.009368962682871546
+ada,Marine Debris,env_subgroup,Chlorophyll-a,0.12941499433462783
+ada,Marine Debris,env_subgroup,Wind speed,0.06082965083524051
+ada,Marine Debris,env_subgroup,Wind direction (u/v),0.04554009123536213
+ada,Marine Debris,env_subgroup,Pressure / precipitation,0.021618889882761984
+ada,Marine Debris,env_subgroup,Waves / Stokes drift,0.021856690874352956
+ada,Algae/Sargassum,group,Bands,0.1348300261026997
+ada,Algae/Sargassum,group,Indices,0.23016866347122686
+ada,Algae/Sargassum,group,Ratios,0.2848868862313548
+ada,Algae/Sargassum,group,Environment,0.3501144241947185
+ada,Algae/Sargassum,env_subgroup,SST,0.00902887285239404
+ada,Algae/Sargassum,env_subgroup,Chlorophyll-a,0.19790103519346908
+ada,Algae/Sargassum,env_subgroup,Wind speed,0.04042254155835667
+ada,Algae/Sargassum,env_subgroup,Wind direction (u/v),0.0508826186210535
+ada,Algae/Sargassum,env_subgroup,Pressure / precipitation,0.018672053099287236
+ada,Algae/Sargassum,env_subgroup,Waves / Stokes drift,0.03320730287015799
+ada,Other,group,Bands,0.3573486232059627
+ada,Other,group,Indices,0.18272118799797316
+ada,Other,group,Ratios,0.11898281911730982
+ada,Other,group,Environment,0.3409473696787543
+ada,Other,env_subgroup,SST,0.06144403309013077
+ada,Other,env_subgroup,Chlorophyll-a,0.08605519267125662
+ada,Other,env_subgroup,Wind speed,0.08808211010897998
+ada,Other,env_subgroup,Wind direction (u/v),0.06455967515294195
+ada,Other,env_subgroup,Pressure / precipitation,0.02720735957695279
+ada,Other,env_subgroup,Waves / Stokes drift,0.013598999078492172
+svm,All classes,group,Bands,0.34010358866671975
+svm,All classes,group,Indices,0.17149120335809728
+svm,All classes,group,Ratios,0.1402112209027411
+svm,All classes,group,Environment,0.3481939870724418
+svm,All classes,env_subgroup,SST,0.01928474541263369
+svm,All classes,env_subgroup,Chlorophyll-a,0.016368342556577566
+svm,All classes,env_subgroup,Wind speed,0.15169180121115056
+svm,All classes,env_subgroup,Wind direction (u/v),0.052766628611507084
+svm,All classes,env_subgroup,Pressure / precipitation,0.041533548964948375
+svm,All classes,env_subgroup,Waves / Stokes drift,0.0665489203156245
+svm,Water,group,Bands,0.48119553477331084
+svm,Water,group,Indices,0.2549320812750712
+svm,Water,group,Ratios,0.0902738974974377
+svm,Water,group,Environment,0.17359848645418022
+svm,Water,env_subgroup,SST,0.014162878723800187
+svm,Water,env_subgroup,Chlorophyll-a,0.007111201542100704
+svm,Water,env_subgroup,Wind speed,0.10636070388304715
+svm,Water,env_subgroup,Wind direction (u/v),0.019080968499764428
+svm,Water,env_subgroup,Pressure / precipitation,0.00896559174709362
+svm,Water,env_subgroup,Waves / Stokes drift,0.01791714205837411
+svm,Marine Debris,group,Bands,0.27931454420861196
+svm,Marine Debris,group,Indices,0.16028871753677743
+svm,Marine Debris,group,Ratios,0.25380667490341213
+svm,Marine Debris,group,Environment,0.30659006335119865
+svm,Marine Debris,env_subgroup,SST,0.010363455780794725
+svm,Marine Debris,env_subgroup,Chlorophyll-a,0.0027107617029714258
+svm,Marine Debris,env_subgroup,Wind speed,0.1909533696365202
+svm,Marine Debris,env_subgroup,Wind direction (u/v),0.053298792196354056
+svm,Marine Debris,env_subgroup,Pressure / precipitation,0.015761475103721792
+svm,Marine Debris,env_subgroup,Waves / Stokes drift,0.033502208930836455
+svm,Algae/Sargassum,group,Bands,0.2889509989440289
+svm,Algae/Sargassum,group,Indices,0.1745721001533368
+svm,Algae/Sargassum,group,Ratios,0.07714036259825355
+svm,Algae/Sargassum,group,Environment,0.45933653830438115
+svm,Algae/Sargassum,env_subgroup,SST,0.026643725929321876
+svm,Algae/Sargassum,env_subgroup,Chlorophyll-a,0.03222705829226904
+svm,Algae/Sargassum,env_subgroup,Wind speed,0.15752345964416192
+svm,Algae/Sargassum,env_subgroup,Wind direction (u/v),0.08247562856811948
+svm,Algae/Sargassum,env_subgroup,Pressure / precipitation,0.08030212688375657
+svm,Algae/Sargassum,env_subgroup,Waves / Stokes drift,0.08016453898675223
+svm,Other,group,Bands,0.6624011288085689
+svm,Other,group,Indices,0.08259479795275007
+svm,Other,group,Ratios,0.033901806291711835
+svm,Other,group,Environment,0.22110226694696933
+svm,Other,env_subgroup,SST,0.016927685893822937
+svm,Other,env_subgroup,Chlorophyll-a,0.005708964092372982
+svm,Other,env_subgroup,Wind speed,0.07717050167946157
+svm,Other,env_subgroup,Wind direction (u/v),0.03155439047796577
+svm,Other,env_subgroup,Pressure / precipitation,0.029678756366212124
+svm,Other,env_subgroup,Waves / Stokes drift,0.060061968437133906

@@ -1,0 +1,140 @@
+{
+  "explained_test_pixels": {
+    "n": 1200,
+    "per_class": {
+      "Water": 300,
+      "Marine Debris": 300,
+      "Algae/Sargassum": 300,
+      "Other": 300
+    },
+    "per_class_cap": 300
+  },
+  "background_train_pixels": {
+    "n": 200,
+    "per_class_cap": 50
+  },
+  "seed": 42,
+  "n_features": 47,
+  "features": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12",
+    "NDVI",
+    "NDWI",
+    "FAI",
+    "FDI",
+    "NDMI",
+    "red/green",
+    "nir/red",
+    "nir/green",
+    "swir1/nir",
+    "sst_c",
+    "sst_grad_c_per_km",
+    "log10_chl",
+    "wind_speed",
+    "wind_u",
+    "wind_v",
+    "wind_speed_mean_24h",
+    "wind_speed_mean_72h",
+    "wind_speed_max_72h",
+    "modis_log10_chla",
+    "era5_u10",
+    "era5_v10",
+    "era5_wind_speed",
+    "era5_wind_speed_mean_24h",
+    "era5_wind_speed_mean_72h",
+    "era5_wind_speed_max_72h",
+    "era5_u10_mean_72h",
+    "era5_v10_mean_72h",
+    "era5_msl_hpa",
+    "era5_precip_24h_mm",
+    "era5_precip_72h_mm",
+    "era5_precip_7d_mm",
+    "era5_swh",
+    "era5_swh_mean_72h",
+    "era5_stokes_u",
+    "era5_stokes_v",
+    "era5_stokes_speed"
+  ],
+  "models": {
+    "rf": {
+      "explainer": "TreeExplainer (interventional TreeSHAP)",
+      "explained_output": "class probability",
+      "additivity_max_abs_error": 7.961087900021369e-09,
+      "max_abs_output": 1.0,
+      "pixels_error_gt_1e-5": 0,
+      "shap_seconds": 296.4,
+      "base_values": {
+        "Water": 0.2589500000000001,
+        "Marine Debris": 0.24155000000000018,
+        "Algae/Sargassum": 0.24855000000000008,
+        "Other": 0.2509500000000001
+      }
+    },
+    "xgb": {
+      "explainer": "TreeExplainer (interventional TreeSHAP)",
+      "explained_output": "raw softmax margin (log-odds scale)",
+      "additivity_max_abs_error": 2.445971774456268e-06,
+      "max_abs_output": 6.3130412101745605,
+      "pixels_error_gt_1e-5": 0,
+      "shap_seconds": 163.5,
+      "base_values": {
+        "Water": -0.9574336495883686,
+        "Marine Debris": -2.194115911368184,
+        "Algae/Sargassum": -2.7889016336412413,
+        "Other": -0.7405235472054713
+      }
+    },
+    "lgbm": {
+      "explainer": "TreeExplainer (interventional TreeSHAP)",
+      "explained_output": "raw softmax margin (log-odds scale)",
+      "additivity_max_abs_error": 2.563349355000355e-07,
+      "max_abs_output": 13.546835725620655,
+      "pixels_error_gt_1e-5": 0,
+      "shap_seconds": 98.5,
+      "base_values": {
+        "Water": -3.3301737064989156,
+        "Marine Debris": -4.536023561989004,
+        "Algae/Sargassum": -5.8955370152927085,
+        "Other": -2.879852679527581
+      }
+    },
+    "ada": {
+      "explainer": "TreeExplainer (interventional TreeSHAP) on exact tree rewrite of SAMME decision_function",
+      "explained_output": "SAMME decision score",
+      "additivity_max_abs_error": 5.213259712810725e-09,
+      "max_abs_output": 0.7524934587862381,
+      "pixels_error_gt_1e-5": 0,
+      "shap_seconds": 17.0,
+      "base_values": {
+        "Water": 0.04424141778933925,
+        "Marine Debris": -0.01792523564033385,
+        "Algae/Sargassum": -0.10122548050495307,
+        "Other": 0.07490929835594763
+      }
+    },
+    "svm": {
+      "explainer": "LinearExplainer (interventional; exact for linear margin)",
+      "explained_output": "one-vs-rest SVM margin",
+      "additivity_max_abs_error": 1.8475533742901007e-06,
+      "max_abs_output": 55.892398193067166,
+      "pixels_error_gt_1e-5": 0,
+      "shap_seconds": 0.0,
+      "base_values": {
+        "Water": -0.6967998332583654,
+        "Marine Debris": -3.826261439281094,
+        "Algae/Sargassum": -8.380349497773391,
+        "Other": 0.012208687240534921
+      }
+    }
+  },
+  "shap_version": "0.54.1"
+}

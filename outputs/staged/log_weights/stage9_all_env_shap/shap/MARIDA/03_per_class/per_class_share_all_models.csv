@@ -1,0 +1,941 @@
+model,class,feature,share
+rf,Water,NDVI,0.08903195365603887
+rf,Water,nir/green,0.08186490567511671
+rf,Water,nir/red,0.07983912241428401
+rf,Water,NDWI,0.07234316989585296
+rf,Water,FAI,0.0674468091409222
+rf,Water,FDI,0.05799332387782416
+rf,Water,B11,0.051000721730672806
+rf,Water,B8,0.03251304625495208
+rf,Water,B8A,0.024786413407852318
+rf,Water,log10_chl,0.02469054785767707
+rf,Water,era5_u10,0.023919076797733405
+rf,Water,red/green,0.023521017679890854
+rf,Water,NDMI,0.023289634405581877
+rf,Water,swir1/nir,0.021414584689046997
+rf,Water,modis_log10_chla,0.02054196222850209
+rf,Water,B7,0.018694800158882016
+rf,Water,B6,0.018438955674773615
+rf,Water,era5_v10_mean_72h,0.017351062787031565
+rf,Water,B12,0.016512337234508352
+rf,Water,era5_stokes_v,0.015239627733093408
+rf,Water,B4,0.015010213658070894
+rf,Water,B5,0.014628401652848365
+rf,Water,wind_speed_mean_24h,0.014438424109460318
+rf,Water,B2,0.013547868475552735
+rf,Water,wind_u,0.013162554591376864
+rf,Water,era5_precip_24h_mm,0.01279340970819785
+rf,Water,era5_wind_speed_mean_72h,0.012539109199487064
+rf,Water,era5_swh_mean_72h,0.011433572595376957
+rf,Water,B1,0.010938108352527917
+rf,Water,sst_grad_c_per_km,0.008249791635635264
+rf,Water,era5_v10,0.007889634162104501
+rf,Water,sst_c,0.007733285322441493
+rf,Water,wind_speed,0.006801708507764829
+rf,Water,era5_msl_hpa,0.006781081597309338
+rf,Water,B3,0.006212230561468352
+rf,Water,era5_precip_7d_mm,0.005618484051064488
+rf,Water,era5_swh,0.005553174057986817
+rf,Water,era5_stokes_speed,0.005544717891142625
+rf,Water,era5_wind_speed_mean_24h,0.005517812625670989
+rf,Water,era5_precip_72h_mm,0.004994557367050732
+rf,Water,wind_speed_max_72h,0.004818135717927177
+rf,Water,era5_wind_speed_max_72h,0.004733573023487317
+rf,Water,era5_u10_mean_72h,0.004635224338533093
+rf,Water,era5_stokes_u,0.0043064844058337765
+rf,Water,wind_v,0.0042446928386242104
+rf,Water,era5_wind_speed,0.003909970978895809
+rf,Water,wind_speed_mean_72h,0.003530705273922899
+rf,Marine Debris,NDVI,0.07348601176809413
+rf,Marine Debris,nir/red,0.06761438079100991
+rf,Marine Debris,nir/green,0.05605713448253467
+rf,Marine Debris,NDWI,0.05303998511289623
+rf,Marine Debris,B11,0.045510748524099316
+rf,Marine Debris,FDI,0.04419077092113675
+rf,Marine Debris,FAI,0.043078680147644176
+rf,Marine Debris,B12,0.039218433403364616
+rf,Marine Debris,swir1/nir,0.038083611336766174
+rf,Marine Debris,NDMI,0.0376159860647959
+rf,Marine Debris,era5_v10,0.03161307054160926
+rf,Marine Debris,red/green,0.024250648838726973
+rf,Marine Debris,B5,0.022072494420338585
+rf,Marine Debris,sst_c,0.020479200028562503
+rf,Marine Debris,B7,0.01977877951340103
+rf,Marine Debris,B1,0.01961786701189954
+rf,Marine Debris,wind_v,0.018231534327845484
+rf,Marine Debris,wind_speed,0.018178225286100486
+rf,Marine Debris,era5_u10,0.018110469148632985
+rf,Marine Debris,B3,0.018004292630661705
+rf,Marine Debris,modis_log10_chla,0.01780506398374957
+rf,Marine Debris,B4,0.017116262065553094
+rf,Marine Debris,B6,0.016233585579761223
+rf,Marine Debris,log10_chl,0.01574793310830441
+rf,Marine Debris,era5_precip_24h_mm,0.015532489327632695
+rf,Marine Debris,era5_wind_speed,0.014805017551969326
+rf,Marine Debris,B8,0.014569002687351881
+rf,Marine Debris,B2,0.014265367915743456
+rf,Marine Debris,era5_stokes_v,0.01188821904528598
+rf,Marine Debris,B8A,0.011671781449247126
+rf,Marine Debris,wind_u,0.011449595393018158
+rf,Marine Debris,era5_stokes_u,0.010919073380536106
+rf,Marine Debris,wind_speed_mean_72h,0.010450388945728577
+rf,Marine Debris,era5_stokes_speed,0.01003401695100834
+rf,Marine Debris,era5_swh,0.009923014749523174
+rf,Marine Debris,era5_swh_mean_72h,0.009780295308322647
+rf,Marine Debris,era5_wind_speed_mean_24h,0.009434782130396061
+rf,Marine Debris,wind_speed_mean_24h,0.009046510422346464
+rf,Marine Debris,era5_u10_mean_72h,0.00895930590119084
+rf,Marine Debris,sst_grad_c_per_km,0.007948033811810824
+rf,Marine Debris,wind_speed_max_72h,0.007086392697212183
+rf,Marine Debris,era5_wind_speed_mean_72h,0.007070096983833818
+rf,Marine Debris,era5_precip_72h_mm,0.006770073033146409
+rf,Marine Debris,era5_v10_mean_72h,0.006702578931485097
+rf,Marine Debris,era5_msl_hpa,0.006285767792697697
+rf,Marine Debris,era5_precip_7d_mm,0.005408520520463779
+rf,Marine Debris,era5_wind_speed_max_72h,0.0048645060325608
+rf,Algae/Sargassum,NDVI,0.15973754189707623
+rf,Algae/Sargassum,nir/red,0.1094105204374466
+rf,Algae/Sargassum,nir/green,0.06853669292839266
+rf,Algae/Sargassum,B2,0.05830896444907365
+rf,Algae/Sargassum,NDWI,0.05360589346816916
+rf,Algae/Sargassum,FAI,0.05025341387757541
+rf,Algae/Sargassum,modis_log10_chla,0.04929560191092647
+rf,Algae/Sargassum,log10_chl,0.04185503949131961
+rf,Algae/Sargassum,B11,0.038163887356022594
+rf,Algae/Sargassum,NDMI,0.03075598561832865
+rf,Algae/Sargassum,swir1/nir,0.029591250675347753
+rf,Algae/Sargassum,B4,0.028165973255388742
+rf,Algae/Sargassum,era5_swh,0.021330908769410434
+rf,Algae/Sargassum,era5_v10,0.021012773085871527
+rf,Algae/Sargassum,red/green,0.019868664898482723
+rf,Algae/Sargassum,B3,0.0158404042351644
+rf,Algae/Sargassum,B12,0.014761802478087827
+rf,Algae/Sargassum,FDI,0.013973141299088094
+rf,Algae/Sargassum,wind_v,0.012808404003123105
+rf,Algae/Sargassum,sst_c,0.010204872449220736
+rf,Algae/Sargassum,era5_u10,0.00969748532318542
+rf,Algae/Sargassum,B8,0.00967222209275717
+rf,Algae/Sargassum,wind_u,0.009563506391935027
+rf,Algae/Sargassum,era5_stokes_v,0.009301558201829537
+rf,Algae/Sargassum,era5_precip_24h_mm,0.009249108191904696
+rf,Algae/Sargassum,era5_v10_mean_72h,0.008020523373424593
+rf,Algae/Sargassum,era5_swh_mean_72h,0.007854373562833966
+rf,Algae/Sargassum,era5_u10_mean_72h,0.007483567150179689
+rf,Algae/Sargassum,era5_precip_72h_mm,0.0071476730523546035
+rf,Algae/Sargassum,wind_speed_mean_24h,0.007090336783834215
+rf,Algae/Sargassum,era5_stokes_u,0.006217161754471269
+rf,Algae/Sargassum,era5_wind_speed,0.005548646648161322
+rf,Algae/Sargassum,wind_speed_max_72h,0.004944235035415459
+rf,Algae/Sargassum,era5_stokes_speed,0.004912364975867427
+rf,Algae/Sargassum,era5_wind_speed_mean_72h,0.004828339818099146
+rf,Algae/Sargassum,B8A,0.004766377423074281
+rf,Algae/Sargassum,B7,0.0046671203568121105
+rf,Algae/Sargassum,sst_grad_c_per_km,0.00464011788770883
+rf,Algae/Sargassum,B1,0.0041125480807450475
+rf,Algae/Sargassum,wind_speed_mean_72h,0.00394084126239604
+rf,Algae/Sargassum,era5_wind_speed_max_72h,0.0036788467526138627
+rf,Algae/Sargassum,wind_speed,0.0032724747058725857
+rf,Algae/Sargassum,era5_msl_hpa,0.0030724634468124318
+rf,Algae/Sargassum,era5_precip_7d_mm,0.0026519456849865256
+rf,Algae/Sargassum,era5_wind_speed_mean_24h,0.002547716749155593
+rf,Algae/Sargassum,B5,0.0022947459503690165
+rf,Algae/Sargassum,B6,0.0013419627596838587
+rf,Other,B11,0.16508319990836173
+rf,Other,B2,0.06118728764607654
+rf,Other,B12,0.06044917824575111
+rf,Other,B3,0.05286277454956576
+rf,Other,B4,0.04088328449779369
+rf,Other,B8,0.039536815342753544
+rf,Other,B8A,0.030305075717588434
+rf,Other,NDVI,0.030067885076925312
+rf,Other,modis_log10_chla,0.030010728691567692
+rf,Other,sst_c,0.02711030001504527
+rf,Other,swir1/nir,0.026133662081237186
+rf,Other,nir/green,0.023245623771272542
+rf,Other,era5_v10,0.022569860315625384
+rf,Other,NDWI,0.02213492584780616
+rf,Other,log10_chl,0.02189288918634468
+rf,Other,NDMI,0.02102087378565828
+rf,Other,nir/red,0.020970575056895566
+rf,Other,B6,0.017952048885412287
+rf,Other,B7,0.01745402342994877
+rf,Other,era5_swh_mean_72h,0.01735167006883959
+rf,Other,era5_wind_speed,0.016961121956803007
+rf,Other,FDI,0.01568771770010149
+rf,Other,FAI,0.01487084426597558
+rf,Other,B5,0.014608891893456396
+rf,Other,wind_speed_mean_24h,0.013600982801451847
+rf,Other,red/green,0.013368284904481954
+rf,Other,wind_speed,0.012773683476499448
+rf,Other,era5_swh,0.012037262973634357
+rf,Other,era5_stokes_v,0.012013207440359988
+rf,Other,era5_stokes_u,0.010489245994872796
+rf,Other,era5_msl_hpa,0.010250457888558898
+rf,Other,era5_u10,0.010137740809105903
+rf,Other,era5_stokes_speed,0.009719943004936204
+rf,Other,wind_speed_mean_72h,0.008501898348326594
+rf,Other,era5_wind_speed_mean_72h,0.008477722639529698
+rf,Other,era5_v10_mean_72h,0.007941149865600478
+rf,Other,wind_v,0.007048987430185855
+rf,Other,era5_precip_24h_mm,0.006766764200523923
+rf,Other,wind_u,0.00632010299077122
+rf,Other,era5_wind_speed_mean_24h,0.006244465430897836
+rf,Other,era5_precip_7d_mm,0.005902647001302483
+rf,Other,B1,0.0055178807527350516
+rf,Other,sst_grad_c_per_km,0.005346835043652457
+rf,Other,era5_precip_72h_mm,0.005177988973564742
+rf,Other,wind_speed_max_72h,0.00425490366079136
+rf,Other,era5_wind_speed_max_72h,0.003923237720949536
+rf,Other,era5_u10_mean_72h,0.003833348710461321
+xgb,Water,nir/red,0.12322663430256
+xgb,Water,FAI,0.09905966218625337
+xgb,Water,FDI,0.0985757176791287
+xgb,Water,red/green,0.09424707220240408
+xgb,Water,NDVI,0.06670077181899266
+xgb,Water,B11,0.06325591689026168
+xgb,Water,NDWI,0.0605656843117426
+xgb,Water,wind_u,0.033810092714122414
+xgb,Water,NDMI,0.030470492790828158
+xgb,Water,B1,0.02745022569468142
+xgb,Water,B2,0.024898096449798082
+xgb,Water,log10_chl,0.024581779066912682
+xgb,Water,swir1/nir,0.02351931449557396
+xgb,Water,B8A,0.02120656989221815
+xgb,Water,B4,0.019095750484527284
+xgb,Water,wind_speed_mean_72h,0.018754642172437476
+xgb,Water,B5,0.017202946340629657
+xgb,Water,nir/green,0.016789840616308057
+xgb,Water,era5_swh,0.013247920093866088
+xgb,Water,era5_u10,0.010975605614557234
+xgb,Water,sst_c,0.010864297480665386
+xgb,Water,modis_log10_chla,0.010643969445624776
+xgb,Water,era5_msl_hpa,0.0090931966607759
+xgb,Water,era5_v10,0.006088241035746775
+xgb,Water,sst_grad_c_per_km,0.005551129030217463
+xgb,Water,wind_speed_mean_24h,0.005524287860819699
+xgb,Water,era5_v10_mean_72h,0.005426862949731197
+xgb,Water,B8,0.005318072052978174
+xgb,Water,era5_wind_speed_mean_72h,0.004281804729275853
+xgb,Water,era5_precip_72h_mm,0.004245052578748543
+xgb,Water,B3,0.003961629990093307
+xgb,Water,era5_swh_mean_72h,0.003945580861816086
+xgb,Water,era5_stokes_u,0.003928907730213246
+xgb,Water,era5_precip_24h_mm,0.003837284644414157
+xgb,Water,era5_u10_mean_72h,0.003596437172562589
+xgb,Water,B7,0.003571969614899907
+xgb,Water,era5_wind_speed,0.003428171502587377
+xgb,Water,wind_v,0.0025789683752380768
+xgb,Water,wind_speed,0.002559180478499247
+xgb,Water,era5_wind_speed_mean_24h,0.0020962857116687233
+xgb,Water,era5_stokes_v,0.0020172722563410227
+xgb,Water,wind_speed_max_72h,0.0018977873020226365
+xgb,Water,era5_wind_speed_max_72h,0.001854623548417647
+xgb,Water,era5_precip_7d_mm,0.0018206600042574744
+xgb,Water,B6,0.0017403638414220995
+xgb,Water,era5_stokes_speed,0.0013477373159449916
+xgb,Water,B12,0.0011454900072138488
+xgb,Marine Debris,red/green,0.08648640913631178
+xgb,Marine Debris,FAI,0.08255487911170198
+xgb,Marine Debris,NDWI,0.06669566683089621
+xgb,Marine Debris,B5,0.06583178306150693
+xgb,Marine Debris,nir/green,0.05737640692540771
+xgb,Marine Debris,B12,0.05360338599250386
+xgb,Marine Debris,B3,0.05041217405230551
+xgb,Marine Debris,swir1/nir,0.04448562637994596
+xgb,Marine Debris,NDVI,0.042910649509377514
+xgb,Marine Debris,nir/red,0.041801212501520586
+xgb,Marine Debris,NDMI,0.040804508631983025
+xgb,Marine Debris,wind_v,0.036197877354919486
+xgb,Marine Debris,B1,0.03157913124639579
+xgb,Marine Debris,FDI,0.023937066537870748
+xgb,Marine Debris,modis_log10_chla,0.021000862107341384
+xgb,Marine Debris,B7,0.020805970694628532
+xgb,Marine Debris,wind_speed,0.018980745445413633
+xgb,Marine Debris,era5_v10,0.017465358227673766
+xgb,Marine Debris,B2,0.016625245874152553
+xgb,Marine Debris,log10_chl,0.014978137756867942
+xgb,Marine Debris,era5_wind_speed,0.014160290410004807
+xgb,Marine Debris,era5_stokes_v,0.01373010860022548
+xgb,Marine Debris,B11,0.012983256873631588
+xgb,Marine Debris,sst_grad_c_per_km,0.010713358327204487
+xgb,Marine Debris,era5_precip_72h_mm,0.009598791762739785
+xgb,Marine Debris,era5_precip_24h_mm,0.009482409988071589
+xgb,Marine Debris,sst_c,0.009126357188507557
+xgb,Marine Debris,era5_msl_hpa,0.008852797046340915
+xgb,Marine Debris,B8A,0.008462471221416993
+xgb,Marine Debris,era5_u10,0.007518118232455429
+xgb,Marine Debris,B4,0.007152334199616236
+xgb,Marine Debris,era5_precip_7d_mm,0.006636894317065717
+xgb,Marine Debris,B6,0.006098058650677875
+xgb,Marine Debris,wind_u,0.00584003541061093
+xgb,Marine Debris,era5_stokes_u,0.0043527169147378015
+xgb,Marine Debris,B8,0.003687455581420303
+xgb,Marine Debris,era5_swh_mean_72h,0.0034393685683205746
+xgb,Marine Debris,era5_stokes_speed,0.0034122951862828
+xgb,Marine Debris,era5_swh,0.0032553564673657464
+xgb,Marine Debris,era5_wind_speed_mean_72h,0.003142444851468926
+xgb,Marine Debris,era5_v10_mean_72h,0.0031005326949797426
+xgb,Marine Debris,era5_u10_mean_72h,0.0028031838186835735
+xgb,Marine Debris,wind_speed_mean_24h,0.0024381574766271013
+xgb,Marine Debris,era5_wind_speed_mean_24h,0.0021912163863842655
+xgb,Marine Debris,wind_speed_max_72h,0.00162703345153537
+xgb,Marine Debris,era5_wind_speed_max_72h,0.000918187296033034
+xgb,Marine Debris,wind_speed_mean_72h,0.0007436716988663949
+xgb,Algae/Sargassum,NDVI,0.2813623348614619
+xgb,Algae/Sargassum,log10_chl,0.1889604393963642
+xgb,Algae/Sargassum,modis_log10_chla,0.09616885821463118
+xgb,Algae/Sargassum,era5_swh,0.09418732943815578
+xgb,Algae/Sargassum,B2,0.05696535948918381
+xgb,Algae/Sargassum,era5_u10,0.029498490072449216
+xgb,Algae/Sargassum,wind_u,0.027392398786763625
+xgb,Algae/Sargassum,wind_speed_max_72h,0.026453297516241193
+xgb,Algae/Sargassum,era5_swh_mean_72h,0.021962662238897993
+xgb,Algae/Sargassum,NDMI,0.020006388969545038
+xgb,Algae/Sargassum,era5_stokes_v,0.014773713199696007
+xgb,Algae/Sargassum,NDWI,0.014202900741869839
+xgb,Algae/Sargassum,era5_precip_24h_mm,0.011042448712483093
+xgb,Algae/Sargassum,era5_msl_hpa,0.009673816920909798
+xgb,Algae/Sargassum,era5_v10,0.009600890334270662
+xgb,Algae/Sargassum,B11,0.009394860981805314
+xgb,Algae/Sargassum,FAI,0.008580290477047338
+xgb,Algae/Sargassum,sst_c,0.008388823363130588
+xgb,Algae/Sargassum,sst_grad_c_per_km,0.007501650174055674
+xgb,Algae/Sargassum,wind_speed,0.006762599148759219
+xgb,Algae/Sargassum,red/green,0.006143176860497969
+xgb,Algae/Sargassum,era5_stokes_u,0.006076583425286577
+xgb,Algae/Sargassum,era5_wind_speed_max_72h,0.005088978822910028
+xgb,Algae/Sargassum,B3,0.004347539273655466
+xgb,Algae/Sargassum,era5_wind_speed_mean_24h,0.003187845649360588
+xgb,Algae/Sargassum,FDI,0.003099277651947203
+xgb,Algae/Sargassum,B12,0.0028937209435524525
+xgb,Algae/Sargassum,B6,0.0025588400281072055
+xgb,Algae/Sargassum,B7,0.0024340646704366898
+xgb,Algae/Sargassum,nir/red,0.0019416246608916499
+xgb,Algae/Sargassum,era5_precip_7d_mm,0.001940868556829158
+xgb,Algae/Sargassum,wind_speed_mean_24h,0.00191185653180671
+xgb,Algae/Sargassum,B1,0.0018994050726074104
+xgb,Algae/Sargassum,era5_u10_mean_72h,0.00175380453063171
+xgb,Algae/Sargassum,era5_precip_72h_mm,0.0016908993361341885
+xgb,Algae/Sargassum,B4,0.0015687333533267755
+xgb,Algae/Sargassum,B8A,0.0015204015927031325
+xgb,Algae/Sargassum,B5,0.0013408555277518064
+xgb,Algae/Sargassum,era5_wind_speed,0.0011769369166882665
+xgb,Algae/Sargassum,wind_v,0.0011587574618646473
+xgb,Algae/Sargassum,wind_speed_mean_72h,0.0011070380692563449
+xgb,Algae/Sargassum,era5_v10_mean_72h,0.0009906220123223636
+xgb,Algae/Sargassum,swir1/nir,0.0005407780539402238
+xgb,Algae/Sargassum,era5_wind_speed_mean_72h,0.0004227543618722343
+xgb,Algae/Sargassum,era5_stokes_speed,0.0003063777910486347
+xgb,Algae/Sargassum,B8,1.870580684925594e-05
+xgb,Algae/Sargassum,nir/green,0.0
+xgb,Other,B11,0.3579702461863257
+xgb,Other,B2,0.06812440045032955
+xgb,Other,era5_msl_hpa,0.04045058155152621
+xgb,Other,log10_chl,0.038454690522574546
+xgb,Other,era5_wind_speed_mean_72h,0.03427955594055615
+xgb,Other,sst_c,0.03292541564185476
+xgb,Other,era5_v10_mean_72h,0.031083928758384966
+xgb,Other,FDI,0.024968852251256186
+xgb,Other,B4,0.024399431058031256
+xgb,Other,wind_speed,0.022998250136213646
+xgb,Other,era5_wind_speed,0.021954351341858296
+xgb,Other,B12,0.02111346346678781
+xgb,Other,NDWI,0.02001369413638048
+xgb,Other,era5_stokes_u,0.016027303780076916
+xgb,Other,era5_u10,0.015441738381564124
+xgb,Other,wind_v,0.015099121993598428
+xgb,Other,B1,0.014454920440531252
+xgb,Other,era5_swh,0.01407258643625861
+xgb,Other,era5_u10_mean_72h,0.01265088405396103
+xgb,Other,era5_wind_speed_max_72h,0.011949612932854708
+xgb,Other,B8A,0.011926606142909316
+xgb,Other,NDVI,0.011544965898532456
+xgb,Other,modis_log10_chla,0.011284543039931108
+xgb,Other,era5_swh_mean_72h,0.00977252108807547
+xgb,Other,B8,0.009691835145478665
+xgb,Other,era5_v10,0.0090720351575351
+xgb,Other,wind_speed_mean_72h,0.009011616898996681
+xgb,Other,B3,0.007381931402862963
+xgb,Other,wind_speed_mean_24h,0.007252961514224623
+xgb,Other,era5_precip_72h_mm,0.006901623951298338
+xgb,Other,era5_wind_speed_mean_24h,0.006901189887926845
+xgb,Other,sst_grad_c_per_km,0.0064510847619985495
+xgb,Other,FAI,0.005728746257805617
+xgb,Other,B5,0.005359496099964298
+xgb,Other,wind_speed_max_72h,0.004888051712008079
+xgb,Other,red/green,0.004549669630480151
+xgb,Other,era5_stokes_speed,0.004262006830292077
+xgb,Other,era5_precip_7d_mm,0.0042408270444213225
+xgb,Other,B6,0.004139128943640161
+xgb,Other,NDMI,0.004048918370178362
+xgb,Other,era5_precip_24h_mm,0.003477318928401837
+xgb,Other,era5_stokes_v,0.003475522026723702
+xgb,Other,wind_u,0.003187923345878564
+xgb,Other,nir/green,0.003120367191426882
+xgb,Other,B7,0.0027096047106626026
+xgb,Other,swir1/nir,0.0006822437293033314
+xgb,Other,nir/red,0.000504230828118304
+lgbm,Water,FAI,0.11498578309693169
+lgbm,Water,nir/red,0.08697968006507205
+lgbm,Water,red/green,0.08306683245619441
+lgbm,Water,FDI,0.07524337225423144
+lgbm,Water,NDVI,0.06612305258613883
+lgbm,Water,NDMI,0.04679283633245297
+lgbm,Water,B11,0.04636492911161078
+lgbm,Water,nir/green,0.03523477386693726
+lgbm,Water,B5,0.03490085994358987
+lgbm,Water,B2,0.031758668911819665
+lgbm,Water,NDWI,0.02923622312344327
+lgbm,Water,B1,0.02767168652529602
+lgbm,Water,B3,0.025546643678245842
+lgbm,Water,wind_u,0.022255052164917372
+lgbm,Water,B8A,0.02155281452792506
+lgbm,Water,log10_chl,0.019300092895387432
+lgbm,Water,B4,0.017971039486906218
+lgbm,Water,era5_v10,0.01779955530801918
+lgbm,Water,B12,0.016886162376398714
+lgbm,Water,era5_v10_mean_72h,0.015278413197667384
+lgbm,Water,wind_speed_mean_72h,0.014659824045582075
+lgbm,Water,era5_precip_24h_mm,0.013209693465432947
+lgbm,Water,modis_log10_chla,0.01215325681127663
+lgbm,Water,sst_c,0.01178596465966499
+lgbm,Water,B8,0.011204947496694586
+lgbm,Water,swir1/nir,0.01109235459011182
+lgbm,Water,era5_u10,0.01048656823797549
+lgbm,Water,era5_wind_speed,0.008560481529511341
+lgbm,Water,era5_msl_hpa,0.007502764614024644
+lgbm,Water,sst_grad_c_per_km,0.007084050779780784
+lgbm,Water,era5_stokes_u,0.006376531178908116
+lgbm,Water,era5_swh,0.005814029684886727
+lgbm,Water,era5_swh_mean_72h,0.005399257524131237
+lgbm,Water,B7,0.004875068802176319
+lgbm,Water,wind_speed,0.003707418910290747
+lgbm,Water,era5_precip_72h_mm,0.0034200911248968226
+lgbm,Water,wind_speed_mean_24h,0.0032307613978690666
+lgbm,Water,era5_stokes_speed,0.003190978927502435
+lgbm,Water,era5_stokes_v,0.003022494904365839
+lgbm,Water,era5_u10_mean_72h,0.0028645488375011467
+lgbm,Water,B6,0.0028637462302475458
+lgbm,Water,era5_precip_7d_mm,0.002556612131513078
+lgbm,Water,era5_wind_speed_mean_72h,0.0025221850275811623
+lgbm,Water,wind_speed_max_72h,0.0024796152001819874
+lgbm,Water,era5_wind_speed_mean_24h,0.0021798281059934818
+lgbm,Water,wind_v,0.0018565819656821288
+lgbm,Water,era5_wind_speed_max_72h,0.0009518719070312133
+lgbm,Marine Debris,NDWI,0.09638620586808506
+lgbm,Marine Debris,red/green,0.08231443397223226
+lgbm,Marine Debris,FAI,0.07404191280939393
+lgbm,Marine Debris,NDMI,0.06862889235575652
+lgbm,Marine Debris,B3,0.04794999509237128
+lgbm,Marine Debris,B12,0.045206245559505726
+lgbm,Marine Debris,NDVI,0.0381225741972642
+lgbm,Marine Debris,B5,0.03793520529737991
+lgbm,Marine Debris,B1,0.034690146314462496
+lgbm,Marine Debris,wind_v,0.03342165938961864
+lgbm,Marine Debris,swir1/nir,0.03211055390621896
+lgbm,Marine Debris,B7,0.03155885547135814
+lgbm,Marine Debris,wind_speed,0.026802357670827746
+lgbm,Marine Debris,era5_v10,0.023342301907454215
+lgbm,Marine Debris,FDI,0.022829273824278132
+lgbm,Marine Debris,B6,0.02205324224328199
+lgbm,Marine Debris,nir/green,0.02112860847971695
+lgbm,Marine Debris,nir/red,0.02067071267399864
+lgbm,Marine Debris,era5_stokes_v,0.01988985038772163
+lgbm,Marine Debris,log10_chl,0.019439014386391062
+lgbm,Marine Debris,modis_log10_chla,0.018340214449391542
+lgbm,Marine Debris,B2,0.017054996277322255
+lgbm,Marine Debris,B4,0.015319752091709753
+lgbm,Marine Debris,era5_wind_speed,0.015305178844821972
+lgbm,Marine Debris,sst_c,0.013346997737563536
+lgbm,Marine Debris,era5_u10,0.012214020834858444
+lgbm,Marine Debris,era5_precip_24h_mm,0.010890150297251091
+lgbm,Marine Debris,era5_precip_7d_mm,0.010131503183154433
+lgbm,Marine Debris,B8A,0.009752783434536174
+lgbm,Marine Debris,sst_grad_c_per_km,0.008128845591019554
+lgbm,Marine Debris,era5_stokes_u,0.008053097579782054
+lgbm,Marine Debris,B11,0.0075105544398424255
+lgbm,Marine Debris,B8,0.006961416650448389
+lgbm,Marine Debris,wind_speed_mean_24h,0.00612572503094343
+lgbm,Marine Debris,era5_precip_72h_mm,0.005769580191700354
+lgbm,Marine Debris,era5_u10_mean_72h,0.005269473388156425
+lgbm,Marine Debris,era5_stokes_speed,0.004702198417667848
+lgbm,Marine Debris,era5_msl_hpa,0.004668991173818216
+lgbm,Marine Debris,era5_swh,0.0046183504408634935
+lgbm,Marine Debris,era5_wind_speed_mean_24h,0.004053008703334107
+lgbm,Marine Debris,era5_v10_mean_72h,0.0028695709552564977
+lgbm,Marine Debris,era5_wind_speed_mean_72h,0.0020766878657398793
+lgbm,Marine Debris,wind_speed_max_72h,0.0018519664377692278
+lgbm,Marine Debris,wind_speed_mean_72h,0.0017351489572222454
+lgbm,Marine Debris,wind_u,0.0017326814996621288
+lgbm,Marine Debris,era5_wind_speed_max_72h,0.0015244447447293897
+lgbm,Marine Debris,era5_swh_mean_72h,0.0014706189741176062
+lgbm,Algae/Sargassum,log10_chl,0.19725965869805934
+lgbm,Algae/Sargassum,nir/red,0.1786052101971651
+lgbm,Algae/Sargassum,B2,0.07428499077207486
+lgbm,Algae/Sargassum,modis_log10_chla,0.0712590382331842
+lgbm,Algae/Sargassum,NDVI,0.06245281486127144
+lgbm,Algae/Sargassum,nir/green,0.05082533358066674
+lgbm,Algae/Sargassum,era5_swh,0.04144476271336609
+lgbm,Algae/Sargassum,FAI,0.04010924301680893
+lgbm,Algae/Sargassum,era5_swh_mean_72h,0.023408664561769606
+lgbm,Algae/Sargassum,NDMI,0.022340771319947952
+lgbm,Algae/Sargassum,wind_speed_max_72h,0.01992702068722557
+lgbm,Algae/Sargassum,wind_u,0.017196045443896045
+lgbm,Algae/Sargassum,red/green,0.015096395124891025
+lgbm,Algae/Sargassum,B12,0.01291342170123791
+lgbm,Algae/Sargassum,era5_stokes_v,0.012862615707711009
+lgbm,Algae/Sargassum,sst_c,0.011996258085410312
+lgbm,Algae/Sargassum,NDWI,0.011134677165095027
+lgbm,Algae/Sargassum,B11,0.01077172805215798
+lgbm,Algae/Sargassum,era5_precip_24h_mm,0.01069037182696489
+lgbm,Algae/Sargassum,B6,0.009185602158066995
+lgbm,Algae/Sargassum,era5_v10,0.008904127963690623
+lgbm,Algae/Sargassum,B3,0.008807985107839951
+lgbm,Algae/Sargassum,era5_u10,0.008211233279055598
+lgbm,Algae/Sargassum,FDI,0.007790425246152276
+lgbm,Algae/Sargassum,B4,0.007677013840017138
+lgbm,Algae/Sargassum,B1,0.00680501054072071
+lgbm,Algae/Sargassum,wind_v,0.006586255049122077
+lgbm,Algae/Sargassum,era5_precip_72h_mm,0.005698948956589055
+lgbm,Algae/Sargassum,era5_wind_speed_mean_24h,0.004435112422338331
+lgbm,Algae/Sargassum,era5_msl_hpa,0.0041642411206158116
+lgbm,Algae/Sargassum,era5_stokes_u,0.0040185978075593055
+lgbm,Algae/Sargassum,era5_wind_speed_max_72h,0.0039909893503257705
+lgbm,Algae/Sargassum,B7,0.0035687855635585294
+lgbm,Algae/Sargassum,era5_precip_7d_mm,0.003462808763379108
+lgbm,Algae/Sargassum,wind_speed,0.0030716686114579243
+lgbm,Algae/Sargassum,B5,0.00264628530050881
+lgbm,Algae/Sargassum,sst_grad_c_per_km,0.002495251768571937
+lgbm,Algae/Sargassum,swir1/nir,0.0022696360780043007
+lgbm,Algae/Sargassum,era5_wind_speed,0.0019476628365445588
+lgbm,Algae/Sargassum,era5_v10_mean_72h,0.0018398048335461084
+lgbm,Algae/Sargassum,B8A,0.0018154663734012127
+lgbm,Algae/Sargassum,era5_u10_mean_72h,0.0017978403387903911
+lgbm,Algae/Sargassum,era5_stokes_speed,0.0014422283596566905
+lgbm,Algae/Sargassum,era5_wind_speed_mean_72h,0.0013474801747820953
+lgbm,Algae/Sargassum,B8,0.0008269270014955056
+lgbm,Algae/Sargassum,wind_speed_mean_24h,0.00038187569948882824
+lgbm,Algae/Sargassum,wind_speed_mean_72h,0.0002317137058160843
+lgbm,Other,B11,0.3118972817740617
+lgbm,Other,era5_msl_hpa,0.05230943708899845
+lgbm,Other,B2,0.04780157250904126
+lgbm,Other,wind_speed,0.03816693352990914
+lgbm,Other,B8,0.03610914913890612
+lgbm,Other,log10_chl,0.031594743372028625
+lgbm,Other,era5_wind_speed,0.030909645618248244
+lgbm,Other,B4,0.02979164247793236
+lgbm,Other,B12,0.02930610722031582
+lgbm,Other,era5_v10_mean_72h,0.026738375318569464
+lgbm,Other,wind_v,0.024972277383547372
+lgbm,Other,B3,0.023474326835821388
+lgbm,Other,sst_c,0.02236016639253728
+lgbm,Other,FDI,0.017248548825144046
+lgbm,Other,era5_wind_speed_mean_72h,0.01585015111990867
+lgbm,Other,era5_u10_mean_72h,0.014798751067263435
+lgbm,Other,era5_u10,0.014221659627349004
+lgbm,Other,NDWI,0.014216655347625557
+lgbm,Other,B1,0.014202715447865685
+lgbm,Other,era5_v10,0.013082936480423081
+lgbm,Other,era5_precip_72h_mm,0.01283589905179254
+lgbm,Other,B5,0.012627487151286773
+lgbm,Other,era5_stokes_u,0.012615579969893017
+lgbm,Other,B8A,0.011477324487953477
+lgbm,Other,modis_log10_chla,0.01068364280137643
+lgbm,Other,sst_grad_c_per_km,0.010682669130236978
+lgbm,Other,era5_wind_speed_max_72h,0.00961670517165738
+lgbm,Other,NDVI,0.0088335820646692
+lgbm,Other,era5_precip_24h_mm,0.008503603566689399
+lgbm,Other,wind_speed_mean_24h,0.007714306190503701
+lgbm,Other,wind_speed_mean_72h,0.007157061624168552
+lgbm,Other,swir1/nir,0.006890628644781565
+lgbm,Other,wind_u,0.0068231561800702716
+lgbm,Other,nir/green,0.006413021468659247
+lgbm,Other,era5_stokes_v,0.00608473965428813
+lgbm,Other,red/green,0.0060805043114978
+lgbm,Other,era5_swh_mean_72h,0.005777116324731634
+lgbm,Other,FAI,0.005638597614664755
+lgbm,Other,NDMI,0.005247845292532349
+lgbm,Other,B7,0.00522720680324408
+lgbm,Other,era5_wind_speed_mean_24h,0.004759669060652673
+lgbm,Other,nir/red,0.004088368558235575
+lgbm,Other,wind_speed_max_72h,0.004039236485131595
+lgbm,Other,era5_stokes_speed,0.0033133767006621145
+lgbm,Other,era5_swh,0.003194800834513552
+lgbm,Other,B6,0.00303863096477651
+lgbm,Other,era5_precip_7d_mm,0.0015821633158341936
+ada,Water,nir/red,0.19151849009478453
+ada,Water,FDI,0.10328013702182491
+ada,Water,FAI,0.09566096321309413
+ada,Water,NDVI,0.05386098657485682
+ada,Water,B11,0.05128770885310412
+ada,Water,red/green,0.051270346253003786
+ada,Water,B1,0.042031417936599105
+ada,Water,NDWI,0.03238820281472899
+ada,Water,nir/green,0.02914519008456963
+ada,Water,wind_speed_mean_72h,0.024758522954927965
+ada,Water,B4,0.023775332809556925
+ada,Water,NDMI,0.023734078630832173
+ada,Water,log10_chl,0.02209404324331623
+ada,Water,swir1/nir,0.022020676095949997
+ada,Water,B2,0.02128245929613326
+ada,Water,era5_v10_mean_72h,0.019848611388223573
+ada,Water,B5,0.019434508191442185
+ada,Water,sst_c,0.01759609974685196
+ada,Water,era5_u10,0.01636187144069299
+ada,Water,B8A,0.015397728470665896
+ada,Water,era5_v10,0.014583028998482472
+ada,Water,modis_log10_chla,0.013777833900474809
+ada,Water,wind_u,0.01201309310738812
+ada,Water,era5_msl_hpa,0.011378618354566543
+ada,Water,era5_wind_speed_mean_72h,0.010827733844836894
+ada,Water,B3,0.009519716940699242
+ada,Water,sst_grad_c_per_km,0.008174417598217422
+ada,Water,wind_v,0.006439937042495255
+ada,Water,wind_speed_mean_24h,0.004929394155728932
+ada,Water,era5_swh_mean_72h,0.004592687559928159
+ada,Water,wind_speed_max_72h,0.003963844572057121
+ada,Water,B8,0.003715404477287143
+ada,Water,era5_stokes_speed,0.0037004179243143114
+ada,Water,era5_u10_mean_72h,0.0032435911884183
+ada,Water,era5_stokes_u,0.0026540765598136017
+ada,Water,wind_speed,0.0018908131423027515
+ada,Water,B7,0.001601750026485984
+ada,Water,era5_precip_7d_mm,0.0014053647099338644
+ada,Water,B6,0.0011859030459561572
+ada,Water,era5_precip_72h_mm,0.0011419044307131789
+ada,Water,era5_wind_speed_max_72h,0.0008815361637899038
+ada,Water,era5_swh,0.0006318723778927351
+ada,Water,era5_stokes_v,0.0005560656182313785
+ada,Water,era5_wind_speed_mean_24h,0.00026657068518529315
+ada,Water,era5_precip_24h_mm,0.0001770484596412184
+ada,Water,B12,0.0
+ada,Water,era5_wind_speed,0.0
+ada,Marine Debris,nir/red,0.14358117440180868
+ada,Marine Debris,log10_chl,0.0944601994476318
+ada,Marine Debris,FAI,0.08033331449908453
+ada,Marine Debris,B1,0.07253566526015919
+ada,Marine Debris,FDI,0.05713687238721244
+ada,Marine Debris,NDMI,0.05639841644531668
+ada,Marine Debris,NDVI,0.053084853015279855
+ada,Marine Debris,NDWI,0.045412780632498574
+ada,Marine Debris,red/green,0.043167876576343606
+ada,Marine Debris,B11,0.035450298880949284
+ada,Marine Debris,modis_log10_chla,0.034954794886996016
+ada,Marine Debris,nir/green,0.02605244223513422
+ada,Marine Debris,B3,0.02416389864890207
+ada,Marine Debris,B4,0.023806578402833466
+ada,Marine Debris,era5_u10,0.023655220210454044
+ada,Marine Debris,wind_speed_max_72h,0.022938772471231134
+ada,Marine Debris,swir1/nir,0.021331551371320555
+ada,Marine Debris,wind_speed,0.020430980107181657
+ada,Marine Debris,B2,0.017188996190052968
+ada,Marine Debris,era5_wind_speed,0.012774667479545894
+ada,Marine Debris,era5_v10,0.01226007157131961
+ada,Marine Debris,B5,0.011383299247687141
+ada,Marine Debris,era5_stokes_speed,0.010764797559887306
+ada,Marine Debris,sst_c,0.009368962682871546
+ada,Marine Debris,era5_stokes_v,0.0092681732523483
+ada,Marine Debris,era5_precip_7d_mm,0.007385479009513434
+ada,Marine Debris,era5_msl_hpa,0.007197633203508602
+ada,Marine Debris,era5_u10_mean_72h,0.00537820946060778
+ada,Marine Debris,era5_precip_72h_mm,0.005111492830308133
+ada,Marine Debris,era5_wind_speed_max_72h,0.004685230767965858
+ada,Marine Debris,wind_u,0.003027666713875762
+ada,Marine Debris,era5_precip_24h_mm,0.0019242848394318177
+ada,Marine Debris,era5_swh_mean_72h,0.0018237200621173501
+ada,Marine Debris,era5_v10_mean_72h,0.0006771088249627082
+ada,Marine Debris,wind_v,0.0005418144541422269
+ada,Marine Debris,B7,0.00019829627502988205
+ada,Marine Debris,B6,0.00014440567781943376
+ada,Marine Debris,era5_wind_speed_mean_72h,9.315969729228932e-12
+ada,Marine Debris,B8A,7.350434021470658e-12
+ada,Marine Debris,B8,0.0
+ada,Marine Debris,B12,0.0
+ada,Marine Debris,sst_grad_c_per_km,0.0
+ada,Marine Debris,wind_speed_mean_24h,0.0
+ada,Marine Debris,wind_speed_mean_72h,0.0
+ada,Marine Debris,era5_wind_speed_mean_24h,0.0
+ada,Marine Debris,era5_swh,0.0
+ada,Marine Debris,era5_stokes_u,0.0
+ada,Algae/Sargassum,nir/red,0.21387398534107643
+ada,Algae/Sargassum,log10_chl,0.17748259024888483
+ada,Algae/Sargassum,NDVI,0.145990517213068
+ada,Algae/Sargassum,B2,0.0792606667460447
+ada,Algae/Sargassum,red/green,0.041735002477247984
+ada,Algae/Sargassum,FAI,0.034574593821810426
+ada,Algae/Sargassum,B3,0.03338867455977888
+ada,Algae/Sargassum,wind_u,0.03141775428933394
+ada,Algae/Sargassum,wind_speed_max_72h,0.024890987673806108
+ada,Algae/Sargassum,NDMI,0.023078202643426696
+ada,Algae/Sargassum,modis_log10_chla,0.020418444944584252
+ada,Algae/Sargassum,nir/green,0.018472574524938286
+ada,Algae/Sargassum,era5_swh,0.016858200334432437
+ada,Algae/Sargassum,B11,0.01468410526333953
+ada,Algae/Sargassum,FDI,0.013986930871117758
+ada,Algae/Sargassum,NDWI,0.012538418921803988
+ada,Algae/Sargassum,swir1/nir,0.0108053238880921
+ada,Algae/Sargassum,era5_swh_mean_72h,0.009099110021878744
+ada,Algae/Sargassum,sst_grad_c_per_km,0.008194327165224271
+ada,Algae/Sargassum,wind_v,0.007170128258817846
+ada,Algae/Sargassum,era5_precip_7d_mm,0.006668742967798251
+ada,Algae/Sargassum,era5_wind_speed_mean_72h,0.006029157793970106
+ada,Algae/Sargassum,era5_precip_24h_mm,0.005892738723981124
+ada,Algae/Sargassum,era5_stokes_v,0.005658107928754539
+ada,Algae/Sargassum,era5_v10_mean_72h,0.0048684784976272865
+ada,Algae/Sargassum,era5_v10,0.004541335225573953
+ada,Algae/Sargassum,era5_msl_hpa,0.004331786641242092
+ada,Algae/Sargassum,B4,0.004256347835172344
+ada,Algae/Sargassum,era5_wind_speed_max_72h,0.003827771918930875
+ada,Algae/Sargassum,wind_speed_mean_72h,0.0033376405888433693
+ada,Algae/Sargassum,era5_u10,0.0028849223497004707
+ada,Algae/Sargassum,era5_precip_72h_mm,0.0017787847662657681
+ada,Algae/Sargassum,B1,0.0016162567814183041
+ada,Algae/Sargassum,era5_stokes_speed,0.001591884585092267
+ada,Algae/Sargassum,wind_speed,0.0013420121872805945
+ada,Algae/Sargassum,sst_c,0.0008345456871697681
+ada,Algae/Sargassum,wind_speed_mean_24h,0.0006522320782432456
+ada,Algae/Sargassum,B6,0.0005753617260224657
+ada,Algae/Sargassum,B7,0.0005015560278132016
+ada,Algae/Sargassum,B8A,0.00036264640054530704
+ada,Algae/Sargassum,era5_wind_speed_mean_24h,0.00034273931728237686
+ada,Algae/Sargassum,B5,0.00018441076256496945
+ada,Algae/Sargassum,B12,0.0
+ada,Algae/Sargassum,B8,0.0
+ada,Algae/Sargassum,era5_wind_speed,0.0
+ada,Algae/Sargassum,era5_u10_mean_72h,0.0
+ada,Algae/Sargassum,era5_stokes_u,0.0
+ada,Other,B11,0.1618411234681884
+ada,Other,B2,0.09839333264794646
+ada,Other,NDMI,0.07558333863005455
+ada,Other,log10_chl,0.0598048744813496
+ada,Other,swir1/nir,0.050702597552519296
+ada,Other,nir/red,0.0466001981387183
+ada,Other,sst_c,0.04388992084687446
+ada,Other,FAI,0.04194402635349336
+ada,Other,FDI,0.03577184623959127
+ada,Other,B3,0.03121521985398996
+ada,Other,wind_speed_mean_72h,0.02825168992826037
+ada,Other,modis_log10_chla,0.026250318189907022
+ada,Other,B8A,0.022855085969474852
+ada,Other,era5_msl_hpa,0.021114719296852096
+ada,Other,B5,0.018683090948614197
+ada,Other,sst_grad_c_per_km,0.01755411224325631
+ada,Other,wind_u,0.016708668385982443
+ada,Other,era5_v10_mean_72h,0.016375172037265448
+ada,Other,era5_v10,0.016290022679668933
+ada,Other,era5_wind_speed_mean_72h,0.015860855308298036
+ada,Other,NDWI,0.015551003987671353
+ada,Other,NDVI,0.013870972787162613
+ada,Other,red/green,0.013512123277840108
+ada,Other,era5_wind_speed,0.013443393478117316
+ada,Other,wind_speed,0.012929215341228309
+ada,Other,B1,0.011183556643356685
+ada,Other,wind_speed_max_72h,0.010614661712242167
+ada,Other,B4,0.009672072007743152
+ada,Other,wind_v,0.009272655829159487
+ada,Other,nir/green,0.008167900148232113
+ada,Other,era5_stokes_v,0.005555554597544385
+ada,Other,era5_swh,0.00533902227092777
+ada,Other,wind_speed_mean_24h,0.005262273012587486
+ada,Other,era5_u10,0.0048480193413047105
+ada,Other,B8,0.0035051416652993575
+ada,Other,era5_precip_7d_mm,0.0028510179013461288
+ada,Other,era5_wind_speed_max_72h,0.0017200213282462917
+ada,Other,era5_precip_24h_mm,0.0016606075548156619
+ada,Other,era5_precip_72h_mm,0.0015810148239389045
+ada,Other,era5_swh_mean_72h,0.0013926297827617105
+ada,Other,era5_stokes_u,0.0013117924272583042
+ada,Other,era5_u10_mean_72h,0.0010651368795609349
+ada,Other,B7,1.3496884819990333e-12
+ada,Other,B12,0.0
+ada,Other,B6,0.0
+ada,Other,era5_wind_speed_mean_24h,0.0
+ada,Other,era5_stokes_speed,0.0
+svm,Water,B5,0.10883586756009886
+svm,Water,NDWI,0.0997655849622253
+svm,Water,B8A,0.09648786400893727
+svm,Water,B11,0.08997462518833657
+svm,Water,NDVI,0.06822919058375701
+svm,Water,B12,0.06536819509613638
+svm,Water,nir/red,0.06378485405413008
+svm,Water,B3,0.05771930545920948
+svm,Water,FDI,0.03290829844016086
+svm,Water,era5_wind_speed_mean_24h,0.031669862513357544
+svm,Water,era5_wind_speed_mean_72h,0.029533202943994308
+svm,Water,NDMI,0.028523379276297105
+svm,Water,FAI,0.02550562801263094
+svm,Water,B8,0.02467729079375159
+svm,Water,B4,0.017101863467247794
+svm,Water,wind_speed_mean_72h,0.016449015484017674
+svm,Water,sst_c,0.012088260474063656
+svm,Water,wind_speed_mean_24h,0.011489548639387968
+svm,Water,B1,0.011267921081400163
+svm,Water,red/green,0.010847741865501212
+svm,Water,nir/green,0.010712629146378815
+svm,Water,wind_u,0.008006492930942072
+svm,Water,wind_speed,0.007913799595643202
+svm,Water,B7,0.007441700290259776
+svm,Water,era5_wind_speed_max_72h,0.006514562059489853
+svm,Water,wind_v,0.005137120908621996
+svm,Water,swir1/nir,0.004928672431427591
+svm,Water,era5_stokes_u,0.00485345888079856
+svm,Water,era5_stokes_speed,0.004426412689898165
+svm,Water,era5_stokes_v,0.00416316413118241
+svm,Water,era5_precip_7d_mm,0.003960961815706441
+svm,Water,modis_log10_chla,0.0038359467046036482
+svm,Water,log10_chl,0.0032752548374970557
+svm,Water,era5_v10,0.0026426323516924367
+svm,Water,era5_swh_mean_72h,0.002574424905353322
+svm,Water,era5_precip_72h_mm,0.002376280802541212
+svm,Water,era5_msl_hpa,0.002359189027865192
+svm,Water,sst_grad_c_per_km,0.00207461824973653
+svm,Water,B6,0.0020564911983444946
+svm,Water,era5_swh,0.0018996814511416558
+svm,Water,era5_v10_mean_72h,0.0018580919095875816
+svm,Water,era5_wind_speed,0.0018059495864233101
+svm,Water,wind_speed_max_72h,0.0009847630607332947
+svm,Water,era5_u10,0.0009719046470928824
+svm,Water,era5_u10_mean_72h,0.00046472575182746094
+svm,Water,era5_precip_24h_mm,0.0002691601009807751
+svm,Water,B2,0.00026441062958842173
+svm,Marine Debris,nir/green,0.1400734159823488
+svm,Marine Debris,NDWI,0.09168707446124763
+svm,Marine Debris,swir1/nir,0.0643755368376543
+svm,Marine Debris,wind_speed_mean_72h,0.0570447568743904
+svm,Marine Debris,era5_wind_speed_mean_72h,0.047660590717399316
+svm,Marine Debris,nir/red,0.046517791509075125
+svm,Marine Debris,NDMI,0.042881216731769846
+svm,Marine Debris,B5,0.04173023324885679
+svm,Marine Debris,B11,0.0391062473378135
+svm,Marine Debris,B6,0.03369195720105983
+svm,Marine Debris,B8,0.03222090066955056
+svm,Marine Debris,B8A,0.026028898429278708
+svm,Marine Debris,B4,0.02575906969073665
+svm,Marine Debris,B7,0.02503195360568618
+svm,Marine Debris,B12,0.024657664979843483
+svm,Marine Debris,era5_wind_speed_mean_24h,0.022008872072504255
+svm,Marine Debris,era5_v10,0.020573530713390464
+svm,Marine Debris,wind_speed_mean_24h,0.017562138412268904
+svm,Marine Debris,wind_speed,0.017399480430872888
+svm,Marine Debris,wind_speed_max_72h,0.016717219503799473
+svm,Marine Debris,B3,0.016245660225964017
+svm,Marine Debris,FAI,0.015067942588469808
+svm,Marine Debris,era5_u10,0.013261954851006286
+svm,Marine Debris,era5_u10_mean_72h,0.012993401921079352
+svm,Marine Debris,era5_stokes_u,0.009533992536618914
+svm,Marine Debris,B2,0.009451478664662939
+svm,Marine Debris,era5_swh_mean_72h,0.008839943516283448
+svm,Marine Debris,era5_wind_speed_max_72h,0.008202987652248436
+svm,Marine Debris,era5_stokes_v,0.0075963750518451365
+svm,Marine Debris,era5_precip_24h_mm,0.006494607452220623
+svm,Marine Debris,FDI,0.006492793181711379
+svm,Marine Debris,era5_v10_mean_72h,0.005977991158238828
+svm,Marine Debris,B1,0.0053904801551593025
+svm,Marine Debris,era5_precip_7d_mm,0.005367334230620654
+svm,Marine Debris,sst_grad_c_per_km,0.005187962651814064
+svm,Marine Debris,sst_c,0.00517549312898066
+svm,Marine Debris,era5_stokes_speed,0.004421178481091171
+svm,Marine Debris,era5_wind_speed,0.004357323973036515
+svm,Marine Debris,NDVI,0.00415969057357875
+svm,Marine Debris,era5_swh,0.0031107193449977856
+svm,Marine Debris,era5_precip_72h_mm,0.002869543476342527
+svm,Marine Debris,red/green,0.002839930574333896
+svm,Marine Debris,modis_log10_chla,0.0023443893393997155
+svm,Marine Debris,era5_msl_hpa,0.0010299899445379871
+svm,Marine Debris,wind_u,0.00043046778218273056
+svm,Marine Debris,log10_chl,0.0003663723635717102
+svm,Marine Debris,wind_v,6.144577045639923e-05
+svm,Algae/Sargassum,NDVI,0.07204021651916727
+svm,Algae/Sargassum,B6,0.06333026002466774
+svm,Algae/Sargassum,nir/green,0.05070360483893327
+svm,Algae/Sargassum,FAI,0.05025221310678057
+svm,Algae/Sargassum,era5_stokes_speed,0.04219895349302748
+svm,Algae/Sargassum,B2,0.04125338464656926
+svm,Algae/Sargassum,era5_wind_speed_mean_24h,0.03821733897421992
+svm,Algae/Sargassum,FDI,0.03588349367354446
+svm,Algae/Sargassum,era5_msl_hpa,0.035426967468612805
+svm,Algae/Sargassum,B11,0.0353086579520297
+svm,Algae/Sargassum,B5,0.031239769889133545
+svm,Algae/Sargassum,era5_v10,0.027648757526271137
+svm,Algae/Sargassum,B8,0.026768520771716216
+svm,Algae/Sargassum,wind_speed_mean_72h,0.0261002508411638
+svm,Algae/Sargassum,wind_speed_max_72h,0.024995780656865405
+svm,Algae/Sargassum,era5_stokes_v,0.024279279862072102
+svm,Algae/Sargassum,sst_c,0.02252274351930902
+svm,Algae/Sargassum,era5_precip_7d_mm,0.021701426981061728
+svm,Algae/Sargassum,B12,0.021577487200202417
+svm,Algae/Sargassum,era5_wind_speed,0.020694889941679822
+svm,Algae/Sargassum,log10_chl,0.01961582074514792
+svm,Algae/Sargassum,nir/red,0.019120597090933993
+svm,Algae/Sargassum,B4,0.018981885366145347
+svm,Algae/Sargassum,era5_precip_24h_mm,0.018289836366450516
+svm,Algae/Sargassum,wind_speed_mean_24h,0.017349930549704566
+svm,Algae/Sargassum,B3,0.01587774272752591
+svm,Algae/Sargassum,B7,0.015054868553480769
+svm,Algae/Sargassum,era5_wind_speed_max_72h,0.013886101179239534
+svm,Algae/Sargassum,wind_u,0.013848727112528509
+svm,Algae/Sargassum,B8A,0.013830845070843768
+svm,Algae/Sargassum,NDWI,0.013772229735848908
+svm,Algae/Sargassum,wind_v,0.013391713718756186
+svm,Algae/Sargassum,era5_wind_speed_mean_72h,0.012789283322249686
+svm,Algae/Sargassum,modis_log10_chla,0.012611237547121118
+svm,Algae/Sargassum,era5_v10_mean_72h,0.010616201585609839
+svm,Algae/Sargassum,era5_u10,0.00854896163514454
+svm,Algae/Sargassum,era5_u10_mean_72h,0.008421266989809254
+svm,Algae/Sargassum,era5_swh,0.006980252691856477
+svm,Algae/Sargassum,era5_stokes_u,0.0067045632624033406
+svm,Algae/Sargassum,B1,0.005727576741714242
+svm,Algae/Sargassum,era5_precip_72h_mm,0.004883896067631526
+svm,Algae/Sargassum,sst_grad_c_per_km,0.004120982410012855
+svm,Algae/Sargassum,swir1/nir,0.0037506295872422645
+svm,Algae/Sargassum,red/green,0.0035655310811440197
+svm,Algae/Sargassum,wind_speed,0.0034898841790391892
+svm,Algae/Sargassum,NDMI,0.0026239471179955918
+svm,Algae/Sargassum,era5_swh_mean_72h,1.4896773928301794e-06
+svm,Other,B11,0.17598193754432587
+svm,Other,B12,0.13129768139720865
+svm,Other,B3,0.11533142462995587
+svm,Other,B8A,0.06921022724598562
+svm,Other,B5,0.04331050056721891
+svm,Other,B8,0.03976262705083818
+svm,Other,FDI,0.03849836442989866
+svm,Other,B4,0.030377907661144957
+svm,Other,B2,0.02466009718634947
+svm,Other,era5_wind_speed_mean_72h,0.024615665642269646
+svm,Other,era5_stokes_u,0.02420421043548624
+svm,Other,NDWI,0.018594209353065362
+svm,Other,B1,0.01776290215547719
+svm,Other,NDVI,0.0171722758052864
+svm,Other,era5_swh,0.015404726409200206
+svm,Other,nir/red,0.014362656318115475
+svm,Other,B6,0.013839682624915705
+svm,Other,sst_c,0.013448947505986832
+svm,Other,red/green,0.012506896060470193
+svm,Other,era5_precip_7d_mm,0.011544782009607344
+svm,Other,era5_wind_speed_max_72h,0.011313754734618315
+svm,Other,era5_precip_72h_mm,0.011029795504510545
+svm,Other,wind_speed_mean_24h,0.010903325214613442
+svm,Other,era5_v10,0.010619154879374527
+svm,Other,wind_speed_mean_72h,0.010596518632760784
+svm,Other,wind_speed,0.010467823623983366
+svm,Other,era5_stokes_v,0.010369923767676913
+svm,Other,era5_stokes_speed,0.008753812520460882
+svm,Other,era5_v10_mean_72h,0.007675719966996558
+svm,Other,nir/green,0.0061832687393059155
+svm,Other,era5_u10,0.0058366903332851975
+svm,Other,modis_log10_chla,0.005382345353389939
+svm,Other,era5_wind_speed,0.005188116111637827
+svm,Other,NDMI,0.004825986554652039
+svm,Other,era5_precip_24h_mm,0.0044950272524769295
+svm,Other,FAI,0.003503961809847612
+svm,Other,sst_grad_c_per_km,0.0034787383878361064
+svm,Other,era5_u10_mean_72h,0.0031200462765877527
+svm,Other,era5_msl_hpa,0.0026091515996173077
+svm,Other,era5_wind_speed_mean_24h,0.0026075831958175893
+svm,Other,wind_v,0.002461383985019423
+svm,Other,wind_u,0.0018413950367023161
+svm,Other,wind_speed_max_72h,0.0014777145237605926
+svm,Other,era5_swh_mean_72h,0.00132929530430967
+svm,Other,B7,0.0008661407451484966
+svm,Other,swir1/nir,0.000848985173820253
+svm,Other,log10_chl,0.00032661873898304325
