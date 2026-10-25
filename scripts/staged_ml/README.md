@@ -28,6 +28,7 @@ feature columns change between stages. This is the code behind `paper/main.tex`.
 | 6 | `stage6_env.py` | stage 5 + 7 environmental covariates (SST, SST gradient, chlorophyll-a, wind); **MARIDA only** | 23 |
 | 7 | `stage7_glcm.py` | bands + 6 GLCM texture features | 17 |
 | 8 | `stage8_ndwi_ratios_glcm.py` | stage 5 + 6 GLCM texture features | 22 |
+| 9 | `stage9_all_env_shap.py` | bands + 5 indices + 4 ratios + all 27 environmental covariates from both `data/` env tables, explained with SHAP; **MARIDA only, log weights** | 47 |
 
 The 4 ratios are red/green, NIR/red, NIR/green and SWIR1/NIR.
 
@@ -44,6 +45,35 @@ runs only if, for at least one weighting and one dataset, stage 7 beats stage
 1 by more than 0.01 in the five-model mean of macro F1 or debris F1. Exit code
 0 = run, 2 = skip. The decision is written to `outputs/staged/glcm_decision.md`
 (result: run).
+
+## Stage 9: all features + environment, with SHAP
+
+`stage9_all_env_shap.py` trains the five models on stage 4 (bands, all 5
+indices, 4 ratios) plus every environmental covariate in
+`data/env_sst_chl_wind/marida_env_sst_chl_wind.csv` and
+`data/environmental/marida_env_features.csv` (SST and SST gradient,
+chlorophyll-a from OLCI and MODIS, CMEMS and ERA5 wind speed and direction,
+pressure, precipitation, wave height, Stokes drift). The MUR SST columns of the
+second file duplicate the first and are dropped. Each model is then explained
+with the SHAP explainers of `SHAP/Analysis2/shap_analysis/shap_compute.py`
+(TreeSHAP for the tree models, LinearExplainer for the SVM) on 300
+class-stratified test pixels per class, with 50 training pixels per class as
+background. It runs with log weights by default:
+
+```powershell
+python scripts/staged_ml/stage9_all_env_shap.py   # writes outputs/staged/log_weights/stage9_all_env_shap/
+```
+
+Outputs, `outputs/staged/log_weights/stage9_all_env_shap/`:
+- `training/MARIDA/`: the usual stage outputs (metrics, summary, confusion
+  matrices, built-in feature importance); `compare_stages.py` picks these up
+- `shap/MARIDA/REPORT.md`: scores vs stages 4 and 6, group shares, top features
+- `shap/MARIDA/00_samples` explained and background pixels, `01_shap_values`
+  raw values, `02_global_importance`, `03_per_class` (rankings, beeswarms),
+  `04_feature_groups` (bands / indices / ratios / environment and
+  environmental sub-groups), `05_cross_model` (ranking agreement),
+  `06_dependence` (debris dependence plots), `07_validation` (additivity check)
+- `logs/`: run log
 
 ## Class weighting
 
