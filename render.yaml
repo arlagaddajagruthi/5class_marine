@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: marine-debris-mapper
+    runtime: docker
+    plan: free
+    branch: deploy
+    healthCheckPath: /api/meta

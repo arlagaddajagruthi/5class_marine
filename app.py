@@ -25,7 +25,7 @@ app.config["MAX_CONTENT_LENGTH"] = 1024 * 1024 * 1024          # 1 GB uploads
 # Recently analysed scenes, so changing a setting doesn't need a re-upload.
 _cache = OrderedDict()
 _cache_lock = threading.Lock()
-CACHE_SIZE = 8
+CACHE_SIZE = int(os.environ.get("CACHE_SIZE", 8))
 
 
 def _remember(scene):

@@ -1,8 +1,5 @@
 # trained models are rebuilt with train_models.py (models/report.json and
 # models/samples.json are kept: reproduced test scores and the sample gallery)
-data/
-models/*.joblib
-models/thumbs/
 *.log
 __pycache__/
 *.py[cod]

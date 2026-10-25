@@ -23,6 +23,8 @@ def get_model(key):
             path = os.path.join(config.MODEL_DIR, config.MODELS[key]["file"])
             if not os.path.exists(path):
                 raise FileNotFoundError(f"Model file {path} not found. Run train_models.py first.")
+            if os.environ.get("ONE_MODEL_IN_MEMORY"):   # small hosts: drop the previous model first
+                _models.clear()
             _models[key] = joblib.load(path)
         return _models[key]
 
