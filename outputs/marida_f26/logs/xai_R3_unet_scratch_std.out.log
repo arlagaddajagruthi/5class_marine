@@ -1,0 +1,5 @@
+  R3_unet_scratch_std Water: 60 patches, 44,395 pixels (165 s)
+  R3_unet_scratch_std Marine Debris: 101 patches, 381 pixels (460 s)
+  R3_unet_scratch_std Algae/Sargassum: 26 patches, 1,641 pixels (538 s)
+  R3_unet_scratch_std Other: 80 patches, 1,610 pixels (771 s)
+-> C:\PROJECT\5class_marine_pollution\outputs\marida_f26\xai\R3_unet_scratch_std\xai_report.md

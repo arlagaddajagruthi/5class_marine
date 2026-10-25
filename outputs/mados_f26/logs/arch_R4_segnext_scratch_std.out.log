@@ -1,0 +1,13 @@
+# Architecture and input pipeline: run R4_segnext_scratch_std
+
+**Model**: SegNeXt-T: MSCAN-T encoder (4 stages, 32/64/160/256 channels, multi-scale convolutional attention with depth-wise strip convolutions) and a LightHamHead decoder (matrix-decomposition 'Hamburger' module) on stages 2-4; prediction at 1/8 resolution, bilinearly upsampled.
+
+**Initialisation**: All weights randomly initialised (PyTorch / timm defaults); trained from scratch.
+
+**Parameters**: 4,229,204 (4,229,204 trainable).
+
+**Output**: 4 class scores per pixel (Water, Marine Debris, Algae/Sargassum, Other); softmax → probabilities; prediction = argmax. Unlabelled pixels are ignored by the loss and the scores.
+
+## How the features are fed in
+
+-> C:\PROJECT\5class_marine_pollution\outputs\mados_f26\runs\R4_segnext_scratch_std/architecture.md, model_summary.txt

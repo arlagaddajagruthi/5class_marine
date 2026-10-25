@@ -1,0 +1,3 @@
+val: 213,102 annotated pixels predicted
+test: 194,863 annotated pixels predicted
+report -> C:\PROJECT\5class_marine_pollution\outputs\marida_f26\runs\G2b_unet_ssl4eo_raw_11class\report.md  (test macro F1 0.7180, mIoU 0.6148, kappa 0.9024)

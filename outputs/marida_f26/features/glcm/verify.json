@@ -1,0 +1,29 @@
+{
+  "train": {
+    "pixels": 358442,
+    "glcm_contrast": 0.0,
+    "glcm_dissimilarity": 0.0,
+    "glcm_homogeneity": 0.0,
+    "glcm_energy": 0.0,
+    "glcm_correlation": 0.0,
+    "glcm_asm": 0.0
+  },
+  "val": {
+    "pixels": 191436,
+    "glcm_contrast": 0.0,
+    "glcm_dissimilarity": 0.0,
+    "glcm_homogeneity": 0.0,
+    "glcm_energy": 0.0,
+    "glcm_correlation": 0.0,
+    "glcm_asm": 0.0
+  },
+  "test": {
+    "pixels": 158371,
+    "glcm_contrast": 0.0,
+    "glcm_dissimilarity": 0.0,
+    "glcm_homogeneity": 0.0,
+    "glcm_energy": 0.0,
+    "glcm_correlation": 0.0,
+    "glcm_asm": 0.0
+  }
+}

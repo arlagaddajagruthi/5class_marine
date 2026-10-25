@@ -1,0 +1,5 @@
+  R1_unet_ssl4eo_raw Water: 60 patches, 44,395 pixels (98 s)
+  R1_unet_ssl4eo_raw Marine Debris: 101 patches, 381 pixels (250 s)
+  R1_unet_ssl4eo_raw Algae/Sargassum: 26 patches, 1,641 pixels (285 s)
+  R1_unet_ssl4eo_raw Other: 80 patches, 1,610 pixels (404 s)
+-> C:\PROJECT\5class_marine_pollution\outputs\marida_f26\xai\R1_unet_ssl4eo_raw\xai_report.md

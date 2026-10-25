@@ -1,0 +1,15 @@
+{
+  "epoch": 38,
+  "val_macroF1_tta": 0.7612110117282846,
+  "val_F1_Marine Debris": 0.6298076923076923,
+  "val_F1_Dense Sargassum": 0.9288194444444444,
+  "val_F1_Sparse Sargassum": 0.5991316931982634,
+  "val_F1_Natural Organic Material": 0.3333333333333333,
+  "val_F1_Ship": 0.7107023411371237,
+  "val_F1_Clouds": 0.9206213122194765,
+  "val_F1_Marine Water": 0.8618508293297972,
+  "val_F1_Sediment-Laden Water": 0.9982931750931177,
+  "val_F1_Foam": 0.7146017699115044,
+  "val_F1_Turbid Water": 0.9700435729847494,
+  "val_F1_Shallow Water": 0.7061159650516283
+}

@@ -1,7 +1,0 @@
-Class,IoU,F1,Precision,Recall,Accuracy
-Marine Debris,0.8138,0.8973,0.8291,0.9779,0.8199
-Sargassum/Veg,0.0834,0.1540,0.5229,0.0903,0.8287
-Natural Phenom/Foam,0.1685,0.2884,0.2935,0.2835,0.9967
-Ship/Infrastructure,0.5608,0.7186,0.7320,0.7057,0.9944
-Water/Other,0.3842,0.5551,0.5938,0.5211,0.9917
-Average,0.4021,0.5227,0.5942,0.5157,0.8157

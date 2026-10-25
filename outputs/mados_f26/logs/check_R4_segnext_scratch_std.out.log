@@ -1,0 +1,1 @@
+check R4_segnext_scratch_std: 0.67 s/batch, peak GPU 0.93 GiB, loss 1.275; 286 batches/epoch -> 3.2 min train + 0.12 s/patch TTA val x 642 = 1.3 min -> ~4.5 min/epoch, ~5.9 h for 80 epochs

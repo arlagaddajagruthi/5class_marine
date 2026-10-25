@@ -1,0 +1,4 @@
+train: 358,442 annotated pixels, max |map - ML cache| per feature: contrast 0.0e+00, dissimilarity 0.0e+00, homogeneity 0.0e+00, energy 0.0e+00, correlation 0.0e+00, asm 0.0e+00
+val: 191,436 annotated pixels, max |map - ML cache| per feature: contrast 0.0e+00, dissimilarity 0.0e+00, homogeneity 0.0e+00, energy 0.0e+00, correlation 0.0e+00, asm 0.0e+00
+test: 158,371 annotated pixels, max |map - ML cache| per feature: contrast 0.0e+00, dissimilarity 0.0e+00, homogeneity 0.0e+00, energy 0.0e+00, correlation 0.0e+00, asm 0.0e+00
+worst difference: 0.0e+00 -> OK

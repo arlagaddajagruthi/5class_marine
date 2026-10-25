@@ -1,0 +1,13 @@
+# Architecture and input pipeline: run R5_marinext_scratch_std
+
+**Model**: MariNeXt architecture: SegNeXt-T with the stage-1 features added to the LightHamHead (stages 1-4), so the prediction is made at 1/4 resolution, then bilinearly upsampled (as in the MADOS paper).
+
+**Initialisation**: All weights randomly initialised (PyTorch / timm defaults); trained from scratch.
+
+**Parameters**: 4,237,396 (4,237,396 trainable).
+
+**Output**: 4 class scores per pixel (Water, Marine Debris, Algae/Sargassum, Other); softmax → probabilities; prediction = argmax. Unlabelled pixels are ignored by the loss and the scores.
+
+## How the features are fed in
+
+-> C:\PROJECT\5class_marine_pollution\outputs\mados_f26\runs\R5_marinext_scratch_std/architecture.md, model_summary.txt

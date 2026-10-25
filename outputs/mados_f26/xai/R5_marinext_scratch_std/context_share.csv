@@ -1,0 +1,536 @@
+class,patch,context_share_%
+Water,Scene_132_16,62.902832
+Water,Scene_132_17,46.3849
+Water,Scene_134_4,42.259377
+Water,Scene_135_24,98.81289
+Water,Scene_135_34,97.06526
+Water,Scene_135_8,93.22641
+Water,Scene_139_12,90.220184
+Water,Scene_139_19,98.49103
+Water,Scene_141_15,94.0358
+Water,Scene_141_17,89.80871
+Water,Scene_141_27,53.813267
+Water,Scene_141_33,87.348434
+Water,Scene_141_48,97.490906
+Water,Scene_142_15,91.94781
+Water,Scene_142_2,94.30747
+Water,Scene_142_6,95.88283
+Water,Scene_144_10,72.47258
+Water,Scene_144_11,87.78665
+Water,Scene_144_2,98.92329
+Water,Scene_144_6,66.43561
+Water,Scene_145_23,76.48979
+Water,Scene_146_3,79.029434
+Water,Scene_147_4,77.605675
+Water,Scene_148_8,98.5089
+Water,Scene_150_6,93.44091
+Water,Scene_154_5,92.32819
+Water,Scene_154_9,81.56911
+Water,Scene_157_17,96.620224
+Water,Scene_157_18,94.77197
+Water,Scene_157_24,98.64238
+Water,Scene_157_39,82.61398
+Water,Scene_157_44,96.16781
+Water,Scene_160_1,99.617065
+Water,Scene_160_10,99.5557
+Water,Scene_160_18,99.502335
+Water,Scene_160_19,99.60302
+Water,Scene_160_3,95.385704
+Water,Scene_160_32,93.699684
+Water,Scene_160_36,88.97821
+Water,Scene_160_9,95.9696
+Water,Scene_161_1,85.37946
+Water,Scene_161_8,98.47115
+Water,Scene_162_10,99.478966
+Water,Scene_162_14,99.53428
+Water,Scene_162_20,99.35995
+Water,Scene_162_25,57.09108
+Water,Scene_163_13,99.56588
+Water,Scene_163_20,99.0219
+Water,Scene_163_35,93.73702
+Water,Scene_164_12,97.55363
+Water,Scene_164_3,77.6098
+Water,Scene_166_14,88.510605
+Water,Scene_167_10,97.993546
+Water,Scene_167_2,98.89962
+Water,Scene_168_1,77.378395
+Water,Scene_168_12,54.13685
+Water,Scene_169_11,93.70263
+Water,Scene_169_4,57.79283
+Water,Scene_171_15,83.34837
+Water,Scene_171_19,94.32626
+Marine Debris,Scene_133_1,92.14011
+Marine Debris,Scene_133_3,98.25434
+Marine Debris,Scene_135_18,97.10722
+Marine Debris,Scene_135_21,98.25752
+Marine Debris,Scene_135_23,98.55149
+Marine Debris,Scene_135_24,97.87753
+Marine Debris,Scene_135_27,97.69484
+Marine Debris,Scene_135_28,94.80809
+Marine Debris,Scene_135_29,97.16985
+Marine Debris,Scene_135_30,99.11421
+Marine Debris,Scene_139_1,98.49953
+Marine Debris,Scene_139_4,93.207886
+Marine Debris,Scene_139_5,97.3423
+Marine Debris,Scene_140_10,94.06202
+Marine Debris,Scene_140_7,97.58188
+Marine Debris,Scene_140_9,95.04005
+Marine Debris,Scene_141_11,97.719345
+Marine Debris,Scene_141_13,97.75187
+Marine Debris,Scene_141_14,95.03876
+Marine Debris,Scene_141_19,97.48758
+Marine Debris,Scene_141_2,98.13281
+Marine Debris,Scene_141_38,93.50295
+Marine Debris,Scene_141_42,97.84327
+Marine Debris,Scene_141_45,98.848335
+Marine Debris,Scene_141_46,98.995384
+Marine Debris,Scene_141_47,98.62358
+Marine Debris,Scene_141_48,98.91166
+Marine Debris,Scene_141_5,97.72833
+Marine Debris,Scene_141_6,97.73572
+Marine Debris,Scene_141_7,97.87057
+Marine Debris,Scene_143_1,94.69895
+Marine Debris,Scene_143_2,97.77538
+Marine Debris,Scene_147_1,96.153366
+Marine Debris,Scene_147_3,98.62848
+Marine Debris,Scene_148_1,94.39219
+Marine Debris,Scene_148_5,95.452934
+Marine Debris,Scene_157_12,97.20504
+Marine Debris,Scene_157_14,98.873665
+Marine Debris,Scene_157_15,98.62305
+Marine Debris,Scene_157_21,97.08339
+Marine Debris,Scene_157_22,98.367226
+Marine Debris,Scene_157_24,97.722435
+Marine Debris,Scene_157_25,97.593864
+Marine Debris,Scene_157_28,97.89843
+Marine Debris,Scene_157_31,97.48106
+Marine Debris,Scene_157_33,96.52474
+Marine Debris,Scene_157_4,97.56657
+Marine Debris,Scene_157_6,98.462975
+Marine Debris,Scene_160_1,99.186386
+Marine Debris,Scene_160_10,96.43948
+Marine Debris,Scene_160_14,96.117004
+Marine Debris,Scene_160_17,98.73275
+Marine Debris,Scene_160_2,98.86626
+Marine Debris,Scene_160_20,97.679565
+Marine Debris,Scene_160_21,98.18899
+Marine Debris,Scene_160_22,95.42366
+Marine Debris,Scene_160_5,99.1138
+Marine Debris,Scene_160_6,94.67983
+Marine Debris,Scene_160_7,97.90918
+Marine Debris,Scene_160_8,95.37976
+Marine Debris,Scene_161_10,88.52953
+Marine Debris,Scene_161_11,90.314445
+Marine Debris,Scene_161_12,94.70818
+Marine Debris,Scene_161_13,95.2262
+Marine Debris,Scene_161_8,75.01377
+Marine Debris,Scene_161_9,94.67823
+Marine Debris,Scene_162_1,96.5276
+Marine Debris,Scene_162_10,99.117294
+Marine Debris,Scene_162_12,98.02696
+Marine Debris,Scene_162_13,97.49898
+Marine Debris,Scene_162_14,98.09329
+Marine Debris,Scene_162_15,98.68196
+Marine Debris,Scene_162_16,99.120766
+Marine Debris,Scene_162_18,98.00383
+Marine Debris,Scene_162_23,96.5275
+Marine Debris,Scene_162_24,98.04493
+Marine Debris,Scene_162_3,99.274925
+Marine Debris,Scene_162_8,99.24301
+Marine Debris,Scene_163_10,98.77423
+Marine Debris,Scene_163_12,98.4177
+Marine Debris,Scene_163_13,98.28573
+Marine Debris,Scene_163_14,97.68356
+Marine Debris,Scene_163_18,97.92853
+Marine Debris,Scene_163_19,98.93409
+Marine Debris,Scene_163_20,96.991974
+Marine Debris,Scene_163_22,97.41753
+Marine Debris,Scene_163_29,97.56751
+Marine Debris,Scene_163_30,98.68024
+Marine Debris,Scene_163_32,94.96206
+Marine Debris,Scene_163_5,95.67358
+Marine Debris,Scene_164_1,96.53389
+Marine Debris,Scene_164_13,98.729706
+Marine Debris,Scene_164_17,99.10728
+Marine Debris,Scene_166_10,98.38513
+Marine Debris,Scene_166_3,98.688515
+Marine Debris,Scene_166_4,97.9663
+Marine Debris,Scene_166_7,97.39909
+Marine Debris,Scene_166_8,97.73109
+Marine Debris,Scene_166_9,98.22651
+Marine Debris,Scene_167_1,97.287476
+Marine Debris,Scene_167_10,92.73477
+Marine Debris,Scene_167_11,90.27392
+Marine Debris,Scene_167_12,92.4309
+Marine Debris,Scene_167_13,97.765884
+Marine Debris,Scene_167_2,95.766685
+Marine Debris,Scene_167_3,96.985016
+Marine Debris,Scene_167_4,89.51512
+Marine Debris,Scene_167_5,94.11636
+Marine Debris,Scene_167_6,96.42008
+Marine Debris,Scene_167_7,94.57809
+Marine Debris,Scene_167_8,91.77946
+Marine Debris,Scene_167_9,92.17844
+Marine Debris,Scene_169_1,97.52757
+Marine Debris,Scene_169_20,97.67827
+Marine Debris,Scene_169_21,98.70403
+Marine Debris,Scene_169_22,97.96931
+Marine Debris,Scene_169_25,99.09808
+Marine Debris,Scene_169_26,98.49797
+Marine Debris,Scene_169_27,96.612045
+Marine Debris,Scene_169_28,98.32378
+Marine Debris,Scene_169_8,96.85338
+Marine Debris,Scene_169_9,98.8939
+Marine Debris,Scene_170_1,96.13556
+Marine Debris,Scene_170_2,98.013374
+Algae/Sargassum,Scene_135_10,60.911404
+Algae/Sargassum,Scene_135_11,67.72538
+Algae/Sargassum,Scene_135_16,79.83814
+Algae/Sargassum,Scene_135_17,71.28358
+Algae/Sargassum,Scene_135_3,89.618484
+Algae/Sargassum,Scene_135_38,90.64997
+Algae/Sargassum,Scene_135_4,98.73891
+Algae/Sargassum,Scene_135_9,96.20656
+Algae/Sargassum,Scene_141_20,68.10146
+Algae/Sargassum,Scene_141_22,50.671238
+Algae/Sargassum,Scene_141_32,99.05836
+Algae/Sargassum,Scene_142_1,90.48992
+Algae/Sargassum,Scene_142_10,94.4272
+Algae/Sargassum,Scene_142_14,89.89605
+Algae/Sargassum,Scene_142_15,64.38505
+Algae/Sargassum,Scene_142_19,70.58625
+Algae/Sargassum,Scene_142_2,84.64294
+Algae/Sargassum,Scene_142_4,93.19429
+Algae/Sargassum,Scene_142_5,70.782326
+Algae/Sargassum,Scene_142_6,94.30766
+Algae/Sargassum,Scene_144_12,75.796196
+Algae/Sargassum,Scene_144_13,94.46236
+Algae/Sargassum,Scene_144_3,95.294174
+Algae/Sargassum,Scene_144_4,91.000374
+Algae/Sargassum,Scene_148_2,94.85465
+Algae/Sargassum,Scene_148_3,69.489204
+Algae/Sargassum,Scene_148_4,67.754135
+Algae/Sargassum,Scene_152_16,77.31437
+Algae/Sargassum,Scene_152_17,87.68394
+Algae/Sargassum,Scene_152_2,89.90036
+Algae/Sargassum,Scene_152_22,84.59256
+Algae/Sargassum,Scene_152_27,76.98056
+Algae/Sargassum,Scene_152_28,86.369965
+Algae/Sargassum,Scene_152_3,85.46736
+Algae/Sargassum,Scene_152_8,86.24169
+Algae/Sargassum,Scene_157_26,96.89696
+Algae/Sargassum,Scene_157_29,97.20393
+Algae/Sargassum,Scene_157_35,86.398926
+Algae/Sargassum,Scene_157_36,89.72403
+Algae/Sargassum,Scene_161_3,95.11171
+Algae/Sargassum,Scene_161_5,64.41229
+Algae/Sargassum,Scene_161_7,69.50455
+Algae/Sargassum,Scene_163_24,96.38913
+Algae/Sargassum,Scene_163_27,92.72681
+Algae/Sargassum,Scene_163_28,98.346985
+Other,Scene_132_10,75.40873
+Other,Scene_132_11,96.43076
+Other,Scene_132_12,92.480095
+Other,Scene_132_13,85.79724
+Other,Scene_132_14,78.35237
+Other,Scene_132_15,87.425735
+Other,Scene_132_19,94.50006
+Other,Scene_132_3,72.13501
+Other,Scene_132_4,77.94551
+Other,Scene_132_5,79.98055
+Other,Scene_132_6,68.98702
+Other,Scene_132_7,99.87238
+Other,Scene_132_8,93.371086
+Other,Scene_132_9,95.30949
+Other,Scene_133_1,97.643486
+Other,Scene_133_2,97.186264
+Other,Scene_133_3,95.98101
+Other,Scene_134_10,76.929184
+Other,Scene_134_11,84.18776
+Other,Scene_134_12,79.60721
+Other,Scene_134_13,86.308716
+Other,Scene_134_14,90.48395
+Other,Scene_134_5,92.05928
+Other,Scene_134_6,94.5973
+Other,Scene_134_7,88.511536
+Other,Scene_134_8,87.49669
+Other,Scene_134_9,72.83225
+Other,Scene_135_1,80.158356
+Other,Scene_135_2,86.622955
+Other,Scene_135_32,59.25275
+Other,Scene_135_34,71.10566
+Other,Scene_135_37,66.01734
+Other,Scene_136_10,84.57614
+Other,Scene_136_11,81.723045
+Other,Scene_136_12,75.76273
+Other,Scene_136_13,92.70758
+Other,Scene_136_14,80.36833
+Other,Scene_136_15,90.95372
+Other,Scene_136_16,95.80357
+Other,Scene_136_17,79.32997
+Other,Scene_136_18,88.855385
+Other,Scene_136_19,81.73501
+Other,Scene_136_2,81.75332
+Other,Scene_136_20,98.11162
+Other,Scene_136_21,97.6714
+Other,Scene_136_22,84.387245
+Other,Scene_136_23,80.71977
+Other,Scene_136_24,96.99824
+Other,Scene_136_25,94.01505
+Other,Scene_136_26,92.101234
+Other,Scene_136_27,92.49754
+Other,Scene_136_28,85.48675
+Other,Scene_136_29,86.54171
+Other,Scene_136_3,82.977905
+Other,Scene_136_30,89.798645
+Other,Scene_136_4,85.23833
+Other,Scene_136_6,69.49012
+Other,Scene_136_7,77.11078
+Other,Scene_136_8,85.704025
+Other,Scene_136_9,80.96565
+Other,Scene_137_3,96.54393
+Other,Scene_137_4,95.77267
+Other,Scene_137_5,73.19986
+Other,Scene_137_6,78.865944
+Other,Scene_138_1,87.798294
+Other,Scene_138_2,89.47412
+Other,Scene_139_11,96.200905
+Other,Scene_139_16,94.193535
+Other,Scene_139_17,87.932
+Other,Scene_139_28,95.82624
+Other,Scene_139_4,99.47051
+Other,Scene_140_11,96.79212
+Other,Scene_140_13,90.414536
+Other,Scene_140_18,84.48443
+Other,Scene_140_21,71.90709
+Other,Scene_140_3,98.2484
+Other,Scene_140_4,85.61051
+Other,Scene_140_5,98.75206
+Other,Scene_141_1,93.37035
+Other,Scene_141_14,92.23883
+Other,Scene_141_15,98.29285
+Other,Scene_141_16,75.6305
+Other,Scene_141_17,95.86017
+Other,Scene_141_19,75.87916
+Other,Scene_141_21,90.76152
+Other,Scene_141_23,83.78784
+Other,Scene_141_24,84.08506
+Other,Scene_141_39,97.042915
+Other,Scene_141_4,93.66263
+Other,Scene_141_8,61.839928
+Other,Scene_141_9,70.024635
+Other,Scene_142_15,91.996826
+Other,Scene_142_9,96.4483
+Other,Scene_143_2,99.4246
+Other,Scene_144_7,87.611
+Other,Scene_144_8,93.97725
+Other,Scene_145_1,69.9305
+Other,Scene_145_10,69.443665
+Other,Scene_145_11,76.13946
+Other,Scene_145_12,81.77969
+Other,Scene_145_13,63.98628
+Other,Scene_145_14,65.61517
+Other,Scene_145_15,68.690094
+Other,Scene_145_16,62.27149
+Other,Scene_145_17,64.36318
+Other,Scene_145_18,69.117065
+Other,Scene_145_2,89.17414
+Other,Scene_145_20,76.90591
+Other,Scene_145_21,93.18308
+Other,Scene_145_22,71.24536
+Other,Scene_145_24,61.78211
+Other,Scene_145_25,84.05508
+Other,Scene_145_26,78.619995
+Other,Scene_145_3,82.025734
+Other,Scene_145_4,92.805725
+Other,Scene_145_5,76.68617
+Other,Scene_145_6,78.39862
+Other,Scene_145_7,70.55527
+Other,Scene_145_8,88.04525
+Other,Scene_145_9,81.000534
+Other,Scene_146_4,75.48383
+Other,Scene_146_5,75.008316
+Other,Scene_146_6,96.15634
+Other,Scene_147_2,97.42607
+Other,Scene_148_8,80.65837
+Other,Scene_149_1,75.304344
+Other,Scene_149_2,81.73069
+Other,Scene_150_1,70.39081
+Other,Scene_150_10,67.21457
+Other,Scene_150_11,70.19912
+Other,Scene_150_12,83.19281
+Other,Scene_150_13,75.70612
+Other,Scene_150_15,78.51328
+Other,Scene_150_2,56.16239
+Other,Scene_150_3,79.928764
+Other,Scene_150_4,94.19329
+Other,Scene_150_5,96.286125
+Other,Scene_150_6,74.783966
+Other,Scene_150_7,87.41637
+Other,Scene_150_8,68.14999
+Other,Scene_150_9,92.96748
+Other,Scene_151_1,78.469826
+Other,Scene_151_2,78.338684
+Other,Scene_151_3,82.58031
+Other,Scene_151_4,61.350105
+Other,Scene_151_5,73.44773
+Other,Scene_151_6,67.7244
+Other,Scene_152_10,63.76667
+Other,Scene_152_11,64.2472
+Other,Scene_152_12,62.500095
+Other,Scene_152_13,75.58698
+Other,Scene_152_14,73.42273
+Other,Scene_152_15,95.05471
+Other,Scene_152_16,67.25372
+Other,Scene_152_17,90.421265
+Other,Scene_152_18,73.32656
+Other,Scene_152_19,79.71656
+Other,Scene_152_20,89.808495
+Other,Scene_152_21,90.98616
+Other,Scene_152_22,89.34003
+Other,Scene_152_23,87.652756
+Other,Scene_152_3,90.92348
+Other,Scene_152_5,69.18144
+Other,Scene_152_6,72.4904
+Other,Scene_152_7,55.433525
+Other,Scene_152_8,84.0012
+Other,Scene_152_9,94.02213
+Other,Scene_153_1,83.08831
+Other,Scene_153_10,92.10335
+Other,Scene_153_11,69.61047
+Other,Scene_153_12,80.64124
+Other,Scene_153_2,87.51786
+Other,Scene_153_3,80.6819
+Other,Scene_153_4,93.043015
+Other,Scene_153_5,81.61654
+Other,Scene_153_6,94.9299
+Other,Scene_153_7,94.846245
+Other,Scene_153_8,94.80912
+Other,Scene_153_9,94.286964
+Other,Scene_154_11,84.32854
+Other,Scene_154_12,84.82348
+Other,Scene_155_1,71.92448
+Other,Scene_155_2,79.45702
+Other,Scene_155_3,75.07402
+Other,Scene_155_4,83.05829
+Other,Scene_155_5,94.820724
+Other,Scene_155_6,59.691692
+Other,Scene_155_7,73.24745
+Other,Scene_156_1,69.887634
+Other,Scene_156_10,74.446365
+Other,Scene_156_11,71.11388
+Other,Scene_156_12,86.69203
+Other,Scene_156_13,66.338326
+Other,Scene_156_2,89.807
+Other,Scene_156_3,73.61633
+Other,Scene_156_4,68.102646
+Other,Scene_156_5,65.280304
+Other,Scene_156_6,84.44937
+Other,Scene_156_7,73.47362
+Other,Scene_156_8,60.640812
+Other,Scene_156_9,89.59026
+Other,Scene_157_11,90.34904
+Other,Scene_157_15,99.17028
+Other,Scene_157_16,98.20724
+Other,Scene_157_21,99.54563
+Other,Scene_157_22,99.78073
+Other,Scene_157_24,98.8592
+Other,Scene_157_28,98.96398
+Other,Scene_157_4,99.34385
+Other,Scene_157_41,96.95323
+Other,Scene_157_42,97.49841
+Other,Scene_158_2,67.903786
+Other,Scene_158_3,78.854866
+Other,Scene_158_4,71.30661
+Other,Scene_159_1,81.97595
+Other,Scene_159_2,86.39141
+Other,Scene_159_3,80.49233
+Other,Scene_159_5,77.08747
+Other,Scene_159_6,70.35146
+Other,Scene_160_13,98.51083
+Other,Scene_160_14,87.679924
+Other,Scene_160_15,91.33717
+Other,Scene_160_3,75.276054
+Other,Scene_160_4,99.558914
+Other,Scene_161_13,75.815796
+Other,Scene_162_7,92.26249
+Other,Scene_163_16,96.52017
+Other,Scene_163_2,92.39257
+Other,Scene_163_23,96.787445
+Other,Scene_163_26,98.177765
+Other,Scene_163_4,93.80702
+Other,Scene_164_10,85.71271
+Other,Scene_164_11,93.628
+Other,Scene_164_15,81.62248
+Other,Scene_164_20,98.48942
+Other,Scene_164_9,91.73198
+Other,Scene_165_4,94.57044
+Other,Scene_165_5,80.38862
+Other,Scene_165_6,85.93051
+Other,Scene_165_7,78.975204
+Other,Scene_165_8,90.68666
+Other,Scene_166_1,98.59425
+Other,Scene_166_11,74.22561
+Other,Scene_166_15,77.71723
+Other,Scene_166_16,96.78135
+Other,Scene_166_2,98.83449
+Other,Scene_166_4,99.50296
+Other,Scene_166_8,99.35943
+Other,Scene_166_9,99.715126
+Other,Scene_168_1,82.42859
+Other,Scene_168_10,65.19064
+Other,Scene_168_11,61.15906
+Other,Scene_168_13,57.232666
+Other,Scene_168_2,72.437096
+Other,Scene_168_3,70.83903
+Other,Scene_168_4,62.3322
+Other,Scene_168_5,66.8736
+Other,Scene_168_6,66.059525
+Other,Scene_168_7,63.83511
+Other,Scene_168_8,64.69415
+Other,Scene_168_9,69.801926
+Other,Scene_169_17,73.28297
+Other,Scene_169_2,94.05784
+Other,Scene_169_3,88.840706
+Other,Scene_169_7,96.03868
+Other,Scene_170_3,93.99693
+Other,Scene_171_1,92.79944
+Other,Scene_171_10,84.95733
+Other,Scene_171_11,82.8165
+Other,Scene_171_12,85.56577
+Other,Scene_171_14,75.19633
+Other,Scene_171_16,85.692665
+Other,Scene_171_17,94.54924
+Other,Scene_171_18,94.32753
+Other,Scene_171_2,75.93685
+Other,Scene_171_20,82.2301
+Other,Scene_171_21,91.99594
+Other,Scene_171_22,80.978096
+Other,Scene_171_23,66.04088
+Other,Scene_171_24,74.94378
+Other,Scene_171_25,68.2745
+Other,Scene_171_26,78.39829
+Other,Scene_171_27,78.06347
+Other,Scene_171_3,80.6834
+Other,Scene_171_4,74.01718
+Other,Scene_171_5,91.31354
+Other,Scene_171_6,90.63901
+Other,Scene_171_7,95.115105
+Other,Scene_171_8,72.82647
+Other,Scene_171_9,89.349434
+Other,Scene_172_1,91.98738
+Other,Scene_172_10,95.2065
+Other,Scene_172_11,72.32121
+Other,Scene_172_13,76.78913
+Other,Scene_172_15,78.51647
+Other,Scene_172_16,82.052666
+Other,Scene_172_2,88.66039
+Other,Scene_172_3,82.916084
+Other,Scene_172_4,71.63613
+Other,Scene_172_5,62.13895
+Other,Scene_172_6,77.38484
+Other,Scene_172_7,64.85734
+Other,Scene_172_8,69.38655
+Other,Scene_172_9,76.95995
+Other,Scene_173_5,72.31367
+Other,Scene_173_7,73.852036

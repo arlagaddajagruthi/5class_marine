@@ -1,0 +1,1 @@
+check R5: 0.86 s/batch, peak GPU 0.96 GiB, loss 1.373; 139 batches/epoch -> 2.0 min train + 0.14 s/patch TTA val x 328 = 0.8 min -> ~2.8 min/epoch, ~2.1 h for 45 epochs
