@@ -348,7 +348,8 @@ def dependence(D, res, tab, top_env=4):
 
 def validation(D, res, args):
     out = os.path.join(D["out"], "07_validation")
-    v = {n: {"explainer": sc.EXPLAINER[n], "explained_output": sc.OUTPUT_SCALE[n],
+    explainer = {**sc.EXPLAINER, "svm": "LinearExplainer (interventional; exact for linear margin)"}
+    v = {n: {"explainer": explainer[n], "explained_output": sc.OUTPUT_SCALE[n],
              "additivity_max_abs_error": r["err"], "max_abs_output": r["max_f"],
              "pixels_error_gt_1e-5": r["n_bad"], "shap_seconds": round(r["time"], 1),
              "base_values": dict(zip(CNAMES, map(float, r["base"])))} for n, r in res.items()}
