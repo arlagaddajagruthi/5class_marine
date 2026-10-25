@@ -1,0 +1,24 @@
+
+=== stage9_all_env_shap | MARIDA | 20 features: B1, B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, NDVI, NDWI, FAI, FDI, NDMI, red/green, nir/red, nir/green, swir1/nir
+  env train: patches with a filled value: sst_grad_c_per_km=3, modis_log10_chla=4, era5_swh=15, era5_swh_mean_72h=15, era5_stokes_u=15, era5_stokes_v=15, era5_stokes_speed=15
+  env test: patches with a filled value: sst_grad_c_per_km=2
+  train 358,442 px [350057   1943   1961   4481] | test 158,371 px [154739    381   1641   1610]
+  [MARIDA] SHAP rf on 1200 test pixels (background 200)...
+    done in 296s, additivity max error 7.96e-09 (max |f| 1.00, 0 pixels > 1e-5)
+  rf    F1=0.8508 IoU=0.7616 Acc=0.9936 debris F1/IoU=0.7033/0.5423 algae F1/IoU=0.9525/0.9093 (31s)
+  [MARIDA] SHAP xgb on 1200 test pixels (background 200)...
+    done in 163s, additivity max error 2.45e-06 (max |f| 6.31, 0 pixels > 1e-5)
+  xgb   F1=0.6909 IoU=0.5975 Acc=0.9263 debris F1/IoU=0.7318/0.5771 algae F1/IoU=0.8751/0.7779 (25s)
+  [MARIDA] SHAP lgbm on 1200 test pixels (background 200)...
+    done in 98s, additivity max error 2.56e-07 (max |f| 13.55, 0 pixels > 1e-5)
+  lgbm  F1=0.6946 IoU=0.6143 Acc=0.9106 debris F1/IoU=0.7159/0.5576 algae F1/IoU=0.9482/0.9015 (5s)
+  [MARIDA] SHAP ada on 1200 test pixels (background 200)...
+    done in 17s, additivity max error 5.21e-09 (max |f| 0.75, 0 pixels > 1e-5)
+  ada   F1=0.7602 IoU=0.6655 Acc=0.9750 debris F1/IoU=0.6779/0.5127 algae F1/IoU=0.9487/0.9024 (335s)
+  [MARIDA] SHAP svm on 1200 test pixels (background 200)...
+    done in 0s, additivity max error 1.85e-06 (max |f| 55.89, 0 pixels > 1e-5)
+  svm   F1=0.6640 IoU=0.5468 Acc=0.9757 debris F1/IoU=0.3247/0.1938 algae F1/IoU=0.7281/0.5724 (24s)
+
+  writing SHAP outputs...
+
+Done in 17.7 min. SHAP outputs: C:\Users\mokit\Desktop\New folder\FYP\outputs\staged\log_weights\stage9_all_env_shap\shap\MARIDA
